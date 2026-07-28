@@ -1789,7 +1789,16 @@ body {
 }
 
 /* ==========================================
-   FINAL PREMIUM MOBILE MENU STYLES (FIXED)
+   GLOBAL SCROLL & OVERFLOW FIX
+   ========================================== */
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative;
+}
+
+/* ==========================================
+   FINAL PREMIUM MOBILE MENU & HEADER STYLES
    ========================================== */
 
 /* Dark Blur Overlay (मागील पडदा) */
@@ -1826,22 +1835,30 @@ body {
 
 /* Mobile View Adjustments (768px आणि खाली) */
 @media screen and (max-width: 768px) {
+    /* Sticky Header Fix: स्क्रोल केल्यावरही मेनू वर फिक्स राहील */
+    header, .nav-container, navbar {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 999 !important;
+        background-color: #1a100c;
+    }
+
     .nav-container {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: relative;
+        padding: 10px 15px;
     }
 
     .hamburger-toggle {
         display: block;
     }
 
-    /* Auto Width Slide-in Drawer */
+    /* Auto Width Slide Drawer (Right Drag Stop Fix) */
     .nav-links {
         position: fixed;
         top: 0;
-        right: -100%; /* सुरुवातीला लपलेला */
+        right: -100%; /* सुरुवातीला पूर्णपणे लपलेला */
         
         min-width: 45%;
         width: fit-content;
@@ -1858,10 +1875,11 @@ body {
         z-index: 1000;
         transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         overflow-y: auto;
+        overflow-x: hidden;
     }
 
     .nav-links.active {
-        right: 0;
+        right: 0 !important;
     }
 
     /* Menu Items Align Left */
@@ -1944,23 +1962,21 @@ body {
    ========================================== */
 
 @media screen and (max-width: 768px) {
-    /* स्क्रीनच्या तळाशी फिक्स बार */
     .bottom-nav-bar {
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
         height: 60px;
-        background-color: #140b07; /* Rich Dark Theme */
+        background-color: #140b07;
         display: flex;
         justify-content: space-around;
         align-items: center;
         border-top: 1px solid rgba(252, 163, 17, 0.2);
         box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
-        z-index: 997; /* मेनू आणि ओव्हरलेच्या खाली राहण्यासाठी */
+        z-index: 997;
     }
 
-    /* बॉटम बारमधील आयटम्स */
     .bottom-nav-item {
         display: flex;
         flex-direction: column;
@@ -1983,7 +1999,6 @@ body {
         color: #fca311;
     }
 
-    /* फूटर किंवा मजकूर बॉटम बारच्या मागे दडू नये म्हणून बॉडीला पॅडिंग */
     body {
         padding-bottom: 60px !important;
     }
