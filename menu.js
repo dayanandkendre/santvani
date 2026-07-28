@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelector(".nav-links");
 
     if (navContainer && navLinks) {
-        // १. मागील ब्लर पडदा (Overlay) तयार करणे
+        // १. मागील ब्लर पडदा (Overlay)
         let overlay = document.querySelector(".menu-overlay");
         if (!overlay) {
             overlay = document.createElement("div");
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.appendChild(overlay);
         }
 
-        // २. हॅम्बर्गर बटण तयार करणे / शोधणे
+        // २. हॅम्बर्गर बटण तयार करणे
         let hamburgerBtn = document.querySelector(".hamburger-toggle");
         if (!hamburgerBtn) {
             hamburgerBtn = document.createElement("button");
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             navContainer.appendChild(hamburgerBtn);
         }
 
-        // ३. मुख्य मेनू उघडणे / बंद करणे (Toggle Menu)
+        // ३. मुख्य मेनू टोगल
         function toggleMenu() {
             hamburgerBtn.classList.toggle("active");
             navLinks.classList.toggle("active");
@@ -38,22 +38,40 @@ document.addEventListener("DOMContentLoaded", function () {
         hamburgerBtn.addEventListener("click", toggleMenu);
         overlay.addEventListener("click", toggleMenu);
 
-        // ४. 'इतर' ड्रॉपडाऊन टोगल (Open / Close फिक्स)
+        // ४. 'इतर' ड्रॉपडाऊन टोगल (Open/Close Fix)
         const dropdown = document.querySelector(".dropdown");
         const dropdownToggle = document.querySelector(".dropdown-toggle");
 
         if (dropdownToggle && dropdown) {
             dropdownToggle.addEventListener("click", function (e) {
-                // मोबाईल व्ह्यूमध्ये लिंक भरकटू नये म्हणून
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
                     e.stopPropagation();
-
-                    // 'open' आणि 'active' दोन्ही क्लासेस एकाच वेळी टोगल करा
                     dropdown.classList.toggle("open");
                     dropdown.classList.toggle("active");
                 }
             });
+        }
+
+        // ५. मोबाईलसाठी Bottom Navigation Bar डायनामिकली जोडणे
+        if (window.innerWidth <= 768) {
+            const bottomNav = document.createElement("div");
+            bottomNav.className = "bottom-nav-bar";
+            bottomNav.innerHTML = `
+                <a href="/index.html" class="bottom-nav-item">
+                    <i class="fa-solid fa-house"></i>
+                    <span>मुख्य पृष्ठ</span>
+                </a>
+                <a href="/sarth-haripath.html" class="bottom-nav-item">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>हरिपाठ</span>
+                </a>
+                <a href="/sant-sahitya.html" class="bottom-nav-item">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>संत साहित्य</span>
+                </a>
+            `;
+            document.body.appendChild(bottomNav);
         }
     }
 });
