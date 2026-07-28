@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>संत निवृत्तीनाथ अभंग | संतवाणी</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Poppins:wght@300;400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS (Relative Path to parent folder's style.css) -->
+    <link rel="stylesheet" href="../../abhang.css">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+
+<body>
+
+    <!-- TOP INFORMATION BAR -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <span class="top-bar-text"><i class="fa-solid fa-om animate-spin"></i> ॥ जय जय विठ्ठल रखुमाई ॥</span>
+            <span class="top-bar-text"><i class="fa-solid fa-book"></i> संत निवृत्तीनाथ अभंग</span>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">✨</span> संत<span class="logo-highlight">वाणी</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html">मुख्य पृष्ठ</a></li>
+                <li><a href="../../sant-sahitya.html" class="active"><i class="fa-solid fa-arrow-left"></i> गाथा मुख्य पान</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO BANNER FOR PART 1 -->
+    <section class="inner-hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="inner-hero-content">
+            <span class="gold-badge">अभंग</span>
+            <h1 class="inner-title">अभंग संग्रह : <span class="text-gradient">संत निवृत्तीनाथ</span></h1>
+            <p class="inner-tagline">या पृष्ठावर संतांचे अभंग आणि त्यांचा सोपा मराठी भावार्थ उपलब्ध आहे.</p>
+        </div>
+    </section>
+
+    <!-- MAIN WRAPPER START -->
+    <section class="sarth-haripath-section">
+        <div class="tukaram-main-wrapper"> 
+            <div class="tukaram-container">
+
+<!-- अभंग १ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-1">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग १ ॥</span>
+                    <span class="content-badge" id="badge-1">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-1" style="display: block !important;">
+                        अवीट अमोला घेता पैं निमोला । तो प्रत्यक्ष देखिला भीमातटीं ॥<br>
+                        अव्यक्त साकार अकारिला अंकूर । क्षरला चराचर भक्तिकाजें ॥<br>
+                        अनुमान विटे सर्वाघटींमाजिटें । तें परब्रह्म ईटें भक्तिसाह्य ॥<br>
+                        निवृत्ति घनवट पिकलिसे पेठ । पुंडलिकें प्रगट केलें असे ॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-1" style="display: none !important;">
+                        जो कधीही न संपणारा (अवीट) आणि अमूल्य आहे, ज्याची प्राप्ती कोणत्याही मोलाशिवाय केवळ भक्तीने होते, त्याला मी भीमा नदीच्या तीरावर (पंढरपुरात) प्रत्यक्ष पाहिले आहे. तो मुळात अव्यक्त होता, पण भक्तांच्या प्रेमापोटी त्याने सगुण-साकार रूप धारण केले; जणू भक्तीचे बीज अंकुरित झाले आणि त्यातून सर्व चराचरात ईश्वरी चैतन्य पाझरू लागले. सर्व प्राणीमात्रांच्या हृदयात वास करणारे ते परब्रह्म आज भक्ताच्या रक्षणासाठी आणि साहाय्यासाठी विटेवर उभे आहे. निवृत्तीनाथ म्हणतात, पुंडलिकाने हा भक्तीचा बाजार (पेठ) इतका समृद्ध केला आहे की, तिथे प्रत्यक्ष परब्रह्माचे पीक भरभरून आले आहे.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(1)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(1)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(1)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-1" onclick="toggleAbhangView(1)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग २ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-2">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग २ ॥</span>
+                    <span class="content-badge" id="badge-2">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-2" style="display: block !important;">
+                        प्राणिया उद्धार सर्व हा श्रीधर । ब्रह्म हें साचार कृष्णमूर्तीं ॥<br>
+                        तें रूप भीवरें पांडुरंग खरें । पुंडलिकनिर्धारें उभे असें ॥<br>
+                        युगे अठ्ठावीस उभा ह्रषीकेश । पुंडलिका सौरस पुरवित ॥<br>
+                        निवृत्तीचें गुज पांडुरंगाबीज । विश्वजनकाज पुरे कोडें ॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-2" style="display: none !important;">
+                        या जगातील सर्व प्राण्यांचा उद्धार करणारा केवळ तो श्रीधर (भगवान विठ्ठल) आहे. ही कृष्णमूर्ती म्हणजेच प्रत्यक्ष परब्रह्म आहे. तेच रूप चंद्रभागेच्या (भीवरेच्या) तीरावर पांडुरंगाच्या रूपात भक्त पुंडलिकाच्या दृढ निश्चयामुळे उभे राहिले आहे. हा हृषिकेश (इंद्रियांचा स्वामी) पुंडलिकाची भक्तीची हौस पुरवत तब्बल अठ्ठावीस युगे विटेवर उभा आहे. निवृत्तीनाथ म्हणतात, माझ्या अंतःकरणातील सर्वात मोठे गुपित (गुज) म्हणजे हा पांडुरंग आहे, जो या विश्वातील सर्व लोकांचे मनोरथ आणि कौतुक (कोडे) पूर्ण करतो.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(2)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(2)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(2)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-2" onclick="toggleAbhangView(2)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग ३ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-3">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग ३ ॥</span>
+                    <span class="content-badge" id="badge-3">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-3" style="display: block !important;">
+                        रूपाचें रूपस विठ्ठलनामवेष । पंढरीनिवास आत्माराम ॥<br>
+                        पुंडलिकभाग्य वोळलें संपूर्ण । दिननिशीं कीर्तन विठ्ठल हरी ॥<br>
+                        त्रैलोक्य उद्धरे ऐसी पव्हे त्वरे । कीर्तन निर्धारे तरुणोपाव ॥<br>
+                        पूण्य केलें चोख तारिले अशेख । जनीं वनीं एकरूप वसे ॥<br>
+                        वेदादिकमति ज्या रूपा गुंतती । तो आणूनी श्रीपति उभा केला ॥<br>
+                        निवृत्तीचा सखा विठ्ठलरूप देखा । निरालंब शिखा गगनोदरीं ॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-3" style="display: none !important;">
+                        सर्व रूपांमध्ये अत्यंत सुंदर असणारे रूप म्हणजेच विठ्ठल असून, तो पंढरपुरात राहणारा आमचा आत्माराम आहे. पुंडलिकाच्या संपूर्ण भाग्यामुळेच आज पंढरीत रात्रंदिवस 'विठ्ठल हरी' नामाचे कीर्तन चालते. या कीर्तनामुळे तिन्ही लोकांचा उद्धार अत्यंत वेगाने होतो, म्हणून कीर्तन हाच संसारातून तरून जाण्याचा निश्चित उपाय आहे. ज्याने चोख (शुद्ध) पुण्य केले, त्या सर्वांना या नामाने तारले आहे; हा देव जनात आणि वनात एकाच रूपाने व्यापून राहिला आहे. ज्याच्या स्वरूपाचा शोध घेताना वेदांची बुद्धीही गुंतून पडते, अशा लक्ष्मीपतीला पुंडलिकाने पंढरीत आणून उभे केले. निवृत्तीनाथ म्हणतात, तो विठ्ठल माझा सखा असून, तो आकाशाएवढ्या अथांग आणि निराधार अशा चैतन्याचे शिखर आहे.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(3)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(3)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(3)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-3" onclick="toggleAbhangView(3)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग ४ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-4">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग ४ ॥</span>
+                    <span class="content-badge" id="badge-4">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-4" style="display: block !important;">
+                        पाहतां साधन विठ्ठलकीर्तन । भक्तसंजीवन आत्माराम ॥<br>
+                        विठ्ठल सधर भिवरा तें नीर । नाम निरंतर केशवाचें ॥<br>
+                        शिवसुरवर चिंतिती सुस्वर । कीर्तनविचार पंढरीसी ॥<br>
+                        निवृत्ति कीर्तन दिननिशीं ध्यान । मनाचें उन्मन इये रूपीं ॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-4" style="display: none !important;">
+                        सर्व साधनांचा विचार केला, तर विठ्ठलाचे कीर्तन हेच सर्वश्रेष्ठ साधन आहे; कारण हा आत्माराम भक्तांना जीवन देणारा (संजीवन) आहे. विठ्ठल हाच आमचा खरा आधार आहे, चंद्रभागेचे पाणी पवित्र आहे आणि केशवाचे नाम निरंतर कल्याणकारी आहे. ज्या कीर्तनाचा विचार पंढरपुरात चालतो, त्याचे ध्यान भगवान शिव आणि श्रेष्ठ देवही मधुर स्वरात करत असतात. निवृत्तीनाथ म्हणतात, अशा या विठ्ठल रूपाचे रात्रंदिवस ध्यान आणि कीर्तन केल्याने मानवी मन सांसारिक वासनांमधून मुक्त होऊन 'उन्मन' अवस्थेत (परम शांततेत) लीन होते.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(4)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(4)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(4)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-4" onclick="toggleAbhangView(4)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग ५ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-5">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग ५ ॥</span>
+                    <span class="content-badge" id="badge-5">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-5" style="display: block !important;">
+                        मन कामना हरि मनें बोहरी । चिंतितां श्रीहरि सुखानंद ॥<br>
+                        तें पुंडलिक तपें वोळलें स्वरूप । जनाचीं पै पापें निर्दाळिली ॥<br>
+                        वेणुनाद तीर्थ चंद्रभागा समर्थ । विठ्ठल दैवत रहिवास ॥<br>
+                        निवृत्ति साकर विठ्ठल आचार । भिवरा तें नीर अमृतमय ॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-5" style="display: none !important;">
+                        माणसाने आपल्या मनातील सर्व भौतिक कामना नष्ट करून (मनाची बोहरी करून) जर केवळ श्रीहरीचे चिंतन केले, तर त्याला परम सुखाची व आनंदाची प्राप्ती होते. भक्त पुंडलिकाच्या तपोबळामुळेच हे सुंदर विठ्ठल रूप पृथ्वीवर प्रगट झाले, ज्याने सामान्य लोकांच्या सर्व पापांचा नाश (निर्दाळन) केला. जिथे वेणूचा (बासरीचा) नाद घुमतो आणि समर्थ चंद्रभागा नदी वाहते, तिथे आमचे दैवत विठ्ठल निवास करून राहते. निवृत्तीनाथ म्हणतात, माझ्या सर्व आचरणात विठ्ठल सामावला आहे आणि चंद्रभागेचे पाणी मला अमृतासारखे मधुर वाटते.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(5)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(5)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(5)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-5" onclick="toggleAbhangView(5)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग ६ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-6">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग ६ ॥</span>
+                    <span class="content-badge" id="badge-6">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-6" style="display: block !important;">
+                        निराकार वस्तु आकारासि आली । विश्रांति पैं जाली विश्वजना ॥<br>
+                        भिवरासंगमीं निरंतर सम । तल्लीन ब्रह्म उभें असे असे ॥<br>
+                        पुंडलिक ध्याये पुढत पुढती सोये । विठ्ठल हेंचि गाये संकीर्तनीं ॥<br>
+                        निवृत्तिसंकीर्तन ब्रह्म हें सोज्वळ । नाम हें रसाळ अनिर्वाच्य ॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-6" style="display: none !important;">
+                        जे मूळचे निराकार तत्त्व होते, ते आज विठ्ठल रूपात आकारास आले आहे, ज्यामुळे संपूर्ण जगातील लोकांना परम विश्रांती मिळाली आहे. चंद्रभागेच्या संगमावर (तीरावर) ते परब्रह्म नेहमी सम चरणांनी भक्तांच्या प्रेमात तल्लीन होऊन उभे आहे. पुंडलिक वारंवार त्याचेच ध्यान धरतो आणि आपल्या संकीर्तनात केवळ विठ्ठल नामाचाच गजर करतो. निवृत्तीनाथ म्हणतात, विठ्ठलाचे संकीर्तन करणे म्हणजेच त्या निर्मळ ब्रह्माचा अनुभव घेणे होय; हे नाम अत्यंत रसाळ असून त्याचे वर्णन शब्दांत करणे अशक्य (अनिर्वाच्य) आहे.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(6)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(6)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(6)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-6" onclick="toggleAbhangView(6)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग ७ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-7">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग ७ ॥</span>
+                    <span class="content-badge" id="badge-7">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-7" style="display: block !important;">
+                        पुंडलीकपेठ वैष्णवाचा हाट । करिती बोभाट हरिनामाचा ॥<br>
+                        वाळलें अंबर अमृततुषार । झेलीत अमर चकोर झाले ॥<br>
+                        देव मुनी सर्व ब्रह्मादिक लाठे । पंढरीये पेठे प्रेमपिसे ॥<br>
+                        निवृत्ति निर्वाळिला ज्ञानदेव सोपान । खेचर तल्लीन वीनटला ॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-7" style="display: none !important;">
+                        पंढरपूर ही पुंडलिकाची पेठ असून, तो वैष्णवांचा बाजार आहे; तिथे सर्व भक्त मोठ्या आनंदाने हरिनामाचा गजर (बोभाट) करत असतात. चंद्रभागेच्या वाळवंटात (वाळलें अंबर) नामघोषातून अमृताचे जणू तुषार उडत आहेत आणि देवही चकोर पक्ष्याप्रमाणे ते अमृत गोळा करत आहेत. ब्रह्मादिकांसारखे मोठे देव आणि मुनी या पंढरीच्या बाजारात भक्तीच्या प्रेमाने वेडे झाले आहेत. निवृत्तीनाथ म्हणतात, मी स्वतः, ज्ञानदेव, सोपान आणि आमचे गुरू विसोबा खेचर हे सर्वजण या भक्तीच्या रंगात पूर्णपणे तल्लीन होऊन या विठ्ठल चरणी लीन झाले आहेत.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(7)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(7)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(7)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-7" onclick="toggleAbhangView(7)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग ८ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-8">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग ८ ॥</span>
+                    <span class="content-badge" id="badge-8">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-8" style="display: block !important;">
+                        विठ्ठल श्रीहरि उभा भीमातीरीं । तिष्ठती कामारी मुक्तिचारी ॥<br>
+                        मुनिजनां सुख निरंतर लक्ष । भक्तां निजसुख देत असे ॥<br>
+                        पुंडलिकपुण्य मेदिनीकारुण्य । उद्धरिले जन अनंत कोटी ॥<br>
+                        निरानिरंतर भीमरथी तीर । ब्रह्म हें साकार इटे नीट ॥<br>
+                        नित्यता भजन जनीं जनार्दन । ब्रह्मादिक खुण पावताती ॥<br>
+                        निवृत्ति तत्पर हरीरूप सर्व । नाम घेतां तृप्त आत्माराम ॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-8" style="display: none !important;">
+                        विठ्ठल श्रीहरी भीमा नदीच्या तीरावर उभा असून, चारी मुक्ती (सलोकता, समीपता, सरूपता, सायुज्यता) त्याच्या दारात दासींसारख्या सेवा करण्यासाठी उभ्या आहेत. तो ऋषीमुनींना अखंड सुख देणारे मुख्य ध्येय (लक्ष्य) आहे आणि भक्तांना त्यांचे आत्मसुख देणारा आहे. पुंडलिकाच्या पुण्यामुळे आणि पृथ्वीवरील (मेदिनी) करुणेमुळे आज कोटी-कोटी लोकांचा उद्धार झाला आहे. चंद्रभागेच्या तीरावर ते निराकार ब्रह्म अगदी नीटपणे विटेवर साकार झाले आहे. जो मनुष्य दररोज भजन करतो, त्याला सर्व लोकांमध्ये देवच (जनीं जनार्दन) दिसू लागतो; हीच ती खूण आहे जी ब्रह्मादी देवांनाही हवी असते. निवृत्तीनाथ म्हणतात, मी नेहमी हरी रूपाच्या चिंतनात तत्पर असतो; विठ्ठलाचे नाम घेतल्याने आमचा आत्माराम पूर्णपणे तृप्त होतो.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(8)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(8)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(8)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-8" onclick="toggleAbhangView(8)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग ९ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-9">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग ९ ॥</span>
+                    <span class="content-badge" id="badge-9">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-9" style="display: block !important;">
+                        भवजळ काया पंचतत्त्वमाया । भजन उभया पंढरीरावो ॥<br>
+                        तारक पंढरी प्रत्यक्ष भीमातीरीं । ब्रीदें चराचरीं बोले वेदु ॥<br>
+                        माया मोहजाळ ममता निखळ । सेवितां सकळ होय हरी ॥<br>
+                        निवृत्तीचें फळ सकळ हा गोपाळ । तोडी मायाजाळ संकीर्तने ॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-9" style="display: none !important;">
+                        हे मानवी शरीर म्हणजे पाच तत्त्वांची माया असून हा संसार एक अथांग समुद्र आहे; यातून तरून जाण्यासाठी पंढरीनाथाचे भजन हाच एकमेव मार्ग आहे. भीमा नदीच्या तीरावर उभी असलेली पंढरी ही प्रत्यक्ष तारक आहे, अशी या विठ्ठलाची ख्याती (ब्रीद) वेदही संपूर्ण चराचरात सांगतात. संसारातील माया, मोह आणि ममता यांचे जाळे कितीही मोठे असले, तरी विठ्ठलाची सेवा केल्याने सर्व काही हरीमय होऊन जाते. निवृत्तीनाथ म्हणतात, माझ्या भक्तीचे अंतिम फळ हा गोपाळ कृष्ण (विठ्ठल) आहे, जो त्याच्या नामसंकीर्तनाने मानवाचे सर्व मायाजाळ क्षणात तोडून टाकतो.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(9)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(9)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(9)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-9" onclick="toggleAbhangView(9)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग १० बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-10">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग १० ॥</span>
+                    <span class="content-badge" id="badge-10">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-10" style="display: block !important;">
+                        नित्य हरिकथा नित्य नामावळी । वैष्णवांचे कुळीं धन्य जन्म ॥<br>
+                        म्हणोनि पंढरी उपजवावें संसारीं । प्रत्यक्ष श्रीहरी तीरीं उभा ॥<br>
+                        नित्यता दिवाळी नाहीं तेथें द्वैत । नित्यता अच्युत तिष्ठतसे ॥<br>
+                        निवृत्ति सादर विष्णुमय सार । विठ्ठल आचार पंढरिये ॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-10" style="display: none !important;">
+                        ज्या घराण्यात किंवा कुळात नित्य हरिकथा आणि भगवंताच्या नामावळीचा गजर होतो, त्या वैष्णवांच्या कुळातील जन्म खरोखर धन्य आहे. म्हणूनच या संसारात राहून मनात नेहमी पंढरीची ओढ निर्माण करावी, कारण तिथे प्रत्यक्ष श्रीहरी भीमा तीरावर उभा आहे. पंढरीत दररोज भक्तीची दिवाळी साजरी होते, तिथे कोणामध्येही भेद (द्वैत) उरत नाही, कारण तिथे स्वतः अच्युत (कधीही च्युत न होणारा परमात्मा) भक्तांसाठी उभा आहे. निवृत्तीनाथ म्हणतात, मी अत्यंत आदराने सांगतो की, या विश्वाचे मुख्य सार हे विठ्ठलमय किंवा विष्णुमय असणे हेच आहे आणि पंढरीचा हा विठ्ठल आचारच सर्वात श्रेष्ठ आहे.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(10)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(10)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(10)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-10" onclick="toggleAbhangView(10)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+      </div>
+    </div>
+</section>
+    
+
+    <!-- सुधारित फूटर लेआउट (AdSense साठी आवश्यक लिंक्ससह - सब-फोल्डर अचूक लिंकिंग) -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand-box">
+                <h3 class="footer-logo">✨ संतवाणी</h3>
+                <p class="footer-about">मराठी संतांच्या समृद्ध विचारांचा आणि साहित्याचा डिजिटल वारसा पुढील पिढीपर्यंत पोहोचवण्याचा एक नम्र प्रयत्न.</p>
+            </div>
+            
+            <div class="footer-links-box">
+                <h4>महत्त्वाचे दुवे</h4>
+                <ul>
+                    <li><a href="../../about.html">आमच्याबद्दल (About Us)</a></li>
+                    <li><a href="../../contact.html">संपर्क (Contact Us)</a></li>
+                    <li><a href="../../privacy-policy.html">गोपनीयता धोरण (Privacy Policy)</a></li>
+                    <li><a href="$1terms.html">नियम व अटी (Terms & Conditions)</a></li>
+<li><a href="$1disclaimer.html">अस्वीकरण (Disclaimer)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-box">
+                <h4>त्वरित लिंक्स</h4>
+                <ul>
+                    <li><a href="../../index.html">मुख्य पृष्ठ</a></li>
+                    <li><a href="../../sant-sahitya.html">संत साहित्य</a></li>
+                    <li><a href="../../vangmay-sangrah.html">वाङ्मय संग्रह</a></li>
+                    <li><a href="../../sarth-haripath.html">सार्थ हरिपाठ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright-text">© २०२६ संतवाणी लायब्ररी. सर्व हक्क सुरक्षित. | रचना वारकरी संप्रदाय चरणी समर्पित.</p>
+        </div>
+    </footer>
+
+    <script src="../../script.js" charset="UTF-8"></script>
+
+</body>
+</html>
