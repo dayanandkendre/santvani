@@ -4,86 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>श्रीमत् दासबोध - समर्थ रामदास स्वामी | संतवाणी</title>
-    <meta name="description" content="समर्थ रामदास स्वामी रचित श्रीमत् दासबोध ग्रंथाचा परिचय आणि महत्त्व.">
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Yatra+One&family=Poppins:wght@300;400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS फाईल २ स्टेप मागे आहे (pages/granth/ साठी) -->
+    <link rel="stylesheet" href="../../style.css">
 </head>
-<body style="background-color: #0d0705; color: #e6e6e6; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+<body style="background-color: #0d0705; color: #e6e6e6;">
 
-    <!-- Header & Navigation Bar -->
-    <header>
+    <!-- टॉप बार -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <span class="top-bar-text"><i class="fa-solid fa-om animate-spin"></i> ॥ जय जय विठ्ठल रखुमाई ॥</span>
+            <span class="top-bar-text"><i class="fa-solid fa-hands-praying"></i> संतवाणी डिजिटल लायब्ररी २०२६</span>
+        </div>
+    </div>
+
+    <!-- मुख्य मेनू बार -->
+    <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">
-                <a href="/index.html">✨ संतवाणी</a>
-            </div>
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">✨</span> संत<span class="logo-highlight">वाणी</span>
+            </a>
             <ul class="nav-links">
-                <li><a href="/index.html">मुख्य पृष्ठ</a></li>
-                <li><a href="/sant-sahitya.html">संत साहित्य</a></li>
-                <li><a href="/vangmay-sangrah.html">वाङ्मय संग्रह</a></li>
-                <li><a href="/sarth-haripath.html">हरिपाठ</a></li>
-                <li><a href="/granth-sampada.html" class="active">ग्रंथ संपदा</a></li>
+                <li><a href="../../index.html">मुख्य पृष्ठ</a></li>
+                <li><a href="../../sant-sahitya.html">संत साहित्य</a></li>
+                <li><a href="../../vangmay-sangrah.html">वाङ्मय संग्रह</a></li>
+                <li><a href="../../sarth-haripath.html">हरिपाठ</a></li>
+                <li><a href="../../granth-sampada.html" class="active">ग्रंथ संपदा</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">इतर</a>
+                    <a href="#">इतर <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/san-utsav.html">सन आणि उत्सव</a></li>
-                        <li><a href="/artya-sangrah.html">आरत्या संग्रह</a></li>
-                        <li><a href="/santache-prasang.html">संतांचे प्रसंग</a></li>
+                        <li><a href="../../san-utsav.html">सन आणि उत्सव</a></li>
+                        <li><a href="../../artya-sangrah.html">आरत्या संग्रह</a></li>
+                        <li><a href="../../santache-prasang.html">संतांचे प्रसंग</a></li>
                     </ul>
                 </li>
             </ul>
+            <div class="nav-cta">
+                <a href="../../index.html#sant-home-gallery" class="btn-nav">वाचन सुरू करा</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- लहान हेडर Header Section -->
+    <header style="background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('../../assets/images/hero-bg.jpg'); background-size: cover; background-position: center; padding: 35px 0; text-align: center; border-bottom: 2px solid #ffb703;">
+        <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+            <span style="color: #ffb703; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">पवित्र ग्रंथ संपदा</span>
+            <h1 style="font-family: 'Rozha One', serif; color: #fff; font-size: 2.2rem; margin: 5px 0;">श्रीमत् दासबोध</h1>
+            <p style="color: #ffb703; font-family: 'Yatra One', serif; font-size: 1.2rem; margin: 0;">॥ समर्थ रामदास स्वामी ॥</p>
         </div>
     </header>
 
     <!-- Main Content Container -->
-    <main style="max-width: 800px; margin: 0 auto; padding: 20px 15px 80px 15px;">
+    <main style="max-width: 800px; margin: 0 auto; padding: 25px 15px 80px 15px;">
         
         <!-- Breadcrumb Navigation -->
         <nav style="margin-bottom: 20px; font-size: 0.85rem; color: #a0a0a0;">
-            <a href="/index.html" style="color: #fca311; text-decoration: none;">मुख्य पृष्ठ</a> 
+            <a href="../../index.html" style="color: #ffb703; text-decoration: none;">मुख्य पृष्ठ</a> 
             <span style="margin: 0 5px; color: #666;">/</span> 
-            <a href="/granth-sampada.html" style="color: #fca311; text-decoration: none;">ग्रंथ संपदा</a> 
+            <a href="../../granth-sampada.html" style="color: #ffb703; text-decoration: none;">ग्रंथ संपदा</a> 
             <span style="margin: 0 5px; color: #666;">/</span> 
             <span style="color: #ffffff;">दासबोध</span>
         </nav>
 
-        <!-- Premium Hero Banner Card -->
-        <div style="background: linear-gradient(145deg, #1f120c, #140b07); border: 1px solid rgba(252, 163, 17, 0.25); border-radius: 16px; padding: 25px 20px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 25px;">
-            <span style="background: rgba(252, 163, 17, 0.15); color: #fca311; border: 1px solid rgba(252, 163, 17, 0.3); font-size: 0.8rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 12px;">
-                पवित्र ग्रंथ संपदा
-            </span>
-            
-            <h1 style="color: #fca311; font-size: 1.8rem; font-weight: 700; margin-bottom: 12px; line-height: 1.3; text-shadow: 0 2px 10px rgba(252, 163, 17, 0.2);">
-                श्रीमत् दासबोध
-            </h1>
-            
-            <div style="height: 2px; width: 50px; background: #fca311; margin: 0 auto 15px auto; border-radius: 2px;"></div>
-            
-            <p style="font-size: 1rem; color: #dddddd; margin-bottom: 6px;">
-                <i class="fa-solid fa-pen-nib" style="color: #fca311; margin-right: 6px;"></i> 
-                <strong>रचनाकार:</strong> समर्थ रामदास स्वामी
-            </p>
-            <p style="font-size: 0.9rem; color: #aaaaaa; margin-bottom: 0; line-height: 1.5;">
-                स्वरूप: २० दशक, २०० समास (मराठी ओवीबद्ध व्यवहार व प्रपंच-परमार्थ ग्रंथ)
-            </p>
-        </div>
-
-        <!-- Premium Coming Soon Badge/Notice -->
-        <div style="background: rgba(252, 163, 17, 0.05); border: 1px solid rgba(252, 163, 17, 0.25); border-left: 4px solid #fca311; border-radius: 12px; padding: 18px 20px; margin-bottom: 25px; display: flex; align-items: flex-start; gap: 15px;">
-            <i class="fa-solid fa-clock-rotate-left" style="color: #fca311; font-size: 1.5rem; margin-top: 3px;"></i>
+        <!-- Status Badge/Notice -->
+        <div style="background: rgba(255, 183, 3, 0.08); border: 1px solid rgba(255, 183, 3, 0.3); border-left: 4px solid #ffb703; border-radius: 10px; padding: 18px 20px; margin-bottom: 25px; display: flex; align-items: flex-start; gap: 15px;">
+            <i class="fa-solid fa-clock-rotate-left" style="color: #ffb703; font-size: 1.4rem; margin-top: 3px;"></i>
             <div>
-                <h3 style="color: #fca311; font-size: 1.05rem; margin: 0 0 5px 0; font-weight: 600;">
+                <h3 style="color: #ffb703; font-size: 1.05rem; margin: 0 0 5px 0; font-weight: 600;">
                     डिजिटल संकलन वेगाने सुरू आहे!
                 </h3>
-                <p style="color: #cccccc; font-size: 0.88rem; margin: 0; line-height: 1.6;">
+                <p style="color: #cccccc; font-size: 0.9rem; margin: 0; line-height: 1.6;">
                     'श्रीमत् दासबोध' या ग्रंथातील सर्व अध्याय आणि ओव्या अर्थासहित संकलित करण्याचे काम प्रगतीपथावर आहे. लवकरच हा संपूर्ण ग्रंथ येथे अभ्यासासाठी विनामूल्य उपलब्ध केला जाईल.
                 </p>
             </div>
         </div>
 
         <!-- Detailed Info Content Box -->
-        <div style="background: #140b07; border: 1px solid rgba(255, 255, 255, 0.07); border-radius: 16px; padding: 22px 20px; margin-bottom: 30px;">
+        <div style="background: #140b07; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 22px 20px; margin-bottom: 30px;">
             <h2 style="color: #ffffff; font-size: 1.25rem; font-weight: 600; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding-bottom: 10px;">
-                <i class="fa-solid fa-book-open" style="color: #fca311;"></i> ग्रंथाविषयी थोडक्यात
+                <i class="fa-solid fa-book-open" style="color: #ffb703;"></i> ग्रंथाविषयी थोडक्यात
             </h2>
             
             <p style="color: #cccccc; font-size: 0.95rem; line-height: 1.7; margin-bottom: 15px;">
@@ -94,11 +97,11 @@
                 या ग्रंथाचे वैशिष्ट्य म्हणजे यात केवळ परमार्थाचे निरूपण नसून प्रपंच, व्यवहार, राज्यशास्त्र आणि समाजकारण यावरही अत्यंत व्यावहारिक मार्गदर्शन केले आहे.
             </p>
 
-            <h3 style="color: #fca311; font-size: 1.05rem; font-weight: 600; margin-bottom: 12px;">
+            <h3 style="color: #ffb703; font-size: 1.05rem; font-weight: 600; margin-bottom: 12px;">
                 ✨ ग्रंथाची प्रमुख वैशिष्ट्ये:
             </h3>
             
-            <ul style="padding-left: 18px; margin: 0; color: #bbbbbb; font-size: 0.9rem; line-height: 1.8;">
+            <ul style="padding-left: 18px; margin: 0; color: #bbbbbb; font-size: 0.92rem; line-height: 1.8;">
                 <li style="margin-bottom: 8px;"><strong>रचना:</strong> २० दशक आणि २०० समास.</li>
                 <li style="margin-bottom: 8px;"><strong>ओवी संख्या:</strong> एकूण ७,७५१ ओव्या.</li>
                 <li style="margin-bottom: 8px;"><strong>संदेश:</strong> <em>"प्रपंच साधून परमार्थ साधावा"</em> ही मुख्य शिकवण.</li>
@@ -107,7 +110,7 @@
 
         <!-- Back Button -->
         <div style="text-align: center;">
-            <a href="/granth-sampada.html" style="display: inline-block; background: transparent; color: #fca311; border: 1px solid #fca311; border-radius: 30px; padding: 10px 24px; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
+            <a href="../../granth-sampada.html" style="display: inline-block; background: transparent; color: #ffb703; border: 1px solid #ffb703; border-radius: 30px; padding: 10px 24px; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease;">
                 <i class="fa-solid fa-arrow-left" style="margin-right: 8px;"></i> सर्व ग्रंथ संपदा पाहा
             </a>
         </div>
@@ -119,7 +122,7 @@
         <p style="margin: 0;">&copy; संतवाणी. सर्व हक्क सुरक्षित.</p>
     </footer>
 
-    <!-- Global Menu Script -->
-    <script src="/menu.js"></script>
+    <!-- Global Menu Script (२ स्टेप मागे) -->
+    <script src="../../menu.js"></script>
 </body>
 </html>
