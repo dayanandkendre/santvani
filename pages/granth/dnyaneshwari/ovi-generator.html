@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>संतवाणी ज्ञानेश्वरी सार्थ ओवी आणि श्लोक जनरेटर v5.0 - परफेक्ट डिटेक्शन</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container-box {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            border: 1px solid #333;
+        }
+        h2 { color: #ffb703; text-align: center; margin-top: 0; }
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #ffb703; }
+        textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: #2d2d2d;
+            border: 1px solid #444;
+            border-radius: 6px;
+            color: #fff;
+            box-sizing: border-box;
+            font-size: 1rem;
+            height: 480px;
+            font-family: monospace;
+            line-height: 1.6;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background-color: #ffb703;
+            color: #121212;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.2s;
+        }
+        button:hover { background-color: #ffd166; }
+        #status { margin-top: 15px; font-weight: bold; text-align: center; color: #2ec4b6; font-size: 1.1rem; }
+        .instructions {
+            background-color: #2a2a2a;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #ffb703;
+        }
+        .instructions ul { margin: 5px 0 0 20px; padding: 0; }
+        .instructions li { margin-bottom: 5px; font-size: 0.95rem; }
+    </style>
+</head>
+<body>
+
+<div class="container-box">
+    <h2>✨ सार्थ ज्ञानेश्वरी कस्टम HTML कोड जनरेटर (स्मार्ट डिटेक्शन v5.0) ✨</h2>
+    
+    <div class="instructions">
+        <strong>💡 अपडेटेड फीचर्स:</strong>
+        <ul>
+            <li><strong>ओवी आणि श्लोक परफेक्ट वर्गीकरण:</strong> ज्ञानेश्वरीच्या ओवीच्या शेवटच्या '॥' चिन्हामुळे गोंधळ होणार नाही. 'उवाच' किंवा नंबर रिसेट लॉजिकनुसारच श्लोक ठरवला जाईल.</li>
+            <li>तळाशी स्टेटस बारमध्ये एकूण कार्ड्स, एकूण ओव्या आणि एकूण श्लोकांचे अचूक ट्रॅकिंग दिसेल.</li>
+        </ul>
+    </div>
+
+    <div class="grid-layout">
+        <div>
+            <label for="rawInput">१. तुमचा रॉ डेटा (Raw Data) इथे पेस्ट करा:</label>
+            <textarea id="rawInput" placeholder="डेटा पेस्ट करा..."></textarea>
+        </div>
+        <div>
+            <label for="htmlOutput">२. जनरेट झालेला शुद्ध HTML कोड:</label>
+            <textarea id="htmlOutput" readonly placeholder="तुमचा जनरेट झालेला कोड इथे दिसेल..."></textarea>
+        </div>
+    </div>
+    
+    <button id="generateBtn" onclick="processData()">🚀 वॉटरमार्क ब्रँडिंगसह कोड जनरेट करा</button>
+    <button style="background-color: #2ec4b6; color: white; margin-top: 10px;" onclick="copyCode()">📋 कोड कॉपी करा (Copy Code)</button>
+    
+    <div id="status"></div>
+</div>
+
+<script>
+function processData() {
+    const rawInput = document.getElementById('rawInput').value.trim();
+    const statusDiv = document.getElementById('status');
+    const htmlOutput = document.getElementById('htmlOutput');
+    
+    if (!rawInput) { alert("कृपया आधी रॉ डेटा पेस्ट करा!"); return; }
+    
+    statusDiv.innerHTML = "⏳ कोड तयार होत आहे...";
+    
+    const blocks = rawInput.split(/\n\s*\n/);
+    let finalHtml = "";
+    let validCount = 0;
+    let oviCounter = 1;
+    
+    let oviCountTotal = 0;
+    let shlokaCount = 0;
+
+    blocks.forEach((block) => {
+        let lines = block.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+        if (lines.length < 1) return;
+
+        let speaker = "";
+        let textLines = [];
+        let arthText = "";
+
+        lines.forEach((line) => {
+            if (/^(अर्थ|भावार्थ|सार्थ|सार्थ भावार्थ)\s*:\s*/i.test(line)) {
+                arthText = line.replace(/^(अर्थ|भावार्थ|सार्थ|सार्थ भावार्थ)\s*:\s*/i, "").trim();
+            } else if (line.includes("उवाच")) {
+                speaker = line.replace(/[|#|॥|\|]/g, "").trim() + " |";
+            } else {
+                textLines.push(line);
+            }
+        });
+
+        if (textLines.length === 0) return;
+
+        let currentSubItems = [];
+        let tempLines = [];
+
+        for (let i = 0; i < textLines.length; i++) {
+            tempLines.push(textLines[i]);
+            if (/(?:\|\||॥)\s*([0-9०-९]+)\s*(?:\|\||॥)/.test(textLines[i])) {
+                currentSubItems.push([...tempLines]);
+                tempLines = [];
+            }
+        }
+        if (tempLines.length > 0) {
+            if (currentSubItems.length > 0) {
+                currentSubItems[currentSubItems.length - 1] = currentSubItems[currentSubItems.length - 1].concat(tempLines);
+            } else {
+                currentSubItems.push(tempLines);
+            }
+        }
+
+        currentSubItems.forEach((subLines) => {
+            let mainContentText = "";
+            if (speaker) {
+                mainContentText = speaker + "<br>\n                    " + subLines.join("<br>\n                    ");
+            } else {
+                mainContentText = subLines.join("<br>\n                    ");
+            }
+
+            let numMatch = mainContentText.match(/(?:\|\||॥)\s*([0-9०-९]+)\s*(?:\|\||॥)/);
+            let currentNum = numMatch ? numMatch[1] : null;
+
+            // सुधारेलेले अचूक लॉजिक
+            let isShloka = false;
+            if (speaker) {
+                isShloka = true;
+            } else if (currentNum) {
+                let numericVal = parseInt(convertMarathiToEnglishNum(currentNum));
+                // जर मागील ओव्या ३०-४० च्या वर गेल्या असतील आणि अचानक छोटा नंबर (उदा. १ किंवा २) आला तर तो श्लोक आहे
+                if (oviCounter > 30 && numericVal < 50) {
+                    isShloka = true;
+                }
+            }
+
+            let cardId = "card-" + (isShloka ? "shloka-" : "ovi-") + (currentNum ? convertMarathiToEnglishNum(currentNum) : validCount);
+
+            let watermarkHtml = `<!-- प्रीमियम वॉटरमार्क बार -->
+                <div style="border-top: 1px dashed rgba(255,255,255,0.1); margin-top: 15px; padding-top: 10px; display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: rgba(255, 255, 255, 0.25); font-family: 'Poppins', sans-serif; letter-spacing: 0.5px;">
+                    <span><i class="fa-solid fa-book" style="color: rgba(255,183,3,0.3); margin-right: 4px;"></i> ज्ञानेश्वरी - ग्रंथ</span>
+                    <span style="font-weight: 500; text-transform: lowercase; color: rgba(255,183,3,0.35);">santvani.in</span>
+                </div>`;
+
+            if (isShloka) {
+                let displayLabel = speaker ? speaker.replace(" |", "") : (currentNum ? "श्लोक " + currentNum : "श्लोक");
+                let fileName = displayLabel.replace(/\s+/g, '-');
+
+                finalHtml += `            <!-- श्लोक कार्ड - ${displayLabel} -->
+            <div id="${cardId}" style="background-color: #1a1a1a; border-left: 4px solid #e76f51; padding: 25px 25px 15px 25px; border-radius: 0 8px 8px 0; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); position: relative;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="background-color: #e76f51; color: #121212; font-size: 0.75rem; font-weight: bold; padding: 2px 8px; border-radius: 4px;">${displayLabel}</span>
+                    <button onclick="downloadCard('${cardId}', '${fileName}')" style="background: none; border: none; color: #ffb703; cursor: pointer; font-size: 1.1rem;" title="Download as Image"><i class="fa-solid fa-download"></i></button>
+                </div>
+                <!-- मूळ श्लोक -->
+                <p style="font-family: 'Rozha One', serif; font-size: 1.25rem; color: #ff5e7e; text-align: center; margin-bottom: 15px; line-height: 1.6;">
+                    ${mainContentText}
+                </p>
+                <!-- श्लोकाचा अर्थ -->
+                <div style="border-top: 1px solid #2a2a2a; padding-top: 12px;">
+                    <strong style="color: #e76f51; font-size: 0.9rem; text-transform: uppercase; display: block; margin-bottom: 4px;"><i class="fa-solid fa-book-open"></i> श्लोकार्थ:</strong>
+                    <p style="color: #ccc; font-size: 0.95rem; text-align: justify; margin-bottom: 5px;">${arthText ? arthText : 'अर्थ उपलब्ध नाही.'}</p>
+                </div>
+                ${watermarkHtml}
+            </div>\n\n`;
+                validCount++;
+                shlokaCount++;
+            } else {
+                let displayOviNum = currentNum ? currentNum : oviCounter;
+                if (currentNum) {
+                    oviCounter = parseInt(convertMarathiToEnglishNum(currentNum)) + 1;
+                } else {
+                    oviCounter++;
+                }
+                let fileName = "Ovi-" + displayOviNum;
+
+                finalHtml += `            <!-- ओवी कार्ड ${displayOviNum} -->
+            <div id="${cardId}" style="background-color: #1a1a1a; border-left: 4px solid #ffb703; padding: 25px 25px 15px 25px; border-radius: 0 8px 8px 0; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.4); position: relative;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span style="background-color: #ffb703; color: #121212; font-size: 0.75rem; font-weight: bold; padding: 2px 8px; border-radius: 4px;">ओवी ${displayOviNum}</span>
+                    <button onclick="downloadCard('${cardId}', '${fileName}')" style="background: none; border: none; color: #ffb703; cursor: pointer; font-size: 1.1rem;" title="Download as Image"><i class="fa-solid fa-download"></i></button>
+                </div>
+                <!-- मूळ ओवी -->
+                <p style="font-family: 'Rozha One', serif; font-size: 1.25rem; color: #fff; text-align: center; margin-bottom: 15px; line-height: 1.6;">
+                    ${mainContentText}
+                </p>
+                <!-- ओवीचा अर्थ -->
+                <div style="border-top: 1px solid #2a2a2a; padding-top: 12px;">
+                    <strong style="color: #ffb703; font-size: 0.9rem; text-transform: uppercase; display: block; margin-bottom: 4px;"><i class="fa-solid fa-book-open"></i> सार्थ भावार्थ:</strong>
+                    <p style="color: #ccc; font-size: 0.95rem; text-align: justify; margin-bottom: 5px;">${arthText ? arthText : 'अर्थ उपलब्ध नाही.'}</p>
+                </div>
+                ${watermarkHtml}
+            </div>\n\n`;
+                validCount++;
+                oviCountTotal++;
+            }
+        });
+    });
+
+    htmlOutput.value = finalHtml.trim();
+    statusDiv.innerHTML = `🎯 यशस्वी! एकूण ${validCount} स्वतंत्र कार्ड्सचा कोड जनरेट झाला आहे! (ओव्या: ${oviCountTotal} | श्लोक: ${shlokaCount})`;
+}
+
+function convertMarathiToEnglishNum(str) {
+    const marathiDigits = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
+    return str.replace(/[०-९]/g, function(w) {
+        return marathiDigits.indexOf(w);
+    }).replace(/[^0-9]/g, '');
+}
+
+function copyCode() {
+    const htmlOutput = document.getElementById('htmlOutput');
+    if(!htmlOutput.value) { alert("कॉपी करण्यासाठी आधी कोड जनरेट करा!"); return; }
+    htmlOutput.select();
+    document.execCommand('copy');
+    alert('📋 शुद्ध HTML कोड क्लिपबोर्डवर यशस्वीरित्या कॉपी झाला आहे!');
+}
+</script>
+
+</body>
+</html>
