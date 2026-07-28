@@ -1,0 +1,329 @@
+/* Santkrupa Premium 3-Box Grid Layout Component */
+.aarti-premium-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* ४ ऐवजी ३ कॉलम्स केले */
+    gap: 30px; /* कार्ड्समधील अंतर थोडे वाढवून अजून प्रीमियम केले */
+    max-width: 1280px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* रेस्पॉन्सिव्ह डिझाईन - मोबाईल आणि टॅब्लेटसाठी */
+@media (max-width: 992px) {
+    .aarti-premium-grid { 
+        grid-template-columns: repeat(2, 1fr); /* टॅब्लेटवर २ कॉलम्स */
+    }
+}
+@media (max-width: 650px) {
+    .aarti-premium-grid { 
+        grid-template-columns: 1fr; /* मोबाईलवर १ कॉलम */
+    }
+}
+
+.aarti-premium-card {
+    background-color: #0d0a07;
+    border: 1px solid #261c10;
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 520px; /* उंची ४४०px वरून ५२०px केली जेणेकरून ४ कडवे फिट बसतील */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.aarti-premium-card:hover {
+    transform: translateY(-8px);
+    border-color: #ff2a75;
+    box-shadow: 0 20px 40px rgba(255, 42, 117, 0.15);
+}
+
+/* Fixed & Enhanced Premium Card Title - Royal Devanagari Style */
+.card-header h3 {
+    /* 'Rozha One' हा मराठी आरत्यांच्या नावासाठी अत्यंत बोल्ड आणि रॉयल दिसतो */
+    font-family: 'Rozha One', 'Yatra One', 'Poppins', sans-serif;
+    
+    /* चमकदार सोनेरी पिवळा रंग (डार्क थीमवर सर्वात जास्त उठून दिसतो) */
+    color: #ffb703; 
+    
+    /* साईझ थोडी कमी करून १.२५rem केली, जेणेकरून टायटल जास्त मोठे दिसणार नाही */
+    font-size: 1.25rem; 
+    font-weight: 700;
+    margin: 0 auto 15px auto;
+    text-align: center;
+    letter-spacing: 0.5px;
+    line-height: 1.3;
+    
+    /* रचना सुंदर करण्यासाठी मिनिमल सेटिंग्स */
+    padding: 4px 10px;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* टायटलच्या खाली एक बारीक स्वच्छ पांढरी (White) किंवा हलकी बॉर्डर */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+    
+    /* अक्षरे अंधारातही लख्ख उठून दिसण्यासाठी बारीक सोनेरी चमक (Glow Effect) */
+    text-shadow: 0 2px 8px rgba(255, 183, 3, 0.3); 
+}
+
+/* Internal Card Tabs */
+.card-tab-nav {
+    display: flex;
+    background: #16110b;
+    border-radius: 30px;
+    padding: 4px;
+    margin-bottom: 10px !important; /* हा गॅप कमी केला */
+    border: 1px solid #261c10;
+}
+
+.card-tab-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #a69079;
+    padding: 8px 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+}
+
+.card-tab-btn.active {
+    background: linear-gradient(135deg, #ff2a75, #e01f63);
+    color: #ffffff;
+}
+
+/* Scrollable Content Body */
+.card-body-content {
+    flex-grow: 1;
+    height: 260px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 5px;
+    padding-top: 0px !important; /* वरची जागा पूर्णपणे काढून टाकली */
+}
+
+.card-body-content::-webkit-scrollbar {
+    width: 4px;
+}
+.card-body-content::-webkit-scrollbar-thumb {
+    background: #261c10;
+    border-radius: 10px;
+}
+
+.tab-text-block {
+    display: none;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    animation: aartiFadeIn 0.3s ease forwards;
+}
+
+.tab-text-block.active {
+    display: block;
+}
+
+.lyrics-text {
+    text-align: center;
+    white-space: pre-line;
+    color: #f4eae1;
+}
+
+.arth-text {
+    text-align: justify;
+    color: #a69079;
+}
+
+/* Ultra-Premium Minimal Round Action Footer */
+.card-footer-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #261c10;
+    padding-top: 15px;
+    margin-top: auto;
+}
+
+.card-footer-actions .action-icon-btn {
+    background: #16110b;
+    border: 1px solid #261c10;
+    color: #a69079;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    cursor: pointer;
+    font-size: 1.15rem !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+    text-indent: 0 !important;
+    line-height: 1 !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-footer-actions .action-icon-btn:hover {
+    background: #ff2a75;
+    color: #ffffff;
+    border-color: #ff2a75;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(255, 42, 117, 0.3);
+}
+
+.card-footer-actions .action-icon-btn.download-accent {
+    border-color: #ffb703;
+    color: #ffb703;
+    background: rgba(255, 183, 3, 0.04);
+}
+
+.card-footer-actions .action-icon-btn.download-accent:hover {
+    background: #ffb703;
+    color: #000000;
+    border-color: #ffb703;
+    box-shadow: 0 4px 12px rgba(255, 183, 3, 0.4);
+}
+
+.card-footer-actions .action-icon-btn span {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+.card-footer-actions .action-icon-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    display: block;
+}
+
+/* Premium Image Export Layout Design - Silent Fix */
+.hidden-poster {
+    position: fixed; /* absolute वरून fixed केले */
+    left: -100% !important;
+    top: -100% !important;
+    visibility: hidden !important; /* ब्राउझरला दिसण्यापासून ब्लॉक केले */
+    opacity: 0 !important;
+    width: 450px;
+    min-height: 600px;
+    height: auto;
+    background-color: #0d0a07;
+    border: 3px solid #ff2a75;
+    border-radius: 20px;
+    padding: 30px 25px 30px 25px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.poster-title-pink {
+    font-family: 'Yatra One', cursive;
+    color: #ff2a75; /* पिंक हेडिंग */
+    font-size: 2.1rem;
+    margin: 0 0 2px 0;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+}
+
+.poster-subtitle-gold {
+    font-family: 'Poppins', sans-serif;
+    color: #ffb703; /* गोल्ड सबटायटल */
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+}
+
+.poster-divider {
+    width: 70px;
+    height: 2px;
+    background: linear-gradient(90deg, #ff2a75, #ffb703);
+    margin: 0 auto 12px auto; /* व्यवस्थित गॅप सेट केला */
+}
+
+.poster-lyrics-body {
+    font-size: 1.25rem;
+    line-height: 1.8; /* ओळींमधील अंतर परफेक्ट टाइट ठेवले */
+    color: #f4eae1;
+    white-space: pre-line;
+    font-weight: 400;
+    margin: 0 0 15px 0; /* खालच्या बाजूला गॅप */
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.poster-footer-credits {
+    font-size: 0.8rem;
+    color: #a69079;
+    border-top: 1px solid #261c10;
+    padding-top: 10px;
+    margin-top: auto; /* क्रेडिट्स नेहमी सर्वात शेवटी खाली ढकलण्यासाठी */
+    letter-spacing: 0.5px;
+}
+
+@keyframes aartiFadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1100px) {
+    .aarti-premium-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 650px) {
+    .aarti-premium-grid { grid-template-columns: 1fr; }
+}
+
+/* Premium Filter Bar Design */
+.aarti-filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    background: #0d0a07;
+    padding: 8px;
+    border-radius: 40px;
+    border: 1px solid #261c10;
+    display: inline-flex;
+}
+
+.filter-btn {
+    background: transparent;
+    border: none;
+    color: #a69079;
+    padding: 10px 22px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-btn:hover {
+    color: #ffffff;
+    background: rgba(255, 183, 3, 0.05);
+}
+
+.filter-btn.active {
+    background: linear-gradient(135deg, #ffb703, #e6a100);
+    color: #000000;
+    box-shadow: 0 4px 15px rgba(255, 183, 3, 0.3);
+}
+
+/* Smooth Fade Animation for Cards */
+.aarti-premium-card {
+    animation: cardFadeIn 0.4s ease forwards;
+}
+
+@keyframes cardFadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
