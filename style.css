@@ -1789,7 +1789,7 @@ body {
 }
 
 /* ==========================================
-   PREMIUM MOBILE SLIDE-IN MENU (REPLACED)
+   FINAL PREMIUM MOBILE MENU STYLES (FIXED)
    ========================================== */
 
 /* Dark Blur Overlay (मागील पडदा) */
@@ -1821,6 +1821,7 @@ body {
     font-size: 1.6rem;
     cursor: pointer;
     z-index: 1001;
+    padding: 5px 10px;
 }
 
 /* Mobile View Adjustments (768px आणि खाली) */
@@ -1836,23 +1837,23 @@ body {
         display: block;
     }
 
-    /* Dynamic & Compact Slide-in Drawer */
+    /* Auto Width Slide-in Drawer */
     .nav-links {
         position: fixed;
         top: 0;
-        right: -100%; /* सुरुवातीला उजवीकडे स्क्रीनच्या बाहेर */
+        right: -100%; /* सुरुवातीला लपलेला */
         
-        min-width: 40%;
+        min-width: 45%;
         width: fit-content;
-        max-width: 75%; /* टेक्स्टनुसार आपोआप अ‍ॅडजस्ट होईल */
+        max-width: 75%;
         
         height: 100vh;
-        background: #140b07; /* Premium Dark Theme */
+        background: #140b07; /* Rich Dark Background */
         display: flex !important;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 80px 25px 30px 20px;
+        padding: 80px 20px 30px 20px;
         box-shadow: -5px 0 25px rgba(0,0,0,0.8);
         z-index: 1000;
         transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1863,7 +1864,7 @@ body {
         right: 0;
     }
 
-    /* Menu Items Left Aligned */
+    /* Menu Items Align Left */
     .nav-links li {
         width: 100%;
         margin: 10px 0;
@@ -1886,20 +1887,23 @@ body {
         color: #fca311;
     }
 
-    /* 'इतर' Dropdown Chevron Icon (Accordion Effect) */
-    .dropdown-toggle::after {
-        content: "\f105"; /* FontAwesome Chevron Right > */
-        font-family: "Font Awesome 6 Free";
-        font-weight: 900;
-        font-size: 0.9rem;
-        transition: transform 0.3s ease;
-        color: #fca311;
-        margin-left: 10px;
+    /* Vertical Line Fix & Dropdown Reset */
+    .dropdown, 
+    .dropdown.active, 
+    .dropdown.open,
+    .dropdown-menu,
+    .dropdown-toggle {
+        border-left: none !important;
+        border-right: none !important;
+        border-top: none !important;
     }
 
-    /* When Open: Rotate Arrow Downwards v */
-    .dropdown.open .dropdown-toggle::after {
-        transform: rotate(90deg);
+    .dropdown::before, 
+    .dropdown::after,
+    .dropdown-menu::before, 
+    .dropdown-menu::after {
+        display: none !important;
+        content: none !important;
     }
 
     /* Sub-menu Dropdown Styling */
@@ -1909,22 +1913,25 @@ body {
         background: #1d100a;
         border-radius: 6px;
         margin-top: 8px;
-        padding: 8px 12px;
+        padding: 6px 12px;
         box-shadow: inset 0 2px 5px rgba(0,0,0,0.4);
+        border: 1px solid rgba(252, 163, 17, 0.2) !important;
     }
 
-    .dropdown.open .dropdown-menu {
+    .dropdown.open .dropdown-menu,
+    .dropdown.active .dropdown-menu {
         display: block;
     }
 
     .dropdown-menu li {
-        border-bottom: none;
+        border-bottom: none !important;
         margin: 6px 0;
     }
 
     .dropdown-menu li a {
         font-size: 0.95rem;
         color: #cccccc;
+        padding: 4px 0;
     }
 
     .nav-cta {
