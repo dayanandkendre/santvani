@@ -1789,21 +1789,41 @@ body {
 }
 
 /* ==========================================
-   HAMBURGER MENU STYLES (MOBILE RESPONSIVE)
+   PREMIUM MOBILE SLIDE-IN MENU (REPLACED)
    ========================================== */
 
-/* Hamburger Button Styling */
+/* Dark Blur Overlay (मागील पडदा) */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Hamburger Icon Styling */
 .hamburger-toggle {
     display: none;
     background: transparent;
     border: none;
-    color: #fff; /* बटनाचा रंग */
-    font-size: 1.5rem;
+    color: #fca311;
+    font-size: 1.6rem;
     cursor: pointer;
-    padding: 5px 10px;
+    z-index: 1001;
 }
 
-/* मोबाईल व्ह्यू (768px पेक्षा लहान स्क्रीनसाठी) */
+/* Mobile View Adjustments (768px आणि खाली) */
 @media screen and (max-width: 768px) {
     .nav-container {
         display: flex;
@@ -1812,50 +1832,102 @@ body {
         position: relative;
     }
 
-    /* Hamburger Button दिसायला सुरुवात होईल */
     .hamburger-toggle {
         display: block;
     }
 
-    /* मोबाईलवर मुख्य मेनू लपवून ठेवणे */
+    /* Dynamic & Compact Slide-in Drawer */
     .nav-links {
-        display: none;
+        position: fixed;
+        top: 0;
+        right: -100%; /* सुरुवातीला उजवीकडे स्क्रीनच्या बाहेर */
+        
+        min-width: 40%;
+        width: fit-content;
+        max-width: 75%; /* टेक्स्टनुसार आपोआप अ‍ॅडजस्ट होईल */
+        
+        height: 100vh;
+        background: #140b07; /* Premium Dark Theme */
+        display: flex !important;
         flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: #1a100c; /* तुमच्या थीमचा बॅकग्राउंड रंग */
-        padding: 15px 0;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-        z-index: 999;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 80px 25px 30px 20px;
+        box-shadow: -5px 0 25px rgba(0,0,0,0.8);
+        z-index: 1000;
+        transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        overflow-y: auto;
     }
 
-    /* हॅम्बर्गरवर क्लिक केल्यावर मेनू उघडेल */
     .nav-links.active {
-        display: flex;
+        right: 0;
     }
 
+    /* Menu Items Left Aligned */
     .nav-links li {
         width: 100%;
-        text-align: center;
-        margin: 8px 0;
+        margin: 10px 0;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding-bottom: 8px;
     }
 
-    /* Dropdown मधील बदल */
+    .nav-links a {
+        font-size: 1.05rem;
+        color: #e0e0e0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        text-decoration: none;
+    }
+
+    .nav-links a.active, .nav-links a:hover {
+        color: #fca311;
+    }
+
+    /* 'इतर' Dropdown Chevron Icon (Accordion Effect) */
+    .dropdown-toggle::after {
+        content: "\f105"; /* FontAwesome Chevron Right > */
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 0.9rem;
+        transition: transform 0.3s ease;
+        color: #fca311;
+        margin-left: 10px;
+    }
+
+    /* When Open: Rotate Arrow Downwards v */
+    .dropdown.open .dropdown-toggle::after {
+        transform: rotate(90deg);
+    }
+
+    /* Sub-menu Dropdown Styling */
     .dropdown-menu {
-        position: static;
-        background-color: #2a1a14;
-        box-shadow: none;
         display: none;
+        position: static;
+        background: #1d100a;
+        border-radius: 6px;
+        margin-top: 8px;
+        padding: 8px 12px;
+        box-shadow: inset 0 2px 5px rgba(0,0,0,0.4);
     }
 
-    .dropdown.active .dropdown-menu {
+    .dropdown.open .dropdown-menu {
         display: block;
     }
 
-    /* मोबाईलवर CTA बटन लपवायचे किंवा मेनूमध्ये ठेवायचे असल्यास */
+    .dropdown-menu li {
+        border-bottom: none;
+        margin: 6px 0;
+    }
+
+    .dropdown-menu li a {
+        font-size: 0.95rem;
+        color: #cccccc;
+    }
+
     .nav-cta {
-        display: none; 
+        display: none;
     }
 }
