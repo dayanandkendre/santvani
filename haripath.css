@@ -1,0 +1,212 @@
+/* ==========================================================================
+   ५. सार्थ हरिपाठ (PREMIUM GRID & DESIGN) - PART 3
+   ========================================================================== */
+
+/* मुख्य सार्थ कंटेनर (तुमच्या डार्क थीमच्या रचनेनुसार) */
+.sarth-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* मुख्य अभंग + अर्थ अल्ट्रा प्रीमियम कार्ड */
+.sarth-card {
+    background-color: var(--bg-card); /* तुमच्या मूळ कोडमधील मखमली फिकट डार्क रंग */
+    border: 1px solid var(--border-gold);
+    border-top: 4px solid var(--primary-color); /* पवित्र भगवा / मरून टॉप बॉर्डर */
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.sarth-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary-color); /* होव्हर केल्यावर चमचमणारा सोनेरी रंग */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* अभंग क्रमांक बॅज */
+.sarth-num {
+    position: absolute;
+    top: -16px;
+    left: 40px;
+    background: linear-gradient(135deg, var(--primary-color), #e65100);
+    color: var(--text-light);
+    padding: 5px 22px;
+    border-radius: 30px;
+    font-family: 'Yatra One', cursive;
+    font-size: 0.95rem;
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 4px 15px rgba(255, 111, 0, 0.3);
+}
+
+/* २-कॉलम ग्रिड लेआउट (डेस्कटॉप आणि मोठ्या स्क्रीनसाठी समांतर रचना) */
+.sarth-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1.3fr; /* अभंग डावीकडे, भावार्थ उजवीकडे */
+    gap: 35px;
+    margin-top: 15px;
+    align-items: center;
+}
+
+/* डावी बाजू - अस्सल ग्रंथ स्टाईल अभंग */
+.sarth-abhang-side {
+    font-family: 'Rozha One', serif; /* भारदस्त देवनागरी फॉन्ट */
+    font-size: 1.3rem;
+    line-height: 2.2;
+    color: var(--text-light);
+    text-align: center;
+    padding: 25px 20px;
+    background: rgba(0, 0, 0, 0.25); /* हलका अंतर्गत डार्क बॉक्स */
+    border-radius: 10px;
+    border: 1px dashed var(--border-gold);
+}
+
+/* उजवी बाजू - शांत आणि वाचनीय भावार्थ */
+.sarth-arth-side {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--text-muted); /* वाचायला डोळ्यांना शांत वाटणारा मजकूर */
+}
+
+/* भावार्थ हेडिंग स्टाईल */
+.sarth-arth-side strong {
+    color: var(--secondary-color); /* सोनेरी भावार्थ हेडिंग */
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    font-family: 'Rozha One', serif;
+}
+
+
+/* ==========================================================================
+   २. ड्रॉपडाऊन आणि मेनू बार स्टाईल (FIXED - NO HOVER GAP)
+   ========================================================================== */
+
+/* ड्रॉपडाऊन जागच्या जागी उघडण्यासाठी पॅरेंट Element */
+.nav-links > li {
+    position: relative;
+}
+
+/* इनलाइन असलेला बाण (Chevron) */
+.nav-chevron {
+    font-size: 0.7rem; 
+    margin-left: 2px;
+}
+
+/* ड्रॉपडाऊन मेनू मुख्य स्टाईल (समस्या पूर्ण निवारण) */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;        /* 'इतर' च्या अगदी खालून सुरू होईल */
+    left: 0;          /* डाव्या कोपऱ्यात न पळता 'इतर' च्या रेषेत लॉक राहील */
+    background-color: var(--bg-card); /* तुमच्या थीमचा मखमली डार्क रंग */
+    border: 1.5px solid var(--secondary-color); /* सोनेरी बॉर्डर */
+    border-radius: 8px;
+    min-width: 190px;
+    padding: 8px 0;
+    margin-top: 0px;  /* 'Hover Gap' घालवण्यासाठी मार्जिन 0 केले आहे */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    z-index: 1000;    
+    display: none;    /* सुरुवातीला लपलेला राहील */
+    list-style: none;
+}
+
+/* अदृश्य पूल (Bridge) - माउस खाली आणताना मेनू बंद पडू नये म्हणून */
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: transparent;
+}
+
+/* 'इतर' वर माउस नेल्यावर ड्रॉपडाऊन दिसेल */
+.nav-links li:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    width: 100%;
+    margin: 0 !important;
+}
+
+/* ड्रॉपडाऊनमधील लिंक्सचा लुक */
+.dropdown-menu li a {
+    color: var(--text-light) !important;
+    padding: 10px 15px !important;
+    display: block !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    text-transform: none !important;
+    transition: all 0.25s ease;
+}
+
+/* होव्हर केल्यावर भगवा आणि सोनेरी इफेक्ट */
+.dropdown-menu li a:hover {
+    background: linear-gradient(90deg, var(--primary-color), transparent);
+    color: #fff !important;
+    padding-left: 22px !important; /* प्रीमियम सरकणारा इफेक्ट */
+}
+
+
+/* ==========================================================================
+   ७. १ क्लिक बॅक-टू-टॉप बटन (FLOATING BUTTON)
+   ========================================================================== */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, var(--primary-color), #e65100);
+    color: #ffffff;
+    border: 2px solid var(--secondary-color);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none; /* स्क्रोल केल्याशिवाय दिसणार नाही */
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    background: var(--secondary-color);
+    color: var(--bg-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 179, 0, 0.4);
+}
+
+
+/* ==========================================================================
+   ७. मोबाईल आणि टॅब्लेट रिस्पॉन्सिव्ह डिझाईन
+   ========================================================================== */
+@media (max-width: 850px) {
+    /* मोबाईलवर २-कॉलम ग्रिडचे रूपांतर एका कॉलममध्ये होईल (आधी अभंग, मग अर्थ) */
+    .sarth-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .sarth-card {
+        padding: 25px 15px;
+    }
+    
+    .sarth-abhang-side {
+        font-size: 1.15rem;
+        line-height: 2;
+        padding: 20px 15px;
+    }
+    
+    .sarth-num {
+        left: 20px;
+    }
+}

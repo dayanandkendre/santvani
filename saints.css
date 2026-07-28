@@ -1,0 +1,499 @@
+/* ==========================================
+   SANT CHARITRA CORE STYLES (Universal)
+   ========================================== */
+
+:root {
+    --saffron: #ff7300;
+    --royal-gold: #ffcc00;
+    --bg-dark: #0f0a05;
+    --card-bg: #1a1108;
+    --text-white: #f5f5f5;
+    --text-gold: #ffdd67;
+    --text-muted: #a0958d;
+    --border-subtle: rgba(255, 204, 0, 0.15);
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+}
+
+body { 
+    font-family: 'Poppins', sans-serif; 
+    background-color: var(--bg-dark); 
+    color: var(--text-white); 
+}
+
+/* Top Bar */
+.top-bar { 
+    background-color: #000; 
+    padding: 10px 20px; 
+    font-size: 0.9rem; 
+    border-bottom: 1px solid var(--border-subtle); 
+}
+.top-bar-container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+.top-bar-text { 
+    color: var(--royal-gold); 
+}
+
+/* Navbar */
+.navbar { 
+    background-color: rgba(26, 17, 8, 0.95); 
+    padding: 15px 20px; 
+    border-bottom: 2px solid var(--saffron); 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+.nav-container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+.logo { 
+    font-family: 'Rozha One', serif; 
+    font-size: 1.6rem; 
+    color: var(--text-white); 
+    text-decoration: none; 
+}
+.logo-highlight { 
+    color: var(--saffron); 
+}
+.nav-links { 
+    list-style: none; 
+    display: flex; 
+    gap: 25px; 
+}
+.nav-links a { 
+    color: var(--text-white); 
+    text-decoration: none; 
+    font-weight: 500; 
+    transition: color 0.3s; 
+}
+.nav-links a:hover, .nav-links a.active { 
+    color: var(--royal-gold); 
+}
+.btn-nav { 
+    background: var(--saffron); 
+    color: white !important; 
+    padding: 8px 16px; 
+    border-radius: 4px; 
+    text-decoration: none; 
+    font-weight: 500; 
+}
+
+/* Hero Banner */
+.inner-hero { 
+    background: radial-gradient(circle at center, #3a1c02 0%, #0f0a05 100%); 
+    padding: 8px 20px; 
+    text-align: center; 
+    border-bottom: 1px solid var(--border-subtle); 
+}
+.gold-badge { 
+    background: rgba(255, 204, 0, 0.1); 
+    border: 1px solid var(--royal-gold); 
+    color: var(--royal-gold); 
+    padding: 5px 15px; 
+    border-radius: 20px; 
+    font-size: 0.85rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    display: inline-block; 
+    margin-bottom: 15px; 
+}
+.inner-title { 
+    font-family: 'Rozha One', serif; 
+    font-size: 3rem; 
+    margin-bottom: 15px; 
+    color: var(--royal-gold); 
+}
+.inner-tagline { 
+    max-width: 800px; 
+    margin: 0 auto; 
+    color: var(--text-muted); 
+    line-height: 1.6; 
+}
+
+/* Layout Main Content */
+.main-content-area {
+    padding: 60px 0; 
+    background-color: var(--bg-dark);
+}
+.content-wrapper {
+    max-width: 900px; 
+    margin: 0 auto; 
+    padding: 0 20px;
+}
+
+/* Table & Cards */
+.feature-card { 
+    background: var(--card-bg); 
+    border: 1px solid var(--border-subtle); 
+    border-radius: 8px; 
+    padding: 30px; 
+    margin-bottom: 40px; 
+}
+.card-header h3 { 
+    font-family: 'Rozha One', serif; 
+    color: var(--royal-gold); 
+    font-size: 1.8rem; 
+    margin-bottom: 20px; 
+}
+.info-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 15px; 
+}
+.info-table th { 
+    padding: 12px; 
+    color: var(--text-gold); 
+    font-weight: 600; 
+    text-align: left; 
+    border-bottom: 1px solid var(--border-subtle); 
+    width: 30%; 
+}
+.info-table td { 
+    padding: 12px; 
+    border-bottom: 1px solid var(--border-subtle); 
+}
+.table-note {
+    font-size: 0.85rem; 
+    color: var(--text-muted); 
+    margin-top: 15px; 
+    font-style: italic; 
+    text-align: center;
+}
+
+/* Typography & Content Layout */
+.biography-text {
+    font-size: 1.15rem; 
+    line-height: 2; 
+    color: var(--text-white); 
+    text-align: justify;
+}
+.biography-text h2 {
+    font-family: 'Rozha One', serif; 
+    color: var(--text-gold); 
+    margin: 40px 0 20px; 
+    font-size: 2rem; 
+    border-left: 4px solid var(--saffron); 
+    padding-left: 15px;
+}
+.biography-text p {
+    margin-bottom: 20px;
+}
+
+/* Blockquote / Callouts */
+.charitra-blockquote {
+    background: rgba(255, 115, 0, 0.05); 
+    border-left: 4px solid var(--saffron); 
+    padding: 20px; 
+    margin: 30px 0; 
+    font-style: italic; 
+    border-radius: 4px;
+}
+.poem-box {
+    background: linear-gradient(90deg, #261705, #3d2308); 
+    padding: 25px; 
+    border-radius: 8px; 
+    border: 1px dashed var(--royal-gold); 
+    text-align: center; 
+    margin: 30px 0;
+}
+.poem-text {
+    font-family: 'Yatra One', sans-serif; 
+    font-size: 1.4rem; 
+    color: var(--royal-gold); 
+    line-height: 1.8; 
+    margin: 0;
+}
+.closing-text {
+    text-align: center; 
+    margin-top: 50px; 
+    font-family: 'Yatra One', sans-serif; 
+    color: var(--royal-gold); 
+    font-size: 1.5rem;
+}
+
+/* Footer */
+.footer { 
+    background: #050302; 
+    padding: 40px 20px; 
+    border-top: 1px solid var(--border-subtle); 
+    margin-top: 60px; 
+}
+.footer-top { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+}
+.footer-brand-box { 
+    flex: 2; 
+    min-width: 250px; 
+}
+.footer-logo { 
+    font-family: 'Rozha One', serif; 
+    color: var(--royal-gold); 
+    margin-bottom: 15px; 
+}
+.footer-about { 
+    color: var(--text-muted); 
+    line-height: 1.6; 
+}
+.footer-links-box { 
+    flex: 1; 
+    min-width: 150px; 
+}
+.footer-links-box h4 { 
+    color: var(--royal-gold); 
+    margin-bottom: 15px; 
+}
+.footer-links-box ul { 
+    list-style: none; 
+}
+.footer-links-box ul li { 
+    margin-bottom: 10px; 
+}
+.footer-links-box ul li a { 
+    color: var(--text-muted); 
+    text-decoration: none; 
+}
+.footer-links-box ul li a:hover { 
+    color: var(--royal-gold); 
+}
+.footer-bottom { 
+    text-align: center; 
+    margin-top: 40px; 
+    padding-top: 20px; 
+    border-top: 1px solid rgba(255,255,255,0.05); 
+    color: var(--text-muted); 
+    font-size: 0.9rem; 
+}
+
+/* १. नेव्हिगेशन लिंकला 'position: relative' देणे आवश्यक आहे */
+.nav-links li {
+    position: relative;
+}
+
+/* २. ड्रॉपडाऊन मेनूची पोझिशन आणि लूक */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* नेव्हबारच्या खाली */
+    left: 0;
+    background-color: #1a1a1a; /* डार्क थीम कलर */
+    min-width: 180px;
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 4px;
+    border: 1px solid #333;
+    display: none; /* सुरुवातीला लपवलेला */
+    z-index: 1000; /* सर्वात वर दिसण्यासाठी */
+}
+
+/* ३. होव्हर (Hover) केल्यावर मेनू दिसण्यासाठी */
+.nav-links li:hover .dropdown-menu {
+    display: block;
+}
+
+/* ४. ड्रॉपडाऊनमधील लिंक्सची स्टाईल */
+.dropdown-menu li a {
+    display: block;
+    padding: 8px 15px;
+    color: #cccccc;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+/* ५. होव्हर केल्यावर होणारा बदल */
+.dropdown-menu li a:hover {
+    color: #ffaa00; /* गोल्ड रंग */
+    background: #252525;
+}
+
+/* Hero Section */
+.inner-hero {
+    background: radial-gradient(circle at center, #3a1c02 0%, #0f0a05 100%);
+    padding: 80px 0;
+}
+
+.inner-title {
+    font-size: 3.8rem;
+}
+
+/* Biography Section */
+.biography-section {
+    padding: 80px 0;
+    background-color: #0f0a05;
+}
+
+.section-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.feature-card {
+    margin-bottom: 50px;
+    background: #1a1108;
+    border: 1px solid rgba(255, 204, 0, 0.2);
+    padding: 20px;
+}
+
+.card-header h3 {
+    color: var(--royal-gold);
+    font-family: 'Rozha One', serif;
+    font-size: 1.8rem;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    color: var(--text-white);
+}
+
+table tr {
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+table th {
+    padding: 12px;
+    color: var(--text-gold);
+    font-weight: 600;
+    width: 30%;
+}
+
+table td {
+    padding: 12px;
+}
+
+.note-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 15px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Content Blocks */
+.bio-text-block {
+    font-size: 1.15rem;
+    line-height: 2;
+    color: var(--text-white);
+    text-align: justify;
+}
+
+.section-heading {
+    font-family: 'Rozha One', serif;
+    color: var(--text-gold);
+    margin: 40px 0 20px;
+    font-size: 2rem;
+    border-left: 4px solid var(--saffron);
+    padding-left: 15px;
+}
+
+/* Quote/Highlight Box */
+.highlight-box {
+    background: linear-gradient(90deg, #261705, #3d2308);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px dashed var(--royal-gold);
+    text-align: center;
+    margin: 30px 0;
+}
+
+/* मुख्य बायोग्राफी कंटेनर */
+.biography-content {
+    font-size: 1.15rem;
+    line-height: 2;
+    color: var(--text-white);
+    text-align: justify;
+    padding: 20px;
+}
+
+/* हेडिंगसाठी स्टाईल */
+.biography-content h2 {
+    font-family: 'Rozha One', serif;
+    color: var(--text-gold);
+    margin: 40px 0 20px;
+    font-size: 2rem;
+    border-left: 4px solid var(--saffron);
+    padding-left: 15px;
+}
+
+/* अभंग हायलाईट बॉक्स (Abhang Box) */
+.abhang-box {
+    background: linear-gradient(90deg, #261705, #3d2308);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px dashed var(--royal-gold);
+    text-align: center;
+    margin: 30px 0;
+}
+
+.abhang-text {
+    font-family: 'Yatra One', sans-serif;
+    font-size: 1.4rem;
+    color: var(--royal-gold);
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* वंशावळ कार्ड */
+.feature-card {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 204, 0, 0.1);
+}
+
+.feature-card ul {
+    list-style-type: square;
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+.feature-card ol {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+/* ब्लॉकक्वाट (Quote) */
+.saint-quote {
+    background: rgba(255, 115, 0, 0.05);
+    border-left: 4px solid var(--saffron);
+    padding: 20px;
+    margin: 30px 0;
+    font-style: italic;
+    border-radius: 4px;
+    color: var(--text-white);
+}
+
+/* शेवटचा मंत्र/समाप्ती */
+.charitra-samapti {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Yatra One', sans-serif;
+    color: var(--royal-gold);
+    font-size: 1.5rem;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 204, 0, 0.2);
+}

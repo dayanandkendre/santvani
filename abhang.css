@@ -1,0 +1,198 @@
+/* ==========================================================================
+   संतवाणी गाथा - फायनल परफेक्ट विड्थ, क्लीन फॉन्ट आणि प्रीमियम होव्हर इफेक्ट्स
+   ========================================================================== */
+
+/* गुगलवरून सुंदर आणि वाचायला सोपे देवनागरी फॉन्ट्स इम्पोर्ट केले */
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&family=Yatra+One&display=swap');
+
+.sarth-haripath-section {
+    background-color: #0f0a05 !important;
+    padding: 24px 20px !important; 
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.sarth-haripath-section .tukaram-main-wrapper {
+    max-width: 1200px !important; /* परफेक्ट बॅलन्स विड्थ */
+    margin: 0 auto !important; 
+    padding: 0 !important;
+    box-sizing: border-box !important;
+}
+
+/* मुख्य ग्रिड लेआउट - २ कॉलम */
+.sarth-haripath-section .tukaram-container {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; 
+    gap: 20px !important; 
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* कडक प्रीमियम कार्ड डिझाईन */
+.sarth-haripath-section .sarth-grid {
+    background: #1a1108 !important;
+    border: 1px solid rgba(255, 210, 127, 0.15) !important;
+    border-radius: 12px !important;
+    padding: 22px !important; 
+    width: 100% !important; 
+    
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important; 
+    
+    height: 100% !important; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.65) !important;
+    box-sizing: border-box !important;
+    transition: transform 0.2s ease, border-color 0.2s ease !important;
+}
+
+.sarth-haripath-section .sarth-grid:hover {
+    border-color: rgba(255, 210, 127, 0.35) !important;
+    transform: translateY(-3px) !important;
+}
+
+/* हेडर एरिया */
+.sarth-haripath-section .card-header-area {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    border-bottom: 1px dashed rgba(255, 210, 127, 0.18) !important;
+    padding-bottom: 12px !important;
+    margin-bottom: 16px !important;
+    flex-shrink: 0 !important;
+}
+
+.sarth-haripath-section .abhang-number {
+    font-family: 'Noto Sans Marathi', sans-serif !important;
+    color: #ffcc00 !important;
+    font-size: 1.25rem !important; 
+    font-weight: 700 !important;
+}
+
+.sarth-haripath-section .content-badge {
+    font-size: 0.82rem !important;
+    background: rgba(255, 115, 0, 0.15) !important;
+    color: #ff7300 !important;
+    padding: 4px 12px !important;
+    border-radius: 20px !important;
+    font-weight: 500 !important;
+}
+
+/* मजकूर विभाग */
+.sarth-haripath-section .card-main-content {
+    display: block !important;
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    flex-grow: 1 !important; 
+}
+
+/* अभंग मजकूर - वाचनासाठी एकदम क्लिअर */
+.sarth-haripath-section .abhang-text {
+    font-family: 'Rozha One', serif !important;
+    font-size: 1.18rem !important; /* 🎯 साईझ १.४५ वरून कमी करून १.१८ केली (एकदम परफेक्ट) */
+    line-height: 2.6rem !important;  /* 🎯 दोन ओळींमध्ये मस्त सुटसुटीत स्पेस दिली */
+    letter-spacing: 0.5px !important; 
+    color: #fffdfa !important;
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
+    font-weight: normal !important;
+}
+
+/* भावार्थ मजकूर */
+.sarth-haripath-section .bhavarth-text {
+    font-family: 'Noto Sans Marathi', sans-serif !important;
+    font-size: 1rem !important; 
+    line-height: 1.85rem !important;
+    color: #c2b4a6 !important;
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+    margin: 0 !important;
+    font-weight: 400 !important;
+}
+
+/* तळाचा विभाग */
+.sarth-haripath-section .card-footer-area {
+    margin-top: auto !important;
+    flex-shrink: 0 !important;
+    width: 100% !important;
+}
+
+/* ३ ॲक्शन बटणे ग्रिड */
+.sarth-haripath-section .sarth-actions {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 8px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+    padding-top: 14px !important;
+    margin-bottom: 12px !important;
+}
+
+/* 🎯 ३ ॲक्शन बटणे डिझाईन */
+.sarth-haripath-section .action-btn {
+    font-family: 'Noto Sans Marathi', sans-serif !important;
+    background: rgba(255, 255, 255, 0.02) !important;
+    border: 1px solid rgba(255, 210, 127, 0.15) !important;
+    color: #ffd27f !important;
+    padding: 10px 4px !important; 
+    border-radius: 8px !important;
+    font-size: 0.85rem !important;
+    cursor: pointer !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 6px !important;
+    transition: all 0.2s ease-in-out !important;
+}
+
+/* 🎯 कर्सर गेल्यावर पिवळा/सोनेरी (Premium Gold) होणारा कडक इफेक्ट */
+.sarth-haripath-section .action-btn:hover {
+    background: #ffcc00 !important; /* 👈 बॅकग्राउंड पूर्ण पिवळा होईल */
+    color: #0f0a05 !important; /* 👈 आतील अक्षरे आणि आयकॉन डार्क होतील */
+    border-color: #ffcc00 !important;
+    font-weight: 600 !important;
+}
+
+/* मुख्य टॉगल बटण */
+.sarth-haripath-section .toggle-view-btn {
+    font-family: 'Noto Sans Marathi', sans-serif !important;
+    width: 100% !important;
+    background: transparent !important;
+    border: 1px solid #ff7300 !important;
+    color: #ff7300 !important;
+    padding: 11px !important; 
+    border-radius: 8px !important;
+    font-size: 0.95rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    transition: all 0.2s ease !important;
+}
+
+.sarth-haripath-section .toggle-view-btn:hover {
+    background: linear-gradient(135deg, #ff7300 0%, #fe1e50 100%) !important;
+    color: #fffdfa !important;
+    border-color: transparent !important;
+}
+
+/* ==========================================================================
+   Responsive Media Queries (Tablets & Mobiles)
+   ========================================================================== */
+
+@media (max-width: 996px) {
+    .sarth-haripath-section { padding: 20px 15px !important; }
+    .sarth-haripath-section .tukaram-container { gap: 16px !important; }
+}
+
+@media (max-width: 768px) {
+    .sarth-haripath-section { padding: 16px 10px !important; }
+    .sarth-haripath-section .tukaram-container { grid-template-columns: 1fr !important; gap: 16px !important; }
+    .sarth-haripath-section .sarth-grid { padding: 16px !important; }
+}
