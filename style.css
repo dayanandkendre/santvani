@@ -1787,3 +1787,75 @@ body {
         text-align: justify; /* मोबाईलवर व्यवस्थित दिसण्यासाठी */
     }
 }
+
+/* ==========================================
+   HAMBURGER MENU STYLES (MOBILE RESPONSIVE)
+   ========================================== */
+
+/* Hamburger Button Styling */
+.hamburger-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff; /* बटनाचा रंग */
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* मोबाईल व्ह्यू (768px पेक्षा लहान स्क्रीनसाठी) */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    /* Hamburger Button दिसायला सुरुवात होईल */
+    .hamburger-toggle {
+        display: block;
+    }
+
+    /* मोबाईलवर मुख्य मेनू लपवून ठेवणे */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1a100c; /* तुमच्या थीमचा बॅकग्राउंड रंग */
+        padding: 15px 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+        z-index: 999;
+    }
+
+    /* हॅम्बर्गरवर क्लिक केल्यावर मेनू उघडेल */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        margin: 8px 0;
+    }
+
+    /* Dropdown मधील बदल */
+    .dropdown-menu {
+        position: static;
+        background-color: #2a1a14;
+        box-shadow: none;
+        display: none;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    /* मोबाईलवर CTA बटन लपवायचे किंवा मेनूमध्ये ठेवायचे असल्यास */
+    .nav-cta {
+        display: none; 
+    }
+}
