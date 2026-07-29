@@ -1806,14 +1806,15 @@ html, body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(4px);
-    z-index: 9998;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: 9998; /* पडदा मुख्य स्क्रीनच्या वर */
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease-in-out;
+    transition: opacity 0.35s ease-in-out, visibility 0.35s ease-in-out;
 }
 
 .menu-overlay.active {
@@ -1829,14 +1830,15 @@ html, body {
     color: #fca311;
     font-size: 1.6rem;
     cursor: pointer;
-    z-index: 10001;
+    z-index: 10002 !important; /* बटण आणि 'X' आयकॉन पडद्याच्या व मेनूच्या वर */
     padding: 5px 10px;
+    outline: none;
 }
 
 /* Mobile View Adjustments (768px आणि खाली) */
 @media screen and (max-width: 768px) {
     /* Header Sticky & Layer Fix */
-    header, navbar, .nav-container {
+    header, .navbar {
         position: sticky !important;
         top: 0 !important;
         z-index: 9999 !important;
@@ -1855,47 +1857,48 @@ html, body {
         justify-content: space-between;
         align-items: center;
         padding: 10px 15px;
+        position: relative;
     }
 
     .hamburger-toggle {
         display: block;
     }
 
-    /* Auto Width Slide Drawer */
+    /* Auto Width Slide Drawer - मॅन्युअली फिक्स */
     .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
         
-        min-width: 45%;
-        width: fit-content;
-        max-width: 75%;
+        min-width: 260px;
+        width: 75%;
+        max-width: 320px;
         
-        height: 100vh;
-        background: #140b07;
+        height: 100vh !important;
+        background: #140b07 !important;
         display: flex !important;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 80px 20px 30px 20px;
-        box-shadow: -5px 0 25px rgba(0,0,0,0.8);
-        z-index: 10000;
-        transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 80px 20px 30px 20px !important;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.9);
+        z-index: 10001 !important; /* स्लाइड मेनू पडद्याच्या (9998) वर */
+        transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
         overflow-y: auto;
         overflow-x: hidden;
     }
 
     .nav-links.active {
-        right: 0 !important;
+        right: 0 !important; /* मेनू ऑन झाल्यावर स्क्रीनवर येईल */
     }
 
     /* Menu Items Align Left */
     .nav-links li {
         width: 100%;
-        margin: 10px 0;
+        margin: 8px 0;
         text-align: left;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding-bottom: 10px;
     }
 
     .nav-links a {
@@ -1906,6 +1909,7 @@ html, body {
         align-items: center;
         width: 100%;
         text-decoration: none;
+        padding: 4px 0;
     }
 
     .nav-links a.active, .nav-links a:hover {
@@ -1941,16 +1945,18 @@ html, body {
         padding: 6px 12px;
         box-shadow: inset 0 2px 5px rgba(0,0,0,0.4);
         border: 1px solid rgba(252, 163, 17, 0.2) !important;
+        width: 100%;
     }
 
     .dropdown.open .dropdown-menu,
     .dropdown.active .dropdown-menu {
-        display: block;
+        display: block !important;
     }
 
     .dropdown-menu li {
         border-bottom: none !important;
         margin: 6px 0;
+        padding-bottom: 0;
     }
 
     .dropdown-menu li a {
@@ -1981,7 +1987,7 @@ html, body {
         align-items: center;
         border-top: 1px solid rgba(252, 163, 17, 0.2);
         box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
-        z-index: 9997;
+        z-index: 9997; /* बॉटम बार पडद्याच्या मागे राहील जेव्हा मेनू उघडेल */
     }
 
     .bottom-nav-item {
