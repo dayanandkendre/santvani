@@ -1,12 +1,596 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amalaki Ekadashi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>संत एकनाथ महाराज भारूड - विंचू चावला | संतवाणी</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Yatra+One&family=Poppins:wght@300;400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
-  <h1>Amalaki Ekadashi</h1>
-  <p>Content coming soon.</p>
+
+    <!-- टॉप बार -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <span class="top-bar-text"><i class="fa-solid fa-om animate-spin"></i> ॥ जय जय विठ्ठल रखुमाई ॥</span>
+            <span class="top-bar-text"><i class="fa-solid fa-hands-praying"></i> संतवाणी डिजिटल लायब्ररी २०२६</span>
+        </div>
+    </div>
+
+    <!-- मुख्य मेनू बार -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- लोगो -->
+            <a href="/index.html" class="logo">
+                <span class="logo-icon">✨</span> संत<span class="logo-highlight">वाणी</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/index.html">मुख्य पृष्ठ</a></li>
+                <li><a href="/sant-sahitya.html">संत साहित्य</a></li>
+                <li><a href="/vangmay-sangrah.html" class="active">वाङ्मय संग्रह</a></li>
+                <li><a href="/sarth-haripath.html">हरिपाठ</a></li>
+                <li><a href="/granth-sampada.html">ग्रंथ संपदा</a></li>
+                <!-- ड्रॉपडाऊन मेनू -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">इतर <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/san-utsav.html">सन आणि उत्सव</a></li>
+                        <li><a href="/pages/artisangrah/artya-sangrah.html">आरत्या संग्रह</a></li>
+                        <li><a href="/santache-prasang.html">संतांचे प्रसंग</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#bharud-content" class="btn-nav">भारूड वाचा</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- हिरो सेक्शन (एकनाथी भारूड विशेष) -->
+    <header id="home" class="hero-section" style="position: relative; background: #141414; padding: 80px 0 60px 0;">
+        <div class="hero-bg-overlay" style="background: linear-gradient(180deg, rgba(20,20,20,0.6) 0%, #121212 100%);"></div>
+        <div class="hero-content" style="position: relative; z-index: 2;">
+            <div class="gold-badge">संत एकनाथ महाराज वाङ्मय</div>
+            <h1 class="hero-title">प्रसिद्ध एकनाथी भारूड : <span class="text-gradient">विंचू चावला</span></h1>
+            <p class="hero-tagline">काम-क्रोध रुपी विंचवाचा अहंकार दूर करून सत्संगाचा आणि तमोगुण निवारणाचा संदेश देणारे अद्भूत लोकसंगीत व अध्यात्मिक भारूड.</p>
+            <div class="hero-buttons">
+                <a href="#bharud-content" class="btn-premium">भारूड वाचा</a>
+                <a href="#meaning-section" class="btn-outline">अध्यात्मिक भावार्थ</a>
+            </div>
+        </div>
+    </header>
+
+  <!-- मुख्य कंटेंट सेक्शन (Main Content Area) -->
+    <main id="main-content" class="content-wrapper" style="max-width: 1000px; margin: 40px auto; padding: 0 20px; font-family: 'Poppins', sans-serif;">
+
+        <!-- शीर्षकाचे मुख्य कार्ड -->
+        <div class="content-card" style="background: #1a1a1a; padding: 30px; border-radius: 12px; border: 1px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5); margin-bottom: 40px; text-align: center;">
+            <span style="color: #ff9900; font-family: 'Yatra One', cursive; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 1px;">संत एकनाथ महाराज कृत</span>
+            <h1 style="font-family: 'Rozha One', serif; color: #ffffff; font-size: 2.5rem; margin: 10px 0 15px 0;">भारुड व अभंग वाङ्मय संग्रह</h1>
+            <p style="color: #aaa; font-size: 1rem; margin: 0;">लोकशिक्षणासाठी आणि अध्यात्मिक प्रबोधनासाठी रचलेली संत एकनाथ महाराजांची विविध भारुडे, अभंग, ओव्या व गौळणी.</p>
+        </div>
+
+        <!-- १. भारुड विभाग -->
+        <section class="section-block" style="margin-bottom: 50px;">
+            <h2 style="font-family: 'Yatra One', cursive; color: #ff9900; border-bottom: 2px solid #ff9900; padding-bottom: 10px; margin-bottom: 30px; font-size: 1.8rem;">
+                <i class="fa-solid fa-masks-theater" style="margin-right: 10px;"></i> एकनाथी भारुड
+            </h2>
+
+            <!-- जोशी -->
+            <article class="bharud-item" style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.4rem; margin-top: 0; border-left: 4px solid #ff9900; padding-left: 10px;">जोशी</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    तेथूनि पुढे बरे होईल । भक्‍तिसुखें दोंद वाढेल । फेरा चौऱ्यांशीचा चुकेल । धनमोकासी ॥१॥<br>
+                    <strong>मी आलो रायाचा जोशी । होरा ऐका दादांनो ॥धृ॥</strong><br>
+                    मनाजी पाटील देहगांवचा । विश्वास धरु नका त्याचा । हा घात करील नेमाचा । पाडील फशी ॥२॥<br>
+                    वासना बायको शेजारीण । झगडा घाली मोठी दारूण । तिच्या पायी नागवण । घर बुडविसी ॥३॥<br>
+                    एकाजनार्दनी कंगाल जोशी । होरा सांगतो लोकांसी । जा शरण सद्‍गुरुसी । फेरा चुकवा चौऱ्यांयशी ॥४॥
+                </p>
+            </article>
+
+            <!-- बहिरा -->
+            <article class="bharud-item" style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.4rem; margin-top: 0; border-left: 4px solid #ff9900; padding-left: 10px;">बहिरा</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    <strong>बहिरा झालो या या जगी ॥धृ॥</strong><br>
+                    नाही ऐकिले हरिकीर्तन । नाही केले पुराण श्रवण । नाही वेदशास्त्र पठण । गर्भी बधिर झालो त्यागूने ॥१॥<br>
+                    नाही संतकीर्ती श्रवणी आली । नाही साधुसेवा घडियेली । पितृवचनासी पाठ दिधली । तीर्थे व्रते असोनि त्यागिली ॥२॥<br>
+                    माता माऊली पाचारिता । शब्द नाही दिला मागुता । बहिरा झालो नरदेही येता । एकाजनार्दनी स्मरेन आता ॥३॥
+                </p>
+            </article>
+
+            <!-- मुका -->
+            <article class="bharud-item" style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.4rem; margin-top: 0; border-left: 4px solid #ff9900; padding-left: 10px;">मुका</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    <strong>मुका झालो वाचा गेली ॥धृ॥</strong><br>
+                    होतो पंडित महाज्ञानी । दशग्रंथ षड्‍शास्त्र पुराणी । चारी वेद मुखोद्‍गत वाणी । गर्वामध्ये झाली सर्व हानी ॥१॥<br>
+                    जिव्हा लांचावली भोजना । दुग्ध घृत शर्करा पक्वान्ना । निंदिले उपान्ना । तेणे पावलो मुखबंधना ॥२॥<br>
+                    साधुसंतांची निंदा केली । हरिभक्‍तांची स्तुती नाही केली । तेणे वाचा पंगू झाली । एकाजनार्दनी कृपा लाधली ॥३॥
+                </p>
+            </article>
+
+            <!-- दादला -->
+            <article class="bharud-item" style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.4rem; margin-top: 0; border-left: 4px solid #ff9900; padding-left: 10px;">दादला</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    मोडकेंसे घर तुटकेसे छप्पर । देवाला देवघर नाही ॥१॥<br>
+                    <strong>मला दादला नलगे बाई ॥धृ॥</strong><br>
+                    फाटकेच लुगडे तुटकीसी चोळी । शिवाया दोरा नाही ॥२॥<br>
+                    जोंधळ्याची भाकर आंबाडयाची भाजी । वर तेलाची धार नाही ॥३॥<br>
+                    मोडका पलंग तुटकी नवार । नरम बिछाना नाही ॥४॥<br>
+                    सुरतीचे मोती गुळधाव सोने । रांज्यात लेणे नाही ॥५॥<br>
+                    एकाजनार्दनी समरस झाले । तो रस येथे नाही ॥६॥
+                </p>
+            </article>
+
+            <!-- वाघ्या -->
+            <article class="bharud-item" style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.4rem; margin-top: 0; border-left: 4px solid #ff9900; padding-left: 10px;">वाघ्या</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    अहं वाघा सोहं वाघा प्रेमनगारा वारी । सावध होऊनी भजनी लागा देव करा कैवारी ॥१॥<br>
+                    <strong>मल्लारीची वारी माझ्या मल्लारीची वारी ॥धृ॥</strong><br>
+                    इच्छा मुरळीस पाहू नका पडाल नरकाद्वारी । बोध बुधली ज्ञान दिवटी उजळा महाद्वारी ॥२॥<br>
+                    आत्मनिवेदन रोडगा निवतील हारोहारी । एकाजनार्दनी धन्य खंडेराव त्यावरी कुंचा वारी ॥३॥
+                </p>
+            </article>
+
+            <!-- विंचू -->
+            <article class="bharud-item" style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.4rem; margin-top: 0; border-left: 4px solid #ff9900; padding-left: 10px;">विंचू</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    विंचू चावला वृश्चिक चावला । कामक्रोध विंचू चावला । तम घाम अंगासी आला ॥धृ॥<br>
+                    पंचप्राण व्याकुळ झाला । त्याने माझा प्राण चालिला । सर्वांगाचा दाह झाला ॥१॥<br>
+                    मनुष्य इंगळी अति दारुण । मज नांगा मारिला तिने । सर्वांगी वेदना जाण । त्या इंगळीची ॥२॥<br>
+                    ह्या विंचवाला उतारा । तमोगुण मागे सारा । सत्वगुण लावा अंगारा । विंचू इंगळी उतरे झरझरा ॥३॥<br>
+                    सत्व उतारा देऊन । अवघा सारिला तमोगुण । किंचित् राहिली फुणफुण । शांत केली जनार्दने ॥४॥
+                </p>
+            </article>
+
+            <!-- एडका -->
+            <article class="bharud-item" style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.4rem; margin-top: 0; border-left: 4px solid #ff9900; padding-left: 10px;">एडका</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    <strong>एडका मदन तो केवळ पंचानन ॥धृ॥</strong><br>
+                    धडक मारिली शंकरा । केला ब्रह्मयाचा मातेरा । इंद्रचंद्रासी दरारा । लाविला जेणे । तो केवळ पंचानन ॥१॥<br>
+                    धडक मारिली नारदा । केला रावणाचा चेंदा । दुर्योधना मारिली गदा । घेतला प्राण । तो केवळ पंचानन ॥२॥<br>
+                    भस्मासुर मुकला प्राणासी । तेचि गती झाली वालीसी । विश्वामित्रासरिखा ऋषी । नाडिला जेणे । तो केवळ पंचानन ॥३॥<br>
+                    शुकदेवांनी ध्यान धरोनी । एडका आणिला आकळोनी । एकाजनार्दनी चरणी । बांधिला जेणें । तो केवळ पंचानन ॥४॥
+                </p>
+            </article>
+
+            <!-- नाथाच्या घरची -->
+            <article class="bharud-item" style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.4rem; margin-top: 0; border-left: 4px solid #ff9900; padding-left: 10px;">नाथाच्या घरची उलटी खूण</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    नाथाच्या घरची उलटी खूण । पाण्याला मोठी लागली तहान ॥१॥<br>
+                    आंत घागर बाहेरी पाणी । पाण्याला पाणी आले मिळोनी ॥२॥<br>
+                    आजी म्या एक नवल देखिले । वळचणीचे पाणी आढ्या लागले ॥३॥<br>
+                    शेतकऱ्याने शेत पेरिले । राखणदाराला तेणे गिळिले ॥४॥<br>
+                    हांडी खादली भात टाकिला । बकऱ्यापुढे देव कापिला ॥५॥<br>
+                    एकाजनार्दनी मार्ग उलटा । जो तो गुरुचा बेटा ॥६॥
+                </p>
+            </article>
+
+            <!-- भूत -->
+            <article class="bharud-item" style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.4rem; margin-top: 0; border-left: 4px solid #ff9900; padding-left: 10px;">भूत</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    भूत जबर मोठे ग बाई । झाली झडपड करु गत काई ॥१॥<br>
+                    सूप चाटूचे केले देवऋषी । या भूताने धरिली केशी ॥२॥<br>
+                    लिंबू नारळ कोंबडा उतारा । त्या भूताने धरिला थारा ॥३॥<br>
+                    भूत लागले नारदाला । साठ पोरे झाली त्याला ॥४॥<br>
+                    ऊत लागले ध्रूवबाळाला । उभा अरण्यात ठेला ॥५॥<br>
+                    एकाजनार्दनी भूत । सर्वांठायी सदोदित ॥६॥
+                </p>
+            </article>
+
+            <!-- भवानी -->
+            <article class="bharud-item" style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.4rem; margin-top: 0; border-left: 4px solid #ff9900; padding-left: 10px;">भवानी (रोडगा)</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    सत्वर पाव गे मला । भवानीआई रोडगा वाहिन तुला ॥१॥<br>
+                    सासरा माझा गावी गेला । तिकडेच खपवी त्याला ॥२॥<br>
+                    सासू माझी जाच करती । लवकर निर्दाळी तिला ॥३॥<br>
+                    जाऊ माझी फडफड बोलती । बोडकी कर ग तिला ॥४॥<br>
+                    नणंदेचे पोर किरकिर करिते । खरूज होऊ दे त्याला ॥५॥<br>
+                    दादला मारुन आहुती देईन । मोकळी कर गे मला ॥६॥<br>
+                    एकाजनार्दनी सगळेचि जाऊं दे । एकटीच राहू दे मला ॥७॥
+                </p>
+            </article>
+
+            <!-- जोगवा -->
+            <article class="bharud-item" style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.4rem; margin-top: 0; border-left: 4px solid #ff9900; padding-left: 10px;">जोगवा</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    अनादि निर्गुण प्रगटली भवानी । मोह महिषासूर मर्दना लागुनी ।<br>
+                    त्रिविध तापाची कराया झाडणी । भक्‍तांलागोनी पावसी निर्वाणी ॥१॥<br>
+                    आईचा जोगवा जोगवा मागेन । द्वैत सारुनी माळ्व मी घालीन ।<br>
+                    हाती बोधाचा झेंडा मी घेईन । भेदरहित वारीसी जाईन ॥२॥<br>
+                    नवविध भक्‍तिच्या करीन नवरात्रा । करुनी पोरी मागेन ज्ञानपात्रा ।<br>
+                    धरीन सद्‍भाव अंतरीच्या मित्रा । दंभ संसार सांडिन कुपात्रा ॥३॥<br>
+                    पूर्ण बोधाची घेईन परडी । आशा तृष्णेच्या पाडीन दरडी ।<br>
+                    मनोविकार करीन कुर्वंडी । अद्‍भूत रसाची भरीन दुरडी ॥४॥<br>
+                    आता साजणी जाले मी नि:संग । विकल्प नवऱ्याचा सोडियला संग ।<br>
+                    कामक्रोध हे झोडियेले मांग । केला मोकळा मारग सुरंग ॥५॥<br>
+                    ऐसा जोगवा मागुनी ठेविला । जाउनी महाद्वारी नवस फेडिला ।<br>
+                    एकपणे जनार्दन देखिला । जन्ममरणाचा फेरा चुकविला ॥६॥
+                </p>
+            </article>
+
+            <!-- फकीर -->
+            <article class="bharud-item" style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.4rem; margin-top: 0; border-left: 4px solid #ff9900; padding-left: 10px;">फकीर</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    हजरत मौला मौला । सब दुनिया पालनवाला ॥१॥<br>
+                    सब घरमो सांई बिराजे । करत है बोलबाला ॥२॥<br>
+                    गरीब नवाजे मै गरीब तेरा । तेरे चरणकु रतवाला ॥३॥<br>
+                    अपना साती समजके लेना । सलील वोही अल्ला ॥४॥<br>
+                    जीन रूपसे है जगत पसारा । वोही सल्लाल अल्ला ॥५॥<br>
+                    एकाजनार्दनी निजवद अल्ल । आसल वोही बिटपर अल्ला ॥६॥
+                </p>
+            </article>
+
+            <!-- संसार -->
+            <article class="bharud-item" style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.4rem; margin-top: 0; border-left: 4px solid #ff9900; padding-left: 10px;">संसार</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    सांगते तुम्हां वेगळे निघा । वेगळे निघून संसार बघा ॥१॥<br>
+                    संसार करिता शिणले भारी । सासुसासरा घातला भरी ॥२॥<br>
+                    संसार करिता शिणले बहू । दादला विकून आणले गहू ॥३॥<br>
+                    गव्हाचे दिवसे जेविली मावशी । मजला वेडी म्हणता कैशी ॥४॥<br>
+                    संसार करिता दगदगलें मनी । नंदा विकिल्या चौघीजणी ॥५॥<br>
+                    एकाजनार्दनी संसार केला । कामक्रोध देशोधडी गेला ॥६॥
+                </p>
+            </article>
+        </section>
+
+        <!-- २. अभंग विभाग -->
+        <section class="section-block" style="margin-bottom: 50px;">
+            <h2 style="font-family: 'Yatra One', cursive; color: #ff9900; border-bottom: 2px solid #ff9900; padding-bottom: 10px; margin-bottom: 30px; font-size: 1.8rem;">
+                <i class="fa-solid fa-scroll" style="margin-right: 10px;"></i> निवडक अभंग
+            </h2>
+
+            <div style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; color: #ddd; font-size: 1.1rem; line-height: 2;">
+                <p>कलिमाजी दैवते उघड दिसती फार । नारळ आणि शेंदूर यांचा भडिमार ॥१॥<br>
+                लटिका देव लटिका भक्‍त लटिके सर्व वाव । सात धान्याचे धपाटे मागती काय त्यांचा बडिवार ॥२॥<br>
+                तेल रांधा मागती मलिदा वरती काजळ कुंकु । फजितखोर ऐसे देव तयाचे तोंडावर थुंकु ॥३॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>तीर्थाजाती उदंड । त्याचे पाठीमागे तोंड ॥१॥<br>
+                मनवासना ठेउनी घरी । तीर्था नेली भांडखोरी ॥२॥<br>
+                गंगेत मारिता बुडी । मन लागले बिऱ्हाडी ॥३॥<br>
+                नमस्कार करिता देवासी । मन पायपोसापाशी ॥४॥<br>
+                लवकर करी प्रदक्षिणा । उशीर झालासे भोजना ॥५॥<br>
+                एकाजनार्दनी स्थिर मन । नाही तव काय साधन ॥६॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>वरुषला मेघ खडकावरुता । चिखल ना तत्वता थेंब नाही ॥१॥<br>
+                वाया तो प्राणी आला नरदेहा । गेला वाया पहा भक्‍तिवीण ॥२॥<br>
+                अरण्यात जैशी सुकरे बैसती । तैसे मठाप्रति करुनी बैसे ॥ ३॥<br>
+                उदय होताचि लपते उलुक । तैसा तो मुर्ख समाधी बैसे ॥४॥<br>
+                एकाजनार्दनी वाया गेले सर्व । संसार ना देव दोन्ही शुन्य ॥५॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>आम्ही ब्रह्मपुरीचे ब्राह्मण । यातीकुळ नाही लहान ॥१॥<br>
+                आम्हा सोवळे वोवळे नाही । विटाळ न देखो कवणे ठायी ॥२॥<br>
+                आम्हा सोयरे जे जाहले । ते यातिकुळा वेगळे केले ॥३॥<br>
+                एकाजनार्दनी बोधु । यातिकुळींचा फिटला संबंधु ॥४॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>कामक्रोध लोभ दंभ मद मत्सर । षड्‍वैरी तत्पर हेचि येथे ॥१॥<br>
+                क्षुधा तृषा मोद शोक जरा मरण । षड्‍ऊर्मी पूर्ण देहीं हेचि ॥२॥<br>
+                आशा मनिषा कल्पना इच्छा तृष्णा वासना । हे अठरा गुण जाणा देहामाजी ॥३॥<br>
+                एकाजनार्दनी त्यजोनी अठरा । तोचि संसारामाजी शुद्ध ॥४॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>श्‍वानाचा तो धर्म करावी वसवस । भलेबुरे त्यास न कळे काही ॥१॥<br>
+                वेश्यांचा धर्म द्रव्यते हरावे । भलेबुरे भोगावे न कळे कांही ॥२॥<br>
+                निंदकाचा धर्म निंदाती करावी । भले बुरे त्यागावी नकळे काही ॥३॥<br>
+                सज्जनांचा धर्म सर्वाभूती दया । भेदाभेद तया नकळे काही ॥४॥<br>
+                संतांचा धर्म अंतरी ती शांती । एकाजनार्दनी वस्ती सर्वांठायी ॥५॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>पांथस्थ घरासी आला । प्रात:काळी उठोनि गेला ॥१॥<br>
+                तैसे असावे संसारी । जैसी प्राचीनाची दोरी ॥२॥<br>
+                बाळी घराचार मांडिला । तो सवेचि मोडूनि गेला ॥३॥<br>
+                एका विनवी जनार्दना । ऐसे करी गा माझ्या मना ॥४॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>जया म्हणती नीच वर्ण । स्त्री शुद्रादी हीनजन ॥१॥<br>
+                सर्वांभूती देव वसे । नीचाठायी काय नसे? ॥२॥<br>
+                नीच कोठोनि जन्मला । पंचभूता वेगळा जाला ॥३॥<br>
+                तया नाही जनन । सवेचि होत पतन ॥४॥<br>
+                नीच म्हणोनि काय भुलि । एकाजनार्दनी देखिली ॥५॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>विषयवासना भाजी त्याचे मूळ । मग सुख कल्लोळ प्राप्ती तुज ॥१॥<br>
+                आशेचे काबाड कल्पना सगळी । उपटोनि मुळी टाकी परती ॥२॥<br>
+                भेदाचे भांडे वैराग्याचे हातें । धुवोनि सरते करी बापा ॥३॥<br>
+                शांतीचेनि सवे धरी वेगे सोय । एकाजनार्दनी पाय पावशील ॥४॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>वैराग्य प्रथम असावी शांती । तेणे विरक्‍ति अंगी जोडे ॥१॥<br>
+                हेचि मुख्यवर्म साधता साधन । येणे जनार्दन जवळी असे ॥२॥<br>
+                उपासना मार्ग हेचि कर्मकांड । हेचि ब्रह्मांड जनीवनी ॥३॥<br>
+                हेचि देहस्थिती विदेह समाधी । तुटती उपाधी कर्माकर्म ॥४॥<br>
+                एकाजनार्दनी शांतीक्षमा दया । यांविण उपाय उपाधी ते ॥५॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>नीती सांगतो ऐका एक । दास सभेचा सेवक । मन टाळू नका एक । कोणी एक ॥१॥<br>
+                सांडावरुन जाऊं नये । लांच खाऊं नये । चोहट्यात राहू नेये । कोणी एक ॥२॥<br>
+                अक्रीत घेऊं नये । इमान सोडु नये । बैमान होऊं नये । कोणी एक ॥३॥<br>
+                सज्जनाशी विंटू नये । नीचासवे बांटू नये । तस्कराशी पुसूं नये । कोणी एक ॥४॥<br>
+                भक्‍तिमार्ग खंडू नये । कुभांडयासी तंडूं नये । खळासंगे भांडू नये । कोणी एक ॥५॥<br>
+                सत्पुरुषाशी छळूं नये । शिवेचा गुंडा डाळूं नये । केला नेम टाळू नये । कोणी एक ॥६॥<br>
+                सद्‍गुरु सेवा सोडूं नये । कुलंधर्मासी मोडू नये । पापद्रव्य जोडू नये । कोणी एक ॥७॥<br>
+                संपत्‍ति आलिया माजू नये । अभिमाने फुगूं नये । सभा देखून लाजूं नये । कोणी एक ॥८॥<br>
+                असत्यवाद करु नये । खोटा संग धरु नये । मोचकाशी मैत्री करु नये । कोणी एक ॥९॥<br>
+                भलते भरी पडू नये । अनाचार करु नये । कपट मनी धरु नये । कोणी एक ॥१०॥<br>
+                जन्मा आलिया स्वभावे । काही सार्थक करावे । ऐसे मनी विचारवे । कोणी एक ॥११॥<br>
+                एकाजनार्दनी भावे । संतचरणी लीन व्हावे । सदा हरिनाम उच्चारावे । कोणी एक ॥१२॥</p>
+            </div>
+        </section>
+
+        <!-- ३. विठ्ठलपर अभंग -->
+        <section class="section-block" style="margin-bottom: 50px;">
+            <h2 style="font-family: 'Yatra One', cursive; color: #ff9900; border-bottom: 2px solid #ff9900; padding-bottom: 10px; margin-bottom: 30px; font-size: 1.8rem;">
+                <i class="fa-solid fa-om" style="margin-right: 10px;"></i> विठ्ठलपर अभंग
+            </h2>
+
+            <div style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; color: #ddd; font-size: 1.1rem; line-height: 2;">
+                <p>कैसी समचरणींची शोभा । अवघा जगी विठ्ठल उभा ॥१॥<br>
+                येणे विठ्ठले लाविले पिसे । जिकडे पाहे तिकडे दिसे ॥२॥<br>
+                पाहते पाहणीयामाझारी । पाहते गेले पाहण्यापरि ॥३॥<br>
+                एकाजनार्दनी एकू । विठ्ठल अवलोकी लोकु ॥४॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>चंद्र पौर्णिमेचा दिसे पा सोज्वळ । तैसा श्रीविठ्ठल पंढरीये ॥१॥<br>
+                क्षीरसिंधुसम भीवरा ती वाहे । स्नान करिता जाय महत्पाप ॥२॥<br>
+                सनकसनंदन सम पुंडलिक । शोभा अलोलिक वर्णूं काय ॥३॥<br>
+                लक्ष्मी प्रत्यक्ष रखुमाई राही । एकाजनार्दनी पायी लीन झाला ॥४॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>वारकरी पंढरीचा । धन्य धन्य जन्म त्याचा ॥१॥<br>
+                जाय नेमें पंढरीसी । चुको नेदी तो वारीसी ॥२॥<br>
+                आषाढी कार्तिकी । सदा नाम गाय मुखी ॥३॥<br>
+                एकाजनार्दनी करी वारी । धन्य तोचि बा संसारी ॥४॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>माझे माहेर पंढरी । आहे भीवरेचे तीरीं ॥१॥<br>
+                बाप आणि आई । माझी विठ्ठल रखुमाई ॥२॥<br>
+                पुंडलिक बंधु आहे । त्याची ख्याती सांगू काये ॥३॥<br>
+                माझी बहीण चंद्रभागा । करितसे पापभंगा ॥४॥<br>
+                एकाजनार्दनी शरण । करी माहेरींची आठवण ॥५॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>माझ्या वडिलांचे दैवत । कृपाळू हा पंढरीनाथ ॥१॥<br>
+                पंढरीसी जाऊं चला । भेंटू रखुमाई विठ्ठला ॥२॥<br>
+                पुंडलिके बरवे केले । कैसे भक्‍तिने गोंविले ॥३॥<br>
+                एकाजनार्दनी नीट । पायी जडलीसे वीट ॥४॥</p>
+            </div>
+        </section>
+
+        <!-- ४. मिश्र अभंग -->
+        <section class="section-block" style="margin-bottom: 50px;">
+            <h2 style="font-family: 'Yatra One', cursive; color: #ff9900; border-bottom: 2px solid #ff9900; padding-bottom: 10px; margin-bottom: 30px; font-size: 1.8rem;">
+                <i class="fa-solid fa-hands-praying" style="margin-right: 10px;"></i> मिश्र अभंग
+            </h2>
+
+            <div style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; color: #ddd; font-size: 1.1rem; line-height: 2;">
+                <p>सुखाची विश्रांती सुख समाधान । मनाचे उन्मन नाम गाता ॥१॥<br>
+                ते हें नाम सोपे रामकृष्णहरि । प्रपंच-बोहरी उच्चारिता ॥२॥<br>
+                अंहभाव व्देष नुरे ती वासना । व्दैताची भावना दुरी ठाके ॥३॥<br>
+                एकाजनार्दनी नाम हे सोपारे । येणेचि पै सरे भवसिंधू॥४॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>ॐ नमो सद्‍गुरु निर्गुणा । पारनाही तव गुणा । बसोनी माझिया रसना । हरिगुणा वर्णवी ॥१॥<br>
+                हरिगुण विशाळ पावन । वदवी तू कृपा करुन । मी मूढमति दीन । म्हणोनि कीव भाकितसे ॥२॥<br>
+                तुमचा प्रसाद जाहलिया पूर्ण । हरिगुण वर्णीन मी जाण । एका वंदितसे चरण । सद्‍गुरुचे आदरे ॥३॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>ज्या सुखाकारणे देव वेडावला । वैकुंठ सांडुनी संतसदनी राहिला ॥१॥<br>
+                धन्य धन्य संतांचे सदन । जेथे लक्ष्मी सहित शोभे नारायण ॥२॥<br>
+                सर्व सुखांची सुख्रराशी । संतचरणी भुक्‍तिमुक्‍ति दासी ॥३॥<br>
+                एकाजनार्दनी पार नाही सुखा । म्हणोनि देव भुलले देखा ॥४॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>वैष्णवाघरी देव सुखावला । बाहीर न वजे दवडोनी घातिला ॥१॥<br>
+                देव म्हणे माझे पुरतसे कोडा । संगती या गोड वैष्णवांची ॥२॥<br>
+                जरी देव नेउनी घातिला दुरी । परतोनी पाहे तव घराभीतरी ॥३॥<br>
+                कीर्तनाची देवा आवडी मोठी । एकाजनार्दनी पडली मिठी ॥४॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>संतांच्या विभूती । धर्मलागी अवतरती ॥१॥<br>
+                धर्मरक्षणाकारणे । साधु होताती अवतीर्णे ॥२॥<br>
+                जगा लावावे सत्पथी । हेची साधूची पै कृती ॥३॥<br>
+                एकाजनार्दनी साधु । हृदयी वसे ब्रह्मानंदु ॥४॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>देवा माझे मन लागो तुझे चरणी । संसार व्यसनी पडोनेदी ॥१॥<br>
+                नामस्मरण घडो संतसमागम । वाउगाचि भ्रम नको देवा ॥२॥<br>
+                पायी तिर्थयात्रा मुखी रामनाम । हाचि माझा नेम सिद्धि नेई ॥३॥<br>
+                आणिक मागणे नाही नाही देवा । एकाजनार्दनी सेवा दृढ देई ॥४॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>भक्‍तिप्रेमाविण ज्ञान नको देवा । अभिमान नित्य नवा तथा तया माजी ॥१॥<br>
+                प्रेमसुख देई प्रेमसुख देई । प्रेमेविण नाही समाधान ॥२॥<br>
+                रांडवेने जेवी श्रृगांरु केला । प्रेमेवीण जाला ज्ञानी तैसा ॥३॥<br>
+                एकाजनार्दनी प्रेमे अतिगोड । अनुभवी सुरवाड जाणतील ॥४॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>जगाचिये नेत्री दिसे तो संसारी । परि तो अंतरी स्फटिक शुद्ध ॥१॥<br>
+                वायांची हांव न धरी काही पोटी । वाउगी ती गोष्टी न करी जगा ॥२॥<br>
+                स्त्रियापुत्र धन नाही तेथे मन । इष्टमित्र कारण नाही ज्याचे ॥३॥<br>
+                एकाजनार्दनी प्रपंच परमार्थ । सारिखाचि होत तया लागी ॥४॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>अवघेचि त्रैलोक्य आनंदाचे आता । चरणी जगन्नाथा चित्त ठेले ॥१॥<br>
+                माय जगन्नाथ बाप जगन्नाथ । अनाथाचा नाथ जनार्दन ॥२॥<br>
+                एकाजनार्दनी एकपणे उभा । चैतन्याची शोभा शोभतसे ॥३॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>पोटींचे बाळ अवगुणी वोखटे । परि मायबापा स्नेहो मोठे ॥१॥<br>
+                तयापरि उदरा आलो जी स्वामी । अवगुणांच्यापरि नुपेक्षा तुम्ही ॥२॥<br>
+                गुण नाही तेथे कर्म कैचे धड । परिमायबापा वाटतसे कोड ॥३॥<br>
+                एकाजनार्दनी उद्‍भव साचे । म्हणोनि हरिदासा कौतुक त्याचे ॥४॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>शांतीचेनि मंत्रे मंत्रुनि विभूती । लाविली देहाप्रती सर्व अंगा ॥१॥<br>
+                तेणे तळमळ हारपली व्यथा । गेली सर्व चिंता पुढीलांची ॥२॥<br>
+                लिगाडाची मोट बांधोनि टाकिली । वासना भाजली क्रोध अग्नी ॥३॥<br>
+                एकाजनार्दनी शांत जाहला देह । कामनीक देव प्रगटला ॥४॥</p>
+            </div>
+        </section>
+
+        <!-- ५. ग्रंथांमधील निवडक ओव्या -->
+        <section class="section-block" style="margin-bottom: 50px;">
+            <h2 style="font-family: 'Yatra One', cursive; color: #ff9900; border-bottom: 2px solid #ff9900; padding-bottom: 10px; margin-bottom: 30px; font-size: 1.8rem;">
+                <i class="fa-solid fa-book-bookmark" style="margin-right: 10px;"></i> ग्रंथांमधील ओव्या
+            </h2>
+
+            <!-- चतु:श्लोकी भागवत -->
+            <article style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.3rem; margin-top: 0;">चतु:श्लोकी भागवत (भक्‍तिची लक्षणे - ओ.क्र.४०१-४०३)</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    माझे नाम माझे स्मरण । माझी कथा माझे किर्तन । माझ्या चारित्रांचे पठण । गुणवर्णन नित्य माझे ॥<br>
+                    माझा जप माझे ध्यान । माझी पूजा माझे स्तवन । नित्य करिता माझे चिंतन । विषयध्यान विसरले ॥<br>
+                    भक्‍तांचे विषय सेवन । तेही करिता मदर्पण । या नाव भक्‍तीची अंगे जाण । स्वये नारायण विधीसी सांगे ॥
+                </p>
+            </article>
+
+            <!-- गुरुचे लक्षण -->
+            <article style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.3rem; margin-top: 0;">गुरुचे लक्षण (ओ.क्र.६९५-६९७)</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    शिष्ये करावे माझे भजन । ऐसे वांछी जरी गुरुचे मन । तो गुरुत्वा मुकला जाण । अभिमाने पूर्ण नागवला ॥<br>
+                    जगी दाटुगा ज्ञानाभिमान । धनालागी विकती ज्ञान । ते जाण शिश्नोदरपरायण । तेथे अर्धक्षण ज्ञान न थारे ॥<br>
+                    मुख्यत्वे गुरुचे लक्षण । ज्ञान असोनि निरभिमान । सर्वांगी शांतीचे भूषण । तो सद्‍गुरु पूर्ण परब्रह्म ॥
+                </p>
+            </article>
+
+            <!-- शुकाष्टक -->
+            <article style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.3rem; margin-top: 0;">शुकाष्टक</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    नातरी श्वेत कॄष्ण गाई । दोहोनी क्षीर मेळविता एके ठायी । केले तेथे भेदू नाही । वर्णावर्णाचा ॥<br>
+                    तैसे अद्वितीयेचा गावी । वर्णावर्ण पदवी । नसोनिया अनुभवी । सुखवस्ती वासु ॥
+                </p>
+            </article>
+
+            <!-- आनंदलहरी -->
+            <article style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.3rem; margin-top: 0;">आनंदलहरी (सद्‍गुरु भक्‍तास बद्धता नाही - ओ.क्र.३९-४४)</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    जै पतंग भक्षी वडवानळासी । दर्दुरी गिळिजे शेषासी । जै खदयोते गिळिजे रविबिंबासी । तै गुरुभक्‍तांसी बद्धता ॥<br>
+                    जै वायसे युद्ध कीजे खगपतींसी । पिपिलिका सप्तसागर शोषी । कीं मुर्कुटे गिळिजे ब्रह्मांडासी । तै गुरुभक्‍तांसी बद्धता ॥<br>
+                    जै चित्रींचिया हुताशने । दग्ध होती महावने । कि रज्जूसर्पाचिया पाने । मृत्यु पावे कृतांतू ॥<br>
+                    कि मक्षिकाचेनि थडके । महागिरी पडो शके । किंवा प्रेताचेनि धाके । झडपोशके महाकाळ ॥<br>
+                    कि वांझेचेनि सुते । रणीं जिंकीजे इंद्राते ।
+                </p>
+            </article>
+
+            <!-- हस्तामलक -->
+            <article style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.3rem; margin-top: 0;">हस्तामलक (मुक्‍त कोण? - ओ. क्र. ५१७ - ५२३)</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    जग भासे जे सकळ । तो जगदात्माचि निखळ । ऐसा निश्चयो ज्याचा प्रबळ । मुक्‍त केवळ तो एकु ॥<br>
+                    मी देहो नव्हे निश्चिते । अनात्मा न म्हणे कोणातें । विश्व मीचि परमार्थे । मुक्‍ती तया वोळगणी ॥<br>
+                    ज्याची नि:शेष आस तुटली । त्याचीचि अविदया निवटली । त्यासीचि शांती नि:शेष जाली । स्थिती वंदिली सदाशिवे ॥<br>
+                    ज्यासी नाठवे जन्मलेपण । देहत्वे देह न भेटे जाण । तो स्वप्नीही न देखे निजमरण । हे स्थिती संपूर्ण हरिहरां वंदय ॥
+                </p>
+            </article>
+
+            <!-- स्वात्मसुख -->
+            <article style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; margin-bottom: 25px;">
+                <h3 class="head" style="font-family: 'Rozha One', serif; color: #ff9900; font-size: 1.3rem; margin-top: 0;">स्वात्मसुख (मायेचा उपकार - ओ.क्र.३३३-३४२)</h3>
+                <p style="color: #ddd; font-size: 1.1rem; line-height: 2; margin-bottom: 0;">
+                    माया अवघे म्हणती कुडी । परि ते मायेची उत्‍तमखोडी । स्वरुप आच्छादुनी गाढी । वाढवी श्रद्धा ॥<br>
+                    माया ब्रह्म राखे गुप्तता । यालागी आवडे समस्तां । मुमुक्षु अतिअवस्था । वैराग्यता श्रद्धाळू ॥<br>
+                    तेचि ब्रह्म प्रगट असते । तरी कोणीच त्याते न पुसते । अवघेचि उपेक्षिते । हेळणा करुनी ॥<br>
+                    सूर्य परब्रह्म प्रत्यक्ष दिसे । त्याते उपेक्षिती लोक जैसे । नमस्कारी श्रद्धा नसे । ब्रह्मासि पै तैसे होते ॥<br>
+                    अग्नि देवाचे निजमुख । त्यावरी पाय देऊनि घेती सेक । आळशी तेथ थुंकी थुंक । ब्रह्मासिही देख तैसे होते ॥<br>
+                    मनकर्णिका ब्रह्मजळ । तेथे करिती मूत्रमळ । एवं प्रत्यक्षासि केवळ । उपेक्षा होतसे ॥<br>
+                    तैसी परब्रह्माच्या अभक्‍ती । अवघ्या होती अधोगती । ते चुकविली निश्चिती । मायादेवी ॥
+                </p>
+            </article>
+        </section>
+
+        <!-- ६. गौळणी विभाग -->
+        <section class="section-block" style="margin-bottom: 50px;">
+            <h2 style="font-family: 'Yatra One', cursive; color: #ff9900; border-bottom: 2px solid #ff9900; padding-bottom: 10px; margin-bottom: 30px; font-size: 1.8rem;">
+                <i class="fa-solid fa-music" style="margin-right: 10px;"></i> गौळणी
+            </h2>
+
+            <div style="background: #181818; border: 1px solid #2a2a2a; border-radius: 10px; padding: 25px; color: #ddd; font-size: 1.1rem; line-height: 2;">
+                <p>फणस जंबीर कर्दळी दाटा । हाती घेउनी नारंगी फाटा ॥१॥<br>
+                वारियाने कुंडल हाले । डोळे मोडित राधा चाले ॥२॥<br>
+                राधा पाहुन भुलले हरि । बैल दुभे नंदाघरी ॥३॥<br>
+                हरि पाहुनी भुलली चित्ता । राधा घुसळी डेरा रिता ॥४॥<br>
+                मन मीनलेसे मना । एका भुलला जनार्दना ॥५॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>भुलविले वेणुनादे । वेणु वाजविला गोविंदे ॥१॥<br>
+                पांगुळले यमुनाजळ । पक्षी राहिले निश्र्चळ ॥२॥<br>
+                तॄणचरे लुब्ध झाली । पुच्छ वाहुनिया ठेली ॥३॥<br>
+                नाद न समाये त्रिभुवनी । एका भुलला जनार्दनी ॥४॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>कशी जाऊं मी वॄंदावना । मुरली वाजवी कान्हा ॥धॄ॥<br>
+                पैल तीरी हरि वाजवी मुरली । नदी भरली यमुना ॥१॥<br>
+                कांसे पितांबर कस्तुरी टीळक । कुंडल शोभे काना ॥२॥<br>
+                काय करु बाई कोणाला सांगु । नामाची सांगड आणा ॥३॥<br>
+                नंदाच्या हरीने कौतुक केले । जाणे अंतरीच्या खुणा ॥४॥<br>
+                एकाजनार्दनी मनीं म्हणा । देवमहात्म्य कळेना कोणा ॥५॥</p>
+                <hr style="border: 0; border-top: 1px dashed #333; margin: 20px 0;">
+
+                <p>पाहिला नंदाचा नंदन । तेणे वेधियेले मन ॥१॥<br>
+                मोर मुकुट पितांबर । काळ्या घोंगडीचा भार ॥२॥<br>
+                गोधने चारी आनंदे नाचत । करी काला दहीभात ॥३॥<br>
+                एकाजनार्दनी लडिवाळ बाळ तान्हा । गोपाळांशी कान्हा खेळे कुंजवना ॥४॥</p>
+            </div>
+        </section>
+
+    </main>
+
+  <!-- फुटर सेक्शन -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand-box">
+                <h3 class="footer-logo">✨ संतवाणी</h3>
+                <p class="footer-about">मराठी संतांच्या समृद्ध विचारांचा आणि साहित्याचा डिजिटल वारसा पुढील पिढीपर्यंत पोहोचवण्याचा एक नम्र प्रयत्न.</p>
+            </div>
+            
+            <div class="footer-links-box">
+                <h4>महत्त्वाचे दुवे</h4>
+                <ul>
+                    <li><a href="/about.html">आमच्याबद्दल (About Us)</a></li>
+                    <li><a href="/contact.html">संपर्क (Contact Us)</a></li>
+                    <li><a href="/privacy-policy.html">गोपनीयता धोरण (Privacy Policy)</a></li>
+                    <li><a href="/terms.html">नियम व अटी (Terms & Conditions)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-box">
+                <h4>त्वरित लिंक्स</h4>
+                <ul>
+                    <li><a href="#home">मुख्य पृष्ठ</a></li>
+                    <li><a href="/sant-sahitya.html">संत साहित्य</a></li>
+                    <li><a href="/vangmay-sangrah.html">वाङ्मय संग्रह</a></li>
+                    <li><a href="/sarth-haripath.html">सार्थ हरिपाठ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright-text">© २०२६ संतवाणी लायब्ररी. सर्व हक्क सुरक्षित. | रचना वारकरी संप्रदाय चरणी समर्पित.</p>
+        </div>
+    </footer>
+
+    <!-- JS स्क्रिप्ट -->
+    <script src="/menu.js"></script>
 </body>
 </html>
