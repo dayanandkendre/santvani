@@ -73,69 +73,88 @@
                 <p style="color: #aaa; max-width: 600px; margin: 0 auto;">वारकरी संप्रदायातील सर्वात महत्त्वाचे पालखी सोहळे आणि वर्षातील मुख्य धार्मिक उत्सवांची विस्तृत माहिती खालील विभागांतून मिळवा.</p>
             </div>
 
-            <!-- CSS ग्रिड लेआउट -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
-                
-                <!-- कार्ड १: आषाढी वारी सोहळा -->
-                <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 12px; overflow: hidden; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                    <div style="padding: 25px;">
-                        <span style="color: #ffb703; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;"><i class="fa-solid fa-flag"></i> ज्येष्ठ - आषाढ महिना</span>
-                        <h3 style="font-family: 'Rozha One', serif; color: #fff; font-size: 1.5rem; margin: 10px 0 15px 0;">आषाढी एकादशी वारी सोहळा</h3>
-                        <p style="color: #ccc; font-size: 0.95rem; margin-bottom: 20px;">संत ज्ञानेश्वर माऊली आणि जगद्गुरु तुकाराम महाराज यांच्या पालख्यांचे पंढरपूरकडे प्रस्थान, रिंगण सोहळा आणि आषाढी महाएकादशीचे विशेष महात्म्य.</p>
-                        <a href="pages/blog/ashadhi-wari.html" style="color: #ffb703; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">पुढे वाचा <i class="fa-solid fa-arrow-right-long"></i></a>
-                    </div>
-                </div>
+            <!-- CSS ग्रिड लेआउट (इमेजेससह) -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+    
+    <!-- कार्ड १: आषाढी वारी सोहळा -->
+    <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(255,183,3,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+        <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; background-color: #222;">
+            <img src="images/ashadhi-wari-special.webp" alt="आषाढी एकादशी वारी सोहळा" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+        </div>
+        <div style="padding: 25px;">
+            <span style="color: #ffb703; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;"><i class="fa-solid fa-flag"></i> ज्येष्ठ - आषाढ महिना</span>
+            <h3 style="font-family: 'Rozha One', serif; color: #fff; font-size: 1.5rem; margin: 10px 0 15px 0;">आषाढी एकादशी वारी सोहळा</h3>
+            <p style="color: #ccc; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6;">संत ज्ञानेश्वर माऊली आणि जगद्गुरु तुकाराम महाराज यांच्या पालख्यांचे पंढरपूरकडे प्रस्थान, रिंगण सोहळा आणि आषाढी महाएकादशीचे विशेष महात्म्य.</p>
+            <a href="pages/blog/ashadhi-wari.html" style="color: #ffb703; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">पुढे वाचा <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+    </div>
 
-                <!-- कार्ड २: कार्तिकी वारी सोहळा -->
-                <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 12px; overflow: hidden; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                    <div style="padding: 25px;">
-                        <span style="color: #ffb703; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;"><i class="fa-solid fa-flag"></i> कार्तिकी महिना</span>
-                        <h3 style="font-family: 'Rozha One', serif; color: #fff; font-size: 1.5rem; margin: 10px 0 15px 0;">कार्तिकी एकादशी सोहळा</h3>
-                        <p style="color: #ccc; font-size: 0.95rem; margin-bottom: 20px;">कार्तिकी समयी भरणारी पंढरीची भव्य वारी. संत नामदेव महाराज आणि इतर संतांच्या चरित्राशी जोडलेला हा पावन भक्ती सोहळा आणि त्याची परंपरा.</p>
-                        <a href="pages/blog/kartiki-ekadashi.html" style="color: #ffb703; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">पुढे वाचा <i class="fa-solid fa-arrow-right-long"></i></a>
-                    </div>
-                </div>
+    <!-- कार्ड २: कार्तिकी वारी सोहळा -->
+    <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(255,183,3,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+        <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; background-color: #222;">
+            <img src="images/kartiki-wari-featured.webp" alt="कार्तिकी एकादशी सोहळा" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+        </div>
+        <div style="padding: 25px;">
+            <span style="color: #ffb703; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;"><i class="fa-solid fa-flag"></i> कार्तिकी महिना</span>
+            <h3 style="font-family: 'Rozha One', serif; color: #fff; font-size: 1.5rem; margin: 10px 0 15px 0;">कार्तिकी एकादशी सोहळा</h3>
+            <p style="color: #ccc; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6;">कार्तिकी समयी भरणारी पंढरीची भव्य वारी. संत नामदेव महाराज आणि इतर संतांच्या चरित्राशी जोडलेला हा पावन भक्ती सोहळा आणि त्याची परंपरा.</p>
+            <a href="pages/blog/kartiki-ekadashi.html" style="color: #ffb703; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">पुढे वाचा <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+    </div>
 
-                <!-- CARD ३: माऊली संजीवन समाधी सोहळा -->
-                <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 12px; overflow: hidden; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                    <div style="padding: 25px;">
-                        <span style="color: #ffb703; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;"><i class="fa-solid fa-clock"></i> कार्तिक वद्य त्रयोदशी</span>
-                        <h3 style="font-family: 'Rozha One', serif; color: #fff; font-size: 1.5rem; margin: 10px 0 15px 0;">संजीवन समाधी सोहळा - आळंदी</h3>
-                        <p style="color: #ccc; font-size: 0.95rem; margin-bottom: 20px;">माऊली ज्ञानेश्वर महाराजांच्या संजीवन समाधी दिनानिमित्त आळंदी कार्तिकी एकादशी दरम्यान भरणारा भव्य सोहळा आणि त्यामागील इतिहास.</p>
-                        <a href="pages/blog/mauli-samadhi.html" style="color: #ffb703; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">पुढे वाचा <i class="fa-solid fa-arrow-right-long"></i></a>
-                    </div>
-                </div>
+    <!-- CARD ३: माऊली संजीवन समाधी सोहळा -->
+    <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(255,183,3,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+        <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; background-color: #222;">
+            <img src="images/sanjivan-samadhi-special.webp" alt="संजीवन समाधी सोहळा आळंदी" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+        </div>
+        <div style="padding: 25px;">
+            <span style="color: #ffb703; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;"><i class="fa-solid fa-clock"></i> कार्तिक वद्य त्रयोदशी</span>
+            <h3 style="font-family: 'Rozha One', serif; color: #fff; font-size: 1.5rem; margin: 10px 0 15px 0;">संजीवन समाधी सोहळा - आळंदी</h3>
+            <p style="color: #ccc; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6;">माऊली ज्ञानेश्वर महाराजांच्या संजीवन समाधी दिनानिमित्त आळंदी कार्तिकी एकादशी दरम्यान भरणारा भव्य सोहळा आणि त्यामागील इतिहास.</p>
+            <a href="pages/blog/sanjivan-samadhi.html" style="color: #ffb703; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">पुढे वाचा <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+    </div>
 
-                <!-- कार्ड ४: तुकाराम बीज (गाथा प्रस्थान) -->
-                <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 12px; overflow: hidden; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                    <div style="padding: 25px;">
-                        <span style="color: #ffb703; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;"><i class="fa-solid fa-bolt"></i> फाल्गुन वद्य द्वितीया</span>
-                        <h3 style="font-family: 'Rozha One', serif; color: #fff; font-size: 1.5rem; margin: 10px 0 15px 0;">जगद्गुरु तुकाराम महाराज बीज</h3>
-                        <p style="color: #ccc; font-size: 0.95rem; margin-bottom: 20px;">देहू धाम येथे साजरा होणारा तुकाराम महाराज वैकुंठगमन सोहळा आणि वारकरी संप्रदायासाठी या दिवसाचे असलेले अनन्यसाधारण महत्त्व.</p>
-                        <a href="pages/blog/tukaram-beej.html" style="color: #ffb703; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">पुढे वाचा <i class="fa-solid fa-arrow-right-long"></i></a>
-                    </div>
-                </div>
+    <!-- कार्ड ४: तुकाराम बीज -->
+    <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(255,183,3,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+        <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; background-color: #222;">
+            <img src="images/tukaram-beej-special.webp" alt="जगद्गुरु तुकाराम महाराज बीज" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+        </div>
+        <div style="padding: 25px;">
+            <span style="color: #ffb703; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;"><i class="fa-solid fa-bolt"></i> फाल्गुन वद्य द्वितीया</span>
+            <h3 style="font-family: 'Rozha One', serif; color: #fff; font-size: 1.5rem; margin: 10px 0 15px 0;">जगद्गुरु तुकाराम महाराज बीज</h3>
+            <p style="color: #ccc; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6;">देहू धाम येथे साजरा होणारा तुकाराम महाराज वैकुंठगमन सोहळा आणि वारकरी संप्रदायासाठी या दिवसाचे असलेले अनन्यसाधारण महत्त्व.</p>
+            <a href="pages/blog/tukaram-beej.html" style="color: #ffb703; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">पुढे वाचा <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+    </div>
 
-                <!-- कार्ड ५: चैत्री वारी (महाप्रभू उत्सव) -->
-                <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 12px; overflow: hidden; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                    <div style="padding: 25px;">
-                        <span style="color: #ffb703; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;"><i class="fa-solid fa-sun"></i> चैत्र शुद्ध एकादशी</span>
-                        <h3 style="font-family: 'Rozha One', serif; color: #fff; font-size: 1.5rem; margin: 10px 0 15px 0;">चैत्री एकादशी वारी सोहळा</h3>
-                        <p style="color: #ccc; font-size: 0.95rem; margin-bottom: 20px;">नवीन हिंदू वर्षातील पहिली मोठी वारी. उन्हाळ्याच्या सुरुवातीला पंढरपूर नगरीत विठ्ठल दर्शनासाठी जमणाऱ्या भाविकांची चैत्र यात्रा.</p>
-                        <a href="pages/blog/chaitri-wari.html" style="color: #ffb703; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">पुढे वाचा <i class="fa-solid fa-arrow-right-long"></i></a>
-                    </div>
-                </div>
+    <!-- कार्ड ५: चैत्री वारी -->
+    <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(255,183,3,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+        <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; background-color: #222;">
+            <img src="images/chatri-wari-featured.webp" alt="चैत्री एकादशी वारी सोहळा" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+        </div>
+        <div style="padding: 25px;">
+            <span style="color: #ffb703; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;"><i class="fa-solid fa-sun"></i> चैत्र शुद्ध एकादशी</span>
+            <h3 style="font-family: 'Rozha One', serif; color: #fff; font-size: 1.5rem; margin: 10px 0 15px 0;">चैत्री एकादशी वारी सोहळा</h3>
+            <p style="color: #ccc; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6;">नवीन हिंदू वर्षातील पहिली मोठी वारी. उन्हाळ्याच्या सुरुवातीला पंढरपूर नगरीत विठ्ठल दर्शनासाठी जमणाऱ्या भाविकांची चैत्र यात्रा.</p>
+            <a href="pages/blog/chaitri-wari.html" style="color: #ffb703; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">पुढे वाचा <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+    </div>
 
-                <!-- कार्ड ६: माघ वारी -->
-                <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 12px; overflow: hidden; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
-                    <div style="padding: 25px;">
-                        <span style="color: #ffb703; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;"><i class="fa-solid fa-snowflake"></i> माघ शुद्ध एकादशी</span>
-                        <h3 style="font-family: 'Rozha One', serif; color: #fff; font-size: 1.5rem; margin: 10px 0 15px 0;">माघ एकादशी यात्रा उत्सव</h3>
-                        <p style="color: #ccc; font-size: 0.95rem; margin-bottom: 20px;">पंढरपूर येथील चार मुख्य वाऱ्यांपैकी एक महत्त्वाची वारी. हिवाळ्याच्या दिवसांत भरणारी ही माघ यात्रा आणि तिचे आध्यात्मिक फलश्रुती.</p>
-                        <a href="pages/blog/magh-wari.html" style="color: #ffb703; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">पुढे वाचा <i class="fa-solid fa-arrow-right-long"></i></a>
-                    </div>
-                </div>
+    <!-- कार्ड ६: माघ वारी -->
+    <div style="background-color: #1a1a1a; border: 1px solid #333; border-radius: 12px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.5);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(255,183,3,0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.5)';">
+        <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; background-color: #222;">
+            <img src="images/magh-wari-featured.webp" alt="माघ एकादशी यात्रा उत्सव" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+        </div>
+        <div style="padding: 25px;">
+            <span style="color: #ffb703; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 600;"><i class="fa-solid fa-snowflake"></i> माघ शुद्ध एकादशी</span>
+            <h3 style="font-family: 'Rozha One', serif; color: #fff; font-size: 1.5rem; margin: 10px 0 15px 0;">माघ एकादशी यात्रा उत्सव</h3>
+            <p style="color: #ccc; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6;">पंढरपूर येथील चार मुख्य वाऱ्यांपैकी एक महत्त्वाची वारी. हिवाळ्याच्या दिवसांत भरणारी ही माघ यात्रा आणि तिचे आध्यात्मिक फलश्रुती.</p>
+            <a href="pages/blog/magh-wari.html" style="color: #ffb703; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">पुढे वाचा <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+    </div>
 
+</div>
             </div>
         </div>
     </main>
