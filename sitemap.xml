@@ -2108,4 +2108,10 @@
        <changefreq>daily</changefreq>
        <priority>0.4096</priority>
   </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/namdev-maharaj-samadhi.html</loc>
+       <lastmod>2026-08-02T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.4096</priority>
+  </url>
 </urlset>
