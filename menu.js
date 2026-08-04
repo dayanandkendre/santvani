@@ -78,13 +78,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // =========================================================
-// 💬 DISQUS AUTOMATIC COMMENTS INJECTION (Final Fix)
+// 💬 GISCUS MINIMAL & PREMIUM COMMENTS SECTION
 // =========================================================
 document.addEventListener("DOMContentLoaded", function () {
     
     var currentPath = window.location.pathname.toLowerCase();
     
-    // १. मुख्य पेजेसवर कमेंट्स नकोत म्हणून फिल्टर
+    // १. मुख्य आणि पॉलिसी पेजेसवर कमेंट बॉक्स दाखवायचा नाही
     var isMainPage = currentPath.endsWith("/") || 
                      currentPath.endsWith("index.html") || 
                      currentPath.indexOf("privacy-policy") !== -1 || 
@@ -93,22 +93,22 @@ document.addEventListener("DOMContentLoaded", function () {
                      currentPath.indexOf("contact") !== -1;
 
     if (isMainPage) {
-        return; // मुख्य पेजेसवर ब्लॉक होईल
+        return;
     }
 
-    // २. जिथे कमेंट बॉक्स बसवायचा आहे तो Div कंटेनर बनवणे
+    // २. कस्टम प्रीमियम कंटेनर
     var commentsWrapper = document.createElement("div");
     commentsWrapper.id = "santvani-comments-block";
-    commentsWrapper.style.cssText = "max-width: 900px; margin: 50px auto 20px auto; padding: 25px; background: #181818; border: 1px solid rgba(255, 183, 3, 0.3); border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);";
+    commentsWrapper.style.cssText = "max-width: 800px; margin: 50px auto 30px auto; padding: 25px; background: #181818; border: 1px solid rgba(255, 183, 3, 0.3); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.6); font-family: 'Poppins', sans-serif;";
 
     commentsWrapper.innerHTML = `
-        <h3 style="font-family: 'Rozha One', serif; font-size: 24px; color: #ffb703; margin-top: 0; margin-bottom: 20px;">
-            💬 प्रतिक्रिया व अभिप्राय (Comments)
+        <h3 style="font-family: 'Rozha One', serif; font-size: 22px; color: #ffb703; margin-top: 0; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+            <i class="fa-solid fa-comments"></i> प्रतिक्रिया व अभिप्राय (Comments)
         </h3>
-        <div id="disqus_thread"></div>
+        <div class="giscus"></div>
     `;
 
-    // ३. Footer च्या आधी कमेंट बॉक्स जोडणे
+    // ३. Footer च्या वर जोडणे
     var footer = document.querySelector("footer");
     if (footer) {
         footer.insertAdjacentElement('beforebegin', commentsWrapper);
@@ -116,16 +116,22 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.appendChild(commentsWrapper);
     }
 
-    // ४. Disqus स्क्रिप्ट लोड करणे
-    window.disqus_config = function () {
-        this.page.url = window.location.href;
-        this.page.identifier = window.location.pathname;
-    };
+    // ४. Giscus डार्क थीम स्क्रिप्ट लोड करणे
+    var script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.setAttribute("data-repo", "dayanandkendre/santvani"); // तुझा GitHub Username/Repo Name
+    script.setAttribute("data-repo-id", "R_kgDO..."); // giscus.app वरून मिळणारा ID (किंवा सामान्यपणे चालतो)
+    script.setAttribute("data-category", "General");
+    script.setAttribute("data-mapping", "pathname");
+    script.setAttribute("data-strict", "0");
+    script.setAttribute("data-reactions-enabled", "1");
+    script.setAttribute("data-emit-metadata", "0");
+    script.setAttribute("data-input-position", "bottom");
+    script.setAttribute("data-theme", "dark_dimmed"); // परफेक्ट डार्क थीम
+    script.setAttribute("data-lang", "mr"); // मराठी भाषा सपोर्ट
+    script.setAttribute("data-loading", "lazy");
+    script.crossOrigin = "anonymous";
+    script.async = true;
 
-    (function () {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://santvani.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+    document.body.appendChild(script);
 });
