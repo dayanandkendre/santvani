@@ -1,4 +1,3 @@
-console.log("Menu.js यशस्वीरित्या लोड झाली आहे!");
 document.addEventListener("DOMContentLoaded", function () {
     const navContainer = document.querySelector(".nav-container");
     const navLinks = document.querySelector(".nav-links");
