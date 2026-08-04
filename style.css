@@ -2017,13 +2017,13 @@ html, body {
     }
 }
 
-/* हेडलाईन्सचा रंग गोल्डन/ऑरेंज करण्यासाठी */
+/* हेडलाईन्सचा रंग गोल्डन/ऑरेंज आणि फॉन्ट Rozha One करण्यासाठी */
 .story-body h3, 
 .story-body h4, 
 main h3, 
 main h4 {
     color: #ffb703 !important; /* प्रीमियम गोल्ड कलर */
-    font-family: 'Yatra One', cursive, 'Poppins', sans-serif;
+    font-family: 'Rozha One', 'Poppins', serif !important;
     margin-top: 30px;
     margin-bottom: 12px;
 }
