@@ -1,36 +1,102 @@
-// =========================================================
-// 🔥 SHARE BUTTONS + FIREBASE COMMENTS SYSTEM (Rozha One Theme)
-// =========================================================
+document.addEventListener("DOMContentLoaded", function () {
+    // =========================================================
+    // 🍔 १. हॅम्बर्गर मेनू आणि नेव्हिगेशन लॉजिक (Fixed)
+    // =========================================================
+    function initNavigation() {
+        const navContainer = document.querySelector(".nav-container");
+        const navLinks = document.querySelector(".nav-links");
 
-(function () {
+        if (navContainer && navLinks) {
+            // १. मागील ब्लर पडदा (Overlay)
+            let overlay = document.querySelector(".menu-overlay");
+            if (!overlay) {
+                overlay = document.createElement("div");
+                overlay.className = "menu-overlay";
+                document.body.appendChild(overlay);
+            }
+
+            // २. हॅम्बर्गर बटण तयार करणे
+            let hamburgerBtn = document.querySelector(".hamburger-toggle");
+            if (!hamburgerBtn) {
+                hamburgerBtn = document.createElement("button");
+                hamburgerBtn.className = "hamburger-toggle";
+                hamburgerBtn.setAttribute("aria-label", "Toggle Menu");
+                hamburgerBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+                navContainer.appendChild(hamburgerBtn);
+            }
+
+            // ३. मुख्य मेनू टोगल
+            function toggleMenu() {
+                hamburgerBtn.classList.toggle("active");
+                navLinks.classList.toggle("active");
+                overlay.classList.toggle("active");
+
+                const icon = hamburgerBtn.querySelector("i");
+                if (navLinks.classList.contains("active")) {
+                    icon.className = "fa-solid fa-xmark";
+                } else {
+                    icon.className = "fa-solid fa-bars";
+                }
+            }
+
+            // इव्हेंट लिस्टनर्स (Duplicates टाळण्यासाठी reset)
+            hamburgerBtn.onclick = toggleMenu;
+            overlay.onclick = toggleMenu;
+
+            // ४. 'इतर' ड्रॉपडाऊन टोगल
+            const dropdown = document.querySelector(".dropdown");
+            const dropdownToggle = document.querySelector(".dropdown-toggle");
+
+            if (dropdownToggle && dropdown) {
+                dropdownToggle.onclick = function (e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        dropdown.classList.toggle("open");
+                        dropdown.classList.toggle("active");
+                    }
+                };
+            }
+
+            // ५. मोबाईलसाठी Bottom Navigation Bar
+            if (window.innerWidth <= 768 && !document.querySelector(".bottom-nav-bar")) {
+                const bottomNav = document.createElement("div");
+                bottomNav.className = "bottom-nav-bar";
+                bottomNav.innerHTML = `
+                    <a href="/index.html" class="bottom-nav-item">
+                        <i class="fa-solid fa-house"></i>
+                        <span>मुख्य पृष्ठ</span>
+                    </a>
+                    <a href="/sarth-haripath.html" class="bottom-nav-item">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>हरिपाठ</span>
+                    </a>
+                    <a href="/sant-sahitya.html" class="bottom-nav-item">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span>संत साहित्य</span>
+                    </a>
+                `;
+                document.body.appendChild(bottomNav);
+            }
+        }
+    }
+
+    // नेव्हिगेशन सुरु करणे
+    initNavigation();
+
+    // =========================================================
+    // 🔥 2. SHARE BUTTONS + FIREBASE COMMENTS SYSTEM
+    // =========================================================
     var currentPath = window.location.pathname.toLowerCase();
     
-    // १. ज्या पेजेसवर शेअर आणि कमेंट बॉक्स नको आहे त्यांची यादी
+    // ज्या पेजेसवर कमेंट/शेअर बॉक्स नको आहे त्यांची अचूक यादी
     var excludedPages = [
-        "index.html",
-        "about.html",
-        "contact.html",
-        "privacy-policy.html",
-        "terms.html",
-        "disclaimer.html",
-        "abhang-gatha.html",
-        "bharude-gavlani.html",
-        "granth-sampada.html",
-        "kabir-doha.html",
-        "santache-prasang.html",
-        "sant-sahitya.html",
-        "sant-subhashite.html",
-        "san-utsav.html",
-        "sarth-haripath.html",
-        "vangmay-sangrah.html",
-        "eknath-gatha.html",
-        "muktabai-gatha.html",
-        "namdev-gatha.html",
-        "nilobaray-gatha.html",
-        "tukaram-gatha.html",
-        "artya-sangrah.html",
-        "ekadashi-vrat.html",
-        "dnyaneshwari.html",
+        "index.html", "about.html", "contact.html", "privacy-policy.html",
+        "terms.html", "disclaimer.html", "abhang-gatha.html", "bharude-gavlani.html",
+        "granth-sampada.html", "kabir-doha.html", "santache-prasang.html", "sant-sahitya.html",
+        "sant-subhashite.html", "san-utsav.html", "sarth-haripath.html", "vangmay-sangrah.html",
+        "eknath-gatha.html", "muktabai-gatha.html", "namdev-gatha.html", "nilobaray-gatha.html",
+        "tukaram-gatha.html", "artya-sangrah.html", "ekadashi-vrat.html", "dnyaneshwari.html",
         "eknathi-bhagvat.html"
     ];
 
@@ -38,64 +104,63 @@
         return currentPath.indexOf(page) !== -1;
     });
 
-    if (isExcluded) return;
+    if (!isExcluded) {
+        // Firebase Scripts लोड करणे
+        var script1 = document.createElement("script");
+        script1.src = "https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js";
+        document.head.appendChild(script1);
 
-    // २. Firebase Scripts डाऊनलोड करणे
-    var script1 = document.createElement("script");
-    script1.src = "https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js";
-    document.head.appendChild(script1);
+        var script2 = document.createElement("script");
+        script2.src = "https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js";
+        document.head.appendChild(script2);
 
-    var script2 = document.createElement("script");
-    script2.src = "https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js";
-    document.head.appendChild(script2);
+        script2.onload = function () {
+            const firebaseConfig = {
+                apiKey: "AIzaSyBQTDVzvz5tFktEEsnPZQ6G_ADoxGL0ZW4",
+                authDomain: "santvani-48d18.firebaseapp.com",
+                databaseURL: "https://santvani-48d18-default-rtdb.firebaseio.com",
+                projectId: "santvani-48d18",
+                storageBucket: "santvani-48d18.firebasestorage.app",
+                messagingSenderId: "769467907364",
+                appId: "1:769467907364:web:4fe85b182eb43359f707b1",
+                measurementId: "G-D5XSFWVWTP"
+            };
 
-    script2.onload = function () {
-        const firebaseConfig = {
-            apiKey: "AIzaSyBQTDVzvz5tFktEEsnPZQ6G_ADoxGL0ZW4",
-            authDomain: "santvani-48d18.firebaseapp.com",
-            databaseURL: "https://santvani-48d18-default-rtdb.firebaseio.com",
-            projectId: "santvani-48d18",
-            storageBucket: "santvani-48d18.firebasestorage.app",
-            messagingSenderId: "769467907364",
-            appId: "1:769467907364:web:4fe85b182eb43359f707b1",
-            measurementId: "G-D5XSFWVWTP"
+            if (!firebase.apps.length) {
+                firebase.initializeApp(firebaseConfig);
+            }
+
+            initSantvaniShareAndComments();
         };
-
-        if (!firebase.apps.length) {
-            firebase.initializeApp(firebaseConfig);
-        }
-
-        initSantvaniShareAndComments();
-    };
-})();
+    }
+});
 
 function initSantvaniShareAndComments() {
     var db = firebase.database();
     var pageId = window.location.pathname.replace(/[^a-zA-Z0-9]/g, "_");
     var pageUrl = encodeURIComponent(window.location.href);
-    var pageTitle = encodeURIComponent(document.title || "संतवाणी - विचार आणि साहित्य");
+    var pageTitle = encodeURIComponent(document.title || "संतवाणी");
 
-    // ३. मुख्य कंटेनर (Share + Comments)
     var container = document.createElement("div");
     container.id = "santvani-interactive-block";
     container.style.cssText = "max-width: 850px; margin: 50px auto 30px auto; font-family: 'Poppins', sans-serif; color: #fff;";
 
     container.innerHTML = `
-        <!-- 📢 SHARE BUTTONS SECTION -->
-        <div style="background: #121212; border: 1px solid rgba(255, 183, 3, 0.3); border-radius: 12px; padding: 20px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        <!-- SHARE BUTTONS SECTION -->
+        <div style="background: #121212; border: 1px solid rgba(255, 183, 3, 0.3); border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
             <h4 style="font-family: 'Rozha One', serif; font-size: 20px; color: #ffb703; margin: 0 0 15px 0; display: flex; align-items: center; gap: 8px;">
                 🔗 हा लेख शेअर करा (Share Article)
             </h4>
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-                <a href="https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}" target="_blank" style="padding: 8px 16px; background: #25D366; color: #fff; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px;">WhatsApp</a>
+                <a href="https://api.whatsapp.com/send?text=${pageTitle}%20${pageUrl}" target="_blank" style="padding: 8px 16px; background: #25D366; color: #fff; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 600;">WhatsApp</a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=${pageUrl}" target="_blank" style="padding: 8px 16px; background: #1877F2; color: #fff; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 600;">Facebook</a>
                 <a href="https://telegram.me/share/url?url=${pageUrl}&text=${pageTitle}" target="_blank" style="padding: 8px 16px; background: #0088cc; color: #fff; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 600;">Telegram</a>
                 <a href="https://twitter.com/intent/tweet?text=${pageTitle}&url=${pageUrl}" target="_blank" style="padding: 8px 16px; background: #1DA1F2; color: #fff; text-decoration: none; border-radius: 6px; font-size: 13px; font-weight: 600;">X (Twitter)</a>
-                <button id="copy-link-btn" style="padding: 8px 16px; background: #333; color: #ffb703; border: 1px solid #ffb703; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; transition: 0.3s;">📋 लिंक कॉपी करा</button>
+                <button id="copy-link-btn" style="padding: 8px 16px; background: #333; color: #ffb703; border: 1px solid #ffb703; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer;">📋 लिंक कॉपी करा</button>
             </div>
         </div>
 
-        <!-- 💬 FIREBASE COMMENTS SECTION -->
+        <!-- FIREBASE COMMENTS SECTION -->
         <div style="background: #121212; border: 1px solid rgba(255, 183, 3, 0.3); border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
             <h3 style="font-family: 'Rozha One', serif; font-size: 22px; color: #ffb703; margin-top: 0; margin-bottom: 20px;">
                 💬 प्रतिक्रिया व अभिप्राय (Comments)
@@ -104,7 +169,7 @@ function initSantvaniShareAndComments() {
             <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px;">
                 <input type="text" id="fb-comment-name" placeholder="तुमचे नाव *" style="padding: 12px; background: #1a1a1a; border: 1px solid #333; border-radius: 8px; color: #fff; font-size: 14px; outline: none;" onfocus="this.style.borderColor='#ffb703'" onblur="this.style.borderColor='#333'">
                 <textarea id="fb-comment-text" rows="3" placeholder="आपली प्रतिक्रिया किंवा विचार लिहा..." style="padding: 12px; background: #1a1a1a; border: 1px solid #333; border-radius: 8px; color: #fff; font-size: 14px; outline: none; resize: vertical;" onfocus="this.style.borderColor='#ffb703'" onblur="this.style.borderColor='#333'"></textarea>
-                <button id="fb-comment-btn" style="align-self: flex-start; padding: 10px 24px; background: #ffb703; color: #000; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s;">प्रतिक्रिया पाठवा</button>
+                <button id="fb-comment-btn" style="align-self: flex-start; padding: 10px 24px; background: #ffb703; color: #000; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">प्रतिक्रिया पाठवा</button>
             </div>
 
             <div id="fb-comments-list" style="display: flex; flex-direction: column; gap: 15px;"></div>
@@ -118,19 +183,17 @@ function initSantvaniShareAndComments() {
         document.body.appendChild(container);
     }
 
-    // 📋 कॉपी लिंक बटणाची कार्यपद्धती
-    document.getElementById("copy-link-btn").addEventListener("click", function() {
+    // कॉपी लिंक
+    document.getElementById("copy-link-btn").onclick = function() {
         navigator.clipboard.writeText(window.location.href).then(function() {
             var btn = document.getElementById("copy-link-btn");
             btn.innerText = "✅ लिंक कॉपी झाली!";
-            setTimeout(function() {
-                btn.innerText = "📋 लिंक कॉपी करा";
-            }, 2000);
+            setTimeout(function() { btn.innerText = "📋 लिंक कॉपी करा"; }, 2000);
         });
-    });
+    };
 
-    // 💬 कमेंट सेव्ह करणे
-    document.getElementById("fb-comment-btn").addEventListener("click", function () {
+    // कमेंट पाठवणे[cite: 1]
+    document.getElementById("fb-comment-btn").onclick = function () {
         var nameInput = document.getElementById("fb-comment-name");
         var textInput = document.getElementById("fb-comment-text");
         var name = nameInput.value.trim();
@@ -150,9 +213,9 @@ function initSantvaniShareAndComments() {
 
         nameInput.value = "";
         textInput.value = "";
-    });
+    };
 
-    // 💬 रिअल-टाईम कमेंट्स लोड करणे
+    // रिअल-टाईम कमेंट्स[cite: 1]
     var commentsRef = db.ref("comments/" + pageId);
     commentsRef.on("value", function (snapshot) {
         var listContainer = document.getElementById("fb-comments-list");
