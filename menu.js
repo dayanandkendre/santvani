@@ -78,55 +78,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // =========================================================
-// 💬 DISQUS AUTOMATIC COMMENTS SECTION (Filtered Pages)
+// 💬 DISQUS AUTOMATIC COMMENTS INJECTION (Final Fix)
 // =========================================================
 document.addEventListener("DOMContentLoaded", function () {
     
-    // १. ज्या पेजेसवर कमेंट बॉक्स नको आहे त्यांची यादी (URL चे भाग)
     var currentPath = window.location.pathname.toLowerCase();
     
-    var excludedPages = [
-        "/",                     // Homepage
-        "index.html",            // Home Page
-        "sant-sahitya",          // संत साहित्य ग्रिड
-        "san-utsav",             // सण आणि उत्सव ग्रिड
-        "contact",               // संपर्क पेज
-        "about",                 // आमच्याबद्दल
-        "privacy-policy",        // प्रायव्हसी पॉलिसी
-        "terms",                 // नियम व अटी
-        "disclaimer"             // डिस्क्लेमर
-    ];
+    // १. मुख्य पेजेसवर कमेंट्स नकोत म्हणून फिल्टर
+    var isMainPage = currentPath.endsWith("/") || 
+                     currentPath.endsWith("index.html") || 
+                     currentPath.indexOf("privacy-policy") !== -1 || 
+                     currentPath.indexOf("terms") !== -1 || 
+                     currentPath.indexOf("disclaimer") !== -1 || 
+                     currentPath.indexOf("contact") !== -1;
 
-    // २. जर सध्याचे पेज अपवादात्मक यादीत असेल तर कमेंट बॉक्स जोडणार नाही
-    var shouldExclude = excludedPages.some(function(page) {
-        return currentPath.endsWith(page) || currentPath.indexOf(page) !== -1;
-    });
-
-    if (shouldExclude) {
-        return; // इथेच कोड थांबेल, कमेंट बॉक्स लोड होणार नाही
+    if (isMainPage) {
+        return; // मुख्य पेजेसवर ब्लॉक होईल
     }
 
-    // ३. फक्त मुख्य लेखांसाठीच कमेंट्स कंटेनर बनवणे
-    var commentsContainer = document.createElement("div");
-    commentsContainer.id = "santvani-comments-wrapper";
-    commentsContainer.style.cssText = "max-width: 800px; margin: 40px auto 20px auto; padding: 25px; background-color: #181818; border: 1px solid rgba(255,183,3,0.3); border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.6); font-family: 'Poppins', sans-serif;";
+    // २. जिथे कमेंट बॉक्स बसवायचा आहे तो Div कंटेनर बनवणे
+    var commentsWrapper = document.createElement("div");
+    commentsWrapper.id = "santvani-comments-block";
+    commentsWrapper.style.cssText = "max-width: 900px; margin: 50px auto 20px auto; padding: 25px; background: #181818; border: 1px solid rgba(255, 183, 3, 0.3); border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);";
 
-    commentsContainer.innerHTML = `
-        <h3 style="font-family: 'Rozha One', serif; font-size: 24px; color: #ffb703; margin-top: 0; margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-comments"></i> प्रतिक्रिया व अभिप्राय (Comments)
+    commentsWrapper.innerHTML = `
+        <h3 style="font-family: 'Rozha One', serif; font-size: 24px; color: #ffb703; margin-top: 0; margin-bottom: 20px;">
+            💬 प्रतिक्रिया व अभिप्राय (Comments)
         </h3>
         <div id="disqus_thread"></div>
     `;
 
-    // ४. फुटरच्या आधी सेफली जोडणे
+    // ३. Footer च्या आधी कमेंट बॉक्स जोडणे
     var footer = document.querySelector("footer");
     if (footer) {
-        footer.parentNode.insertBefore(commentsContainer, footer);
+        footer.insertAdjacentElement('beforebegin', commentsWrapper);
     } else {
-        document.body.appendChild(commentsContainer);
+        document.body.appendChild(commentsWrapper);
     }
 
-    // ५. Disqus स्क्रिप्ट लोड करणे
+    // ४. Disqus स्क्रिप्ट लोड करणे
     window.disqus_config = function () {
         this.page.url = window.location.href;
         this.page.identifier = window.location.pathname;
