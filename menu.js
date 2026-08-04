@@ -78,23 +78,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // =========================================================
-// 🔥 FIREBASE CUSTOM PREMIUM COMMENTS SYSTEM (Rozha One Theme)
+// 🔥 FIREBASE CUSTOM PREMIUM COMMENTS SYSTEM (EXCLUSIONS LIST)
 // =========================================================
 
 (function () {
     var currentPath = window.location.pathname.toLowerCase();
     
-    // १. मुख्य आणि पॉलिसी पेजेसवर कमेंट बॉक्स दाखवायचा नाही
-    var isMainPage = currentPath.endsWith("/") || 
-                     currentPath.endsWith("index.html") || 
-                     currentPath.indexOf("privacy-policy") !== -1 || 
-                     currentPath.indexOf("terms") !== -1 || 
-                     currentPath.indexOf("disclaimer") !== -1 || 
-                     currentPath.indexOf("contact") !== -1;
+    // १. ज्या पेजेसवर कमेंट बॉक्स नको आहे त्यांची अचूक यादी
+    var excludedPages = [
+        "index.html",
+        "about.html",
+        "contact.html",
+        "privacy-policy.html",
+        "terms.html",
+        "disclaimer.html",
+        "abhang-gatha.html",
+        "bharude-gavlani.html",
+        "granth-sampada.html",
+        "kabir-doha.html",
+        "santache-prasang.html",
+        "sant-sahitya.html",
+        "sant-subhashite.html",
+        "san-utsav.html",
+        "sarth-haripath.html",
+        "vangmay-sangrah.html",
+        "eknath-gatha.html",
+        "muktabai-gatha.html",
+        "namdev-gatha.html",
+        "nilobaray-gatha.html",
+        "tukaram-gatha.html",
+        "artya-sangrah.html",
+        "ekadashi-vrat.html",
+        "dnyaneshwari.html",
+        "eknathi-bhagvat.html"
+    ];
 
-    if (isMainPage) return;
+    // २. चेक करणे – जर रूट असेल किंवा वरीलपैकी कोणतेही पेज असेल तर कमेंट बॉक्स ब्लॉक राहील
+    var isExcluded = currentPath === "/" || currentPath.endsWith("/") || excludedPages.some(function(page) {
+        return currentPath.indexOf(page) !== -1;
+    });
 
-    // २. Firebase JS SDK डाऊनलोड करणे
+    if (isExcluded) return;
+
+    // ३. Firebase SDK डाऊनलोड करणे
     var script1 = document.createElement("script");
     script1.src = "https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js";
     document.head.appendChild(script1);
@@ -104,7 +130,6 @@ document.addEventListener("DOMContentLoaded", function () {
     document.head.appendChild(script2);
 
     script2.onload = function () {
-        // तुझा ओरिजिनल Firebase Credentials Config
         const firebaseConfig = {
             apiKey: "AIzaSyBQTDVzvz5tFktEEsnPZQ6G_ADoxGL0ZW4",
             authDomain: "santvani-48d18.firebaseapp.com",
@@ -126,10 +151,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function initSantvaniComments() {
     var db = firebase.database();
-    // प्रत्येक आर्टिकलसाठी युनिक आयडी तयार करणे
     var pageId = window.location.pathname.replace(/[^a-zA-Z0-9]/g, "_");
 
-    // ३. संतवाणी कस्टम डार्क-गोल्ड HTML लेआउट
     var commentsWrapper = document.createElement("div");
     commentsWrapper.id = "santvani-comments-wrapper";
     commentsWrapper.style.cssText = "max-width: 850px; margin: 50px auto 30px auto; padding: 25px; background: #121212; border: 1px solid rgba(255, 183, 3, 0.3); border-radius: 14px; box-shadow: 0 4px 20px rgba(0,0,0,0.6); font-family: 'Poppins', sans-serif; color: #fff;";
@@ -139,14 +162,12 @@ function initSantvaniComments() {
             💬 प्रतिक्रिया व अभिप्राय (Comments)
         </h3>
 
-        <!-- इनपुट फॉर्म -->
         <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 30px;">
             <input type="text" id="fb-comment-name" placeholder="तुमचे नाव *" style="padding: 12px; background: #1a1a1a; border: 1px solid #333; border-radius: 8px; color: #fff; font-size: 14px; outline: none; transition: 0.3s;" onfocus="this.style.borderColor='#ffb703'" onblur="this.style.borderColor='#333'">
             <textarea id="fb-comment-text" rows="3" placeholder="आपली प्रतिक्रिया किंवा विचार लिहा..." style="padding: 12px; background: #1a1a1a; border: 1px solid #333; border-radius: 8px; color: #fff; font-size: 14px; outline: none; resize: vertical; transition: 0.3s;" onfocus="this.style.borderColor='#ffb703'" onblur="this.style.borderColor='#333'"></textarea>
             <button id="fb-comment-btn" style="align-self: flex-start; padding: 10px 24px; background: #ffb703; color: #000; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.3s;">प्रतिक्रिया पाठवा</button>
         </div>
 
-        <!-- कमेंट्स लिस्ट -->
         <div id="fb-comments-list" style="display: flex; flex-direction: column; gap: 15px;"></div>
     `;
 
@@ -157,7 +178,6 @@ function initSantvaniComments() {
         document.body.appendChild(commentsWrapper);
     }
 
-    // ४. नवीन कमेंट जोडणे
     document.getElementById("fb-comment-btn").addEventListener("click", function () {
         var nameInput = document.getElementById("fb-comment-name");
         var textInput = document.getElementById("fb-comment-text");
@@ -180,7 +200,6 @@ function initSantvaniComments() {
         textInput.value = "";
     });
 
-    // ५. Realtime कमेंट्स लोड करणे
     var commentsRef = db.ref("comments/" + pageId);
     commentsRef.on("value", function (snapshot) {
         var listContainer = document.getElementById("fb-comments-list");
