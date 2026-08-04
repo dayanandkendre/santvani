@@ -43,7 +43,7 @@
 /* Fixed & Enhanced Premium Card Title - Royal Devanagari Style */
 .card-header h3 {
     /* 'Rozha One' हा मराठी आरत्यांच्या नावासाठी अत्यंत बोल्ड आणि रॉयल दिसतो */
-    font-family: 'Rozha One', 'Yatra One', 'Poppins', sans-serif;
+    font-family: 'Rozha One', 'Rozha One', 'Poppins', sans-serif;
     
     /* चमकदार सोनेरी पिवळा रंग (डार्क थीमवर सर्वात जास्त उठून दिसतो) */
     color: #ffb703; 

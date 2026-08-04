@@ -12,7 +12,7 @@
     --text-gold: #ffd27f;
     --text-muted: #c2b4a6;
     --border-subtle: rgba(255, 210, 127, 0.15);
-    --font-premium: 'Poppins', 'Yatra One', 'Rozha One', sans-serif;
+    --font-premium: 'Poppins', 'Rozha One', 'Rozha One', sans-serif;
     --shadow-royal: 0 15px 35px rgba(0, 0, 0, 0.6), 0 5px 15px rgba(255, 115, 0, 0.05);
 }
 
@@ -441,7 +441,7 @@ body {
     color: var(--text-white);
     line-height: 2;
     margin-bottom: 20px;
-    font-family: 'Yatra One', sans-serif;
+    font-family: 'Rozha One', sans-serif;
     text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
