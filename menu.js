@@ -241,3 +241,13 @@ function initSantvaniShareAndComments() {
         });
     });
 }
+
+
+// सर्व पेजेसवर ऑटोमॅटिक Favicon जोडण्यासाठी
+(function() {
+    const favicon = document.createElement('link');
+    favicon.rel = 'icon';
+    favicon.type = 'image/x-icon';
+    favicon.href = '/favicon.ico'; // तुमची फाईल root folder मध्ये असल्यास
+    document.head.appendChild(favicon);
+})();
