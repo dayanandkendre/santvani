@@ -2114,4 +2114,35 @@
        <changefreq>daily</changefreq>
        <priority>0.4096</priority>
   </url>
+  <!-- संत नारायण महाराज देहूकर -->
+  <url>
+       <loc>https://santvani.co.in/pages/saints/sant-narayan-maharaj-dehukar.html</loc>
+       <lastmod>2026-08-06T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.4096</priority>
+  </url>
+
+  <!-- समर्थ धोंडूतात्या महाराज अनुक्रमणिका (Index) -->
+  <url>
+       <loc>https://santvani.co.in/pages/saints/samarth-dhondutatya-index.html</loc>
+       <lastmod>2026-08-06T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.4096</priority>
+  </url>
+
+  <!-- संत भगवानबाबा -->
+  <url>
+       <loc>https://santvani.co.in/pages/saints/sant-bhagwan-baba.html</loc>
+       <lastmod>2026-08-06T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.4096</priority>
+  </url>
+
+  <!-- समर्थ धोंडूतात्या महाराज -->
+  <url>
+       <loc>https://santvani.co.in/pages/saints/samarth-dhondutatya-maharaj.html</loc>
+       <lastmod>2026-08-06T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.4096</priority>
+  </url>
 </urlset>
