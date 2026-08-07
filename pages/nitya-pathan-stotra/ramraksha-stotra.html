@@ -64,14 +64,14 @@
             padding: 0 20px;
         }
 
-        /* 16:9 रेशो आणि इमेज डाउनलोडसाठी सुंदर कार्ड */
+        /* 16:9 HD श्लोक कार्ड डिझाईन */
         .shloka-card-16-9 {
             position: relative;
             background: linear-gradient(145deg, #181818 0%, #121212 100%);
             border: 1px solid #282828;
             border-left: 5px solid #ffb703;
             border-radius: 12px;
-            padding: 30px 25px 45px 25px;
+            padding: 40px 25px 45px 25px;
             margin-bottom: 30px;
             aspect-ratio: 16 / 9;
             display: flex;
@@ -83,13 +83,29 @@
             box-sizing: border-box;
         }
 
-        /* टॉप राईट कॉर्नरचे ३ टूल बटन्स */
+        /* टॉप लेफ्ट - स्तोत्राचे नाव बॅज */
+        .card-stotra-title {
+            position: absolute;
+            top: 12px;
+            left: 18px;
+            font-size: 13px;
+            color: #ffb703;
+            font-weight: 600;
+            background: rgba(255, 183, 3, 0.1);
+            border: 1px solid rgba(255, 183, 3, 0.3);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        /* टॉप राईट - ३ टूल बटन्स */
         .card-top-tools {
             position: absolute;
             top: 12px;
             right: 15px;
             display: flex;
-            gap: 12px;
+            gap: 10px;
             z-index: 10;
         }
 
@@ -114,7 +130,7 @@
             transform: scale(1.1);
         }
 
-        /* बॉटम राईट वॉटरमार्क */
+        /* बॉटम राईट - वॉटरमार्क */
         .card-watermark {
             position: absolute;
             bottom: 12px;
@@ -170,9 +186,25 @@
         /* मोबाईल रिस्पॉन्सिव्ह */
         @media (max-width: 650px) {
             .shloka-card-16-9 {
-                aspect-ratio: auto; /* मोबाईलवर मेसेज कापला जाऊ नये म्हणून ऑटो हाईट */
+                aspect-ratio: auto;
                 min-height: 280px;
-                padding: 35px 15px 40px 15px;
+                padding: 45px 15px 40px 15px;
+            }
+            .card-stotra-title {
+                font-size: 11px;
+                padding: 3px 8px;
+                top: 10px;
+                left: 10px;
+            }
+            .card-top-tools {
+                top: 10px;
+                right: 10px;
+                gap: 8px;
+            }
+            .tool-btn {
+                width: 28px;
+                height: 28px;
+                font-size: 11px;
             }
             .shloka-text {
                 font-size: 17px;
@@ -248,35 +280,20 @@
                 </p>
             </div>
 
-            <!-- संपूर्ण स्तोत्र आणि अर्थ (16:9 HD Cards) -->
+            <!-- ======================================================== -->
+            <!--   PASTE HERE: स्तोत्र आणि अर्थ खालील विभागात पेस्ट करूया   -->
+            <!-- ======================================================== -->
             <div id="stotra-text-body">
 
-                <!-- मंगलाचरण व विनियोग -->
+                <!-- नमुना कार्ड (Sample Demo Card) -->
                 <div class="shloka-card-16-9" id="card-1">
+                    <div class="card-stotra-title">
+                        🚩 श्री रामरक्षा स्तोत्रम्
+                    </div>
                     <div class="card-top-tools">
                         <button class="tool-btn" onclick="copyCardText('card-1')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
                         <button class="tool-btn" onclick="downloadCardImage('card-1', 'ramraksha-shloka-1')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
                         <button class="tool-btn" onclick="shareCardText('card-1')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
-                    </div>
-                    <div class="shloka-text">
-                        श्रीरामरक्षास्तोत्रम् ॥<br>
-                        ॥ ॐ श्रीगणेशाय नमः ॥<br>
-                        अस्य श्रीरामरक्षास्तोत्रमन्त्रस्य । बुधकौशिक ऋषिः ।<br>
-                        श्रीसीतारामचन्द्रो देवता । अनुष्टुप् छन्दः ।
-                    </div>
-                    <div class="meaning-box">
-                        <div class="meaning-title">मराठी अर्थ:</div>
-                        श्री गणेशाय नमः. या श्री रामरक्षा स्तोत्र मंत्राचे ऋषी बुधकौशिक आहेत. श्री सीता-रामचंद्र ही देवता आहे. अनुष्टुप हा छंद आहे.
-                    </div>
-                    <div class="card-watermark">✨ santvani.co.in</div>
-                </div>
-
-                <!-- श्लोक १ -->
-                <div class="shloka-card-16-9" id="card-2">
-                    <div class="card-top-tools">
-                        <button class="tool-btn" onclick="copyCardText('card-2')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
-                        <button class="tool-btn" onclick="downloadCardImage('card-2', 'ramraksha-shloka-2')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
-                        <button class="tool-btn" onclick="shareCardText('card-2')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
                     </div>
                     <div class="shloka-text">
                         चरितं रघुनाथस्य शतकोटि प्रविस्तरम् ।<br>
@@ -289,43 +306,10 @@
                     <div class="card-watermark">✨ santvani.co.in</div>
                 </div>
 
-                <!-- श्लोक २ -->
-                <div class="shloka-card-16-9" id="card-3">
-                    <div class="card-top-tools">
-                        <button class="tool-btn" onclick="copyCardText('card-3')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
-                        <button class="tool-btn" onclick="downloadCardImage('card-3', 'ramraksha-shloka-3')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
-                        <button class="tool-btn" onclick="shareCardText('card-3')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
-                    </div>
-                    <div class="shloka-text">
-                        ध्यात्वा नीलोत्पलश्यामं रामं राजीवलोचनम् ।<br>
-                        जानकीलक्ष्मणोपेतं जटामुकुटमण्डितम् ॥ २॥
-                    </div>
-                    <div class="meaning-box">
-                        <div class="meaning-title">मराठी अर्थ:</div>
-                        निळ्या कमळाप्रमाणे श्यामल व कमलनेत्र असलेल्या, जानकी व लक्ष्मणासह विराजमान असलेल्या श्रीरामांचे ध्यान करून...
-                    </div>
-                    <div class="card-watermark">✨ santvani.co.in</div>
-                </div>
-
-                <!-- श्लोक ३५ -->
-                <div class="shloka-card-16-9" id="card-4">
-                    <div class="card-top-tools">
-                        <button class="tool-btn" onclick="copyCardText('card-4')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
-                        <button class="tool-btn" onclick="downloadCardImage('card-4', 'ramraksha-shloka-35')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
-                        <button class="tool-btn" onclick="shareCardText('card-4')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
-                    </div>
-                    <div class="shloka-text">
-                        आपदामपहर्तारं दातारं सर्वसम्पदाम् ।<br>
-                        लोकाभिरामं श्रीरामं भूयो भूयो नमाम्यहम् ॥ ३५॥
-                    </div>
-                    <div class="meaning-box">
-                        <div class="meaning-title">मराठी अर्थ:</div>
-                        सर्व संकटांचे हरण करणाऱ्या, सर्व संपत्ती देणाऱ्या आणि लोकांना आनंद देणाऱ्या श्रीरामाला मी वारंवार नमस्कार करतो.
-                    </div>
-                    <div class="card-watermark">✨ santvani.co.in</div>
-                </div>
+                <!-- इथून पुढे आपण सर्व श्लोकांचे कार्ड्स एकत्र पेस्ट करणार आहोत -->
 
             </div>
+            <!-- ======================================================== -->
 
             <!-- नेव्हिगेशन व शेअर -->
             <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #282828; flex-wrap: wrap; gap: 15px;">
@@ -391,7 +375,7 @@
             const card = document.getElementById(cardId);
             const shloka = card.querySelector('.shloka-text').innerText;
             const meaning = card.querySelector('.meaning-box').innerText;
-            const fullText = shloka + "\n\n" + meaning + "\n\nवाचा: santvani.co.in";
+            const fullText = "🚩 *श्री रामरक्षा स्तोत्रम्* 🚩\n\n" + shloka + "\n\n" + meaning + "\n\nवाचा: santvani.co.in";
             
             navigator.clipboard.writeText(fullText).then(() => {
                 alert("श्लोक व अर्थ कॉपी झाला आहे!");
