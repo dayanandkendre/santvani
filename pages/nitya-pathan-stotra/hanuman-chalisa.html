@@ -64,24 +64,20 @@
         padding: 0 20px;
     }
 
-    /* नेटके आणि परफेक्ट स्पेसिंग असलेले श्लोक कार्ड */
+    /* श्लोक कार्ड बेस स्टाइल */
     .shloka-card-16-9 {
         position: relative;
         background: linear-gradient(145deg, #181818 0%, #121212 100%);
         border: 1px solid #282828;
         border-left: 4px solid #ffb703;
         border-radius: 10px;
-        padding: 50px 20px 35px 20px; /* टूल बटन्स व वॉटरमार्कसाठी पुरेशी जागा */
+        padding: 48px 18px 32px 18px;
         margin-bottom: 25px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         box-sizing: border-box;
     }
 
-    /* टॉप लेफ्ट - स्तोत्राचे नाव बॅज */
+    /* टॉप लेफ्ट - टायटल बॅज */
     .card-stotra-title {
         position: absolute;
         top: 12px;
@@ -127,7 +123,7 @@
         transform: scale(1.1);
     }
 
-    /* बॉटम राईट - स्पष्ट वॉटरमार्क */
+    /* बॉटम राईट - वॉटरमार्क */
     .card-watermark {
         position: absolute;
         bottom: 8px;
@@ -140,26 +136,27 @@
         letter-spacing: 0.5px;
     }
 
+    /* श्लोक/चौपाई मजकूर */
     .shloka-text {
         font-family: 'Poppins', 'Rozha One', 'Yatra One', sans-serif;
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 600;
         color: #ffb703;
-        line-height: 1.8;
-        letter-spacing: 0.3px;
-        margin-bottom: 15px;
+        line-height: 1.7;
+        margin-bottom: 14px;
         text-align: center;
         width: 100%;
-        word-break: keep-all;
+        white-space: normal;
     }
 
+    /* मराठी अर्थ बॉक्स */
     .meaning-box {
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.35);
         border: 1px solid #222222;
         border-radius: 6px;
-        padding: 10px 15px;
+        padding: 10px 14px;
         color: #cccccc;
-        font-size: 14px;
+        font-size: 13.5px;
         line-height: 1.6;
         text-align: center;
         width: 100%;
@@ -183,41 +180,48 @@
         line-height: 1.8;
     }
 
-    /* मोबाईल रिस्पॉन्सिव्ह (फिक्स: श्लोक आणि ॥ क्रमांक ओळीत बसवण्यासाठी) */
+    /* ==========================================
+       मोबाईलसाठी स्पेशल रिस्पॉन्सिव्ह फिक्स (iPhone / Android)
+       ========================================== */
     @media (max-width: 650px) {
         .shloka-card-16-9 {
-            aspect-ratio: auto;
-            min-height: auto;
-            padding: 42px 6px 30px 6px; /* पॅडिंग कमी करून जास्तीत जास्त रुंदी मिळवली */
+            padding: 42px 6px 28px 6px !important; /* डावी-उजवी पॅडिंग कमी करून स्क्रीनची पूर्ण रुंदी वापरली */
         }
+        
         .card-stotra-title {
             font-size: 10px;
             padding: 2px 6px;
             top: 10px;
             left: 10px;
         }
+
         .card-top-tools {
             top: 10px;
             right: 10px;
-            gap: 6px;
+            gap: 5px;
         }
+
         .tool-btn {
             width: 26px;
             height: 26px;
             font-size: 10px;
         }
+
+        /* इथे चौपाईची साईझ आणि लेटर-स्पेसिंग फिक्स केली आहे */
         .shloka-text {
-            font-size: 13.5px !important; /* अचूक फॉन्ट साईझ जेणेकरून पूर्ण ओळ आणि ॥ १३ ॥ एकाच ओळीत बसेल */
+            font-size: 12.5px !important; /* १२.५px केल्याने मोबाईलवर १ ओळ + ॥ २९ ॥ एकाच लाईनमध्ये बसतात */
             font-weight: 600;
             line-height: 1.6;
-            letter-spacing: 0px;
+            letter-spacing: -0.2px; /* अक्षरांमधील गॅप हलकासा कमी केला */
             margin-bottom: 12px;
-            padding: 0 4px;
+            padding: 0 2px;
         }
+
         .meaning-box {
-            font-size: 12.5px;
-            padding: 8px 8px;
+            font-size: 12px;
+            padding: 8px;
         }
+
         .card-watermark {
             font-size: 10px;
             bottom: 6px;
@@ -225,6 +229,7 @@
         }
     }
 </style>
+    
 </head>
 <body>
 
