@@ -181,14 +181,23 @@
             line-height: 1.8;
         }
 
-        /* मोबाईल रिस्पॉन्सिव्ह */
+        /* मोबाईल रिस्पॉन्सिव्ह (सुधारित लेआउट) */
         @media (max-width: 650px) {
             .shloka-card-16-9 {
-                padding: 45px 12px 35px 12px;
+                aspect-ratio: auto;
+                min-height: 280px;
+                padding: 42px 10px 32px 10px; /* बाजूची पॅडिंग कमी केली जेणेकरून मजकूर कापला जाणार नाही */
             }
             .card-stotra-title {
                 font-size: 10px;
                 padding: 2px 6px;
+                top: 10px;
+                left: 10px;
+            }
+            .card-top-tools {
+                top: 10px;
+                right: 10px;
+                gap: 6px;
             }
             .tool-btn {
                 width: 26px;
@@ -196,10 +205,19 @@
                 font-size: 10px;
             }
             .shloka-text {
-                font-size: 16px;
+                font-size: 15px; /* मोबाईल स्क्रीनवर श्लोक तुटू नये म्हणून फॉन्ट साईझ १५px केली */
+                line-height: 1.7;
+                letter-spacing: 0.4px;
+                margin-bottom: 12px;
             }
             .meaning-box {
                 font-size: 13px;
+                padding: 8px 10px;
+            }
+            .card-watermark {
+                font-size: 10px;
+                bottom: 6px;
+                right: 12px;
             }
         }
     </style>
