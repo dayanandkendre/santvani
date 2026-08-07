@@ -64,18 +64,20 @@
         padding: 0 20px;
     }
 
+    /* नेटके आणि परफेक्ट स्पेसिंग असलेले श्लोक कार्ड */
     .shloka-card-16-9 {
         position: relative;
         background: linear-gradient(145deg, #181818 0%, #121212 100%);
         border: 1px solid #282828;
         border-left: 4px solid #ffb703;
         border-radius: 10px;
-        padding: 48px 18px 32px 18px;
+        padding: 45px 18px 28px 18px;
         margin-bottom: 25px;
         box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         box-sizing: border-box;
     }
 
+    /* टॉप लेफ्ट - स्तोत्राचे नाव बॅज */
     .card-stotra-title {
         position: absolute;
         top: 12px;
@@ -90,6 +92,7 @@
         font-family: 'Poppins', sans-serif;
     }
 
+    /* टॉप राईट - ३ टूल बटन्स */
     .card-top-tools {
         position: absolute;
         top: 12px;
@@ -120,6 +123,7 @@
         transform: scale(1.1);
     }
 
+    /* बॉटम राईट - वॉटरमार्क */
     .card-watermark {
         position: absolute;
         bottom: 8px;
@@ -132,16 +136,18 @@
         letter-spacing: 0.5px;
     }
 
+    /* श्लोक मजकूर - अचूक कॉम्पॅक्ट लाईन-हाइट */
     .shloka-text {
         font-family: 'Rozha One', 'Yatra One', 'Poppins', serif;
-        font-size: 18px;
+        font-size: 17px;
         color: #ffb703;
-        line-height: 1.7;
-        margin-bottom: 14px;
+        line-height: 1.42; /* ओळींमधील गॅप संतुलित ठेवला */
+        margin-bottom: 12px;
         text-align: center;
         width: 100%;
     }
 
+    /* मराठी अर्थ बॉक्स */
     .meaning-box {
         background: rgba(0, 0, 0, 0.35);
         border: 1px solid #222222;
@@ -149,7 +155,7 @@
         padding: 10px 14px;
         color: #cccccc;
         font-size: 13.5px;
-        line-height: 1.6;
+        line-height: 1.55;
         text-align: center;
         width: 100%;
         box-sizing: border-box;
@@ -158,7 +164,7 @@
     .meaning-title {
         color: #ff9f1c;
         font-weight: 600;
-        margin-bottom: 4px;
+        margin-bottom: 3px;
         font-size: 13px;
     }
 
@@ -172,35 +178,16 @@
         line-height: 1.8;
     }
 
-    /* मोबाईलसाठी सुंदर रिस्पॉन्सिव्ह मांडणी */
+    /* मोबाईलसाठी नेटकी रिस्पॉन्सिव्ह मांडणी */
     @media (max-width: 650px) {
         .shloka-card-16-9 {
-            padding: 42px 10px 28px 10px;
-        }
-        
-        .card-stotra-title {
-            font-size: 10px;
-            padding: 2px 6px;
-            top: 10px;
-            left: 10px;
-        }
-
-        .card-top-tools {
-            top: 10px;
-            right: 10px;
-            gap: 6px;
-        }
-
-        .tool-btn {
-            width: 26px;
-            height: 26px;
-            font-size: 10px;
+            padding: 40px 10px 25px 10px;
         }
 
         .shloka-text {
-            font-size: 15px !important; /* स्पष्ट आणि मोठा फॉन्ट */
-            line-height: 1.75;
-            margin-bottom: 12px;
+            font-size: 14.5px !important;
+            line-height: 1.4;
+            margin-bottom: 10px;
         }
 
         .meaning-box {
