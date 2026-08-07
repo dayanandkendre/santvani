@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico">
+    
+    <!-- ================= SEO Meta Tags ================= -->
+    <title>सार्थ श्री मारुती स्तोत्र (भीमरूपी) - मराठी अर्थासह | नित्य पठण | संतवाणी</title>
+    <meta name="description" content="समर्थ रामदास स्वामी रचित 'भीमरूपी महारुद्रा' श्री मारुती स्तोत्र संपूर्ण श्लोक व सोप्या मराठी अर्थासह वाचा. नित्य पठणासाठी मारुती स्तोत्र इमेज कार्ड डाउनलोड करा.">
+    <meta name="keywords" content="मारुती स्तोत्र, भीमरूपी महारुद्रा, Maruti Stotra Marathi, मारुती स्तोत्र मराठी अर्थ, समर्थ रामदास स्वामी, नित्य पठण स्तोत्रे, संतवाणी">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://santvani.co.in/pages/nitya-pathan-stotra/maruti-stotra.html">
+
+    <!-- Open Graph (Facebook, Social Media) -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="सार्थ श्री मारुती स्तोत्र (भीमरूपी) - मराठी अर्थासह | संतवाणी">
+    <meta property="og:description" content="समर्थ रामदास स्वामी रचित श्री मारुती स्तोत्र संपूर्ण श्लोक व सोप्या मराठी अर्थासह वाचा.">
+    <meta property="og:image" content="https://santvani.co.in/images/stotra/maruti-stotra.webp">
+    <meta property="og:url" content="https://santvani.co.in/pages/nitya-pathan-stotra/maruti-stotra.html">
+    <meta property="og:site_name" content="संतवाणी डिजिटल लायब्ररी">
+
+    <!-- Fonts & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Yatra+One&family=Poppins:wght@300;400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../style.css">
+
+    <!-- HTML2Canvas Library for Image Download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+     "@context":"https://schema.org",
+     "@type":"BreadcrumbList",
+     "itemListElement":[
+      {
+       "@type":"ListItem",
+       "position":1,
+       "name":"मुख्यपृष्ठ",
+       "item":"https://santvani.co.in/"
+      },
+      {
+       "@type":"ListItem",
+       "position":2,
+       "name":"नित्य पठण स्तोत्रे",
+       "item":"https://santvani.co.in/nitya-pathan-stotra.html"
+      },
+      {
+       "@type":"ListItem",
+       "position":3,
+       "name":"सार्थ मारुती स्तोत्र"
+      }
+     ]
+    }
+    </script>
+
+    <style>
+        .stotra-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* नेटके आणि कॉम्पॅक्ट श्लोक कार्ड */
+        .shloka-card-16-9 {
+            position: relative;
+            background: linear-gradient(145deg, #181818 0%, #121212 100%);
+            border: 1px solid #282828;
+            border-left: 4px solid #ffb703;
+            border-radius: 10px;
+            padding: 35px 20px 35px 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-sizing: border-box;
+        }
+
+        /* टॉप लेफ्ट - स्तोत्राचे नाव बॅज */
+        .card-stotra-title {
+            position: absolute;
+            top: 10px;
+            left: 15px;
+            font-size: 12px;
+            color: #ffb703;
+            font-weight: 600;
+            background: rgba(255, 183, 3, 0.1);
+            border: 1px solid rgba(255, 183, 3, 0.3);
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* टॉप राईट - ३ टूल बटन्स */
+        .card-top-tools {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .tool-btn {
+            background: rgba(255, 183, 3, 0.1);
+            border: 1px solid rgba(255, 183, 3, 0.3);
+            color: #ffb703;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .tool-btn:hover {
+            background: #ffb703;
+            color: #000000;
+            transform: scale(1.1);
+        }
+
+        /* बॉटम राईट - वॉटरमार्क */
+        .card-watermark {
+            position: absolute;
+            bottom: 10px;
+            right: 15px;
+            font-size: 12px;
+            color: #ffb703;
+            font-weight: 600;
+            opacity: 0.85;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .shloka-text {
+            font-family: 'Rozha One', 'Poppins', serif;
+            font-size: 18px;
+            color: #ffb703;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .meaning-box {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid #222222;
+            border-radius: 6px;
+            padding: 8px 15px;
+            color: #cccccc;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .meaning-title {
+            color: #ff9f1c;
+            font-weight: 600;
+            margin-bottom: 3px;
+            font-size: 13px;
+        }
+
+        .stotra-intro {
+            background: #181818;
+            border: 1px solid #282828;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 35px;
+            color: #cccccc;
+            line-height: 1.8;
+        }
+
+        /* मोबाईल रिस्पॉन्सिव्ह */
+        @media (max-width: 650px) {
+            .shloka-card-16-9 {
+                padding: 40px 12px 35px 12px;
+            }
+            .card-stotra-title {
+                font-size: 10px;
+                padding: 2px 6px;
+            }
+            .tool-btn {
+                width: 26px;
+                height: 26px;
+                font-size: 10px;
+            }
+            .shloka-text {
+                font-size: 16px;
+            }
+            .meaning-box {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- टॉप बार -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <span class="top-bar-text"><i class="fa-solid fa-om animate-spin"></i> ॥ श्री हनुमते नमः - नित्य उपासना ॥</span>
+            <span class="top-bar-text"><i class="fa-solid fa-hands-praying"></i> संतवाणी डिजिटल लायब्ररी २०२६</span>
+        </div>
+    </div>
+
+    <!-- मुख्य मेनू बार -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">✨</span> संत<span class="logo-highlight">वाणी</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html">मुख्य पृष्ठ</a></li>
+                <li><a href="../../sant-sahitya.html">संत साहित्य</a></li>
+                <li><a href="../../vangmay-sangrah.html">वाङ्मय संग्रह</a></li>
+                <li><a href="../../sarth-haripath.html">हरिपाठ</a></li>
+                <li><a href="../../nitya-pathan-stotra.html" class="active">नित्य पठण स्तोत्रे</a></li>
+                <li><a href="../../granth-sampada.html">ग्रंथ संपदा</a></li>
+                <li><a href="../blog/ekadashi-vrat.html">सर्व एकादशी</a></li>
+                <!-- ड्रॉपडाऊन मेनू -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">इतर <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../san-utsav.html">सन आणि उत्सव</a></li>
+                        <li><a href="../artisangrah/artya-sangrah.html">आरत्या संग्रह</a></li>
+                        <li><a href="../../santache-prasang.html">संतांचे प्रसंग</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-cta">
+                <a href="../../nitya-pathan-stotra.html" class="btn-nav">सर्व स्तोत्रे</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- हिरो सेक्शन -->
+    <header id="home" class="hero-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <div class="gold-badge">🚩 नित्य उपासना स्तोत्र</div>
+            <h1 class="hero-title">सार्थ <span class="text-gradient">मारुती स्तोत्र</span> (भीमरूपी)</h1>
+            <p class="hero-tagline">समर्थ रामदास स्वामी रचित अत्यंत शक्तिशाली 'भीमरूपी महारुद्रा' मारुती स्तोत्र मराठी अर्थासह.</p>
+            <div class="hero-buttons">
+                <a href="#stotra-content" class="btn-premium">पठण सुरू करा</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- मुख्य स्तोत्र मजकूर सेक्शन -->
+    <main id="stotra-content" class="story-main-section" style="background-color: #121212; color: #e0e0e0; padding: 50px 0; font-family: 'Poppins', sans-serif;">
+        <div class="stotra-container">
+
+            <!-- प्रस्तावना / माहात्म्य -->
+            <div class="stotra-intro">
+                <h3 style="font-family: 'Rozha One', serif; color: #ffb703; font-size: 22px; margin-bottom: 12px; text-align: center;">॥ श्री मारुती स्तोत्र माहात्म्य ॥</h3>
+                <p>
+                    'भीमरूपी महारुद्रा' हे मारुती स्तोत्र समर्थ रामदास स्वामींनी रचलेले अत्यंत ओजस्वी आणि बलवर्धक स्तोत्र आहे. दररोज सकाळी किंवा संध्याकाळी या स्तोत्राचे पठण केल्याने मनात भीती राहत नाही, शारीरिक व मानसिक शक्ती वाढते आणि सर्व संकटांतून संरक्षण लाभते.
+                </p>
+            </div>
+
+            <!-- संपूर्ण स्तोत्र आणि अर्थ (कॉम्पॅक्ट HD Cards) -->
+            <div id="stotra-text-body">
+
+                <!-- श्लोक १ -->
+                <div class="shloka-card-16-9" id="card-1">
+                    <div class="card-stotra-title">🚩 मारुती स्तोत्र (भीमरूपी)</div>
+                    <div class="card-top-tools">
+                        <button class="tool-btn" onclick="copyCardText('card-1')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+                        <button class="tool-btn" onclick="downloadCardImage('card-1', 'maruti-stotra-shloka-1')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+                        <button class="tool-btn" onclick="shareCardText('card-1')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                    <div class="shloka-text">
+                        भीमरूपी महारुद्रा वज्रहनुमान मारुती ।<br>
+                        वन्नारी अंंजनीसूता रामदूता प्रभंजना ॥ १ ॥
+                    </div>
+                    <div class="meaning-box">
+                        <div class="meaning-title">मराठी अर्थ:</div>
+                        प्रचंड विशाल रूप असलेले, महारुद्राचा अवतार, वज्रासारखे मजबूत हनुवटी असलेले, अग्नीसमान तेजस्वी, अंजनीपुत्र, रामदूत आणि वायूचे पुत्र अशा मारुतीरायांना माझा नमस्कार असो.
+                    </div>
+                    <div class="card-watermark">✨ santvani.co.in</div>
+                </div>
+
+                <!-- श्लोक २ -->
+                <div class="shloka-card-16-9" id="card-2">
+                    <div class="card-stotra-title">🚩 मारुती स्तोत्र (भीमरूपी)</div>
+                    <div class="card-top-tools">
+                        <button class="tool-btn" onclick="copyCardText('card-2')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+                        <button class="tool-btn" onclick="downloadCardImage('card-2', 'maruti-stotra-shloka-2')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+                        <button class="tool-btn" onclick="shareCardText('card-2')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                    <div class="shloka-text">
+                        महाबळी प्राणदाता साtextा सुरवरानदा ।<br>
+                        लोकांत उड्डाण धावे अत्यंत नेत्रीं जाज्वळा ॥ २ ॥
+                    </div>
+                    <div class="meaning-box">
+                        <div class="meaning-title">मराठी अर्थ:</div>
+                        अत्यंत बलवान, संजीवनी आणून प्राणांचे रक्षण करणारे, देवांना आनंद देणारे आणि तिन्ही लोकांत अत्यंत वेगाने उड्डाण करणारे; ज्यांचे डोळे अत्यंत जाज्वल्य आणि तेजस्वी आहेत.
+                    </div>
+                    <div class="card-watermark">✨ santvani.co.in</div>
+                </div>
+
+                <!-- श्लोक ३ -->
+                <div class="shloka-card-16-9" id="card-3">
+                    <div class="card-stotra-title">🚩 मारुती स्तोत्र (भीमरूपी)</div>
+                    <div class="card-top-tools">
+                        <button class="tool-btn" onclick="copyCardText('card-3')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+                        <button class="tool-btn" onclick="downloadCardImage('card-3', 'maruti-stotra-shloka-3')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+                        <button class="tool-btn" onclick="shareCardText('card-3')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                    <div class="shloka-text">
+                        कांसोटी कासली पीतपतांबर साजिरा ।<br>
+                        कुंडलें श्रीमुखीं कांती सर्वांगीं सुंदर शेेंदुरा ॥ ३ ॥
+                    </div>
+                    <div class="meaning-box">
+                        <div class="meaning-title">मराठी अर्थ:</div>
+                        ज्यांनी कमरेला कसून पीतांबर नेसला आहे, कानात सुंदर कुंडले शोभत आहेत आणि ज्यांचे मुख अत्यंत कांतिमान व संपूर्ण शरीराला सिंदूर लावल्यामुळे अत्यंत सुंदर दिसत आहे.
+                    </div>
+                    <div class="card-watermark">✨ santvani.co.in</div>
+                </div>
+
+                <!-- श्लोक ४ -->
+                <div class="shloka-card-16-9" id="card-4">
+                    <div class="card-stotra-title">🚩 मारुती स्तोत्र (भीमरूपी)</div>
+                    <div class="card-top-tools">
+                        <button class="tool-btn" onclick="copyCardText('card-4')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+                        <button class="tool-btn" onclick="downloadCardImage('card-4', 'maruti-stotra-shloka-4')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+                        <button class="tool-btn" onclick="shareCardText('card-4')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                    <div class="shloka-text">
+                        पदोन्नतीं उड्डाणीं गुंफिला माथिला लंगोटी ।<br>
+                        नाभीसरशीं उरली लंबोटी लंबमान ती ॥ ४ ॥
+                    </div>
+                    <div class="meaning-box">
+                        <div class="meaning-title">मराठी अर्थ:</div>
+                        ज्यांनी उड्डाण करण्यासाठी पाय उंचावले आहेत, कौपीन (लंगोटी) घट्ट बांधली आहे आणि तिच्या वस्त्रछटा नाभीपासून खाली रुळत आहेत.
+                    </div>
+                    <div class="card-watermark">✨ santvani.co.in</div>
+                </div>
+
+                <!-- श्लोक ५ -->
+                <div class="shloka-card-16-9" id="card-5">
+                    <div class="card-stotra-title">🚩 मारुती स्तोत्र (भीमरूपी)</div>
+                    <div class="card-top-tools">
+                        <button class="tool-btn" onclick="copyCardText('card-5')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+                        <button class="tool-btn" onclick="downloadCardImage('card-5', 'maruti-stotra-shloka-5')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+                        <button class="tool-btn" onclick="shareCardText('card-5')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                    <div class="shloka-text">
+                        हरीद्रोणी माथां वाहे गदा हे मूढळाची ती ।<br>
+                        हाक देतां कांपती भुवनत्रयीं सर्वही भुतें ॥ ५ ॥
+                    </div>
+                    <div class="meaning-box">
+                        <div class="meaning-title">मराठी अर्थ:</div>
+                        ज्यांनी डोक्यावर हिरवी द्रोणागिरी टेकडी उचलली आहे, हातात लोखंडी मुसळासारखी जड गदा धरली आहे; ज्यांच्या एका हाकेने तिन्ही लोक आणि सर्व भूत-पिशाच्च थरथर कापतात.
+                    </div>
+                    <div class="card-watermark">✨ santvani.co.in</div>
+                </div>
+
+                <!-- श्लोक ६ -->
+                <div class="shloka-card-16-9" id="card-6">
+                    <div class="card-stotra-title">🚩 मारुती स्तोत्र (भीमरूपी)</div>
+                    <div class="card-top-tools">
+                        <button class="tool-btn" onclick="copyCardText('card-6')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+                        <button class="tool-btn" onclick="downloadCardImage('card-6', 'maruti-stotra-shloka-6')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+                        <button class="tool-btn" onclick="shareCardText('card-6')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                    <div class="shloka-text">
+                        पुच्छ तें मुरडिले माथां किरीटी कुंडलें प्रभा ।<br>
+                        सुवर्णकांती उजळे जैसा भानू सहस्त्रधा ॥ ६ ॥
+                    </div>
+                    <div class="meaning-box">
+                        <div class="meaning-title">मराठी अर्थ:</div>
+                        ज्यांनी आपली शेपटी वळवून डोक्यावर धरली आहे, डोक्यावरील मुकुट आणि कानातील कुंडलांची प्रभा तळपत आहे; ज्यांची सोन्यासारखी कांती हजार सूर्यांच्या प्रकाशासारखी उजळून निघते.
+                    </div>
+                    <div class="card-watermark">✨ santvani.co.in</div>
+                </div>
+
+                <!-- श्लोक ७ -->
+                <div class="shloka-card-16-9" id="card-7">
+                    <div class="card-stotra-title">🚩 मारुती स्तोत्र (भीमरूपी)</div>
+                    <div class="card-top-tools">
+                        <button class="tool-btn" onclick="copyCardText('card-7')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+                        <button class="tool-btn" onclick="downloadCardImage('card-7', 'maruti-stotra-shloka-7')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+                        <button class="tool-btn" onclick="shareCardText('card-7')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                    <div class="shloka-text">
+                        रामरूपांतरें पाहातां रामरूपीं लीन जाहला ।<br>
+                        काय वानूं एकांग वीरा ऐसा द्वाड नाहीं दुसरा ॥ ७ ॥
+                    </div>
+                    <div class="meaning-box">
+                        <div class="meaning-title">मराठी अर्थ:</div>
+                        श्रीरामांचे रूप पाहाताच जे रामरूपात पूर्णपणे तल्लीन झाले; अशा अद्वितीय आणि अत्यंत पराक्रमी वीराचे वर्णन काय करावे? यांच्यासारखा शूरवीर दुसरा कोणीही नाही.
+                    </div>
+                    <div class="card-watermark">✨ santvani.co.in</div>
+                </div>
+
+                <!-- श्लोक ८ -->
+                <div class="shloka-card-16-9" id="card-8">
+                    <div class="card-stotra-title">🚩 मारुती स्तोत्र (भीमरूपी)</div>
+                    <div class="card-top-tools">
+                        <button class="tool-btn" onclick="copyCardText('card-8')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+                        <button class="tool-btn" onclick="downloadCardImage('card-8', 'maruti-stotra-shloka-8')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+                        <button class="tool-btn" onclick="shareCardText('card-8')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                    <div class="shloka-text">
+                        अंजनीगर्भींचा गोळा तो हा सूर्य ग्रासिला ।<br>
+                        जगासी भीति उपजली राहु-केतु धांकले ॥ ८ ॥
+                    </div>
+                    <div class="meaning-box">
+                        <div class="meaning-title">मराठी अर्थ:</div>
+                        अंजनीच्या गर्भातून जन्मलेल्या या बाळ मारुतीने लहानपणीच सूर्याला फळ समजून गिळण्यासाठी धाव घेतली, ज्यामुळे संपूर्ण जगात भीती पसरली आणि राहू-केतूही भयभीत झाले.
+                    </div>
+                    <div class="card-watermark">✨ santvani.co.in</div>
+                </div>
+
+                <!-- श्लोक ९ -->
+                <div class="shloka-card-16-9" id="card-9">
+                    <div class="card-stotra-title">🚩 मारुती स्तोत्र (भीमरूपी)</div>
+                    <div class="card-top-tools">
+                        <button class="tool-btn" onclick="copyCardText('card-9')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+                        <button class="tool-btn" onclick="downloadCardImage('card-9', 'maruti-stotra-shloka-9')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+                        <button class="tool-btn" onclick="shareCardText('card-9')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                    <div class="shloka-text">
+                        नटनाट्यकळेचा तो महारुद्र जाहला ।<br>
+                        भयें धांवती देव सर्वही लोक धांकले ॥ ९ ॥
+                    </div>
+                    <div class="meaning-box">
+                        <div class="meaning-title">मराठी अर्थ:</div>
+                        नट-नाट्य कलेत प्रवीण असलेला तो बाल-हनुमान महारुद्राच्या भीषण रूपात प्रकट झाला, तेव्हा ते भयानक दृश्य पाहून सर्व देव व लोक भीतीने पळू लागले.
+                    </div>
+                    <div class="card-watermark">✨ santvani.co.in</div>
+                </div>
+
+                <!-- श्लोक १० -->
+                <div class="shloka-card-16-9" id="card-10">
+                    <div class="card-stotra-title">🚩 मारुती स्तोत्र (भीमरूपी)</div>
+                    <div class="card-top-tools">
+                        <button class="tool-btn" onclick="copyCardText('card-10')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+                        <button class="tool-btn" onclick="downloadCardImage('card-10', 'maruti-stotra-shloka-10')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+                        <button class="tool-btn" onclick="shareCardText('card-10')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                    <div class="shloka-text">
+                        ब्रह्मांड भेदिलें तेणें वज्रपुच्छें सांभाळिलें ।<br>
+                        लंकापुर जाळीलें तेणें भुवनत्रयीं हाक दुमदुमली ॥ १० ॥
+                    </div>
+                    <div class="meaning-box">
+                        <div class="meaning-title">मराठी अर्थ:</div>
+                        ज्यांनी आपल्या वज्रासारख्या शेपटीने ब्रह्मांडाला वेढले आणि तिचे रक्षण केले, ज्यांनी संपूर्ण लंका दहन केली; ज्यांच्या गर्जनेची हाक तिन्ही लोकांत दुमदुमली.
+                    </div>
+                    <div class="card-watermark">✨ santvani.co.in</div>
+                </div>
+
+                <!-- श्लोक ११ -->
+                <div class="shloka-card-16-9" id="card-11">
+                    <div class="card-stotra-title">🚩 मारुती स्तोत्र (भीमरूपी)</div>
+                    <div class="card-top-tools">
+                        <button class="tool-btn" onclick="copyCardText('card-11')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+                        <button class="tool-btn" onclick="downloadCardImage('card-11', 'maruti-stotra-shloka-11')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+                        <button class="tool-btn" onclick="shareCardText('card-11')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                    <div class="shloka-text">
+                        येथूनी उड्डाण केलें सिंधुपारीं पहुंंचले ।<br>
+                        तेथें सीता शुद्धि केली रामदूता मनीं ध्याती ॥ ११ ॥
+                    </div>
+                    <div class="meaning-box">
+                        <div class="meaning-title">मराठी अर्थ:</div>
+                        ज्यांनी इथून उड्डाण करून थेट अथांग समुद्राच्या पलीकडे लंकेत प्रवेश केला आणि सीतामातेचा शोध लावला; अशा रामदूतांचे भक्त आपल्या मनात सदैव ध्यान करतात.
+                    </div>
+                    <div class="card-watermark">✨ santvani.co.in</div>
+                </div>
+
+                <!-- श्लोक १२ -->
+                <div class="shloka-card-16-9" id="card-12">
+                    <div class="card-stotra-title">🚩 मारुती स्तोत्र (भीमरूपी)</div>
+                    <div class="card-top-tools">
+                        <button class="tool-btn" onclick="copyCardText('card-12')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+                        <button class="tool-btn" onclick="downloadCardImage('card-12', 'maruti-stotra-shloka-12')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+                        <button class="tool-btn" onclick="shareCardText('card-12')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                    <div class="shloka-text">
+                        भूत प्रेत समंधादी भूतबाधा विनाशना ।<br>
+                        डाकिनी शाकिनी साक्षात् जाळोनी भस्म करीती ॥ १२ ॥
+                    </div>
+                    <div class="meaning-box">
+                        <div class="meaning-title">मराठी अर्थ:</div>
+                        मारुतीरायांचे नाव घेताच भूत, प्रेत, समंध आणि सर्व प्रकारच्या भूतबाधांचा नाश होतो; डाकिनी, शाकिनी यांसारख्या वाईट शक्ती मारुतीरायांच्या तेजाने जळून भस्म होतात.
+                    </div>
+                    <div class="card-watermark">✨ santvani.co.in</div>
+                </div>
+
+                <!-- श्लोक १३ -->
+                <div class="shloka-card-16-9" id="card-13">
+                    <div class="card-stotra-title">🚩 मारुती स्तोत्र (भीमरूपी)</div>
+                    <div class="card-top-tools">
+                        <button class="tool-btn" onclick="copyCardText('card-13')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+                        <button class="tool-btn" onclick="downloadCardImage('card-13', 'maruti-stotra-shloka-13')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+                        <button class="tool-btn" onclick="shareCardText('card-13')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                    <div class="shloka-text">
+                        रामाज्ञेविण येथें तूं कां रे बैसलासी सांग पां ।<br>
+                        भीमरोपा महारुद्रा रामदूता प्रभंजना ॥ १३ ॥
+                    </div>
+                    <div class="meaning-box">
+                        <div class="meaning-title">मराठी अर्थ:</div>
+                        समर्थ रामदास स्वामी म्हणतात, "हे भयंकर रूप असणाऱ्या महारुद्रा, रामदूता मारुतीराया! श्रीरामांच्या आज्ञेशिवाय तू येथे असा का शांत बसला आहेस? उठ आणि माझ्या संकटांचे हरण कर!"
+                    </div>
+                    <div class="card-watermark">✨ santvani.co.in</div>
+                </div>
+
+                <!-- श्लोक १४ -->
+                <div class="shloka-card-16-9" id="card-14">
+                    <div class="card-stotra-title">🚩 मारुती स्तोत्र (भीमरूपी)</div>
+                    <div class="card-top-tools">
+                        <button class="tool-btn" onclick="copyCardText('card-14')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+                        <button class="tool-btn" onclick="downloadCardImage('card-14', 'maruti-stotra-shloka-14')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+                        <button class="tool-btn" onclick="shareCardText('card-14')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+                    </div>
+                    <div class="shloka-text">
+                        हे मारुती महाबळी सर्वही संकटीं सोडीं ।<br>
+                        आणि या संकटांतूनी रामदासासी सोडीं ॥ १४ ॥<br><br>
+                        ॥ इति श्री समर्थ रामदासकृतं मारुती स्तोत्रं संपूर्णम् ॥
+                    </div>
+                    <div class="meaning-box">
+                        <div class="meaning-title">मराठी अर्थ:</div>
+                        हे महाबलवान मारुतीराया! तू सर्व संकटांतून सोडवणारा आहेस. या संसारातील संकटांतून तुझ्या या रामदासाची (भक्ताची) लवकरात लवकर मुक्तता कर.<br><br>
+                        अशा प्रकारे समर्थ रामदास स्वामी रचित मारुती स्तोत्र संपूर्ण झाले.
+                    </div>
+                    <div class="card-watermark">✨ santvani.co.in</div>
+                </div>
+
+            </div>
+            <!-- ======================================================== -->
+
+            <!-- नेव्हिगेशन व शेअर -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #282828; flex-wrap: wrap; gap: 15px;">
+                <a href="../../nitya-pathan-stotra.html" class="btn-outline" style="font-size: 14px; padding: 10px 20px;">❮ सर्व नित्य पठण स्तोत्रे</a>
+                <a href="#home" class="btn-premium" style="font-size: 14px; padding: 10px 20px;">वर जा ⬆</a>
+            </div>
+
+            <!-- भक्तांसाठी संदेश -->
+            <div style="background: #181818; border: 1px solid rgba(255,183,3,.3); border-radius: 14px; padding: 25px; margin-top: 35px; text-align: center;">
+                <h3 style="font-family: 'Rozha One', serif; color: #ffb703; margin-bottom: 12px; font-size: 22px;">🚩 जय श्री राम! जय हनुमान!</h3>
+                <p style="margin-bottom: 12px; line-height: 1.8; color: #cccccc;">
+                    हे पावन सार्थ मारुती स्तोत्र इतर बजरंगबली भक्तांसोबत नक्की शेअर करा.
+                </p>
+                <p style="margin: 0; font-weight: 600; color: #ffffff; font-size: 18px;">
+                    ॥ श्री समर्थ रामदास स्वामी चरणी अर्पणमस्तु ॥
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- फुटर लेआउट -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand-box">
+                <h3 class="footer-logo">✨ संतवाणी</h3>
+                <p class="footer-about">मराठी संतांच्या समृद्ध विचारांचा आणि साहित्याचा डिजिटल वारसा पुढील पिढीपर्यंत पोहोचवण्याचा एक नम्र प्रयत्न.</p>
+            </div>
+            
+            <div class="footer-links-box">
+                <h4>महत्त्वाचे दुवे</h4>
+                <ul>
+                    <li><a href="../../about.html">आमच्याबद्दल (About Us)</a></li>
+                    <li><a href="../../contact.html">संपर्क (Contact Us)</a></li>
+                    <li><a href="../../privacy-policy.html">गोपनीयता धोरण (Privacy Policy)</a></li>
+                    <li><a href="../../terms.html">नियम व अटी (Terms & Conditions)</a></li>
+                    <li><a href="../../disclaimer.html">अस्वीकरण (Disclaimer)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-box">
+                <h4>त्वरित लिंक्स</h4>
+                <ul>
+                    <li><a href="../../index.html#home">मुख्य पृष्ठ</a></li>
+                    <li><a href="../../sant-sahitya.html">संत साहित्य</a></li>
+                    <li><a href="../../vangmay-sangrah.html">वाङ्मय संग्रह</a></li>
+                    <li><a href="../../sarth-haripath.html">सार्थ हरिपाठ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright-text">© २०२६ संतवाणी लायब्ररी. सर्व हक्क सुरक्षित. | रचना वारकरी संप्रदाय चरणी समर्पित.</p>
+        </div>
+    </footer>
+
+    <script src="../../menu.js"></script>
+
+    <!-- JavaScript Actions (Copy, Download Image & WhatsApp Share) -->
+    <script>
+        // १. टेक्स्ट कॉपी करणे
+        function copyCardText(cardId) {
+            const card = document.getElementById(cardId);
+            const shloka = card.querySelector('.shloka-text').innerText;
+            const meaning = card.querySelector('.meaning-box').innerText;
+            const fullText = "🚩 *श्री मारुती स्तोत्र (भीमरूपी)* 🚩\n\n" + shloka + "\n\n" + meaning + "\n\nवाचा: santvani.co.in";
+            
+            navigator.clipboard.writeText(fullText).then(() => {
+                alert("श्लोक व अर्थ कॉपी झाला आहे!");
+            });
+        }
+
+        // २. WhatsApp वर शेअर करणे
+        function shareCardText(cardId) {
+            const card = document.getElementById(cardId);
+            const shloka = card.querySelector('.shloka-text').innerText;
+            const meaning = card.querySelector('.meaning-box').innerText;
+            const fullText = "🚩 *सार्थ श्री मारुती स्तोत्र (भीमरूपी)* 🚩\n\n" + shloka + "\n\n" + meaning + "\n\nसविस्तर वाचा: https://santvani.co.in/pages/nitya-pathan-stotra/maruti-stotra.html";
+            
+            window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(fullText), '_blank');
+        }
+
+        // ३. इमेज बनवून डाउनलोड करणे (HTML2Canvas)
+        function downloadCardImage(cardId, fileName) {
+            const card = document.getElementById(cardId);
+            const tools = card.querySelector('.card-top-tools');
+            
+            // डाउनलोड करताना बटन्स लपवणे
+            tools.style.display = 'none';
+
+            html2canvas(card, {
+                scale: 2, // हाय क्वालिटी HD इमेज
+                backgroundColor: '#121212'
+            }).then(canvas => {
+                let link = document.createElement('a');
+                link.download = fileName + '.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+                
+                // बटन्स पुन्हा दाखवणे
+                tools.style.display = 'flex';
+            });
+        }
+    </script>
+</body>
+</html>
