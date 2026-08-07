@@ -64,24 +64,23 @@
             padding: 0 20px;
         }
 
-        /* 16:9 HD श्लोक कार्ड डिझाईन */
-        .shloka-card-16-9 {
-            position: relative;
-            background: linear-gradient(145deg, #181818 0%, #121212 100%);
-            border: 1px solid #282828;
-            border-left: 5px solid #ffb703;
-            border-radius: 12px;
-            padding: 40px 25px 45px 25px;
-            margin-bottom: 30px;
-            aspect-ratio: 16 / 9;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            overflow: hidden;
-            box-sizing: border-box;
-        }
+        /* नेटके आणि कॉम्पॅक्ट श्लोक कार्ड */
+.shloka-card-16-9 {
+    position: relative;
+    background: linear-gradient(145deg, #181818 0%, #121212 100%);
+    border: 1px solid #282828;
+    border-left: 4px solid #ffb703;
+    border-radius: 10px;
+    padding: 35px 20px 35px 20px; /* वर-खाली कॉम्पॅक्ट मोकळी जागा */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}
+         
 
         /* टॉप लेफ्ट - स्तोत्राचे नाव बॅज */
         .card-stotra-title {
@@ -144,27 +143,27 @@
         }
 
         .shloka-text {
-            font-family: 'Rozha One', 'Poppins', serif;
-            font-size: 20px;
-            color: #ffb703;
-            line-height: 1.7;
-            margin-bottom: 12px;
-            text-align: center;
-            width: 100%;
-        }
+    font-family: 'Rozha One', 'Poppins', serif;
+    font-size: 18px; /* फोंट थोडा कॉम्पॅक्ट केला */
+    color: #ffb703;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+}
 
         .meaning-box {
-            background: rgba(0, 0, 0, 0.4);
-            border: 1px solid #222222;
-            border-radius: 8px;
-            padding: 10px 18px;
-            color: #dddddd;
-            font-size: 14px;
-            line-height: 1.6;
-            text-align: center;
-            width: 100%;
-            box-sizing: border-box;
-        }
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid #222222;
+    border-radius: 6px;
+    padding: 8px 15px;
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
 
         .meaning-title {
             color: #ff9f1c;
