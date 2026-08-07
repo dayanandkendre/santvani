@@ -58,169 +58,173 @@
     </script>
 
     <style>
-        .stotra-container {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+    .stotra-container {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
 
-        /* नेटके आणि परफेक्ट स्पेसिंग असलेले श्लोक कार्ड */
+    /* नेटके आणि परफेक्ट स्पेसिंग असलेले श्लोक कार्ड */
+    .shloka-card-16-9 {
+        position: relative;
+        background: linear-gradient(145deg, #181818 0%, #121212 100%);
+        border: 1px solid #282828;
+        border-left: 4px solid #ffb703;
+        border-radius: 10px;
+        padding: 50px 20px 35px 20px; /* टूल बटन्स व वॉटरमार्कसाठी पुरेशी जागा */
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        box-sizing: border-box;
+    }
+
+    /* टॉप लेफ्ट - स्तोत्राचे नाव बॅज */
+    .card-stotra-title {
+        position: absolute;
+        top: 12px;
+        left: 15px;
+        font-size: 12px;
+        color: #ffb703;
+        font-weight: 600;
+        background: rgba(255, 183, 3, 0.1);
+        border: 1px solid rgba(255, 183, 3, 0.3);
+        padding: 3px 10px;
+        border-radius: 15px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* टॉप राईट - ३ टूल बटन्स */
+    .card-top-tools {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        display: flex;
+        gap: 8px;
+        z-index: 10;
+    }
+
+    .tool-btn {
+        background: rgba(255, 183, 3, 0.1);
+        border: 1px solid rgba(255, 183, 3, 0.3);
+        color: #ffb703;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .tool-btn:hover {
+        background: #ffb703;
+        color: #000000;
+        transform: scale(1.1);
+    }
+
+    /* बॉटम राईट - स्पष्ट वॉटरमार्क */
+    .card-watermark {
+        position: absolute;
+        bottom: 8px;
+        right: 15px;
+        font-size: 11px;
+        color: #ffb703;
+        font-weight: 600;
+        opacity: 0.8;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 0.5px;
+    }
+
+    .shloka-text {
+        font-family: 'Poppins', 'Rozha One', 'Yatra One', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        color: #ffb703;
+        line-height: 1.8;
+        letter-spacing: 0.3px;
+        margin-bottom: 15px;
+        text-align: center;
+        width: 100%;
+        word-break: keep-all;
+    }
+
+    .meaning-box {
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid #222222;
+        border-radius: 6px;
+        padding: 10px 15px;
+        color: #cccccc;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .meaning-title {
+        color: #ff9f1c;
+        font-weight: 600;
+        margin-bottom: 4px;
+        font-size: 13px;
+    }
+
+    .stotra-intro {
+        background: #181818;
+        border: 1px solid #282828;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 35px;
+        color: #cccccc;
+        line-height: 1.8;
+    }
+
+    /* मोबाईल रिस्पॉन्सिव्ह (फिक्स: श्लोक आणि ॥ क्रमांक ओळीत बसवण्यासाठी) */
+    @media (max-width: 650px) {
         .shloka-card-16-9 {
-            position: relative;
-            background: linear-gradient(145deg, #181818 0%, #121212 100%);
-            border: 1px solid #282828;
-            border-left: 4px solid #ffb703;
-            border-radius: 10px;
-            padding: 50px 20px 35px 20px; /* टूल बटन्स व वॉटरमार्कसाठी पुरेशी जागा */
-            margin-bottom: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            box-sizing: border-box;
+            aspect-ratio: auto;
+            min-height: auto;
+            padding: 42px 6px 30px 6px; /* पॅडिंग कमी करून जास्तीत जास्त रुंदी मिळवली */
         }
-
-        /* टॉप लेफ्ट - स्तोत्राचे नाव बॅज */
         .card-stotra-title {
-            position: absolute;
-            top: 12px;
-            left: 15px;
-            font-size: 12px;
-            color: #ffb703;
-            font-weight: 600;
-            background: rgba(255, 183, 3, 0.1);
-            border: 1px solid rgba(255, 183, 3, 0.3);
-            padding: 3px 10px;
-            border-radius: 15px;
-            font-family: 'Poppins', sans-serif;
+            font-size: 10px;
+            padding: 2px 6px;
+            top: 10px;
+            left: 10px;
         }
-
-        /* टॉप राईट - ३ टूल बटन्स */
         .card-top-tools {
-            position: absolute;
-            top: 12px;
-            right: 15px;
-            display: flex;
-            gap: 8px;
-            z-index: 10;
+            top: 10px;
+            right: 10px;
+            gap: 6px;
         }
-
         .tool-btn {
-            background: rgba(255, 183, 3, 0.1);
-            border: 1px solid rgba(255, 183, 3, 0.3);
-            color: #ffb703;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            font-size: 12px;
-            transition: all 0.3s ease;
+            width: 26px;
+            height: 26px;
+            font-size: 10px;
         }
-
-        .tool-btn:hover {
-            background: #ffb703;
-            color: #000000;
-            transform: scale(1.1);
-        }
-
-        /* बॉटम राईट - स्पष्ट वॉटरमार्क */
-        .card-watermark {
-            position: absolute;
-            bottom: 8px;
-            right: 15px;
-            font-size: 11px;
-            color: #ffb703;
-            font-weight: 600;
-            opacity: 0.8;
-            font-family: 'Poppins', sans-serif;
-            letter-spacing: 0.5px;
-        }
-
         .shloka-text {
-            font-family: 'Rozha One', 'Yatra One', serif;
-            font-size: 19px;
-            color: #ffb703;
-            line-height: 1.8;
-            letter-spacing: 0.5px;
-            margin-bottom: 15px;
-            text-align: center;
-            width: 100%;
-        }
-
-        .meaning-box {
-            background: rgba(0, 0, 0, 0.3);
-            border: 1px solid #222222;
-            border-radius: 6px;
-            padding: 10px 15px;
-            color: #cccccc;
-            font-size: 14px;
-            line-height: 1.6;
-            text-align: center;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .meaning-title {
-            color: #ff9f1c;
+            font-size: 13.5px !important; /* अचूक फॉन्ट साईझ जेणेकरून पूर्ण ओळ आणि ॥ १३ ॥ एकाच ओळीत बसेल */
             font-weight: 600;
-            margin-bottom: 4px;
-            font-size: 13px;
+            line-height: 1.6;
+            letter-spacing: 0px;
+            margin-bottom: 12px;
+            padding: 0 4px;
         }
-
-        .stotra-intro {
-            background: #181818;
-            border: 1px solid #282828;
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 35px;
-            color: #cccccc;
-            line-height: 1.8;
+        .meaning-box {
+            font-size: 12.5px;
+            padding: 8px 8px;
         }
-
-        /* मोबाईल रिस्पॉन्सिव्ह (सुधारित लेआउट) */
-        @media (max-width: 650px) {
-            .shloka-card-16-9 {
-                aspect-ratio: auto;
-                min-height: 280px;
-                padding: 42px 10px 32px 10px; /* बाजूची पॅडिंग कमी केली जेणेकरून मजकूर कापला जाणार नाही */
-            }
-            .card-stotra-title {
-                font-size: 10px;
-                padding: 2px 6px;
-                top: 10px;
-                left: 10px;
-            }
-            .card-top-tools {
-                top: 10px;
-                right: 10px;
-                gap: 6px;
-            }
-            .tool-btn {
-                width: 26px;
-                height: 26px;
-                font-size: 10px;
-            }
-            .shloka-text {
-                font-size: 15px; /* मोबाईल स्क्रीनवर श्लोक तुटू नये म्हणून फॉन्ट साईझ १५px केली */
-                line-height: 1.7;
-                letter-spacing: 0.4px;
-                margin-bottom: 12px;
-            }
-            .meaning-box {
-                font-size: 13px;
-                padding: 8px 10px;
-            }
-            .card-watermark {
-                font-size: 10px;
-                bottom: 6px;
-                right: 12px;
-            }
+        .card-watermark {
+            font-size: 10px;
+            bottom: 6px;
+            right: 10px;
         }
-    </style>
+    }
+</style>
 </head>
 <body>
 
