@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico">
+    
+    <!-- ================= SEO Meta Tags ================= -->
+    <title>सार्थ श्री हनुमान चालीसा - संपूर्ण चौपाई व मराठी अर्थासह | नित्य पठण | संतवाणी</title>
+    <meta name="description" content="गोस्वामी तुलसीदास रचित श्री हनुमान चालीसा संपूर्ण दोहा, ४० चौपाया आणि सोप्या मराठी अर्थासह नित्य पठणासाठी. हनुमान चालीसा इमेज कार्ड डाउनलोड करा.">
+    <meta name="keywords" content="हनुमान चालीसा, सार्थ हनुमान चालीसा, Hanuman Chalisa Marathi, हनुमान चालीसा मराठी अर्थ, तुलसीदास, नित्य पठण स्तोत्रे, संतवाणी">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://santvani.co.in/pages/nitya-pathan-stotra/hanuman-chalisa.html">
+
+    <!-- Open Graph (Facebook, Social Media) -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="सार्थ श्री हनुमान चालीसा - मराठी अर्थासह | संतवाणी">
+    <meta property="og:description" content="गोस्वामी तुलसीदास रचित श्री हनुमान चालीसा संपूर्ण दोहा व ४० चौपाया सोप्या मराठी अर्थासह वाचा.">
+    <meta property="og:image" content="https://santvani.co.in/images/stotra/hanuman-chalisa.webp">
+    <meta property="og:url" content="https://santvani.co.in/pages/nitya-pathan-stotra/hanuman-chalisa.html">
+    <meta property="og:site_name" content="संतवाणी डिजिटल लायब्ररी">
+
+    <!-- Fonts & CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Yatra+One&family=Poppins:wght@300;400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../style.css">
+
+    <!-- HTML2Canvas Library for Image Download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+     "@context":"https://schema.org",
+     "@type":"BreadcrumbList",
+     "itemListElement":[
+      {
+       "@type":"ListItem",
+       "position":1,
+       "name":"मुख्यपृष्ठ",
+       "item":"https://santvani.co.in/"
+      },
+      {
+       "@type":"ListItem",
+       "position":2,
+       "name":"नित्य पठण स्तोत्रे",
+       "item":"https://santvani.co.in/nitya-pathan-stotra.html"
+      },
+      {
+       "@type":"ListItem",
+       "position":3,
+       "name":"सार्थ श्री हनुमान चालीसा"
+      }
+     ]
+    }
+    </script>
+
+    <style>
+    .stotra-container {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* श्लोक कार्ड बेस डिझाईन */
+    .shloka-card-16-9 {
+        position: relative;
+        background: linear-gradient(145deg, #181818 0%, #121212 100%);
+        border: 1px solid #282828;
+        border-left: 4px solid #ffb703;
+        border-radius: 10px;
+        padding: 50px 20px 35px 20px; /* टूल बटन्स व वॉटरमार्कसाठी मोकळी जागा */
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        box-sizing: border-box;
+    }
+
+    /* टॉप लेफ्ट - टायटल बॅज */
+    .card-stotra-title {
+        position: absolute;
+        top: 12px;
+        left: 15px;
+        font-size: 12px;
+        color: #ffb703;
+        font-weight: 600;
+        background: rgba(255, 183, 3, 0.1);
+        border: 1px solid rgba(255, 183, 3, 0.3);
+        padding: 3px 10px;
+        border-radius: 15px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* टॉप राईट - ३ टूल बटन्स */
+    .card-top-tools {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        display: flex;
+        gap: 8px;
+        z-index: 10;
+    }
+
+    .tool-btn {
+        background: rgba(255, 183, 3, 0.1);
+        border: 1px solid rgba(255, 183, 3, 0.3);
+        color: #ffb703;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .tool-btn:hover {
+        background: #ffb703;
+        color: #000000;
+        transform: scale(1.1);
+    }
+
+    /* बॉटम राईट - वॉटरमार्क */
+    .card-watermark {
+        position: absolute;
+        bottom: 8px;
+        right: 15px;
+        font-size: 11px;
+        color: #ffb703;
+        font-weight: 600;
+        opacity: 0.8;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 0.5px;
+    }
+
+    /* श्लोक/चौपाई टेक्स्ट */
+    .shloka-text {
+        font-family: 'Poppins', 'Rozha One', 'Yatra One', sans-serif;
+        font-size: 17.5px;
+        font-weight: 600;
+        color: #ffb703;
+        line-height: 1.7;
+        margin-bottom: 15px;
+        text-align: center;
+        width: 100%;
+        word-break: keep-all;
+    }
+
+    /* अर्थ बॉक्स */
+    .meaning-box {
+        background: rgba(0, 0, 0, 0.35);
+        border: 1px solid #222222;
+        border-radius: 6px;
+        padding: 10px 15px;
+        color: #cccccc;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .meaning-title {
+        color: #ff9f1c;
+        font-weight: 600;
+        margin-bottom: 4px;
+        font-size: 13px;
+    }
+
+    .stotra-intro {
+        background: #181818;
+        border: 1px solid #282828;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 35px;
+        color: #cccccc;
+        line-height: 1.8;
+    }
+
+    /* ==========================================
+       मोबाईल रिस्पॉन्सिव्ह (फिक्स: ओळ व ॥ क्रमांक न तुटण्यासाठी)
+       ========================================== */
+    @media (max-width: 650px) {
+        .shloka-card-16-9 {
+            padding: 42px 6px 30px 6px !important; /* पॅडिंग कमी करून पूर्ण रुंदी वापरली */
+        }
+
+        .card-stotra-title {
+            font-size: 10px;
+            padding: 2px 6px;
+            top: 10px;
+            left: 10px;
+        }
+
+        .card-top-tools {
+            top: 10px;
+            right: 10px;
+            gap: 6px;
+        }
+
+        .tool-btn {
+            width: 26px;
+            height: 26px;
+            font-size: 10px;
+        }
+
+        .shloka-text {
+            font-size: 12px !important; /* मोबाईल स्क्रीनवर ओळ आणि ॥ ०१ ॥ एकाच लाईनमध्ये बसवण्यासाठी */
+            font-weight: 600;
+            line-height: 1.65;
+            letter-spacing: -0.2px;
+            margin-bottom: 12px;
+            padding: 0 2px;
+        }
+
+        .meaning-box {
+            font-size: 12.5px;
+            padding: 8px 8px;
+        }
+
+        .card-watermark {
+            font-size: 10px;
+            bottom: 6px;
+            right: 10px;
+        }
+    }
+</style>
+    
+</head>
+<body>
+
+    <!-- टॉप बार -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <span class="top-bar-text"><i class="fa-solid fa-om animate-spin"></i> ॥ श्री हनुमते नमः - नित्य उपासना ॥</span>
+            <span class="top-bar-text"><i class="fa-solid fa-hands-praying"></i> संतवाणी डिजिटल लायब्ररी २०२६</span>
+        </div>
+    </div>
+
+    <!-- मुख्य मेनू बार -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">✨</span> संत<span class="logo-highlight">वाणी</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html">मुख्य पृष्ठ</a></li>
+                <li><a href="../../sant-sahitya.html">संत साहित्य</a></li>
+                <li><a href="../../vangmay-sangrah.html">वाङ्मय संग्रह</a></li>
+                <li><a href="../../sarth-haripath.html">हरिपाठ</a></li>
+                <li><a href="../../nitya-pathan-stotra.html" class="active">नित्य पठण स्तोत्रे</a></li>
+                <li><a href="../../granth-sampada.html">ग्रंथ संपदा</a></li>
+                <li><a href="../blog/ekadashi-vrat.html">सर्व एकादशी</a></li>
+                <!-- ड्रॉपडाऊन मेनू -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">इतर <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../san-utsav.html">सन आणि उत्सव</a></li>
+                        <li><a href="../artisangrah/artya-sangrah.html">आरत्या संग्रह</a></li>
+                        <li><a href="../../santache-prasang.html">संतांचे प्रसंग</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-cta">
+                <a href="../../nitya-pathan-stotra.html" class="btn-nav">सर्व स्तोत्रे</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- हिरो सेक्शन -->
+    <header id="home" class="hero-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="hero-content">
+            <div class="gold-badge">🚩 नित्य उपासना स्तोत्र</div>
+            <h1 class="hero-title">सार्थ <span class="text-gradient">श्री हनुमान चालीसा</span></h1>
+            <p class="hero-tagline">गोस्वामी तुलसीदास रचित अत्यंत शक्तिशाली व संकटमोचन श्री हनुमान चालीसा मराठी अर्थासह.</p>
+            <div class="hero-buttons">
+                <a href="#stotra-content" class="btn-premium">पठण सुरू करा</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- मुख्य स्तोत्र मजकूर सेक्शन -->
+    <main id="stotra-content" class="story-main-section" style="background-color: #121212; color: #e0e0e0; padding: 50px 0; font-family: 'Poppins', sans-serif;">
+        <div class="stotra-container">
+
+            <!-- प्रस्तावना / माहात्म्य -->
+            <div class="stotra-intro">
+                <h3 style="font-family: 'Rozha One', serif; color: #ffb703; font-size: 22px; margin-bottom: 12px; text-align: center;">॥ श्री हनुमान चालीसा माहात्म्य ॥</h3>
+                <p>
+                    श्री हनुमान चालीसा ही संत गोस्वामी तुलसीदास यांनी रचलेली ४० चौपायांची अत्यंत पावन व फलदायी रचना आहे. रोज सकाळी किंवा संध्याकाळी भक्तिभावाने हनुमान चालीसाचा पाठ केल्यास सर्व भय, रोग, शोक आणि संकटांचा नाश होऊन हनुमानजींची असीम कृपा प्राप्त होते.
+                </p>
+            </div>
+
+            <!-- संपूर्ण हनुमान चालीसा आणि अर्थ (HD Cards) -->
+            <div id="stotra-text-body">
+
+               <!-- आरंभीचे दोहे -->
+<div class="shloka-card-16-9" id="card-d1">
+    <div class="card-stotra-title">🚩 श्री हनुमान चालीसा</div>
+    <div class="card-top-tools">
+        <button class="tool-btn" onclick="copyCardText('card-d1')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+        <button class="tool-btn" onclick="downloadCardImage('card-d1', 'hanuman-chalisa-doha-1')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+        <button class="tool-btn" onclick="shareCardText('card-d1')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+    </div>
+    <div class="shloka-text">
+        ॥ दोहा ॥<br>
+        श्रीगुरु चरन सरोज रज निज मनु मुकुरु सुधारि । बरनउँ रघुबर बिमल जसु जो दायकु फल चारि ॥<br><br>
+        बुद्धिहीन तनु जानिके सुमिरौं पवन-कुमार । बल बुधि बिद्या देहु मोहिं हरहु कलेस बिकार ॥
+    </div>
+    <div class="meaning-box">
+        <div class="meaning-title">मराठी अर्थ:</div>
+        श्रीगुरूंच्या चरणकमळांच्या धुळीने मनाचा आरसा स्वच्छ करून, मी श्रीरघुवीरांच्या निर्मळ यशाचे वर्णन करतो, जे चारही फळ देणारे आहे. स्वतःला बुद्धिहीन मानून मी पवनपुत्र हनुमानाचे स्मरण करतो; हे मारुतीराया, मला बल, बुद्धी आणि विद्या द्या व माझे सर्व क्लेश-विकार दूर करा.
+    </div>
+    <div class="card-watermark">✨ santvani.co.in</div>
+</div>
+
+<!-- चौपाई ०१-०४ -->
+<div class="shloka-card-16-9" id="card-1">
+    <div class="card-stotra-title">🚩 श्री हनुमान चालीसा</div>
+    <div class="card-top-tools">
+        <button class="tool-btn" onclick="copyCardText('card-1')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+        <button class="tool-btn" onclick="downloadCardImage('card-1', 'hanuman-chalisa-1')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+        <button class="tool-btn" onclick="shareCardText('card-1')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+    </div>
+    <div class="shloka-text">
+        जय हनुमान ज्ञान गुन सागर । जय कपीस तिहुँ लोक उजागर ॥०१॥<br>
+        राम दूत अतुलित बल धामा । अंजनी-पुत्र पवनसुत नामा ॥०२॥<br>
+        महाबीर बिक्रम बजरंगी । कुमति निवार सुमति के संगी ॥०३॥<br>
+        कंचन बरन बिराज सुबेसा । कानन कुण्डल कुंचित केसा ॥०४॥
+    </div>
+    <div class="meaning-box">
+        <div class="meaning-title">मराठी अर्थ:</div>
+        ज्ञान आणि गुणांचे सागर असलेल्या श्रीहनुमानाचा जय असो! तिन्ही लोकांत प्रसिद्ध असलेल्या वानरश्रेष्ठाचा जय असो! आपण श्रीरामांचे दूत, अतुलनीय शक्तीचे धाम, अंजनीपुत्र आणि पवनसुत आहात. आपण महावीर, पराक्रमी, वज्रासारख्या अंगकांतीचे, दुर्बुद्धी दूर करणारे व सुबुद्धी देणारे आहात. आपला सोन्यासारखा तेजस्वी वर्ण, सुंदर वेश, कानात कुंडले व कुरळे केस अत्यंत शोभून दिसतात.
+    </div>
+    <div class="card-watermark">✨ santvani.co.in</div>
+</div>
+
+<!-- चौपाई ०५-०८ -->
+<div class="shloka-card-16-9" id="card-2">
+    <div class="card-stotra-title">🚩 श्री हनुमान चालीसा</div>
+    <div class="card-top-tools">
+        <button class="tool-btn" onclick="copyCardText('card-2')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+        <button class="tool-btn" onclick="downloadCardImage('card-2', 'hanuman-chalisa-2')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+        <button class="tool-btn" onclick="shareCardText('card-2')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+    </div>
+    <div class="shloka-text">
+        हाथ बज्र और ध्वजा बिराजै । काँधे मूँज जनेऊ साजै ॥०५॥<br>
+        संकर सुवन केसरी नंदन । तेज प्रताप महा जग बन्दन ॥०६॥<br>
+        बिद्यावान गुनी अति चातुर । राम काज करिबे को आतुर ॥०७॥<br>
+        प्रभु चरित्र सुनिबे को रसिया । राम लखन सीता मन बसिया ॥०८॥
+    </div>
+    <div class="meaning-box">
+        <div class="meaning-title">मराठी अर्थ:</div>
+        आपल्या हातात वज्र व ध्वज शोभतो आणि खांद्यावर मुंजाचे जानवे सजले आहे. आपण शंकराचे अवतार आणि केसरीचे सुपुत्र आहात, आपल्या महान तेजाला संपूर्ण जग वंदन करते. आपण अत्यंत विद्यावान, गुणी व चतुर असून श्रीरामांचे कार्य करण्यासाठी सदैव तत्पर असता. प्रभू श्रीरामांचे चरित्र ऐकण्यात आपल्याला अथांग आनंद मिळतो; श्रीराम, लक्ष्मण आणि सीतामातेच्या हृदयात आपण सदैव वास करता.
+    </div>
+    <div class="card-watermark">✨ santvani.co.in</div>
+</div>
+
+<!-- चौपाई ०९-१२ -->
+<div class="shloka-card-16-9" id="card-3">
+    <div class="card-stotra-title">🚩 श्री हनुमान चालीसा</div>
+    <div class="card-top-tools">
+        <button class="tool-btn" onclick="copyCardText('card-3')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+        <button class="tool-btn" onclick="downloadCardImage('card-3', 'hanuman-chalisa-3')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+        <button class="tool-btn" onclick="shareCardText('card-3')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+    </div>
+    <div class="shloka-text">
+        सूक्ष्म रूप धरि सियहिं दिखावा । बिकट रूप धरि लंक जरावा ॥०९॥<br>
+        भीम रूप धरि असुर सँहारे । रामचन्द्र के काज सँवारे ॥१०॥<br>
+        लाय संजीवन लखन जियाये । श्रीरघुबीर हरषि उर लाये ॥११॥<br>
+        रघुपति किन्ही बहुत बड़ाई । तुम मम प्रिय भरतहि सम भाई ॥१२॥
+    </div>
+    <div class="meaning-box">
+        <div class="meaning-title">मराठी अर्थ:</div>
+        आपण सूक्ष्म रूप घेऊन सीतामातेला दर्शन दिले आणि विक्राळ रूप धारण करून संपूर्ण लंका दहन केली. विशाल भीमरूप धारण करून राक्षसांचा संहार केला व श्रीरामांचे कार्य पार पाडले. संजीवनी वनस्पती आणून आपण लक्ष्मणाचे प्राण वाचवले, ज्यामुळे प्रसन्न होऊन श्रीरामांनी आपल्याला मिठी मारली आणि "तू मला भरतासारखा प्रिय भाऊ आहेस" असे उद्गार काढून आपली मोठी प्रशंसा केली.
+    </div>
+    <div class="card-watermark">✨ santvani.co.in</div>
+</div>
+
+<!-- चौपाई १३-१६ -->
+<div class="shloka-card-16-9" id="card-4">
+    <div class="card-stotra-title">🚩 श्री हनुमान चालीसा</div>
+    <div class="card-top-tools">
+        <button class="tool-btn" onclick="copyCardText('card-4')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+        <button class="tool-btn" onclick="downloadCardImage('card-4', 'hanuman-chalisa-4')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+        <button class="tool-btn" onclick="shareCardText('card-4')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+    </div>
+    <div class="shloka-text">
+        सहस बदन तुम्हरो जस गावैं । अस कहि श्रीपति कंठ लगावैं ॥१३॥<br>
+        सनकादिक ब्रम्हादि मुनीसा । नारद सारद सहित अहीसा ॥१४॥<br>
+        जम कुबेर दिगपाल जहाँ ते । कबि कोबिद कहि सके कहाँ ते ॥१५॥<br>
+        तुम उपकार सुग्रीवहिं कीन्हा । राम मिलाय राज पद दीन्हा ॥१६॥
+    </div>
+    <div class="meaning-box">
+        <div class="meaning-title">मराठी अर्थ:</div>
+        "हजार मुखांचा शेषनागसुद्धा तुझे यश गातो," असे म्हणून श्रीरामांनी आपल्याला हृदयाशी धरले. सनकादिक ऋषी, ब्रह्मा, नारद, सरस्वती व शेषनाग आपल्या यशाचे गुणगान करतात. यम, कुबेर, दिशांचे रक्षक, कवी व पंडितही आपल्या कीर्तीचे पूर्ण वर्णन करू शकत नाहीत. आपण सुग्रीवावर उपकार करून त्याला श्रीरामांशी भेटवून दिले आणि त्याला राज्यपद मिळवून दिले.
+    </div>
+    <div class="card-watermark">✨ santvani.co.in</div>
+</div>
+
+<!-- चौपाई १७-२० -->
+<div class="shloka-card-16-9" id="card-5">
+    <div class="card-stotra-title">🚩 श्री हनुमान चालीसा</div>
+    <div class="card-top-tools">
+        <button class="tool-btn" onclick="copyCardText('card-5')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+        <button class="tool-btn" onclick="downloadCardImage('card-5', 'hanuman-chalisa-5')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+        <button class="tool-btn" onclick="shareCardText('card-5')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+    </div>
+    <div class="shloka-text">
+        तुम्हरो मंत्र बिभीषन माना । लंकेस्वर भए सब जग जाना ॥१७॥<br>
+        जुग सहस्त्र जोजन पर भानु । लील्यो ताहि मधुर फल जानू ॥१८॥<br>
+        प्रभु मुद्रिका मेलि मुख माहीं । जलधि लाँघि गये अचरज नाहीं ॥१९॥<br>
+        दुर्गम काज जगत के जेते । सुगम अनुग्रह तुम्हरे तेते ॥२०॥
+    </div>
+    <div class="meaning-box">
+        <div class="meaning-title">मराठी अर्थ:</div>
+        आपला सल्ला मानून विभीषण लंकेचा राजा बनला, हे संपूर्ण जग जाणते. हजारो योजने दूर असलेल्या सूर्याला आपण गोड फळ समजून गिळून टाकले होते! श्रीरामांची अंगठी तोंडात धरून आपण अथांग समुद्र ओलांडून गेलात, यात काहीच आश्चर्य नाही. जगातील सर्व कठीण आणि अशक्य कामे आपल्या कृपेने अत्यंत सोपी होतात.
+    </div>
+    <div class="card-watermark">✨ santvani.co.in</div>
+</div>
+
+<!-- चौपाई २१-२४ -->
+<div class="shloka-card-16-9" id="card-6">
+    <div class="card-stotra-title">🚩 श्री हनुमान चालीसा</div>
+    <div class="card-top-tools">
+        <button class="tool-btn" onclick="copyCardText('card-6')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+        <button class="tool-btn" onclick="downloadCardImage('card-6', 'hanuman-chalisa-6')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+        <button class="tool-btn" onclick="shareCardText('card-6')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+    </div>
+    <div class="shloka-text">
+        राम दुआरे तुम रखवारे । होत न आज्ञा बिनु पैसारे ॥२१॥<br>
+        सब सुख लहै तुम्हारी सरना । तुम रच्छक काहू को डर ना ॥२२॥<br>
+        आपन तेज सम्हारो आपै । तीनों लोक हाँक तें काँपै ॥२३॥<br>
+        भूत पिसाच निकट नहिं आवै । महाबीर जब नाम सुनावै ॥२४॥
+    </div>
+    <div class="meaning-box">
+        <div class="meaning-title">मराठी अर्थ:</div>
+        श्रीरामांच्या द्वाराचे आपण रक्षक आहात; आपल्या आज्ञेशिवाय कोणीही आत प्रवेश करू शकत नाही. आपल्या शरण आलेल्या भक्ताला सर्व सुख प्राप्त होते; आपण रक्षक असताना कसलेही भय उरत नाही. आपले तेज फक्त आपणच सांभाळू शकता; आपल्या एका हाकेने तिन्ही लोक थरथर कापतात. महावीर हनुमानाचे नाव उच्चारताच भूत, पिशाच्च व दुष्ट शक्ती जवळही येत नाहीत.
+    </div>
+    <div class="card-watermark">✨ santvani.co.in</div>
+</div>
+
+<!-- चौपाई २५-२८ -->
+<div class="shloka-card-16-9" id="card-7">
+    <div class="card-stotra-title">🚩 श्री हनुमान चालीसा</div>
+    <div class="card-top-tools">
+        <button class="tool-btn" onclick="copyCardText('card-7')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+        <button class="tool-btn" onclick="downloadCardImage('card-7', 'hanuman-chalisa-7')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+        <button class="tool-btn" onclick="shareCardText('card-7')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+    </div>
+    <div class="shloka-text">
+        नासै रोग हरै सब पीरा । जपत निरन्तर हनुमत बीरा ॥२५॥<br>
+        संकट तें हनुमान छुडावे । मन क्रम बचन ध्यान जो लावै ॥२६॥<br>
+        सब पर राम तपस्वी राजा । तिन के काज सकल तुम साजा ॥२७॥<br>
+        और मनोरथ जो कोई लावै । सोहि अमित जीवन फल पावै ॥२८॥
+    </div>
+    <div class="meaning-box">
+        <div class="meaning-title">मराठी अर्थ:</div>
+        वीर हनुमानजींच्या नावाचा निरंतर जप केल्याने सर्व रोग व वेदना नष्ट होतात. जो मन, कर्म आणि वाणीने हनुमानाचे ध्यान करतो, त्याला हनुमानजी सर्व संकटांतून मुक्त करतात. तपस्वी राजा श्रीराम सर्वश्रेष्ठ आहेत; त्यांचेही सर्व कठीण कार्य आपणच पूर्ण केलेत. जो भक्त आपल्याकडे कोणतीही मनोकामना घेऊन येतो, त्याला जीवनात अमर्याद आनंदाचे फळ प्राप्त होते.
+    </div>
+    <div class="card-watermark">✨ santvani.co.in</div>
+</div>
+
+<!-- चौपाई २९-३२ -->
+<div class="shloka-card-16-9" id="card-8">
+    <div class="card-stotra-title">🚩 श्री हनुमान चालीसा</div>
+    <div class="card-top-tools">
+        <button class="tool-btn" onclick="copyCardText('card-8')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+        <button class="tool-btn" onclick="downloadCardImage('card-8', 'hanuman-chalisa-8')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+        <button class="tool-btn" onclick="shareCardText('card-8')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+    </div>
+    <div class="shloka-text">
+        चारो जुग परताप तुम्हारा । है परसिद्ध जगत उजियारा ॥२९॥<br>
+        साधु सन्त के तुम रखवारे । असुर निकन्दन राम दुलारे ॥३०॥<br>
+        अष्टसिद्धि नौ निधि के दाता । अस बर दीन जानकी माता ॥३१॥<br>
+        राम रसायन तुम्हरे पासा । सदा रहो रघुपति के दासा ॥३२॥
+    </div>
+    <div class="meaning-box">
+        <div class="meaning-title">मराठी अर्थ:</div>
+        चारही युगांत आपला प्रताप पसरलेला आहे, आपली कीर्ती जगभर प्रकाशमान आहे. आपण साधू-संतांचे रक्षक, राक्षसांचा संहार करणारे आणि श्रीरामांचे लाडके आहात. आपण आठ सिद्धी आणि नऊ निधींचे दाते आहात, असे वरदान सीतामातेने आपल्याला दिले आहे. आपल्याकडे रामभक्तीचे रसायन आहे; आपण सदैव श्रीरामांचे नम्र दास आहात.
+    </div>
+    <div class="card-watermark">✨ santvani.co.in</div>
+</div>
+
+<!-- चौपाई ३३-३६ -->
+<div class="shloka-card-16-9" id="card-9">
+    <div class="card-stotra-title">🚩 श्री हनुमान चालीसा</div>
+    <div class="card-top-tools">
+        <button class="tool-btn" onclick="copyCardText('card-9')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+        <button class="tool-btn" onclick="downloadCardImage('card-9', 'hanuman-chalisa-9')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+        <button class="tool-btn" onclick="shareCardText('card-9')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+    </div>
+    <div class="shloka-text">
+        तुम्हरे भजन राम को पावै । जनम जनम के दुख बिसरावै ॥३३॥<br>
+        अन्त काल रघुबर पुर जाई । जहाँ जन्म हरिभक्त कहाई ॥३४॥<br>
+        और देवता चित्त न धरई । हनुमत सेही सर्ब सुख करई ॥३५॥<br>
+        संकट कटै मिटै सब पीरा । जो सुमिरे हनुमत बलबीरा ॥३६॥
+    </div>
+    <div class="meaning-box">
+        <div class="meaning-title">मराठी अर्थ:</div>
+        आपले भजन केल्याने भक्ताला श्रीराम प्राप्त होतात आणि जन्मोजन्मांचे दुःख दूर होते. अंतकाळी तो प्रभू श्रीरामांच्या धामात जातो आणि तिथे जाऊन हरिभक्त म्हणून ओळखला जातो. इतर कोणत्याही देवतेचे ध्यान न धरता, केवळ हनुमानाची सेवा केल्याने सर्व सुखे प्राप्त होतात. बलवान वीर हनुमानाचे स्मरण केल्याने सर्व संकटे व पीडा दूर होतात.
+    </div>
+    <div class="card-watermark">✨ santvani.co.in</div>
+</div>
+
+<!-- चौपाई ३७-४० -->
+<div class="shloka-card-16-9" id="card-10">
+    <div class="card-stotra-title">🚩 श्री हनुमान चालीसा</div>
+    <div class="card-top-tools">
+        <button class="tool-btn" onclick="copyCardText('card-10')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+        <button class="tool-btn" onclick="downloadCardImage('card-10', 'hanuman-chalisa-10')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+        <button class="tool-btn" onclick="shareCardText('card-10')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+    </div>
+    <div class="shloka-text">
+        जय जय जय हनुमान गोसाईं । कृपा करहु गुरुदेव की नाईं ॥३७॥<br>
+        जो सत बार पाठ कर कोई । छूटहि बन्दि महा सुख होई ॥३८॥<br>
+        जो यह पढ़ै हनुमान चालीसा । होय सिद्धि साखी गौरीसा ॥३९॥<br>
+        तुलसीदास सदा हरि चेरा । कीजै नाथ हृदय मह डेरा ॥४०॥
+    </div>
+    <div class="meaning-box">
+        <div class="meaning-title">मराठी अर्थ:</div>
+        हे समर्थ स्वामी हनुमानजी, आपला जयजयकार असो! गुरूप्रमाणे आपण माझ्यावर कृपा करा. जो कोणी या चालीसाचा १०० वेळा पाठ करतो, तो सर्व बंधनांतून मुक्त होऊन परम सुख मिळवतो. जो हनुमान चालीसा वाचतो, त्याला सर्व सिद्धी प्राप्त होतात; याला साक्षात भगवान शंकर साक्षी आहेत. तुलसीदास सदैव श्रीरामांचे दास आहेत; हे नाथा, आपण माझ्या हृदयात सदैव वास करा!
+    </div>
+    <div class="card-watermark">✨ santvani.co.in</div>
+</div>
+
+<!-- समाप्तीचा दोहा व जय-घोष -->
+<div class="shloka-card-16-9" id="card-d2">
+    <div class="card-stotra-title">🚩 श्री हनुमान चालीसा</div>
+    <div class="card-top-tools">
+        <button class="tool-btn" onclick="copyCardText('card-d2')" title="टेक्स्ट कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+        <button class="tool-btn" onclick="downloadCardImage('card-d2', 'hanuman-chalisa-doha-2')" title="इमेज डाउनलोड करा"><i class="fa-solid fa-download"></i></button>
+        <button class="tool-btn" onclick="shareCardText('card-d2')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
+    </div>
+    <div class="shloka-text">
+        ॥ दोहा ॥<br>
+        पवनतनय संकट हरन मंगल मुर्ति रूप ।<br>
+        राम लखन सीता सहित हृदय बसहु सुर भूप ॥<br><br>
+        ॥ जय-घोष ॥<br>
+        बोल बजरंगबली की जय । पवन पुत्र हनुमान की जय ॥
+    </div>
+    <div class="meaning-box">
+        <div class="meaning-title">मराठी अर्थ:</div>
+        हे संकटमोचन पवनपुत्र, मंगलमूर्ती रूप हनुमाना! हे देवांचे राजा, आपण प्रभू श्रीराम, लक्ष्मण आणि सीतामातेसह सदैव माझ्या हृदयात निवास करावा.<br><br>
+        ॥ बोल बजरंगबली की जय! पवन पुत्र हनुमान की जय! ॥
+    </div>
+    <div class="card-watermark">✨ santvani.co.in</div>
+</div>
+
+            </div>
+            <!-- ======================================================== -->
+
+            <!-- नेव्हिगेशन व शेअर -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #282828; flex-wrap: wrap; gap: 15px;">
+                <a href="../../nitya-pathan-stotra.html" class="btn-outline" style="font-size: 14px; padding: 10px 20px;">❮ सर्व नित्य पठण स्तोत्रे</a>
+                <a href="#home" class="btn-premium" style="font-size: 14px; padding: 10px 20px;">वर जा ⬆</a>
+            </div>
+
+            <!-- भक्तांसाठी संदेश -->
+            <div style="background: #181818; border: 1px solid rgba(255,183,3,.3); border-radius: 14px; padding: 25px; margin-top: 35px; text-align: center;">
+                <h3 style="font-family: 'Rozha One', serif; color: #ffb703; margin-bottom: 12px; font-size: 22px;">🚩 जय श्री राम! जय हनुमान!</h3>
+                <p style="margin-bottom: 12px; line-height: 1.8; color: #cccccc;">
+                    हे पावन सार्थ श्री हनुमान चालीसा इतर रामभक्तांसोबत व हनुमानभक्तांसोबत नक्की शेअर करा.
+                </p>
+                <p style="margin: 0; font-weight: 600; color: #ffffff; font-size: 18px;">
+                    ॥ श्री सीतारामचंद्रार्पणमस्तु ॥
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- फुटर लेआउट -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-brand-box">
+                <h3 class="footer-logo">✨ संतवाणी</h3>
+                <p class="footer-about">मराठी संतांच्या समृद्ध विचारांचा आणि साहित्याचा डिजिटल वारसा पुढील पिढीपर्यंत पोहोचवण्याचा एक नम्र प्रयत्न.</p>
+            </div>
+            
+            <div class="footer-links-box">
+                <h4>महत्त्वाचे दुवे</h4>
+                <ul>
+                    <li><a href="../../about.html">आमच्याबद्दल (About Us)</a></li>
+                    <li><a href="../../contact.html">संपर्क (Contact Us)</a></li>
+                    <li><a href="../../privacy-policy.html">गोपनीयता धोरण (Privacy Policy)</a></li>
+                    <li><a href="../../terms.html">नियम व अटी (Terms & Conditions)</a></li>
+                    <li><a href="../../disclaimer.html">अस्वीकरण (Disclaimer)</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links-box">
+                <h4>त्वरित लिंक्स</h4>
+                <ul>
+                    <li><a href="../../index.html#home">मुख्य पृष्ठ</a></li>
+                    <li><a href="../../sant-sahitya.html">संत साहित्य</a></li>
+                    <li><a href="../../vangmay-sangrah.html">वाङ्मय संग्रह</a></li>
+                    <li><a href="../../sarth-haripath.html">सार्थ हरिपाठ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright-text">© २०२६ संतवाणी लायब्ररी. सर्व हक्क सुरक्षित. | रचना वारकरी संप्रदाय चरणी समर्पित.</p>
+        </div>
+    </footer>
+
+    <script src="../../menu.js"></script>
+
+    <!-- JavaScript Actions (Copy, Download Image & WhatsApp Share) -->
+    <script>
+        // १. टेक्स्ट कॉपी करणे
+        function copyCardText(cardId) {
+            const card = document.getElementById(cardId);
+            const shloka = card.querySelector('.shloka-text').innerText;
+            const meaning = card.querySelector('.meaning-box').innerText;
+            const fullText = "🚩 *श्री हनुमान चालीसा* 🚩\n\n" + shloka + "\n\n" + meaning + "\n\nवाचा: santvani.co.in";
+            
+            navigator.clipboard.writeText(fullText).then(() => {
+                alert("चौपाई व अर्थ कॉपी झाला आहे!");
+            });
+        }
+
+        // २. WhatsApp वर शेअर करणे
+        function shareCardText(cardId) {
+            const card = document.getElementById(cardId);
+            const shloka = card.querySelector('.shloka-text').innerText;
+            const meaning = card.querySelector('.meaning-box').innerText;
+            const fullText = "🚩 *सार्थ श्री हनुमान चालीसा* 🚩\n\n" + shloka + "\n\n" + meaning + "\n\nसविस्तर वाचा: https://santvani.co.in/pages/nitya-pathan-stotra/hanuman-chalisa.html";
+            
+            window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(fullText), '_blank');
+        }
+
+        // ३. इमेज बनवून डाउनलोड करणे (HTML2Canvas)
+        function downloadCardImage(cardId, fileName) {
+            const card = document.getElementById(cardId);
+            const tools = card.querySelector('.card-top-tools');
+            
+            // डाउनलोड करताना बटन्स लपवणे
+            tools.style.display = 'none';
+
+            html2canvas(card, {
+                scale: 2, // हाय क्वालिटी HD इमेज
+                backgroundColor: '#121212'
+            }).then(canvas => {
+                let link = document.createElement('a');
+                link.download = fileName + '.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+                
+                // बटन्स पुन्हा दाखवणे
+                tools.style.display = 'flex';
+            });
+        }
+    </script>
+</body>
+</html>
