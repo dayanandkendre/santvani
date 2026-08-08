@@ -57,179 +57,192 @@
     }
     </script>
 
-    <style>
-        .stotra-container {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+   <style>
+    .stotra-container {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
 
-        /* श्लोक कार्ड बेस डिझाईन */
+    /* श्लोक कार्ड बेस डिझाईन */
+    .shloka-card-16-9 {
+        position: relative;
+        background: linear-gradient(145deg, #181818 0%, #121212 100%);
+        border: 1px solid #282828;
+        border-left: 4px solid #ffb703;
+        border-radius: 10px;
+        padding: 50px 20px 35px 20px;
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        box-sizing: border-box;
+    }
+
+    /* टॉप लेफ्ट - टायटल बॅज */
+    .card-stotra-title {
+        position: absolute;
+        top: 12px;
+        left: 15px;
+        font-size: 12px;
+        color: #ffb703;
+        font-weight: 600;
+        background: rgba(255, 183, 3, 0.1);
+        border: 1px solid rgba(255, 183, 3, 0.3);
+        padding: 3px 10px;
+        border-radius: 15px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* टॉप राईट - ३ टूल बटन्स */
+    .card-top-tools {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        display: flex;
+        gap: 8px;
+        z-index: 10;
+    }
+
+    .tool-btn {
+        background: rgba(255, 183, 3, 0.1);
+        border: 1px solid rgba(255, 183, 3, 0.3);
+        color: #ffb703;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 12px;
+        transition: all 0.3s ease;
+    }
+
+    .tool-btn:hover {
+        background: #ffb703;
+        color: #000000;
+        transform: scale(1.1);
+    }
+
+    /* बॉटम राईट - वॉटरमार्क */
+    .card-watermark {
+        position: absolute;
+        bottom: 8px;
+        right: 15px;
+        font-size: 11px;
+        color: #ffb703;
+        font-weight: 600;
+        opacity: 0.8;
+        font-family: 'Poppins', sans-serif;
+        letter-spacing: 0.5px;
+    }
+
+    /* श्लोक/ओवी मुख्य कंटेनर */
+    .shloka-text {
+        font-family: 'Poppins', 'Rozha One', 'Yatra One', sans-serif;
+        font-size: 16.5px;
+        font-weight: 600;
+        color: #ffb703;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        text-align: center;
+        width: 100%;
+        word-break: keep-all;
+    }
+
+    /* प्रत्येक स्वतंत्र ओवीसाठी ब्लॉक स्टाइल */
+    .ovi-block {
+        margin-bottom: 12px;
+    }
+
+    .ovi-block:last-child {
+        margin-bottom: 0;
+    }
+
+    /* अर्थ बॉक्स */
+    .meaning-box {
+        background: rgba(0, 0, 0, 0.35);
+        border: 1px solid #222222;
+        border-radius: 6px;
+        padding: 10px 15px;
+        color: #cccccc;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .meaning-title {
+        color: #ff9f1c;
+        font-weight: 600;
+        margin-bottom: 4px;
+        font-size: 13px;
+    }
+
+    .stotra-intro {
+        background: #181818;
+        border: 1px solid #282828;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 35px;
+        color: #cccccc;
+        line-height: 1.8;
+    }
+
+    /* मोबाईल रिस्पॉन्सिव्ह */
+    @media (max-width: 650px) {
         .shloka-card-16-9 {
-            position: relative;
-            background: linear-gradient(145deg, #181818 0%, #121212 100%);
-            border: 1px solid #282828;
-            border-left: 4px solid #ffb703;
-            border-radius: 10px;
-            padding: 50px 20px 35px 20px;
-            margin-bottom: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            box-sizing: border-box;
+            padding: 42px 6px 30px 6px !important;
         }
 
-        /* टॉप लेफ्ट - टायटल बॅज */
         .card-stotra-title {
-            position: absolute;
-            top: 12px;
-            left: 15px;
-            font-size: 12px;
-            color: #ffb703;
-            font-weight: 600;
-            background: rgba(255, 183, 3, 0.1);
-            border: 1px solid rgba(255, 183, 3, 0.3);
-            padding: 3px 10px;
-            border-radius: 15px;
-            font-family: 'Poppins', sans-serif;
+            font-size: 10px;
+            padding: 2px 6px;
+            top: 10px;
+            left: 10px;
         }
 
-        /* टॉप राईट - ३ टूल बटन्स */
         .card-top-tools {
-            position: absolute;
-            top: 12px;
-            right: 15px;
-            display: flex;
-            gap: 8px;
-            z-index: 10;
+            top: 10px;
+            right: 10px;
+            gap: 6px;
         }
 
         .tool-btn {
-            background: rgba(255, 183, 3, 0.1);
-            border: 1px solid rgba(255, 183, 3, 0.3);
-            color: #ffb703;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            font-size: 12px;
-            transition: all 0.3s ease;
+            width: 26px;
+            height: 26px;
+            font-size: 10px;
         }
 
-        .tool-btn:hover {
-            background: #ffb703;
-            color: #000000;
-            transform: scale(1.1);
-        }
-
-        /* बॉटम राईट - वॉटरमार्क */
-        .card-watermark {
-            position: absolute;
-            bottom: 8px;
-            right: 15px;
-            font-size: 11px;
-            color: #ffb703;
-            font-weight: 600;
-            opacity: 0.8;
-            font-family: 'Poppins', sans-serif;
-            letter-spacing: 0.5px;
-        }
-
-        /* श्लोक/ओवी टेक्स्ट */
         .shloka-text {
-            font-family: 'Poppins', 'Rozha One', 'Yatra One', sans-serif;
-            font-size: 17.5px;
+            font-size: 13px !important;
             font-weight: 600;
-            color: #ffb703;
-            line-height: 1.7;
-            margin-bottom: 15px;
-            text-align: center;
-            width: 100%;
-            word-break: keep-all;
+            line-height: 1.55;
+            letter-spacing: -0.1px;
+            margin-bottom: 12px;
+            padding: 0 2px;
         }
 
-        /* अर्थ बॉक्स */
+        .ovi-block {
+            margin-bottom: 10px;
+        }
+
         .meaning-box {
-            background: rgba(0, 0, 0, 0.35);
-            border: 1px solid #222222;
-            border-radius: 6px;
-            padding: 10px 15px;
-            color: #cccccc;
-            font-size: 14px;
-            line-height: 1.6;
-            text-align: center;
-            width: 100%;
-            box-sizing: border-box;
+            font-size: 12.5px;
+            padding: 8px 8px;
         }
 
-        .meaning-title {
-            color: #ff9f1c;
-            font-weight: 600;
-            margin-bottom: 4px;
-            font-size: 13px;
+        .card-watermark {
+            font-size: 10px;
+            bottom: 6px;
+            right: 10px;
         }
-
-        .stotra-intro {
-            background: #181818;
-            border: 1px solid #282828;
-            border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 35px;
-            color: #cccccc;
-            line-height: 1.8;
-        }
-
-        /* मोबाईल रिस्पॉन्सिव्ह */
-        @media (max-width: 650px) {
-            .shloka-card-16-9 {
-                padding: 42px 6px 30px 6px !important;
-            }
-
-            .card-stotra-title {
-                font-size: 10px;
-                padding: 2px 6px;
-                top: 10px;
-                left: 10px;
-            }
-
-            .card-top-tools {
-                top: 10px;
-                right: 10px;
-                gap: 6px;
-            }
-
-            .tool-btn {
-                width: 26px;
-                height: 26px;
-                font-size: 10px;
-            }
-
-            .shloka-text {
-                font-size: 12px !important;
-                font-weight: 600;
-                line-height: 1.65;
-                letter-spacing: -0.2px;
-                margin-bottom: 12px;
-                padding: 0 2px;
-            }
-
-            .meaning-box {
-                font-size: 12.5px;
-                padding: 8px 8px;
-            }
-
-            .card-watermark {
-                font-size: 10px;
-                bottom: 6px;
-                right: 10px;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
 
@@ -301,7 +314,7 @@
             <!-- ======================================================== -->
             <div id="stotra-text-body">
 
-              <!-- ओवी १ - ४: मङ्गलाचरण व वंदन -->
+             <!-- ओवी १ - ४ -->
 <div class="shloka-card-16-9" id="card-1">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -310,11 +323,22 @@
         <button class="tool-btn" onclick="shareCardText('card-1')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        श्रीगणेशाय नमः । श्री व्यंकटेशाय नमः ।<br>
-        ॐ नमो जी हेरंबा । सकळादि तूं प्रारंभा । आठवूनि तुझी स्वरुपशोभा । वंदन भावें करीतसे ॥ १ ॥<br>
-        नमन माझे हंसवाहिनी । वाग्वरदे विलासिनी । ग्रंथ वदावया निरुपणी । भावार्थखाणी जयामाजी ॥ २ ॥<br>
-        नमन माझे गुरुवर्या । प्रकाशरुपा तूं स्वामिया । स्फूर्ति द्यावी ग्रंथ वदावया । जेणें श्रोतया सुख वाटे ॥ ३ ॥<br>
-        नमन माझे संतसज्जना । आणि योगियां मुनिजनां । सकळ श्रोतयां सज्जना । नमन माझे साष्टांगी ॥ ४ ॥
+        <div class="ovi-block">
+            श्रीगणेशाय नमः । श्री व्यंकटेशाय नमः ।<br>
+            ॐ नमो जी हेरंबा । सकळादि तूं प्रारंभा । आठवूनि तुझी स्वरुपशोभा । वंदन भावें करीतसे ॥ १ ॥
+        </div>
+        <div class="ovi-block">
+            नमन माझे हंसवाहिनी । वाग्वरदे विलासिनी ।<br>
+            ग्रंथ वदावया निरुपणी । भावार्थखाणी जयामाजी ॥ २ ॥
+        </div>
+        <div class="ovi-block">
+            नमन माझे गुरुवर्या । प्रकाशरुपा तूं स्वामिया ।<br>
+            स्फूर्ति द्यावी ग्रंथ वदावया । जेणें श्रोतया सुख वाटे ॥ ३ ॥
+        </div>
+        <div class="ovi-block">
+            नमन माझे संतसज्जना । आणि योगियां मुनिजनां ।<br>
+            सकळ श्रोतयां सज्जना । नमन माझे साष्टांगी ॥ ४ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -323,7 +347,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ५ - ८: स्तोत्र माहात्म्य व देवकृपा -->
+<!-- ओवी ५ - ८ -->
 <div class="shloka-card-16-9" id="card-2">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -332,10 +356,22 @@
         <button class="tool-btn" onclick="shareCardText('card-2')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        ग्रंथ ऐका प्रार्थनाशतक । महादोषासी दाहक । तोषूनियां वैकुंठनायक । मनोरथ पूर्ण करील ॥ ५ ॥<br>
-        जयजयाजी व्यंकटरमणा । दयासागरा परिपूर्णा । परंज्योति प्रकाशगहना । करितों प्रार्थना श्रवण कीजे ॥ ६ ॥<br>
-        जननीपरी त्वा पाळिलें । पितयापरी त्वां सांभाळिले । सकळ संकटापासूनि रक्षिलें । पूर्ण दिधलें प्रेमसुख ॥ ७ ॥<br>
-        हें अलोलिक जरी मानावें । तरी जग हें सृजिलें आघवें । जनकजनीपण स्वभावें । सहज आलें अंगासी ॥ ८ ॥
+        <div class="ovi-block">
+            ग्रंथ ऐका प्रार्थनाशतक । महादोषासी दाहक ।<br>
+            तोषूनियां वैकुंठनायक । मनोरथ पूर्ण करील ॥ ५ ॥
+        </div>
+        <div class="ovi-block">
+            जयजयाजी व्यंकटरमणा । दयासागरा परिपूर्णा ।<br>
+            परंज्योति प्रकाशगहना । करितों प्रार्थना श्रवण कीजे ॥ ६ ॥
+        </div>
+        <div class="ovi-block">
+            जननीपरी त्वा पाळिलें । पितयापरी त्वां सांभाळिले ।<br>
+            सकळ संकटापासूनि रक्षिलें । पूर्ण दिधलें प्रेमसुख ॥ ७ ॥
+        </div>
+        <div class="ovi-block">
+            हें अलोलिक जरी मानावें । तरी जग हें सृजिलें आघवें ।<br>
+            जनकजनीपण स्वभावें । सहज आलें अंगासी ॥ ८ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -344,7 +380,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ९ - १२: भगवंताची क्षमा आणि भक्ताची लीनता -->
+<!-- ओवी ९ - १२ -->
 <div class="shloka-card-16-9" id="card-3">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -353,10 +389,22 @@
         <button class="tool-btn" onclick="shareCardText('card-3')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        दीनानाथा प्रेमासाठी । भक्त रक्षिले संकटी । प्रेम दिधलें अपूर्व गोष्टी । भजनासाठी भक्तांच्या ॥ ९ ॥<br>
-        आतां परिसावी विज्ञापना । कृपाळुवा लक्ष्मीरमणा । मज घालोनी गर्भाधाना । अलौकिक रचना दाखविली ॥ १० ॥<br>
-        तुज न जाणतां झालों कष्टी । आतां दृढ तुझे पायीं घातली मिठी । कृपाळुवा जगजेठी । अपराध पोटीं घालीं माझें ॥ ११ ॥<br>
-        माझिया अपराधांच्या राशी । भेदोनि गेल्या गगनासी । दयावंता हृषीकेशी । आपुल्या ब्रीदासी सत्य करीं ॥ १२ ॥
+        <div class="ovi-block">
+            दीनानाथा प्रेमासाठी । भक्त रक्षिले संकटी ।<br>
+            प्रेम दिधलें अपूर्व गोष्टी । भजनासाठी भक्तांच्या ॥ ९ ॥
+        </div>
+        <div class="ovi-block">
+            आतां परिसावी विज्ञापना । कृपाळुवा लक्ष्मीरमणा ।<br>
+            मज घालोनी गर्भाधाना । अलौकिक रचना दाखविली ॥ १० ॥
+        </div>
+        <div class="ovi-block">
+            तुज न जाणतां झालों कष्टी । आतां दृढ तुझे पायीं घातली मिठी ।<br>
+            कृपाळुवा जगजेठी । अपराध पोटीं घालीं माझें ॥ ११ ॥
+        </div>
+        <div class="ovi-block">
+            माझिया अपराधांच्या राशी । भेदोनि गेल्या गगनासी ।<br>
+            दयावंता हृषीकेशी । आपुल्या ब्रीदासी सत्य करीं ॥ १२ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -365,7 +413,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी १३ - १६: भगवंताचे औदार्य व भक्ताचे नाते -->
+<!-- ओवी १३ - १६ -->
 <div class="shloka-card-16-9" id="card-4">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -374,10 +422,22 @@
         <button class="tool-btn" onclick="shareCardText('card-4')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        पुत्राचे सहस्त्र अपराध । माता काय मानी तयाचा खेद । तेवीं तू कृपाळू गोविंद । मायबाप मजलागी ॥ १३ ॥<br>
-        उदडांमाजी काळेगोरे । काय निवडावें निवडणारे । कुचलिया वृक्षांची फळें । मधुर कोठोनि असतील ॥ १४ ॥<br>
-        अराटीलागीं मृदुला । कोठोनि असेल कृपावंता । पाषाणासी गुल्मलता । कैसियापरी फुटतील ॥ १५ ॥<br>
-        आपादमस्तकावरी अन्यायी । परी तुझे पदरीं पडिलों पाहीं । आतां रक्षण नाना उपायीं । करणें तुज उचित ॥ १६ ॥
+        <div class="ovi-block">
+            पुत्राचे सहस्त्र अपराध । माता काय मानी तयाचा खेद ।<br>
+            तेवीं तू कृपाळू गोविंद । मायबाप मजलागी ॥ १३ ॥
+        </div>
+        <div class="ovi-block">
+            उदडांमाजी काळेगोरे । काय निवडावें निवडणारे ।<br>
+            कुचलिया वृक्षांची फळें । मधुर कोठोनि असतील ॥ १४ ॥
+        </div>
+        <div class="ovi-block">
+            अराटीलागीं मृदुला । कोठोनि असेल कृपावंता ।<br>
+            पाषाणासी गुल्मलता । कैसियापरी फुटतील ॥ १५ ॥
+        </div>
+        <div class="ovi-block">
+            आपादमस्तकावरी अन्यायी । परी तुझे पदरीं पडिलों पाहीं ।<br>
+            आतां रक्षण नाना उपायीं । करणें तुज उचित ॥ १६ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -386,7 +446,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी १७ - २०: भक्ताची आर्त हाक व तक्रार -->
+<!-- ओवी १७ - २० -->
 <div class="shloka-card-16-9" id="card-5">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -395,10 +455,22 @@
         <button class="tool-btn" onclick="shareCardText('card-5')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        समर्थाचिये घरीचे श्र्वान । त्यासी सर्वही देती मान । तैसा तुज म्हणवितों दीन । हा अपमान कवणाचा ॥ १७ ॥<br>
-        लक्ष्मी तुझे पायांतळी । आम्ही भिक्षेसी घालोनि झोळी । येणे तुझी ब्रीदावळी । कैसी राहील गोविंदा ॥ १८ ॥<br>
-        कुबेर तुझा भांडारी । आम्हां फिरविसी दारोदारीं । यांत पुरुषार्थ मुरारी । काय तुजला पैं आला ॥ १९ ॥<br>
-        द्रौपदीसी वस्त्रें अनंता । देत होतासी भाग्यवंता । आम्हांलागी कृपणता । कोठोनि आणिली गोविंदा ॥ २० ॥
+        <div class="ovi-block">
+            समर्थाचिये घरीचे श्वान । त्यासी सर्वही देती मान ।<br>
+            तैसा तुज म्हणवितों दीन । हा अपमान कवणाचा ॥ १७ ॥
+        </div>
+        <div class="ovi-block">
+            लक्ष्मी तुझे पायांतळी । आम्ही भिक्षेसी घालोनि झोळी ।<br>
+            येणे तुझी ब्रीदावळी । कैसी राहील गोविंदा ॥ १८ ॥
+        </div>
+        <div class="ovi-block">
+            कुबेर तुझा भांडारी । आम्हां फिरविसी दारोदारीं ।<br>
+            यांत पुरुषार्थ मुरारी । काय तुजला पैं आला ॥ १९ ॥
+        </div>
+        <div class="ovi-block">
+            द्रौपदीसी वस्त्रें अनंता । देत होतासी भाग्यवंता ।<br>
+            आम्हांलागी कृपणता । कोठोनि आणिली गोविंदा ॥ २० ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -407,7 +479,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी २१ - २४: भगवंताच्या लीला व भक्ताचा अधिकार -->
+<!-- ओवी २१ - २४ -->
 <div class="shloka-card-16-9" id="card-6">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -416,10 +488,22 @@
         <button class="tool-btn" onclick="shareCardText('card-6')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        मावेची करुनी द्रौपदी सती । अन्ने पुरविलीं मध्यरातीं । ऋषीश्र्वरांच्या बैसल्या पंक्ती । तृप्त केल्या क्षणमात्रें ॥ २१ ॥<br>
-        अन्नासाठी दाही दिशा । आम्हा फिरविसी जगदिशा । कृपाळुवा परमपुरुषा । करुणा कैसी तुज न ये ॥ २२ ॥<br>
-        अंगीकासा री या शिरोमणी । तुज प्रार्थितो मधुर वचनीं । अंगीकार केलिया झणीं । मज हातीचे न सोडावें ॥ २३ ॥<br>
-        समुद्रे अंगीकारिला वडवानळ । तेणें अंतरी होतसे विव्हळ । ऐसें असोनि सर्वकाळ । अंतरी सांठविला तयानें ॥ २४ ॥
+        <div class="ovi-block">
+            मावेची करुनी द्रौपदी सती । अन्ने पुरविलीं मध्यरातीं ।<br>
+            ऋषीश्वरांच्या बैसल्या पंक्ती । तृप्त केल्या क्षणमात्रें ॥ २१ ॥
+        </div>
+        <div class="ovi-block">
+            अन्नासाठी दाही दिशा । आम्हा फिरविसी जगदिशा ।<br>
+            कृपाळुवा परमपुरुषा । करुणा कैसी तुज न ये ॥ २२ ॥
+        </div>
+        <div class="ovi-block">
+            अंगीकाराचा री शिरोमणी । तुज प्रार्थितो मधुर वचनीं ।<br>
+            अंगीकार केलिया झणीं । मज हातीचे न सोडावें ॥ २३ ॥
+        </div>
+        <div class="ovi-block">
+            समुद्रे अंगीकारिला वडवानळ । तेणें अंतरी होतसे विव्हळ ।<br>
+            ऐसें असोनि सर्वकाळ । अंतरी सांठविला तयानें ॥ २४ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -428,7 +512,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी २५ - २८: देवाची क्षमाशीलता व मानवी दोष -->
+<!-- ओवी २५ - २८ -->
 <div class="shloka-card-16-9" id="card-7">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -437,10 +521,22 @@
         <button class="tool-btn" onclick="shareCardText('card-7')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        कूर्में पृथ्वीचा घेतला भार । तेणे सोडिला नाहीं बडिवार । एवढा ब्रह्मांड गोळ थोर । त्याचा अंगीकार पै केला ॥ २५ ॥<br>
-        शंकरे धरिलें हाळाहळा । तेणे नीळवर्ण झाला गळा । परी त्यागिले नाही गोपाळा । भक्तवत्सला गोविंदा ॥ २६ ॥<br>
-        माझ्या अपराधांच्या परी । वर्णितां शिणली वैखरी । दुष्ट पतित दुराचारी । अधमाहूनि अधम ॥ २७ ॥<br>
-        विषयासक्त मंदमति आळशी । कृपण कुव्यसनी मलिन मानसीं । सदा सर्वकाळ सज्जनांसी । द्रोह करी सर्वदा ॥ २८ ॥
+        <div class="ovi-block">
+            कूर्में पृथ्वीचा घेतला भार । तेणे सोडिला नाहीं बडिवार ।<br>
+            एवढा ब्रह्मांड गोळ थोर । त्याचा अंगीकार पै केला ॥ २५ ॥
+        </div>
+        <div class="ovi-block">
+            शंकरे धरिलें हाळाहळा । तेणे नीळवर्ण झाला गळा ।<br>
+            परी त्यागिले नाही गोपाळा । भक्तवत्सला गोविंदा ॥ २६ ॥
+        </div>
+        <div class="ovi-block">
+            माझ्या अपराधांच्या परी । वर्णितां शिणली वैखरी ।<br>
+            दुष्ट पतित दुराचारी । अधमाहूनि अधम ॥ २७ ॥
+        </div>
+        <div class="ovi-block">
+            विषयासक्त मंदमति आळशी । कृपण कुव्यसनी मलिन मानसीं ।<br>
+            सदा सर्वकाळ सज्जनांसी । द्रोह करी सर्वदा ॥ २८ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -449,7 +545,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी २९ - ३२: आत्मनिवेदन व पतितपावन रूप -->
+<!-- ओवी २९ - ३२ -->
 <div class="shloka-card-16-9" id="card-8">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -458,10 +554,22 @@
         <button class="tool-btn" onclick="shareCardText('card-8')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        वचनोक्ति नाहीं मधुर । अत्यंत जनासी निष्ठुर । सकळ पामरांमाजीं पामर । व्यर्थ बडिवार जगी वाजे ॥ २९ ॥<br>
-        काम क्रोध मद मत्सर । हें शरीर त्यांचे बिढार । कामकल्पनेसी थोर । दृढ येथे केला असे ॥ ३० ॥<br>
-        अठरा भार वनस्पतींची लेखणी । समुद्र भरला मषीकरुनी। माझे अवगुण लिहितां धरणीं । तरी लिहिले न जाती गोविंदा ॥ ३१ ॥<br>
-        ऐसा पतित मी खरा । तरी तूं पतितपावन शारङ्गधरा । तुवां अंगीकार केलिया गदाधरा । कोण गुणदोष गणील ॥ ३२ ॥
+        <div class="ovi-block">
+            वचनोक्ति नाहीं मधुर । अत्यंत जनासी निष्ठुर ।<br>
+            सकळ पामरांमाजीं पामर । व्यर्थ बडिवार जगी वाजे ॥ २९ ॥
+        </div>
+        <div class="ovi-block">
+            काम क्रोध मद मत्सर । हें शरीर त्यांचे बिढार ।<br>
+            कामकल्पनेसी थोर । दृढ येथे केला असे ॥ ३० ॥
+        </div>
+        <div class="ovi-block">
+            अठरा भार वनस्पतींची लेखणी । समुद्र भरला मषीकरुनी ।<br>
+            माझे अवगुण लिहितां धरणीं । तरी लिहिले न जाती गोविंदा ॥ ३१ ॥
+        </div>
+        <div class="ovi-block">
+            ऐसा पतित मी खरा । तरी तूं पतितपावन शारङ्गधरा ।<br>
+            तुवां अंगीकार केलिया गदाधरा । कोण गुणदोष गणील ॥ ३२ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -470,7 +578,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ३३ - ३६: भगवत्कृपेचे दृष्टान्त -->
+<!-- ओवी ३३ - ३६ -->
 <div class="shloka-card-16-9" id="card-9">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -479,10 +587,22 @@
         <button class="tool-btn" onclick="shareCardText('card-9')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        नीचा रतली रायासीं । तिसी कोण म्हणेल दासी । लोह लागतां परिसासी । पूर्वस्थिती मग कैंची ॥ ३३ ॥<br>
-        गांवीचे होते लेंडवोहळ । गंगेसी मिळतां गंगाजळ । काकविष्ठेचे झाले पिंपळ । तयांसी निंद्य कोण म्हणे ॥ ३४ ॥<br>
-        तैसा कुजाति मी अमंगळ । परी तुझा म्हणवितो केवळ । कन्या देऊनियां कुळ । मग काय विचारावे ॥ ३५ ॥<br>
-        जाणत असतां अपराधी नर । तरी कां केला अंगीकार । अंगीकारावरी अव्हेर । समर्थें केला न पाहिजे ॥ ३६ ॥
+        <div class="ovi-block">
+            नीचा रतली रायासीं । तिसी कोण म्हणेल दासी ।<br>
+            लोह लागतां परिसासी । पूर्वस्थिती मग कैंची ॥ ३३ ॥
+        </div>
+        <div class="ovi-block">
+            गांवीचे होते लेंडवोहळ । गंगेसी मिळतां गंगाजळ ।<br>
+            काकविष्ठेचे झाले पिंपळ । तयांसी निंद्य कोण म्हणे ॥ ३४ ॥
+        </div>
+        <div class="ovi-block">
+            तैसा कुजाति मी अमंगळ । परी तुझा म्हणवितो केवळ ।<br>
+            कन्या देऊनियां कुळ । मग काय विचारावे ॥ ३५ ॥
+        </div>
+        <div class="ovi-block">
+            जाणत असतां अपराधी नर । तरी कां केला अंगीकार ।<br>
+            अंगीकारावरी अव्हेर । समर्थें केला न पाहिजे ॥ ३६ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -491,7 +611,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ३७ - ४०: नामस्मरण व प्रार्थना -->
+<!-- ओवी ३७ - ४० -->
 <div class="shloka-card-16-9" id="card-10">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -500,10 +620,22 @@
         <button class="tool-btn" onclick="shareCardText('card-10')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        धांव पाव रे गोविंदा । हाती घेवोनिया गदा । करी माझ्या कर्मांचा चेंदा । सच्चिदानंदा श्रीहरी ॥ ३७ ॥<br>
-        तुझिया नामाची अपरिमित शक्ती । तेथे माझी पापे किती । कृपाळुवा लक्ष्मीपती । बरवे चित्ती विचारी ॥ ३८ ॥<br>
-        तुझे नाम पतितपावन । तुझे नाम कलिमलदहन । तुझे नाम भवतारण । संकटनाशन नाम तुझे ॥ ३९ ॥<br>
-        आता प्रार्थना ऐक कमळापती । तुझे नामी राहो माझी मती । हेंची मागतो पुढत पुढती । परंज्योती व्यंकटेशा ॥ ४० ॥
+        <div class="ovi-block">
+            धांव पाव रे गोविंदा । हाती घेवोनिया गदा ।<br>
+            करी माझ्या कर्मांचा चेंदा । सच्चिदानंदा श्रीहरी ॥ ३७ ॥
+        </div>
+        <div class="ovi-block">
+            तुझिया नामाची अपरिमित शक्ती । तेथे माझी पापे किती ।<br>
+            कृपाळुवा लक्ष्मीपती । बरवे चित्ती विचारी ॥ ३८ ॥
+        </div>
+        <div class="ovi-block">
+            तुझे नाम पतितपावन । तुझे नाम कलिमलदहन ।<br>
+            तुझे नाम भवतारण । संकटनाशन नाम तुझे ॥ ३९ ॥
+        </div>
+        <div class="ovi-block">
+            आता प्रार्थना ऐक कमळापती । तुझे नामी राहो माझी मती ।<br>
+            हेंची मागतो पुढत पुढती । परंज्योती व्यंकटेशा ॥ ४० ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -512,7 +644,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ४१ - ४४: नामावळी (भगवंताची दिव्य नामे १) -->
+<!-- ओवी ४१ - ४४ -->
 <div class="shloka-card-16-9" id="card-11">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -521,10 +653,22 @@
         <button class="tool-btn" onclick="shareCardText('card-11')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        तू अनंत तुझी अनंत नामे । तयांमाजी अति सुगमे । ती मी अल्पमती प्रेमे । स्मरूनी प्रार्थना करीतसे ॥ ४१ ॥<br>
-        श्रीव्यंकटेशा वासुदेवा । प्रद्युम्ना अनंता केशवा । संकर्षणा श्रीधरा माधवा । नारायणा आदिमूर्ती ॥ ४२ ॥<br>
-        पद्मनाभा दामोदरा । प्रकाशगहना परात्परा । आदि अनादि विश्वंभरा । जगदुद्धारा जगदीशा ॥ ४३ ॥<br>
-        कृष्णा विष्णो हृषीकेशा । अनिरुद्धा पुरुषोत्तमा परेशा । नृसिंह वामन भार्गवेशा । बौद्ध कलंकी निजमूर्ती ॥ ४४ ॥
+        <div class="ovi-block">
+            तू अनंत तुझी अनंत नामे । तयांमाजी अति सुगमे ।<br>
+            ती मी अल्पमती प्रेमे । स्मरूनी प्रार्थना करीतसे ॥ ४१ ॥
+        </div>
+        <div class="ovi-block">
+            श्रीव्यंकटेशा वासुदेवा । प्रद्युम्ना अनंता केशवा ।<br>
+            संकर्षणा श्रीधरा माधवा । नारायणा आदिमूर्ती ॥ ४२ ॥
+        </div>
+        <div class="ovi-block">
+            पद्मनाभा दामोदरा । प्रकाशगहना परात्परा ।<br>
+            आदि अनादि विश्वंभरा । जगदुद्धारा जगदीशा ॥ ४३ ॥
+        </div>
+        <div class="ovi-block">
+            कृष्णा विष्णो हृषीकेशा । अनिरुद्धा पुरुषोत्तमा परेशा ।<br>
+            नृसिंह वामन भार्गवेशा । बौद्ध कलंकी निजमूर्ती ॥ ४४ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -533,7 +677,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ४५ - ४८: नामावळी (भगवंताची दिव्य नामे २) -->
+<!-- ओवी ४५ - ४८ -->
 <div class="shloka-card-16-9" id="card-12">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -542,10 +686,22 @@
         <button class="tool-btn" onclick="shareCardText('card-12')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        अनाथरक्षका आदिपुरुषा । पूर्णब्रह्म सनातन निर्दोषा । सकळमंगळ मंगळाधीशा । सज्जनजीवना सुखमूर्ती ॥ ४५ ॥<br>
-        गुणातीता गुणज्ञा । निजबोधरूपा निमग्ना । शुध्द सात्विका सुज्ञा । गुणप्राज्ञा परमेश्वरा ॥ ४६ ॥<br>
-        श्रीनिधी श्रीवत्सलांछनधरा । भयकृदभयनाशना गिरिधरा । दुष्टदैत्यसंहारकरा । वीरा सुखकरा तू एक ॥ ४७ ॥<br>
-        निखिल निरंजन निर्विकारा । विवेकरवाणी वैरागरा । मधुमुरदैत्यसंहारकरा । असुरमर्दना उग्रमूर्ती ॥ ४८ ॥
+        <div class="ovi-block">
+            अनाथरक्षका आदिपुरुषा । पूर्णब्रह्म सनातन निर्दोषा ।<br>
+            सकळमंगळ मंगळाधीशा । सज्जनजीवना सुखमूर्ती ॥ ४५ ॥
+        </div>
+        <div class="ovi-block">
+            गुणातीता गुणज्ञा । निजबोधरूपा निमग्ना ।<br>
+            शुध्द सात्विका सुज्ञा । गुणप्राज्ञा परमेश्वरा ॥ ४६ ॥
+        </div>
+        <div class="ovi-block">
+            श्रीनिधी श्रीवत्सलांछनधरा । भयकृदभयनाशना गिरिधरा ।<br>
+            दुष्टदैत्यसंहारकरा । वीरा सुखकरा तू एक ॥ ४७ ॥
+        </div>
+        <div class="ovi-block">
+            निखिल निरंजन निर्विकारा । विवेकरवाणी वैरागरा ।<br>
+            मधुमुरदैत्यसंहारकरा । असुरमर्दना उग्रमूर्ती ॥ ४८ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -554,7 +710,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ४९ - ५२: भगवत्दर्शन व साक्षात्कार -->
+<!-- ओवी ४९ - ५२ -->
 <div class="shloka-card-16-9" id="card-13">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -563,10 +719,22 @@
         <button class="tool-btn" onclick="shareCardText('card-13')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        शंखचक्र गदाधरा । गरुडवाहना भक्तप्रियकरा । गोपीमनरंजना सुखकरा । अखंडित स्वभावे ॥ ४९ ॥<br>
-        नानानाटकसूत्रधारिया । जगद्व्यापका जगद्वर्या । कृपासमुद्रा करुणालया । मुनिजनध्येया मूळमूर्ती ॥ ५० ॥<br>
-        शेषशयना सार्वभौमा । वैकुंठवासिया निरूपमा । भक्तकैवारिया गुणधाम । पाव आम्हां ये समयी ॥ ५१ ॥<br>
-        ऐसी प्रार्थना करुनि देवीदास । अंतरी आठविला श्री व्यंकटेश । स्मरता ह्रिदयी प्रकटला ईश । त्या सुखासी पार नाही ॥ ५२ ॥
+        <div class="ovi-block">
+            शंखचक्र गदाधरा । गरुडवाहना भक्तप्रियकरा ।<br>
+            गोपीमनरंजना सुखकरा । अखंडित स्वभावे ॥ ४९ ॥
+        </div>
+        <div class="ovi-block">
+            नानानाटकसूत्रधारिया । जगद्व्यापका जगद्वर्या ।<br>
+            कृपासमुद्रा करुणालया । मुनिजनध्येया मूळमूर्ती ॥ ५० ॥
+        </div>
+        <div class="ovi-block">
+            शेषशयना सार्वभौमा । वैकुंठवासिया निरूपमा ।<br>
+            भक्तकैवारिया गुणधाम । पाव आम्हां ये समयी ॥ ५१ ॥
+        </div>
+        <div class="ovi-block">
+            ऐसी प्रार्थना करुनि देवीदास । अंतरी आठविला श्री व्यंकटेश ।<br>
+            स्मरता ह्रिदयी प्रकटला ईश । त्या सुखासी पार नाही ॥ ५२ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -575,7 +743,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ५३ - ५६: व्यंकटेश भगवंताचे चरण-सौंदर्य वर्णन -->
+<!-- ओवी ५३ - ५६ -->
 <div class="shloka-card-16-9" id="card-14">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -584,10 +752,22 @@
         <button class="tool-btn" onclick="shareCardText('card-14')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        ह्रिदयी आविर्भवली मूर्ती । त्या सुखाची अलौकिक स्थिती । आपुले आपण श्रीपती । वाचेहाती वदवीतसे ॥ ५३ ॥<br>
-        ‘ते’ स्वरूप अत्यंत सुंदर । श्रोती श्रवण कीजे सादर । सांवळी तनु सुकुमार । कुंकुमाकार पादपद्मे ॥ ५४ ॥<br>
-        सुरेख सरळ अंगोळिका । नखें जैसी चंद्ररेखा । घोटीव सुनीळ अपूर्व देखा । इंद्रनिळाचियेपरी ॥ ५५ ॥<br>
-        चरणी वाळे घागरिया । वांकी वरत्या गुजरिया । सरळ सुंदर पोटरिया । कर्दळीस्तंभाचियेपरी ॥ ५६ ॥
+        <div class="ovi-block">
+            ह्रिदयी आविर्भवली मूर्ती । त्या सुखाची अलौकिक स्थिती ।<br>
+            आपुले आपण श्रीपती । वाचेहाती वदवीतसे ॥ ५३ ॥
+        </div>
+        <div class="ovi-block">
+            ‘ते’ स्वरूप अत्यंत सुंदर । श्रोती श्रवण कीजे सादर ।<br>
+            सांवळी तनु सुकुमार । कुंकुमाकार पादपद्मे ॥ ५४ ॥
+        </div>
+        <div class="ovi-block">
+            सुरेख सरळ अंगोळिका । नखें जैसी चंद्ररेखा ।<br>
+            घोटीव सुनीळ अपूर्व देखा । इंद्रनिळाचियेपरी ॥ ५५ ॥
+        </div>
+        <div class="ovi-block">
+            चरणी वाळे घागरिया । वांकी वरत्या गुजरिया ।<br>
+            सरळ सुंदर पोटरिया । कर्दळीस्तंभाचियेपरी ॥ ५६ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -596,7 +776,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ५७ - ६०: कटी, नाभी व वक्षःस्थळ सौंदर्य -->
+<!-- ओवी ५७ - ६० -->
 <div class="shloka-card-16-9" id="card-15">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -605,10 +785,22 @@
         <button class="tool-btn" onclick="shareCardText('card-15')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        गुडघे मांडिया जानुस्थळ । कटीतटी किंकिणी विशाळ । खालते विश्वउत्पत्तिस्थळ । वरी झळाळे सोनसळा ॥ ५७ ॥<br>
-        कटीवरते नाभिस्थान । जेथोनि ब्रह्मा झाला उत्पन्न । उदरी त्रिवळी शोभे गहन । त्रैलोक्य संपूर्ण जयामाजी ॥ ५८ ॥<br>
-        वक्ष:स्थळी शोभे पदक । पाहोनि चंद्रमा अधोमुख । वैजयंती करी लखलख । विद्युल्लतेचियेपरी ॥ ५९ ॥<br>
-        ह्रिदयी श्रीवत्सलांछन । भूषण मिरवी श्रीभगवान । तयावरते कंठस्थान । जयासी मुनिजन अवलोकिती ॥ ६० ॥
+        <div class="ovi-block">
+            गुडघे मांडिया जानुस्थळ । कटीतटी किंकिणी विशाळ ।<br>
+            खालते विश्वउत्पत्तिस्थळ । वरी झळाळे सोनसळा ॥ ५७ ॥
+        </div>
+        <div class="ovi-block">
+            कटीवरते नाभिस्थान । जेथोनि ब्रह्मा झाला उत्पन्न ।<br>
+            उदरी त्रिवळी शोभे गहन । त्रैलोक्य संपूर्ण जयामाजी ॥ ५८ ॥
+        </div>
+        <div class="ovi-block">
+            वक्ष:स्थळी शोभे पदक । पाहोनि चंद्रमा अधोमुख ।<br>
+            वैजयंती करी लखलख । विद्युल्लतेचियेपरी ॥ ५९ ॥
+        </div>
+        <div class="ovi-block">
+            ह्रिदयी श्रीवत्सलांछन । भूषण मिरवी श्रीभगवान ।<br>
+            तयावरते कंठस्थान । जयासी मुनिजन अवलोकिती ॥ ६० ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -617,7 +809,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ६१ - ६४: बाहू व मुखकमळ वर्णन -->
+<!-- ओवी ६१ - ६४ -->
 <div class="shloka-card-16-9" id="card-16">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -626,10 +818,22 @@
         <button class="tool-btn" onclick="shareCardText('card-16')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        उभय बाहुदंड सरळ । नखें चंद्रापरीस तेजाळ । शोभती दोन्ही करकमळ । रातोत्पलाचीयेपरी ॥ ६१ ॥<br>
-        मनगटी विराजती कंकणे । बाहुवटी बाहुभूषणे । कंठी लेइली आभरणे । सूर्यकिरणे उगवली ॥ ६२ ॥<br>
-        कंठावरुते मुखकमळ । हनुवटी अत्यंत सुनीळ । मुखचंद्रमा अतिनिर्मळ । भक्तस्नेहाळ गोविंदा ॥ ६३ ॥<br>
-        दोन्ही अधरांमाजी दंतपंक्ती । जिव्हा जैसी लावण्यज्योती । अधरामृतप्राप्तीची गती । ते सुख जाणे लक्ष्मी ॥ ६४ ॥
+        <div class="ovi-block">
+            उभय बाहुदंड सरळ । नखें चंद्रापरीस तेजाळ ।<br>
+            शोभती दोन्ही करकमळ । रातोत्पलाचीयेपरी ॥ ६१ ॥
+        </div>
+        <div class="ovi-block">
+            मनगटी विराजती कंकणे । बाहुवटी बाहुभूषणे ।<br>
+            कंठी लेइली आभरणे । सूर्यकिरणे उगवली ॥ ६२ ॥
+        </div>
+        <div class="ovi-block">
+            कंठावरुते मुखकमळ । हनुवटी अत्यंत सुनीळ ।<br>
+            मुखचंद्रमा अतिनिर्मळ । भक्तस्नेहाळ गोविंदा ॥ ६३ ॥
+        </div>
+        <div class="ovi-block">
+            दोन्ही अधरांमाजी दंतपंक्ती । जिव्हा जैसी लावण्यज्योती ।<br>
+            अधरामृतप्राप्तीची गती । ते सुख जाणे लक्ष्मी ॥ ६४ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -638,7 +842,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ६५ - ६८: नेत्र, भृकुटी व मुकुट सौंदर्य -->
+<!-- ओवी ६५ - ६८ -->
 <div class="shloka-card-16-9" id="card-17">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -647,10 +851,22 @@
         <button class="tool-btn" onclick="shareCardText('card-17')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        सरळ सुंदर नासिक । जेथे पवनासी झाले सुख । गंडस्थळीचे तेज अधिक । लखलखीत दोहीं भागी ॥ ६५ ॥<br>
-        त्रिभुवनीचे तेज एकवटले । बरवेपण सिगेसि आले । दोन्ही पातयांनी धरिले । तेच नेत्र श्रीहरीचे ॥ ६६ ॥<br>
-        व्यंकटा भृकुटिया सुनीळा । कर्णद्वयाची अभिनव लीळा । कुंडलांच्या फांकती कळा । तो सुखसोहळा अलौकिक ॥ ६७ ॥<br>
-        भाळ विशाळ सुरेख । वरती शोभे कस्तुरीटिळक । केश कुरळे अलौकिक । मस्तकावरी शोभती ॥ ६८ ॥
+        <div class="ovi-block">
+            सरळ सुंदर नासिक । जेथे पवनासी झाले सुख ।<br>
+            गंडस्थळीचे तेज अधिक । लखलखीत दोहीं भागी ॥ ६५ ॥
+        </div>
+        <div class="ovi-block">
+            त्रिभुवनीचे तेज एकवटले । बरवेपण सिगेसि आले ।<br>
+            दोन्ही पातयांनी धरिले । तेच नेत्र श्रीहरीचे ॥ ६६ ॥
+        </div>
+        <div class="ovi-block">
+            व्यंकटा भृकुटिया सुनीळा । कर्णद्वयाची अभिनव लीळा ।<br>
+            कुंडलांच्या फांकती कळा । तो सुखसोहळा अलौकिक ॥ ६७ ॥
+        </div>
+        <div class="ovi-block">
+            भाळ विशाळ सुरेख । वरती शोभे कस्तुरीटिळक ।<br>
+            केश कुरळे अलौकिक । मस्तकावरी शोभती ॥ ६८ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -659,7 +875,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ६९ - ७२: मानसोपचार पूजारंभ -->
+<!-- ओवी ६९ - ७२ -->
 <div class="shloka-card-16-9" id="card-18">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -668,10 +884,22 @@
         <button class="tool-btn" onclick="shareCardText('card-18')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        मस्तकी मुकुट आणि किरीटी । सभोवती झिळमिळ्याची दाटी । त्यावरी मयूरपिच्छांची वेटी । ऐसा जगजेठी देखिला ॥ ६९ ॥<br>
-        ऐसा तू देवाधिदेव । गुणातीत वासुदेव । माझिया भक्तीस्तव । सगुणरूप झालासी ॥ ७० ॥<br>
-        आतां करू तुझी पूजा । जगज्जीवना अधोक्षजा । आर्ष भावार्थ हा माझा । तुज अर्पण केला असे ॥ ७१ ॥<br>
-        करूनि पंचामृतस्नान । शुद्धामृत वरी घालून । तुज करू मंगलस्नान । पुरुषसूक्तेकरूनियां ॥ ७२ ॥
+        <div class="ovi-block">
+            मस्तकी मुकुट आणि किरीटी । सभोवती झिळमिळ्याची दाटी ।<br>
+            त्यावरी मयूरपिच्छांची वेटी । ऐसा जगजेठी देखिला ॥ ६९ ॥
+        </div>
+        <div class="ovi-block">
+            ऐसा तू देवाधिदेव । गुणातीत वासुदेव ।<br>
+            माझिया भक्तीस्तव । सगुणरूप झालासी ॥ ७० ॥
+        </div>
+        <div class="ovi-block">
+            आतां करू तुझी पूजा । जगज्जीवना अधोक्षजा ।<br>
+            आर्ष भावार्थ हा माझा । तुज अर्पण केला असे ॥ ७१ ॥
+        </div>
+        <div class="ovi-block">
+            करूनि पंचामृतस्नान । शुद्धामृत वरी घालून ।<br>
+            तुज करू मंगलस्नान । पुरुषसूक्तेकरूनियां ॥ ७२ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -680,7 +908,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ७३ - ७६: षोडशोपचार पूजा समर्पण -->
+<!-- ओवी ७३ - ७६ -->
 <div class="shloka-card-16-9" id="card-19">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -689,10 +917,22 @@
         <button class="tool-btn" onclick="shareCardText('card-19')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        वस्त्रे आणि यज्ञोपवीत । तुजलागी करू प्रीत्यर्थ । गंधाक्षता पुष्पे बहुत । तुजलागी समर्पू ॥ ७३ ॥<br>
-        धूप दीप नैवेद्य । फल तांबूल दक्षिणा शुद्ध । वस्त्रे भूषणे गोमेद । पद्मरागादिकरुनी ॥ ७४ ॥<br>
-        भक्तवत्सला गोविंदा । ही पूजा अंगीकारावी परमानंदा । नमस्कारुनी पादारविंदा । मग प्रदक्षिणा आरंभिली ॥ ७५ ॥<br>
-        ऐसा षोडशोपचारे भगवंत । यथाविधि पूजिला हृदयांत । मग प्रार्थना आरंभिली बहुत । वरप्रसाद मागावया ॥ ७६ ॥
+        <div class="ovi-block">
+            वस्त्रे आणि यज्ञोपवीत । तुजलागी करू प्रीत्यर्थ ।<br>
+            गंधाक्षता पुष्पे बहुत । तुजलागी समर्पू ॥ ७३ ॥
+        </div>
+        <div class="ovi-block">
+            धूप दीप नैवेद्य । फल तांबूल दक्षिणा शुद्ध ।<br>
+            वस्त्रे भूषणे गोमेद । पद्मरागादिकरुनी ॥ ७४ ॥
+        </div>
+        <div class="ovi-block">
+            भक्तवत्सला गोविंदा । ही पूजा अंगीकारावी परमानंदा ।<br>
+            नमस्कारुनी पादारविंदा । मग प्रदक्षिणा आरंभिली ॥ ७५ ॥
+        </div>
+        <div class="ovi-block">
+            ऐसा षोडशोपचारे भगवंत । यथाविधि पूजिला हृदयांत ।<br>
+            मग प्रार्थना आरंभिली बहुत । वरप्रसाद मागावया ॥ ७६ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -701,7 +941,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ७७ - ८०: स्तवन व जयजयकार -->
+<!-- ओवी ७७ - ८० -->
 <div class="shloka-card-16-9" id="card-20">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -710,10 +950,22 @@
         <button class="tool-btn" onclick="shareCardText('card-20')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        जयजयाजी श्रुतिशास्त्रआगमा । जयजयाजी गुणातीत परब्रह्मा । जयजयाजी हृदयवासिया रामा । जगदुद्धारा जगद्गुरू ॥ ७७ ॥<br>
-        जयजयाजी पंकजाक्षा । जयजयाजी कमलाधीशा । जयजयाजी पूर्णपरेशा । अव्यक्तवक्ता सुखमुर्ती ॥ ७८ ॥<br>
-        जयजयाजी भक्तरक्षका । जयजयाजी वैकुंठनायका । जयजयाजी जगपालका । भक्तांसी सखा तू एक ॥ ७९ ॥<br>
-        जयजयाजी निरंजना । जयजयाजी परात्परगहना । जयजयाजी शुन्यातीत निर्गुणा । परिसावी विज्ञापन एक माझी ॥ ८० ॥
+        <div class="ovi-block">
+            जयजयाजी श्रुतिशास्त्रआगमा । जयजयाजी गुणातीत परब्रह्मा ।<br>
+            जयजयाजी हृदयवासिया रामा । जगदुद्धारा जगद्गुरू ॥ ७७ ॥
+        </div>
+        <div class="ovi-block">
+            जयजयाजी पंकजाक्षा । जयजयाजी कमलाधीशा ।<br>
+            जयजयाजी पूर्णपरेशा । अव्यक्तवक्ता सुखमुर्ती ॥ ७८ ॥
+        </div>
+        <div class="ovi-block">
+            जयजयाजी भक्तरक्षका । जयजयाजी वैकुंठनायका ।<br>
+            जयजयाजी जगपालका । भक्तांसी सखा तू एक ॥ ७९ ॥
+        </div>
+        <div class="ovi-block">
+            जयजयाजी निरंजना । जयजयाजी परात्परगहना ।<br>
+            जयजयाजी शुन्यातीत निर्गुणा । परिसावी विज्ञापन एक माझी ॥ ८० ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -722,7 +974,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ८१ - ८४: परोपकार व भक्तांसाठी वरदान मागणी -->
+<!-- ओवी ८१ - ८४ -->
 <div class="shloka-card-16-9" id="card-21">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -731,10 +983,22 @@
         <button class="tool-btn" onclick="shareCardText('card-21')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        मजलागी देई ऐसा वर । जेणें घडेल परोपकार । हेंचि मागणे साचार । वारंवार प्रार्थीतसे ॥ ८१ ॥<br>
-        हा ग्रंथ जो पठण करी । त्यासी दु:ख नसे संसारी । पठणमात्रे चराचरी । विजयी करी जगाते ॥ ८२ ॥<br>
-        लाग्नार्थियाचे व्हावें लग्न । धनार्थीयासी व्हावें धन । पुत्रार्थियाचे मनोरथ पूर्ण । पुत्र देऊनि करावे ॥ ८३ ॥<br>
-        पुत्र विजयी आणि पंडित । शतायुषी भाग्यवंत । पितृसेवेसी अत्यंत रत । जयाचे चित्त सर्वकाळ ॥ ८४ ॥
+        <div class="ovi-block">
+            मजलागी देई ऐसा वर । जेणें घडेल परोपकार ।<br>
+            हेंचि मागणे साचार । वारंवार प्रार्थीतसे ॥ ८१ ॥
+        </div>
+        <div class="ovi-block">
+            हा ग्रंथ जो पठण करी । त्यासी दु:ख नसे संसारी ।<br>
+            पठणमात्रे चराचरी । विजयी करी जगाते ॥ ८२ ॥
+        </div>
+        <div class="ovi-block">
+            लाग्नार्थियाचे व्हावें लग्न । धनार्थीयासी व्हावें धन ।<br>
+            पुत्रार्थियाचे मनोरथ पूर्ण । पुत्र देऊनि करावे ॥ ८३ ॥
+        </div>
+        <div class="ovi-block">
+            पुत्र विजयी आणि पंडित । शतायुषी भाग्यवंत ।<br>
+            पितृसेवेसी अत्यंत रत । जयाचे चित्त सर्वकाळ ॥ ८४ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -743,7 +1007,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ८५ - ८८: आरोग्य, विजय व विद्या प्राप्ती वरदान -->
+<!-- ओवी ८५ - ८८ -->
 <div class="shloka-card-16-9" id="card-22">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -752,10 +1016,22 @@
         <button class="tool-btn" onclick="shareCardText('card-22')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        उदार आणि सर्वज्ञ । पुत्र देई भक्तालागून । व्याधिष्ठांची पीडा हरण । तत्काळ कीजे गोविंदा ॥ ८५ ॥<br>
-        क्षय अपस्मार कुष्ठादि रोग । ग्रंथपठणे सरावा भोग । योगाभ्यासियासी योग । पठणमात्रे साधावा ॥ ८६ ॥<br>
-        दरिद्री व्हावा भाग्यवंत । शत्रूचा व्हावा नि:पात । सभा व्हावी वश समस्त । ग्रंथपठणेकरुनिया ॥ ८७ ॥<br>
-        विद्यार्थियासी विद्या व्हावी । युद्धी शस्त्रे न लागावी । पठणे जगात कीर्ति व्हावी । साधु साधु म्हणोनिया ॥ ८८ ॥
+        <div class="ovi-block">
+            उदार आणि सर्वज्ञ । पुत्र देई भक्तालागून ।<br>
+            व्याधिष्ठांची पीडा हरण । तत्काळ कीजे गोविंदा ॥ ८५ ॥
+        </div>
+        <div class="ovi-block">
+            क्षय अपस्मार कुष्ठादि रोग । ग्रंथपठणे सरावा भोग ।<br>
+            योगाभ्यासियासी योग । पठणमात्रे साधावा ॥ ८६ ॥
+        </div>
+        <div class="ovi-block">
+            दरिद्री व्हावा भाग्यवंत । शत्रूचा व्हावा नि:पात ।<br>
+            सभा व्हावी वश समस्त । ग्रंथपठणेकरुनिया ॥ ८७ ॥
+        </div>
+        <div class="ovi-block">
+            विद्यार्थियासी विद्या व्हावी । युद्धी शस्त्रे न लागावी ।<br>
+            पठणे जगात कीर्ति व्हावी । साधु साधु म्हणोनिया ॥ ८८ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -764,7 +1040,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ८९ - ९२: भगवंताचे प्रत्यक्ष वरदान कथन -->
+<!-- ओवी ८९ - ९२ -->
 <div class="shloka-card-16-9" id="card-23">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -773,10 +1049,22 @@
         <button class="tool-btn" onclick="shareCardText('card-23')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        अती व्हावे मोक्षसाधन । ऐसे प्रार्थनेसी दीजे मन । एवढे मागतो वरदान । कृपानिधे गोविंदा ॥ ८९ ॥<br>
-        प्रसन्न झाला व्यंकटरमण । देवीदासासी दिधले वरदान । ग्रंथाक्षरी माझे वचन । यथार्थ जाण निश्चयेसी ॥ ९० ॥<br>
-        ग्रंथी धरोनि विश्वास । पठण करील रात्रंदिवस । त्यालागी मी जगदीश । क्षण एक न विसंबे ॥ ९१ ॥<br>
-        इच्छा धरोनि करील पठण । त्याचे सांगतो मी प्रमाण । सर्व कामनेसी साधन । पठण एक मंडळ ॥ ९२ ॥
+        <div class="ovi-block">
+            अती व्हावे मोक्षसाधन । ऐसे प्रार्थनेसी दीजे मन ।<br>
+            एवढे मागतो वरदान । कृपानिधे गोविंदा ॥ ८९ ॥
+        </div>
+        <div class="ovi-block">
+            प्रसन्न झाला व्यंकटरमण । देवीदासासी दिधले वरदान ।<br>
+            ग्रंथाक्षरी माझे वचन । यथार्थ जाण निश्चयेसी ॥ ९० ॥
+        </div>
+        <div class="ovi-block">
+            ग्रंथी धरोनि विश्वास । पठण करील रात्रंदिवस ।<br>
+            त्यालागी मी जगदीश । क्षण एक न विसंबे ॥ ९१ ॥
+        </div>
+        <div class="ovi-block">
+            इच्छा धरोनि करील पठण । त्याचे सांगतो मी प्रमाण ।<br>
+            सर्व कामनेसी साधन । पठण एक मंडळ ॥ ९२ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -785,7 +1073,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ९३ - ९६: अनुष्ठान कालावधी व नियम -->
+<!-- ओवी ९३ - ९६ -->
 <div class="shloka-card-16-9" id="card-24">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -794,10 +1082,22 @@
         <button class="tool-btn" onclick="shareCardText('card-24')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        पुत्रार्थियाने तीन मास । धनार्थियाने एकवीस दिवस । कन्यार्थियाने षण्मास । ग्रंथ आदरे वाचवा ॥ ९३ ॥<br>
-        क्षय अपस्मार कुष्टादि रोग । इत्यादि साधने प्रयोग । त्यासी एक मंडळ सांग । पठणेकरूनि कार्यसिद्धी ॥ ९४ ॥<br>
-        हे वाक्य माझे नेमस्त । ऐसे बोलिला श्रीभगवंत । साच न मानी जयाचे चित्त । त्यासी अध:पात सत्य होय ॥ ९५ ॥<br>
-        विश्वास धरील ग्रंथपठणी । त्यासी कृपा करील चक्रपाणी । वर दिधला कृपा करुनी । अनुभवे कळो येईल ॥ ९६ ॥
+        <div class="ovi-block">
+            पुत्रार्थियाने तीन मास । धनार्थियाने एकवीस दिवस ।<br>
+            कन्यार्थियाने षण्मास । ग्रंथ आदरे वाचवा ॥ ९३ ॥
+        </div>
+        <div class="ovi-block">
+            क्षय अपस्मार कुष्टादि रोग । इत्यादि साधने प्रयोग ।<br>
+            त्यासी एक मंडळ सांग । पठणेकरूनि कार्यसिद्धी ॥ ९४ ॥
+        </div>
+        <div class="ovi-block">
+            हे वाक्य माझे नेमस्त । ऐसे बोलिला श्रीभगवंत ।<br>
+            साच न मानी जयाचे चित्त । त्यासी अध:पात सत्य होय ॥ ९५ ॥
+        </div>
+        <div class="ovi-block">
+            विश्वास धरील ग्रंथपठणी । त्यासी कृपा करील चक्रपाणी ।<br>
+            वर दिधला कृपा करुनी । अनुभवे कळो येईल ॥ ९६ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -806,7 +1106,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी ९७ - १००: पौराणिक भक्तरक्षण उदाहरणे -->
+<!-- ओवी ९७ - १०० -->
 <div class="shloka-card-16-9" id="card-25">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -815,10 +1115,22 @@
         <button class="tool-btn" onclick="shareCardText('card-25')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        गजेन्द्राचिया आकांतासी । कैसा पावला हृषीकेशी । प्रल्हादाचिया भावार्थासी । स्तंभातूनी प्रगटला ॥ ९७ ॥<br>
-        वज्रासाठी गोविंदा । गोवर्धन परमानंदा । उचलोनिया स्वानंदकंदा । सुखी केले तये वेळी ॥ ९८ ॥<br>
-        वत्साचे परी भक्तांसी । मोहे पान्हावे धेनु जैसी । मातेच्या स्नेह्तुलनेसी । त्याचपरी घडलेसे ॥ ९९ ॥<br>
-        ऐसा तू माझा दातार । भक्तांसी घालिसी कृपेची पाखर । हा तयाचा निर्धार । अनाथनाथ नाम तुझे ॥ १०० ॥
+        <div class="ovi-block">
+            गजेन्द्राचिया आकांतासी । कैसा पावला हृषीकेशी ।<br>
+            प्रल्हादाचिया भावार्थासी । स्तंभातूनी प्रगटला ॥ ९७ ॥
+        </div>
+        <div class="ovi-block">
+            वज्रासाठी गोविंदा । गोवर्धन परमानंदा ।<br>
+            उचलोनिया स्वानंदकंदा । सुखी केले तये वेळी ॥ ९८ ॥
+        </div>
+        <div class="ovi-block">
+            वत्साचे परी भक्तांसी । मोहे पान्हावे धेनु जैसी ।<br>
+            मातेच्या स्नेह्तुलनेसी । त्याचपरी घडलेसे ॥ ९९ ॥
+        </div>
+        <div class="ovi-block">
+            ऐसा तू माझा दातार । भक्तांसी घालिसी कृपेची पाखर ।<br>
+            हा तयाचा निर्धार । अनाथनाथ नाम तुझे ॥ १०० ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -827,7 +1139,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी १०१ - १०४: गुरुचैतन्य व दिव्य अनुभव -->
+<!-- ओवी १०१ - १०४ -->
 <div class="shloka-card-16-9" id="card-26">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -836,10 +1148,22 @@
         <button class="tool-btn" onclick="shareCardText('card-26')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        श्रीचैतन्यकृपा अलोकिक । संतोषोनि वैकुंठनायक । वर दिधला अलोकिक । जेणे सुख सकळांसी ॥ १०१ ॥<br>
-        हा ग्रंथ लिहिता गोविंद । या वचनी न धरावा भेद । हृदयी वसे परमानंद । अनुभवसिद्ध सकळांसी ॥ १०२ ॥<br>
-        या ग्रंथीचा इतिहास । भावें बोलिला विष्णुदास । आणिक न लागती सायास । पठणमात्रे कार्यसिद्धी ॥ १०३ ॥<br>
-        पार्वतीस उपदेशी कैलासनायक । पूर्णानंद प्रेमसुख । त्याचा पार न जाणती ब्राह्मादिक । मुनि सुरवर विस्मित ॥ १०४ ॥
+        <div class="ovi-block">
+            श्रीचैतन्यकृपा अलोकिक । संतोषोनि वैकुंठनायक ।<br>
+            वर दिधला अलोकिक । जेणे सुख सकळांसी ॥ १०१ ॥
+        </div>
+        <div class="ovi-block">
+            हा ग्रंथ लिहिता गोविंद । या वचनी न धरावा भेद ।<br>
+            हृदयी वसे परमानंद । अनुभवसिद्ध सकळांसी ॥ १०२ ॥
+        </div>
+        <div class="ovi-block">
+            या ग्रंथीचा इतिहास । भावें बोलिला विष्णुदास ।<br>
+            आणिक न लागती सायास । पठणमात्रे कार्यसिद्धी ॥ १०३ ॥
+        </div>
+        <div class="ovi-block">
+            पार्वतीस उपदेशी कैलासनायक । पूर्णानंद प्रेमसुख ।<br>
+            त्याचा पार न जाणती ब्राह्मादिक । मुनि सुरवर विस्मित ॥ १०४ ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
@@ -848,7 +1172,7 @@
     <div class="card-watermark">✨ santvani.co.in</div>
 </div>
 
-<!-- ओवी १०५ - १०८: फलश्रुती व संपूर्णता -->
+<!-- ओवी १०५ - १०८ -->
 <div class="shloka-card-16-9" id="card-27">
     <div class="card-stotra-title">🚩 श्री व्यंकटेश स्तोत्र</div>
     <div class="card-top-tools">
@@ -857,12 +1181,24 @@
         <button class="tool-btn" onclick="shareCardText('card-27')" title="WhatsApp वर शेअर करा"><i class="fa-brands fa-whatsapp"></i></button>
     </div>
     <div class="shloka-text">
-        प्रत्यक्ष प्रगटेल वनमाळी । त्रैलोक्य भजत त्रिकाळी । ध्याती योगी आणि चंद्रमौळी । शेषाद्रीपर्वती उभा असे ॥ १०५ ॥<br>
-        देवीदास विनवी श्रोतयां चतुरां । प्रार्थनाशतक पठण करा । जावया मोक्षाचिया मंदिरा । काहीं न लागती सायास ॥ १०६ ॥<br>
-        एकाग्रचित्ते एकांती । अनुष्ठान कीजे मध्यराती । बैसोनिया स्वस्थचित्ती । प्रत्यक्ष मूर्ति प्रगटेल ॥ १०७ ॥<br>
-        तेथें देह्भावासी नुरे ठाव । अवघा चतुर्भुज देव । त्याचे चरणी ठेवोनि भाव । वरप्रसाद मागावा ॥ १०८ ॥<br><br>
-        ॥ इति श्रीदेवीदासविरचितं श्रीव्यंकटेशस्तोत्रं संपूर्णम् ॥<br>
-        ॥ श्री व्यंकटेशार्पणमस्तु ॥
+        <div class="ovi-block">
+            प्रत्यक्ष प्रगटेल वनमाळी । त्रैलोक्य भजत त्रिकाळी ।<br>
+            ध्याती योगी आणि चंद्रमौळी । शेषाद्रीपर्वती उभा असे ॥ १०५ ॥
+        </div>
+        <div class="ovi-block">
+            देवीदास विनवी श्रोतयां चतुरां । प्रार्थनाशतक पठण करा ।<br>
+            जावया मोक्षाचिया मंदिरा । काहीं न लागती सायास ॥ १०६ ॥
+        </div>
+        <div class="ovi-block">
+            एकाग्रचित्ते एकांती । अनुष्ठान कीजे मध्यराती ।<br>
+            बैसोनिया स्वस्थचित्ती । प्रत्यक्ष मूर्ति प्रगटेल ॥ १०७ ॥
+        </div>
+        <div class="ovi-block">
+            तेथें देह्भावासी नुरे ठाव । अवघा चतुर्भुज देव ।<br>
+            त्याचे चरणी ठेवोनि भाव । वरप्रसाद मागावा ॥ १०८ ॥<br><br>
+            ॥ इति श्रीदेवीदासविरचितं श्रीव्यंकटेशस्तोत्रं संपूर्णम् ॥<br>
+            ॥ श्री व्यंकटेशार्पणमस्तु ॥
+        </div>
     </div>
     <div class="meaning-box">
         <div class="meaning-title">मराठी भावार्थ:</div>
