@@ -2145,4 +2145,76 @@
        <changefreq>daily</changefreq>
        <priority>0.4096</priority>
   </url>
+
+  <!-- १. मुख्य नित्य पठण स्तोत्रे कॅटेगरी पेज -->
+  <url>
+       <loc>https://santvani.co.in/nitya-pathan-stotra.html</loc>
+       <lastmod>2026-08-08T12:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8500</priority>
+  </url>
+
+  <!-- २. सार्थ रामरक्षा स्तोत्र -->
+  <url>
+       <loc>https://santvani.co.in/pages/nitya-pathan-stotra/ramraksha-stotra.html</loc>
+       <lastmod>2026-08-08T12:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- ३. सार्थ मारुती स्तोत्र -->
+  <url>
+       <loc>https://santvani.co.in/pages/nitya-pathan-stotra/maruti-stotra.html</loc>
+       <lastmod>2026-08-08T12:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- ४. सार्थ श्री गणपती अथर्वशीर्ष -->
+  <url>
+       <loc>https://santvani.co.in/pages/nitya-pathan-stotra/ganpati-atharvashirsha.html</loc>
+       <lastmod>2026-08-08T12:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- ५. सार्थ हनुमान चालीसा -->
+  <url>
+       <loc>https://santvani.co.in/pages/nitya-pathan-stotra/hanuman-chalisa.html</loc>
+       <lastmod>2026-08-08T12:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- ६. मनाचे श्लोक (१ ते २०५) -->
+  <url>
+       <loc>https://santvani.co.in/pages/nitya-pathan-stotra/manache-shlok.html</loc>
+       <lastmod>2026-08-08T12:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- ७. सार्थ संकटनाशन गणेश स्तोत्र -->
+  <url>
+       <loc>https://santvani.co.in/pages/nitya-pathan-stotra/sankat-nashan-ganesh-stotra.html</loc>
+       <lastmod>2026-08-08T12:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- ८. सार्थ श्री व्यंकटेश स्तोत्र -->
+  <url>
+       <loc>https://santvani.co.in/pages/nitya-pathan-stotra/vyankatesh-stotra.html</loc>
+       <lastmod>2026-08-08T12:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- ९. सार्थ ऋग्वैदिक श्रीसूक्त -->
+  <url>
+       <loc>https://santvani.co.in/pages/nitya-pathan-stotra/shree-sukta.html</loc>
+       <lastmod>2026-08-08T12:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8000</priority>
+  </url>
 </urlset>
