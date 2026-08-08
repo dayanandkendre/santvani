@@ -56,8 +56,7 @@
      ]
     }
     </script>
-
-   <style>
+                  <style>
     .stotra-container {
         max-width: 850px;
         margin: 0 auto;
@@ -162,25 +161,27 @@
         margin-bottom: 0;
     }
 
-    /* अर्थ बॉक्स */
+    /* अर्थ बॉक्स - डाव्या बाजूने सुंदर अलाइनमेंट */
     .meaning-box {
         background: rgba(0, 0, 0, 0.35);
         border: 1px solid #222222;
         border-radius: 6px;
-        padding: 10px 15px;
+        padding: 12px 18px;
         color: #cccccc;
         font-size: 14px;
-        line-height: 1.6;
-        text-align: center;
+        line-height: 1.7;
+        text-align: left; /* सविस्तर अर्थ वाचण्यासाठी डावीकडून अलाइन */
         width: 100%;
         box-sizing: border-box;
     }
 
+    /* अर्थ टायटल सेंटरलाच राहील */
     .meaning-title {
         color: #ff9f1c;
         font-weight: 600;
-        margin-bottom: 4px;
-        font-size: 13px;
+        margin-bottom: 6px;
+        font-size: 13.5px;
+        text-align: center;
     }
 
     .stotra-intro {
@@ -233,7 +234,8 @@
 
         .meaning-box {
             font-size: 12.5px;
-            padding: 8px 8px;
+            padding: 10px 10px;
+            text-align: left; /* मोबाईलवरही डावीकडून अलाइनमेंट छान दिसेल */
         }
 
         .card-watermark {
@@ -243,6 +245,7 @@
         }
     }
 </style>
+   
 </head>
 <body>
 
