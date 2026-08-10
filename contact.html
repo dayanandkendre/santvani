@@ -310,16 +310,21 @@
 
     <script src="menu.js"></script>
 
-    <!-- Firebase Realtime Database Code (Modular SDK) -->
+    <!-- Firebase Realtime Database Script -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
-        // तुमच्या Realtime Database ची कन्फिगरेशन
+        // तुमची खरी कन्फिगरेशन जोडली आहे
         const firebaseConfig = {
-            databaseURL: "https://santvani-48d18-default-rtdb.firebaseio.com", // स्क्रीनशॉटमधील मूळ URL
-            projectId: "santvani-48d18"
-            // टीप: तुमच्या प्रोजेक्ट सेटिंग्समधील इतर apiKey इ. सुद्धा जोडली तरी चालेल
+            apiKey: "AIzaSyBQTDVzvz5tFktEEsnPZQ6G_ADoxGL0ZW4",
+            authDomain: "santvani-48d18.firebaseapp.com",
+            databaseURL: "https://santvani-48d18-default-rtdb.firebaseio.com",
+            projectId: "santvani-48d18",
+            storageBucket: "santvani-48d18.firebasestorage.app",
+            messagingSenderId: "769467907364",
+            appId: "1:769467907364:web:4fe85b182eb43359f707b1",
+            measurementId: "G-D5XSFWVWTP"
         };
 
         // Firebase initialize करणे
