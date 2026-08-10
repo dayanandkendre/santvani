@@ -118,6 +118,10 @@
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
         }
+        .btn-submit:disabled {
+            background: #555;
+            cursor: not-allowed;
+        }
         .royal-divider {
             display: flex;
             align-items: center;
@@ -133,6 +137,28 @@
             margin: 0 15px;
             color: #ffcc00;
             font-size: 1.2rem;
+        }
+        /* Status Text Message Box */
+        #form-status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 6px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            text-align: center;
+            display: none;
+        }
+        #form-status.success {
+            display: block;
+            background-color: #1b4332;
+            color: #2ec4b6;
+            border: 1px solid #2ec4b6;
+        }
+        #form-status.error {
+            display: block;
+            background-color: #4a0e17;
+            color: #ff4d6d;
+            border: 1px solid #ff4d6d;
         }
     </style>
 </head>
@@ -158,8 +184,8 @@
                 <li><a href="vangmay-sangrah.html">वाङ्मय संग्रह</a></li>
                 <li><a href="sarth-haripath.html">हरिपाठ</a></li>
                 <li><a href="granth-sampada.html">ग्रंथ संपदा</a></li>
-<li><a href="nitya-pathan-stotra.html">नित्य पठण स्तोत्रे</a></li>
-<li><a href="pages/blog/ekadashi-vrat.html">सर्व एकादशी </a></li>
+                <li><a href="nitya-pathan-stotra.html">नित्य पठण स्तोत्रे</a></li>
+                <li><a href="pages/blog/ekadashi-vrat.html">सर्व एकादशी </a></li>
                 <li>
                     <a href="#">इतर <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i></a>
                     <ul class="dropdown-menu">
@@ -222,7 +248,7 @@
                 <!-- उजवा भाग: संदेश फॉर्म -->
                 <div class="contact-form-box">
                     <h2>संदेश पाठवा</h2>
-                    <form action="#" method="POST">
+                    <form id="contactForm">
                         <div class="form-group">
                             <label for="name">आपले नाव</label>
                             <input type="text" id="name" name="name" class="form-control" placeholder="तुमचे पूर्ण नाव टाका" required>
@@ -235,7 +261,10 @@
                             <label for="message">तुमचा संदेश / सूचना</label>
                             <textarea id="message" name="message" class="form-control" rows="4" placeholder="तुमचा संदेश इथे लिहा..." required></textarea>
                         </div>
-                        <button type="submit" class="btn-submit">संदेश पाठवा <i class="fa-solid fa-paper-plane" style="margin-left: 5px;"></i></button>
+                        <button type="submit" id="submitBtn" class="btn-submit">संदेश पाठवा <i class="fa-solid fa-paper-plane" style="margin-left: 5px;"></i></button>
+                        
+                        <!-- स्टेटस मेसेज दाखवण्यासाठी -->
+                        <div id="form-status"></div>
                     </form>
                 </div>
             </div>
@@ -262,7 +291,6 @@
                     <li><a href="contact.html" class="active" style="color: #ffcc00;">संपर्क (Contact Us)</a></li>
                     <li><a href="privacy-policy.html">गोपनीयता धोरण (Privacy Policy)</a></li>
                     <li><a href="terms.html">नियम व अटी (Terms & Conditions)</a></li>
-<li><a href="disclaimer.html">अस्वीकरण (Disclaimer)</a></li>
                     <li><a href="disclaimer.html">अस्वीकरण (Disclaimer)</a></li>
                 </ul>
             </div>
@@ -282,6 +310,74 @@
             <p class="copyright-text">© २०२६ संतवाणी लायब्ररी. सर्व हक्क सुरक्षित. | रचना वारकरी संप्रदाय चरणी समर्पित.</p>
         </div>
     </footer>
-<script src="menu.js"></script>
+
+    <script src="menu.js"></script>
+
+    <!-- Firebase SDK (Version 10 App & Firestore) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+
+        // ⚠️ टीप: खालील firebaseConfig मध्ये तुमचे स्वतःचे Firebase प्रोजेक्टचे डिटेल्स टाका
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT_ID.appspot.com",
+            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        // Firebase Initialize करा
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // HTML Elements
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const formStatus = document.getElementById('form-status');
+
+        // Form Submit Event Listener
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // फॉर्म मधील व्हॅल्युज घेणे
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            // बटण डिसेबल करणे आणि लोडिंग दाखवणे
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'पाठवत आहे... <i class="fa-solid fa-spinner fa-spin"></i>';
+            formStatus.className = '';
+            formStatus.style.display = 'none';
+
+            try {
+                // Firebase Cloud Firestore मधील 'contacts' या कलेक्शनमध्ये डेटा सेव्ह करा
+                await addDoc(collection(db, "contacts"), {
+                    name: name,
+                    email: email,
+                    message: message,
+                    timestamp: serverTimestamp()
+                });
+
+                // यशस्वी संदेश
+                formStatus.textContent = 'आपला संदेश यशस्वीरीत्या पाठवला गेला आहे! धन्यवाद.';
+                formStatus.className = 'success';
+                
+                // फॉर्म रीसेट करा
+                contactForm.reset();
+            } catch (error) {
+                console.error("Error adding document: ", error);
+                // एरर संदेश
+                formStatus.textContent = 'संदेश पाठवताना अडचण आली. कृपया पुन्हा प्रयत्न करा.';
+                formStatus.className = 'error';
+            } finally {
+                // बटण पुन्हा पूर्ववत करा
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'संदेश पाठवा <i class="fa-solid fa-paper-plane" style="margin-left: 5px;"></i>';
+            }
+        });
+    </script>
 </body>
 </html>
