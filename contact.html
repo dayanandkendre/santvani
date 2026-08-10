@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* प्रीमियम कॉन्टॅक्ट पेजसाठी अतिरिक्त इनलाइन स्टाईल्स */
         .inner-hero {
             position: relative;
             padding: 100px 20px 60px 20px;
@@ -74,7 +73,6 @@
             color: #dddddd;
             margin: 0;
         }
-        /* फॉर्म डिझाईन */
         .form-group {
             margin-bottom: 20px;
         }
@@ -138,7 +136,7 @@
             color: #ffcc00;
             font-size: 1.2rem;
         }
-        /* Status Text Message Box */
+        /* फॉर्म मेसेज स्टेटस */
         #form-status {
             margin-top: 15px;
             padding: 10px;
@@ -263,7 +261,6 @@
                         </div>
                         <button type="submit" id="submitBtn" class="btn-submit">संदेश पाठवा <i class="fa-solid fa-paper-plane" style="margin-left: 5px;"></i></button>
                         
-                        <!-- स्टेटस मेसेज दाखवण्यासाठी -->
                         <div id="form-status"></div>
                     </form>
                 </div>
@@ -313,70 +310,59 @@
 
     <script src="menu.js"></script>
 
-    <!-- Firebase SDK (Version 10 App & Firestore) -->
+    <!-- Firebase Realtime Database Code (Modular SDK) -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-        import { getFirestore, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+        import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
 
-        // ⚠️ टीप: खालील firebaseConfig मध्ये तुमचे स्वतःचे Firebase प्रोजेक्टचे डिटेल्स टाका
+        // तुमच्या Realtime Database ची कन्फिगरेशन
         const firebaseConfig = {
-            apiKey: "YOUR_API_KEY",
-            authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-            projectId: "YOUR_PROJECT_ID",
-            storageBucket: "YOUR_PROJECT_ID.appspot.com",
-            messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-            appId: "YOUR_APP_ID"
+            databaseURL: "https://santvani-48d18-default-rtdb.firebaseio.com", // स्क्रीनशॉटमधील मूळ URL
+            projectId: "santvani-48d18"
+            // टीप: तुमच्या प्रोजेक्ट सेटिंग्समधील इतर apiKey इ. सुद्धा जोडली तरी चालेल
         };
 
-        // Firebase Initialize करा
+        // Firebase initialize करणे
         const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
+        const database = getDatabase(app);
 
-        // HTML Elements
         const contactForm = document.getElementById('contactForm');
         const submitBtn = document.getElementById('submitBtn');
         const formStatus = document.getElementById('form-status');
 
-        // Form Submit Event Listener
-        contactForm.addEventListener('submit', async (e) => {
+        contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            // फॉर्म मधील व्हॅल्युज घेणे
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
 
-            // बटण डिसेबल करणे आणि लोडिंग दाखवणे
             submitBtn.disabled = true;
             submitBtn.innerHTML = 'पाठवत आहे... <i class="fa-solid fa-spinner fa-spin"></i>';
-            formStatus.className = '';
-            formStatus.style.display = 'none';
 
-            try {
-                // Firebase Cloud Firestore मधील 'contacts' या कलेक्शनमध्ये डेटा सेव्ह करा
-                await addDoc(collection(db, "contacts"), {
-                    name: name,
-                    email: email,
-                    message: message,
-                    timestamp: serverTimestamp()
-                });
-
-                // यशस्वी संदेश
-                formStatus.textContent = 'आपला संदेश यशस्वीरीत्या पाठवला गेला आहे! धन्यवाद.';
+            // Realtime Database मधील 'contacts' या नोडमध्ये डेटा सेव्ह करणे
+            const contactsRef = ref(database, 'contacts');
+            
+            push(contactsRef, {
+                name: name,
+                email: email,
+                message: message,
+                date: new Date().toLocaleString('mr-IN')
+            })
+            .then(() => {
+                formStatus.textContent = 'आपला संदेश यशस्वीरीत्या पाठवला गेला आहे!';
                 formStatus.className = 'success';
-                
-                // फॉर्म रीसेट करा
                 contactForm.reset();
-            } catch (error) {
-                console.error("Error adding document: ", error);
-                // एरर संदेश
+            })
+            .catch((error) => {
+                console.error("Error writing to Database:", error);
                 formStatus.textContent = 'संदेश पाठवताना अडचण आली. कृपया पुन्हा प्रयत्न करा.';
                 formStatus.className = 'error';
-            } finally {
-                // बटण पुन्हा पूर्ववत करा
+            })
+            .finally(() => {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = 'संदेश पाठवा <i class="fa-solid fa-paper-plane" style="margin-left: 5px;"></i>';
-            }
+            });
         });
     </script>
 </body>
