@@ -163,818 +163,455 @@
         </div>
     </header>
 
-   <!-- ================= MAIN CONTENT SECTION ================= -->
-    <main class="main-container" id="pad-content" style="padding: 40px 15px; max-width: 1200px; margin: 0 auto;">
+   <!-- ================= MAIN SECTION CONTENT ================= -->
+<main class="main-container" id="pad-content" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
 
-        <div class="page-header text-center" style="text-align: center; margin-bottom: 40px;">
-            <h2 class="page-title" style="font-family: 'Yatra One', cursive; color: #ffb703; font-size: 2.2rem; margin-bottom: 10px;">
-                🌸 मीराबाईंचे प्रसिद्ध २० पद (सार्थ मराठी भावार्थासह) 🌸
-            </h2>
-            <p class="page-subtitle" style="color: #ccc; font-size: 1.1rem;">
-                श्रीकृष्णभक्तीत तल्लीन झालेल्या संत मीराबाईंच्या अलौकिक पदांचा भावार्थ
-            </p>
-        </div>
+    <!-- Page Title -->
+    <div class="page-header" style="text-align: center; margin-bottom: 50px;">
+        <h2 style="font-family: 'Rozha One', 'Yatra One', serif; font-size: 2.2rem; color: #ffb703; margin-bottom: 10px;">संत मीराबाईंचे सुप्रसिद्ध २० पद (सार्थ मराठी भावार्थ)</h2>
+        <p style="font-family: 'Poppins', sans-serif; color: #d1d1d1; font-size: 1rem;">कृष्णभक्तीमध्ये तल्लीन झालेल्या मीराबाईंच्या पवित्र रचना आणि त्यांचा भावार्थ</p>
+    </div>
 
-        <div class="abhang-list-container">
+    <div class="pad-collection">
 
-            <!-- पद १ -->
-            <div class="abhang-card" id="pad-1">
-                <div class="abhang-header">
-                    <h2>पद १: बरसै बदरिया सावन की</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        बरसै बदरिया सावन की।<br>
-                        सावन की मन भावन की।<br>
-                        सावन में उमग्यो मेरो मनवा,<br>
-                        भनक सुनी हरि आवन की।।<br>
-                        उमड घुमड चहुं दिससे आयो,<br>
-                        दामण दमके झर लावन की।<br>
-                        नान्हीं नान्हीं बूंदन मेहा बरसै,<br>
-                        सीतल पवन सोहावन की।।<br>
-                        मीरां के प्रभु गिरधर नागर,<br>
-                        आनन्द मंगल गावन की।।
-                    </p>
-                    
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">मन भावन – आवडणारा; उमग्यो – उल्हासित; नागर – चतुर/श्रीकृष्ण; आनंद – आनंद/उल्हास.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-1" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई म्हणतात की, मनाला भुरळ घालणारा श्रावण महिना आला असून मेघ बरसू लागले आहेत. हे सुंदर दृश्य पाहून माझे हृदय उल्हासाने भरून आले आहे, कारण मला श्रीकृष्णाच्या (हरीच्या) आगमनाची चाहूल लागली आहे. चारी दिशांनी ढग दाटून आले आहेत, वीज कडकत आहे, रिमझिम पाऊस पडत आहे आणि थंड व आल्हाददायक वारा वाहत आहे. हे सखे, माझे प्रभु गिरधर नागर येत आहेत, चला आपण एकत्र येऊन आनंदाने मंगलगीत गाऊया!</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(1)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(1)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(1)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-1" onclick="toggleAbhangView(1)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद २ -->
-            <div class="abhang-card" id="pad-2">
-                <div class="abhang-header">
-                    <h2>पद २: अंसुवन जल सींचि सींचि</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        अंसुवन जल सींचि सींचि प्रेम बेलि बोई।<br>
-                        अब तो बेल फैल गई आणँद फल होई।<br>
-                        दूध की मथनियाँ बड़े प्रेम से बिलोई।<br>
-                        माखन जब काढ़ि लियो छाछ पिये कोई॥<br>
-                        भगति देखि राजी हई जगत देखि रोई।<br>
-                        दासी मीरा लाल गिरिधर तारो अब मोही॥
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">अँसुवन – अश्रू; मथनियाँ – मथाणी; बिलोई – ढवळले; काढ़ि लियो – काढून घेतले; तारो – उद्धार करा.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-2" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई म्हणतात की, त्यांनी आपल्या अश्रूंच्या पाण्याने शिंपडून कृष्णप्रेमाची वेल लावली आहे. आता ही वेल पसरली असून त्यावर आनंदरूपी फळे येऊ लागली आहेत. त्यांनी भक्तीरूपी मथाणीने प्रेमाने दूध ढवळले, त्यातून लोणी (सारतत्व) काढून घेतले आणि ताक (सारहीन जगाच्या गोष्टी) सोडले. भगवंताची भक्ती पाहून त्या प्रसन्न होतात, पण जगाचा मोह-माया पाहून त्यांना वाईट वाटते. त्या श्रीकृष्णाला विनवणी करतात की, "मी तुमची दासी आहे, आता माझा उद्धार करा."</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(2)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(2)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(2)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-2" onclick="toggleAbhangView(2)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद ३ -->
-            <div class="abhang-card" id="pad-3">
-                <div class="abhang-header">
-                    <h2>पद ३: मेरे तो गिरिधर गोपाल दूसरो न कोई</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        मेरे तो गिरिधर गोपाल दूसरो न कोई॥<br>
-                        जाके सर मोर मुकुट मेरो पति सोई।<br>
-                        तात मात भ्रात बंधु आपनो न कोई॥<br>
-                        छाँड़ि दई कुल की कानि कहा करिहै कोई।<br>
-                        संतन ढिंग बैठि-बैठि लोकलाज खोई॥<br>
-                        चुनरी के किये टूक ओढ़ लीन्ही लोई।<br>
-                        मोती मूँगे उतार बनमाला पोई॥
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">कानि – घराण्याची मर्यादा; ढिंग – जवळ/संगतीत; लोकलाज – समाजाची मर्यादा; बनमाला – कंठी/तुळशीची माळ.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-3" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई म्हणतात की, ज्यांच्या डोक्यावर मयुराचा मुकुट आहे ते श्रीकृष्णच माझे सर्वस्व (पती) आहेत, त्यांच्याशिवाय माझे या जगात दुसरे कोणी नाही. आई-वडील, भाऊ-बहीण यांपैकी माझे कोणीच नाही. श्रीकृष्णासाठी मी घराण्याची सर्व मर्यादा सोडून दिली आहे, आता कोणी माझे काय करणार? संतांच्या संगतीत बसून मी लोकलाज सोडली आहे. राजेशाही वस्त्रे आणि अलंकार त्यागून मी साधी वैराग्याची वस्त्रे व कंठी धारण केली आहे.</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(3)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(3)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(3)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-3" onclick="toggleAbhangView(3)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद ४ -->
-            <div class="abhang-card" id="pad-4">
-                <div class="abhang-header">
-                    <h2>पद ४: बसो मेरे नैनन में नंदलाल</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        बसो मेरे नैनन में नंदलाल।<br>
-                        मोहनी मूरत, साँवरी सूरत, नैना बने बिसाल।<br>
-                        अधर सुधारस मुरली राजत, उर बैजंती माल॥<br>
-                        छुद्रघंटिका कटितट सोभित, नूपुर सबद रसाल।<br>
-                        मीरां प्रभु संतन सुखदाई भगत बछल गोपाल॥
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">मोहनी – भुरळ घालणारी; सुधारस – अमृताचा रस; छुद्रघंटिका – लहान घुंगरू; नूपुर – पैंजण; रसाल – मधुर.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-4" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई श्रीकृष्णाच्या सुंदर रूपाची आळवणी करताना म्हणतात, "हे नंदलाला, माझ्या डोळ्यांत येऊन बस! तुझे हे मोहिनी घालणारे रूप, सावळा रंग आणि मोठे डोळे अत्यंत मनमोहक आहेत. ओठांवर अमृताचा रस पाजणारी बासरी आणि छातीवर वैजयंती माळ शोभून दिसत आहे. कमरेला लहान घंटी आणि पायांतील पैंजणांचा नाद फार मधुर वाटतो. मीरांचे प्रभु श्रीकृष्ण हे संतांना सुख देणारे आणि भक्तांचे रक्षण करणारे आहेत."</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(4)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(4)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(4)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-4" onclick="toggleAbhangView(4)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद ५ -->
-            <div class="abhang-card" id="pad-5">
-                <div class="abhang-header">
-                    <h2>पद ५: लगी मोहि राम खुमारी हो</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        लगी मोहि राम खुमारी हो।<br>
-                        रमझम बरसै मेहंड़ा भीजै तन सारी हो॥<br>
-                        चहूँदिस चमकै दामणी गरजै घन भारी हो।<br>
-                        सत गुरु भेद बताइया खोली भरम किवारी हो॥<br>
-                        सब घट दीसै आतमा सबही सूँ न्यारी हो।<br>
-                        दीपग जोऊँ ग्यान का चढूँ अगम अटारी हो।<br>
-                        मीरा दासी राम की इमरत बलिहारी हो॥
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">खुमारी – नशा/धुंदी; भरम – भ्रम/मोह; किवारी – दार/दरवाजा; बलिहारी – निछावर होणे.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-5" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई म्हणतात की, मला आता रामनामाची (भगवंताच्या प्रेमाची) धुंदी चढली आहे. बाहेर रिमझिम पाऊस पडत आहे आणि माझे शरीर व वस्त्रे भिजत आहेत. चहूबाजूला वीज चमकत आहे आणि ढग गरजतात. माझ्या सद्गुरूंनी मला गुपित सांगून भ्रमाचे (मोहाचे) दरवाजे उघडले आहेत. आता मला प्रत्येक शरीरात परमात्मा दिसत आहे. ज्ञानाचा दिवा लावून मी आध्यात्मिक उच्च शिखरावर पोहोचले आहे, आणि मी रामनामाच्या अमृतावर पूर्णपणे निछावर झाले आहे.</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(5)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(5)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(5)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-5" onclick="toggleAbhangView(5)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद ६ -->
-            <div class="abhang-card" id="pad-6">
-                <div class="abhang-header">
-                    <h2>पद ६: मैं गिरधर के घर जाऊँ</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        मैं गिरधर के घर जाऊँ।।<br>
-                        गिरधर म्हाँरों साँचों प्रीतम, देखत रूप लुभाऊँ।<br>
-                        रैण पड़े तब ही उठि जाऊँ, भोर भये उठि आऊँ।<br>
-                        रैणदिना वाके सँग खेलूँ, ज्यूँ त्यूँ वाहि लुभाऊँ।<br>
-                        जो पहिरावै सोई पहिरूँ, जो दे सोई खाऊँ।<br>
-                        मेरी उणकी प्रीत पुराणी, उण बिण पल न रहाऊँ।<br>
-                        जहाँ बैठावें तितही बैठूँ, बेचे तो बिक जाऊँ।<br>
-                        मीराँ के प्रभु गिरधर नागर, बार बार बलि जाऊँ।।
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">साँचो – सच्चा/खरा; रैण – रात्र; भोर – सकाळ; तितही – तिथेच; वाहि – त्याला.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-6" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई म्हणतात, "मी तर श्रीकृष्णाच्या घरीच जाणार. तोच माझा खरा प्रियकर आहे, त्याचे रूप पाहून मी मोहित होते. रात्र-दिवस मी त्याच्यासोबत खेळते आणि त्याला खूश ठेवण्याचा प्रयत्न करते. तो जे घालायला देईल तेच मी घालेन आणि जे खायला देईल तेच खाईन. आमचे प्रेम पूर्वजन्मीचे आहे. तो जिथे बसवेल तिथे मी बसेन आणि जर त्याने मला विकले, तरी मी आनंदाने विकली जाईन!"</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(6)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(6)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(6)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-6" onclick="toggleAbhangView(6)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद ७ -->
-            <div class="abhang-card" id="pad-7">
-                <div class="abhang-header">
-                    <h2>पद ७: हे री मैं तो प्रेम दीवानी</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        हे री मैं तो प्रेम दीवानी, मेरा दरद न जाने कोय।<br>
-                        सूली ऊपर सेज हमारी, किस बिध सोना होय।<br>
-                        गगन मंडल पर सेज पिया की, किस बिध मिलना होय॥<br>
-                        घायल की गति घायल जानै, कि जिन लागी होय।<br>
-                        जौहरी की गति जौहरी जाने, कि जिन लागी होय॥<br>
-                        दरद की मारी बन बन डोलूँ, वैद मिल्यो नहीं कोय।<br>
-                        मीरां की प्रभु पीर मिटै, जब वैद सांवलया होय॥
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">सूली – शूल/यातना; वैद – वैद्य/डॉक्टर; पीर – दुःख/वेदना; गगन मंडल – आकाशरूपी आकाशमंडळ.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-7" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई म्हणतात, "हे सखे! मी तर प्रेमाने वेडी झाली आहे, माझे दुःख कोणालाच समजत नाही. दुःखाच्या या शुल्यावर झोपणे कसे शक्य आहे? जखमी व्यक्तीची वेदना फक्त तोच जाणू शकतो जो स्वतः जखमी आहे, आणि रत्नाची पारख फक्त जवाहीरच करू शकतो. मी दुःखाने व्याकुळ होऊन रानावनात फिरत आहे पण वैद्य मिळाला नाही. मीराबाईंचे दुःख तेव्हाच संपेल जेव्हा स्वतः सावळ्या श्रीकृष्ण वैद्य बनून उपचारासाठी येतील."</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(7)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(7)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(7)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-7" onclick="toggleAbhangView(7)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद ८ -->
-            <div class="abhang-card" id="pad-8">
-                <div class="abhang-header">
-                    <h2>पद ८: जोगिया री प्रीतड़ी है दुखड़ा री मूल</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        जोगिया री प्रीतड़ी है दुखड़ा री मूल।<br>
-                        हिलमिल बात बणावट मीठी पाछे जावत भूल॥<br>
-                        तोड़त जेज करत नहिं सजनी जैसे चमेली के मूल।<br>
-                        मीरा कहे प्रभु तुमरे दरस बिन लगत हिवड़ा में सूल॥
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">प्रीतड़ी – प्रेम/स्नेह; दुखड़ा – दुःख; हिवड़ा – मन/हृदय; सूल – काटा.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-8" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई म्हणतात की, या जोगी (वैरागी श्रीकृष्ण) सोबतचे प्रेम हे सर्व दुःखांचे मूळ आहे. आधी ते गोड-गोड बोलून जवळ येतात आणि नंतर विसरून जातात. चमेलीच्या फुलाप्रमाणे हे नाते तोडायला ते एक क्षणही लावत नाहीत. मीराबाई म्हणतात की, हे प्रभु! तुमच्या दर्शनाशिवाय माझ्या हृदयात काट्यांसारखी तीव्र वेदना होत आहे.</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(8)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(8)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(8)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-8" onclick="toggleAbhangView(8)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद ९ -->
-            <div class="abhang-card" id="pad-9">
-                <div class="abhang-header">
-                    <h2>पद ९: पग घुँघरू बाँध मीरा नाची रे</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        पग घुँघरू बाँध मीरा नाची रे।<br>
-                        मैं तो मेरे नारायण की आपहि हो गई दासी रे।<br>
-                        लोग कहे मीरा भई बावरी न्यात कहै कुलनासी रे।<br>
-                        विष का प्याला राणाजी भेज्या पीवत मीरा हाँसी रे।<br>
-                        मीरा के प्रभु गिरिधर नागर सहज मिले अविनासी रे।
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">बावरी – वेडी/पागल; न्यात – बिरादरी/नातेवाईक; कुलनासी – कुळाचा नाश करणारी; हाँसी – हसली.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-9" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई पायात घुंगरू बांधून श्रीकृष्णाच्या भक्तीत तल्लीन होऊन नाचत आहेत. त्या म्हणतात की, "मी स्वतःहून माझ्या नारायणाची दासी झाले आहे. लोक मला वेडी म्हणतात आणि नातेवाईक कुळाचा नाश करणारी म्हणतात. राणाजींनी मला मारण्यासाठी विषाचा प्याला पाठवला, पण मी तो हसत हसत प्याले. मीराबाईंचे प्रभु अविनाशी श्रीकृष्ण अतिशय सहजपणे प्राप्त होणारे आहेत."</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(9)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(9)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(9)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-9" onclick="toggleAbhangView(9)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद १० -->
-            <div class="abhang-card" id="pad-10">
-                <div class="abhang-header">
-                    <h2>पद १०: हरि बिन कूण गति मेरी</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        हरि बिन कूण गति मेरी।<br>
-                        तुम मेरे प्रतिकूल कहिए मैं रावरी चेरी॥<br>
-                        आदि अंत निज नाँव तेरो हीया में फेरी।<br>
-                        बेरी-बेरी पुकारि कहूँ प्रभु आरति है तेरी॥<br>
-                        यौ संसार विकार सागर-बीच में घेरी।<br>
-                        नाव फाटी प्रभु पालि बाँधो बूड़त है बेरी॥<br>
-                        विरहणि पिव की बाट जोवै राखि ल्यौ नेरी।<br>
-                        दासि मीरा राम रटन है मैं सरण हूँ तेरी॥
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">कूण – कोणती; प्रतिकूल – विरुद्ध; बेरी-बेरी – वारंवार; नेरी – जवळ.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-10" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई आळवणी करतात, "हे हरी! तुमच्याशिवाय मला कोणतीही गती नाही. तुम्ही माझ्याविरोधात काहीही म्हणा, पण मी तुमचीच दासी आहे. रात्रंदिवस माझ्या हृदयात तुमचेच नाव जपले जाते. हा संसार विकारांचा समुद्र आहे आणि माझी जीवनरूपी नाव तुटली आहे. हे प्रभु! मला बुडण्यापासून वाचवा. ही विरहिणी दासी तुमच्या नावाची रट लावून तुमच्या चरणी शरण आली आहे."</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(10)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(10)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(10)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-10" onclick="toggleAbhangView(10)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद ११ -->
-            <div class="abhang-card" id="pad-11">
-                <div class="abhang-header">
-                    <h2>पद ११: चालाँ वाही देस प्रीतम पावाँ</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        चालाँ वाही देस प्रीतम पावाँ चलाँ वाही देस।<br>
-                        कहो तो कुसुमल साड़ी रंगावाँ, कहो तो भगवा भेस॥<br>
-                        कहो तो मोतियन माँग भरावाँ, कहो छिरकावाँ केस।<br>
-                        मीरा के प्रभु गिरधर नागर, सुण गयो बिड़द नरेस॥
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">कुसुमल – लाल रंग; भगवा – केसरी रंग; भेस – वेष/पहराव.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-11" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई म्हणतात, "चला सख्यांनो! आपण त्याच देशात जाऊ जिथे माझे प्रियकर श्रीकृष्ण मिळतील. त्यांनी सांगीतले तर मी लाल रंगाची साडी नेहीन, किंवा भगवी वस्त्रे धारण करून संन्यासी होईन. त्यांनी सांगीतले तर भांगात मोती भरेन किंवा केस विखरून टाकेन. मीरांचे प्रभु गिरधर नागर आहेत आणि ही गोष्ट सर्वांना कळून चुकी आहे."</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(11)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(11)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(11)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-11" onclick="toggleAbhangView(11)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद १२ -->
-            <div class="abhang-card" id="pad-12">
-                <div class="abhang-header">
-                    <h2>पद १२: म्हाँरे घर आज्यो प्रीतम प्यारा</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        म्हाँरे घर आज्यो प्रीतम प्यारा तुम बिन सब जग खारा।<br>
-                        तन मन धन सब भेंट करूँ जो भजन करूँ मैं थाँरा।<br>
-                        तुम गुणवंत बड़े गुण सागर मैं हूँ जी औगणहारा॥<br>
-                        मैं त्रिगुणि गुण एक नाहीं तुझमें जी गुण सारा।<br>
-                        मीरा कहे प्रभु कबहि मिलोगे बिन दरसण दुखियारा॥
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">खारा – निरर्थक/व्यर्थ; औगणहारा – अवगुणी; दरसण – दर्शन.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-12" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई विनवणी करतात, "हे माझ्या प्रिय प्रभु, माझ्या घरी या! तुमच्याशिवाय हे सर्व जग खारे आणि निरर्थक वाटते. मी माझे तन, मन आणि धन सर्व तुमच्यावर ओवाळून टाकते. तुम्ही गुणांचे सागर आहात आणि मी अवगुणी आहे. तुमच्या दर्शनाशिवाय मीरा खूप दुःखी आहे, आता मला केव्हा भेटणार?"</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(12)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(12)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(12)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-12" onclick="toggleAbhangView(12)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद १३ -->
-            <div class="abhang-card" id="pad-13">
-                <div class="abhang-header">
-                    <h2>पद १३: सखी म्हारी नींद नसाणी हो</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        सखी म्हारी नींद नसाणी हो।<br>
-                        पिय रो पंथ निहारत सब रैण बिहाणी हो ||<br>
-                        सखियन सब मिल सीख दयाँ मण एक णा मानी हो।<br>
-                        बिन देख्याँ कल ना पड़ाँ मण रोस णा ठानी हो।<br>
-                        अंग खीण व्याकुल भयाँ मुख पिय पिय बाणी हो।<br>
-                        अंतर वेदन बिरह री म्हारी पीड़ णा जाणी हो।<br>
-                        ज्यूँ चातक घणकूँ रटै, मछरी ज्यूँ पाणी हो।<br>
-                        मीराँ व्याकुल बिरहणी, सुध बुध बिसराणी हो।।
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">नसाणी – नष्ट झाली; निहारत – पाहताना; खीण – बारीक/कृश; अंतर वेदन – हृदयातील वेदना.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-13" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई म्हणतात, "हे सखे! प्रियकराच्या वियोगात माझी झोप उडून गेली आहे. त्यांची वाट पाहण्यात संपूर्ण रात्र निघून गेली. सर्व सख्यांनी मला समजावले पण माझ्या मनाने मानले नाही. त्यांना पाहिल्याशिवाय मला चैन पडत नाही. माझे शरीर दुबळे झाले असून तोंडावर फक्त 'पिया-पिया' हीच हाक आहे. जशी चातक पक्षी ढगांची वाट पाहतो आणि मासा पाण्यासाठी धडपडतो, तशीच मी श्रीकृष्णाच्या विरहात माझी सुधबुध हरपून बसले आहे."</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(13)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(13)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(13)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-13" onclick="toggleAbhangView(13)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद १४ -->
-            <div class="abhang-card" id="pad-14">
-                <div class="abhang-header">
-                    <h2>पद १४: फूल मंगाऊं हार बनाऊ</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        फूल मंगाऊं हार बनाऊ। मालीन बनकर जाऊं॥<br>
-                        कै गुन ले समजाऊं। राजधन कै गुन ले समाजाऊं॥<br>
-                        गला सैली हात सुमरनी। जपत जपत घर जाऊं॥<br>
-                        मीरा कहे प्रभु गिरिधर नागर। बैठत हरिगुन गाऊं॥
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">राजधन – राजेशाही वैभव; सुमरनी – जपाची माळ; हरिगुन – भगवंताचे गुण.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-14" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई म्हणतात, "मी एक-एक फूल एकत्र करून माझ्या प्रभुसाठी हार बनवेन आणि माळणीचे रूप घेऊन त्यांच्याकडे जाईन. पण राजेशाही वैभव सोडून ही भक्ती करणे मी राणाजींना कसे समजावू? गळ्यात तुळशीची माळ आणि हातात जपाची माळ घेऊन मी घरोघरी प्रभुचे नामस्मरण करत जाईन. मीराबाई म्हणतात की, मी एकाच जागी बसून माझ्या गिरधर नागराचे गुणगान करत राहीन."</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(14)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(14)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(14)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-14" onclick="toggleAbhangView(14)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद १५ -->
-            <div class="abhang-card" id="pad-15">
-                <div class="abhang-header">
-                    <h2>पद १५: मनमोहन कान्हा विनती करूं दिन रैन</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        मनमोहन कान्हा विनती करूं दिन रैन।<br>
-                        राह तके मेरे नैन।<br>
-                        अब तो दरस देदो कुञ्ज बिहारी।<br>
-                        मनवा हैं बैचेन।<br>
-                        नेह की डोरी तुम संग जोरी।<br>
-                        हमसे तो नहीं जावेगी तोड़ी।<br>
-                        हे मुरली धर कृष्ण मुरारी।<br>
-                        तनिक ना आवे चैन।<br>
-                        राह तके मेरे नैन।
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">दिन रैन – रात्रंदिवस; नेह – प्रेम/स्नेह; डोरी – धागा/रेशीमगाठ.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-15" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई म्हणतात, "हे मनमोहन कान्हा! मी रात्रंदिवस तुझी विनवणी करत आहे. माझे डोळे सतत तुझी वाट पाहत आहेत. हे कुंजबिहारी, आता तरी दर्शन दे, माझे मन खूप बेचैन झाले आहे. माझ्या प्रेमाचा धागा तुझ्याशी जोडला गेला आहे जो माझ्याकडून कधीच तुटणार नाही. हे मुरलीधरा, तुझ्याशिवाय मला एका क्षणाचाही चैन पडत नाही."</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(15)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(15)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(15)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-15" onclick="toggleAbhangView(15)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद १६ -->
-            <div class="abhang-card" id="pad-16">
-                <div class="abhang-header">
-                    <h2>पद १६: मतवारो बादल आयें रे</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        मतवारो बादल आयें रे।<br>
-                        हरी को संदेसों कछु न लायें रे।<br>
-                        दादुर मोर पपीहा बोले।<br>
-                        कोएल सबद सुनावे रे।<br>
-                        काली अंधियारी बिजली चमके।<br>
-                        बिरहिना अती दर्पाये रे।<br>
-                        मन रे परसी हरी के चरण।
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">दादुर – बेडूक; पपीहा – चातक पक्षी; दर्पाये – घाबरवणे; परसी – स्पर्श करणे.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-16" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई म्हणतात, "मेघ भरून आले आहेत, पण त्यांनी माझ्या श्रीकृष्णाचा कोणताही संदेश आणलेला नाही. वर्षा ऋतूत मोर, पपीहा आणि कोकिळा आपले गोड आवाज काढत आहेत. काळोखात विजा चमकत आहेत, ज्यामुळे विरहिणी मीराबाईंचे मन अधिकच घाबरत आणि व्याकुळ होत आहे. माझे मन आता फक्त श्रीकृष्णाच्या चरणांना स्पर्श करण्यासाठी तडपत आहे."</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(16)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(16)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(16)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-16" onclick="toggleAbhangView(16)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद १७ -->
-            <div class="abhang-card" id="pad-17">
-                <div class="abhang-header">
-                    <h2>पद १७: पायो जी मैंने राम रतन धन पायो</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        पायो जी मैंने राम रतन धन पायो…।<br>
-                        वस्तु अमोलिक दी मेरे सतगुरु।<br>
-                        किरपा करि अपनायो॥<br>
-                        जन्म जन्म की पूंजी पाई।<br>
-                        जग में सभी खोवायो॥<br>
-                        खरचै न खूटै चोर न लुटै।<br>
-                        दिन दिन बढ़त सवायो॥<br>
-                        सत की नाव खेवटिया सतगुरु।<br>
-                        भवसागर तर आयो॥<br>
-                        मीरा के प्रभु गिरिधर नागर।<br>
-                        हरष हरष जस गायो॥
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">अमोलिक – अमूल्य; पूंजी – साठवलेले धन; खेवटिया – नावाडी; हरष – आनंद.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-17" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई आनंदाने म्हणतात, "मला रामरूपी अमूल्य धन मिळाले आहे! माझ्या सद्गुरूंनी कृपा करून मला ही अमूल्य वस्तू दिली आहे. या धनाने मला जन्मांतराची पुंजी मिळाली असून जगभरातील मोह-माया मी सोडून दिली आहे. हे असे धन आहे जे खर्च केले तरी संपत नाही, चोर चोरू शकत नाही आणि दिवसेंदिवस वाढतेच. सत्याची नाव चालवणारे सद्गुरू मिळाल्याने मी हा भवसागर पार केला आहे."</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(17)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(17)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(17)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-17" onclick="toggleAbhangView(17)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद १८ -->
-            <div class="abhang-card" id="pad-18">
-                <div class="abhang-header">
-                    <h2>पद १८: दरस बिन दुखण लागे नैन</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        दरस बिन दुखण लागे नैन।<br>
-                        जब से तुम बिछुरे प्रभु मोरे।<br>
-                        कबहूँ न पायो चैन॥<br>
-                        सबद सुनत मेरी छतियाँ कंपै।<br>
-                        मीठै लगे तुम बैन ॥<br>
-                        बिरह बिथा कासूँ कहूँ सजनी ।<br>
-                        बह गई करवत ऐन॥<br>
-                        कल परत पल हरि मग जोंवत।<br>
-                        भई छमासी रेण॥<br>
-                        ‘मीरा’ के प्रभू कब रे मिलोगे ।<br>
-                        दु:ख मेटण सुख देण॥
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">बैन – बोलणे/शब्द; मग – वाट/रस्ता; छमासी – सहा महिन्यांची; रेण – रात्र.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-18" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई म्हणतात, "प्रभु! तुमच्या दर्शनाशिवाय माझे डोळे दुखू लागले आहेत. जेव्हापासून तुम्ही दुरावला आहात, मला कधीच शांती मिळालेली नाही. तुमची गोड बोलणी आठवून माझे हृदय व्याकुळ होते. माझी विरहव्यथा मी कोणाला सांगू? तुमची वाट पाहण्यात एक-एक क्षण सहा महिन्यांच्या रात्रीसारखा मोठा वाटतो. हे मीरांचे प्रभु! माझे सर्व दुःख हरण करून मला सुख देण्यासाठी तुम्ही कधी येणार?"</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(18)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(18)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(18)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-18" onclick="toggleAbhangView(18)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद १९ -->
-            <div class="abhang-card" id="pad-19">
-                <div class="abhang-header">
-                    <h2>पद १९: माई री म्हाँ लियाँ गोविन्दाँ मोल</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        माई री म्हाँ लियाँ गोविन्दाँ मोल ।<br>
-                        थे कहयाँ छाणे म्हाँ काँ चोड्डे, लियां बजन्ता ढोल।<br>
-                        थे कहयाँ मुंहाधो म्हाँ कहयाँ सस्तो, लिया री तराजाँ तोल।<br>
-                        ‘तण वारा म्हाँ जीवण वीराँ, वाराँ अमोलक मोल।<br>
-                        मीराँ कूँ प्रभु दरसण दीज्याँ, पूरर जणम को कोल।।
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">छाणे – लपवून; चोड्डे – उघडपणे; मुंहाधो – महाग; कोल – वचन.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-19" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई ठामपणे म्हणतात, "हे सखे! मी तर गोविंदाला मोल देऊन (आपलेसे) केले आहे. तुम्ही म्हणता मी लपवून घेतले, पण मी तर ढोल वाजवून जाहीरपणे त्याला आपलेसे केले आहे. तुम्ही म्हणता हा व्यवहार महागात पडला, पण मी तराजूत तोलून (पूर्ण विचारांती) हा अगदी स्वस्त सौदा केला आहे. मी माझ्या या अमूल्य सौद्यावर माझे तन, मन आणि प्राण निछावर केले आहेत. श्रीकृष्णाने मला पूर्वजन्मी दिलेल्या वचनानुसार आता दर्शन द्यावे."</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(19)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(19)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(19)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-19" onclick="toggleAbhangView(19)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- पद २० -->
-            <div class="abhang-card" id="pad-20">
-                <div class="abhang-header">
-                    <h2>पद २०: राम मिलण के काज सखी</h2>
-                </div>
-                <div class="abhang-body">
-                    <p class="abhang-text">
-                        राम मिलण के काज सखी, मेरे आरति उर में जागी री।<br>
-                        तड़पत-तड़पत कल न परत है, बिरहबाण उर लागी री।<br>
-                        निसदिन पंथ निहारूँ पिवको, पलक न पल भर लागी री।<br>
-                        पीव-पीव मैं रटूँ रात-दिन, दूजी सुध-बुध भागी री।<br>
-                        बिरह भुजंग मेरो डस्यो कलेजो, लहर हलाहल जागी री।<br>
-                        मेरी आरति मेटि गोसाईं, आय मिलौ मोहि सागी री।<br>
-                        मीरा ब्याकुल अति उकलाणी, पिया की उमंग अति लागी री।
-                    </p>
-
-                    <div class="words-meaning-box" style="background: rgba(255, 255, 255, 0.05); padding: 12px 15px; border-radius: 8px; margin: 15px 0; border-left: 3px solid #ffb703;">
-                        <strong style="color: #ffb703;"><i class="fa-solid fa-language"></i> शब्दार्थ:</strong>
-                        <span style="color: #ddd;">आरति – तीव्र आस/आळवणी; भुजंग – सर्प/साप; हलाहल – विष; उकलाणी – व्याकुळ.</span>
-                    </div>
-
-                    <div class="sarth-box" id="sarth-20" style="display: none;">
-                        <h4><i class="fa-solid fa-book-open"></i> सार्थ मराठी भावार्थ:</h4>
-                        <p>मीराबाई म्हणतात, "हे सखे! भगवंताला भेटण्याची तीव्र आस माझ्या हृदयात जागी झाली आहे. विरहाचा बाण लागल्यामुळे मी तडपते आहे आणि मला शांतता मिळत नाही. रात्रंदिवस मी प्रियकराची वाट पाहते, डोळ्यांची पापणीही मिटत नाही. विरहरूपी सर्पाने माझ्या हृदयाला दंश केला असून त्याचा विषारी प्रभाव सर्वत्र पसरला आहे. हे प्रभु! येऊन मला भेटा आणि माझी ही तळमळ शांत करा."</p>
-                    </div>
-                </div>
-                <div class="card-footer-area">
-                    <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(20)"><i class="fa-regular fa-copy"></i>कॉपी</button>
-                        <button class="action-btn" onclick="shareAbhang(20)"><i class="fa-solid fa-share-nodes"></i>शेअर</button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(20)"><i class="fa-regular fa-image"></i>इमेज ९:१६</button>
-                    </div>
-                    <button class="toggle-view-btn" id="toggle-btn-20" onclick="toggleAbhangView(20)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- ================= FOOTER SECTION ================= -->
-    <footer class="footer">
-        <div class="footer-top">
-            <div class="footer-brand-box">
-                <h3 class="footer-logo">✨ संतवाणी</h3>
-                <p class="footer-about">मराठी संतांच्या समृद्ध विचारांचा आणि साहित्याचा डिजिटल वारसा पुढील पिढीपर्यंत पोहोचवण्याचा एक नम्र प्रयत्न.</p>
-            </div>
+        <!-- पद १ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद १: बरसै बदरिया सावन की</h3>
             
-            <div class="footer-links-box">
-                <h4>महत्त्वाचे दुवे</h4>
-                <ul>
-                    <li><a href="../../about.html">आमच्याबद्दल (About Us)</a></li>
-                    <li><a href="../../contact.html">संपर्क (Contact Us)</a></li>
-                    <li><a href="../../privacy-policy.html">गोपनीयता धोरण (Privacy Policy)</a></li>
-                    <li><a href="/terms.html">नियम व अटी (Terms & Conditions)</a></li>
-                    <li><a href="/disclaimer.html">अस्वीकरण (Disclaimer)</a></li>
-                </ul>
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                बरसै बदरिया सावन की।<br>
+                सावन की मन भावन की।<br>
+                सावन में उमग्यो मेरो मनवा,<br>
+                भनक सुनी हरि आवन की।।<br>
+                उमड घुमड चहुं दिससे आयो,<br>
+                दामण दमके झर लावन की।<br>
+                नान्हीं नान्हीं बूंदन मेहा बरसै,<br>
+                सीतल पवन सोहावन की।।<br>
+                मीरां के प्रभु गिरधर नागर,<br>
+                आनन्द मंगल गावन की।।
             </div>
 
-            <div class="footer-links-box">
-                <h4>त्वरित लिंक्स</h4>
-                <ul>
-                    <li><a href="../../index.html">मुख्य पृष्ठ</a></li>
-                    <li><a href="../../sant-sahitya.html">संत साहित्य</a></li>
-                    <li><a href="../../vangmay-sangrah.html">वाङ्मय संग्रह</a></li>
-                    <li><a href="../../sarth-haripath.html">सार्थ हरिपाठ</a></li>
-                </ul>
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई म्हणतात की, मनाला भुरळ घालणारा श्रावण महिना आला असून ढग बरसू लागले आहेत. हे सुंदर दृश्य पाहून माझे हृदय उल्हासाने भरून आले आहे, कारण मला श्रीकृष्णाच्या (हरीच्या) आगमनाची चाहूल लागली आहे. चारी दिशांनी ढग दाटून आले आहेत, वीज कडकत आहे, रिमझिम पाऊस पडत आहे आणि थंड व आल्हाददायक वारा वाहत आहे. हे सखे, माझे प्रभु गिरधर नागर येत आहेत, चला आपण एकत्र येऊन आनंदाने मंगलगीत गाऊया!
+                </p>
             </div>
-        </div>
+        </article>
 
-        <div class="footer-bottom">
-            <p class="copyright-text">© २०२६ संतवाणी लायब्ररी. सर्व हक्क सुरक्षित. | रचना वारकरी संप्रदाय चरणी समर्पित.</p>
-        </div>
-    </footer>
+        <!-- पद २ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद २: अंसुवन जल सींचि सींचि</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                अंसुवन जल सींचि सींचि प्रेम बेलि बोई।<br>
+                अब तो बेल फैल गई आणँद फल होई।<br>
+                दूध की मथनियाँ बड़े प्रेम से बिलोई।<br>
+                माखन जब काढ़ि लियो छाछ पिये कोई॥<br>
+                भगति देखि राजी हई जगत देखि रोई।<br>
+                दासी मीरा लाल गिरिधर तारो अब मोही॥
+            </div>
 
-    <!-- Scripts -->
-    <script src="../../script.js" charset="UTF-8"></script>
-    <script src="/menu.js"></script>
-</body>
-</html>
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई म्हणतात की, त्यांनी आपल्या अश्रूंच्या पाण्याने शिंपडून कृष्णप्रेमाची वेल लावली आहे. आता ही वेल खूप पसरली असून त्यावर आनंदरूपी फळे येऊ लागली आहेत. त्यांनी भक्तीरूपी मथाणीने प्रेमाने दूध ढवळले, त्यातून लोणी (सारतत्व) काढून घेतले आणि ताक (सारहीन जग) सोडले. भगवंताची भक्ती पाहून मीराबाई प्रसन्न होतात, पण जगाचा मोह-माया पाहून त्यांना वाईट वाटते. त्या श्रीकृष्णाला विनवणी करतात की, "मी तुमची दासी आहे, आता माझा उद्धार करा."
+                </p>
+            </div>
+        </article>
+
+        <!-- पद ३ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद ३: मेरे तो गिरिधर गोपाल दूसरो न कोई</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                मेरे तो गिरिधर गोपाल दूसरो न कोई॥<br>
+                जाके सर मोर मुकुट मेरो पति सोई।<br>
+                तात मात भ्रात बंधु आपनो न कोई॥<br>
+                छाँड़ि दई कुल की कानि कहा करिहै कोई।<br>
+                संतन ढिंग बैठि-बैठि लोकलाज खोई॥<br>
+                चुनरी के किये टूक ओढ़ लीन्ही लोई।<br>
+                मोती मूँगे उतार बनमाला पोई॥
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई म्हणतात की, ज्यांच्या डोक्यावर मयुराचा मुकुट आहे ते श्रीकृष्णच माझे सर्वस्व (पती) आहेत, त्यांच्याशिवाय माझे या जगात दुसरे कोणी नाही. आई-वडील, भाऊ-बहीण यांपैकी माझे कोणीच नाही. श्रीकृष्णासाठी मी घराण्याची सर्व मर्यादा सोडून दिली आहे. संतांच्या संगतीत बसून मी लोकलाज सोडली आहे. राजेशाही वस्त्रे आणि अलंकार त्यागून मी साधी वैराग्याची वस्त्रे व तुळशीची माळ धारण केली आहे.
+                </p>
+            </div>
+        </article>
+
+        <!-- पद ४ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद ४: बसो मेरे नैनन में नंदलाल</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                बसो मेरे नैनन में नंदलाल।<br>
+                मोहनी मूरत, साँवरी सूरत, नैना बने बिसाल।<br>
+                अधर सुधारस मुरली राजत, उर बैजंती माल॥<br>
+                छुद्रघंटिका कटितट सोभित, नूपुर सबद रसाल।<br>
+                मीरां प्रभु संतन सुखदाई भगत बछल गोपाल॥
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई श्रीकृष्णाच्या सुंदर रूपाची आळवणी करताना म्हणतात, "हे नंदलाला, माझ्या डोळ्यांत येऊन बस! तुझे हे मोहिनी घालणारे रूप, सावळा रंग आणि मोठे डोळे अत्यंत मनमोहक आहेत. ओठांवर अमृताचा रस पाजणारी बासरी आणि छातीवर वैजयंती माळ शोभून दिसत आहे. कमरेला लहान घंटी आणि पायांतील पैंजणांचा नाद फार मधुर वाटतो. मीरांचे प्रभु श्रीकृष्ण हे संतांना सुख देणारे आणि भक्तांचे रक्षण करणारे आहेत."
+                </p>
+            </div>
+        </article>
+
+        <!-- पद ५ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद ५: लगी मोहि राम खुमारी हो</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                लगी मोहि राम खुमारी हो।<br>
+                रमझम बरसै मेहंड़ा भीजै तन सारी हो॥<br>
+                चहूँदिस चमकै दामणी गरजै घन भारी हो।<br>
+                सत गुरु भेद बताइया खोली भरम किवारी हो॥<br>
+                सब घट दीसै आतमा सबही सूँ न्यारी हो।<br>
+                दीपग जोऊँ ग्यान का चढूँ अगम अटारी हो।<br>
+                मीरा दासी राम की इमरत बलिहारी हो॥
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई म्हणतात की, मला आता रामनामाची (भगवंताच्या प्रेमाची) धुंदी चढली आहे. बाहेर रिमझिम पाऊस पडत आहे आणि माझे शरीर व वस्त्रे भिजत आहेत. चहूबाजूला वीज चमकत आहे आणि ढग गरजतात. माझ्या सद्गुरूंनी मला गुपित सांगून भ्रमाचे (मोहाचे) दरवाजे उघडले आहेत. आता मला प्रत्येक शरीरात परमात्मा दिसत आहे. ज्ञानाचा दिवा लावून मी आध्यात्मिक उच्च शिखरावर पोहोचले आहे.
+                </p>
+            </div>
+        </article>
+
+        <!-- पद ६ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद ६: मैं गिरधर के घर जाऊँ</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                मैं गिरधर के घर जाऊँ।।<br>
+                गिरधर म्हाँरों साँचों प्रीतम, देखत रूप लुभाऊँ।<br>
+                रैण पड़े तब ही उठि जाऊँ, भोर भये उठि आऊँ।<br>
+                रैणदिना वाके सँग खेलूँ, ज्यूँ त्यूँ वाहि लुभाऊँ।<br>
+                जो पहिरावै सोई पहिरूँ, जो दे सोई खाऊँ।<br>
+                मेरी उणकी प्रीत पुराणी, उण बिण पल न रहाऊँ।<br>
+                जहाँ बैठावें तितही बैठूँ, बेचे तो बिक जाऊँ।<br>
+                मीराँ के प्रभु गिरधर नागर, बार बार बलि जाऊँ।।
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई म्हणतात, "मी तर श्रीकृष्णाच्या घरीच जाणार. तोच माझा खरा प्रियकर आहे, त्याचे रूप पाहून मी मोहित होते. रात्र-दिवस मी त्याच्यासोबत खेळते आणि त्याला खूश ठेवण्याचा प्रयत्न करते. तो जे घालायला देईल तेच मी घालेन आणि जे खायला देईल तेच खाईन. आमचे प्रेम पूर्वजन्मीचे आहे. तो जिथे बसवेल तिथे मी बसेन आणि जर त्याने मला विकले, तरी मी आनंदाने विकली जाईन!"
+                </p>
+            </div>
+        </article>
+
+        <!-- पद ७ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद ७: हे री मैं तो प्रेम दीवानी</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                हे री मैं तो प्रेम दीवानी, मेरा दरद न जाने कोय।<br>
+                सूली ऊपर सेज हमारी, किस बिध सोना होय।<br>
+                गगन मंडल पर सेज पिया की, किस बिध मिलना होय॥<br>
+                घायल की गति घायल जानै, कि जिन लागी होय।<br>
+                जौहरी की गति जौहरी जाने, कि जिन लागी होय॥<br>
+                दरद की मारी बन बन डोलूँ, वैद मिल्यो नहीं कोय।<br>
+                मीरां की प्रभु पीर मिटै, जब वैद सांवलया होय॥
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई म्हणतात, "हे सखे! मी तर प्रेमाने वेडी झाली आहे, माझे दुःख कोणालाच समजत नाही. दुःखाच्या या शुल्यावर झोपणे कसे शक्य आहे? जखमी व्यक्तीची वेदना फक्त तोच जाणू शकतो जो स्वतः जखमी आहे, आणि रत्नाची पारख फक्त जवाहीरच करू शकतो. मी दुःखाने व्याकुळ होऊन रानावनात फिरत आहे. मीराबाईंचे दुःख तेव्हाच संपेल जेव्हा स्वतः सावळ्या श्रीकृष्ण वैद्य बनून येतील."
+                </p>
+            </div>
+        </article>
+
+        <!-- पद ८ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद ८: जोगिया री प्रीतड़ी है दुखड़ा री मूल</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                जोगिया री प्रीतड़ी है दुखड़ा री मूल।<br>
+                हिलमिल बात बणावट मीठी पाछे जावत भूल॥<br>
+                तोड़त जेज करत नहिं सजनी जैसे चमेली के मूल।<br>
+                मीरा कहे प्रभु तुमरे दरस बिन लगत हिवड़ा में सूल॥
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई म्हणतात की, या जोगी (वैरागी श्रीकृष्ण) सोबतचे प्रेम हे सर्व दुःखांचे मूळ आहे. आधी ते गोड-गोड बोलून जवळ येतात आणि नंतर विसरून जातात. चमेलीच्या फुलाप्रमाणे हे नाते तोडायला ते एक क्षणही लावत नाहीत. मीराबाई म्हणतात की, हे प्रभु! तुमच्या दर्शनाशिवाय माझ्या हृदयात काट्यांसारखी तीव्र वेदना होत आहे.
+                </p>
+            </div>
+        </article>
+
+        <!-- पद ९ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद ९: पग घुँघरू बाँध मीरा नाची रे</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                पग घुँघरू बाँध मीरा नाची रे।<br>
+                मैं तो मेरे नारायण की आपहि हो गई दासी रे।<br>
+                लोग कहे मीरा भई बावरी न्यात कहै कुलनासी रे।<br>
+                विष का प्याला राणाजी भेज्या पीवत मीरा हाँसी रे।<br>
+                मीरा के प्रभु गिरिधर नागर सहज मिले अविनासी रे।
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई पायात घुंगरू बांधून श्रीकृष्णाच्या भक्तीत तल्लीन होऊन नाचत आहेत. त्या म्हणतात की, "मी स्वतःहून माझ्या नारायणाची दासी झाले आहे. लोक मला वेडी म्हणतात आणि नातेवाईक कुळाचा नाश करणारी म्हणतात. राणाजींनी मला मारण्यासाठी विषाचा प्याला पाठवला, पण मी तो हसत हसत प्याले. कारण मला विश्वास आहे की माझे गिरधर माझे रक्षण करतील."
+                </p>
+            </div>
+        </article>
+
+        <!-- पद १० -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद १०: हरि बिन कूण गति मेरी</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                हरि बिन कूण गति मेरी।<br>
+                तुम मेरे प्रतिकूल कहिए मैं रावरी चेरी॥<br>
+                आदि अंत निज नाँव तेरो हीया में फेरी।<br>
+                बेरी-बेरी पुकारि कहूँ प्रभु आरति है तेरी॥<br>
+                यौ संसार विकार सागर-बीच में घेरी।<br>
+                नाव फाटी प्रभु पालि बाँधो बूड़त है बेरी॥<br>
+                विरहणि पिव की बाट जोवै राखि ल्यौ नेरी।<br>
+                दासि मीरा राम रटन है मैं सरण हूँ तेरी॥
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई आळवणी करतात, "हे हरी! तुमच्याशिवाय मला कोणतीही गती नाही. तुम्ही माझ्याविरोधात काहीही म्हणा, पण मी तुमचीच दासी आहे. रात्रंदिवस माझ्या हृदयात तुमचेच नाव जपले जाते. हा संसार विकारांचा समुद्र आहे आणि माझी नाव तुटली आहे. हे प्रभु! मला बुडण्यापासून वाचवा, मी तुमच्या चरणी शरण आले आहे."
+                </p>
+            </div>
+        </article>
+
+        <!-- पद ११ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद ११: चालाँ वाही देस प्रीतम पावाँ</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                चालाँ वाही देस प्रीतम पावाँ चलाँ वाही देस।<br>
+                कहो तो कुसुमल साड़ी रंगावाँ, कहो तो भगवा भेस॥<br>
+                कहो तो मोतियन माँग भरावाँ, कहो छिरकावाँ केस।<br>
+                मीरा के प्रभु गिरधर नागर, सुण गयो बिड़द नरेस॥
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई म्हणतात, "चला सख्यांनो! आपण त्याच देशात जाऊ जिथे माझे प्रियकर श्रीकृष्ण राहतात. त्यांनी जर सांगितले तर मी लाल रंगाची साडी नेहीन, किंवा भगवी वस्त्रे धारण करून संन्यासी होईन. त्यांनी सांगितले तर भांगात मोती भरेन किंवा केस विखरून टाकेन. मीरांचे स्वामी गिरधर नागर आहेत."
+                </p>
+            </div>
+        </article>
+
+        <!-- पद १२ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद १२: म्हाँरे घर आज्यो प्रीतम प्यारा</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                म्हाँरे घर आज्यो प्रीतम प्यारा तुम बिन सब जग खारा।<br>
+                तन मन धन सब भेंट करूँ जो भजन करूँ मैं थाँरा।<br>
+                तुम गुणवंत बड़े गुण सागर मैं हूँ जी औगणहारा॥<br>
+                मैं त्रिगुणि गुण एक नाहीं तुझमें जी गुण सारा।<br>
+                मीरा कहे प्रभु कबहि मिलोगे बिन दरसण दुखियारा॥
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई विनवणी करतात, "माझ्या प्रिय प्रभु! माझ्या घरी या, तुमच्याशिवाय हे सर्व जग खारे आणि निरर्थक वाटते. मी माझे तन, मन आणि धन सर्व तुमच्या चरणी अर्पण करते. तुम्ही गुणांचे सागर आहात आणि मी अवगुणी आहे. तुमच्या दर्शनाशिवाय मीरा खूप दुःखी आहे, आता मला केव्हा भेटणार?"
+                </p>
+            </div>
+        </article>
+
+        <!-- पद १३ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद १३: सखी म्हारी नींद नसाणी हो</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                सखी म्हारी नींद नसाणी हो।<br>
+                पिय रो पंथ निहारत सब रैण बिहाणी हो ||<br>
+                सखियन सब मिल सीख दयाँ मण एक णा मानी हो।<br>
+                बिन देख्याँ कल ना पड़ाँ मण रोस णा ठानी हो।<br>
+                अंग खीण व्याकुल भयाँ मुख पिय पिय बाणी हो।<br>
+                अंतर वेदन बिरह री म्हारी पीड़ णा जाणी हो।<br>
+                ज्यूँ चातक घणकूँ रटै, मछरी ज्यूँ पाणी हो।<br>
+                मीराँ व्याकुल बिरहणी, सुध बुध बिसराणी हो।।
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई म्हणतात, "हे सखे! प्रियकराच्या विरहाने माझी झोप उडून गेली आहे. त्यांची वाट पाहण्यात संपूर्ण रात्र निघून गेली. सर्व सख्यांनी मला समजावले पण माझ्या मनाने मानले नाही. त्यांना पाहिल्याशिवाय मला साधे सुख-चैन मिळत नाही. माझे शरीर क्षीण झाले असून तोंडावर फक्त 'पिया-पिया' हीच हाक आहे. जशी चातक पक्षी ढगांची वाट पाहतो आणि मासा पाण्यासाठी धडपडतो, तशीच मी श्रीकृष्णाच्या विरहात स्वतःची सुधबुध हरपून बसले आहे."
+                </p>
+            </div>
+        </article>
+
+        <!-- पद १४ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद १४: फूल मंगाऊं हार बनाऊ</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                फूल मंगाऊं हार बनाऊ। मालीन बनकर जाऊं॥<br>
+                कै गुन ले समजाऊं। राजधन कै गुन ले समाजाऊं॥<br>
+                गला सैली हात सुमरनी। जपत जपत घर जाऊं॥<br>
+                मीरा कहे प्रभु गिरिधर नागर। बैठत हरिगुन गाऊं॥
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई म्हणतात की, "मी फुले आणून हार गुंफेन आणि माळणीचे रूप घेऊन माझ्या कृष्णाकडे जाईन. पण राजेशाही वैभव सोडून ही भक्ती करणे राणाजींना कसे समजावू? गळ्यात वैराग्याची माळ आणि हातात जपाची माळ घेऊन मी घरोघरी प्रभुचे नामस्मरण करत जाईन. मीराबाई म्हणतात की, मी फक्त एकाच जागी बसून माझ्या गिरधर नागराचे गुणगान करत राहीन."
+                </p>
+            </div>
+        </article>
+
+        <!-- पद १५ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद १५: मनमोहन कान्हा विनती करूं दिन रैन</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                मनमोहन कान्हा विनती करूं दिन रैन।<br>
+                राह तके मेरे नैन।<br>
+                अब तो दरस देदो कुञ्ज बिहारी।<br>
+                मनवा हैं बैचेन।<br>
+                नेह की डोरी तुम संग जोरी।<br>
+                हमसे तो नहीं जावेगी तोड़ी।<br>
+                हे मुरली धर कृष्ण मुरारी।<br>
+                तनिक ना आवे चैन।<br>
+                राह तके मेरे नैन।
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई म्हणतात, "हे मनमोहन कान्हा! मी रात्रंदिवस तुझी विनवणी करत आहे. माझे डोळे सतत तुझी वाट पाहत आहेत. हे कुंजबिहारी, अब तो दर्शन दे, माझे मन खूप बेचैन झाले आहे. माझ्या प्रेमाचा धागा तुझ्याशी जोडला गेला आहे जो माझ्याकडून कधीच तुटणार नाही. हे मुरलीधरा, तुझ्याशिवाय मला एका क्षणाचाही चैन पडत नाही."
+                </p>
+            </div>
+        </article>
+
+        <!-- पद १६ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद १६: मतवारो बादल आयें रे</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                मतवारो बादल आयें रे।<br>
+                हरी को संदेसों कछु न लायें रे।<br>
+                दादुर मोर पपीहा बोले।<br>
+                कोएल सबद सुनावे रे।<br>
+                काली अंधियारी बिजली चमके।<br>
+                बिरहिना अती दर्पाये रे।<br>
+                मन रे परसी हरी के चरण।
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई म्हणतात, "मत्त ढग भरून आले आहेत, पण त्यांनी माझ्या हरीचा कोणताही संदेश आणलेला नाही. बेडूक, मोर, पपीहा आणि कोकिळा आपले मधूर आवाज काढत आहेत. काळोखात विजा चमकत आहेत, ज्यामुळे विरहिणी मीराबाईंचे मन अधिकच घाबरत आणि व्याकुळ होत आहे. माझे मन आता फक्त श्रीकृष्णाचे चरण स्पर्श करण्यासाठी तडपत आहे."
+                </p>
+            </div>
+        </article>
+
+        <!-- पद १७ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद १७: पायो जी मैंने राम रतन धन पायो</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                पायो जी मैंने राम रतन धन पायो…।<br>
+                वस्तु अमोलिक दी मेरे सतगुरु।<br>
+                किरपा करि अपनायो॥<br>
+                जन्म जन्म की पूंजी पाई।<br>
+                जग में सभी खोवायो॥<br>
+                खरचै न खूटै चोर न लुटै।<br>
+                दिन दिन बढ़त सवायो॥<br>
+                सत की नाव खेवटिया सतगुरु।<br>
+                भवसागर तर आयो॥<br>
+                मीरा के प्रभु गिरिधर नागर।<br>
+                हरष हरष जस गायो॥
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई आनंदाने म्हणतात, "मला रामरूपी अमूल्य धन मिळाले आहे! माझ्या सद्गुरूंनी कृपा करून मला ही अमूल्य वस्तू दिली आहे. या धनाने मला जन्मांतराची पुंजी मिळाली असून जगभरातील मोह-माया मी गमावली आहे. हे असे धन आहे जे खर्च केले तरी संपत नाही, चोर चोरू शकत नाही आणि दिवसेंदिवस वाढतेच. सत्याची नाव चालवणारे सद्गुरू मिळाल्याने मी हा भवसागर पार केला आहे."
+                </p>
+            </div>
+        </article>
+
+        <!-- पद १८ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद १८: दरस बिन दुखण लागे नैन</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                दरस बिन दुखण लागे नैन।<br>
+                जब से तुम बिछुरे प्रभु मोरे।<br>
+                कबहूँ न पायो चैन॥<br>
+                सबद सुनत मेरी छतियाँ कंपै।<br>
+                मीठै लगे तुम बैन ॥<br>
+                बिरह बिथा कासूँ कहूँ सजनी ।<br>
+                बह गई करवत ऐन॥<br>
+                कल परत पल हरि मग जोंवत।<br>
+                भई छमासी रेण॥<br>
+                ‘मीरा’ के प्रभू कब रे मिलोगे ।<br>
+                दु:ख मेटण सुख देण॥
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई म्हणतात, "प्रभु! तुमच्या दर्शनाशिवाय माझे डोळे दुखू लागले आहेत. जेव्हापासून तुम्ही दुरावला आहात, मला कधीच शांती मिळालेली नाही. तुमची गोड बोलणी आठवून माझे हृदय व्याकुळ होते. माझी विरहव्यथा मी कोणाला सांगू? तुमची वाट पाहण्यात एक-एक क्षण सहा महिन्यांच्या रात्रीसारखा मोठा वाटतो. हे मीरांचे प्रभु! माझे सर्व दुःख हरण करून मला सुख देण्यासाठी तुम्ही कधी येणार?"
+                </p>
+            </div>
+        </article>
+
+        <!-- पद १९ -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद १९: माई री म्हाँ लियाँ गोविन्दाँ मोल</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                माई री म्हाँ लियाँ गोविन्दाँ मोल ।<br>
+                थे कहयाँ छाणे म्हाँ काँ चोड्डे, लियां बजन्ता ढोल।<br>
+                थे कहयाँ मुंहाधो म्हाँ कहयाँ सस्तो, लिया री तराजाँ तोल।<br>
+                ‘तण वारा म्हाँ जीवण वीराँ, वाराँ अमोलक मोल।<br>
+                मीराँ कूँ प्रभु दरसण दीज्याँ, पूरर जणम को कोल।।
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई ठामपणे म्हणतात, "हे सखे! मी तर गोविंदाला विकत घेतले आहे. तुम्ही म्हणता मी लपवून घेतले, पण मी तर ढोल वाजवून जाहीरपणे त्याला आपलेसे केले आहे. तुम्ही म्हणता हा व्यवहार महागात पडला, पण मी तराजूत तोलून (पूर्ण विचारांती) हा अगदी स्वस्त सौदा केला आहे. मी माझ्या या अमूल्य सौद्यावर माझे तन, मन आणि प्राण निछावर केले आहेत. श्रीकृष्णाने मला पूर्वजन्मी दिलेल्या वचनानुसार आता दर्शन द्यावे."
+                </p>
+            </div>
+        </article>
+
+        <!-- पद २० -->
+        <article class="pad-card" style="background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 30px; margin-bottom: 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <h3 style="font-family: 'Yatra One', serif; color: #ffb703; font-size: 1.5rem; margin-bottom: 20px; border-bottom: 1px dashed #444; padding-bottom: 10px;">पद २०: राम मिलण के काज सखी</h3>
+            
+            <div class="pad-text" style="font-family: 'Poppins', sans-serif; font-size: 1.1rem; line-height: 1.9; color: #ffffff; margin-bottom: 25px; background: #222; padding: 20px; border-radius: 8px; border-left: 4px solid #ffb703;">
+                राम मिलण के काज सखी, मेरे आरति उर में जागी री।<br>
+                तड़पत-तड़पत कल न परत है, बिरहबाण उर लागी री।<br>
+                निसदिन पंथ निहारूँ पिवको, पलक न पल भर लागी री।<br>
+                पीव-पीव मैं रटूँ रात-दिन, दूजी सुध-बुध भागी री।<br>
+                बिरह भुजंग मेरो डस्यो कलेजो, लहर हलाहल जागी री।<br>
+                मेरी आरति मेटि गोसाईं, आय मिलौ मोहि सागी री।<br>
+                मीरा ब्याकुल अति उकलाणी, पिया की उमंग अति लागी री।
+            </div>
+
+            <div class="pad-bhavarth" style="background: #121212; padding: 20px; border-radius: 8px; border: 1px solid #2a2a2a;">
+                <h4 style="font-family: 'Yatra One', serif; color: #e0a96d; margin-bottom: 10px; font-size: 1.1rem;"><i class="fa-solid fa-book-open" style="margin-right: 8px;"></i>मराठी भावार्थ:</h4>
+                <p style="font-family: 'Poppins', sans-serif; color: #cccccc; font-size: 1rem; line-height: 1.8; margin: 0;">
+                    मीराबाई म्हणतात, "हे सखे! भगवंताला भेटण्याची तीव्र आस माझ्या हृदयात जागी झाली आहे. विरहाचा बाण लागल्यामुळे मी तडपते आहे आणि मला शांतता मिळत नाही. रात्रंदिवस मी प्रियकराची वाट पाहते, डोळ्यांची पापणीही मिटत नाही. विरहरूपी सर्पाने माझ्या हृदयाला दंश केला असून त्याचा विषारी प्रभाव सर्वत्र पसरला आहे. हे प्रभु! येऊन मला भेटा आणि माझी ही तळमळ शांत करा."
+                </p>
+            </div>
+        </article>
+
+    </div>
+</main>
+<!-- ================= END OF MAIN SECTION ================= -->
