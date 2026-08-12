@@ -306,7 +306,7 @@
                         card.innerHTML = `
                             <div class="card-header">
                                 <span class="card-title"><i class="fa-solid fa-user"></i> ${data.name || 'Anonymous'}</span>
-                                <span class="card-time">${data.timestamp || ''}</span>
+                                <span class="card-time">${data.timestamp || data.date || ''}</span>
                             </div>
                             <div class="page-badge">📌 /${pageId.replace(/_/g, '/')}</div>
                             <p class="card-text">${data.text || data.message || ''}</p>
@@ -319,7 +319,7 @@
                 document.getElementById("count-comments").innerText = totalCount;
             });
 
-            // 2. CONTACT ENQUIRIES FETCHING (ALL STRUCTURES SUPPORTED)
+            // 2. CONTACT ENQUIRIES FETCHING (MATCHING EXACT FIREBASE KEYS: name, email, message, date)
             db.ref("contacts").on("value", function(snapshot) {
                 const list = document.getElementById("contacts-list");
                 list.innerHTML = "";
@@ -331,17 +331,15 @@
                     return;
                 }
 
-                function extractAndRender(key, data) {
-                    if (!data) return;
+                snapshot.forEach(function(childSnap) {
                     totalCount++;
+                    const data = childSnap.val();
+                    const key = childSnap.key;
 
-                    let name = data.name || data.fullname || data.userName || data.fname || 'User';
-                    let contactInfo = data.email || data.phone || data.mobile || data.contact || 'माहिती उपलब्ध नाही';
-                    let message = data.message || data.text || data.subject || data.msg || '';
-                    let time = data.timestamp || data.date || '';
-
-                    // जर डेटा प्लेन टेक्स्ट/ऑब्जेक्ट असेल
-                    if (!message && typeof data === 'string') message = data;
+                    const name = data.name || 'User';
+                    const email = data.email || 'माहिती उपलब्ध नाही';
+                    const message = data.message || '';
+                    const date = data.date || '';
 
                     const card = document.createElement("div");
                     card.className = "card";
@@ -349,27 +347,14 @@
                     card.innerHTML = `
                         <div class="card-header">
                             <span class="card-title" style="color:#38bdf8;"><i class="fa-solid fa-envelope"></i> ${name}</span>
-                            <span class="card-time">${time}</span>
+                            <span class="card-time">${date}</span>
                         </div>
-                        <div class="card-contact-info">📞 संपर्क: ${contactInfo}</div>
-                        <p class="card-text">💬 संदेश: ${message}</p>
+                        <div class="card-contact-info">📧 ईमेल: ${email}</div>
+                        <div class="card-text">💬 संदेश: ${message}</div>
                         <button class="delete-btn" onclick="deleteContact('${key}')"><i class="fa-solid fa-trash"></i> डिलीट</button>
                         <div style="clear:both;"></div>
                     `;
                     list.prepend(card);
-                }
-
-                snapshot.forEach(function(childSnap) {
-                    const val = childSnap.val();
-                    const key = childSnap.key;
-
-                    if (typeof val === 'object' && val !== null && !val.name && !val.message && !val.email && !val.phone) {
-                        childSnap.forEach(function(nestedSnap) {
-                            extractAndRender(key + '/' + nestedSnap.key, nestedSnap.val());
-                        });
-                    } else {
-                        extractAndRender(key, val);
-                    }
                 });
 
                 document.getElementById("count-contacts").innerText = totalCount;
@@ -397,9 +382,9 @@
                 firebase.database().ref("comments/" + pageId + "/" + commentKey).remove();
             }
         }
-        function deleteContact(pathKey) {
+        function deleteContact(key) {
             if (confirm("हा संदेश नक्की डिलीट करायचा आहे का?")) {
-                firebase.database().ref("contacts/" + pathKey).remove();
+                firebase.database().ref("contacts/" + key).remove();
             }
         }
     </script>
