@@ -84,56 +84,55 @@ document.addEventListener("DOMContentLoaded", function () {
     // नेव्हिगेशन सुरु करणे
     initNavigation();
 
-    // =========================================================
-    // 🔥 2. SHARE BUTTONS + FIREBASE COMMENTS SYSTEM
-    // =========================================================
-    var currentPath = window.location.pathname.toLowerCase();
-    
-    // ज्या पेजेसवर कमेंट/शेअर बॉक्स नको आहे त्यांची अचूक यादी
-    var excludedPages = [
-        "index.html", "about.html", "contact.html", "privacy-policy.html",
-        "terms.html", "disclaimer.html", "abhang-gatha.html", "bharude-gavlani.html",
-        "granth-sampada.html", "kabir-doha.html", "santache-prasang.html", "sant-sahitya.html",
-        "sant-subhashite.html", "san-utsav.html", "sarth-haripath.html", "vangmay-sangrah.html",
-        "eknath-gatha.html", "muktabai-gatha.html", "namdev-gatha.html", "nilobaray-gatha.html",
-        "tukaram-gatha.html", "artya-sangrah.html", "ekadashi-vrat.html", "dnyaneshwari.html",
-        "eknathi-bhagvat.html", "nitya-pathan-stotra.html"
-    ];
+   // =========================================================
+// 🔥 2. SHARE BUTTONS + FIREBASE COMMENTS SYSTEM (WITH REPLIES)
+// =========================================================
+var currentPath = window.location.pathname.toLowerCase();
 
-    var isExcluded = currentPath === "/" || currentPath.endsWith("/") || excludedPages.some(function(page) {
-        return currentPath.indexOf(page) !== -1;
-    });
+// ज्या पेजेसवर कमेंट/शेअर बॉक्स नको आहे त्यांची अचूक यादी
+var excludedPages = [
+    "index.html", "about.html", "contact.html", "privacy-policy.html",
+    "terms.html", "disclaimer.html", "abhang-gatha.html", "bharude-gavlani.html",
+    "granth-sampada.html", "kabir-doha.html", "santache-prasang.html", "sant-sahitya.html",
+    "sant-subhashite.html", "san-utsav.html", "sarth-haripath.html", "vangmay-sangrah.html",
+    "eknath-gatha.html", "muktabai-gatha.html", "namdev-gatha.html", "nilobaray-gatha.html",
+    "tukaram-gatha.html", "artya-sangrah.html", "ekadashi-vrat.html", "dnyaneshwari.html",
+    "eknathi-bhagvat.html", "nitya-pathan-stotra.html"
+];
 
-    if (!isExcluded) {
-        // Firebase Scripts लोड करणे
-        var script1 = document.createElement("script");
-        script1.src = "https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js";
-        document.head.appendChild(script1);
-
-        var script2 = document.createElement("script");
-        script2.src = "https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js";
-        document.head.appendChild(script2);
-
-        script2.onload = function () {
-            const firebaseConfig = {
-                apiKey: "AIzaSyBQTDVzvz5tFktEEsnPZQ6G_ADoxGL0ZW4",
-                authDomain: "santvani-48d18.firebaseapp.com",
-                databaseURL: "https://santvani-48d18-default-rtdb.firebaseio.com",
-                projectId: "santvani-48d18",
-                storageBucket: "santvani-48d18.firebasestorage.app",
-                messagingSenderId: "769467907364",
-                appId: "1:769467907364:web:4fe85b182eb43359f707b1",
-                measurementId: "G-D5XSFWVWTP"
-            };
-
-            if (!firebase.apps.length) {
-                firebase.initializeApp(firebaseConfig);
-            }
-
-            initSantvaniShareAndComments();
-        };
-    }
+var isExcluded = currentPath === "/" || currentPath.endsWith("/") || excludedPages.some(function(page) {
+    return currentPath.indexOf(page) !== -1;
 });
+
+if (!isExcluded) {
+    // Firebase Scripts लोड करणे
+    var script1 = document.createElement("script");
+    script1.src = "https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js";
+    document.head.appendChild(script1);
+
+    var script2 = document.createElement("script");
+    script2.src = "https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js";
+    document.head.appendChild(script2);
+
+    script2.onload = function () {
+        const firebaseConfig = {
+            apiKey: "AIzaSyBQTDVzvz5tFktEEsnPZQ6G_ADoxGL0ZW4",
+            authDomain: "santvani-48d18.firebaseapp.com",
+            databaseURL: "https://santvani-48d18-default-rtdb.firebaseio.com",
+            projectId: "santvani-48d18",
+            storageBucket: "santvani-48d18.firebasestorage.app",
+            messagingSenderId: "769467907364",
+            appId: "1:769467907364:web:4fe85b182eb43359f707b1",
+            measurementId: "G-D5XSFWVWTP"
+        };
+
+        if (!firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig);
+        }
+
+        initSantvaniShareAndComments();
+    };
+}
 
 function initSantvaniShareAndComments() {
     var db = firebase.database();
@@ -192,7 +191,7 @@ function initSantvaniShareAndComments() {
         });
     };
 
-    // कमेंट पाठवणे[cite: 1]
+    // कमेंट पाठवणे
     document.getElementById("fb-comment-btn").onclick = function () {
         var nameInput = document.getElementById("fb-comment-name");
         var textInput = document.getElementById("fb-comment-text");
@@ -215,7 +214,7 @@ function initSantvaniShareAndComments() {
         textInput.value = "";
     };
 
-    // रिअल-टाईम कमेंट्स[cite: 1]
+    // रिअल-टाईम कमेंट्स (WITH REPLIES LOAD)
     var commentsRef = db.ref("comments/" + pageId);
     commentsRef.on("value", function (snapshot) {
         var listContainer = document.getElementById("fb-comments-list");
@@ -228,6 +227,26 @@ function initSantvaniShareAndComments() {
 
         snapshot.forEach(function (childSnapshot) {
             var data = childSnapshot.val();
+            
+            // ADMIN REPLIES LOGIC
+            var repliesHtml = "";
+            if (data.replies) {
+                Object.keys(data.replies).forEach(function (rKey) {
+                    var reply = data.replies[rKey];
+                    repliesHtml += `
+                        <div style="margin-top: 10px; margin-left: 15px; padding: 10px 14px; background: #222; border-left: 3px solid #38bdf8; border-radius: 6px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                                <strong style="color: #38bdf8; font-size: 13px; font-weight: 600;">
+                                    <span style="background: #0284c7; color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 4px; margin-right: 5px;">ADMIN</span> ${reply.name || 'संतवाणी टीम'}
+                                </strong>
+                                <span style="color: #666; font-size: 11px;">${reply.timestamp || ''}</span>
+                            </div>
+                            <p style="margin: 0; color: #e2e8f0; font-size: 13px; line-height: 1.5; white-space: pre-wrap;">${reply.text}</p>
+                        </div>
+                    `;
+                });
+            }
+
             var commentBox = document.createElement("div");
             commentBox.style.cssText = "padding: 16px; background: #181818; border-left: 4px solid #ffb703; border-radius: 8px;";
             commentBox.innerHTML = `
@@ -236,12 +255,12 @@ function initSantvaniShareAndComments() {
                     <span style="color: #666; font-size: 12px;">${data.timestamp}</span>
                 </div>
                 <p style="margin: 0; color: #e0e0e0; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">${data.text}</p>
+                ${repliesHtml}
             `;
             listContainer.prepend(commentBox);
         });
     });
 }
-
 
 // सर्व पेजेसवर ऑटोमॅटिक Favicon जोडण्यासाठी
 (function() {
