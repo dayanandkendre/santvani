@@ -4,280 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santvani Admin - Portal</title>
-    <!-- Favicon Integration -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <!-- Google Fonts & FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Firebase SDK (v8.10.1) -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
     
     <style>
         * { box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 0; transition: all 0.25s ease; }
-        
-        body { 
-            background: #0f172a; 
-            color: #f8fafc; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-            padding: 20px; 
-        }
-
-        /* 🔒 PASSCODE CARD */
-        #passcode-screen { 
-            background: #1e293b; 
-            padding: 40px 30px; 
-            border-radius: 20px; 
-            border: 1px solid #334155; 
-            text-align: center; 
-            max-width: 380px; 
-            width: 100%; 
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); 
-        }
-
-        .brand-icon {
-            width: 65px;
-            height: 65px;
-            background: #1e293b;
-            border: 2px solid #e11d48;
-            border-radius: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 18px auto;
-            box-shadow: 0 10px 20px rgba(225, 29, 72, 0.25);
-            overflow: hidden;
-        }
-
-        .brand-icon img {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-        }
-
-        #passcode-screen h2 { 
-            font-size: 22px; 
-            font-weight: 800; 
-            color: #ffffff;
-            letter-spacing: -0.5px;
-            margin-bottom: 6px; 
-        }
-
+        body { background: #0f172a; color: #f8fafc; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+        #passcode-screen { background: #1e293b; padding: 40px 30px; border-radius: 20px; border: 1px solid #334155; text-align: center; max-width: 380px; width: 100%; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); }
+        .brand-icon { width: 65px; height: 65px; background: #1e293b; border: 2px solid #e11d48; border-radius: 18px; display: flex; align-items: center; justify-content: center; margin: 0 auto 18px auto; box-shadow: 0 10px 20px rgba(225, 29, 72, 0.25); overflow: hidden; }
+        .brand-icon img { width: 40px; height: 40px; object-fit: contain; }
+        #passcode-screen h2 { font-size: 22px; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; margin-bottom: 6px; }
         #passcode-screen p { color: #94a3b8; font-size: 13px; margin-bottom: 22px; }
-
-        #pin-input { 
-            padding: 12px; 
-            width: 100%; 
-            font-size: 20px; 
-            text-align: center; 
-            border-radius: 10px; 
-            border: 1.5px solid #475569; 
-            background: #0f172a; 
-            color: #f8fafc; 
-            letter-spacing: 8px; 
-            outline: none; 
-            margin-bottom: 16px;
-        }
-
-        #pin-input:focus { 
-            border-color: #f59e0b; 
-            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
-        }
-
-        #pin-btn { 
-            padding: 12px; 
-            background: #f59e0b; 
-            color: #0f172a; 
-            border: none; 
-            font-weight: 700; 
-            border-radius: 10px; 
-            cursor: pointer; 
-            width: 100%; 
-            font-size: 15px; 
-        }
-
+        #pin-input { padding: 12px; width: 100%; font-size: 20px; text-align: center; border-radius: 10px; border: 1.5px solid #475569; background: #0f172a; color: #f8fafc; letter-spacing: 8px; outline: none; margin-bottom: 16px; }
+        #pin-input:focus { border-color: #f59e0b; box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2); }
+        #pin-btn { padding: 12px; background: #f59e0b; color: #0f172a; border: none; font-weight: 700; border-radius: 10px; cursor: pointer; width: 100%; font-size: 15px; }
         #pin-btn:hover { background: #d97706; color: #fff; }
-
         #error-msg { color: #ef4444; font-size: 13px; margin-top: 10px; display: none; font-weight: 600; }
-
-        /* 📊 MAIN DASHBOARD */
         #admin-dashboard { display: none; width: 100%; max-width: 950px; margin-top: 20px; }
-        
-        .header { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            background: #1e293b; 
-            padding: 18px 24px; 
-            border-radius: 16px; 
-            border: 1px solid #334155; 
-            margin-bottom: 20px; 
-        }
-        
-        .header h2 { 
-            color: #f59e0b; 
-            font-size: 20px; 
-            font-weight: 800;
-            display: flex; 
-            align-items: center; 
-            gap: 12px; 
-        }
-
-        .header h2 img {
-            width: 32px;
-            height: 32px;
-            object-fit: contain;
-        }
-
+        .header { display: flex; justify-content: space-between; align-items: center; background: #1e293b; padding: 18px 24px; border-radius: 16px; border: 1px solid #334155; margin-bottom: 20px; }
+        .header h2 { color: #f59e0b; font-size: 20px; font-weight: 800; display: flex; align-items: center; gap: 12px; }
+        .header h2 img { width: 32px; height: 32px; object-fit: contain; }
         .tabs { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
-        
-        .tab-btn { 
-            flex: 1; 
-            padding: 12px; 
-            background: #1e293b; 
-            color: #94a3b8; 
-            border: 1px solid #334155; 
-            font-weight: 700; 
-            border-radius: 12px; 
-            cursor: pointer; 
-            font-size: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            min-width: 140px;
-        }
-
-        .tab-btn.active { 
-            background: #f59e0b; 
-            color: #0f172a; 
-            border-color: #f59e0b; 
-        }
-
-        .content-box { 
-            background: #1e293b; 
-            border: 1px solid #334155; 
-            border-radius: 16px; 
-            padding: 20px; 
-        }
-
-        .card { 
-            background: #0f172a; 
-            border-left: 4px solid #f59e0b; 
-            border-radius: 12px; 
-            padding: 16px; 
-            margin-bottom: 15px; 
-            border-top: 1px solid #334155;
-            border-right: 1px solid #334155;
-            border-bottom: 1px solid #334155;
-        }
-
+        .tab-btn { flex: 1; padding: 12px; background: #1e293b; color: #94a3b8; border: 1px solid #334155; font-weight: 700; border-radius: 12px; cursor: pointer; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; min-width: 140px; }
+        .tab-btn.active { background: #f59e0b; color: #0f172a; border-color: #f59e0b; }
+        .content-box { background: #1e293b; border: 1px solid #334155; border-radius: 16px; padding: 20px; }
+        .card { background: #0f172a; border-left: 4px solid #f59e0b; border-radius: 12px; padding: 16px; margin-bottom: 15px; border-top: 1px solid #334155; border-right: 1px solid #334155; border-bottom: 1px solid #334155; }
         .card-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
         .card-title { color: #f59e0b; font-weight: 700; font-size: 15px; }
         .card-time { color: #64748b; font-size: 12px; }
-        
-        .page-badge { 
-            background: #334155; 
-            color: #38bdf8; 
-            font-size: 12px; 
-            padding: 5px 10px; 
-            border-radius: 6px; 
-            display: inline-block; 
-            margin-bottom: 8px; 
-            font-family: monospace;
-            text-decoration: none;
-            font-weight: 600;
-            border: 1px solid rgba(56, 189, 248, 0.2);
-        }
-
+        .page-badge { background: #334155; color: #38bdf8; font-size: 12px; padding: 5px 10px; border-radius: 6px; display: inline-block; margin-bottom: 8px; font-family: monospace; text-decoration: none; font-weight: 600; border: 1px solid rgba(56, 189, 248, 0.2); }
         .page-badge:hover { background: #38bdf8; color: #0f172a; }
-
         .card-text { color: #e2e8f0; font-size: 14px; white-space: pre-wrap; line-height: 1.5; margin-bottom: 10px; }
-        
-        /* 💬 REPLY BOX STYLING */
-        .reply-section {
-            background: #1e293b;
-            border-radius: 8px;
-            padding: 10px;
-            margin-top: 10px;
-            border: 1px dashed #475569;
-        }
-
-        .reply-item {
-            background: #0f172a;
-            border-left: 3px solid #10b981;
-            padding: 8px 12px;
-            border-radius: 6px;
-            margin-bottom: 8px;
-            font-size: 13px;
-        }
-
+        .reply-section { background: #1e293b; border-radius: 8px; padding: 10px; margin-top: 10px; border: 1px dashed #475569; }
+        .reply-item { background: #0f172a; border-left: 3px solid #10b981; padding: 8px 12px; border-radius: 6px; margin-bottom: 8px; font-size: 13px; }
         .reply-author { color: #10b981; font-weight: 700; font-size: 12px; }
-
-        .reply-input-box {
-            display: flex;
-            gap: 8px;
-            margin-top: 8px;
-        }
-
-        .reply-input-box input {
-            flex: 1;
-            background: #0f172a;
-            border: 1px solid #475569;
-            color: #fff;
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 13px;
-            outline: none;
-        }
-
-        .reply-input-box button {
-            background: #10b981;
-            color: #0f172a;
-            border: none;
-            padding: 8px 14px;
-            font-weight: 700;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 13px;
-        }
-
-        .delete-btn { 
-            color: #ef4444; 
-            background: rgba(239, 68, 68, 0.1); 
-            border: 1px solid rgba(239, 68, 68, 0.2); 
-            padding: 5px 10px;
-            border-radius: 6px;
-            cursor: pointer; 
-            float: right; 
-            font-size: 12px; 
-            font-weight: 600;
-        }
-
+        .reply-input-box { display: flex; gap: 8px; margin-top: 8px; }
+        .reply-input-box input { flex: 1; background: #0f172a; border: 1px solid #475569; color: #fff; padding: 8px 12px; border-radius: 6px; font-size: 13px; outline: none; }
+        .reply-input-box button { background: #10b981; color: #0f172a; border: none; padding: 8px 14px; font-weight: 700; border-radius: 6px; cursor: pointer; font-size: 13px; }
+        .delete-btn { color: #ef4444; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); padding: 5px 10px; border-radius: 6px; cursor: pointer; float: right; font-size: 12px; font-weight: 600; }
         .delete-btn:hover { background: #ef4444; color: #fff; }
-
-        .analytics-container {
-            width: 100%;
-            height: 750px;
-            border: none;
-            border-radius: 12px;
-            background: #ffffff;
-        }
+        .analytics-container { width: 100%; height: 750px; border: none; border-radius: 12px; background: #ffffff; }
     </style>
 </head>
 <body>
 
-    <!-- 🔒 PASSCODE SCREEN -->
     <div id="passcode-screen">
         <div class="brand-icon">
             <img src="/favicon.ico" alt="Logo" onerror="this.src='https://santvani.co.in/favicon.ico';">
         </div>
         <h2>Santvani Admin Suite</h2>
         <p>प्रशासकीय पॅनेल उघडण्यासाठी पासकोड प्रविष्ट करा</p>
-        
         <form onsubmit="checkPin(event)">
             <input type="password" id="pin-input" maxlength="4" placeholder="••••" autofocus>
             <button type="submit" id="pin-btn">अ‍ॅक्सेस उघडा <i class="fa-solid fa-arrow-right"></i></button>
@@ -285,13 +64,9 @@
         <p id="error-msg"><i class="fa-solid fa-circle-exclamation"></i> चुकीचा पासकोड!</p>
     </div>
 
-    <!-- 📊 MAIN DASHBOARD -->
     <div id="admin-dashboard">
         <div class="header">
-            <h2>
-                <img src="/favicon.ico" alt="Logo" onerror="this.src='https://santvani.co.in/favicon.ico';">
-                संतवाणी Admin Suite
-            </h2>
+            <h2><img src="/favicon.ico" alt="Logo" onerror="this.src='https://santvani.co.in/favicon.ico';"> संतवाणी Admin Suite</h2>
             <button onclick="location.reload()" style="background: #334155; color: #f8fafc; border: none; padding: 8px 14px; border-radius: 8px; cursor: pointer; font-weight:600;"><i class="fa-solid fa-power-off"></i> बाहेर पडा</button>
         </div>
 
@@ -345,7 +120,7 @@
 
             const db = firebase.database();
 
-            // 1. LOAD COMMENTS (WITH REPLIES SUPPORT)
+            // 1. LOAD COMMENTS
             try {
                 db.ref("comments").on("value", function(snapshot) {
                     const list = document.getElementById("comments-list");
@@ -360,8 +135,13 @@
 
                     snapshot.forEach(function(pageSnap) {
                         const pageId = pageSnap.key;
+                        
+                        // 🎯 Perfect Page Link Builder
                         let cleanPath = pageId.replace(/_/g, '/');
                         if(!cleanPath.startsWith('/')) cleanPath = '/' + cleanPath;
+                        if(!cleanPath.endsWith('.html') && !cleanPath.endsWith('/')) {
+                            cleanPath = cleanPath + '.html';
+                        }
                         const fullUrl = window.location.origin + cleanPath;
 
                         pageSnap.forEach(function(commentSnap) {
@@ -369,7 +149,6 @@
                             const data = commentSnap.val() || {};
                             const commentKey = commentSnap.key;
 
-                            // Render Existing Replies HTML
                             let repliesHtml = "";
                             if (data.replies) {
                                 Object.keys(data.replies).forEach(rKey => {
@@ -395,7 +174,6 @@
                                 <button class="delete-btn" onclick="deleteComment('${pageId}', '${commentKey}')"><i class="fa-solid fa-trash"></i> डिलीट</button>
                                 <div style="clear:both;"></div>
 
-                                <!-- REPLY SECTION -->
                                 <div class="reply-section">
                                     <div id="replies-list-${commentKey}">${repliesHtml}</div>
                                     <div class="reply-input-box">
@@ -459,7 +237,6 @@
             fetchContactsData();
         }
 
-        // SEND REPLY FUNCTION
         function sendReply(pageId, commentKey) {
             const input = document.getElementById(`input-reply-${commentKey}`);
             const replyText = input.value.trim();
@@ -487,7 +264,6 @@
             });
         }
 
-        // TAB SWITCHING
         function switchTab(tab) {
             const commentsSec = document.getElementById("comments-section");
             const contactsSec = document.getElementById("contacts-section");
