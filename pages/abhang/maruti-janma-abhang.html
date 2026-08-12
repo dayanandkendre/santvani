@@ -94,7 +94,783 @@
         <div class="tukaram-main-wrapper"> 
             <div class="tukaram-container">
             
-                <!-- अभंग १ -->
+               <!-- अभंग १ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-1">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग १ ॥</span>
+                    <span class="content-badge" id="badge-1">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-1" style="display: block !important;">
+                        शरण शरण हनुमंता । तुज आलों रामदूता ॥१॥<br>
+                        काय भक्तीच्या त्या वाटा । मज दावाव्या सुभटा ॥२॥<br>
+                        शूर आणि धीर । स्वामीकाजीं तूं सादर ॥३॥<br>
+                        तुका म्हणे रुद्रा । अंजनीचिया कुमरा ॥४॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-1" style="display: none !important;">
+                        हे श्रीरामाचे दूत हनुमंता, मी तुला पूर्णपणे शरण आलो आहे. हे महाशूर वीरा, मला भक्तीचा खरा मार्ग दाखव. तू अत्यंत शूर, धीर गंभीर आणि आपल्या स्वामीच्या कार्यात नेहमी तत्पर आहेस. संत तुकाराम महाराज म्हणतात की, हे भगवान शंकराचे अवतार असणाऱ्या अंजनीपुत्रा हनुमंता, तू माझा उद्धार कर.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(1)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(1)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(1)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-1" onclick="toggleAbhangView(1)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग २ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-2">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग २ ॥</span>
+                    <span class="content-badge" id="badge-2">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-2" style="display: block !important;">
+                        काम घातला बांदोडीं । काळ केला देशोधडी ॥१॥<br>
+                        तया माझे दंडवत । कपिकुळीं हनुमंत ॥२॥<br>
+                        शरीर वज्रा ऐसे । कवळी ब्रह्यांड जो पुच्छें ॥३॥<br>
+                        रामरायाच्या सेवका । शरण आलों म्हणे तुका ॥४॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-2" style="display: none !important;">
+                        ज्याने काम-वासनांना बंदीत टाकले आणि काळालाही पळवून लावले, अशा वानरकुळातील श्रेष्ठ हनुमंताला माझे साष्टांग नमस्कार असो. ज्याचे शरीर वज्रासारखे मजबूत आहे आणि जो आपल्या शेपटीने संपूर्ण ब्रह्मांडाला कवेत घेऊ शकतो, अशा श्रीरामचंद्रांच्या सेवकाला संत तुकाराम महाराज म्हणतात की मी शरण आलो आहे.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(2)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(2)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(2)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-2" onclick="toggleAbhangView(2)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग ३ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-3">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग ३ ॥</span>
+                    <span class="content-badge" id="badge-3">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-3" style="display: block !important;">
+                        देवांगना हातीं आणविला शृंगी । यज्ञ तो प्रसंगी आंरभिला ॥१॥<br>
+                        विभांडका क्रोध आला असे भारी । अयोध्या भीतरीं वेगीं आला ॥२॥<br>
+                        राजा दशरथ सामोरा जाऊनी । अति प्रिती करुनी सभे नेला ॥३॥<br>
+                        पुत्र स्नुषा दोन्हीं देखतां नयनीं । आनंदला मनी म्हणॆ नामा ॥४॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-3" style="display: none !important;">
+                        देवांगनेच्या माध्यमातून शृंगी ऋषींना आणून राजा दशरथाने पुत्रेष्टी यज्ञाचा प्रारंभ केला. हे समजताच शृंगी ऋषींचे पिता विभांडक ऋषी अत्यंत क्रोधाविष्ट होऊन वेगाने अयोध्येत आले. राजा दशरथाने पुढे जाऊन त्यांचे आदराने स्वागत केले आणि अत्यंत प्रेमाने त्यांना सभेत नेले. तेथे आपला मुलगा आणि सून यांना पाहून विभांडक ऋषींचे मन आनंदित झाले, असे संत नामदेव महाराज सांगतात.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(3)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(3)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(3)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-3" onclick="toggleAbhangView(3)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग ४ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-4">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग ४ ॥</span>
+                    <span class="content-badge" id="badge-4">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-4" style="display: block !important;">
+                        आनंदोनी म्हणे राया धन्य केलें । इच्छिलें सोहळे पुरवीन ॥१॥<br>
+                        यज्ञाचा आरंभ करी लवलाह्मा । पुसोनी आचार्या वसिष्ठांसी ॥२॥<br>
+                        सर्व ऋषीजन मिळाले सकळ । मंत्रांचा कल्लोळ करिताती ॥३॥<br>
+                        नामा म्हणे शृंगी मुख्यत्वें शोभला । यज्ञ आरंभिला तेणें जेव्हां ॥४॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-4" style="display: none !important;">
+                        विभांडक ऋषींनी आनंदाने राजा दशरथाला सांगितले की तू मला प्रसन्न केलेस, तुझ्या सर्व इच्छा पूर्ण होतील. कुलगुरू वसिष्ठ ऋषींचा सल्ला घेऊन त्वरित यज्ञाचा आरंभ कर. सर्व ऋषी एकत्र जमले आणि मंत्रोच्चारांचा गजर सुरू झाला. संत नामदेव महाराज म्हणतात की शृंगी ऋषींच्या मुख्य उपस्थितीत जेव्हा हा यज्ञ सुरू झाला, तेव्हा ते अत्यंत शोभून दिसत होते.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(4)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(4)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(4)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-4" onclick="toggleAbhangView(4)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग ५ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-5">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग ५ ॥</span>
+                    <span class="content-badge" id="badge-5">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-5" style="display: block !important;">
+                        आरंभिला यज्ञ सन्तोष सर्वत्र । आनंदे नगर दुमदुमीत ॥१॥<br>
+                        यज्ञनारायण सन्तोष पावला । प्रत्यक्ष तो आला कुंडांतुनीं ॥२॥<br>
+                        पायस तें पात्र घेऊनियां करीं । शृगीस झडकरी बोलतसे ॥३॥<br>
+                        विलंब करितां विघ्न ओढवेल । सत्वर वहिले भाग करा ॥४॥<br>
+                        नामा म्हणे देव येईल पोटासीं । ऎंसे गूज त्यासी अग्नी सांगे ॥५॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-5" style="display: none !important;">
+                        यज्ञाला सुरुवात होताच सर्वत्र संतोष पसरला आणि संपूर्ण अयोध्या नगरी आनंदाने दुमदुमून गेली. यज्ञाने प्रसन्न होऊन प्रत्यक्ष यज्ञनारायण (अग्निदेव) हातात पायसाचे (खीर) पात्र घेऊन यज्ञकुंडाच्या बाहेर आले. त्यांनी शृंगी ऋषींना त्वरित सांगितले की उशीर केल्यास विघ्न येऊ शकते, त्यामुळे लगेच याचे भाग करा. संत नामदेव महाराज म्हणतात की, अग्निदेवांनी शृंगी ऋषींना गुप्त गोष्ट सांगितली की स्वतः भगवान तुमच्या पोटी जन्म घेणार आहेत.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(5)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(5)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(5)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-5" onclick="toggleAbhangView(5)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग ६ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-6">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग ६ ॥</span>
+                    <span class="content-badge" id="badge-6">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-6" style="display: block !important;">
+                        विभाग सत्वर वसिष्ठानें केले । राया बोलाविलें सान्निधचि ॥१॥<br>
+                        प्रथम तो भाग कौसल्यसी दिला । तेणें क्रोध आला कनिष्ठेसी ॥२॥<br>
+                        येतांचि तो क्रोध विघ्न ओढवलें । मुखीं झडपिला पिंड घारीं ॥३॥<br>
+                        आसडोनी पिंड घारीनें पै नेला । नामा म्हणे घातिला अंजनी करीं ॥४॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-6" style="display: none !important;">
+                        महर्षी वसिष्ठांनी त्वरित पायसाचे भाग केले आणि राजाला जवळ बोलावले. पहिला भाग कौसल्येला दिला गेला, त्यामुळे लहान राणीला (कैकयीला) राग आला. तो राग येताच विघ्न घडले आणि एका घारीने झेप मारून पायसाचा पिंड तोंडात पकडला. संत नामदेव महाराज म्हणतात की ती घार तो पिंड घेऊन उडून गेली आणि तिने तो अंजनीच्या हातात नेऊन टाकला.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(6)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(6)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(6)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-6" onclick="toggleAbhangView(6)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग ७ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-7">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग ७ ॥</span>
+                    <span class="content-badge" id="badge-7">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-7" style="display: block !important;">
+                        सुवर्च्यानामें स्वर्गीची देवांगना । ब्रह्मशापें जाणा घारी झाली ॥१॥<br>
+                        अयोध्येचा राजा दशरथ नृपती । यज्ञ पुत्राप्रती करविला ॥२॥<br>
+                        शृंगी पायसपात्र दिधलें वसिष्ठा हातीं । त्वरें करीजेती तीन भाग ॥३॥<br>
+                        तीन भाग वसिष्ठें करुनी निश्चितीं । दिधलें राणी हातीं तिघी तीस ॥४॥<br>
+                        कैकई रुसली तेथें विघ्न झालें । घारीनें तें नेलें निजभागा ॥५॥<br>
+                        एका जनार्दनी घारीं पिंड नेतां । पुढें झाली कथा श्रवण करा ॥६॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-7" style="display: none !important;">
+                        सुवर्च्या नावाची स्वर्गातील एक देवांगना ब्रह्मदेवाच्या शापामुळे घार झाली होती. राजा दशरथाने पुत्रप्राप्तीसाठी यज्ञ केला होता. शृंगी ऋषींनी पायसाचे पात्र वसिष्ठांच्या हाती दिले आणि तीन भाग करण्यास सांगितले. वसिष्ठांनी तीन भाग करून तिन्ही राण्यांना दिले. परंतु कैकयी रुसल्यामुळे तेथे विघ्न निर्माण झाले आणि घारीने तो भाग पळवून नेला. संत एकनाथ महाराज म्हणतात की, घार तो पिंड घेऊन गेल्यावर पुढे काय कथा घडली ती ऐका.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(7)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(7)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(7)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-7" onclick="toggleAbhangView(7)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग ८ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-8">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग ८ ॥</span>
+                    <span class="content-badge" id="badge-8">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-8" style="display: block !important;">
+                        ऋष्यमूक पर्वती अंजनी तप करी । आठविला अंतरी सदाशिव ॥१॥<br>
+                        तपाचिया अंती शिव झाला प्रसन्न । मागे वरदान काय इच्छा ॥२॥<br>
+                        येरी म्हणे तुज ऐसा व्हावा मज पुत्र । ज्ञानी भक्त पवित्र उत्तम गुणी ॥३॥<br>
+                        म्हणतसे शिव अंजुळी पसरुनी । बैस माझे ध्यानीं सावधान ॥४॥<br>
+                        वायुदेव येउनी प्रसाद देईल तुजला । भक्षीं कां वहिला अविलंबें ॥५॥<br>
+                        एका जनार्दनीं घारीं नेतां पिंड । वायूनें प्रचंड आसुडिला ॥६॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-8" style="display: none !important;">
+                        ऋष्यमूक पर्वतावर अंजनी माता भगवान शंकराचे ध्यान करत तपश्चर्या करत होती. तपाच्या शेवटी भगवान शिव प्रसन्न झाले आणि वर मागायला सांगितले. अंजनी म्हणाली की मला तुझ्यासारखाच ज्ञानी, भक्त, पवित्र आणि उत्तम गुण असणारा मुलगा हवा आहे. शिवाने सांगितले की अंजळी पसरून शांतपणे माझ्या ध्यानात बस. वायुदेव येऊन तुला प्रसाद देईल, तो तू लगेच ग्रहण कर. संत एकनाथ महाराज म्हणतात की घार तो पिंड घेऊन जात असताना वायुदेवाने प्रचंड वेगाने झेप मारून तो पिंड खाली पाडला.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(8)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(8)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(8)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-8" onclick="toggleAbhangView(8)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग ९ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-9">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग ९ ॥</span>
+                    <span class="content-badge" id="badge-9">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-9" style="display: block !important;">
+                        पिंड घारीनें झडपिला । अंजनीनें तो सेविला ॥१॥<br>
+                        अंजनीच्या तपासाठीं । महारुद्र आले पोटीं ॥२॥<br>
+                        चैत्र शुद्ध पौर्णिमेसी । सुर्योदय समयासी ॥३॥<br>
+                        महारुद्र प्रगटला । नामा म्हणे म्यां वंदिला ॥४॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-9" style="display: none !important;">
+                        घारीने पळवलेला तो प्रसाद अंजनीच्या हातात पडला आणि तिने तो ग्रहण केला. अंजनीच्या महान तपाचे फळ म्हणून साक्षात महारुद्र (भगवान शंकर) तिच्या पोटी आले. चैत्र शुद्ध पौर्णिमेच्या दिवशी सूर्योदयाच्या वेळी महारुद्राचा जन्म झाला. संत नामदेव महाराज म्हणतात की मी अशा दिव्य हनुमंताला वंदन करतो.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(9)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(9)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(9)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-9" onclick="toggleAbhangView(9)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग १० बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-10">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग १० ॥</span>
+                    <span class="content-badge" id="badge-10">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-10" style="display: block !important;">
+                        घारीमुखींचा पिंड अंजनीच्या करीं । पडतां निर्धारीं भक्षियला ॥१॥<br>
+                        नवमास होतां झाली ती प्रसूत । दिव्य वायुसूत प्रगटला ॥२॥<br>
+                        वानराचा वेष सुवर्ण कौपीन । दिसती शोभायमान कुंडलें तीं ॥३॥<br>
+                        जन्मतांची जेणें सूर्यातें धरियलें । इंद्रादिकां दिलें थोर मार ॥४॥<br>
+                        अमरपति मारी वज्रहनुवटी । पडिला कपाटीं मेरुचिया ॥५॥<br>
+                        वायुदेव येवोनी बाळ तो उचलिला । अवघाचि रोधिला प्राण तेथें ॥६॥<br>
+                        सकळ देव मिळोनी प्रसन्न पैं होतीं । वरदान देती मारुतीसी ॥७॥<br>
+                        सर्व देव मिळोनी अंजनीशीं बाळ । देतां प्रात:काळ होतां तेव्हां ॥८॥<br>
+                        तिथि पौर्णिमा चैत्रमास जाण । एका जनार्दनी रुपासी आला ॥९॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-10" style="display: none !important;">
+                        घारीच्या तोंडातील पिंड अंजनीच्या हातात पडताच तिने तो खाल्ला. नऊ महिने पूर्ण झाल्यावर ती प्रसूत झाली आणि अत्यंत तेजस्वी वायुपुत्र हनुमंत प्रगट झाला. वानराचे रूप, सोन्याची लंगोटी आणि कानात सुंदर कुंडले धारण केलेला तो बाळ अत्यंत शोभून दिसत होता. जन्माला येताच ज्याने उगवत्या सूर्याला फळ समजून धरण्यासाठी उडी मारली आणि इंद्रादी देवांना घाबरवून सोडले. देवराज इंद्राने त्याच्या हनुवटीवर वज्राने प्रहार केला, ज्यामुळे तो मेरू पर्वताच्या गुहेत पडला. रागाने वायुदेवाने विश्वाचा प्राणवायू रोखून धरला. शेवटी सर्व देवांनी एकत्र येऊन बाळाला प्रसन्न केले, आशीर्वाद दिले आणि प्रातःकाळी अंजनीच्या हातात बाळ सुपूर्द केले. संत एकनाथ महाराज म्हणतात की अशा प्रकारे चैत्र पौर्णिमेला मारुतीरायांचा अवतार झाला.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(10)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(10)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(10)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-10" onclick="toggleAbhangView(10)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग ११ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-11">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग ११ ॥</span>
+                    <span class="content-badge" id="badge-11">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-11" style="display: block !important;">
+                        हनुमंत महाबळी । रावणाची दाढी जाळी ॥१॥<br>
+                        तया माझा नमस्कार । वारंवार निरंतर ॥२॥<br>
+                        करोनि उड्डाण । केलें लंकेचे शोधन ॥३॥<br>
+                        जाळियेली लंका । धन्य धन्य म्हणे तुका ॥४॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-11" style="display: none !important;">
+                        हनुमंत अत्यंत पराक्रमी आणि बलवान आहे, ज्याने रावणाची दाढी आणि संपूर्ण गर्व जाळून टाकला. अशा हनुमंताला माझा वारंवार आणि निरंतर नमस्कार असो. महासमुद्र ओलांडून उड्डाण करत ज्याने लंकेत सीतामातेचा शोध घेतला आणि नंतर संपूर्ण लंका दहन केली. संत तुकाराम महाराज म्हणतात की अशा हनुमंताचा पराक्रम धन्य धन्य आहे.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(11)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(11)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(11)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-11" onclick="toggleAbhangView(11)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग १२ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-12">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग १२ ॥</span>
+                    <span class="content-badge" id="badge-12">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-12" style="display: block !important;">
+                        केली सीताशुद्धि । मूळ रामायणा आधीं ॥१॥<br>
+                        ऐसा प्रतापी गहन । सकळ भक्तांचे भूषण ॥२॥<br>
+                        जाऊनि पाताळा । केली देवीची अवकळा ॥३॥<br>
+                        रामलक्षुमण । नेले आणिले चोरुन ॥४॥<br>
+                        जोडुनियां कर । उभा सन्मुख समोर ॥५॥<br>
+                        तुका म्हणे जपें । वायुसुता जातीं पापें ॥६॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-12" style="display: none !important;">
+                        रामायणाच्या मूळ कथेआधी हनुमंताने सीतामातेचा शोध लावून पराक्रम केला. असा हा अगाध प्रतापी हनुमंत सर्व भक्तांचे भूषण आहे. त्याने पाताळात जाऊन अहिरावणाच्या देवीची दुरवस्था केली आणि अहिरावणाने चोरून नेलेल्या राम-लक्ष्मणांची मुक्तता करून त्यांना सुरक्षित परत आणले. तो सदैव श्रीरामांसमोर हात जोडून उभा असतो. संत तुकाराम महाराज म्हणतात की या वायुपुत्राचे नामस्मरण केल्याने सर्व पापे नष्ट होतात.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(12)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(12)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(12)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-12" onclick="toggleAbhangView(12)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग १३ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-13">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग १३ ॥</span>
+                    <span class="content-badge" id="badge-13">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-13" style="display: block !important;">
+                        मी तों अल्पमती हीन । काय वर्णुं तुमचे गुण ।<br>
+                        उदकीं तारिले पाषाण । हें महिमान नामांचे ॥१॥<br>
+                        नाम चांगले चांगले । माझे कंठी राहो भलें ।<br>
+                        कपिकुळ उध्दरिलें । मुक्त केलें राक्षसा ॥२॥<br>
+                        द्रोणागिरी कपीहातीं । आणविला सीतापती ।<br>
+                        थोर केली ख्याती । भरतभेटी समयीं ॥३॥<br>
+                        शिळा होती मनुष्य झाली । थोर कीर्ति वाखणिली ।<br>
+                        लंका दहन केली । हनुमंते काशानें ॥४॥<br>
+                        राम जानकी जीवन । योगियांचें निजध्यान ।<br>
+                        राम राजीवलोचन । तुका चरण वंदितो ॥५॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-13" style="display: none !important;">
+                        मी अत्यंत अल्पबुद्धी आणि लहान आहे, मी तुमच्या गुणांचे काय वर्णन करू? समुद्राच्या पाण्यावर दगड तरंगले, हे केवळ रामनामाचेच महात्म्य आहे. हे पवित्र रामनाम माझ्या कंठात सदैव राहो. या नामाने वानरकुळाचा उद्धार केला आणि राक्षसांनाही मुक्ती दिली. हनुमंताच्या हाताने द्रोणागिरी पर्वत आणवून श्रीरामांचे कार्य सिद्धीस नेले आणि भरतभेटीच्या वेळी मोठा पराक्रम केला. अहल्येसारख्या शिळेचा उद्धार झाला आणि हनुमंताने एका क्षणात लंका दहन केली. श्रीराम हे जानकीचे जीवन आणि योगी पुरुषांचे ध्यान आहेत. संत तुकाराम महाराज म्हणतात की मी अशा कमल नयन श्रीरामांच्या चरणी वंदन करतो.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(13)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(13)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(13)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-13" onclick="toggleAbhangView(13)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग १४ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-14">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग १४ ॥</span>
+                    <span class="content-badge" id="badge-14">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-14" style="display: block !important;">
+                        पैल आला राम रावणासी सांगती । काय निदसुरा निजलासी भूपती ॥१॥<br>
+                        अवघे लंकेमाजी झाले रामाचे दूत । व्यापले सर्वत्र बाहेरी भीतरी आंत ॥२॥<br>
+                        अवघे अंगलग तुझे वधियले वीर । होई शरणागत किंवा युद्धासी सादर ॥३॥<br>
+                        तुका म्हणे ऐक्याभावें रामासी भेटी । करुनि घेई आतां या संबंधेंसी तुटी ॥४॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-14" style="display: none !important;">
+                        रावणाला सावध करताना दूत सांगत आहेत की, हे राजा, तू असा गाढ झोपेत कसा पडला आहेस? समोर श्रीराम आले आहेत. संपूर्ण लंकेत बाहेर, आत सर्वत्र श्रीरामाचे दूत पसरले आहेत. तुझे सर्व नातेवाईक आणि महान वीर मारले गेले आहेत. आता तरी श्रीरामांना शरण जा किंवा युद्धासाठी तयार राहा. संत तुकाराम महाराज म्हणतात की, अहंकार सोडून अनन्यभावाने श्रीरामांना भेट आणि या संसारातील मोहाचे बंध तोडून टाक.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(14)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(14)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(14)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-14" onclick="toggleAbhangView(14)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग १५ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-15">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग १५ ॥</span>
+                    <span class="content-badge" id="badge-15">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-15" style="display: block !important;">
+                        पैल आला रामराणा । लंका दिधली बिभीषणा ॥१॥<br>
+                        नळ नीळ जांबुवंत । मध्यें चाले रघुनाथ ॥२॥<br>
+                        भोंवते वानरांचे थाट । पुढें गर्जताती भाट ॥३॥<br>
+                        केला अयोध्याप्रवेश । म्हणे नामा विष्णुदास ॥४॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-15" style="display: none !important;">
+                        सामोर श्रीरामराजा आला आहे, ज्याने रावणाचा पराभव करून लंका बिभीषणाला देऊन टाकली. नळ, नीळ आणि जांबुवंत यांच्या मध्यभागी प्रभु श्रीराम चालत आहेत. सभोवताली वानरांचे सैन्य आहे आणि पुढे स्तुती पाठक जयजयकार करत आहेत. अशा प्रकारे श्रीरामांनी विजय मिळवून अयोध्येत प्रवेश केला, असे विष्णुदास नामदेव महाराज सांगतात.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(15)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(15)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(15)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-15" onclick="toggleAbhangView(15)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग १६ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-16">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग १६ ॥</span>
+                    <span class="content-badge" id="badge-16">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-16" style="display: block !important;">
+                        जन्मजन्मांतरीं असेल पुण्यसामुग्री । तरीच नाम जिव्हाग्रीं येईल श्रीरामाचें ॥१॥<br>
+                        धन्य कुळ तयाचें रामनाम हेंचि वाचें । दोष जातील जन्माचे श्रीराम म्हणताचि ॥२॥<br>
+                        कोटी कुळांचें उद्धरण मुखीं राम नारायण । रामकृष्णस्मरण धन्य जन्म तयाचें ॥३॥<br>
+                        नाम तारक सांगडी नाम न विसंबे अर्धघडी । तप केलें असेल कोडी तरीचे नाम येईल ॥४॥<br>
+                        ज्ञानदेवीं अभ्यास मोठा नामस्मरण मुखावाटा । पूर्वज गेले वैकुंठा हरि हरि स्मरतां ॥५॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-16" style="display: none !important;">
+                        अनेक जन्मांचे पुण्य गाठीशी असेल, तरच जिभेवर श्रीरामाचे नाव येते. ज्याच्या वाणीत श्रीरामनाम आहे त्याचे कूळ धन्य आहे, श्रीराम म्हणताच जन्माजन्माचे दोष जळून जातात. ज्याच्या मुखात राम-नारायणाचे नाव आहे, त्याच्या करोडो कुळांचा उद्धार होतो. राम-कृष्णाचे स्मरण करणाऱ्याचा जन्म धन्य होतो. हे नाम भवसागर पार करणारी नौका आहे, जे अर्ध्या घडीसाठीही विसरू नये. करोडो जन्मांचे तप केले असेल तरच हे नाव मुखात येते. संत ज्ञानेश्वर महाराज म्हणतात की नामस्मरणाचा अभ्यास सर्वात मोठा आहे, हरिनाम स्मरणाने सर्व पूर्वज वैकुंठाला गेले.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(16)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(16)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(16)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-16" onclick="toggleAbhangView(16)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग १७ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-17">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग १७ ॥</span>
+                    <span class="content-badge" id="badge-17">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-17" style="display: block !important;">
+                        मन हें राम झालें मन हें राम झालें । प्रवृत्ति ग्रासूनि कैसें निवृत्तीसी आलें ॥१॥<br>
+                        श्रवण कीर्तन पादसेवन कैसें विष्णुस्मरण केलें । अर्चन वंदन दास्य सख्य आत्मनिवेदन केले ॥२॥<br>
+                        यम नियम प्राणायाम प्रत्याहार संपादिले । ध्यान धारणा आसन मुद्रा कैसें समाधीसी आले ॥३॥<br>
+                        बोधी बोधिलें बोधितां नये ऐसें झालें । बापरखुमादेवीवरु विठ्ठलें माझें मीपण हारपलें ॥४॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-17" style="display: none !important;">
+                        माझे मन संपूर्णपणे राममय झाले आहे. सांसारिक प्रवृत्तीचा त्याग करून मन निवृत्तीच्या अवस्थेत आले आहे. नवविधा भक्ती (श्रवण, कीर्तन, स्मरण, पादसेवन, अर्चन, वंदन, दास्य, सख्य आणि आत्मनिवेदन) साध्य झाली आहे. अष्टांग योगातील यम, नियम, प्राणायाम, प्रत्याहार, ध्यान, धारणा, आसन आणि मुद्रा या सर्वांचा परिपाक होऊन मन समाधी अवस्थेत लीन झाले आहे. आत्मज्ञानाने असा बोध झाला आहे जो शब्दांत सांगता येत नाही. संत ज्ञानेश्वर महाराज म्हणतात की, रखुमादेवीचा पती असणाऱ्या विठ्ठलाच्या दर्शनाने माझे स्वतःचे 'मीपण' (अहंकार) पूर्णपणे नष्ट झाले आहे.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(17)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(17)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(17)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-17" onclick="toggleAbhangView(17)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग १८ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-18">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग १८ ॥</span>
+                    <span class="content-badge" id="badge-18">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-18" style="display: block !important;">
+                        राम म्हणतां रामचि होइजे । पदिं बैसोनि पदवी घेइजे ॥१॥<br>
+                        ऐसें सुख वचनीं आहे । विश्वासें अनुभव पाहे ॥२॥<br>
+                        रामरसाचिया चवी । आन रस रुचती केवी ॥३॥<br>
+                        तुका म्हणे चाखोनि सांगे । मज अनुभव आहे अंगें ॥४॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-18" style="display: none !important;">
+                        श्रीराम म्हणता म्हणता माणूस स्वतः रामरूप होऊन जातो आणि परमपदाची प्राप्ती करतो. रामनामाच्या उच्चारातच असे विलक्षण सुख आहे, ज्याचा अनुभव विश्वासाने घेऊन पहावा. एकदा का रामनामाच्या रसाची चव चाखली, की इतर कोणतेही विषय-रस गोड वाटत नाहीत. संत तुकाराम महाराज म्हणतात की मी हा अनुभव स्वतः घेतला आहे आणि म्हणूनच अनुभवाच्या आधारे तुम्हाला सांगत आहे.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(18)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(18)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(18)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-18" onclick="toggleAbhangView(18)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग १९ बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-19">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग १९ ॥</span>
+                    <span class="content-badge" id="badge-19">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-19" style="display: block !important;">
+                        रामकृष्ण नामें ये दोन्ही साजिरी । ह्रदयमंदिरीं स्मरा कां रे ॥१॥<br>
+                        आपुली आपण करा सोडवण । संसारबंधन तोडा वेगी ॥२॥<br>
+                        ज्ञानदेवा ध्यानीं रामकृष्ण माळा । ह्रदयीं जिव्हाळा श्रीमूर्ति रया ॥३॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-19" style="display: none !important;">
+                        राम आणि कृष्ण ही दोन्ही अत्यंत सुंदर आणि पवित्र नावे आहेत, त्यांचे आपल्या हृदयमंदिरात सतत स्मरण करा. नामस्मरणाच्या माध्यमातून स्वतःच आपली मुक्ती करून घ्या आणि संसाराची बंधने त्वरित तोडून टाका. संत ज्ञानेश्वर महाराज म्हणतात की माझ्या ध्यानात आणि हृदयात सदैव राम-कृष्णाच्या नामाची माळ आहे आणि त्यांच्या श्रीमूर्तीबद्दल अत्यंत जिव्हाळा आहे.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(19)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(19)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(19)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-19" onclick="toggleAbhangView(19)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- अभंग २० बॉक्स -->
+            <div class="sarth-grid" id="abhang-card-20">
+                <div class="card-header-area">
+                    <span class="abhang-number">॥ अभंग २० ॥</span>
+                    <span class="content-badge" id="badge-20">अभंग रचना</span>
+                </div>
+                
+                <div class="card-main-content">
+                    <div class="abhang-text" id="abhang-text-20" style="display: block !important;">
+                        झालें रामराज्य काय उणें आम्हासीं । धरणी धरी पीक गाई वोळल्या म्हैसी ॥१॥<br>
+                        राम वेळोवेळां आम्ही गाऊं ओविये । दळितां कांडितां जेवितां गे बाईये ॥२॥<br>
+                        स्वप्नींही दु:ख कोणी न देखे डोळां । नामाच्या गजरें भय सुटलें काळा ॥३॥<br>
+                        तुका म्हणे रामें सुख दिलें आपुलें । तयां गर्भवासा येणें जाणें खुंटलें ॥४॥
+                    </div>
+                    <div class="bhavarth-text" id="bhavarth-text-20" style="display: none !important;">
+                        आता रामराज्य अवतरले आहे, त्यामुळे आम्हाला कशाचीही कमतरता उरली नाही. पृथ्वीवर भरघोस पीक येत आहे आणि गाई-म्हशी दुधाने समृद्ध झाल्या आहेत. दळताना, कांडताना आणि जेवताना आम्ही पुन्हा पुन्हा श्रीरामाची गाणी आणि ओव्या गातो. कोणाला स्वप्नातही दुःख दिसत नाही आणि रामनामाच्या गजराने काळाचे भय नष्ट झाले आहे. संत तुकाराम महाराज म्हणतात की श्रीरामाने आम्हाला स्वतःचे निरामय सुख दिले आहे, ज्यामुळे आमचे पुनर्जन्माचे (येणे-जाणे) चक्र कायमचे थांबले आहे.
+                    </div>
+                </div>
+
+                <div class="card-footer-area">
+                    <div class="sarth-actions">
+                        <button class="action-btn" onclick="copyAbhangText(20)">
+                            <i class="fa-regular fa-copy"></i>कॉपी
+                        </button>
+                        <button class="action-btn" onclick="shareAbhang(20)">
+                            <i class="fa-solid fa-share-nodes"></i>शेअर
+                        </button>
+                        <button class="action-btn" onclick="saveAbhangAsImage(20)">
+                            <i class="fa-regular fa-image"></i>इमेज ९:१६
+                        </button>
+                    </div>
+                    
+                    <button class="toggle-view-btn" id="toggle-btn-20" onclick="toggleAbhangView(20)">
+                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
+                    </button>
+                </div>
+            </div>
                 
 
             </div>
