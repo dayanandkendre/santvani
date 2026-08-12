@@ -85,11 +85,10 @@ document.addEventListener("DOMContentLoaded", function () {
     initNavigation();
 
    // =========================================================
-// 🔥 2. SHARE BUTTONS + FIREBASE COMMENTS SYSTEM (WITH REPLIES)
+// 🔥 SHARE BUTTONS + FIREBASE COMMENTS SYSTEM (FIXED & WORKING)
 // =========================================================
 var currentPath = window.location.pathname.toLowerCase();
 
-// ज्या पेजेसवर कमेंट/शेअर बॉक्स नको आहे त्यांची अचूक यादी
 var excludedPages = [
     "index.html", "about.html", "contact.html", "privacy-policy.html",
     "terms.html", "disclaimer.html", "abhang-gatha.html", "bharude-gavlani.html",
@@ -105,7 +104,6 @@ var isExcluded = currentPath === "/" || currentPath.endsWith("/") || excludedPag
 });
 
 if (!isExcluded) {
-    // Firebase Scripts लोड करणे
     var script1 = document.createElement("script");
     script1.src = "https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js";
     document.head.appendChild(script1);
@@ -122,8 +120,7 @@ if (!isExcluded) {
             projectId: "santvani-48d18",
             storageBucket: "santvani-48d18.firebasestorage.app",
             messagingSenderId: "769467907364",
-            appId: "1:769467907364:web:4fe85b182eb43359f707b1",
-            measurementId: "G-D5XSFWVWTP"
+            appId: "1:769467907364:web:4fe85b182eb43359f707b1"
         };
 
         if (!firebase.apps.length) {
@@ -136,7 +133,14 @@ if (!isExcluded) {
 
 function initSantvaniShareAndComments() {
     var db = firebase.database();
-    var pageId = window.location.pathname.replace(/[^a-zA-Z0-9]/g, "_");
+    
+    // 🎯 Standardizing Page Key to ensure clear path mapping
+    var rawPath = window.location.pathname;
+    if (rawPath.endsWith('.html')) {
+        rawPath = rawPath.substring(0, rawPath.length - 5);
+    }
+    var pageId = rawPath.replace(/[^a-zA-Z0-9]/g, "_");
+    
     var pageUrl = encodeURIComponent(window.location.href);
     var pageTitle = encodeURIComponent(document.title || "संतवाणी");
 
@@ -145,7 +149,6 @@ function initSantvaniShareAndComments() {
     container.style.cssText = "max-width: 850px; margin: 50px auto 30px auto; font-family: 'Poppins', sans-serif; color: #fff;";
 
     container.innerHTML = `
-        <!-- SHARE BUTTONS SECTION -->
         <div style="background: #121212; border: 1px solid rgba(255, 183, 3, 0.3); border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
             <h4 style="font-family: 'Rozha One', serif; font-size: 20px; color: #ffb703; margin: 0 0 15px 0; display: flex; align-items: center; gap: 8px;">
                 🔗 हा लेख शेअर करा (Share Article)
@@ -159,15 +162,14 @@ function initSantvaniShareAndComments() {
             </div>
         </div>
 
-        <!-- FIREBASE COMMENTS SECTION -->
         <div style="background: #121212; border: 1px solid rgba(255, 183, 3, 0.3); border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
             <h3 style="font-family: 'Rozha One', serif; font-size: 22px; color: #ffb703; margin-top: 0; margin-bottom: 20px;">
                 💬 प्रतिक्रिया व अभिप्राय (Comments)
             </h3>
 
             <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 25px;">
-                <input type="text" id="fb-comment-name" placeholder="तुमचे नाव *" style="padding: 12px; background: #1a1a1a; border: 1px solid #333; border-radius: 8px; color: #fff; font-size: 14px; outline: none;" onfocus="this.style.borderColor='#ffb703'" onblur="this.style.borderColor='#333'">
-                <textarea id="fb-comment-text" rows="3" placeholder="आपली प्रतिक्रिया किंवा विचार लिहा..." style="padding: 12px; background: #1a1a1a; border: 1px solid #333; border-radius: 8px; color: #fff; font-size: 14px; outline: none; resize: vertical;" onfocus="this.style.borderColor='#ffb703'" onblur="this.style.borderColor='#333'"></textarea>
+                <input type="text" id="fb-comment-name" placeholder="तुमचे नाव *" style="padding: 12px; background: #1a1a1a; border: 1px solid #333; border-radius: 8px; color: #fff; font-size: 14px; outline: none;">
+                <textarea id="fb-comment-text" rows="3" placeholder="आपली प्रतिक्रिया किंवा विचार लिहा..." style="padding: 12px; background: #1a1a1a; border: 1px solid #333; border-radius: 8px; color: #fff; font-size: 14px; outline: none; resize: vertical;"></textarea>
                 <button id="fb-comment-btn" style="align-self: flex-start; padding: 10px 24px; background: #ffb703; color: #000; border: none; border-radius: 6px; font-weight: 600; cursor: pointer;">प्रतिक्रिया पाठवा</button>
             </div>
 
@@ -182,7 +184,6 @@ function initSantvaniShareAndComments() {
         document.body.appendChild(container);
     }
 
-    // कॉपी लिंक
     document.getElementById("copy-link-btn").onclick = function() {
         navigator.clipboard.writeText(window.location.href).then(function() {
             var btn = document.getElementById("copy-link-btn");
@@ -191,7 +192,6 @@ function initSantvaniShareAndComments() {
         });
     };
 
-    // कमेंट पाठवणे
     document.getElementById("fb-comment-btn").onclick = function () {
         var nameInput = document.getElementById("fb-comment-name");
         var textInput = document.getElementById("fb-comment-text");
@@ -214,7 +214,6 @@ function initSantvaniShareAndComments() {
         textInput.value = "";
     };
 
-    // रिअल-टाईम कमेंट्स (WITH REPLIES LOAD)
     var commentsRef = db.ref("comments/" + pageId);
     commentsRef.on("value", function (snapshot) {
         var listContainer = document.getElementById("fb-comments-list");
@@ -228,7 +227,6 @@ function initSantvaniShareAndComments() {
         snapshot.forEach(function (childSnapshot) {
             var data = childSnapshot.val();
             
-            // ADMIN REPLIES LOGIC
             var repliesHtml = "";
             if (data.replies) {
                 Object.keys(data.replies).forEach(function (rKey) {
