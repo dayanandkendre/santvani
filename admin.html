@@ -39,7 +39,6 @@
         .page-badge:hover { background: #38bdf8; color: #0f172a; }
         .card-text { color: #e2e8f0; font-size: 14px; white-space: pre-wrap; line-height: 1.5; margin-bottom: 10px; }
         
-        /* 💬 REPLY SECTION WITH EDIT/DELETE */
         .reply-section { background: #1e293b; border-radius: 8px; padding: 10px; margin-top: 10px; border: 1px dashed #475569; }
         .reply-item { background: #0f172a; border-left: 3px solid #10b981; padding: 8px 12px; border-radius: 6px; margin-bottom: 8px; font-size: 13px; position: relative; }
         .reply-author { color: #10b981; font-weight: 700; font-size: 12px; display: flex; justify-content: space-between; align-items: center; }
@@ -142,19 +141,34 @@
                     snapshot.forEach(function(pageSnap) {
                         const pageId = pageSnap.key;
                         
-                        let path = pageId;
-                        if (path.startsWith('_')) path = path.substring(1);
-                        if (path.endsWith('_html')) path = path.slice(0, -5) + '.html';
+                        // 🎯 100% ACCURATE PATH RECONSTRUCTION (Preserves original Hyphens)
+                        let raw = pageId;
+                        if (raw.startsWith('_')) raw = raw.substring(1);
                         
-                        path = path.replace(/nitya_pathan_stotra/g, 'nitya-pathan-stotra');
-                        path = path.replace(/shree_sukta/g, 'shree-sukta');
-                        path = path.replace(/shravan_mahina/g, 'shravan-mahina');
-                        path = path.replace(/puja_vidhi/g, 'puja-vidhi');
-                        path = path.replace(/vrat_puja/g, 'vrat-puja');
-                        path = path.replace(/_/g, '/');
+                        let isHtml = false;
+                        if (raw.endsWith('_html')) {
+                            isHtml = true;
+                            raw = raw.slice(0, -5);
+                        }
 
-                        let cleanPath = '/' + path;
-                        cleanPath = cleanPath.replace(/\/\//g, '/');
+                        // Split by underscores
+                        let parts = raw.split('_');
+                        let cleanPath = "";
+
+                        if (parts.length >= 3 && parts[0] === "pages") {
+                            // First two parts are folder structure (/pages/blog/ or /pages/abhang/)
+                            let folder1 = parts[0];
+                            let folder2 = parts[1];
+                            let fileName = parts.slice(2).join('-'); // Join remaining parts with hyphen!
+                            
+                            cleanPath = "/" + folder1 + "/" + folder2 + "/" + fileName + (isHtml ? ".html" : "");
+                        } else if (parts.length >= 2) {
+                            let folder1 = parts[0];
+                            let fileName = parts.slice(1).join('-');
+                            cleanPath = "/" + folder1 + "/" + fileName + (isHtml ? ".html" : "");
+                        } else {
+                            cleanPath = "/" + raw.replace(/_/g, '-') + (isHtml ? ".html" : "");
+                        }
 
                         const fullUrl = window.location.origin + cleanPath;
 
@@ -284,7 +298,6 @@
             });
         }
 
-        // ✏️ EDIT REPLY FUNCTION
         function editReply(pageId, commentKey, replyKey, oldText) {
             const newText = prompt("उत्तर एडिट करा:", oldText);
             if (newText !== null && newText.trim() !== "") {
@@ -294,7 +307,6 @@
             }
         }
 
-        // 🗑️ DELETE REPLY FUNCTION
         function deleteReply(pageId, commentKey, replyKey) {
             if (confirm("तुम्हाला हा रिप्लाय नक्की डिलीट करायचा आहे का?")) {
                 firebase.database().ref(`comments/${pageId}/${commentKey}/replies/${replyKey}`).remove();
