@@ -319,7 +319,7 @@
                 document.getElementById("count-comments").innerText = totalCount;
             });
 
-            // 2. CONTACT ENQUIRIES FETCHING (MATCHING EXACT FIREBASE KEYS: name, email, message, date)
+            // 2. CONTACT ENQUIRIES FETCHING (SAFE TRY-CATCH LOOP)
             db.ref("contacts").on("value", function(snapshot) {
                 const list = document.getElementById("contacts-list");
                 list.innerHTML = "";
@@ -332,29 +332,33 @@
                 }
 
                 snapshot.forEach(function(childSnap) {
-                    totalCount++;
-                    const data = childSnap.val();
-                    const key = childSnap.key;
+                    try {
+                        totalCount++;
+                        const data = childSnap.val() || {};
+                        const key = childSnap.key;
 
-                    const name = data.name || 'User';
-                    const email = data.email || 'माहिती उपलब्ध नाही';
-                    const message = data.message || '';
-                    const date = data.date || '';
+                        const name = data.name || 'User';
+                        const email = data.email || 'माहिती उपलब्ध नाही';
+                        const message = data.message || '';
+                        const date = data.date || '';
 
-                    const card = document.createElement("div");
-                    card.className = "card";
-                    card.style.borderLeftColor = "#38bdf8";
-                    card.innerHTML = `
-                        <div class="card-header">
-                            <span class="card-title" style="color:#38bdf8;"><i class="fa-solid fa-envelope"></i> ${name}</span>
-                            <span class="card-time">${date}</span>
-                        </div>
-                        <div class="card-contact-info">📧 ईमेल: ${email}</div>
-                        <div class="card-text">💬 संदेश: ${message}</div>
-                        <button class="delete-btn" onclick="deleteContact('${key}')"><i class="fa-solid fa-trash"></i> डिलीट</button>
-                        <div style="clear:both;"></div>
-                    `;
-                    list.prepend(card);
+                        const card = document.createElement("div");
+                        card.className = "card";
+                        card.style.borderLeftColor = "#38bdf8";
+                        card.innerHTML = `
+                            <div class="card-header">
+                                <span class="card-title" style="color:#38bdf8;"><i class="fa-solid fa-envelope"></i> ${name}</span>
+                                <span class="card-time">${date}</span>
+                            </div>
+                            <div class="card-contact-info">📧 ईमेल: ${email}</div>
+                            <div class="card-text">💬 संदेश: ${message}</div>
+                            <button class="delete-btn" onclick="deleteContact('${key}')"><i class="fa-solid fa-trash"></i> डिलीट</button>
+                            <div style="clear:both;"></div>
+                        `;
+                        list.prepend(card);
+                    } catch (err) {
+                        console.error("Error parsing contact item:", err);
+                    }
                 });
 
                 document.getElementById("count-contacts").innerText = totalCount;
