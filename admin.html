@@ -104,7 +104,7 @@
         #error-msg { color: #ef4444; font-size: 13px; margin-top: 10px; display: none; font-weight: 600; }
 
         /* 📊 MAIN DASHBOARD */
-        #admin-dashboard { display: none; width: 100%; max-width: 900px; margin-top: 20px; }
+        #admin-dashboard { display: none; width: 100%; max-width: 950px; margin-top: 20px; }
         
         .header { 
             display: flex; 
@@ -132,7 +132,7 @@
             object-fit: contain;
         }
 
-        .tabs { display: flex; gap: 12px; margin-bottom: 20px; }
+        .tabs { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
         
         .tab-btn { 
             flex: 1; 
@@ -148,6 +148,7 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
+            min-width: 140px;
         }
 
         .tab-btn.active { 
@@ -178,7 +179,6 @@
         .card-title { color: #f59e0b; font-weight: 700; font-size: 15px; }
         .card-time { color: #64748b; font-size: 12px; }
         
-        /* 🔗 CLICKABLE PAGE LINK BADGE */
         .page-badge { 
             background: #334155; 
             color: #38bdf8; 
@@ -214,6 +214,15 @@
         }
 
         .delete-btn:hover { background: #ef4444; color: #fff; }
+
+        /* ANALYTICS IFRAME */
+        .analytics-container {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 12px;
+            background: #0f172a;
+        }
     </style>
 </head>
 <body>
@@ -246,6 +255,7 @@
         <div class="tabs">
             <button class="tab-btn active" id="tab-comments" onclick="switchTab('comments')"><i class="fa-solid fa-comments"></i> प्रतिक्रिया (<span id="count-comments">0</span>)</button>
             <button class="tab-btn" id="tab-contacts" onclick="switchTab('contacts')"><i class="fa-solid fa-paper-plane"></i> संपर्क संदेश (<span id="count-contacts">0</span>)</button>
+            <button class="tab-btn" id="tab-analytics" onclick="switchTab('analytics')"><i class="fa-solid fa-chart-line"></i> 📊 ट्रॅफिक एनालिटिक्स</button>
         </div>
 
         <div class="content-box">
@@ -254,6 +264,10 @@
             </div>
             <div id="contacts-section" style="display: none;">
                 <div id="contacts-list">डेटा लोड होत आहे...</div>
+            </div>
+            <div id="analytics-section" style="display: none;">
+                <!-- ⚠️ इथे तुझी Looker Studio Embed Link टाका -->
+                <iframe class="analytics-container" src="YOUR_LOOKER_STUDIO_EMBED_URL" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -304,7 +318,6 @@
 
                     snapshot.forEach(function(pageSnap) {
                         const pageId = pageSnap.key;
-                        // URL बनवणे (उदा. _ ऐवजी / वापरून)
                         let cleanPath = pageId.replace(/_/g, '/');
                         if(!cleanPath.startsWith('/')) cleanPath = '/' + cleanPath;
                         const fullUrl = window.location.origin + cleanPath;
@@ -388,19 +401,29 @@
         function switchTab(tab) {
             const commentsSec = document.getElementById("comments-section");
             const contactsSec = document.getElementById("contacts-section");
+            const analyticsSec = document.getElementById("analytics-section");
+            
             const btnComments = document.getElementById("tab-comments");
             const btnContacts = document.getElementById("tab-contacts");
+            const btnAnalytics = document.getElementById("tab-analytics");
+
+            commentsSec.style.display = "none";
+            contactsSec.style.display = "none";
+            analyticsSec.style.display = "none";
+
+            btnComments.classList.remove("active");
+            btnContacts.classList.remove("active");
+            btnAnalytics.classList.remove("active");
 
             if (tab === 'comments') {
                 commentsSec.style.display = "block";
-                contactsSec.style.display = "none";
                 btnComments.classList.add("active");
-                btnContacts.classList.remove("active");
-            } else {
-                commentsSec.style.display = "none";
+            } else if (tab === 'contacts') {
                 contactsSec.style.display = "block";
-                btnComments.classList.remove("active");
                 btnContacts.classList.add("active");
+            } else if (tab === 'analytics') {
+                analyticsSec.style.display = "block";
+                btnAnalytics.classList.add("active");
             }
         }
 
