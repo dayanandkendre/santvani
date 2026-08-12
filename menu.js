@@ -251,3 +251,20 @@ function initSantvaniShareAndComments() {
     favicon.href = '/favicon.ico'; // तुमची फाईल root folder मध्ये असल्यास
     document.head.appendChild(favicon);
 })();
+
+
+
+// Google Analytics Tracking Code
+(function() {
+    var gaScript = document.createElement('script');
+    gaScript.async = true;
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-YEN0M3VBYE';
+    document.head.appendChild(gaScript);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+
+    gtag('js', new Date());
+    gtag('config', 'G-YEN0M3VBYE');
+})();
