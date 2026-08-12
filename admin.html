@@ -26,7 +26,7 @@
             padding: 20px; 
         }
 
-        /* 🔒 1. ELEGANT PASSCODE CARD */
+        /* 🔒 1. PASSCODE CARD */
         #passcode-screen { 
             background: #1e293b; 
             padding: 40px 30px; 
@@ -209,7 +209,7 @@
 </head>
 <body>
 
-    <!-- 🔒 ELEGANT PASSCODE SCREEN -->
+    <!-- 🔒 PASSCODE SCREEN -->
     <div id="passcode-screen">
         <div class="brand-icon">
             <img src="/favicon.ico" alt="Logo" onerror="this.src='https://santvani.co.in/favicon.ico';">
@@ -219,7 +219,7 @@
         
         <form onsubmit="checkPin(event)">
             <input type="password" id="pin-input" maxlength="4" placeholder="••••" autofocus>
-            <button type="submit" id="pin-btn">अ‍ॅक्सेस  <i class="fa-solid fa-arrow-right"></i></button>
+            <button type="submit" id="pin-btn">अ‍ॅक्सेस उघडा <i class="fa-solid fa-arrow-right"></i></button>
         </form>
         <p id="error-msg"><i class="fa-solid fa-circle-exclamation"></i> चुकीचा पासकोड!</p>
     </div>
@@ -250,7 +250,6 @@
     </div>
 
     <script>
-        // PASSCODE LOGIC
         function checkPin(e) {
             if(e) e.preventDefault();
             const pin = document.getElementById("pin-input").value;
@@ -264,7 +263,6 @@
             }
         }
 
-        // FIREBASE ADMIN LOGIC
         function initFirebaseAdmin() {
             const firebaseConfig = {
                 apiKey: "AIzaSyBQTDVzvz5tFktEEsnPZQ6G_ADoxGL0ZW4",
@@ -282,7 +280,7 @@
 
             const db = firebase.database();
 
-            // 1. ALL COMMENTS FETCHING
+            // 1. LOAD COMMENTS
             db.ref("comments").on("value", function(snapshot) {
                 const list = document.getElementById("comments-list");
                 list.innerHTML = "";
@@ -319,7 +317,7 @@
                 document.getElementById("count-comments").innerText = totalCount;
             });
 
-            // 2. CONTACT ENQUIRIES FETCHING (SAFE TRY-CATCH LOOP)
+            // 2. LOAD CONTACTS
             db.ref("contacts").on("value", function(snapshot) {
                 const list = document.getElementById("contacts-list");
                 list.innerHTML = "";
@@ -332,55 +330,55 @@
                 }
 
                 snapshot.forEach(function(childSnap) {
-                    try {
-                        totalCount++;
-                        const data = childSnap.val() || {};
-                        const key = childSnap.key;
+                    totalCount++;
+                    const data = childSnap.val() || {};
+                    const key = childSnap.key;
 
-                        const name = data.name || 'User';
-                        const email = data.email || 'माहिती उपलब्ध नाही';
-                        const message = data.message || '';
-                        const date = data.date || '';
+                    const name = data.name || 'User';
+                    const email = data.email || 'माहिती उपलब्ध नाही';
+                    const message = data.message || '';
+                    const date = data.date || '';
 
-                        const card = document.createElement("div");
-                        card.className = "card";
-                        card.style.borderLeftColor = "#38bdf8";
-                        card.innerHTML = `
-                            <div class="card-header">
-                                <span class="card-title" style="color:#38bdf8;"><i class="fa-solid fa-envelope"></i> ${name}</span>
-                                <span class="card-time">${date}</span>
-                            </div>
-                            <div class="card-contact-info">📧 ईमेल: ${email}</div>
-                            <div class="card-text">💬 संदेश: ${message}</div>
-                            <button class="delete-btn" onclick="deleteContact('${key}')"><i class="fa-solid fa-trash"></i> डिलीट</button>
-                            <div style="clear:both;"></div>
-                        `;
-                        list.prepend(card);
-                    } catch (err) {
-                        console.error("Error parsing contact item:", err);
-                    }
+                    const card = document.createElement("div");
+                    card.className = "card";
+                    card.style.borderLeftColor = "#38bdf8";
+                    card.innerHTML = `
+                        <div class="card-header">
+                            <span class="card-title" style="color:#38bdf8;"><i class="fa-solid fa-envelope"></i> ${name}</span>
+                            <span class="card-time">${date}</span>
+                        </div>
+                        <div class="card-contact-info">📧 ईमेल: ${email}</div>
+                        <div class="card-text">💬 संदेश: ${message}</div>
+                        <button class="delete-btn" onclick="deleteContact('${key}')"><i class="fa-solid fa-trash"></i> डिलीट</button>
+                        <div style="clear:both;"></div>
+                    `;
+                    list.prepend(card);
                 });
 
                 document.getElementById("count-contacts").innerText = totalCount;
             });
         }
 
-        // TAB SWITCHING LOGIC
+        // TAB SWITCHING
         function switchTab(tab) {
+            const commentsSec = document.getElementById("comments-section");
+            const contactsSec = document.getElementById("contacts-section");
+            const btnComments = document.getElementById("tab-comments");
+            const btnContacts = document.getElementById("tab-contacts");
+
             if (tab === 'comments') {
-                document.getElementById("comments-section").style.display = "block";
-                document.getElementById("contacts-section").style.display = "none";
-                document.getElementById("tab-comments").classList.add("active");
-                document.getElementById("tab-contacts").classList.remove("active");
+                commentsSec.style.display = "block";
+                contactsSec.style.display = "none";
+                btnComments.classList.add("active");
+                btnContacts.classList.remove("active");
             } else {
-                document.getElementById("comments-section").style.display = "none";
-                document.getElementById("contacts-section").style.display = "block";
-                document.getElementById("tab-comments").classList.remove("active");
-                document.getElementById("tab-contacts").classList.add("active");
+                commentsSec.style.display = "none";
+                contactsSec.style.display = "block";
+                btnComments.classList.remove("active");
+                btnContacts.classList.add("active");
             }
         }
 
-        // DELETE FUNCTIONS
         function deleteComment(pageId, commentKey) {
             if (confirm("तुम्हाला ही प्रतिक्रिया नक्की डिलीट करायची आहे का?")) {
                 firebase.database().ref("comments/" + pageId + "/" + commentKey).remove();
