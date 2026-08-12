@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Santvani Admin - Portal</title>
+    <!-- Favicon Integration -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <!-- Google Fonts & FontAwesome -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -37,17 +39,23 @@
         }
 
         .brand-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #d97706, #f59e0b);
-            border-radius: 16px;
+            width: 65px;
+            height: 65px;
+            background: #1e293b;
+            border: 2px solid #e11d48;
+            border-radius: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 18px auto;
-            font-size: 26px;
-            color: #ffffff;
-            box-shadow: 0 10px 20px rgba(217, 119, 6, 0.3);
+            box-shadow: 0 10px 20px rgba(225, 29, 72, 0.25);
+            overflow: hidden;
+        }
+
+        .brand-icon img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
         }
 
         #passcode-screen h2 { 
@@ -115,7 +123,13 @@
             font-weight: 800;
             display: flex; 
             align-items: center; 
-            gap: 10px; 
+            gap: 12px; 
+        }
+
+        .header h2 img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
         }
 
         .tabs { display: flex; gap: 12px; margin-bottom: 20px; }
@@ -198,7 +212,7 @@
     <!-- 🔒 ELEGANT PASSCODE SCREEN -->
     <div id="passcode-screen">
         <div class="brand-icon">
-            <i class="fa-solid fa-om"></i>
+            <img src="/favicon.ico" alt="Logo" onerror="this.src='https://santvani.co.in/favicon.ico';">
         </div>
         <h2>Santvani Admin Suite</h2>
         <p>प्रशासकीय पॅनेल उघडण्यासाठी पासकोड प्रविष्ट करा</p>
@@ -213,7 +227,10 @@
     <!-- 📊 MAIN DASHBOARD -->
     <div id="admin-dashboard">
         <div class="header">
-            <h2><i class="fa-solid fa-dharmachakra"></i> संतवाणी Admin Suite</h2>
+            <h2>
+                <img src="/favicon.ico" alt="Logo" onerror="this.src='https://santvani.co.in/favicon.ico';">
+                संतवाणी Admin Suite
+            </h2>
             <button onclick="location.reload()" style="background: #334155; color: #f8fafc; border: none; padding: 8px 14px; border-radius: 8px; cursor: pointer; font-weight:600;"><i class="fa-solid fa-power-off"></i> बाहेर पडा</button>
         </div>
 
@@ -302,7 +319,7 @@
                 document.getElementById("count-comments").innerText = totalCount;
             });
 
-            // 2. CONTACT ENQUIRIES FETCHING (ROBUST LOOP FOR ALL DB STRUCTURES)
+            // 2. CONTACT ENQUIRIES FETCHING (ALL STRUCTURES SUPPORTED)
             db.ref("contacts").on("value", function(snapshot) {
                 const list = document.getElementById("contacts-list");
                 list.innerHTML = "";
@@ -314,12 +331,17 @@
                     return;
                 }
 
-                function renderContactCard(key, data) {
+                function extractAndRender(key, data) {
+                    if (!data) return;
                     totalCount++;
-                    const name = data.name || data.fullname || data.userName || 'User';
-                    const contactInfo = data.email || data.phone || data.mobile || data.contact || 'माहिती उपलब्ध नाही';
-                    const message = data.message || data.text || data.subject || data.msg || JSON.stringify(data);
-                    const time = data.timestamp || data.date || '';
+
+                    let name = data.name || data.fullname || data.userName || data.fname || 'User';
+                    let contactInfo = data.email || data.phone || data.mobile || data.contact || 'माहिती उपलब्ध नाही';
+                    let message = data.message || data.text || data.subject || data.msg || '';
+                    let time = data.timestamp || data.date || '';
+
+                    // जर डेटा प्लेन टेक्स्ट/ऑब्जेक्ट असेल
+                    if (!message && typeof data === 'string') message = data;
 
                     const card = document.createElement("div");
                     card.className = "card";
@@ -341,13 +363,12 @@
                     const val = childSnap.val();
                     const key = childSnap.key;
 
-                    // जर डेटा सब-ऑब्जेक्ट्समध्ये असेल तर:
-                    if (typeof val === 'object' && val !== null && !val.name && !val.message && !val.text) {
+                    if (typeof val === 'object' && val !== null && !val.name && !val.message && !val.email && !val.phone) {
                         childSnap.forEach(function(nestedSnap) {
-                            renderContactCard(childSnap.key + '/' + nestedSnap.key, nestedSnap.val());
+                            extractAndRender(key + '/' + nestedSnap.key, nestedSnap.val());
                         });
                     } else {
-                        renderContactCard(key, val);
+                        extractAndRender(key, val);
                     }
                 });
 
