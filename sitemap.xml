@@ -2217,4 +2217,60 @@
        <changefreq>monthly</changefreq>
        <priority>0.8000</priority>
   </url>
+
+  <!-- १. श्रावणी सोमवार व्रत कथा -->
+  <url>
+       <loc>https://santvani.co.in/pages/blog/shravani-somvar-vrat-katha.html</loc>
+       <lastmod>2026-08-12T00:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- २. श्रावण महिना व्रत व पूजा विधी -->
+  <url>
+       <loc>https://santvani.co.in/pages/blog/shravan-mahina-vrat-puja-vidhi.html</loc>
+       <lastmod>2026-08-12T00:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- ३. श्री परशुराम स्तोत्रम् -->
+  <url>
+       <loc>https://santvani.co.in/pages/nitya-pathan-stotra/parshuram-stotra.html</loc>
+       <lastmod>2026-08-12T00:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- ४. श्री शिव महिम्न स्तोत्रम् -->
+  <url>
+       <loc>https://santvani.co.in/pages/nitya-pathan-stotra/shiv-mahima-stotra.html</loc>
+       <lastmod>2026-08-12T00:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- ५. श्री शिव पंचाक्षर स्तोत्रम् -->
+  <url>
+       <loc>https://santvani.co.in/pages/nitya-pathan-stotra/shiv-panchakshar-stotra.html</loc>
+       <lastmod>2026-08-12T00:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- ६. श्री शिव तांडव स्तोत्रम् -->
+  <url>
+       <loc>https://santvani.co.in/pages/nitya-pathan-stotra/shiv-tandav-stotra.html</loc>
+       <lastmod>2026-08-12T00:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- ७. श्री विष्णु सहस्रनाम स्तोत्रम् -->
+  <url>
+       <loc>https://santvani.co.in/pages/nitya-pathan-stotra/vishnu-sahasranama-stotram.html</loc>
+       <lastmod>2026-08-12T00:00:00+00:00</lastmod>
+       <changefreq>monthly</changefreq>
+       <priority>0.8000</priority>
+  </url>
 </urlset>

@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
-        /* प्रीमियम कॉन्टॅक्ट पेजसाठी अतिरिक्त इनलाइन स्टाईल्स */
         .inner-hero {
             position: relative;
             padding: 100px 20px 60px 20px;
@@ -74,7 +73,6 @@
             color: #dddddd;
             margin: 0;
         }
-        /* फॉर्म डिझाईन */
         .form-group {
             margin-bottom: 20px;
         }
@@ -118,6 +116,10 @@
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
         }
+        .btn-submit:disabled {
+            background: #555;
+            cursor: not-allowed;
+        }
         .royal-divider {
             display: flex;
             align-items: center;
@@ -133,6 +135,28 @@
             margin: 0 15px;
             color: #ffcc00;
             font-size: 1.2rem;
+        }
+        /* फॉर्म मेसेज स्टेटस */
+        #form-status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 6px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            text-align: center;
+            display: none;
+        }
+        #form-status.success {
+            display: block;
+            background-color: #1b4332;
+            color: #2ec4b6;
+            border: 1px solid #2ec4b6;
+        }
+        #form-status.error {
+            display: block;
+            background-color: #4a0e17;
+            color: #ff4d6d;
+            border: 1px solid #ff4d6d;
         }
     </style>
 </head>
@@ -158,8 +182,8 @@
                 <li><a href="vangmay-sangrah.html">वाङ्मय संग्रह</a></li>
                 <li><a href="sarth-haripath.html">हरिपाठ</a></li>
                 <li><a href="granth-sampada.html">ग्रंथ संपदा</a></li>
-<li><a href="nitya-pathan-stotra.html">नित्य पठण स्तोत्रे</a></li>
-<li><a href="pages/blog/ekadashi-vrat.html">सर्व एकादशी </a></li>
+                <li><a href="nitya-pathan-stotra.html">नित्य पठण स्तोत्रे</a></li>
+                <li><a href="pages/blog/ekadashi-vrat.html">सर्व एकादशी </a></li>
                 <li>
                     <a href="#">इतर <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i></a>
                     <ul class="dropdown-menu">
@@ -223,7 +247,7 @@
                 <!-- उजवा भाग: संदेश फॉर्म -->
                 <div class="contact-form-box">
                     <h2>संदेश पाठवा</h2>
-                    <form action="#" method="POST">
+                    <form id="contactForm">
                         <div class="form-group">
                             <label for="name">आपले नाव</label>
                             <input type="text" id="name" name="name" class="form-control" placeholder="तुमचे पूर्ण नाव टाका" required>
@@ -236,7 +260,9 @@
                             <label for="message">तुमचा संदेश / सूचना</label>
                             <textarea id="message" name="message" class="form-control" rows="4" placeholder="तुमचा संदेश इथे लिहा..." required></textarea>
                         </div>
-                        <button type="submit" class="btn-submit">संदेश पाठवा <i class="fa-solid fa-paper-plane" style="margin-left: 5px;"></i></button>
+                        <button type="submit" id="submitBtn" class="btn-submit">संदेश पाठवा <i class="fa-solid fa-paper-plane" style="margin-left: 5px;"></i></button>
+                        
+                        <div id="form-status"></div>
                     </form>
                 </div>
             </div>
@@ -263,7 +289,6 @@
                     <li><a href="contact.html" class="active" style="color: #ffcc00;">संपर्क (Contact Us)</a></li>
                     <li><a href="privacy-policy.html">गोपनीयता धोरण (Privacy Policy)</a></li>
                     <li><a href="terms.html">नियम व अटी (Terms & Conditions)</a></li>
-<li><a href="disclaimer.html">अस्वीकरण (Disclaimer)</a></li>
                     <li><a href="disclaimer.html">अस्वीकरण (Disclaimer)</a></li>
                 </ul>
             </div>
@@ -283,6 +308,68 @@
             <p class="copyright-text">© २०२६ संतवाणी लायब्ररी. सर्व हक्क सुरक्षित. | रचना वारकरी संप्रदाय चरणी समर्पित.</p>
         </div>
     </footer>
-<script src="menu.js"></script>
+
+    <script src="menu.js"></script>
+
+    <!-- Firebase Realtime Database Script -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
+        // तुमची खरी कन्फिगरेशन जोडली आहे
+        const firebaseConfig = {
+            apiKey: "AIzaSyBQTDVzvz5tFktEEsnPZQ6G_ADoxGL0ZW4",
+            authDomain: "santvani-48d18.firebaseapp.com",
+            databaseURL: "https://santvani-48d18-default-rtdb.firebaseio.com",
+            projectId: "santvani-48d18",
+            storageBucket: "santvani-48d18.firebasestorage.app",
+            messagingSenderId: "769467907364",
+            appId: "1:769467907364:web:4fe85b182eb43359f707b1",
+            measurementId: "G-D5XSFWVWTP"
+        };
+
+        // Firebase initialize करणे
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+
+        const contactForm = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const formStatus = document.getElementById('form-status');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'पाठवत आहे... <i class="fa-solid fa-spinner fa-spin"></i>';
+
+            // Realtime Database मधील 'contacts' या नोडमध्ये डेटा सेव्ह करणे
+            const contactsRef = ref(database, 'contacts');
+            
+            push(contactsRef, {
+                name: name,
+                email: email,
+                message: message,
+                date: new Date().toLocaleString('mr-IN')
+            })
+            .then(() => {
+                formStatus.textContent = 'आपला संदेश यशस्वीरीत्या पाठवला गेला आहे!';
+                formStatus.className = 'success';
+                contactForm.reset();
+            })
+            .catch((error) => {
+                console.error("Error writing to Database:", error);
+                formStatus.textContent = 'संदेश पाठवताना अडचण आली. कृपया पुन्हा प्रयत्न करा.';
+                formStatus.className = 'error';
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = 'संदेश पाठवा <i class="fa-solid fa-paper-plane" style="margin-left: 5px;"></i>';
+            });
+        });
+    </script>
 </body>
 </html>
