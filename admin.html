@@ -3,181 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santvani Admin - Ultra Control Panel</title>
+    <title>Santvani Admin - Portal</title>
     <!-- Google Fonts & FontAwesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <!-- Firebase SDK (v8.10.1) -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
     
     <style>
-        * { box-sizing: border-box; font-family: 'Outfit', sans-serif; margin: 0; padding: 0; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        * { box-sizing: border-box; font-family: 'Plus Jakarta Sans', sans-serif; margin: 0; padding: 0; transition: all 0.25s ease; }
         
         body { 
-            background: #08070b; 
-            color: #f3f4f6; 
+            background: #0f172a; 
+            color: #f8fafc; 
             display: flex; 
             justify-content: center; 
             align-items: center; 
             min-height: 100vh; 
             padding: 20px; 
-            overflow-x: hidden;
-            position: relative;
         }
 
-        /* 🌌 Glowing Background Circles */
-        body::before, body::after {
-            content: '';
-            position: absolute;
-            width: 320px;
-            height: 320px;
-            border-radius: 50%;
-            filter: blur(90px);
-            opacity: 0.45;
-            z-index: 0;
-            animation: pulseGlow 8s infinite alternate ease-in-out;
-        }
-        body::before { background: #ffb703; top: 10%; left: 15%; }
-        body::after { background: #ff0055; bottom: 10%; right: 15%; animation-delay: -4s; }
-
-        @keyframes pulseGlow {
-            0% { transform: scale(1) translate(0, 0); }
-            100% { transform: scale(1.2) translate(30px, -30px); }
-        }
-
-        /* 🔒 1. ULTRA PASSCODE CARD (Floating Glassmorphism) */
+        /* 🔒 1. ELEGANT PASSCODE CARD */
         #passcode-screen { 
-            position: relative;
-            z-index: 10;
-            background: rgba(18, 16, 25, 0.75); 
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 45px 35px; 
-            border-radius: 24px; 
-            border: 1px solid rgba(255, 183, 3, 0.25); 
+            background: #1e293b; 
+            padding: 40px 30px; 
+            border-radius: 20px; 
+            border: 1px solid #334155; 
             text-align: center; 
-            max-width: 400px; 
+            max-width: 380px; 
             width: 100%; 
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 183, 3, 0.15); 
-            animation: floatCard 4s ease-in-out infinite alternate;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); 
         }
 
-        @keyframes floatCard {
-            0% { transform: translateY(0px); }
-            100% { transform: translateY(-10px); }
-        }
-
-        .icon-badge {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #ffb703, #ff0055);
-            border-radius: 50%;
+        .brand-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #d97706, #f59e0b);
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px auto;
-            font-size: 28px;
-            color: #fff;
-            box-shadow: 0 10px 25px rgba(255, 183, 3, 0.4);
+            margin: 0 auto 18px auto;
+            font-size: 26px;
+            color: #ffffff;
+            box-shadow: 0 10px 20px rgba(217, 119, 6, 0.3);
         }
 
         #passcode-screen h2 { 
-            font-size: 26px; 
-            font-weight: 700; 
-            letter-spacing: 0.5px;
-            background: linear-gradient(to right, #ffffff, #ffb703);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 8px; 
+            font-size: 22px; 
+            font-weight: 800; 
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px; 
         }
 
-        #passcode-screen p { color: #9ca3af; font-size: 14px; margin-bottom: 25px; }
-
-        .input-group { position: relative; margin-bottom: 20px; }
+        #passcode-screen p { color: #94a3b8; font-size: 13px; margin-bottom: 22px; }
 
         #pin-input { 
-            padding: 14px; 
+            padding: 12px; 
             width: 100%; 
-            font-size: 22px; 
+            font-size: 20px; 
             text-align: center; 
-            border-radius: 12px; 
-            border: 1.5px solid rgba(255, 255, 255, 0.1); 
-            background: rgba(255, 255, 255, 0.05); 
-            color: #fff; 
+            border-radius: 10px; 
+            border: 1.5px solid #475569; 
+            background: #0f172a; 
+            color: #f8fafc; 
             letter-spacing: 8px; 
             outline: none; 
+            margin-bottom: 16px;
         }
 
         #pin-input:focus { 
-            border-color: #ffb703; 
-            background: rgba(255, 183, 3, 0.05);
-            box-shadow: 0 0 15px rgba(255, 183, 3, 0.3);
+            border-color: #f59e0b; 
+            box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.2);
         }
 
         #pin-btn { 
-            padding: 14px; 
-            background: linear-gradient(135deg, #ffb703 0%, #ff8800 100%); 
-            color: #000; 
+            padding: 12px; 
+            background: #f59e0b; 
+            color: #0f172a; 
             border: none; 
             font-weight: 700; 
-            border-radius: 12px; 
+            border-radius: 10px; 
             cursor: pointer; 
             width: 100%; 
-            font-size: 16px; 
-            letter-spacing: 0.5px;
-            box-shadow: 0 8px 20px rgba(255, 183, 3, 0.3);
+            font-size: 15px; 
         }
 
-        #pin-btn:hover { 
-            transform: translateY(-2px); 
-            box-shadow: 0 12px 25px rgba(255, 183, 3, 0.5); 
-        }
+        #pin-btn:hover { background: #d97706; color: #fff; }
 
-        #error-msg { 
-            color: #ff4d4d; 
-            font-size: 13px; 
-            margin-top: 12px; 
-            display: none; 
-            font-weight: 600;
-        }
+        #error-msg { color: #ef4444; font-size: 13px; margin-top: 10px; display: none; font-weight: 600; }
 
         /* 📊 2. MAIN DASHBOARD */
-        #admin-dashboard { display: none; width: 100%; max-width: 950px; z-index: 10; position: relative; }
+        #admin-dashboard { display: none; width: 100%; max-width: 900px; margin-top: 20px; }
         
         .header { 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
-            background: rgba(20, 18, 28, 0.8); 
-            backdrop-filter: blur(15px);
-            padding: 22px 28px; 
-            border-radius: 18px; 
-            border: 1px solid rgba(255, 183, 3, 0.2); 
-            margin-bottom: 25px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            background: #1e293b; 
+            padding: 18px 24px; 
+            border-radius: 16px; 
+            border: 1px solid #334155; 
+            margin-bottom: 20px; 
         }
         
         .header h2 { 
-            color: #ffb703; 
-            font-size: 22px; 
+            color: #f59e0b; 
+            font-size: 20px; 
+            font-weight: 800;
             display: flex; 
             align-items: center; 
-            gap: 12px; 
+            gap: 10px; 
         }
 
-        .tabs { display: flex; gap: 15px; margin-bottom: 25px; }
+        .tabs { display: flex; gap: 12px; margin-bottom: 20px; }
         
         .tab-btn { 
             flex: 1; 
-            padding: 14px; 
-            background: rgba(255, 255, 255, 0.03); 
-            color: #9ca3af; 
-            border: 1px solid rgba(255, 255, 255, 0.08); 
-            font-weight: 600; 
+            padding: 12px; 
+            background: #1e293b; 
+            color: #94a3b8; 
+            border: 1px solid #334155; 
+            font-weight: 700; 
             border-radius: 12px; 
             cursor: pointer; 
-            font-size: 15px;
+            font-size: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -185,62 +137,57 @@
         }
 
         .tab-btn.active { 
-            background: linear-gradient(135deg, #ffb703, #ff8800); 
-            color: #000; 
-            border-color: #ffb703; 
-            box-shadow: 0 8px 20px rgba(255, 183, 3, 0.25);
+            background: #f59e0b; 
+            color: #0f172a; 
+            border-color: #f59e0b; 
         }
 
         .content-box { 
-            background: rgba(18, 16, 25, 0.85); 
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.08); 
-            border-radius: 20px; 
-            padding: 25px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            background: #1e293b; 
+            border: 1px solid #334155; 
+            border-radius: 16px; 
+            padding: 20px; 
         }
 
         .card { 
-            background: rgba(255, 255, 255, 0.03); 
-            border-left: 4px solid #ffb703; 
-            border-radius: 14px; 
-            padding: 18px; 
-            margin-bottom: 15px; 
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
-            border-right: 1px solid rgba(255, 255, 255, 0.03);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            background: #0f172a; 
+            border-left: 4px solid #f59e0b; 
+            border-radius: 12px; 
+            padding: 16px; 
+            margin-bottom: 12px; 
+            border-top: 1px solid #334155;
+            border-right: 1px solid #334155;
+            border-bottom: 1px solid #334155;
         }
 
-        .card:hover { transform: translateX(5px); background: rgba(255, 255, 255, 0.05); }
-
-        .card-header { display: flex; justify-content: space-between; margin-bottom: 10px; }
-        .card-title { color: #ffb703; font-weight: 600; font-size: 16px; }
-        .card-time { color: #6b7280; font-size: 12px; }
+        .card-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
+        .card-title { color: #f59e0b; font-weight: 700; font-size: 15px; }
+        .card-time { color: #64748b; font-size: 12px; }
         
         .page-badge { 
-            background: rgba(255, 183, 3, 0.1); 
-            color: #ffb703; 
+            background: #334155; 
+            color: #cbd5e1; 
             font-size: 12px; 
-            padding: 4px 10px; 
+            padding: 3px 8px; 
             border-radius: 6px; 
             display: inline-block; 
-            margin-bottom: 10px; 
+            margin-bottom: 8px; 
             font-family: monospace;
         }
 
-        .card-text { color: #e5e7eb; font-size: 15px; white-space: pre-wrap; line-height: 1.6; }
-        .card-contact-info { color: #38bdf8; font-size: 14px; font-weight: 500; margin-bottom: 8px; }
+        .card-text { color: #e2e8f0; font-size: 14px; white-space: pre-wrap; line-height: 1.5; }
+        .card-contact-info { color: #38bdf8; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
         
         .delete-btn { 
             color: #ef4444; 
             background: rgba(239, 68, 68, 0.1); 
             border: 1px solid rgba(239, 68, 68, 0.2); 
-            padding: 6px 12px;
+            padding: 5px 10px;
             border-radius: 6px;
             cursor: pointer; 
             float: right; 
-            font-size: 13px; 
-            margin-top: 5px; 
+            font-size: 12px; 
+            font-weight: 600;
         }
 
         .delete-btn:hover { background: #ef4444; color: #fff; }
@@ -248,33 +195,31 @@
 </head>
 <body>
 
-    <!-- 🔒 ULTRA FLOATING PASSCODE SCREEN -->
+    <!-- 🔒 ELEGANT PASSCODE SCREEN -->
     <div id="passcode-screen">
-        <div class="icon-badge">
-            <i class="fa-solid fa-shield-halved"></i>
+        <div class="brand-icon">
+            <i class="fa-solid fa-om"></i>
         </div>
-        <h2>Santvani Admin</h2>
-        <p>Dashboard उघडण्यासाठी ४-अंकी पासकोड टाका</p>
+        <h2>Santvani Admin Suite</h2>
+        <p>प्रशासकीय पॅनेल उघडण्यासाठी पासकोड प्रविष्ट करा</p>
         
         <form onsubmit="checkPin(event)">
-            <div class="input-group">
-                <input type="password" id="pin-input" maxlength="4" placeholder="••••" autofocus>
-            </div>
-            <button type="submit" id="pin-btn">अ‍ॅक्सेस मिळवा <i class="fa-solid fa-arrow-right"></i></button>
+            <input type="password" id="pin-input" maxlength="4" placeholder="••••" autofocus>
+            <button type="submit" id="pin-btn">अ‍ॅक्सेस उघडा <i class="fa-solid fa-arrow-right"></i></button>
         </form>
-        <p id="error-msg"><i class="fa-solid fa-triangle-exclamation"></i> चुकीचा पासकोड! पुन्हा प्रयत्न करा.</p>
+        <p id="error-msg"><i class="fa-solid fa-circle-exclamation"></i> चुकीचा पासकोड!</p>
     </div>
 
     <!-- 📊 MAIN DASHBOARD -->
     <div id="admin-dashboard">
         <div class="header">
-            <h2><i class="fa-solid fa-bolt"></i> संतवाणी Control Center</h2>
-            <button onclick="location.reload()" style="background: rgba(255, 255, 255, 0.08); color: #fff; border: 1px solid rgba(255,255,255,0.1); padding: 9px 16px; border-radius: 8px; cursor: pointer; font-weight:600;"><i class="fa-solid fa-power-off"></i> बाहेर पडा</button>
+            <h2><i class="fa-solid fa-dharmachakra"></i> संतवाणी Admin Suite</h2>
+            <button onclick="location.reload()" style="background: #334155; color: #f8fafc; border: none; padding: 8px 14px; border-radius: 8px; cursor: pointer; font-weight:600;"><i class="fa-solid fa-power-off"></i> बाहेर पडा</button>
         </div>
 
         <div class="tabs">
             <button class="tab-btn active" id="tab-comments" onclick="switchTab('comments')"><i class="fa-solid fa-comments"></i> प्रतिक्रिया (<span id="count-comments">0</span>)</button>
-            <button class="tab-btn" id="tab-contacts" onclick="switchTab('contacts')"><i class="fa-solid fa-envelope"></i> संपर्क (<span id="count-contacts">0</span>)</button>
+            <button class="tab-btn" id="tab-contacts" onclick="switchTab('contacts')"><i class="fa-solid fa-paper-plane"></i> संपर्क संदेश (<span id="count-contacts">0</span>)</button>
         </div>
 
         <div class="content-box">
@@ -288,7 +233,7 @@
     </div>
 
     <script>
-        // PASSCODE LOGIC (ENTER KEY SUPPORTED)
+        // PASSCODE LOGIC
         function checkPin(e) {
             if(e) e.preventDefault();
             const pin = document.getElementById("pin-input").value;
@@ -299,9 +244,6 @@
                 initFirebaseAdmin();
             } else {
                 document.getElementById("error-msg").style.display = "block";
-                const card = document.getElementById("passcode-screen");
-                card.style.animation = "shake 0.4s ease-in-out";
-                setTimeout(() => card.style.animation = "floatCard 4s ease-in-out infinite alternate", 400);
             }
         }
 
@@ -330,7 +272,7 @@
                 let totalCount = 0;
 
                 if (!snapshot.exists()) {
-                    list.innerHTML = "<p style='color:#6b7280; text-align:center; padding:20px;'>अजून एकही प्रतिक्रिया आलेली नाही.</p>";
+                    list.innerHTML = "<p style='color:#94a3b8; text-align:center; padding:15px;'>अजून एकही प्रतिक्रिया आलेली नाही.</p>";
                     document.getElementById("count-comments").innerText = "0";
                     return;
                 }
@@ -346,12 +288,12 @@
                         card.className = "card";
                         card.innerHTML = `
                             <div class="card-header">
-                                <span class="card-title"><i class="fa-solid fa-circle-user"></i> ${data.name || 'Anonymous'}</span>
+                                <span class="card-title"><i class="fa-solid fa-user"></i> ${data.name || 'Anonymous'}</span>
                                 <span class="card-time">${data.timestamp || ''}</span>
                             </div>
                             <div class="page-badge">📌 /${pageId.replace(/_/g, '/')}</div>
                             <p class="card-text">${data.text || data.message || ''}</p>
-                            <button class="delete-btn" onclick="deleteComment('${pageId}', '${commentKey}')"><i class="fa-solid fa-trash-can"></i> डिलीट</button>
+                            <button class="delete-btn" onclick="deleteComment('${pageId}', '${commentKey}')"><i class="fa-solid fa-trash"></i> डिलीट</button>
                             <div style="clear:both;"></div>
                         `;
                         list.prepend(card);
@@ -360,23 +302,20 @@
                 document.getElementById("count-comments").innerText = totalCount;
             });
 
-            // 2. CONTACT ENQUIRIES FETCHING
+            // 2. CONTACT ENQUIRIES FETCHING (ROBUST LOOP FOR ALL DB STRUCTURES)
             db.ref("contacts").on("value", function(snapshot) {
                 const list = document.getElementById("contacts-list");
                 list.innerHTML = "";
                 let totalCount = 0;
 
                 if (!snapshot.exists()) {
-                    list.innerHTML = "<p style='color:#6b7280; text-align:center; padding:20px;'>अजून एकही मेसेज आलेला नाही.</p>";
+                    list.innerHTML = "<p style='color:#94a3b8; text-align:center; padding:15px;'>अजून एकही संदेश आलेला नाही.</p>";
                     document.getElementById("count-contacts").innerText = "0";
                     return;
                 }
 
-                snapshot.forEach(function(childSnap) {
+                function renderContactCard(key, data) {
                     totalCount++;
-                    const data = childSnap.val();
-                    const key = childSnap.key;
-
                     const name = data.name || data.fullname || data.userName || 'User';
                     const contactInfo = data.email || data.phone || data.mobile || data.contact || 'माहिती उपलब्ध नाही';
                     const message = data.message || data.text || data.subject || data.msg || JSON.stringify(data);
@@ -387,16 +326,31 @@
                     card.style.borderLeftColor = "#38bdf8";
                     card.innerHTML = `
                         <div class="card-header">
-                            <span class="card-title" style="color:#38bdf8;"><i class="fa-solid fa-paper-plane"></i> ${name}</span>
+                            <span class="card-title" style="color:#38bdf8;"><i class="fa-solid fa-envelope"></i> ${name}</span>
                             <span class="card-time">${time}</span>
                         </div>
                         <div class="card-contact-info">📞 संपर्क: ${contactInfo}</div>
                         <p class="card-text">💬 संदेश: ${message}</p>
-                        <button class="delete-btn" onclick="deleteContact('${key}')"><i class="fa-solid fa-trash-can"></i> डिलीट</button>
+                        <button class="delete-btn" onclick="deleteContact('${key}')"><i class="fa-solid fa-trash"></i> डिलीट</button>
                         <div style="clear:both;"></div>
                     `;
                     list.prepend(card);
+                }
+
+                snapshot.forEach(function(childSnap) {
+                    const val = childSnap.val();
+                    const key = childSnap.key;
+
+                    // जर डेटा सब-ऑब्जेक्ट्समध्ये असेल तर:
+                    if (typeof val === 'object' && val !== null && !val.name && !val.message && !val.text) {
+                        childSnap.forEach(function(nestedSnap) {
+                            renderContactCard(childSnap.key + '/' + nestedSnap.key, nestedSnap.val());
+                        });
+                    } else {
+                        renderContactCard(key, val);
+                    }
                 });
+
                 document.getElementById("count-contacts").innerText = totalCount;
             });
         }
@@ -422,9 +376,9 @@
                 firebase.database().ref("comments/" + pageId + "/" + commentKey).remove();
             }
         }
-        function deleteContact(key) {
+        function deleteContact(pathKey) {
             if (confirm("हा संदेश नक्की डिलीट करायचा आहे का?")) {
-                firebase.database().ref("contacts/" + key).remove();
+                firebase.database().ref("contacts/" + pathKey).remove();
             }
         }
     </script>
