@@ -26,7 +26,7 @@
             padding: 20px; 
         }
 
-        /* 🔒 1. PASSCODE CARD */
+        /* 🔒 PASSCODE CARD */
         #passcode-screen { 
             background: #1e293b; 
             padding: 40px 30px; 
@@ -103,7 +103,7 @@
 
         #error-msg { color: #ef4444; font-size: 13px; margin-top: 10px; display: none; font-weight: 600; }
 
-        /* 📊 2. MAIN DASHBOARD */
+        /* 📊 MAIN DASHBOARD */
         #admin-dashboard { display: none; width: 100%; max-width: 900px; margin-top: 20px; }
         
         .header { 
@@ -281,82 +281,94 @@
             const db = firebase.database();
 
             // 1. LOAD COMMENTS
-            db.ref("comments").on("value", function(snapshot) {
-                const list = document.getElementById("comments-list");
-                list.innerHTML = "";
-                let totalCount = 0;
+            try {
+                db.ref("comments").on("value", function(snapshot) {
+                    const list = document.getElementById("comments-list");
+                    list.innerHTML = "";
+                    let totalCount = 0;
 
-                if (!snapshot.exists()) {
-                    list.innerHTML = "<p style='color:#94a3b8; text-align:center; padding:15px;'>अजून एकही प्रतिक्रिया आलेली नाही.</p>";
-                    document.getElementById("count-comments").innerText = "0";
-                    return;
-                }
+                    if (!snapshot.exists()) {
+                        list.innerHTML = "<p style='color:#94a3b8; text-align:center; padding:15px;'>अजून एकही प्रतिक्रिया आलेली नाही.</p>";
+                        document.getElementById("count-comments").innerText = "0";
+                        return;
+                    }
 
-                snapshot.forEach(function(pageSnap) {
-                    const pageId = pageSnap.key;
-                    pageSnap.forEach(function(commentSnap) {
+                    snapshot.forEach(function(pageSnap) {
+                        const pageId = pageSnap.key;
+                        pageSnap.forEach(function(commentSnap) {
+                            totalCount++;
+                            const data = commentSnap.val() || {};
+                            const commentKey = commentSnap.key;
+
+                            const card = document.createElement("div");
+                            card.className = "card";
+                            card.innerHTML = `
+                                <div class="card-header">
+                                    <span class="card-title"><i class="fa-solid fa-user"></i> ${data.name || 'Anonymous'}</span>
+                                    <span class="card-time">${data.timestamp || data.date || ''}</span>
+                                </div>
+                                <div class="page-badge">📌 /${pageId.replace(/_/g, '/')}</div>
+                                <p class="card-text">${data.text || data.message || ''}</p>
+                                <button class="delete-btn" onclick="deleteComment('${pageId}', '${commentKey}')"><i class="fa-solid fa-trash"></i> डिलीट</button>
+                                <div style="clear:both;"></div>
+                            `;
+                            list.prepend(card);
+                        });
+                    });
+                    document.getElementById("count-comments").innerText = totalCount;
+                });
+            } catch(e) {
+                console.error("Comments error:", e);
+            }
+
+            // 2. LOAD CONTACTS (FORCED FETCH)
+            function fetchContactsData() {
+                const list = document.getElementById("contacts-list");
+                db.ref("contacts").on("value", function(snapshot) {
+                    list.innerHTML = "";
+                    let totalCount = 0;
+
+                    if (!snapshot.exists()) {
+                        list.innerHTML = "<p style='color:#94a3b8; text-align:center; padding:15px;'>अजून एकही संपर्क संदेश आलेला नाही.</p>";
+                        document.getElementById("count-contacts").innerText = "0";
+                        return;
+                    }
+
+                    snapshot.forEach(function(childSnap) {
                         totalCount++;
-                        const data = commentSnap.val();
-                        const commentKey = commentSnap.key;
+                        const data = childSnap.val() || {};
+                        const key = childSnap.key;
+
+                        const name = data.name || 'User';
+                        const email = data.email || 'माहिती उपलब्ध नाही';
+                        const message = data.message || '';
+                        const date = data.date || '';
 
                         const card = document.createElement("div");
                         card.className = "card";
+                        card.style.borderLeftColor = "#38bdf8";
                         card.innerHTML = `
                             <div class="card-header">
-                                <span class="card-title"><i class="fa-solid fa-user"></i> ${data.name || 'Anonymous'}</span>
-                                <span class="card-time">${data.timestamp || data.date || ''}</span>
+                                <span class="card-title" style="color:#38bdf8;"><i class="fa-solid fa-envelope"></i> ${name}</span>
+                                <span class="card-time">${date}</span>
                             </div>
-                            <div class="page-badge">📌 /${pageId.replace(/_/g, '/')}</div>
-                            <p class="card-text">${data.text || data.message || ''}</p>
-                            <button class="delete-btn" onclick="deleteComment('${pageId}', '${commentKey}')"><i class="fa-solid fa-trash"></i> डिलीट</button>
+                            <div class="card-contact-info">📧 ईमेल: ${email}</div>
+                            <div class="card-text">💬 संदेश: ${message}</div>
+                            <button class="delete-btn" onclick="deleteContact('${key}')"><i class="fa-solid fa-trash"></i> डिलीट</button>
                             <div style="clear:both;"></div>
                         `;
                         list.prepend(card);
                     });
+
+                    document.getElementById("count-contacts").innerText = totalCount;
+                }, function(error) {
+                    console.error("Contacts fetch error:", error);
+                    list.innerHTML = "<p style='color:#ef4444; text-align:center; padding:15px;'>डेटा लोड करताना एरर आली. Firebase Rules तपासा.</p>";
                 });
-                document.getElementById("count-comments").innerText = totalCount;
-            });
+            }
 
-            // 2. LOAD CONTACTS
-            db.ref("contacts").on("value", function(snapshot) {
-                const list = document.getElementById("contacts-list");
-                list.innerHTML = "";
-                let totalCount = 0;
-
-                if (!snapshot.exists()) {
-                    list.innerHTML = "<p style='color:#94a3b8; text-align:center; padding:15px;'>अजून एकही संदेश आलेला नाही.</p>";
-                    document.getElementById("count-contacts").innerText = "0";
-                    return;
-                }
-
-                snapshot.forEach(function(childSnap) {
-                    totalCount++;
-                    const data = childSnap.val() || {};
-                    const key = childSnap.key;
-
-                    const name = data.name || 'User';
-                    const email = data.email || 'माहिती उपलब्ध नाही';
-                    const message = data.message || '';
-                    const date = data.date || '';
-
-                    const card = document.createElement("div");
-                    card.className = "card";
-                    card.style.borderLeftColor = "#38bdf8";
-                    card.innerHTML = `
-                        <div class="card-header">
-                            <span class="card-title" style="color:#38bdf8;"><i class="fa-solid fa-envelope"></i> ${name}</span>
-                            <span class="card-time">${date}</span>
-                        </div>
-                        <div class="card-contact-info">📧 ईमेल: ${email}</div>
-                        <div class="card-text">💬 संदेश: ${message}</div>
-                        <button class="delete-btn" onclick="deleteContact('${key}')"><i class="fa-solid fa-trash"></i> डिलीट</button>
-                        <div style="clear:both;"></div>
-                    `;
-                    list.prepend(card);
-                });
-
-                document.getElementById("count-contacts").innerText = totalCount;
-            });
+            // Call function immediately
+            fetchContactsData();
         }
 
         // TAB SWITCHING
