@@ -38,9 +38,15 @@
         .page-badge { background: #334155; color: #38bdf8; font-size: 12px; padding: 5px 10px; border-radius: 6px; display: inline-block; margin-bottom: 8px; font-family: monospace; text-decoration: none; font-weight: 600; border: 1px solid rgba(56, 189, 248, 0.2); }
         .page-badge:hover { background: #38bdf8; color: #0f172a; }
         .card-text { color: #e2e8f0; font-size: 14px; white-space: pre-wrap; line-height: 1.5; margin-bottom: 10px; }
+        
+        /* 💬 REPLY SECTION WITH EDIT/DELETE */
         .reply-section { background: #1e293b; border-radius: 8px; padding: 10px; margin-top: 10px; border: 1px dashed #475569; }
-        .reply-item { background: #0f172a; border-left: 3px solid #10b981; padding: 8px 12px; border-radius: 6px; margin-bottom: 8px; font-size: 13px; }
-        .reply-author { color: #10b981; font-weight: 700; font-size: 12px; }
+        .reply-item { background: #0f172a; border-left: 3px solid #10b981; padding: 8px 12px; border-radius: 6px; margin-bottom: 8px; font-size: 13px; position: relative; }
+        .reply-author { color: #10b981; font-weight: 700; font-size: 12px; display: flex; justify-content: space-between; align-items: center; }
+        .reply-actions { display: flex; gap: 8px; }
+        .reply-btn-edit { color: #f59e0b; cursor: pointer; font-size: 11px; }
+        .reply-btn-delete { color: #ef4444; cursor: pointer; font-size: 11px; }
+
         .reply-input-box { display: flex; gap: 8px; margin-top: 8px; }
         .reply-input-box input { flex: 1; background: #0f172a; border: 1px solid #475569; color: #fff; padding: 8px 12px; border-radius: 6px; font-size: 13px; outline: none; }
         .reply-input-box button { background: #10b981; color: #0f172a; border: none; padding: 8px 14px; font-weight: 700; border-radius: 6px; cursor: pointer; font-size: 13px; }
@@ -136,12 +142,10 @@
                     snapshot.forEach(function(pageSnap) {
                         const pageId = pageSnap.key;
                         
-                        // 🎯 ACCURATE URL RECONSTRUCTION LOGIC
                         let path = pageId;
                         if (path.startsWith('_')) path = path.substring(1);
                         if (path.endsWith('_html')) path = path.slice(0, -5) + '.html';
                         
-                        // Fix hyphenated folder names
                         path = path.replace(/nitya_pathan_stotra/g, 'nitya-pathan-stotra');
                         path = path.replace(/shree_sukta/g, 'shree-sukta');
                         path = path.replace(/shravan_mahina/g, 'shravan-mahina');
@@ -150,7 +154,7 @@
                         path = path.replace(/_/g, '/');
 
                         let cleanPath = '/' + path;
-                        cleanPath = cleanPath.replace(/\/\//g, '/'); // Remove double slashes
+                        cleanPath = cleanPath.replace(/\/\//g, '/');
 
                         const fullUrl = window.location.origin + cleanPath;
 
@@ -165,7 +169,13 @@
                                     const reply = data.replies[rKey];
                                     repliesHtml += `
                                         <div class="reply-item">
-                                            <div class="reply-author"><i class="fa-solid fa-reply"></i> ${reply.name || 'Admin'} <span style="font-size:10px; color:#64748b; font-weight:normal;">(${reply.timestamp || ''})</span></div>
+                                            <div class="reply-author">
+                                                <span><i class="fa-solid fa-reply"></i> ${reply.name || 'Admin'} <span style="font-size:10px; color:#64748b; font-weight:normal;">(${reply.timestamp || ''})</span></span>
+                                                <span class="reply-actions">
+                                                    <span class="reply-btn-edit" onclick="editReply('${pageId}', '${commentKey}', '${rKey}', '${reply.text}')"><i class="fa-solid fa-pen"></i> एडिट</span>
+                                                    <span class="reply-btn-delete" onclick="deleteReply('${pageId}', '${commentKey}', '${rKey}')"><i class="fa-solid fa-trash"></i> डिलीट</span>
+                                                </span>
+                                            </div>
                                             <div style="color:#cbd5e1; margin-top:2px;">${reply.text}</div>
                                         </div>
                                     `;
@@ -272,6 +282,23 @@
                     input.value = "";
                 }
             });
+        }
+
+        // ✏️ EDIT REPLY FUNCTION
+        function editReply(pageId, commentKey, replyKey, oldText) {
+            const newText = prompt("उत्तर एडिट करा:", oldText);
+            if (newText !== null && newText.trim() !== "") {
+                firebase.database().ref(`comments/${pageId}/${commentKey}/replies/${replyKey}`).update({
+                    text: newText.trim()
+                });
+            }
+        }
+
+        // 🗑️ DELETE REPLY FUNCTION
+        function deleteReply(pageId, commentKey, replyKey) {
+            if (confirm("तुम्हाला हा रिप्लाय नक्की डिलीट करायचा आहे का?")) {
+                firebase.database().ref(`comments/${pageId}/${commentKey}/replies/${replyKey}`).remove();
+            }
         }
 
         function switchTab(tab) {
