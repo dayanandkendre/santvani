@@ -3,62 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santvani Admin - Passcode Dashboard</title>
-    <!-- Firebase SDK (v8.10.1 - matching menu.js) -->
+    <title>Santvani Admin - Ultra Control Panel</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Firebase SDK (v8.10.1) -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <style>
-        * { box-sizing: border-box; font-family: 'Poppins', sans-serif; margin: 0; padding: 0; }
-        body { background: #0f0f0f; color: #fff; display: flex; justify-content: center; align-items: center; min-height: 100vh; padding: 15px; }
-
-        /* 🔒 1. Passcode Screen */
-        #passcode-screen { background: #181818; padding: 30px; border-radius: 12px; border: 1px solid #ffb703; text-align: center; max-width: 380px; width: 100%; box-shadow: 0 4px 20px rgba(255,183,3,0.2); }
-        #passcode-screen h2 { color: #ffb703; margin-bottom: 15px; }
-        #pin-input { padding: 12px; width: 100%; font-size: 18px; text-align: center; border-radius: 6px; border: 1px solid #333; background: #222; color: #fff; margin-bottom: 15px; letter-spacing: 4px; }
-        #pin-btn { padding: 10px 20px; background: #ffb703; color: #000; border: none; font-weight: bold; border-radius: 6px; cursor: pointer; width: 100%; font-size: 16px; }
-
-        /* 📊 2. Main Admin Dashboard */
-        #admin-dashboard { display: none; width: 100%; max-width: 900px; }
-        .header { display: flex; justify-content: space-between; align-items: center; background: #181818; padding: 20px; border-radius: 10px; border-left: 5px solid #ffb703; margin-bottom: 20px; }
-        .header h2 { color: #ffb703; }
+        * { box-sizing: border-box; font-family: 'Outfit', sans-serif; margin: 0; padding: 0; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         
-        .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
-        .tab-btn { flex: 1; padding: 12px; background: #222; color: #aaa; border: 1px solid #333; font-weight: bold; border-radius: 6px; cursor: pointer; }
-        .tab-btn.active { background: #ffb703; color: #000; border-color: #ffb703; }
+        body { 
+            background: #08070b; 
+            color: #f3f4f6; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            padding: 20px; 
+            overflow-x: hidden;
+            position: relative;
+        }
 
-        .content-box { background: #121212; border: 1px solid #222; border-radius: 10px; padding: 20px; }
-        .card { background: #1a1a1a; border-left: 4px solid #ffb703; border-radius: 8px; padding: 15px; margin-bottom: 12px; position: relative; }
-        .card-header { display: flex; justify-content: space-between; margin-bottom: 8px; }
-        .card-title { color: #ffb703; font-weight: bold; font-size: 15px; }
-        .card-time { color: #888; font-size: 12px; }
-        .page-badge { background: #252525; color: #ffb703; font-size: 11px; padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 8px; }
-        .card-text { color: #e0e0e0; font-size: 14px; white-space: pre-wrap; line-height: 1.5; }
-        .delete-btn { color: #ff4d4d; background: none; border: none; cursor: pointer; float: right; font-size: 14px; }
+        /* 🌌 Glowing Background Circles */
+        body::before, body::after {
+            content: '';
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.45;
+            z-index: 0;
+            animation: pulseGlow 8s infinite alternate ease-in-out;
+        }
+        body::before { background: #ffb703; top: 10%; left: 15%; }
+        body::after { background: #ff0055; bottom: 10%; right: 15%; animation-delay: -4s; }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(1) translate(0, 0); }
+            100% { transform: scale(1.2) translate(30px, -30px); }
+        }
+
+        /* 🔒 1. ULTRA PASSCODE CARD (Floating Glassmorphism) */
+        #passcode-screen { 
+            position: relative;
+            z-index: 10;
+            background: rgba(18, 16, 25, 0.75); 
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 45px 35px; 
+            border-radius: 24px; 
+            border: 1px solid rgba(255, 183, 3, 0.25); 
+            text-align: center; 
+            max-width: 400px; 
+            width: 100%; 
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 183, 3, 0.15); 
+            animation: floatCard 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatCard {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-10px); }
+        }
+
+        .icon-badge {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #ffb703, #ff0055);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+            font-size: 28px;
+            color: #fff;
+            box-shadow: 0 10px 25px rgba(255, 183, 3, 0.4);
+        }
+
+        #passcode-screen h2 { 
+            font-size: 26px; 
+            font-weight: 700; 
+            letter-spacing: 0.5px;
+            background: linear-gradient(to right, #ffffff, #ffb703);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px; 
+        }
+
+        #passcode-screen p { color: #9ca3af; font-size: 14px; margin-bottom: 25px; }
+
+        .input-group { position: relative; margin-bottom: 20px; }
+
+        #pin-input { 
+            padding: 14px; 
+            width: 100%; 
+            font-size: 22px; 
+            text-align: center; 
+            border-radius: 12px; 
+            border: 1.5px solid rgba(255, 255, 255, 0.1); 
+            background: rgba(255, 255, 255, 0.05); 
+            color: #fff; 
+            letter-spacing: 8px; 
+            outline: none; 
+        }
+
+        #pin-input:focus { 
+            border-color: #ffb703; 
+            background: rgba(255, 183, 3, 0.05);
+            box-shadow: 0 0 15px rgba(255, 183, 3, 0.3);
+        }
+
+        #pin-btn { 
+            padding: 14px; 
+            background: linear-gradient(135deg, #ffb703 0%, #ff8800 100%); 
+            color: #000; 
+            border: none; 
+            font-weight: 700; 
+            border-radius: 12px; 
+            cursor: pointer; 
+            width: 100%; 
+            font-size: 16px; 
+            letter-spacing: 0.5px;
+            box-shadow: 0 8px 20px rgba(255, 183, 3, 0.3);
+        }
+
+        #pin-btn:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 12px 25px rgba(255, 183, 3, 0.5); 
+        }
+
+        #error-msg { 
+            color: #ff4d4d; 
+            font-size: 13px; 
+            margin-top: 12px; 
+            display: none; 
+            font-weight: 600;
+        }
+
+        /* 📊 2. MAIN DASHBOARD */
+        #admin-dashboard { display: none; width: 100%; max-width: 950px; z-index: 10; position: relative; }
+        
+        .header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            background: rgba(20, 18, 28, 0.8); 
+            backdrop-filter: blur(15px);
+            padding: 22px 28px; 
+            border-radius: 18px; 
+            border: 1px solid rgba(255, 183, 3, 0.2); 
+            margin-bottom: 25px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        
+        .header h2 { 
+            color: #ffb703; 
+            font-size: 22px; 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+        }
+
+        .tabs { display: flex; gap: 15px; margin-bottom: 25px; }
+        
+        .tab-btn { 
+            flex: 1; 
+            padding: 14px; 
+            background: rgba(255, 255, 255, 0.03); 
+            color: #9ca3af; 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            font-weight: 600; 
+            border-radius: 12px; 
+            cursor: pointer; 
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .tab-btn.active { 
+            background: linear-gradient(135deg, #ffb703, #ff8800); 
+            color: #000; 
+            border-color: #ffb703; 
+            box-shadow: 0 8px 20px rgba(255, 183, 3, 0.25);
+        }
+
+        .content-box { 
+            background: rgba(18, 16, 25, 0.85); 
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            border-radius: 20px; 
+            padding: 25px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .card { 
+            background: rgba(255, 255, 255, 0.03); 
+            border-left: 4px solid #ffb703; 
+            border-radius: 14px; 
+            padding: 18px; 
+            margin-bottom: 15px; 
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
+            border-right: 1px solid rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .card:hover { transform: translateX(5px); background: rgba(255, 255, 255, 0.05); }
+
+        .card-header { display: flex; justify-content: space-between; margin-bottom: 10px; }
+        .card-title { color: #ffb703; font-weight: 600; font-size: 16px; }
+        .card-time { color: #6b7280; font-size: 12px; }
+        
+        .page-badge { 
+            background: rgba(255, 183, 3, 0.1); 
+            color: #ffb703; 
+            font-size: 12px; 
+            padding: 4px 10px; 
+            border-radius: 6px; 
+            display: inline-block; 
+            margin-bottom: 10px; 
+            font-family: monospace;
+        }
+
+        .card-text { color: #e5e7eb; font-size: 15px; white-space: pre-wrap; line-height: 1.6; }
+        .card-contact-info { color: #38bdf8; font-size: 14px; font-weight: 500; margin-bottom: 8px; }
+        
+        .delete-btn { 
+            color: #ef4444; 
+            background: rgba(239, 68, 68, 0.1); 
+            border: 1px solid rgba(239, 68, 68, 0.2); 
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer; 
+            float: right; 
+            font-size: 13px; 
+            margin-top: 5px; 
+        }
+
+        .delete-btn:hover { background: #ef4444; color: #fff; }
     </style>
 </head>
 <body>
 
-    <!-- PASSCODE SCREEN -->
+    <!-- 🔒 ULTRA FLOATING PASSCODE SCREEN -->
     <div id="passcode-screen">
-        <h2><i class="fa-solid fa-lock"></i> Santvani Admin</h2>
-        <p style="color: #aaa; font-size: 13px; margin-bottom: 15px;">पाहण्यासाठी ४ अंकांचा पासकोड टाका:</p>
-        <input type="password" id="pin-input" maxlength="4" placeholder="••••">
-        <button id="pin-btn" onclick="checkPin()">लॉगिन करा</button>
-        <p id="error-msg" style="color: #ff4d4d; font-size: 12px; margin-top: 10px; display: none;">चुकीचा पासकोड!</p>
+        <div class="icon-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h2>Santvani Admin</h2>
+        <p>Dashboard उघडण्यासाठी ४-अंकी पासकोड टाका</p>
+        
+        <form onsubmit="checkPin(event)">
+            <div class="input-group">
+                <input type="password" id="pin-input" maxlength="4" placeholder="••••" autofocus>
+            </div>
+            <button type="submit" id="pin-btn">अ‍ॅक्सेस मिळवा <i class="fa-solid fa-arrow-right"></i></button>
+        </form>
+        <p id="error-msg"><i class="fa-solid fa-triangle-exclamation"></i> चुकीचा पासकोड! पुन्हा प्रयत्न करा.</p>
     </div>
 
-    <!-- MAIN DASHBOARD -->
+    <!-- 📊 MAIN DASHBOARD -->
     <div id="admin-dashboard">
         <div class="header">
-            <h2><i class="fa-solid fa-gauge"></i> संतवाणी ॲडमिन पॅनेल</h2>
-            <button onclick="location.reload()" style="background: #333; color: #fff; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer;"><i class="fa-solid fa-power-off"></i> बाहेर पडा</button>
+            <h2><i class="fa-solid fa-bolt"></i> संतवाणी Control Center</h2>
+            <button onclick="location.reload()" style="background: rgba(255, 255, 255, 0.08); color: #fff; border: 1px solid rgba(255,255,255,0.1); padding: 9px 16px; border-radius: 8px; cursor: pointer; font-weight:600;"><i class="fa-solid fa-power-off"></i> बाहेर पडा</button>
         </div>
 
         <div class="tabs">
-            <button class="tab-btn active" id="tab-comments" onclick="switchTab('comments')">💬 सर्व कमेंट्स (<span id="count-comments">0</span>)</button>
-            <button class="tab-btn" id="tab-contacts" onclick="switchTab('contacts')">📩 संपर्क मेसेजेस (<span id="count-contacts">0</span>)</button>
+            <button class="tab-btn active" id="tab-comments" onclick="switchTab('comments')"><i class="fa-solid fa-comments"></i> प्रतिक्रिया (<span id="count-comments">0</span>)</button>
+            <button class="tab-btn" id="tab-contacts" onclick="switchTab('contacts')"><i class="fa-solid fa-envelope"></i> संपर्क (<span id="count-contacts">0</span>)</button>
         </div>
 
         <div class="content-box">
@@ -72,8 +288,9 @@
     </div>
 
     <script>
-        // PASSCODE LOGIC
-        function checkPin() {
+        // PASSCODE LOGIC (ENTER KEY SUPPORTED)
+        function checkPin(e) {
+            if(e) e.preventDefault();
             const pin = document.getElementById("pin-input").value;
             if (pin === "9112") {
                 document.getElementById("passcode-screen").style.display = "none";
@@ -82,12 +299,14 @@
                 initFirebaseAdmin();
             } else {
                 document.getElementById("error-msg").style.display = "block";
+                const card = document.getElementById("passcode-screen");
+                card.style.animation = "shake 0.4s ease-in-out";
+                setTimeout(() => card.style.animation = "floatCard 4s ease-in-out infinite alternate", 400);
             }
         }
 
         // FIREBASE ADMIN LOGIC
         function initFirebaseAdmin() {
-            // Firebase Config Matching menu.js
             const firebaseConfig = {
                 apiKey: "AIzaSyBQTDVzvz5tFktEEsnPZQ6G_ADoxGL0ZW4",
                 authDomain: "santvani-48d18.firebaseapp.com",
@@ -111,7 +330,7 @@
                 let totalCount = 0;
 
                 if (!snapshot.exists()) {
-                    list.innerHTML = "<p style='color:#888'>अजून एकही कमेंट आलेली नाही.</p>";
+                    list.innerHTML = "<p style='color:#6b7280; text-align:center; padding:20px;'>अजून एकही प्रतिक्रिया आलेली नाही.</p>";
                     document.getElementById("count-comments").innerText = "0";
                     return;
                 }
@@ -127,12 +346,12 @@
                         card.className = "card";
                         card.innerHTML = `
                             <div class="card-header">
-                                <span class="card-title"><i class="fa-solid fa-user"></i> ${data.name || 'Anonymous'}</span>
+                                <span class="card-title"><i class="fa-solid fa-circle-user"></i> ${data.name || 'Anonymous'}</span>
                                 <span class="card-time">${data.timestamp || ''}</span>
                             </div>
-                            <div class="page-badge">📌 Page Path: /${pageId.replace(/_/g, '/')}</div>
-                            <p class="card-text">${data.text || ''}</p>
-                            <button class="delete-btn" onclick="deleteComment('${pageId}', '${commentKey}')"><i class="fa-solid fa-trash"></i> डिलीट</button>
+                            <div class="page-badge">📌 /${pageId.replace(/_/g, '/')}</div>
+                            <p class="card-text">${data.text || data.message || ''}</p>
+                            <button class="delete-btn" onclick="deleteComment('${pageId}', '${commentKey}')"><i class="fa-solid fa-trash-can"></i> डिलीट</button>
                             <div style="clear:both;"></div>
                         `;
                         list.prepend(card);
@@ -148,7 +367,7 @@
                 let totalCount = 0;
 
                 if (!snapshot.exists()) {
-                    list.innerHTML = "<p style='color:#888'>अजून एकही मेसेज आलेला नाही.</p>";
+                    list.innerHTML = "<p style='color:#6b7280; text-align:center; padding:20px;'>अजून एकही मेसेज आलेला नाही.</p>";
                     document.getElementById("count-contacts").innerText = "0";
                     return;
                 }
@@ -158,17 +377,22 @@
                     const data = childSnap.val();
                     const key = childSnap.key;
 
+                    const name = data.name || data.fullname || data.userName || 'User';
+                    const contactInfo = data.email || data.phone || data.mobile || data.contact || 'माहिती उपलब्ध नाही';
+                    const message = data.message || data.text || data.subject || data.msg || JSON.stringify(data);
+                    const time = data.timestamp || data.date || '';
+
                     const card = document.createElement("div");
                     card.className = "card";
-                    card.style.borderLeftColor = "#1877F2";
+                    card.style.borderLeftColor = "#38bdf8";
                     card.innerHTML = `
                         <div class="card-header">
-                            <span class="card-title" style="color:#1877F2;"><i class="fa-solid fa-envelope"></i> ${data.name || 'User'}</span>
-                            <span class="card-time">${data.timestamp || ''}</span>
+                            <span class="card-title" style="color:#38bdf8;"><i class="fa-solid fa-paper-plane"></i> ${name}</span>
+                            <span class="card-time">${time}</span>
                         </div>
-                        <p style="color:#aaa; font-size:12px; margin-bottom:5px;">📞 Mobile/Email: ${data.email || data.phone || 'N/A'}</p>
-                        <p class="card-text">${data.message || data.text || ''}</p>
-                        <button class="delete-btn" onclick="deleteContact('${key}')"><i class="fa-solid fa-trash"></i> डिलीट</button>
+                        <div class="card-contact-info">📞 संपर्क: ${contactInfo}</div>
+                        <p class="card-text">💬 संदेश: ${message}</p>
+                        <button class="delete-btn" onclick="deleteContact('${key}')"><i class="fa-solid fa-trash-can"></i> डिलीट</button>
                         <div style="clear:both;"></div>
                     `;
                     list.prepend(card);
@@ -194,12 +418,12 @@
 
         // DELETE FUNCTIONS
         function deleteComment(pageId, commentKey) {
-            if (confirm("तुम्हाला ही कमेंट नक्की डिलीट करायची आहे का?")) {
+            if (confirm("तुम्हाला ही प्रतिक्रिया नक्की डिलीट करायची आहे का?")) {
                 firebase.database().ref("comments/" + pageId + "/" + commentKey).remove();
             }
         }
         function deleteContact(key) {
-            if (confirm("हा मेसेज नक्की डिलीट करायचा आहे का?")) {
+            if (confirm("हा संदेश नक्की डिलीट करायचा आहे का?")) {
                 firebase.database().ref("contacts/" + key).remove();
             }
         }
