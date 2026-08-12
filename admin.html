@@ -141,7 +141,7 @@
                     snapshot.forEach(function(pageSnap) {
                         const pageId = pageSnap.key;
                         
-                        // 🎯 100% ACCURATE PATH RECONSTRUCTION (Preserves original Hyphens)
+                        // 🎯 SMART EXACT-MATCH URL RECOVERY
                         let raw = pageId;
                         if (raw.startsWith('_')) raw = raw.substring(1);
                         
@@ -151,24 +151,39 @@
                             raw = raw.slice(0, -5);
                         }
 
-                        // Split by underscores
-                        let parts = raw.split('_');
-                        let cleanPath = "";
+                        // Restore Known Category Folders accurately
+                        let knownFolders = ['nitya-pathan-stotra', 'blog', 'abhang', 'stotra', 'bharude-gavlani', 'granth-sampada', 'kabir-doha', 'santache-prasang', 'sant-sahitya', 'san-utsav', 'vangmay-sangrah'];
+                        
+                        let cleanPath = raw;
+                        knownFolders.forEach(folder => {
+                            let folderUnderscore = folder.replace(/-/g, '_');
+                            if (cleanPath.includes(folderUnderscore)) {
+                                cleanPath = cleanPath.replace(folderUnderscore, folder);
+                            }
+                        });
 
-                        if (parts.length >= 3 && parts[0] === "pages") {
-                            // First two parts are folder structure (/pages/blog/ or /pages/abhang/)
-                            let folder1 = parts[0];
-                            let folder2 = parts[1];
-                            let fileName = parts.slice(2).join('-'); // Join remaining parts with hyphen!
-                            
-                            cleanPath = "/" + folder1 + "/" + folder2 + "/" + fileName + (isHtml ? ".html" : "");
-                        } else if (parts.length >= 2) {
-                            let folder1 = parts[0];
-                            let fileName = parts.slice(1).join('-');
-                            cleanPath = "/" + folder1 + "/" + fileName + (isHtml ? ".html" : "");
-                        } else {
-                            cleanPath = "/" + raw.replace(/_/g, '-') + (isHtml ? ".html" : "");
+                        // Ensure /pages/ prefix
+                        if (cleanPath.startsWith('pages_')) {
+                            cleanPath = cleanPath.replace('pages_', 'pages/');
                         }
+
+                        // Replace the next folder slash (e.g. pages/blog_... -> pages/blog/...)
+                        knownFolders.forEach(folder => {
+                            cleanPath = cleanPath.replace(folder + '_', folder + '/');
+                        });
+
+                        // Remaining underscores in filename are hyphens!
+                        let pathParts = cleanPath.split('/');
+                        if (pathParts.length > 1) {
+                            let lastIndex = pathParts.length - 1;
+                            pathParts[lastIndex] = pathParts[lastIndex].replace(/_/g, '-');
+                            cleanPath = pathParts.join('/');
+                        } else {
+                            cleanPath = cleanPath.replace(/_/g, '-');
+                        }
+
+                        cleanPath = '/' + cleanPath + (isHtml ? '.html' : '');
+                        cleanPath = cleanPath.replace(/\/\//g, '/');
 
                         const fullUrl = window.location.origin + cleanPath;
 
