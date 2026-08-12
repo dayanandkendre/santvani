@@ -136,12 +136,22 @@
                     snapshot.forEach(function(pageSnap) {
                         const pageId = pageSnap.key;
                         
-                        // 🎯 Perfect Page Link Builder
-                        let cleanPath = pageId.replace(/_/g, '/');
-                        if(!cleanPath.startsWith('/')) cleanPath = '/' + cleanPath;
-                        if(!cleanPath.endsWith('.html') && !cleanPath.endsWith('/')) {
-                            cleanPath = cleanPath + '.html';
-                        }
+                        // 🎯 ACCURATE URL RECONSTRUCTION LOGIC
+                        let path = pageId;
+                        if (path.startsWith('_')) path = path.substring(1);
+                        if (path.endsWith('_html')) path = path.slice(0, -5) + '.html';
+                        
+                        // Fix hyphenated folder names
+                        path = path.replace(/nitya_pathan_stotra/g, 'nitya-pathan-stotra');
+                        path = path.replace(/shree_sukta/g, 'shree-sukta');
+                        path = path.replace(/shravan_mahina/g, 'shravan-mahina');
+                        path = path.replace(/puja_vidhi/g, 'puja-vidhi');
+                        path = path.replace(/vrat_puja/g, 'vrat-puja');
+                        path = path.replace(/_/g, '/');
+
+                        let cleanPath = '/' + path;
+                        cleanPath = cleanPath.replace(/\/\//g, '/'); // Remove double slashes
+
                         const fullUrl = window.location.origin + cleanPath;
 
                         pageSnap.forEach(function(commentSnap) {
