@@ -192,7 +192,7 @@ function initSantvaniShareAndComments() {
         });
     };
 
-    // कमेंट पाठवणे[cite: 1]
+    // कमेंट पाठवणे
     document.getElementById("fb-comment-btn").onclick = function () {
         var nameInput = document.getElementById("fb-comment-name");
         var textInput = document.getElementById("fb-comment-text");
@@ -215,7 +215,7 @@ function initSantvaniShareAndComments() {
         textInput.value = "";
     };
 
-    // रिअल-टाईम कमेंट्स[cite: 1]
+    // रिअल-टाईम कमेंट्स (WITH ADMIN REPLIES LOAD)
     var commentsRef = db.ref("comments/" + pageId);
     commentsRef.on("value", function (snapshot) {
         var listContainer = document.getElementById("fb-comments-list");
@@ -228,6 +228,26 @@ function initSantvaniShareAndComments() {
 
         snapshot.forEach(function (childSnapshot) {
             var data = childSnapshot.val();
+
+            // 🎯 Admin Replies लोड करणारा लूप
+            var repliesHtml = "";
+            if (data.replies) {
+                Object.keys(data.replies).forEach(function (rKey) {
+                    var reply = data.replies[rKey];
+                    repliesHtml += `
+                        <div style="margin-top: 10px; margin-left: 15px; padding: 10px 14px; background: #222; border-left: 3px solid #38bdf8; border-radius: 6px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                                <strong style="color: #38bdf8; font-size: 13px; font-weight: 600;">
+                                    <span style="background: #0284c7; color: #fff; font-size: 10px; padding: 2px 6px; border-radius: 4px; margin-right: 5px;">ADMIN</span> ${reply.name || 'संतवाणी टीम'}
+                                </strong>
+                                <span style="color: #666; font-size: 11px;">${reply.timestamp || ''}</span>
+                            </div>
+                            <p style="margin: 0; color: #e2e8f0; font-size: 13px; line-height: 1.5; white-space: pre-wrap;">${reply.text}</p>
+                        </div>
+                    `;
+                });
+            }
+
             var commentBox = document.createElement("div");
             commentBox.style.cssText = "padding: 16px; background: #181818; border-left: 4px solid #ffb703; border-radius: 8px;";
             commentBox.innerHTML = `
@@ -236,23 +256,21 @@ function initSantvaniShareAndComments() {
                     <span style="color: #666; font-size: 12px;">${data.timestamp}</span>
                 </div>
                 <p style="margin: 0; color: #e0e0e0; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">${data.text}</p>
+                ${repliesHtml}
             `;
             listContainer.prepend(commentBox);
         });
     });
 }
 
-
 // सर्व पेजेसवर ऑटोमॅटिक Favicon जोडण्यासाठी
 (function() {
     const favicon = document.createElement('link');
     favicon.rel = 'icon';
     favicon.type = 'image/x-icon';
-    favicon.href = '/favicon.ico'; // तुमची फाईल root folder मध्ये असल्यास
+    favicon.href = '/favicon.ico';
     document.head.appendChild(favicon);
 })();
-
-
 
 // Google Analytics Tracking Code
 (function() {
