@@ -436,9 +436,20 @@ function initSantvaniShareAndComments() {
 })();
 
 // =========================================================
-// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM (POSITION FIXED)
+// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM (OFFSET FIXED)
 // =========================================================
 (function() {
+    // 🎯 मोबाईल आणि डेस्कटॉप दोन्हीवर घंटी वर घेण्यासाठी CSS
+    var style = document.createElement('style');
+    style.innerHTML = `
+        #onesignal-bell-container.onesignal-reset {
+            bottom: 75px !important; /* बॉटम बारपासून वर उचलण्यासाठी */
+            right: 15px !important;
+            z-index: 999999 !important;
+        }
+    `;
+    document.head.appendChild(style);
+
     var osScript = document.createElement('script');
     osScript.src = 'https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js';
     osScript.defer = true;
@@ -450,11 +461,7 @@ function initSantvaniShareAndComments() {
             appId: "55c5b921-8a05-48af-8db9-517f57cd3d45",
             notifyButton: {
                 enable: true,
-                position: 'bottom-right',
-                offset: {
-                    bottom: '80px', // 🎯 बॉटम मेनूच्या वर घेण्यासाठी ८०px चे अंतर
-                    right: '15px'
-                }
+                position: 'bottom-right'
             },
         });
     });
