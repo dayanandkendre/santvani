@@ -182,6 +182,15 @@ function initSantvaniShareAndComments() {
         });
     };
 
+    // 🔔 कमेंट करताना पुश नोटिफिकेशनची परवानगी मागणे
+    function requestPushPrompt() {
+        if (window.OneSignalDeferred) {
+            OneSignalDeferred.push(function(OneSignal) {
+                OneSignal.Notifications.requestPermission();
+            });
+        }
+    }
+
     document.getElementById("fb-comment-btn").onclick = function () {
         var nameInput = document.getElementById("fb-comment-name");
         var textInput = document.getElementById("fb-comment-text");
@@ -192,6 +201,9 @@ function initSantvaniShareAndComments() {
             alert("कृपया नाव आणि तुमची प्रतिक्रिया दोन्ही प्रविष्ट करा.");
             return;
         }
+
+        // ऑटो नोटिफिकेशन प्रॉम्ट मागणे
+        requestPushPrompt();
 
         var commentsRef = db.ref("comments/" + pageId);
         commentsRef.push({
@@ -372,6 +384,9 @@ function initSantvaniShareAndComments() {
             alert("कृपया तुमचे नाव आणि उत्तर दोन्ही प्रविष्ट करा.");
             return;
         }
+
+        // रिप्लाय देतानासुद्धा नोटिफिकेशन प्रॉम्ट कॉल करणे
+        requestPushPrompt();
 
         var replyData = {
             name: name,
