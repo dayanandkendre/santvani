@@ -436,7 +436,7 @@ function initSantvaniShareAndComments() {
 })();
 
 // =========================================================
-// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM
+// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM (FIXED)
 // =========================================================
 (function() {
     var osScript = document.createElement('script');
@@ -447,8 +447,7 @@ function initSantvaniShareAndComments() {
     window.OneSignalDeferred = window.OneSignalDeferred || [];
     OneSignalDeferred.push(async function(OneSignal) {
         await OneSignal.init({
-            appId: "55c5b921-8a05-48af-8d99-517f57cd3d45",
-            safari_web_id: "web.onesignal.auto.55c5b921-8a05-48af-8d99-517f57cd3d45",
+            appId: "55c5b921-8a05-48af-8db9-517f57cd3d45",
             notifyButton: {
                 enable: true,
             },
