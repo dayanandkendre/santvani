@@ -436,36 +436,45 @@ function initSantvaniShareAndComments() {
 })();
 
 // =========================================================
-// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM (PREMIUM GOLD THEME)
+// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM (STRONG YIELOW FIX)
 // =========================================================
 (function() {
-    // Premium Golden CSS Styling
     var style = document.createElement('style');
     style.innerHTML = `
-        /* Position Fix */
+        /* Bell Position */
         #onesignal-bell-container.onesignal-reset {
-            bottom: 75px !important; /* बॉटम नेव्हिगेशनच्या वर */
+            bottom: 75px !important;
             right: 15px !important;
             z-index: 999999 !important;
         }
         
-        /* Premium Golden Launcher Button */
+        /* Outer Circle Background & Border */
         #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button {
-            background: linear-gradient(135deg, #ffb703, #fb8500) !important; /* प्रीमियम गोल्ड ग्रॅडियंट */
-            width: 50px !important;
-            height: 50px !important;
-            border-radius: 50% !important;
-            border: 2px solid #ffe600 !important; /* चमकदार गोल्डन बॉर्डर */
-            box-shadow: 0 0 15px rgba(255, 183, 3, 0.8), 0 4px 10px rgba(0, 0, 0, 0.9) !important; /* गोल्डन ग्लो इफेक्ट */
+            background: #181818 !important; /* प्रीमियम डार्क बॅकग्राउंड */
+            border: 2px solid #ffb703 !important; /* पिवळी/गोल्डन बॉर्डर */
+            box-shadow: 0 0 15px rgba(255, 183, 3, 0.8), 0 4px 10px rgba(0, 0, 0, 0.9) !important;
             animation: gold-pulse 2s infinite !important;
         }
 
-        /* Inside Bell Icon */
-        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button svg path {
-            fill: #121212 !important; /* काळा आयकॉन */
+        /* Hover State - संपूर्ण बटण पिवळे होईल */
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button:hover {
+            background: #ffb703 !important;
         }
 
-        /* Gold Ring Ripple Animation */
+        /* 🎯 Bell Icon Color inside (घंटीचा रंग पिवळा करणे) */
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button svg path,
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button .onesignal-bell-launcher-template-default {
+            fill: #ffb703 !important;
+            stroke: #ffb703 !important;
+        }
+
+        /* Hover केल्यावर घंटी काळी होईल जेणेकरून बॅकग्राउंडवर उठून दिसेल */
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button:hover svg path {
+            fill: #000000 !important;
+            stroke: #000000 !important;
+        }
+
+        /* Pulse Animation */
         @keyframes gold-pulse {
             0% {
                 box-shadow: 0 0 0 0 rgba(255, 183, 3, 0.9);
