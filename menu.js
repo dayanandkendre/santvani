@@ -436,65 +436,9 @@ function initSantvaniShareAndComments() {
 })();
 
 // =========================================================
-// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM (PERFECT GOLDEN FIX)
+// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM (POSITION FIXED)
 // =========================================================
 (function() {
-    var style = document.createElement('style');
-    style.innerHTML = `
-        /* Bell Position */
-        #onesignal-bell-container.onesignal-reset {
-            bottom: 75px !important;
-            right: 15px !important;
-            z-index: 999999 !important;
-        }
-        
-        /* Outer Main Button - प्युअर ब्राइट पिवळा/गोल्डन बॅकग्राउंड */
-        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button {
-            background: #ffb703 !important; /* संतवाणी थीम पिवळा */
-            border: 2px solid #ffe600 !important;
-            box-shadow: 0 0 18px rgba(255, 183, 3, 0.9), 0 4px 12px rgba(0, 0, 0, 0.8) !important;
-            animation: gold-pulse 2s infinite !important;
-        }
-
-        /* Hover केल्यावर थोडा डार्क पिवळा होईल */
-        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button:hover {
-            background: #ffa000 !important;
-            transform: scale(1.08);
-            transition: all 0.2s ease;
-        }
-
-        /* 🎯 लाल बॅकग्राउंड पूर्ण गायब करणे आणि आतली घंटी काळी ठेवणे */
-        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button svg {
-            background: transparent !important;
-        }
-
-        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button svg path,
-        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button svg circle {
-            fill: #000000 !important; /* घंटीचा आयकॉन एकदम काळा आणि स्पष्ट */
-            stroke: #000000 !important;
-        }
-
-        /* Hover केल्यावरही घंटी काळीच राहील */
-        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button:hover svg path {
-            fill: #000000 !important;
-            stroke: #000000 !important;
-        }
-
-        /* Pulse Ring Effect */
-        @keyframes gold-pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(255, 183, 3, 0.9);
-            }
-            70% {
-                box-shadow: 0 0 0 14px rgba(255, 183, 3, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(255, 183, 3, 0);
-            }
-        }
-    `;
-    document.head.appendChild(style);
-
     var osScript = document.createElement('script');
     osScript.src = 'https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js';
     osScript.defer = true;
@@ -507,10 +451,8 @@ function initSantvaniShareAndComments() {
             notifyButton: {
                 enable: true,
                 position: 'bottom-right',
-                size: 'medium',
-                theme: 'default',
                 offset: {
-                    bottom: '75px',
+                    bottom: '80px', // 🎯 बॉटम मेनूच्या वर घेण्यासाठी ८०px चे अंतर
                     right: '15px'
                 }
             },
