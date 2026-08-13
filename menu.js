@@ -436,41 +436,42 @@ function initSantvaniShareAndComments() {
 })();
 
 // =========================================================
-// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM (CUSTOM DESIGN)
+// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM (PREMIUM GOLD THEME)
 // =========================================================
 (function() {
-    // Custom CSS styling for Notification Bell
+    // Premium Golden CSS Styling
     var style = document.createElement('style');
     style.innerHTML = `
-        /* Bell Icon Position & Size */
+        /* Position Fix */
         #onesignal-bell-container.onesignal-reset {
-            bottom: 85px !important; /* बॉटम नेव्हिगेशनच्या वर */
-            right: 20px !important;
+            bottom: 75px !important; /* बॉटम नेव्हिगेशनच्या वर */
+            right: 15px !important;
             z-index: 999999 !important;
         }
         
-        /* Bell Launcher Button Styling */
+        /* Premium Golden Launcher Button */
         #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button {
-            background-color: #ffb703 !important; /* संतवाणी थीम पिवळा रंग */
-            width: 55px !important;
-            height: 55px !important;
+            background: linear-gradient(135deg, #ffb703, #fb8500) !important; /* प्रीमियम गोल्ड ग्रॅडियंट */
+            width: 50px !important;
+            height: 50px !important;
             border-radius: 50% !important;
-            box-shadow: 0 4px 20px rgba(255, 183, 3, 0.5), 0 0 10px rgba(0,0,0,0.8) !important;
-            animation: pulse-bell 2s infinite !important;
+            border: 2px solid #ffe600 !important; /* चमकदार गोल्डन बॉर्डर */
+            box-shadow: 0 0 15px rgba(255, 183, 3, 0.8), 0 4px 10px rgba(0, 0, 0, 0.9) !important; /* गोल्डन ग्लो इफेक्ट */
+            animation: gold-pulse 2s infinite !important;
         }
 
-        /* Bell Icon Color Inside */
+        /* Inside Bell Icon */
         #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button svg path {
-            fill: #000000 !important; /* घंटीचा आयकॉन काळा दिसेल जेणेकरून पिवळ्यावर उठून दिसेल */
+            fill: #121212 !important; /* काळा आयकॉन */
         }
 
-        /* Pulse Animation (घंटी धकधकणे/चमकणे) */
-        @keyframes pulse-bell {
+        /* Gold Ring Ripple Animation */
+        @keyframes gold-pulse {
             0% {
-                box-shadow: 0 0 0 0 rgba(255, 183, 3, 0.7);
+                box-shadow: 0 0 0 0 rgba(255, 183, 3, 0.9);
             }
             70% {
-                box-shadow: 0 0 0 15px rgba(255, 183, 3, 0);
+                box-shadow: 0 0 0 12px rgba(255, 183, 3, 0);
             }
             100% {
                 box-shadow: 0 0 0 0 rgba(255, 183, 3, 0);
@@ -494,8 +495,8 @@ function initSantvaniShareAndComments() {
                 size: 'medium',
                 theme: 'default',
                 offset: {
-                    bottom: '85px',
-                    right: '20px'
+                    bottom: '75px',
+                    right: '15px'
                 }
             },
         });
