@@ -436,9 +436,49 @@ function initSantvaniShareAndComments() {
 })();
 
 // =========================================================
-// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM (FIXED)
+// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM (CUSTOM DESIGN)
 // =========================================================
 (function() {
+    // Custom CSS styling for Notification Bell
+    var style = document.createElement('style');
+    style.innerHTML = `
+        /* Bell Icon Position & Size */
+        #onesignal-bell-container.onesignal-reset {
+            bottom: 85px !important; /* बॉटम नेव्हिगेशनच्या वर */
+            right: 20px !important;
+            z-index: 999999 !important;
+        }
+        
+        /* Bell Launcher Button Styling */
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button {
+            background-color: #ffb703 !important; /* संतवाणी थीम पिवळा रंग */
+            width: 55px !important;
+            height: 55px !important;
+            border-radius: 50% !important;
+            box-shadow: 0 4px 20px rgba(255, 183, 3, 0.5), 0 0 10px rgba(0,0,0,0.8) !important;
+            animation: pulse-bell 2s infinite !important;
+        }
+
+        /* Bell Icon Color Inside */
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button svg path {
+            fill: #000000 !important; /* घंटीचा आयकॉन काळा दिसेल जेणेकरून पिवळ्यावर उठून दिसेल */
+        }
+
+        /* Pulse Animation (घंटी धकधकणे/चमकणे) */
+        @keyframes pulse-bell {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 183, 3, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(255, 183, 3, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 183, 3, 0);
+            }
+        }
+    `;
+    document.head.appendChild(style);
+
     var osScript = document.createElement('script');
     osScript.src = 'https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js';
     osScript.defer = true;
@@ -450,6 +490,13 @@ function initSantvaniShareAndComments() {
             appId: "55c5b921-8a05-48af-8db9-517f57cd3d45",
             notifyButton: {
                 enable: true,
+                position: 'bottom-right',
+                size: 'medium',
+                theme: 'default',
+                offset: {
+                    bottom: '85px',
+                    right: '20px'
+                }
             },
         });
     });
