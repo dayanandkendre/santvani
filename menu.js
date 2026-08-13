@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const navLinks = document.querySelector(".nav-links");
 
         if (navContainer && navLinks) {
-            // १. मागील ब्लर पडदा (Overlay)
             let overlay = document.querySelector(".menu-overlay");
             if (!overlay) {
                 overlay = document.createElement("div");
@@ -15,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.body.appendChild(overlay);
             }
 
-            // २. हॅम्बर्गर बटण तयार करणे
             let hamburgerBtn = document.querySelector(".hamburger-toggle");
             if (!hamburgerBtn) {
                 hamburgerBtn = document.createElement("button");
@@ -25,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 navContainer.appendChild(hamburgerBtn);
             }
 
-            // ३. मुख्य मेनू टोगल
             function toggleMenu() {
                 hamburgerBtn.classList.toggle("active");
                 navLinks.classList.toggle("active");
@@ -39,11 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
 
-            // इव्हेंट लिस्टनर्स (Duplicates टाळण्यासाठी reset)
             hamburgerBtn.onclick = toggleMenu;
             overlay.onclick = toggleMenu;
 
-            // ४. 'इतर' ड्रॉपडाऊन टोगल
             const dropdown = document.querySelector(".dropdown");
             const dropdownToggle = document.querySelector(".dropdown-toggle");
 
@@ -58,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 };
             }
 
-            // ५. मोबाईलसाठी Bottom Navigation Bar
             if (window.innerWidth <= 768 && !document.querySelector(".bottom-nav-bar")) {
                 const bottomNav = document.createElement("div");
                 bottomNav.className = "bottom-nav-bar";
@@ -81,7 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // नेव्हिगेशन सुरु करणे
     initNavigation();
 
     // =========================================================
@@ -89,7 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // =========================================================
     var currentPath = window.location.pathname.toLowerCase();
     
-    // ज्या पेजेसवर कमेंट/शेअर बॉक्स नको आहे त्यांची अचूक यादी
     var excludedPages = [
         "index.html", "about.html", "contact.html", "privacy-policy.html",
         "terms.html", "disclaimer.html", "abhang-gatha.html", "bharude-gavlani.html",
@@ -105,7 +97,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     if (!isExcluded) {
-        // Firebase Scripts लोड करणे
         var script1 = document.createElement("script");
         script1.src = "https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js";
         document.head.appendChild(script1);
@@ -183,7 +174,6 @@ function initSantvaniShareAndComments() {
         document.body.appendChild(container);
     }
 
-    // कॉपी लिंक
     document.getElementById("copy-link-btn").onclick = function() {
         navigator.clipboard.writeText(window.location.href).then(function() {
             var btn = document.getElementById("copy-link-btn");
@@ -192,7 +182,6 @@ function initSantvaniShareAndComments() {
         });
     };
 
-    // १. मुख्य कमेंट पाठवणे
     document.getElementById("fb-comment-btn").onclick = function () {
         var nameInput = document.getElementById("fb-comment-name");
         var textInput = document.getElementById("fb-comment-text");
@@ -217,7 +206,6 @@ function initSantvaniShareAndComments() {
         textInput.value = "";
     };
 
-    // २. रिअल-टाईम कमेंट्स LOAD (WITH YOUTUBE/FACEBOOK STYLE NESTED REPLIES)
     var commentsRef = db.ref("comments/" + pageId);
     commentsRef.on("value", function (snapshot) {
         var listContainer = document.getElementById("fb-comments-list");
@@ -298,7 +286,6 @@ function initSantvaniShareAndComments() {
                     </div>
                     <div style="margin: 0; color: #e0e0e0; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">${data.text}</div>
                     
-                    <!-- ACTION BUTTONS -->
                     <div style="display: flex; align-items: center; gap: 18px; margin-top: 8px; font-size: 12px; color: #888;">
                         <button onclick="window.likeComment('${commentKey}', ${data.likes || 0})" style="background:none; border:none; color:#aaa; cursor:pointer; display:flex; align-items:center; gap:5px; font-size:12px; padding:0;">
                             <i class="fa-regular fa-thumbs-up"></i> <span>${data.likes || 0}</span>
@@ -311,7 +298,6 @@ function initSantvaniShareAndComments() {
                         </button>
                     </div>
 
-                    <!-- USER REPLY INPUT BOX (HIDDEN DEFAULT) -->
                     <div id="reply-input-box-${commentKey}" style="display: none; margin-top: 12px; background: #222; padding: 12px; border-radius: 8px; border: 1px solid #333;">
                         <input type="text" id="reply-name-input-${commentKey}" placeholder="तुमचे नाव *" style="width: 100%; padding: 8px 10px; background: #111; border: 1px solid #444; border-radius: 6px; color: #fff; font-size: 12px; margin-bottom: 8px; outline: none;">
                         <textarea id="reply-text-input-${commentKey}" rows="2" placeholder="उत्तर लिहा..." style="width: 100%; padding: 8px 10px; background: #111; border: 1px solid #444; border-radius: 6px; color: #fff; font-size: 12px; outline: none; resize: vertical;"></textarea>
@@ -321,10 +307,8 @@ function initSantvaniShareAndComments() {
                         </div>
                     </div>
 
-                    <!-- SHOW/HIDE REPLIES BUTTON -->
                     ${toggleRepliesBtn}
 
-                    <!-- REPLIES CONTAINER -->
                     <div id="replies-list-${commentKey}" style="display: none; padding-left: 10px; border-left: 2px solid #333; margin-top: 6px;">
                         ${repliesHtml}
                     </div>
@@ -336,7 +320,6 @@ function initSantvaniShareAndComments() {
         if(countHeader) countHeader.innerText = totalCount;
     });
 
-    // 🎯 GLOBAL ACTION FUNCTIONS
     window.likeComment = function(key, currentLikes) {
         db.ref("comments/" + pageId + "/" + key).update({
             likes: currentLikes + 1
@@ -379,7 +362,6 @@ function initSantvaniShareAndComments() {
         }
     };
 
-    // 🎯 FIX: SUBMIT USER REPLY WITH AUTO-CLOSE & AUTO-EXPAND
     window.submitUserReply = function(commentKey) {
         var nameInp = document.getElementById("reply-name-input-" + commentKey);
         var textInp = document.getElementById("reply-text-input-" + commentKey);
@@ -399,15 +381,12 @@ function initSantvaniShareAndComments() {
 
         db.ref("comments/" + pageId + "/" + commentKey + "/replies").push(replyData, function(error) {
             if (!error) {
-                // 1. टेक्स्ट क्लीयर करणे
                 nameInp.value = "";
                 textInp.value = "";
                 
-                // 2. इनपुट बॉक्स ऑटो-क्लोज करणे (Hide Reply Box)
                 var box = document.getElementById("reply-input-box-" + commentKey);
                 if (box) box.style.display = "none";
 
-                // 3. नवीन रिप्लाय दिसण्यासाठी उत्तरे ऑटो-ओपन करणे
                 var container = document.getElementById("replies-list-" + commentKey);
                 var textSpan = document.getElementById("toggle-text-" + commentKey);
                 if (container) {
@@ -419,7 +398,6 @@ function initSantvaniShareAndComments() {
     };
 }
 
-// सर्व पेजेसवर ऑटोमॅटिक Favicon जोडण्यासाठी
 (function() {
     const favicon = document.createElement('link');
     favicon.rel = 'icon';
@@ -428,7 +406,6 @@ function initSantvaniShareAndComments() {
     document.head.appendChild(favicon);
 })();
 
-// Google Analytics Tracking Code
 (function() {
     var gaScript = document.createElement('script');
     gaScript.async = true;
@@ -441,4 +418,25 @@ function initSantvaniShareAndComments() {
 
     gtag('js', new Date());
     gtag('config', 'G-YEN0M3VBYE');
+})();
+
+// =========================================================
+// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM
+// =========================================================
+(function() {
+    var osScript = document.createElement('script');
+    osScript.src = 'https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js';
+    osScript.defer = true;
+    document.head.appendChild(osScript);
+
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+            appId: "55c5b921-8a05-48af-8d99-517f57cd3d45",
+            safari_web_id: "web.onesignal.auto.55c5b921-8a05-48af-8d99-517f57cd3d45",
+            notifyButton: {
+                enable: true,
+            },
+        });
+    });
 })();
