@@ -238,7 +238,6 @@ function initSantvaniShareAndComments() {
             var data = childSnapshot.val();
             var firstChar = data.name ? data.name.charAt(0).toUpperCase() : 'U';
 
-            // REPLIES HTML BUILDER (Recursive rendering)
             var replyCount = 0;
             var repliesHtml = "";
 
@@ -276,7 +275,6 @@ function initSantvaniShareAndComments() {
                 });
             }
 
-            // MAIN COMMENT CARD
             var commentBox = document.createElement("div");
             commentBox.style.cssText = "display: flex; gap: 12px; align-items: flex-start; padding: 14px; background: #181818; border-left: 4px solid #ffb703; border-radius: 8px;";
             
@@ -300,7 +298,7 @@ function initSantvaniShareAndComments() {
                     </div>
                     <div style="margin: 0; color: #e0e0e0; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">${data.text}</div>
                     
-                    <!-- 🎯 ACTION BUTTONS (LIKE, DISLIKE, REPLY) -->
+                    <!-- ACTION BUTTONS -->
                     <div style="display: flex; align-items: center; gap: 18px; margin-top: 8px; font-size: 12px; color: #888;">
                         <button onclick="window.likeComment('${commentKey}', ${data.likes || 0})" style="background:none; border:none; color:#aaa; cursor:pointer; display:flex; align-items:center; gap:5px; font-size:12px; padding:0;">
                             <i class="fa-regular fa-thumbs-up"></i> <span>${data.likes || 0}</span>
@@ -326,7 +324,7 @@ function initSantvaniShareAndComments() {
                     <!-- SHOW/HIDE REPLIES BUTTON -->
                     ${toggleRepliesBtn}
 
-                    <!-- REPLIES CONTAINER (HIDDEN DEFAULT) -->
+                    <!-- REPLIES CONTAINER -->
                     <div id="replies-list-${commentKey}" style="display: none; padding-left: 10px; border-left: 2px solid #333; margin-top: 6px;">
                         ${repliesHtml}
                     </div>
@@ -381,6 +379,7 @@ function initSantvaniShareAndComments() {
         }
     };
 
+    // 🎯 FIX: SUBMIT USER REPLY WITH AUTO-CLOSE & AUTO-EXPAND
     window.submitUserReply = function(commentKey) {
         var nameInp = document.getElementById("reply-name-input-" + commentKey);
         var textInp = document.getElementById("reply-text-input-" + commentKey);
@@ -400,12 +399,21 @@ function initSantvaniShareAndComments() {
 
         db.ref("comments/" + pageId + "/" + commentKey + "/replies").push(replyData, function(error) {
             if (!error) {
+                // 1. टेक्स्ट क्लीयर करणे
                 nameInp.value = "";
                 textInp.value = "";
-                window.toggleReplyBox(commentKey);
-                // उत्तरे उघडून दाखवणे
+                
+                // 2. इनपुट बॉक्स ऑटो-क्लोज करणे (Hide Reply Box)
+                var box = document.getElementById("reply-input-box-" + commentKey);
+                if (box) box.style.display = "none";
+
+                // 3. नवीन रिप्लाय दिसण्यासाठी उत्तरे ऑटो-ओपन करणे
                 var container = document.getElementById("replies-list-" + commentKey);
-                if (container) container.style.display = "block";
+                var textSpan = document.getElementById("toggle-text-" + commentKey);
+                if (container) {
+                    container.style.display = "block";
+                    if (textSpan) textSpan.innerText = "▲ उत्तरे लपवा";
+                }
             }
         });
     };
