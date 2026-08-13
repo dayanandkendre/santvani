@@ -436,7 +436,7 @@ function initSantvaniShareAndComments() {
 })();
 
 // =========================================================
-// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM (STRONG YIELOW FIX)
+// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM (PERFECT GOLDEN FIX)
 // =========================================================
 (function() {
     var style = document.createElement('style');
@@ -448,39 +448,45 @@ function initSantvaniShareAndComments() {
             z-index: 999999 !important;
         }
         
-        /* Outer Circle Background & Border */
+        /* Outer Main Button - प्युअर ब्राइट पिवळा/गोल्डन बॅकग्राउंड */
         #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button {
-            background: #181818 !important; /* प्रीमियम डार्क बॅकग्राउंड */
-            border: 2px solid #ffb703 !important; /* पिवळी/गोल्डन बॉर्डर */
-            box-shadow: 0 0 15px rgba(255, 183, 3, 0.8), 0 4px 10px rgba(0, 0, 0, 0.9) !important;
+            background: #ffb703 !important; /* संतवाणी थीम पिवळा */
+            border: 2px solid #ffe600 !important;
+            box-shadow: 0 0 18px rgba(255, 183, 3, 0.9), 0 4px 12px rgba(0, 0, 0, 0.8) !important;
             animation: gold-pulse 2s infinite !important;
         }
 
-        /* Hover State - संपूर्ण बटण पिवळे होईल */
+        /* Hover केल्यावर थोडा डार्क पिवळा होईल */
         #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button:hover {
-            background: #ffb703 !important;
+            background: #ffa000 !important;
+            transform: scale(1.08);
+            transition: all 0.2s ease;
         }
 
-        /* 🎯 Bell Icon Color inside (घंटीचा रंग पिवळा करणे) */
+        /* 🎯 लाल बॅकग्राउंड पूर्ण गायब करणे आणि आतली घंटी काळी ठेवणे */
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button svg {
+            background: transparent !important;
+        }
+
         #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button svg path,
-        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button .onesignal-bell-launcher-template-default {
-            fill: #ffb703 !important;
-            stroke: #ffb703 !important;
+        #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button svg circle {
+            fill: #000000 !important; /* घंटीचा आयकॉन एकदम काळा आणि स्पष्ट */
+            stroke: #000000 !important;
         }
 
-        /* Hover केल्यावर घंटी काळी होईल जेणेकरून बॅकग्राउंडवर उठून दिसेल */
+        /* Hover केल्यावरही घंटी काळीच राहील */
         #onesignal-bell-container.onesignal-reset .onesignal-bell-launcher-button:hover svg path {
             fill: #000000 !important;
             stroke: #000000 !important;
         }
 
-        /* Pulse Animation */
+        /* Pulse Ring Effect */
         @keyframes gold-pulse {
             0% {
                 box-shadow: 0 0 0 0 rgba(255, 183, 3, 0.9);
             }
             70% {
-                box-shadow: 0 0 0 12px rgba(255, 183, 3, 0);
+                box-shadow: 0 0 0 14px rgba(255, 183, 3, 0);
             }
             100% {
                 box-shadow: 0 0 0 0 rgba(255, 183, 3, 0);
