@@ -63,18 +63,17 @@ body {
     color: var(--saffron);
 }
 
-/* स्पिन ॲनिमेशन विठ्ठल चक्रासाठी */
 .animate-spin {
     animation: fa-spin 8s infinite linear;
 }
 
 /* ==========================================================================
-   4. PREMIUM GLASS NAVBAR
+   4. PREMIUM GLASS NAVBAR (DESKTOP DEFAULT)
    ========================================================================== */
 .navbar {
     position: sticky;
     top: 0;
-    background: #140b07; /* डार्क सॉलिड बॅकग्राउंड */
+    background: #140b07;
     border-bottom: 1px solid var(--border-subtle);
     z-index: 9999 !important;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
@@ -126,7 +125,6 @@ body {
     color: var(--royal-gold);
 }
 
-/* मेनुखालील सुंदर रेघ */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -306,7 +304,6 @@ body {
     color: var(--royal-gold);
 }
 
-/* Grid Layout */
 .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -314,7 +311,6 @@ body {
     margin-bottom: 10px;
 }
 
-/* Premium Feature Cards */
 .feature-card {
     background: var(--bg-surface);
     border: 1px solid var(--border-subtle);
@@ -332,7 +328,6 @@ body {
     border-color: rgba(255, 204, 0, 0.5);
 }
 
-/* Special Highlighted Card (अभंग संग्रह) */
 .special-card {
     border: 1px solid rgba(255, 115, 0, 0.4);
     background: linear-gradient(180deg, #24160a 0%, #1a1108 100%);
@@ -557,7 +552,7 @@ body {
 }
 
 /* ==========================================================================
-   10. VANGMAY SANGRAH - INNER HERO & EXTENDED STYLES
+   10. VANGMAY SANGRAH & EXTENDED STYLES
    ========================================================================== */
 .inner-hero {
     position: relative;
@@ -590,7 +585,6 @@ body {
     margin: 0 auto;
 }
 
-/* वाचण्यासाठी प्रीमियम बट्स */
 .btn-read-more {
     display: inline-flex;
     align-items: center;
@@ -625,69 +619,55 @@ body {
 }
 
 /* ==========================================================================
-   प्रीमियम ड्रॉपडाऊन आणि मेनू बार स्टाईल (Fixed & Ready-made)
+   DESKTOP DROPDOWN & MENU BAR
    ========================================================================== */
-
-/* ड्रॉपडाऊन नीट काम करण्यासाठी त्याच्या मेन पॅरेंट (li) ला relative देणे बंधनकारक आहे */
 .nav-links > li {
     position: relative;
 }
 
-/* इनलाइन असलेला शेवरॉन आयकॉन (बाण) */
 .nav-chevron {
     font-size: 0.7rem; 
     margin-left: 2px;
 }
 
-/* ड्रॉपडाऊन मेनूची मुख्य रचना (Fixed Positioning) */
 .dropdown-menu {
     position: absolute;
-    /* १. मेनूच्या अगदी खालून सुरू करा जेणेकरून गॅप राहणार नाही */
     top: 100%;        
     left: 0;          
     background-color: #1a1105; 
     border: 1.5px solid #D4AF37; 
     border-radius: 8px;
     min-width: 190px;
-    
-    /* २. मार्जिन काढून टाका, यामुळे गॅप नाहीसा होईल */
     margin-top: 0px;  
-    
-    /* ३. ड्रॉपडाऊन थोडं खाली दिसावं असं वाटत असेल, तर अंतर्गत पॅडिंग वापरा, मार्जिन नाही */
     padding: 8px 0; 
-    
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     z-index: 10000 !important;    
     display: none;    
     list-style: none;
 }
 
-/* ४. एक सिक्रेट ट्रिक: ड्रॉपडाऊनच्या वर एक अदृश्य (Invisible) जागा तयार करणे */
 .dropdown-menu::before {
     content: "";
     position: absolute;
-    top: -10px; /* हे ड्रॉपडाऊनला मेनू बारशी जोडून ठेवेल */
+    top: -10px;
     left: 0;
     width: 100%;
-    height: 10px;
-    background: transparent; /* अदृश्य */
+    height: 100px;
+    background: transparent;
 }
 
-/* 'इतर' वर माउस (Hover) नेल्यावर ड्रॉपडाऊन स्मूथली उघडेल */
 .nav-links li:hover .dropdown-menu {
     display: block;
 }
 
-/* ड्रॉपडाऊनमधील प्रत्येक आयटम (List Item) */
 .dropdown-menu li {
     width: 100%;
     margin: 0 !important;
     padding: 0 !important;
 }
 
-/* ड्रॉपडाऊनमधील लिंक्सचा लुक (Default State) */
 .dropdown-menu li a {
-    color: #fffdf9 !important; /* डार्क बॅकग्राउंडवर स्पष्ट दिसणारा प्रीमियम क्रिम पांढरा रंग */
+    color: #fffdf9 !important;
     padding: 10px 20px !important;
     display: block !important;
     font-size: 0.95rem !important;
@@ -697,14 +677,13 @@ body {
     transition: all 0.25s ease-in-out;
 }
 
-/* लिंकवर माउस नेल्यावर (Hover State) - मरून आणि गोल्डन इफेक्ट */
 .dropdown-menu li a:hover {
-    background-color: #800020; /* आपला भक्तीमय मरून रंग */
-    color: #D4AF37 !important; /* सोनेरी रंगात अक्षरे चमकतील */
-    padding-left: 25px !important; /* हलकासा आत सरकण्याचा प्रीमियम इफेक्ट */
+    background-color: #800020;
+    color: #D4AF37 !important;
+    padding-left: 25px !important;
 }
 
-/* बटनांचा मुख्य कंटेनर */
+/* Action Buttons & Cards */
 .sant-action-buttons {
     display: flex;
     flex-direction: column;
@@ -717,11 +696,10 @@ body {
     gap: 10px;
 }
 
-/* सर्व बटनांसाठी कॉमन स्टाईल */
 .btn-card, .btn-kshetra {
     padding: 12px 20px;
     text-align: center;
-    border-radius: 8px; /* थोडे गोलाकार कोपरे (Soft edges) */
+    border-radius: 8px;
     font-size: 0.9rem;
     font-weight: 600;
     text-decoration: none;
@@ -734,7 +712,6 @@ body {
     gap: 8px;
 }
 
-/* १. चरित्र बटण (Dark Theme) */
 .btn-charitra {
     background: #1a202c;
     color: #ffffff;
@@ -747,7 +724,6 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* २. अभंग बटण (Gold/Premium Theme) */
 .btn-abhang {
     background: #ffaa00;
     color: #000000;
@@ -759,7 +735,6 @@ body {
     box-shadow: 0 4px 10px rgba(255,170,0,0.3);
 }
 
-/* ३. मुख्य ग्रंथ बटण (Outline/Ghost Theme) */
 .btn-kshetra {
     background: transparent;
     color: #ffaa00;
@@ -772,35 +747,30 @@ body {
     transform: translateY(-2px);
 }
 
-/* फोटो कंटेनर */
 .card-img-box {
     width: 100%;
-    height: 200px; /* फिक्स हाईट */
+    height: 200px;
     overflow: hidden;
-    border-radius: 8px 8px 0 0; /* वरच्या बाजूला राउंडेड कोपरे */
+    border-radius: 8px 8px 0 0;
 }
 
-/* फोटोची स्टाईल */
 .card-img-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* फोटोचा भाग कापला जाईल पण स्ट्रेच होणार नाही */
+    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-/* जेव्हा माऊस फोटोवर जाईल तेव्हा थोडा झूम होण्यासाठी */
 .feature-card:hover .card-img-box img {
     transform: scale(1.05);
 }
 
 /* ==========================================================================
-   तुकाराम महाराज गाथा मुख्य पेज स्टाईल्स (pages/abhang/tukaram-gatha.html)
+   TUKARAM GATHA & SEARCH STYLES
    ========================================================================== */
-
-/* १. सर्च सेक्शन आणि इनपुट बॉक्स */
 .search-section {
     padding: 40px 20px;
-    background: #111111; /* डार्क बॅकग्राउंड */
+    background: #111111;
     text-align: center;
 }
 
@@ -817,7 +787,7 @@ body {
 }
 
 .search-box-container:focus-within {
-    border-color: #ffb703; /* फोकस केल्यावर सोनेरी बॉर्डर */
+    border-color: #ffb703;
     box-shadow: 0 0 15px rgba(255, 183, 3, 0.2);
 }
 
@@ -857,7 +827,6 @@ body {
     transform: scale(1.05);
 }
 
-/* २. क्विक फाईंड टॅग्ज */
 .quick-tags {
     margin-top: 15px;
     font-family: 'Poppins', sans-serif;
@@ -887,7 +856,6 @@ body {
     border-color: #ffb703;
 }
 
-/* ३. अभंग अनुक्रमणिका ग्रिड (Gatha Index) */
 .gatha-index-section {
     padding: 60px 20px;
     background: #0a0a0a;
@@ -909,7 +877,6 @@ body {
     margin: 0 auto;
 }
 
-/* ४. अनुक्रमणिका कार्ड्स */
 .index-card {
     background: #141414;
     border: 1px solid #222222;
@@ -979,7 +946,6 @@ body {
     color: #ffffff;
 }
 
-/* शेवटच्या स्पेशल कार्डसाठी (४३८७ अभंग) */
 .last-part {
     border-color: rgba(255, 183, 3, 0.3);
     background: linear-gradient(145deg, #141414, #1f1808);
@@ -990,27 +956,23 @@ body {
 }
 
 /* ==========================================================================
-   सार्थ अभंग ग्रिड आणि पेजिनेशन स्टाईल्स (Hero Section सोडून)
+   SARTH ABHANG & PAGINATION
    ========================================================================== */
-
-/* १. मुख्य सेक्शन बॅकग्राउंड */
 .sarth-haripath-section {
     padding: 60px 20px;
-    background-color: #0a0a0a; /* अल्ट्रा डार्क बॅकग्राउंड */
+    background-color: #0a0a0a;
 }
 
-/* २. कंटेनर */
 .sarth-container {
     max-width: 1000px;
     margin: 0 auto;
 }
 
-/* ३. २-कॉलम अभंग ग्रिड BOX */
 .sarth-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* डावा आणि उजवा कॉलम समान */
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
-    background: #111111; /* कार्डचा डार्क रंग */
+    background: #111111;
     border: 1px solid #222222;
     border-radius: 16px;
     padding: 35px;
@@ -1018,16 +980,14 @@ body {
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* ग्रिडवर होव्हर केल्यावर हलकी सोनेरी चमक */
 .sarth-grid:hover {
     border-color: rgba(255, 183, 3, 0.3);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     transform: translateY(-2px);
 }
 
-/* ४. डावा कॉलम: अभंग रचना */
 .abhang-column {
-    border-right: 1px dashed #333333; /* मध्यभागी नाजूक डॅश लाईन */
+    border-right: 1px dashed #333333;
     padding-right: 20px;
     display: flex;
     flex-direction: column;
@@ -1037,7 +997,7 @@ body {
 .abhang-number {
     display: block;
     font-family: 'Rozha One', serif;
-    color: #ffb703; /* सोनेरी रंग */
+    color: #ffb703;
     font-size: 1.25rem;
     margin-bottom: 15px;
     font-weight: 600;
@@ -1048,10 +1008,9 @@ body {
     font-family: 'Rozha One', serif;
     font-size: 1.35rem;
     line-height: 2.3rem;
-    color: #ffffff; /* शुद्ध पांढरा रंग वाचायला सोपा */
+    color: #ffffff;
 }
 
-/* ५. उजवा कॉलम: भावार्थ */
 .bhavarth-column {
     padding-left: 10px;
     display: flex;
@@ -1077,11 +1036,10 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.05rem;
     line-height: 1.8rem;
-    color: #cccccc; /* फिकट पांढरा/ग्रे रंग अर्थ वाचण्यासाठी */
+    color: #cccccc;
     text-align: justify;
 }
 
-/* ६. दोन अभंगांमधील सुबक रॉयल डिव्हायडर */
 .royal-divider.small-divider {
     display: flex;
     align-items: center;
@@ -1102,7 +1060,6 @@ body {
     opacity: 0.6;
 }
 
-/* ७. पेजिनेशन नेव्हिगेशन विभाग (Next/Prev Buttons) */
 .pagination-section {
     padding: 40px 20px 60px 20px;
     background-color: #0a0a0a;
@@ -1120,7 +1077,7 @@ body {
 
 .btn-page {
     padding: 12px 28px;
-    border-radius: 50px; /* प्रीमियम कॅप्सूल शेप */
+    border-radius: 50px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 0.95rem;
@@ -1129,21 +1086,18 @@ body {
     transition: all 0.3s ease;
 }
 
-/* मागे आणि पुढे जाणारी बटन्स */
 .prev-page, .next-page {
     background: #111111;
     color: #ffffff;
     border: 1px solid #222222;
 }
 
-/* मधले 'सर्व भाग' बटन */
 .main-gatha {
     background: rgba(255, 183, 3, 0.08);
     color: #ffb703;
     border: 1px solid rgba(255, 183, 3, 0.4);
 }
 
-/* बटन्सचे होव्हर इफेक्ट्स */
 .prev-page:hover, .next-page:hover {
     background: #ffb703;
     color: #000000;
@@ -1151,7 +1105,6 @@ body {
     box-shadow: 0 0 15px rgba(255, 183, 3, 0.2);
 }
 
-/* डिसेबल्ड बटण स्टाईल (पहिल्या पानावर मागे बटण नसेल तेव्हासाठी) */
 .btn-page.disabled {
     background: #111111 !important;
     color: #444444 !important;
@@ -1160,36 +1113,21 @@ body {
     transform: none !important;
 }
 
-/* भारुडे आणि गवळणी पेजवरील ग्रिड आणि फूटरमधील अंतर वाढवण्यासाठी */
 .vangmay-section {
     padding-bottom: 80px !important;
 }
 
 /* ==========================================
-   ३. नित्यपाठ आणि संग्रहित अभंग सेक्शन स्टाईल्स
+   LITURGY SECTION STYLES
    ========================================== */
 .liturgy-section {
     padding: 30px 0;
-    background-color: #121212; /* डार्क प्रीमियम बॅकग्राउंड */
-}
-
-.section-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    background-color: #121212;
 }
 
 .section-header-center {
     text-align: center;
     margin-bottom: 50px;
-}
-
-.section-subtitle {
-    color: #ff8c00; /* ऑरेंज/गोल्डन थीम */
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
 }
 
 .section-title-main {
@@ -1204,14 +1142,12 @@ body {
     font-size: 18px;
 }
 
-/* ग्रिड लेआउट - रिस्पॉन्सिव्ह */
 .liturgy-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
 }
 
-/* कार्ड स्टाईल */
 .liturgy-card {
     background: #1a1a1a;
     border: 1px solid #262626;
@@ -1226,7 +1162,6 @@ body {
     box-shadow: 0 10px 20px rgba(255, 140, 0, 0.1);
 }
 
-/* इमेज बॉक्स */
 .liturgy-img-box {
     width: 100%;
     height: 200px;
@@ -1245,7 +1180,6 @@ body {
     transform: scale(1.05);
 }
 
-/* कंटेंट बॉक्स */
 .liturgy-content {
     padding: 25px;
 }
@@ -1262,11 +1196,10 @@ body {
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 20px;
-    height: 68px; /* मडकी एकसारखी दिसण्यासाठी फिक्स हाईट */
+    height: 68px;
     overflow: hidden;
 }
 
-/* बटन स्टाईल */
 .liturgy-btn {
     display: inline-flex;
     align-items: center;
@@ -1287,132 +1220,26 @@ body {
     color: #000000;
 }
 
-/* मोबाईलसाठी रिस्पॉन्सिव्ह बदल */
-@media (max-width: 480px) {
-    .liturgy-grid {
-        grid-template-columns: 1fr;
-    }
-    .section-title-main {
-        font-size: 26px;
-    }
-}
-
-/* ==========================================================================
-   9. PERFECT RESPONSIVE BREAKPOINTS & MOVIES (ALL MEDIA QUERIES AT BOTTOM)
-   ========================================================================== */
-@media (max-width: 992px) {
-    .hero-title {
-        font-size: 2.8rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .top-bar {
-        display: none; /* मोबाईलवर जागा वाचवण्यासाठी टॉप बार लपवला */
-    }
-    
-    .nav-links, .nav-cta {
-        display: none; /* क्लिनू लुकसाठी मोबाईल मेनु लपवला */
-    }
-    
-    .hero-section {
-        padding: 80px 20px;
-    }
-    
-    .hero-title {
-        font-size: 2.2rem;
-    }
-    
-    .hero-tagline {
-        font-size: 1rem;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        gap: 12px;
-    }
-    
-    .btn-premium, .btn-outline {
-        width: 100%;
-        padding: 12px 20px;
-    }
-    
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .quote-text {
-        font-size: 1.2rem;
-    }
-
-    /* सार्थ अभंग आणि पेजिनेशन रिस्पॉन्सिव्ह */
-    .sarth-haripath-section {
-        padding: 40px 15px;
-    }
-    
-    .sarth-grid {
-        grid-template-columns: 1fr; /* मोबाईलवर एकाखाली एक १ कॉलम होईल */
-        gap: 25px;
-        padding: 25px;
-    }
-    
-    .abhang-column {
-        border-right: none; /* आडवी बॉर्डर काढली */
-        border-bottom: 1px dashed #333333; /* खाली डॅश लाईन दिली */
-        padding-right: 0;
-        padding-bottom: 25px;
-    }
-    
-    .bhavarth-column {
-        padding-left: 0;
-    }
-    
-    .abhang-text {
-        font-size: 1.25rem;
-        line-height: 2.1rem;
-    }
-    
-    .pagination-container {
-        flex-direction: column; /* मोबाईलवर बटन्स एकाखाली एक येतील */
-        gap: 12px;
-        width: 100%;
-    }
-    
-    .btn-page {
-        width: 100%; /* बटन्सची विड्थ फुल होईल */
-        box-sizing: border-box;
-    }
-
-    /* इनर पेजेस रिस्पॉन्सिव्ह */
-    .inner-title {
-        font-size: 2.2rem;
-    }
-    
-    .inner-hero {
-        padding: 60px 20px;
-    }
-}
-
 /* ==========================================
-   ४. युनिक कॅटेगरी ग्रिड सेक्शन स्टाईल्स
+   CATEGORY & GRANTH GRID STYLES
    ========================================== */
-.cat-section {
+.cat-section, .granth-section {
     padding: 80px 0;
-    background-color: #1a1a1a; /* डार्क प्रीमियम शेड */
+    background-color: #1a1a1a;
 }
 
-.cat-container {
+.cat-container, .granth-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.cat-section-header {
+.cat-section-header, .granth-header {
     text-align: center;
     margin-bottom: 45px;
 }
 
-.cat-subtitle {
+.cat-subtitle, .granth-subtitle {
     color: #ff8c00;
     font-size: 13px;
     text-transform: uppercase;
@@ -1421,51 +1248,48 @@ body {
     display: block;
 }
 
-.cat-title-main {
+.cat-title-main, .granth-title-main {
     color: #ffffff;
     font-size: 30px;
     margin: 8px 0;
     font-weight: 700;
 }
 
-.cat-accent {
+.cat-accent, .granth-accent {
     color: #ff8c00;
     font-size: 16px;
 }
 
-/* एका ओळीत ४ ग्रिड्स बसवण्यासाठी CSS ग्रिड */
-.cat-grid-row {
+.cat-grid-row, .granth-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* कम्प्युटरवर परफेक्ट ४ कॉलम */
-    gap: 20px; /* प्रीमियम लुकसाठी थोडी कमी स्पेसिंग */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-/* प्रीमियम कार्ड डिझाईन */
-.cat-card {
+.cat-card, .granth-card {
     background: #121212;
     border: 1px solid #222222;
     border-radius: 12px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.4s ease;
 }
 
-.cat-card:hover {
+.cat-card:hover, .granth-card:hover {
     transform: translateY(-6px);
     border-color: #ff8c00;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* इमेज रॅपर आणि सटल ब्लॅक ओव्हरले */
-.cat-img-wrapper {
+.cat-img-wrapper, .granth-img-box {
     position: relative;
     width: 100%;
-    height: 160px; /* उंची थोडी कमी ठेवली जेणेकरून ओळ लहान वाटेल */
+    height: 160px;
     overflow: hidden;
 }
 
-.cat-img-wrapper img {
+.cat-img-wrapper img, .granth-img-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1474,49 +1298,35 @@ body {
 
 .cat-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     background: linear-gradient(to bottom, transparent 40%, rgba(18, 18, 18, 0.8));
 }
 
-.cat-card:hover .cat-img-wrapper img {
-    transform: scale(1.06);
-}
-
-/* कार्ड माहिती क्षेत्र */
-.cat-info {
+.cat-info, .granth-info {
     padding: 20px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
-.cat-info h3 {
+.cat-info h3, .granth-info h3 {
     color: #ffffff;
     font-size: 17px;
     margin-bottom: 10px;
     font-weight: 600;
-    transition: color 0.3s ease;
 }
 
-.cat-card:hover .cat-info h3 {
-    color: #ff8c00; /* हॉव्हर केल्यावर टायटल सोनेरी होईल */
-}
-
-.cat-info p {
+.cat-info p, .granth-info p {
     color: #999999;
     font-size: 12.5px;
     line-height: 1.5;
     margin-bottom: 18px;
-    height: 56px; /* सर्व कार्ड्सचे टेक्स्ट एकसारखे दिसण्यासाठी */
+    height: 56px;
     overflow: hidden;
 }
 
-/* बटन डिझाईन - एकदम सटल आणि प्रीमियम */
-.cat-link-btn {
-    margin-top: auto; /* बटन नेहमी तळाशी राहील */
+.cat-link-btn, .granth-btn {
+    margin-top: auto;
     color: #ff8c00;
     text-decoration: none;
     font-size: 13px;
@@ -1524,201 +1334,22 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    transition: gap 0.3s ease;
 }
 
-.cat-card:hover .cat-link-btn {
-    gap: 12px; /* हॉव्हरवर बाण पुढे सरकतो */
-}
-
-/* रेस्पॉन्सिव्ह डिझाईन - मोबाईल आणि टॅब्लेटसाठी */
-@media (max-width: 1024px) {
-    .cat-grid-row {
-        grid-template-columns: repeat(2, 1fr); /* टॅब्लेटवर एका ओळीत २ कॉलम */
-    }
-}
-
-@media (max-width: 600px) {
-    .cat-grid-row {
-        grid-template-columns: 1fr; /* मोबाईलवर एका ओळीत १ कॉलम */
-    }
-    .cat-title-main {
-        font-size: 24px;
-    }
-}
-
-/* ==========================================
-   ५. महान ग्रंथ संपदा सेक्शन स्टाईल्स
-   ========================================== */
-.granth-section {
-    padding: 80px 0;
-    background-color: #121212; /* डार्क बॅकग्राउंड (अल्टरनेट शेड) */
-}
-
-.granth-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.granth-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.granth-subtitle {
-    color: #ff8c00;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 600;
-    display: block;
-}
-
-.granth-title-main {
-    color: #ffffff;
-    font-size: 32px;
-    margin: 10px 0;
-    font-weight: 700;
-}
-
-.granth-accent {
-    color: #ff8c00;
-    font-size: 18px;
-}
-
-/* १२ ग्रंथांसाठी ४-कॉलम रिस्पॉन्सिव्ह ग्रिड */
-.granth-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* कम्प्युटरवर परफेक्ट ४ कॉलम */
-    gap: 25px;
-}
-
-/* ग्रंथ कार्ड डिझाईन (पुस्तकासारखा प्रीमियम लुक) */
-.granth-card {
-    background: #1a1a1a;
-    border: 1px solid #262626;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: all 0.3s ease;
-}
-
-.granth-card:hover {
-    transform: translateY(-5px);
-    border-color: #ff8c00;
-    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.15);
-}
-
-/* पुस्तकाचे कव्हर इमेज बॉक्स */
-.granth-img-box {
-    width: 100%;
-    height: 230px; /* पुस्तकाच्या कव्हरसाठी योग्य उंची */
-    overflow: hidden;
-    background-color: #222;
-    border-bottom: 1px solid #262626;
-}
-
-.granth-img-box img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* इमेज पुस्तकासारखी सेट होईल */
-    transition: transform 0.5s ease;
-}
-
-.granth-card:hover .granth-img-box img {
-    transform: scale(1.04);
-}
-
-/* माहिती विभाग */
-.granth-info {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-.granth-info h3 {
-    color: #ffffff;
-    font-size: 17px;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.granth-info p {
-    color: #aaaaaa;
-    font-size: 13px;
-    line-height: 1.5;
-    margin-bottom: 15px;
-    height: 58px; /* मजकूर समान ठेवण्यासाठी फिक्स हाईट */
-    overflow: hidden;
-}
-
-/* वाचन सुरू करा बटन */
-.granth-btn {
-    margin-top: auto;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background-color: transparent;
-    color: #ff8c00;
-    border: 1px solid #ff8c00;
-    padding: 10px 15px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 13.5px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.granth-btn:hover {
-    background-color: #ff8c00;
-    color: #000000;
-}
-
-/* टॅब्लेट आणि मोबाईलसाठी रिस्पॉन्सिव्ह सेटिंग्ज */
-@media (max-width: 1024px) {
-    .granth-grid {
-        grid-template-columns: repeat(2, 1fr); /* टॅब्लेटवर एका ओळीत २ */
-    }
-}
-
-@media (max-width: 600px) {
-    .granth-grid {
-        grid-template-columns: 1fr; /* मोबाईलवर एका ओळीत १ */
-    }
-    .granth-title-main {
-        font-size: 26px;
-    }
-}
-
-/* ==========================================
-   ६. आमच्याविषयी (About Us) सेक्शन स्टाईल्स
-   ========================================== */
+/* ABOUT SECTION */
 .about-section {
     padding: 80px 0;
-    background-color: #1a1a1a; /* अल्टरनेट डार्क शेड */
+    background-color: #1a1a1a;
     border-top: 1px solid #262626;
     text-align: center;
 }
 
 .about-container {
-    max-width: 800px; /* वाचनासाठी योग्य रुंदी */
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* वरचा छोटा आयकॉन */
-.about-icon-box {
-    color: #ff8c00;
-    font-size: 28px;
-    margin-bottom: 20px;
-    opacity: 0.8;
-}
-
-/* मुख्य शीर्षक */
 .about-title {
     color: #ffffff;
     font-size: 26px;
@@ -1728,62 +1359,22 @@ body {
     display: inline-block;
 }
 
-/* शीर्षकाखालील छोटी रेषा */
-.about-title::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 2px;
-    background-color: #ff8c00;
-}
-
-/* मुख्य मजकूर */
 .about-text {
     color: #e0e0e0;
     font-size: 15.5px;
     line-height: 1.8;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 .about-text strong {
-    color: #ff8c00; /* 'संतवाणी' शब्दाला हायलाईट */
-    font-weight: 600;
+    color: #ff8c00;
 }
 
-/* उप-मजकूर (निस्सिम सेवा) */
-.about-subtext {
-    color: #aaaaaa;
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 30px;
-    font-style: italic; /* थोडा वेगळा लुक देण्यासाठी */
-}
-
-/* रामकृष्ण हरी टॅगलाईन */
 .about-tagline {
     display: block;
     color: #ff8c00;
     font-size: 18px;
     font-weight: 700;
-    letter-spacing: 1px;
-}
-
-/* मोबाईलसाठी बदल */
-@media (max-width: 600px) {
-    .about-section {
-        padding: 60px 0;
-    }
-    .about-title {
-        font-size: 22px;
-    }
-    .about-text {
-        font-size: 14.5px;
-        text-align: justify; /* मोबाईलवर व्यवस्थित दिसण्यासाठी */
-    }
 }
 
 /* ==========================================
@@ -1796,8 +1387,11 @@ html, body {
 }
 
 /* ==========================================
-   FINAL PREMIUM MOBILE MENU & HEADER STYLES
+   DESKTOP DEFAULT HAMBURGER HIDE
    ========================================== */
+.hamburger-toggle {
+    display: none !important;
+}
 
 .menu-overlay {
     position: fixed;
@@ -1805,10 +1399,10 @@ html, body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.75); /* साधा डार्क ट्रान्सपरंट बॅकग्राउंड */
-    backdrop-filter: none !important; /* ब्लर पूर्णपणे बंद केले आहे */
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
-    z-index: 9998 !important; /* स्लाइड मेनूच्या (10001) खाली राहील */
+    z-index: 9998 !important;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.35s ease-in-out, visibility 0.35s ease-in-out;
@@ -1819,21 +1413,31 @@ html, body {
     visibility: visible;
 }
 
-/* Hamburger Icon Styling */
-.hamburger-toggle {
-    display: none;
-    background: transparent;
-    border: none;
-    color: #fca311;
-    font-size: 1.6rem;
-    cursor: pointer;
-    z-index: 10002 !important; /* बटण आणि 'X' आयकॉन पडद्याच्या व मेनूच्या वर */
-    padding: 5px 10px;
-    outline: none;
+/* ==========================================
+   PERFECT RESPONSIVE BREAKPOINTS (ALL MEDIA QUERIES)
+   ========================================== */
+@media (max-width: 1024px) {
+    .cat-grid-row, .granth-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    /* Navbar नेहमी वर राहील */
+    .top-bar {
+        display: none;
+    }
+    
+    .btn-nav {
+        display: none;
+    }
+    
+    /* Navbar Sticky on Mobile */
     .navbar {
         position: sticky !important;
         top: 0 !important;
@@ -1842,16 +1446,8 @@ html, body {
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     }
 
-    /* Header (हिरो सेक्शन) मागे राहील */
-    header {
+    header, .hero, .hero-section, #hero {
         position: relative !important;
-        z-index: 1 !important;
-    }
-}
-
-    /* Hero Section Layer Reset */
-    .hero, .hero-section, #hero {
-        position: relative;
         z-index: 1 !important;
     }
 
@@ -1863,41 +1459,47 @@ html, body {
         position: relative;
     }
 
+    /* मोबाईलवर हॅम्बर्गर बटण नक्की दाखवा */
     .hamburger-toggle {
-        display: block;
+        display: block !important;
+        background: transparent;
+        border: none;
+        color: #fca311;
+        font-size: 1.6rem;
+        cursor: pointer;
+        z-index: 10002 !important;
+        padding: 5px 10px;
+        outline: none;
     }
 
-    /* Auto Width Slide Drawer */
+    /* मोबाईल स्लाइड ड्रॉवर */
     .nav-links {
         position: fixed !important;
         top: 0 !important;
         right: -100% !important;
-        
         min-width: 260px;
         width: 75%;
         max-width: 320px;
-        
         height: 100vh !important;
-        background: #140b07 !important; /* १००% सॉलिड डार्क बॅकग्राउंड */
-        backdrop-filter: none !important; /* ब्लर पूर्णपणे बंद */
+        background: #140b07 !important;
+        backdrop-filter: none !important;
         -webkit-backdrop-filter: none !important;
-        
         display: flex !important;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         padding: 80px 20px 30px 20px !important;
         box-shadow: -5px 0 25px rgba(0, 0, 0, 0.9);
-        z-index: 10001 !important; /* पडद्याच्या (9998) वर राहील */
+        z-index: 10001 !important;
         transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
         overflow-y: auto;
         overflow-x: hidden;
     }
+
     .nav-links.active {
-        right: 0 !important; /* मेनू ऑन झाल्यावर स्क्रीनवर येईल */
+        right: 0 !important;
     }
 
-    /* Menu Items Align Left */
     .nav-links li {
         width: 100%;
         margin: 8px 0;
@@ -1921,26 +1523,6 @@ html, body {
         color: #fca311;
     }
 
-    /* Vertical Line Fix & Dropdown Reset */
-    .dropdown, 
-    .dropdown.active, 
-    .dropdown.open,
-    .dropdown-menu,
-    .dropdown-toggle {
-        border-left: none !important;
-        border-right: none !important;
-        border-top: none !important;
-    }
-
-    .dropdown::before, 
-    .dropdown::after,
-    .dropdown-menu::before, 
-    .dropdown-menu::after {
-        display: none !important;
-        content: none !important;
-    }
-
-    /* Sub-menu Dropdown Styling */
     .dropdown-menu {
         display: none;
         position: static;
@@ -1970,16 +1552,52 @@ html, body {
         padding: 4px 0;
     }
 
-    .nav-cta {
-        display: none;
+    .hero-section {
+        padding: 80px 20px;
     }
-}
 
-/* ==========================================
-   MOBILE BOTTOM NAVIGATION BAR STYLES
-   ========================================== */
+    .hero-title {
+        font-size: 2.2rem;
+    }
 
-@media screen and (max-width: 768px) {
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-premium, .btn-outline {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    .sarth-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 25px;
+    }
+
+    .abhang-column {
+        border-right: none;
+        border-bottom: 1px dashed #333333;
+        padding-right: 0;
+        padding-bottom: 25px;
+    }
+
+    .bhavarth-column {
+        padding-left: 0;
+    }
+
+    .pagination-container {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .btn-page {
+        width: 100%;
+    }
+
+    /* Mobile Bottom Navigation Bar */
     .bottom-nav-bar {
         position: fixed;
         bottom: 0;
@@ -1992,7 +1610,7 @@ html, body {
         align-items: center;
         border-top: 1px solid rgba(252, 163, 17, 0.2);
         box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
-        z-index: 9997; /* बॉटम बार पडद्याच्या मागे राहील जेव्हा मेनू उघडेल */
+        z-index: 9997;
     }
 
     .bottom-nav-item {
@@ -2013,21 +1631,26 @@ html, body {
         color: #fca311;
     }
 
-    .bottom-nav-item:hover, .bottom-nav-item:active {
-        color: #fca311;
-    }
-
     body {
         padding-bottom: 60px !important;
     }
 }
 
-/* हेडलाईन्सचा रंग गोल्डन/ऑरेंज आणि फॉन्ट Rozha One करण्यासाठी */
+@media (max-width: 600px) {
+    .cat-grid-row, .granth-grid {
+        grid-template-columns: 1fr;
+    }
+    .cat-title-main, .granth-title-main {
+        font-size: 24px;
+    }
+}
+
+/* Typography Heading Color Fix */
 .story-body h3, 
 .story-body h4, 
 main h3, 
 main h4 {
-    color: #ffb703 !important; /* प्रीमियम गोल्ड कलर */
+    color: #ffb703 !important;
     font-family: 'Rozha One', 'Poppins', serif !important;
     margin-top: 30px;
     margin-bottom: 12px;
