@@ -1,4 +1,4 @@
-// Santkrupa Interactive Actions Script - Final Smooth Version
+// santvani Interactive Actions Script - Final Smooth Version
 
 // 1. Tab Switcher
 function toggleCardTab(button, tabType) {

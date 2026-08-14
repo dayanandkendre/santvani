@@ -1,4 +1,4 @@
-/* Santkrupa Premium 3-Box Grid Layout Component */
+/* santvani Premium 3-Box Grid Layout Component */
 .aarti-premium-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* ४ ऐवजी ३ कॉलम्स केले */

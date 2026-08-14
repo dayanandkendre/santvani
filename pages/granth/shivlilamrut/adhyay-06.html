@@ -5264,7 +5264,7 @@ function downloadCard(cardId, fileName) {
         if(btn) btn.style.visibility = 'visible';
         
         const link = document.createElement('a');
-        link.download = 'Santkrupa-' + fileName + '.png';
+        link.download = 'santvani-' + fileName + '.png';
         link.href = canvas.toDataURL('image/png');
         link.click();
     }).catch(err => {
