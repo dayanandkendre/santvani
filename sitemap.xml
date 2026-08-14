@@ -2444,4 +2444,10 @@
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
+  <url>
+       <loc>https://santvani.co.in/pages/granth/shivlilamrut/shivlilamruta-mahiti.html</loc>
+       <lastmod>2026-08-14T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
 </urlset>
