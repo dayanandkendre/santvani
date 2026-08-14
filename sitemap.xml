@@ -2273,4 +2273,56 @@
        <changefreq>monthly</changefreq>
        <priority>0.8000</priority>
   </url>
+
+  <!-- ================= Root Pages (मुख्य पृष्ठे) ================= -->
+  <url>
+       <loc>https://santvani.co.in/nivdak-abhang.html</loc>
+       <lastmod>2026-08-12T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- ================= Abhang Pages (निवडक अभंग संग्रह) ================= -->
+  <url>
+       <loc>https://santvani.co.in/pages/abhang/ram-janma-abhang.html</loc>
+       <lastmod>2026-08-12T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/abhang/mahadev-abhang.html</loc>
+       <lastmod>2026-08-12T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/abhang/maruti-janma-abhang.html</loc>
+       <lastmod>2026-08-12T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/abhang/lokpriya-tukaram-abhang.html</loc>
+       <lastmod>2026-08-12T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/abhang/lokpriya-dnyaneshwar-abhang.html</loc>
+       <lastmod>2026-08-12T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/abhang/lokpriya-eknath-abhang.html</loc>
+       <lastmod>2026-08-12T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/abhang/lokpriya-namdev-abhang.html</loc>
+       <lastmod>2026-08-12T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
 </urlset>
