@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "sant-subhashite.html", "san-utsav.html", "sarth-haripath.html", "vangmay-sangrah.html",
         "eknath-gatha.html", "muktabai-gatha.html", "namdev-gatha.html", "nilobaray-gatha.html",
         "tukaram-gatha.html", "artya-sangrah.html", "ekadashi-vrat.html", "dnyaneshwari.html",
-        "eknathi-bhagvat.html", "nitya-pathan-stotra.html"
+        "eknathi-bhagvat.html", "nitya-pathan-stotra.html", "shivlilamrut.html"
     ];
 
     var isExcluded = currentPath === "/" || currentPath.endsWith("/") || excludedPages.some(function(page) {
