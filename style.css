@@ -1799,17 +1799,16 @@ html, body {
    FINAL PREMIUM MOBILE MENU & HEADER STYLES
    ========================================== */
 
-/* Dark Blur Overlay (मागील पडदा) */
 .menu-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    z-index: 10000 !important; /* पडदा मुख्य स्क्रीनच्या वर */
+    background: rgba(0, 0, 0, 0.75); /* साधा डार्क ट्रान्सपरंट बॅकग्राउंड */
+    backdrop-filter: none !important; /* ब्लर पूर्णपणे बंद केले आहे */
+    -webkit-backdrop-filter: none !important;
+    z-index: 9998 !important; /* स्लाइड मेनूच्या (10001) खाली राहील */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.35s ease-in-out, visibility 0.35s ease-in-out;
@@ -1879,14 +1878,17 @@ html, body {
         max-width: 320px;
         
         height: 100vh !important;
-        background: #140b07 !important; /* १००% सॉलिड डार्क कलर */
+        background: #140b07 !important; /* १००% सॉलिड डार्क बॅकग्राउंड */
+        backdrop-filter: none !important; /* ब्लर पूर्णपणे बंद */
+        -webkit-backdrop-filter: none !important;
+        
         display: flex !important;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         padding: 80px 20px 30px 20px !important;
         box-shadow: -5px 0 25px rgba(0, 0, 0, 0.9);
-        z-index: 10001 !important; /* पडद्याच्या वर */
+        z-index: 10001 !important; /* पडद्याच्या (9998) वर राहील */
         transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
         overflow-y: auto;
         overflow-x: hidden;
