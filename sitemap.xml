@@ -2325,4 +2325,123 @@
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
+  <!-- मुख्य शिवलीलामृत पोथी इंडेक्स पेज -->
+  <url>
+       <loc>https://santvani.co.in/pages/granth/shivlilamrut/shivlilamrut.html</loc>
+       <lastmod>2026-08-14T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.9000</priority>
+  </url>
+
+  <!-- अध्याय १ -->
+  <url>
+       <loc>https://santvani.co.in/pages/granth/shivlilamrut/adhyay-01.html</loc>
+       <lastmod>2026-08-14T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- अध्याय २ -->
+  <url>
+       <loc>https://santvani.co.in/pages/granth/shivlilamrut/adhyay-02.html</loc>
+       <lastmod>2026-08-14T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- अध्याय ३ -->
+  <url>
+       <loc>https://santvani.co.in/pages/granth/shivlilamrut/adhyay-03.html</loc>
+       <lastmod>2026-08-14T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- अध्याय ४ -->
+  <url>
+       <loc>https://santvani.co.in/pages/granth/shivlilamrut/adhyay-04.html</loc>
+       <lastmod>2026-08-14T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- अध्याय ५ -->
+  <url>
+       <loc>https://santvani.co.in/pages/granth/shivlilamrut/adhyay-05.html</loc>
+       <lastmod>2026-08-14T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- अध्याय ६ -->
+  <url>
+       <loc>https://santvani.co.in/pages/granth/shivlilamrut/adhyay-06.html</loc>
+       <lastmod>2026-08-14T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- अध्याय ७ -->
+  <url>
+       <loc>https://santvani.co.in/pages/granth/shivlilamrut/adhyay-07.html</loc>
+       <lastmod>2026-08-14T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- अध्याय ८ -->
+  <url>
+       <loc>https://santvani.co.in/pages/granth/shivlilamrut/adhyay-08.html</loc>
+       <lastmod>2026-08-14T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- अध्याय ९ -->
+  <url>
+       <loc>https://santvani.co.in/pages/granth/shivlilamrut/adhyay-09.html</loc>
+       <lastmod>2026-08-14T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- अध्याय १० -->
+  <url>
+       <loc>https://santvani.co.in/pages/granth/shivlilamrut/adhyay-10.html</loc>
+       <lastmod>2026-08-14T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- अध्याय ११ -->
+  <url>
+       <loc>https://santvani.co.in/pages/granth/shivlilamrut/adhyay-11.html</loc>
+       <lastmod>2026-08-14T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- अध्याय १२ -->
+  <url>
+       <loc>https://santvani.co.in/pages/granth/shivlilamrut/adhyay-12.html</loc>
+       <lastmod>2026-08-14T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- अध्याय १३ -->
+  <url>
+       <loc>https://santvani.co.in/pages/granth/shivlilamrut/adhyay-13.html</loc>
+       <lastmod>2026-08-14T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+
+  <!-- अध्याय १४ -->
+  <url>
+       <loc>https://santvani.co.in/pages/granth/shivlilamrut/adhyay-14.html</loc>
+       <lastmod>2026-08-14T10:37:45+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
 </urlset>
