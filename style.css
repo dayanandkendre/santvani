@@ -78,7 +78,7 @@ body {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-subtle);
-    z-index: 1000;
+    z-index: 9999 !important;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
@@ -180,7 +180,7 @@ body {
 
 .hero-content {
     position: relative;
-    z-index: 5;
+    z-index: 1 !important;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -571,7 +571,7 @@ body {
 
 .inner-hero-content {
     position: relative;
-    z-index: 5;
+    z-index: 1 !important;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -659,7 +659,7 @@ body {
     padding: 8px 0; 
     
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-    z-index: 1000;    
+    z-index: 10000 !important;    
     display: none;    
     list-style: none;
 }
@@ -1811,7 +1811,7 @@ html, body {
     background: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    z-index: 9998; /* पडदा मुख्य स्क्रीनच्या वर */
+    z-index: 10000 !important; /* पडदा मुख्य स्क्रीनच्या वर */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.35s ease-in-out, visibility 0.35s ease-in-out;
