@@ -2492,4 +2492,22 @@
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/gunanidhi-katha-shivpuran-part1.html</loc>
+       <lastmod>2026-08-18T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/gunanidhi-kuber-katha-shivpuran-part2.html</loc>
+       <lastmod>2026-08-18T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/kuber-vardan-kailas-niwas-shivpuran-katha.html</loc>
+       <lastmod>2026-08-18T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
 </urlset>
