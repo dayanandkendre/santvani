@@ -2510,4 +2510,22 @@
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/sandhya-kamdev-prakatya-shivpuran-katha.html</loc>
+       <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/sandhya-charitra-tapasya-shivpuran-katha.html</loc>
+       <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/sandhya-atmahuti-arundhati-utpatti-shivpuran-katha.html</loc>
+       <lastmod>2026-08-19T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
 </urlset>
