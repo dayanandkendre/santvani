@@ -2528,4 +2528,28 @@
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/brahmadeva-aswasthata-vasanta-utpatti-shivpuran-katha.html</loc>
+       <lastmod>2026-08-21T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/brahma-vishnu-samvad-sati-avatar-shivpuran-katha.html</loc>
+       <lastmod>2026-08-21T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/daksha-raja-varprapti-sati-avatar-shivpuran-katha.html</loc>
+       <lastmod>2026-08-21T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/daksha-maithuni-srishti-narad-shaap-shivpuran-katha.html</loc>
+       <lastmod>2026-08-21T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
 </urlset>
