@@ -38,12 +38,12 @@ function shareAarti(cardId) {
     if (navigator.share) {
         navigator.share({
             title: title,
-            text: text + "\n\nसौजन्य: www.santvaani.in",
+            text: text + "\n\nसौजन्य: www.santvani.co.in",
             url: window.location.href
         }).catch(err => console.log(err));
     } else {
         // Fallback for desktop/unsupported browsers
-        navigator.clipboard.writeText(text + "\n\nसौजन्य: www.santvaani.in");
+        navigator.clipboard.writeText(text + "\n\nसौजन्य: www.santvani.co.in");
         alert("🔗 शेअर उपलब्ध नाही, पण लिंक आणि मजकूर कॉपी झाला आहे! तुम्ही थेट पेस्ट करू शकता.");
     }
 }

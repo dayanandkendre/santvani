@@ -181,7 +181,7 @@ function saveAbhangAsImage(id) {
     // वॉटरमार्क
     ctx.fillStyle = 'rgba(194, 180, 166, 0.3)';
     ctx.font = '26px sans-serif';
-    ctx.fillText('www.santvaani.in', 450, 1510);
+    ctx.fillText('www.santvani.co.in', 450, 1510);
 
     // डाऊनलोड ट्रिगर
     var imageURL = canvas.toDataURL('image/png');
