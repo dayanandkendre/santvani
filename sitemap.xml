@@ -2648,4 +2648,22 @@
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/himalayacha-meneshi-vivah-pitrukanya-shap-shivpuran-katha.html</loc>
+       <lastmod>2026-08-26T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/devankadun-umadevi-stuti-menechi-tapascharya-shivpuran-katha.html</loc>
+       <lastmod>2026-08-26T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/menechya-poti-jagadambecha-janma-shivpuran-katha.html</loc>
+       <lastmod>2026-08-26T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
 </urlset>
