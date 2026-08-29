@@ -2714,5 +2714,28 @@
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
-
+  <url>
+       <loc>https://santvani.co.in/pages/blog/mahadevanchya-leela-nat-roop-shivpuran-katha.html</loc>
+       <lastmod>2026-08-29T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/mahadevanni-saptarshinna-himadrikade-pathavle-shivpuran-katha.html</loc>
+       <lastmod>2026-08-29T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/anaranya-rajachi-katha-pippalad-padma-shivpuran-katha.html</loc>
+       <lastmod>2026-08-29T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/shiv-parvati-vivah-himclay-mena-sammati-shivpuran-katha.html</loc>
+       <lastmod>2026-08-29T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
 </urlset>
