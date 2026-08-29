@@ -2684,4 +2684,34 @@
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/kamdev-bhasmasat-jhala-shivpuran-katha.html</loc>
+       <lastmod>2026-08-29T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/parvatichi-tapascharya-shivpuran-katha.html</loc>
+       <lastmod>2026-08-29T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/devanchi-shivjinna-vivah-prarthana-shivpuran-katha.html</loc>
+       <lastmod>2026-08-29T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/saptarshinkadun-parvatichi-pariksha-shivpuran-katha.html</loc>
+       <lastmod>2026-08-29T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/shivjinkadun-parvatichi-pariksha-shivpuran-katha.html</loc>
+       <lastmod>2026-08-29T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
 </urlset>
