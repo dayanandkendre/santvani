@@ -2738,4 +2738,22 @@
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/shiv-parvati-vivah-himalayakade-gaman-shivpuran-katha.html</loc>
+       <lastmod>2026-08-30T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/shiv-parvati-vivah-sohala-shivpuran-katha.html</loc>
+       <lastmod>2026-08-30T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/kamdevala-jivandan-shivparvati-kailas-gaman-shivpuran-katha.html</loc>
+       <lastmod>2026-08-30T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
 </urlset>
