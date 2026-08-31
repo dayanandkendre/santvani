@@ -2762,4 +2762,16 @@
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/sankashti-chaturthi-vrat-puja-vidhi-katha.html</loc>
+       <lastmod>2026-08-30T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://santvani.co.in/pages/blog/sankashti-chaturthi-mahatmya-pothi-marathi.html</loc>
+       <lastmod>2026-08-30T00:00:00+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.8000</priority>
+  </url>
 </urlset>
