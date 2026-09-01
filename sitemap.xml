@@ -2810,39 +2810,24 @@
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
-  <!-- १. शिवपुराण कथा १९ (ड) - तारकासुराचा वध, बाणासुर व प्रलंबासुर संहार -->
-  <url>
-       <loc>https://santvani.co.in/pages/blog/tarkasur-vadh-banasur-pralambasur-vadh-shivpuran-katha.html</loc>
-       <lastmod>2026-09-01T00:00:00+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>0.8000</priority>
-  </url>
-
-  <!-- २. शिवपुराण कथा २० (अ) - श्री गणेशाची उत्पत्ती व कैलासावरील पहारा -->
   <url>
        <loc>https://santvani.co.in/pages/blog/ganesh-utpatti-shivpuran-katha.html</loc>
        <lastmod>2026-09-01T00:00:00+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
-
-  <!-- ३. शिवपुराण कथा २० (ब) - कैलासावरील महासंग्राम व बाल गणेशाचा शिरच्छेद -->
   <url>
        <loc>https://santvani.co.in/pages/blog/ganesh-shirachhed-shivpuran-katha.html</loc>
        <lastmod>2026-09-01T00:00:00+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
-
-  <!-- ४. शिवपुराण कथा २० (क) - गणपतीला जीवनदान व गणाध्यक्ष पदी निवड -->
   <url>
        <loc>https://santvani.co.in/pages/blog/ganpati-jivandan-ganadhyaksha-shivpuran-katha.html</loc>
        <lastmod>2026-09-01T00:00:00+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
   </url>
-
-  <!-- ५. शिवपुराण कथा २० (ड) - श्री गणपतीचा विवाह व मल्लिकार्जुन ज्योतिर्लिंग -->
   <url>
        <loc>https://santvani.co.in/pages/blog/ganpati-vivah-kartikeya-katha-shivpuran.html</loc>
        <lastmod>2026-09-01T00:00:00+00:00</lastmod>
