@@ -142,9 +142,8 @@
                     snapshot.forEach(function(pageSnap) {
                         const pageId = pageSnap.key;
                         
-                        // 🎯 SMART EXACT-MATCH URL RECOVERY
-                        let raw = pageId;
-                        if (raw.startsWith('_')) raw = raw.substring(1);
+                        // 🎯 RECONSTRUCT EXACT URL & PATH
+                        let raw = pageId.startsWith('_') ? pageId.substring(1) : pageId;
                         
                         let isHtml = false;
                         if (raw.endsWith('_html')) {
@@ -152,41 +151,29 @@
                             raw = raw.slice(0, -5);
                         }
 
-                        // Restore Known Category Folders accurately
-                        let knownFolders = ['nitya-pathan-stotra', 'blog', 'abhang', 'stotra', 'bharude-gavlani', 'granth-sampada', 'kabir-doha', 'santache-prasang', 'sant-sahitya', 'san-utsav', 'vangmay-sangrah'];
+                        if (raw.startsWith('pages_')) {
+                            raw = raw.replace('pages_', 'pages/');
+                        }
+
+                        // Added 'saints' to known folders list
+                        let knownFolders = ['saints', 'nitya-pathan-stotra', 'blog', 'abhang', 'stotra', 'bharude-gavlani', 'granth-sampada', 'kabir-doha', 'santache-prasang', 'sant-sahitya', 'san-utsav', 'vangmay-sangrah'];
                         
-                        let cleanPath = raw;
                         knownFolders.forEach(folder => {
                             let folderUnderscore = folder.replace(/-/g, '_');
-                            if (cleanPath.includes(folderUnderscore)) {
-                                cleanPath = cleanPath.replace(folderUnderscore, folder);
-                            }
+                            // Replace folder_ with folder/ to separate directory from file
+                            raw = raw.replace(new RegExp('pages/' + folderUnderscore + '_', 'g'), 'pages/' + folder + '/');
+                            raw = raw.replace(new RegExp('pages/' + folder + '_', 'g'), 'pages/' + folder + '/');
                         });
 
-                        // Ensure /pages/ prefix
-                        if (cleanPath.startsWith('pages_')) {
-                            cleanPath = cleanPath.replace('pages_', 'pages/');
-                        }
+                        let parts = raw.split('/');
+                        let fileName = parts.pop().replace(/_/g, '-');
+                        let folderPath = parts.join('/');
 
-                        // Replace the next folder slash (e.g. pages/blog_... -> pages/blog/...)
-                        knownFolders.forEach(folder => {
-                            cleanPath = cleanPath.replace(folder + '_', folder + '/');
-                        });
-
-                        // Remaining underscores in filename are hyphens!
-                        let pathParts = cleanPath.split('/');
-                        if (pathParts.length > 1) {
-                            let lastIndex = pathParts.length - 1;
-                            pathParts[lastIndex] = pathParts[lastIndex].replace(/_/g, '-');
-                            cleanPath = pathParts.join('/');
-                        } else {
-                            cleanPath = cleanPath.replace(/_/g, '-');
-                        }
-
-                        cleanPath = '/' + cleanPath + (isHtml ? '.html' : '');
+                        let cleanPath = (folderPath ? '/' + folderPath : '') + '/' + fileName + (isHtml ? '.html' : '');
                         cleanPath = cleanPath.replace(/\/\//g, '/');
 
-                        const fullUrl = window.location.origin + cleanPath;
+                        const baseUrl = "https://santvani.co.in";
+                        const fullUrl = baseUrl + cleanPath;
 
                         pageSnap.forEach(function(commentSnap) {
                             totalCount++;
