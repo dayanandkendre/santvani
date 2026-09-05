@@ -155,12 +155,14 @@
                             raw = raw.replace('pages_', 'pages/');
                         }
 
-                        let knownFolders = ['nitya-pathan-stotra', 'blog', 'abhang', 'stotra', 'bharude-gavlani', 'granth-sampada', 'kabir-doha', 'santache-prasang', 'sant-sahitya', 'san-utsav', 'vangmay-sangrah'];
+                        // Added 'saints' to known folders list
+                        let knownFolders = ['saints', 'nitya-pathan-stotra', 'blog', 'abhang', 'stotra', 'bharude-gavlani', 'granth-sampada', 'kabir-doha', 'santache-prasang', 'sant-sahitya', 'san-utsav', 'vangmay-sangrah'];
                         
                         knownFolders.forEach(folder => {
                             let folderUnderscore = folder.replace(/-/g, '_');
-                            raw = raw.replace(folderUnderscore + '_', folder + '/');
-                            raw = raw.replace(folderUnderscore, folder);
+                            // Replace folder_ with folder/ to separate directory from file
+                            raw = raw.replace(new RegExp('pages/' + folderUnderscore + '_', 'g'), 'pages/' + folder + '/');
+                            raw = raw.replace(new RegExp('pages/' + folder + '_', 'g'), 'pages/' + folder + '/');
                         });
 
                         let parts = raw.split('/');
