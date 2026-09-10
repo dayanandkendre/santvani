@@ -1655,3 +1655,57 @@ main h4 {
     margin-top: 30px;
     margin-bottom: 12px;
 }
+
+
+/* --- Hero Buttons Layout Fix --- */
+.hero-buttons {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 15px !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+    margin-top: 20px !important;
+}
+
+/* बटणची साईज नियंत्रित ठेवण्यासाठी */
+.hero-buttons .btn-premium,
+.hero-buttons .btn-outline {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: auto !important; /* बटण स्क्रीन भरून पसरणार नाही */
+    min-width: 200px !important; /* बटण दिसायला योग्य साईजचे दिसेल */
+    max-width: 90% !important; /* मोबाईलबद्दल स्क्रीनच्या बाहेर जाणार नाही */
+    padding: 12px 24px !important;
+    box-sizing: border-box !important;
+}
+
+/* --- Top Bar and Navbar Height Uniformity --- */
+.top-bar {
+    width: 100%;
+    min-height: 38px; /* फिक्स हाईट */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    font-size: 13px;
+    white-space: nowrap; /* मजकूर तुटून २ लाईन होणार नाहीत, त्यामुळे हाईट वाढणार नाही */
+    overflow: hidden;
+}
+
+.navbar {
+    min-height: 65px; /* नेव्हबारची उंची फिक्स ठेवणे */
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
