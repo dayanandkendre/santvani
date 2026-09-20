@@ -477,3 +477,14 @@ document.addEventListener("DOMContentLoaded", function() {
     // २. 'भावार्थ पहा' हे टॉगल बटण पूर्णपणे लपवा
     document.querySelectorAll('[id^="toggle-btn-"]').forEach(el => el.style.setProperty('display', 'none', 'important'));
 });
+document.addEventListener("DOMContentLoaded", function () {
+    // १. HTML मधील 'display: none' काढून भावार्थ १००% नेहमी दाखवा
+    document.querySelectorAll('.bhavarth-text').forEach(function (el) {
+        el.style.setProperty('display', 'block', 'important');
+    });
+
+    // २. 'भावार्थ पहा' हे बटण लपवा
+    document.querySelectorAll('.toggle-view-btn').forEach(function (btn) {
+        btn.style.setProperty('display', 'none', 'important');
+    });
+});
