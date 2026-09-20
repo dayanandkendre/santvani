@@ -88,9 +88,8 @@
     flex-grow: 1 !important; 
 }
 
-/* अभंग मजकूर - वाचनासाठी एकदम क्लिअर */
-.sarth-haripath-section .abhang-text,
-.sarth-haripath-section [id^="abhang-text-"] {
+/* अभंग मजकूर - फक्त abhang-text क्लास असलेल्या घटकांसाठी */
+.sarth-haripath-section div.abhang-text {
     font-family: 'Rozha One', serif !important;
     font-size: 1.18rem !important;
     line-height: 2.6rem !important;
@@ -103,16 +102,15 @@
     font-weight: normal !important;
 }
 
-/* 🎯 भावार्थ मजकूर - Inline Style आणि ID ला Override करून १००% Always Visible केले */
-.sarth-haripath-section .bhavarth-text,
-.sarth-haripath-section [id^="bhavarth-text-"] {
+/* 🎯 भावार्थ मजकूर - HTML मधून ID mismatch/typo किंवा inline display:none असला तरी 100% SHOW hoil */
+.sarth-haripath-section div.bhavarth-text {
     font-family: 'Noto Sans Marathi', sans-serif !important;
     font-size: 0.98rem !important; 
     line-height: 1.85rem !important;
     color: #d1c7bd !important;
     text-align: justify !important;
     width: 100% !important;
-    display: block !important; /* Inline display:none ला Override करते */
+    display: block !important; /* Inline style="display: none !important;" la override karto */
     visibility: visible !important;
     opacity: 1 !important;
     margin-top: 15px !important;
@@ -124,8 +122,7 @@
 }
 
 /* भावार्थाच्या वर 'भावार्थ :' हेडिंग आपोआप जोडण्यासाठी */
-.sarth-haripath-section .bhavarth-text::before,
-.sarth-haripath-section [id^="bhavarth-text-"]::before {
+.sarth-haripath-section div.bhavarth-text::before {
     content: "📖 भावार्थ : " !important;
     display: block !important;
     color: #ffcc00 !important;
