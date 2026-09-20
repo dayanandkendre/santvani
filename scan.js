@@ -26,7 +26,7 @@ function scanFile(filePath) {
     lines.forEach((line, index) => {
         const lineNo = index + 1;
         
-        // 1. Latin + Devanagari (eक, yeर)
+        // 1. Latin + Devanagari (eक, yयेर )
         for (let i = 0; i < line.length - 1; i++) {
             const char1 = line[i];
             const char2 = line[i + 1];
