@@ -16978,7 +16978,7 @@
     </section>
 
     <!-- ===================================================
-         📸 पडद्यामागील गुप्त कॅनव्हास (NO WATERMARK - ६००x६०० स्क्वेअर)
+         📸 पडद्यामागील गुप्त कॅनव्हास (NO WATERMARK - ६००*६०० स्क्वेअर)
          =================================================== -->
     <div style="position: absolute; left: -9999px; top: 0;">
         <!-- गुप्त स्क्वेअर १ -->
@@ -17055,7 +17055,7 @@
         function shareWhatsApp(id) {
             const card = document.getElementById(id);
             const text = card.querySelector('.quote-main-text').innerText;
-            window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent('*संत कबीर दोहे व विचार* ✨\n\n' + text + '\n\nअधिक वाचनासाठी भेट द्या: ' + window.location.href)}`, '_blank');
+           window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(`*संत कबीर दोहे व विचार* ✨\n\n${text}\n\nअधिक वाचनासाठी भेट द्या: ${window.location.href}`)}`, '_blank');
         }
 
         function downloadSquare(canvasId) {
