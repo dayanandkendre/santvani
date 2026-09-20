@@ -89,34 +89,49 @@
 }
 
 /* अभंग मजकूर - वाचनासाठी एकदम क्लिअर */
-.sarth-haripath-section .abhang-text {
+.sarth-haripath-section .abhang-text,
+.sarth-haripath-section [id^="abhang-text-"] {
     font-family: 'Rozha One', serif !important;
-    font-size: 1.18rem !important; /* 🎯 साईझ १.४५ वरून कमी करून १.१८ केली (एकदम परफेक्ट) */
-    line-height: 2.6rem !important;  /* 🎯 दोन ओळींमध्ये मस्त सुटसुटीत स्पेस दिली */
+    font-size: 1.18rem !important;
+    line-height: 2.6rem !important;
     letter-spacing: 0.5px !important; 
     color: #fffdfa !important;
     text-align: center !important;
     width: 100% !important;
     display: block !important;
-    margin: 0 !important;
+    margin: 0 0 15px 0 !important;
     font-weight: normal !important;
 }
 
-/* भावार्थ मजकूर - नेहमी Visible आणि आकर्षक लुक */
-.sarth-haripath-section .bhavarth-text {
+/* 🎯 भावार्थ मजकूर - Inline Style आणि ID ला Override करून १००% Always Visible केले */
+.sarth-haripath-section .bhavarth-text,
+.sarth-haripath-section [id^="bhavarth-text-"] {
     font-family: 'Noto Sans Marathi', sans-serif !important;
-    font-size: 1rem !important; 
+    font-size: 0.98rem !important; 
     line-height: 1.85rem !important;
-    color: #c2b4a6 !important;
+    color: #d1c7bd !important;
     text-align: justify !important;
     width: 100% !important;
-    display: block !important;
-    margin-top: 18px !important;
+    display: block !important; /* Inline display:none ला Override करते */
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-top: 15px !important;
     padding: 14px 16px !important;
     background: rgba(255, 255, 255, 0.03) !important;
     border-left: 3px solid #ff7300 !important;
     border-radius: 6px !important;
     box-sizing: border-box !important;
+}
+
+/* भावार्थाच्या वर 'भावार्थ :' हेडिंग आपोआप जोडण्यासाठी */
+.sarth-haripath-section .bhavarth-text::before,
+.sarth-haripath-section [id^="bhavarth-text-"]::before {
+    content: "📖 भावार्थ : " !important;
+    display: block !important;
+    color: #ffcc00 !important;
+    font-weight: 700 !important;
+    font-size: 0.92rem !important;
+    margin-bottom: 6px !important;
 }
 
 /* तळाचा विभाग */
@@ -133,7 +148,7 @@
     gap: 8px !important;
     border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
     padding-top: 14px !important;
-    margin-bottom: 12px !important;
+    margin-bottom: 0px !important;
 }
 
 /* 🎯 ३ ॲक्शन बटणे डिझाईन */
@@ -155,21 +170,16 @@
 
 /* 🎯 कर्सर गेल्यावर पिवळा/सोनेरी (Premium Gold) होणारा कडक इफेक्ट */
 .sarth-haripath-section .action-btn:hover {
-    background: #ffcc00 !important; /* 👈 बॅकग्राउंड पूर्ण पिवळा होईल */
-    color: #0f0a05 !important; /* 👈 आतील अक्षरे आणि आयकॉन डार्क होतील */
+    background: #ffcc00 !important;
+    color: #0f0a05 !important;
     border-color: #ffcc00 !important;
     font-weight: 600 !important;
 }
 
-/* मुख्य टॉगल बटण (लपवले) */
-.sarth-haripath-section .toggle-view-btn {
+/* 🎯 मुख्य टॉगल बटण ('भावार्थ पहा') पूर्णपणे लपवले */
+.sarth-haripath-section .toggle-view-btn,
+.sarth-haripath-section [id^="toggle-btn-"] {
     display: none !important;
-}
-
-.sarth-haripath-section .toggle-view-btn:hover {
-    background: linear-gradient(135deg, #ff7300 0%, #fe1e50 100%) !important;
-    color: #fffdfa !important;
-    border-color: transparent !important;
 }
 
 /* ==========================================================================
