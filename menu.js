@@ -466,3 +466,14 @@ function initSantvaniShareAndComments() {
         });
     });
 })();
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // १. सर्व भावार्थ थेट शो करा (Inline Style काढून टाका)
+    document.querySelectorAll('[id^="bhavarth-text-"]').forEach(el => el.style.setProperty('display', 'block', 'important'));
+    
+    // २. 'भावार्थ पहा' हे टॉगल बटण पूर्णपणे लपवा
+    document.querySelectorAll('[id^="toggle-btn-"]').forEach(el => el.style.setProperty('display', 'none', 'important'));
+});
