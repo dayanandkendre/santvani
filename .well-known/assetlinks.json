@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "in.co.santvani",
+    "sha256_cert_fingerprints": [
+      "48:3B:EB:F1:CD:89:AC:5E:AC:9A:CD:F8:60:FA:C5:6B:90:31:2A:A6:EF:A2:28:83:E1:08:FA:60:03:8F:4A:C1"
+    ]
+  }
+}]
