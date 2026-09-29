@@ -1757,3 +1757,27 @@ main h4 {
   visibility: hidden !important;
   pointer-events: none;
 }
+
+
+/* Santvani In-App Fullscreen 9:16 Splash */
+#santvani-splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #630c0e;
+  background-image: url('images/splash-screen.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  z-index: 99999999;
+  user-select: none;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.5s ease;
+}
+
+.splash-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none;
+}
