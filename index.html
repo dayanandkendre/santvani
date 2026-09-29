@@ -961,6 +961,21 @@
     });
   }
 </script>
+
+<!-- Santvani Fullscreen 9:16 Splash -->
+<div id="santvani-splash-screen" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:#120202 url('images/splash-screen.png') no-repeat center center; background-size:contain; z-index:99999999; transition: opacity 0.4s ease;"></div>
+
+<script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      const splash = document.getElementById('santvani-splash-screen');
+      if(splash) {
+        splash.style.opacity = '0';
+        setTimeout(() => splash.remove(), 400);
+      }
+    }, 1200); // १.2 सेकंद स्प्लॅश दिसेल
+  });
+</script>
     
 </body>
 </html>
