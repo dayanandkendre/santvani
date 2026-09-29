@@ -55,11 +55,6 @@
 </head>
 <body>
 
-    <!-- Santvani In-App Ultra-Premium 9:16 Splash Screen -->
-<div id="santvani-splash-screen"></div>
-
-    
-
     <div class="top-bar">
         <div class="top-bar-container">
             <span class="top-bar-text"><i class="fa-solid fa-om animate-spin"></i> ॥ जय जय विठ्ठल रखुमाई ॥</span>
@@ -953,7 +948,7 @@
   }
 </script>
     <script>
-  // 1. Service Worker Nondani (Offline aani Auto-Update sathi)
+  // Service Worker नोंदणी (ऑफलाइन आणि बॅकग्राउंड ऑटो-अपडेटसाठी)
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
@@ -965,27 +960,6 @@
         });
     });
   }
-
-  // 2. In-App Splash Screen Controller
-  (function() {
-    const splash = document.getElementById('santvani-splash-screen');
-    const isApp = window.matchMedia('(display-mode: standalone)').matches || 
-                  window.navigator.standalone === true || 
-                  document.referrer.includes('android-app://');
-
-    if (isApp && splash) {
-      // 1.5 second loading disun app smooth open hoel
-      window.addEventListener('load', function() {
-        setTimeout(function() {
-          splash.classList.add('splash-hidden');
-          setTimeout(() => splash.remove(), 500);
-        }, 1500);
-      });
-    } else if (splash) {
-      // Normal browser / desktop var AdSense chya drushtine direct remove kara
-      splash.remove();
-    }
-  })();
 </script>
     
 </body>
