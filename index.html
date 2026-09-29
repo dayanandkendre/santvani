@@ -921,62 +921,31 @@
     </footer>
 <script src="menu.js"></script>
 
-    <script>
-  (function() {
-    const isApp = window.matchMedia('(display-mode: standalone)').matches || 
-                  window.navigator.standalone === true || 
-                  document.referrer.includes('android-app://');
-
-    const splash = document.getElementById('santvani-splash-screen');
-    const alreadyShown = sessionStorage.getItem('santvani_splash_shown');
-
-    // Fakt app madhe aani pehlyandach open kelyavar dakhva
-    if (isApp && splash && !alreadyShown) {
-      splash.style.display = 'flex';
-      sessionStorage.setItem('santvani_splash_shown', 'true');
-
-      window.addEventListener('load', function() {
-        setTimeout(function() {
-          splash.classList.add('splash-hidden');
-          setTimeout(() => splash.remove(), 700);
-        }, 1200);
-      });
-    } else if (splash) {
-      // Browser var asel kinva aadhi dakhvun zala asel tar direct remove kara
-      splash.remove();
-    }
-  })();
-</script>
-
 <script>
-  // Service Worker नोंदणी (ऑफलाइन आणि बॅकग्राउंड ऑटो-अपडेटसाठी)
+  // ---- Splash: ek-ch div, ek-ch script ----
+  function hideSplash() {
+    document.querySelectorAll('#santvani-splash-screen').forEach(function (s) {
+      s.style.opacity = '0';
+      setTimeout(function () { s.remove(); }, 400);
+    });
+  }
+
+  // DOM tayar zalyavar 800ms nantar hide (images/ads chi vaat baghat nahi)
+  document.addEventListener('DOMContentLoaded', function () {
+    setTimeout(hideSplash, 800);
+  });
+  // Safety: kahihi zale tari 3 sec madhe hide
+  setTimeout(hideSplash, 3000);
+
+  // Service Worker
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
+    window.addEventListener('load', function () {
       navigator.serviceWorker.register('/sw.js')
-        .then((reg) => {
-          console.log('Santvani Offline Ready!', reg.scope);
-        })
-        .catch((err) => {
-          console.log('ServiceWorker registration failed: ', err);
-        });
+        .then(function (reg) { console.log('Santvani Offline Ready!', reg.scope); })
+        .catch(function (err) { console.log('ServiceWorker registration failed: ', err); });
     });
   }
 </script>
-   
-<!-- Santvani Fullscreen 9:16 Splash -->
-<div id="santvani-splash-screen" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:#120202 url('images/splash-screen.png') no-repeat center center; background-size:contain; z-index:99999999; transition: opacity 0.4s ease;"></div>
 
-<script>
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      const splash = document.getElementById('santvani-splash-screen');
-      if(splash) {
-        splash.style.opacity = '0';
-        setTimeout(() => splash.remove(), 400);
-      }
-    }, 1200); // १.2 सेकंद स्प्लॅश दिसेल
-  });
-</script>
-    
 </body>
 </html>
