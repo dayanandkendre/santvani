@@ -35,9 +35,27 @@
 
     <!-- Custom splash-screen -->
     <meta name="theme-color" content="#120202">
+<script>
+  // Splash fakta Android APP madhe (pahilyanda open kelyavar). Chrome/Google madhe nahi.
+  (function () {
+    try {
+      var isApp =
+        document.referrer.indexOf('android-app://') === 0 ||
+        window.matchMedia('(display-mode: standalone)').matches ||
+        window.matchMedia('(display-mode: fullscreen)').matches ||
+        window.navigator.standalone === true;
+      if (isApp && !sessionStorage.getItem('sv_splash_shown')) {
+        sessionStorage.setItem('sv_splash_shown', '1');
+        document.documentElement.classList.add('is-app-splash');
+      }
+    } catch (e) {}
+  })();
+</script>
 <style>
-  html, body { background:#120202; margin:0; }
-  #santvani-splash-screen {
+  #santvani-splash-screen { display:none; }
+  html.is-app-splash, html.is-app-splash body { background:#120202; margin:0; }
+  html.is-app-splash #santvani-splash-screen {
+    display:block;
     position:fixed; inset:0;
     background:#120202 url('images/splash-screen.png') no-repeat center center;
     background-size:contain;
