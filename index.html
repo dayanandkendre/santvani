@@ -949,6 +949,21 @@
     }
   })();
 </script>
+
+<script>
+  // Service Worker नोंदणी (ऑफलाइन आणि बॅकग्राउंड ऑटो-अपडेटसाठी)
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then((reg) => {
+          console.log('Santvani Offline Ready!', reg.scope);
+        })
+        .catch((err) => {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+  }
+</script>
     
 </body>
 </html>
