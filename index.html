@@ -55,20 +55,8 @@
 </head>
 <body>
 
-    <!-- Santvani In-App Ultra-Premium Splash Screen -->
-<div id="santvani-splash-screen" style="display: none;">
-  <div class="splash-content">
-    <div class="splash-logo-box">
-      <img src="images/icon-512.png" alt="संतवाणी" class="splash-logo" />
-    </div>
-    <h1 class="splash-title">संतवाणी</h1>
-    <p class="splash-subtitle">भक्ती मार्ग आणि ज्ञान मार्ग</p>
-  </div>
-  
-  <div class="splash-loader-container">
-    <div class="splash-loader-bar"></div>
-  </div>
-</div>
+    <!-- Santvani In-App Ultra-Premium 9:16 Splash Screen -->
+<div id="santvani-splash-screen"></div>
 
     
 
@@ -963,6 +951,41 @@
         });
     });
   }
+</script>
+    <script>
+  // 1. Service Worker Nondani (Offline aani Auto-Update sathi)
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then((reg) => {
+          console.log('Santvani Offline Ready!', reg.scope);
+        })
+        .catch((err) => {
+          console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+  }
+
+  // 2. In-App Splash Screen Controller
+  (function() {
+    const splash = document.getElementById('santvani-splash-screen');
+    const isApp = window.matchMedia('(display-mode: standalone)').matches || 
+                  window.navigator.standalone === true || 
+                  document.referrer.includes('android-app://');
+
+    if (isApp && splash) {
+      // 1.5 second loading disun app smooth open hoel
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          splash.classList.add('splash-hidden');
+          setTimeout(() => splash.remove(), 500);
+        }, 1500);
+      });
+    } else if (splash) {
+      // Normal browser / desktop var AdSense chya drushtine direct remove kara
+      splash.remove();
+    }
+  })();
 </script>
     
 </body>
