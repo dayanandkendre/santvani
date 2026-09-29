@@ -947,21 +947,7 @@
     });
   }
 </script>
-    <script>
-  // Service Worker नोंदणी (ऑफलाइन आणि बॅकग्राउंड ऑटो-अपडेटसाठी)
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then((reg) => {
-          console.log('Santvani Offline Ready!', reg.scope);
-        })
-        .catch((err) => {
-          console.log('ServiceWorker registration failed: ', err);
-        });
-    });
-  }
-</script>
-
+   
 <!-- Santvani Fullscreen 9:16 Splash -->
 <div id="santvani-splash-screen" style="position:fixed; top:0; left:0; width:100vw; height:100vh; background:#120202 url('images/splash-screen.png') no-repeat center center; background-size:contain; z-index:99999999; transition: opacity 0.4s ease;"></div>
 
