@@ -32,6 +32,19 @@
     
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom splash-screen -->
+    <meta name="theme-color" content="#120202">
+<style>
+  html, body { background:#120202; margin:0; }
+  #santvani-splash-screen {
+    position:fixed; inset:0;
+    background:#120202 url('images/splash-screen.png') no-repeat center center;
+    background-size:contain;
+    z-index:99999999;
+    transition:opacity .4s ease;
+  }
+</style>
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
@@ -55,6 +68,8 @@
 </head>
 <body>
 
+<div id="santvani-splash-screen"></div>
+    
     <div class="top-bar">
         <div class="top-bar-container">
             <span class="top-bar-text"><i class="fa-solid fa-om animate-spin"></i> ॥ जय जय विठ्ठल रखुमाई ॥</span>
