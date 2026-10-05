@@ -29,3 +29,21 @@
 .gx-toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%);background:var(--royal-gold);color:var(--bg-deep);padding:10px 22px;border-radius:30px;font-weight:600;opacity:0;pointer-events:none;transition:.3s;z-index:2000}
 .gx-toast.on{opacity:1}
 @media(max-width:640px){.gx-grid{grid-template-columns:repeat(2,1fr);gap:10px}.gx-cards{grid-template-columns:repeat(2,1fr);gap:14px}.gx-photo h1{font-size:1.5rem}}
+
+/* मध्यम स्क्रीनवर (टॅबलेट / लहान लॅपटॉप) मेनूचे शब्द तुटू नयेत म्हणून.
+   हेच नियम तुमच्या style.css च्या शेवटी टाकल्यास सर्व पेजेसवर लागू होतील. */
+@media (min-width: 769px) and (max-width: 1180px) {
+    .nav-container { gap: 12px; }
+    .nav-links { gap: 14px; }
+    .nav-links a { font-size: 0.86rem; white-space: nowrap; }
+    .btn-nav { padding: 8px 14px; font-size: 0.85rem; white-space: nowrap; }
+}
+@media (min-width: 769px) and (max-width: 960px) {
+    .nav-cta { display: none; }
+    .nav-links { gap: 10px; }
+    .nav-links a { font-size: 0.8rem; }
+}
+@media (min-width: 769px) and (max-width: 810px) {
+    .nav-links { gap: 7px; }
+    .nav-links a { font-size: 0.75rem; }
+}
