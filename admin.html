@@ -284,11 +284,6 @@
             color: var(--text-secondary);
         }
 
-        .nav-counter.active-counter {
-            background: var(--saffron-main);
-            color: #0f172a;
-        }
-
         .sidebar-footer {
             padding: 16px;
             border-top: 1px solid var(--border-subtle);
@@ -798,7 +793,6 @@
             to { transform: translateX(0); opacity: 1; }
         }
 
-        /* Responsive */
         @media (max-width: 992px) {
             .app-sidebar {
                 transform: translateX(-100%);
@@ -947,7 +941,7 @@
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
                     <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 20px;">
                         <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 14px; color: var(--saffron-main);">
-                            <i class="fa-solid fa-fire"></i> अलीकडील महत्त्वाच्या प्रतिक्रिया
+                            <i class="fa-solid fa-fire"></i> अलीकडील ताज्या प्रतिक्रिया
                         </h3>
                         <div id="dashboard-recent-comments">
                             <div class="skeleton"></div>
@@ -977,7 +971,7 @@
                             <option value="answered">उत्तर दिलेले (Answered)</option>
                         </select>
                         <select id="filter-comment-sort" class="filter-select" onchange="renderFilteredComments()">
-                            <option value="newest">नवीनतम प्रथम (Newest First)</option>
+                            <option value="newest" selected>नवीनतम प्रथम (Newest First)</option>
                             <option value="oldest">जुने प्रथम (Oldest First)</option>
                         </select>
                         <input type="text" id="filter-comment-text" class="filter-input" placeholder="मजकूर किंवा लेखकाचे नाव..." oninput="renderFilteredComments()">
@@ -999,7 +993,7 @@
                 <div class="filter-bar">
                     <div class="filter-controls">
                         <select id="filter-contact-sort" class="filter-select" onchange="renderFilteredContacts()">
-                            <option value="newest">नवीनतम प्रथम (Newest First)</option>
+                            <option value="newest" selected>नवीनतम प्रथम (Newest First)</option>
                             <option value="oldest">जुने प्रथम (Oldest First)</option>
                         </select>
                         <input type="text" id="filter-contact-text" class="filter-input" placeholder="नाव, ईमेल किंवा संदेश..." oninput="renderFilteredContacts()">
@@ -1021,11 +1015,6 @@
     <div id="toast-box"></div>
 
     <script>
-        /**
-         * SANTVANI ADMIN CORE ARCHITECTURE
-         * Real-time sync, secure authentication, reactive state store & sanitizer.
-         */
-
         const FIREBASE_CONFIG = {
             apiKey: "AIzaSyBQTDVzvz5tFktEEsnPZQ6G_ADoxGL0ZW4",
             authDomain: "santvani-48d18.firebaseapp.com",
@@ -1043,15 +1032,13 @@
         const auth = firebase.auth();
         const db = firebase.database();
 
-        // Reactive Application State
         const AppState = {
-            comments: [],       // Normalized flat comment objects
-            contacts: [],       // Normalized contact messages
+            comments: [],
+            contacts: [],
             activeTab: 'dashboard',
             isLiveSyncSetup: false
         };
 
-        // Utility: XSS Escaping
         function escapeHTML(str) {
             if (!str) return '';
             return String(str)
@@ -1062,7 +1049,6 @@
                 .replace(/'/g, '&#039;');
         }
 
-        // Live Clock
         setInterval(() => {
             const el = document.getElementById("live-clock");
             if (el) {
@@ -1083,6 +1069,87 @@
                 toast.style.opacity = '0';
                 setTimeout(() => toast.remove(), 300);
             }, 3500);
+        }
+
+        /**
+         * 1. FIREBASE PUSH ID DECODER (100% Reliable Millisecond Precision)
+         * -P3... is newer than -P2... which is newer than -Oz...
+         */
+        function getTimestampFromFirebaseKey(key) {
+            if (!key || typeof key !== 'string' || key.length < 8) return 0;
+            const PUSH_CHARS = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
+            let time = 0;
+            for (let i = 1; i < 9; i++) {
+                const c = key.charAt(i);
+                const val = PUSH_CHARS.indexOf(c);
+                if (val === -1) return 0;
+                time = time * 64 + val;
+            }
+            return time;
+        }
+
+        /**
+         * 2. MARATHI DATE & DEVANAGARI PARSER
+         */
+        function parseMarathiDateString(timeStr) {
+            if (!timeStr) return 0;
+            
+            const devanagariDigits = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
+            let str = String(timeStr).trim();
+            for (let i = 0; i < 10; i++) {
+                str = str.replace(new RegExp(devanagariDigits[i], 'g'), i);
+            }
+
+            const marathiMonths = {
+                'जानेवारी': 0, 'फेब्रुवारी': 1, 'मार्च': 2, 'एप्रिल': 3,
+                'मे': 4, 'जून': 5, 'जुलै': 6, 'ऑगस्ट': 7,
+                'सप्टेंबर': 8, 'ऑक्टोबर': 9, 'नोव्हेंबर': 10, 'डिसेंबर': 11
+            };
+
+            for (const [mrMonth, monthIndex] of Object.entries(marathiMonths)) {
+                if (str.includes(mrMonth)) {
+                    const match = str.match(/(\d{1,2})\s+[^\d]+\s+(\d{4})/);
+                    if (match) {
+                        const day = parseInt(match[1], 10);
+                        const year = parseInt(match[2], 10);
+                        return new Date(year, monthIndex, day, 12, 0, 0).getTime();
+                    }
+                }
+            }
+
+            const ddmmyyyyMatch = str.match(/(\d{1,2})[\/\-\.](\d{1,2})[\/\-\.](\d{4})/);
+            if (ddmmyyyyMatch) {
+                const day = parseInt(ddmmyyyyMatch[1], 10);
+                const month = parseInt(ddmmyyyyMatch[2], 10) - 1;
+                const year = parseInt(ddmmyyyyMatch[3], 10);
+
+                let hours = 12, minutes = 0;
+                const timeMatch = str.match(/(\d{1,2}):(\d{1,2})(?::(\d{1,2}))?\s*(AM|PM)?/i);
+                if (timeMatch) {
+                    hours = parseInt(timeMatch[1], 10);
+                    minutes = parseInt(timeMatch[2], 10);
+                    const ampm = timeMatch[4] ? timeMatch[4].toUpperCase() : null;
+                    if (ampm === 'PM' && hours < 12) hours += 12;
+                    if (ampm === 'AM' && hours === 12) hours = 0;
+                }
+                return new Date(year, month, day, hours, minutes).getTime();
+            }
+
+            const parsed = Date.parse(str);
+            if (!isNaN(parsed)) return parsed;
+
+            return 0;
+        }
+
+        /**
+         * 3. COMBINED PRECISE TIME SORT CALCULATOR
+         */
+        function getReliableTimestamp(key, timeStr) {
+            const keyTime = getTimestampFromFirebaseKey(key);
+            if (keyTime > 1577836800000) { // Valid timestamp after Jan 2020
+                return keyTime;
+            }
+            return parseMarathiDateString(timeStr);
         }
 
         /* ----------------- AUTHENTICATION ----------------- */
@@ -1136,12 +1203,11 @@
             }
         }
 
-        /* ----------------- DATABASE LISTENERS & NORMALIZATION ----------------- */
+        /* ----------------- DATABASE LISTENERS ----------------- */
         function bindDatabaseListeners() {
             const connDot = document.getElementById("firebase-conn-dot");
             const connText = document.getElementById("firebase-conn-status");
 
-            // Connection state
             db.ref(".info/connected").on("value", (snap) => {
                 if (snap.val() === true) {
                     connDot.className = "conn-dot online";
@@ -1152,7 +1218,7 @@
                 }
             });
 
-            // Comments Node
+            // 1. Comments Node
             db.ref("comments").on("value", (snapshot) => {
                 const flatList = [];
                 if (snapshot.exists()) {
@@ -1162,7 +1228,9 @@
 
                         pageSnap.forEach((commentSnap) => {
                             const val = commentSnap.val() || {};
+                            const commentKey = commentSnap.key;
                             const repliesArr = [];
+                            
                             if (val.replies) {
                                 Object.keys(val.replies).forEach((rKey) => {
                                     repliesArr.push({
@@ -1172,21 +1240,28 @@
                                 });
                             }
 
+                            const timeString = val.timestamp || val.date || '';
+                            const calculatedTime = getReliableTimestamp(commentKey, timeString);
+
                             flatList.push({
                                 pageId: pageKey,
-                                commentId: commentSnap.key,
+                                commentId: commentKey,
                                 name: val.name || 'Anonymous',
                                 text: val.text || val.message || '',
-                                timestamp: val.timestamp || val.date || 'माहिती नाही',
+                                timestamp: timeString || 'माहिती नाही',
                                 cleanPath: pageMeta.cleanPath,
                                 fullUrl: pageMeta.fullUrl,
                                 replies: repliesArr,
-                                rawTimestamp: parseSortableTime(val.timestamp || val.date)
+                                rawTimestamp: calculatedTime
                             });
                         });
                     });
                 }
+                
+                // Sort absolute latest to top across ALL pages
+                flatList.sort((a, b) => b.rawTimestamp - a.rawTimestamp);
                 AppState.comments = flatList;
+
                 updateOverviewMetrics();
                 renderFilteredComments();
                 renderDashboardRecent();
@@ -1195,23 +1270,29 @@
                 showToast("प्रतिक्रिया लोड करण्यात त्रुटी आली", "error");
             });
 
-            // Contacts Node
+            // 2. Contacts Node
             db.ref("contacts").on("value", (snapshot) => {
                 const list = [];
                 if (snapshot.exists()) {
                     snapshot.forEach((child) => {
                         const val = child.val() || {};
+                        const dateString = val.date || '';
+                        const calculatedTime = getReliableTimestamp(child.key, dateString);
+                        
                         list.push({
                             id: child.key,
                             name: val.name || 'User',
                             email: val.email || 'माहिती उपलब्ध नाही',
                             message: val.message || '',
-                            date: val.date || '',
-                            rawTimestamp: parseSortableTime(val.date)
+                            date: dateString || '',
+                            rawTimestamp: calculatedTime
                         });
                     });
                 }
+
+                list.sort((a, b) => b.rawTimestamp - a.rawTimestamp);
                 AppState.contacts = list;
+
                 updateOverviewMetrics();
                 renderFilteredContacts();
                 renderDashboardRecent();
@@ -1221,7 +1302,6 @@
             });
         }
 
-        // URL Reconstructor preserving existing folder mapping
         function reconstructPageUrl(pageId) {
             let raw = pageId.startsWith('_') ? pageId.substring(1) : pageId;
             let isHtml = false;
@@ -1236,7 +1316,7 @@
             const knownFolders = [
                 'saints', 'nitya-pathan-stotra', 'blog', 'abhang', 'stotra',
                 'bharude-gavlani', 'granth-sampada', 'kabir-doha',
-                'santache-prasang', 'sant-sahitya', 'san-utsav', 'vangmay-sangrah'
+                'santache-prasang', 'sant-sahitya', 'san-utsav', 'vangmay-sangrah', 'granth'
             ];
 
             knownFolders.forEach(folder => {
@@ -1257,19 +1337,11 @@
             };
         }
 
-        function parseSortableTime(timeStr) {
-            if (!timeStr) return 0;
-            const parsed = Date.parse(timeStr);
-            if (!isNaN(parsed)) return parsed;
-            return 0;
-        }
-
         /* ----------------- METRICS & DASHBOARD ----------------- */
         function updateOverviewMetrics() {
             const totalComments = AppState.comments.length;
             const pendingComments = AppState.comments.filter(c => c.replies.length === 0).length;
             const totalContacts = AppState.contacts.length;
-            
             const uniquePages = new Set(AppState.comments.map(c => c.cleanPath)).size;
 
             document.getElementById("stat-total-comments").innerText = totalComments;
@@ -1285,40 +1357,46 @@
             const recentCommentsBox = document.getElementById("dashboard-recent-comments");
             const recentContactsBox = document.getElementById("dashboard-recent-contacts");
 
-            const sortedComments = [...AppState.comments].reverse().slice(0, 4);
+            const sortedComments = [...AppState.comments]
+                .sort((a, b) => b.rawTimestamp - a.rawTimestamp)
+                .slice(0, 5);
+
             if (sortedComments.length === 0) {
                 recentCommentsBox.innerHTML = `<div class="empty-placeholder"><p>अजून कोणतीही प्रतिक्रिया नाही.</p></div>`;
             } else {
                 recentCommentsBox.innerHTML = sortedComments.map(c => `
-                    <div style="border-bottom: 1px solid var(--border-subtle); padding: 10px 0;">
+                    <div style="border-bottom: 1px solid var(--border-subtle); padding: 12px 0;">
                         <div style="display: flex; justify-content: space-between; font-size: 13px;">
                             <strong style="color: #fff;">${escapeHTML(c.name)}</strong>
-                            <span style="color: var(--text-muted); font-size: 11px;">${escapeHTML(c.timestamp)}</span>
+                            <span style="color: var(--saffron-main); font-size: 11px; font-weight: 600;">${escapeHTML(c.timestamp)}</span>
                         </div>
-                        <p style="font-size: 12.5px; color: var(--text-secondary); margin: 4px 0;">${escapeHTML(c.text.substring(0, 75))}${c.text.length > 75 ? '...' : ''}</p>
+                        <p style="font-size: 12.5px; color: var(--text-secondary); margin: 6px 0;">${escapeHTML(c.text.substring(0, 85))}${c.text.length > 85 ? '...' : ''}</p>
                         <a href="${encodeURI(c.fullUrl)}" target="_blank" style="font-size: 11px; color: var(--sky-accent); text-decoration: none;">📌 ${escapeHTML(c.cleanPath)}</a>
                     </div>
                 `).join('');
             }
 
-            const sortedContacts = [...AppState.contacts].reverse().slice(0, 4);
+            const sortedContacts = [...AppState.contacts]
+                .sort((a, b) => b.rawTimestamp - a.rawTimestamp)
+                .slice(0, 5);
+
             if (sortedContacts.length === 0) {
                 recentContactsBox.innerHTML = `<div class="empty-placeholder"><p>कोणताही संपर्क संदेश नाही.</p></div>`;
             } else {
                 recentContactsBox.innerHTML = sortedContacts.map(m => `
-                    <div style="border-bottom: 1px solid var(--border-subtle); padding: 10px 0;">
+                    <div style="border-bottom: 1px solid var(--border-subtle); padding: 12px 0;">
                         <div style="display: flex; justify-content: space-between; font-size: 13px;">
                             <strong style="color: #fff;">${escapeHTML(m.name)}</strong>
-                            <span style="color: var(--text-muted); font-size: 11px;">${escapeHTML(m.date)}</span>
+                            <span style="color: var(--sky-accent); font-size: 11px; font-weight: 600;">${escapeHTML(m.date)}</span>
                         </div>
-                        <div style="font-size: 11.5px; color: var(--sky-accent);">${escapeHTML(m.email)}</div>
-                        <p style="font-size: 12.5px; color: var(--text-secondary); margin-top: 4px;">${escapeHTML(m.message.substring(0, 75))}${m.message.length > 75 ? '...' : ''}</p>
+                        <div style="font-size: 11.5px; color: var(--text-secondary); margin: 2px 0;">${escapeHTML(m.email)}</div>
+                        <p style="font-size: 12.5px; color: #cbd5e1; margin-top: 4px;">${escapeHTML(m.message.substring(0, 80))}${m.message.length > 80 ? '...' : ''}</p>
                     </div>
                 `).join('');
             }
         }
 
-        /* ----------------- COMMENTS TAB LOGIC ----------------- */
+        /* ----------------- COMMENTS TAB ----------------- */
         function renderFilteredComments() {
             const statusFilter = document.getElementById("filter-comment-status").value;
             const sortOrder = document.getElementById("filter-comment-sort").value;
@@ -1341,7 +1419,9 @@
             }
 
             if (sortOrder === 'newest') {
-                list.reverse();
+                list.sort((a, b) => b.rawTimestamp - a.rawTimestamp);
+            } else if (sortOrder === 'oldest') {
+                list.sort((a, b) => a.rawTimestamp - b.rawTimestamp);
             }
 
             document.getElementById("viewing-comments-count").innerText = list.length;
@@ -1382,7 +1462,7 @@
                                 <div class="avatar-initial">${escapeHTML(initial)}</div>
                                 <div>
                                     <div class="author-name">${escapeHTML(c.name)}</div>
-                                    <div style="font-size: 11px; color: var(--text-muted);">${escapeHTML(c.timestamp)}</div>
+                                    <div style="font-size: 11px; color: var(--saffron-main); font-weight: 600;">${escapeHTML(c.timestamp)}</div>
                                 </div>
                             </div>
                             <div>
@@ -1481,7 +1561,7 @@
             }
         }
 
-        /* ----------------- CONTACTS TAB LOGIC ----------------- */
+        /* ----------------- CONTACTS TAB ----------------- */
         function renderFilteredContacts() {
             const sortOrder = document.getElementById("filter-contact-sort").value;
             const query = (document.getElementById("filter-contact-text").value || '').toLowerCase().trim();
@@ -1497,7 +1577,9 @@
             }
 
             if (sortOrder === 'newest') {
-                list.reverse();
+                list.sort((a, b) => b.rawTimestamp - a.rawTimestamp);
+            } else if (sortOrder === 'oldest') {
+                list.sort((a, b) => a.rawTimestamp - b.rawTimestamp);
             }
 
             document.getElementById("viewing-contacts-count").innerText = list.length;
@@ -1522,7 +1604,7 @@
                                 <div class="avatar-initial" style="color: var(--sky-accent);">${escapeHTML(initial)}</div>
                                 <div>
                                     <div class="author-name">${escapeHTML(m.name)}</div>
-                                    <div style="font-size: 11px; color: var(--text-muted);">${escapeHTML(m.date)}</div>
+                                    <div style="font-size: 11px; color: var(--sky-accent); font-weight: 600;">${escapeHTML(m.date)}</div>
                                 </div>
                             </div>
                             <div style="display: flex; gap: 8px;">
@@ -1558,7 +1640,7 @@
             }
         }
 
-        /* ----------------- GLOBAL SMART SEARCH ----------------- */
+        /* ----------------- GLOBAL SEARCH ----------------- */
         function handleGlobalSearch(e) {
             const query = e.target.value.toLowerCase().trim();
             const flyout = document.getElementById("search-flyout");
@@ -1618,7 +1700,6 @@
             switchNavSection(targetTab);
         }
 
-        // Close search flyout on outside click
         document.addEventListener('click', (e) => {
             const flyout = document.getElementById("search-flyout");
             const box = document.getElementById("global-search-box");
@@ -1631,17 +1712,14 @@
         function switchNavSection(tabName) {
             AppState.activeTab = tabName;
 
-            // Nav items state
             document.getElementById("nav-btn-dashboard").classList.toggle("active", tabName === 'dashboard');
             document.getElementById("nav-btn-comments").classList.toggle("active", tabName === 'comments');
             document.getElementById("nav-btn-contacts").classList.toggle("active", tabName === 'contacts');
 
-            // View containers
             document.getElementById("section-dashboard").classList.toggle("active-view", tabName === 'dashboard');
             document.getElementById("section-comments").classList.toggle("active-view", tabName === 'comments');
             document.getElementById("section-contacts").classList.toggle("active-view", tabName === 'contacts');
 
-            // Close mobile sidebar if open
             document.getElementById("sidebar-node").classList.remove("open");
         }
 
