@@ -1,1731 +1,208 @@
 <!DOCTYPE html>
 <html lang="mr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Santvani Admin Portal — संतवाणी व्यवस्थापन कक्ष</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Yantramanav:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Firebase SDK v8 (Auth & RTDB) -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-
-    <style>
-        :root {
-            --bg-base: #090d16;
-            --bg-surface: #111827;
-            --bg-surface-elevated: #1a2336;
-            --border-subtle: #243048;
-            --border-focus: #f59e0b;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            --saffron-main: #f59e0b;
-            --saffron-hover: #d97706;
-            --saffron-glow: rgba(245, 158, 11, 0.15);
-            --maroon-deep: #881337;
-            --emerald-accent: #10b981;
-            --sky-accent: #38bdf8;
-            --rose-danger: #f43f5e;
-            --radius-md: 10px;
-            --radius-lg: 16px;
-            --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
-            --font-primary: 'Plus Jakarta Sans', 'Yantramanav', sans-serif;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: var(--font-primary);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        body {
-            background-color: var(--bg-base);
-            color: var(--text-primary);
-            min-height: 100vh;
-            display: flex;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(245, 158, 11, 0.05) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(136, 19, 55, 0.08) 0px, transparent 50%);
-            background-attachment: fixed;
-        }
-
-        /* ----------------- AUTH SCREEN ----------------- */
-        #auth-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(9, 13, 22, 0.95);
-            backdrop-filter: blur(12px);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .auth-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-lg);
-            width: 100%;
-            max-width: 420px;
-            padding: 36px 32px;
-            box-shadow: var(--shadow-card);
-            text-align: center;
-        }
-
-        .auth-brand {
-            width: 68px;
-            height: 68px;
-            border-radius: 18px;
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            border: 2px solid var(--saffron-main);
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 25px var(--saffron-glow);
-        }
-
-        .auth-brand img {
-            width: 44px;
-            height: 44px;
-            object-fit: contain;
-        }
-
-        .auth-card h1 {
-            font-size: 22px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 6px;
-        }
-
-        .auth-card p {
-            color: var(--text-secondary);
-            font-size: 13px;
-            margin-bottom: 24px;
-        }
-
-        .auth-form {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            text-align: left;
-        }
-
-        .form-group label {
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--text-secondary);
-            margin-bottom: 6px;
-            display: block;
-        }
-
-        .form-input {
-            width: 100%;
-            background: var(--bg-base);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-md);
-            padding: 12px 14px;
-            color: var(--text-primary);
-            font-size: 14px;
-            outline: none;
-            transition: border-color 0.2s, box-shadow 0.2s;
-        }
-
-        .form-input:focus {
-            border-color: var(--saffron-main);
-            box-shadow: 0 0 0 3px var(--saffron-glow);
-        }
-
-        .btn-primary {
-            background: var(--saffron-main);
-            color: #0f172a;
-            border: none;
-            padding: 12px 16px;
-            border-radius: var(--radius-md);
-            font-weight: 700;
-            font-size: 14px;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: background-color 0.2s, transform 0.1s;
-        }
-
-        .btn-primary:hover {
-            background: var(--saffron-hover);
-        }
-
-        .btn-primary:active {
-            transform: scale(0.99);
-        }
-
-        .auth-error {
-            background: rgba(244, 63, 94, 0.1);
-            border: 1px solid rgba(244, 63, 94, 0.3);
-            color: #fda4af;
-            padding: 10px 12px;
-            border-radius: var(--radius-md);
-            font-size: 12.5px;
-            margin-top: 10px;
-            display: none;
-            align-items: center;
-            gap: 8px;
-        }
-
-        /* ----------------- ADMIN LAYOUT ----------------- */
-        #app-shell {
-            display: none;
-            width: 100%;
-            min-height: 100vh;
-        }
-
-        .app-sidebar {
-            width: 270px;
-            background: var(--bg-surface);
-            border-right: 1px solid var(--border-subtle);
-            display: flex;
-            flex-direction: column;
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 50;
-            transition: transform 0.3s ease;
-        }
-
-        .sidebar-brand {
-            padding: 24px 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            border-bottom: 1px solid var(--border-subtle);
-        }
-
-        .sidebar-brand img {
-            width: 36px;
-            height: 36px;
-            border-radius: 10px;
-            background: #0f172a;
-            padding: 2px;
-            border: 1px solid var(--border-subtle);
-        }
-
-        .sidebar-brand-text h2 {
-            font-size: 16px;
-            font-weight: 800;
-            letter-spacing: -0.3px;
-            color: #fff;
-        }
-
-        .sidebar-brand-text span {
-            font-size: 11px;
-            color: var(--saffron-main);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .sidebar-nav {
-            padding: 18px 12px;
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            flex: 1;
-            overflow-y: auto;
-        }
-
-        .nav-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px 14px;
-            border-radius: var(--radius-md);
-            color: var(--text-secondary);
-            font-size: 13.5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background 0.15s, color 0.15s;
-            text-decoration: none;
-        }
-
-        .nav-item:hover {
-            background: var(--bg-surface-elevated);
-            color: var(--text-primary);
-        }
-
-        .nav-item.active {
-            background: var(--saffron-glow);
-            color: var(--saffron-main);
-            border: 1px solid rgba(245, 158, 11, 0.3);
-        }
-
-        .nav-item-content {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .nav-counter {
-            font-size: 11px;
-            font-weight: 700;
-            padding: 2px 8px;
-            border-radius: 12px;
-            background: var(--bg-surface-elevated);
-            color: var(--text-secondary);
-        }
-
-        .sidebar-footer {
-            padding: 16px;
-            border-top: 1px solid var(--border-subtle);
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .connection-indicator {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 11.5px;
-            color: var(--text-muted);
-        }
-
-        .conn-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #ef4444;
-        }
-
-        .conn-dot.online {
-            background: var(--emerald-accent);
-            box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
-        }
-
-        .btn-signout {
-            background: transparent;
-            border: 1px solid var(--border-subtle);
-            color: var(--text-secondary);
-            padding: 9px;
-            border-radius: var(--radius-md);
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: all 0.2s;
-        }
-
-        .btn-signout:hover {
-            background: rgba(244, 63, 94, 0.1);
-            color: var(--rose-danger);
-            border-color: rgba(244, 63, 94, 0.3);
-        }
-
-        /* ----------------- MAIN CONTENT AREA ----------------- */
-        .app-main {
-            margin-left: 270px;
-            flex: 1;
-            padding: 28px 36px 60px;
-            max-width: 1340px;
-        }
-
-        .main-topbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 24px;
-            gap: 16px;
-        }
-
-        .topbar-mobile-btn {
-            display: none;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-primary);
-            padding: 10px 14px;
-            border-radius: var(--radius-md);
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .global-search-container {
-            position: relative;
-            flex: 1;
-            max-width: 520px;
-        }
-
-        .global-search-input {
-            width: 100%;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: 24px;
-            padding: 11px 18px 11px 42px;
-            color: var(--text-primary);
-            font-size: 13.5px;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-
-        .global-search-input:focus {
-            border-color: var(--saffron-main);
-            box-shadow: 0 0 0 3px var(--saffron-glow);
-        }
-
-        .search-icon {
-            position: absolute;
-            left: 16px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-muted);
-            font-size: 14px;
-        }
-
-        .search-results-flyout {
-            position: absolute;
-            top: 110%;
-            left: 0;
-            right: 0;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-md);
-            max-height: 400px;
-            overflow-y: auto;
-            box-shadow: var(--shadow-card);
-            z-index: 100;
-            display: none;
-        }
-
-        .search-result-item {
-            padding: 12px 16px;
-            border-bottom: 1px solid var(--border-subtle);
-            cursor: pointer;
-            transition: background 0.15s;
-        }
-
-        .search-result-item:hover {
-            background: var(--bg-surface-elevated);
-        }
-
-        .search-result-badge {
-            font-size: 10.5px;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 4px;
-            display: inline-block;
-        }
-
-        /* ----------------- DASHBOARD CARDS ----------------- */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 18px;
-            margin-bottom: 28px;
-        }
-
-        .stat-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-lg);
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s, border-color 0.2s;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-2px);
-            border-color: rgba(245, 158, 11, 0.4);
-        }
-
-        .stat-info h3 {
-            font-size: 12.5px;
-            font-weight: 600;
-            color: var(--text-secondary);
-            margin-bottom: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .stat-info .stat-number {
-            font-size: 26px;
-            font-weight: 800;
-            color: var(--text-primary);
-        }
-
-        .stat-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-        }
-
-        .icon-amber { background: rgba(245, 158, 11, 0.12); color: var(--saffron-main); }
-        .icon-rose { background: rgba(244, 63, 94, 0.12); color: var(--rose-danger); }
-        .icon-emerald { background: rgba(16, 185, 129, 0.12); color: var(--emerald-accent); }
-        .icon-sky { background: rgba(56, 189, 248, 0.12); color: var(--sky-accent); }
-
-        /* ----------------- SECTION CONTROLS & VIEWS ----------------- */
-        .section-view {
-            display: none;
-        }
-
-        .section-view.active-view {
-            display: block;
-        }
-
-        .filter-bar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 14px;
-            flex-wrap: wrap;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            padding: 14px 18px;
-            border-radius: var(--radius-lg);
-            margin-bottom: 20px;
-        }
-
-        .filter-controls {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .filter-select, .filter-input {
-            background: var(--bg-surface-elevated);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-primary);
-            padding: 8px 14px;
-            border-radius: var(--radius-md);
-            font-size: 13px;
-            outline: none;
-        }
-
-        .filter-select:focus, .filter-input:focus {
-            border-color: var(--saffron-main);
-        }
-
-        /* ----------------- CARDS LIST ----------------- */
-        .item-card {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-lg);
-            padding: 20px;
-            margin-bottom: 16px;
-            transition: border-color 0.2s, box-shadow 0.2s;
-            position: relative;
-        }
-
-        .item-card:hover {
-            border-color: rgba(245, 158, 11, 0.3);
-            box-shadow: var(--shadow-card);
-        }
-
-        .card-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 12px;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .author-box {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .avatar-initial {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            background: var(--bg-surface-elevated);
-            border: 1px solid var(--border-subtle);
-            color: var(--saffron-main);
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-        }
-
-        .author-name {
-            font-weight: 700;
-            font-size: 14.5px;
-            color: #fff;
-        }
-
-        .badge-status {
-            font-size: 11px;
-            font-weight: 700;
-            padding: 3px 8px;
-            border-radius: 6px;
-            text-transform: uppercase;
-        }
-
-        .badge-pending {
-            background: rgba(245, 158, 11, 0.15);
-            color: var(--saffron-main);
-            border: 1px solid rgba(245, 158, 11, 0.3);
-        }
-
-        .badge-replied {
-            background: rgba(16, 185, 129, 0.15);
-            color: var(--emerald-accent);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-        }
-
-        .item-page-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: var(--bg-surface-elevated);
-            border: 1px solid var(--border-subtle);
-            padding: 5px 10px;
-            border-radius: 6px;
-            color: var(--sky-accent);
-            font-size: 12px;
-            font-family: monospace;
-            text-decoration: none;
-            margin-bottom: 12px;
-            transition: all 0.2s;
-            max-width: 100%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        .item-page-link:hover {
-            background: rgba(56, 189, 248, 0.15);
-            border-color: var(--sky-accent);
-        }
-
-        .item-body-text {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #e2e8f0;
-            margin-bottom: 16px;
-            word-break: break-word;
-            white-space: pre-wrap;
-        }
-
-        /* ----------------- REPLIES ACCORDION ----------------- */
-        .replies-thread {
-            background: var(--bg-base);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-md);
-            padding: 14px;
-            margin-top: 14px;
-        }
-
-        .reply-bubble {
-            background: var(--bg-surface-elevated);
-            border-left: 3px solid var(--emerald-accent);
-            border-radius: 6px;
-            padding: 10px 14px;
-            margin-bottom: 10px;
-        }
-
-        .reply-meta {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 4px;
-        }
-
-        .reply-author {
-            color: var(--emerald-accent);
-            font-size: 12px;
-            font-weight: 700;
-        }
-
-        .reply-actions {
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn-link-action {
-            background: transparent;
-            border: none;
-            color: var(--text-muted);
-            cursor: pointer;
-            font-size: 12px;
-            transition: color 0.15s;
-        }
-
-        .btn-link-action:hover {
-            color: var(--saffron-main);
-        }
-
-        .btn-link-danger:hover {
-            color: var(--rose-danger);
-        }
-
-        .reply-input-bar {
-            display: flex;
-            gap: 8px;
-            margin-top: 12px;
-        }
-
-        .reply-input-bar input {
-            flex: 1;
-            background: var(--bg-surface);
-            border: 1px solid var(--border-subtle);
-            padding: 9px 12px;
-            border-radius: 6px;
-            color: #fff;
-            font-size: 13px;
-            outline: none;
-        }
-
-        .reply-input-bar input:focus {
-            border-color: var(--saffron-main);
-        }
-
-        /* ----------------- BUTTONS & UTILITIES ----------------- */
-        .btn-action-icon {
-            background: var(--bg-surface-elevated);
-            border: 1px solid var(--border-subtle);
-            color: var(--text-secondary);
-            padding: 7px 11px;
-            border-radius: 6px;
-            font-size: 12.5px;
-            cursor: pointer;
-            transition: all 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .btn-action-icon:hover {
-            color: #fff;
-            border-color: var(--text-secondary);
-        }
-
-        .btn-danger {
-            background: rgba(244, 63, 94, 0.1);
-            border: 1px solid rgba(244, 63, 94, 0.25);
-            color: #fb7185;
-        }
-
-        .btn-danger:hover {
-            background: var(--rose-danger);
-            color: #fff;
-        }
-
-        .empty-placeholder {
-            text-align: center;
-            padding: 60px 20px;
-            color: var(--text-muted);
-        }
-
-        .empty-placeholder i {
-            font-size: 40px;
-            margin-bottom: 12px;
-            color: var(--border-subtle);
-        }
-
-        /* Skeleton Loaders */
-        .skeleton {
-            background: linear-gradient(90deg, #111827 25%, #1a2336 50%, #111827 75%);
-            background-size: 200% 100%;
-            animation: skeleton-loading 1.5s infinite;
-            border-radius: 6px;
-            height: 18px;
-            margin-bottom: 10px;
-        }
-
-        @keyframes skeleton-loading {
-            0% { background-position: 200% 0; }
-            100% { background-position: -200% 0; }
-        }
-
-        /* Toast Notifications */
-        #toast-box {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            z-index: 2000;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .toast-msg {
-            background: var(--bg-surface-elevated);
-            border-left: 4px solid var(--saffron-main);
-            color: #fff;
-            padding: 12px 18px;
-            border-radius: 8px;
-            box-shadow: var(--shadow-card);
-            font-size: 13.5px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            animation: slideIn 0.25s ease forwards;
-        }
-
-        @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-
-        @media (max-width: 992px) {
-            .app-sidebar {
-                transform: translateX(-100%);
-            }
-            .app-sidebar.open {
-                transform: translateX(0);
-            }
-            .app-main {
-                margin-left: 0;
-                padding: 18px 20px 40px;
-            }
-            .topbar-mobile-btn {
-                display: block;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Santvani Admin Suite</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Mukta:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+<style>
+:root{color-scheme:dark;--bg:#0b1020;--surface:#111a2d;--surface2:#172238;--line:#27344b;--text:#edf2fb;--muted:#91a0b8;--gold:#f2b84b;--gold2:#ffd783;--red:#ef6a70;--green:#50d3a2;--blue:#7bbcff;--shadow:0 18px 50px #0003}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 15% 0%,#302514 0,transparent 33%),var(--bg);color:var(--text);font-family:"Plus Jakarta Sans","Mukta",sans-serif;min-height:100vh}button,input,textarea,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}a{color:var(--blue)}.hidden{display:none!important}.muted{color:var(--muted)}.small{font-size:12px}.shell{max-width:1500px;margin:auto;padding:24px}.login-wrap{min-height:100vh;display:grid;place-items:center;padding:22px}.login-card{width:min(440px,100%);background:#111a2df2;border:1px solid var(--line);border-radius:24px;padding:32px;box-shadow:var(--shadow)}.brand{display:flex;align-items:center;gap:12px}.brand img{width:44px;height:44px;object-fit:contain;border-radius:13px;background:#fff;padding:5px}.brand strong{display:block;font-size:17px}.brand small{color:var(--muted)}h1,h2,h3,p{margin-top:0}.login-card h1{font-size:24px;margin:28px 0 8px}.field{display:grid;gap:7px;margin:15px 0}.field label{font-size:12px;color:var(--muted);font-weight:700}.field input,.field textarea,.field select,.searchbox input,.toolbar select{width:100%;background:#0c1425;color:var(--text);border:1px solid var(--line);border-radius:11px;padding:12px 13px;min-width:0}.btn{border:1px solid var(--line);border-radius:10px;padding:10px 13px;background:var(--surface2);color:var(--text);font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px}.btn:hover{filter:brightness(1.13)}.btn.primary{background:var(--gold);border-color:var(--gold);color:#201709}.btn.danger{color:#ff9b9f;border-color:#6b303c;background:#321c29}.btn.ghost{background:transparent}.btn:disabled{opacity:.5;cursor:not-allowed}.error{color:#ff9b9f;font-size:13px;white-space:pre-wrap}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 18px;background:#111a2deF;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);position:sticky;top:10px;z-index:5;backdrop-filter:blur(16px)}.top-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.connection{font-size:12px;color:var(--green);display:flex;align-items:center;gap:7px}.dot{width:7px;height:7px;border-radius:50%;background:currentColor}.hero{display:flex;justify-content:space-between;align-items:end;gap:20px;margin:30px 2px 20px}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.13em;font-size:10px;font-weight:800}.hero h1{font-size:clamp(24px,3vw,34px);letter-spacing:-.04em;margin:7px 0}.hero p{color:var(--muted);margin:0;font-size:13px}.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:22px}.stat{background:linear-gradient(145deg,#172238,#111827);border:1px solid var(--line);border-radius:16px;padding:18px;min-width:0}.stat-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px;gap:8px}.stat-icon{width:34px;height:34px;border:1px solid var(--line);border-radius:11px;display:grid;place-items:center;color:var(--gold)}.stat-number{font-size:29px;font-weight:800;letter-spacing:-.05em;margin:12px 0 3px}.stat-note{font-size:11px;color:var(--muted)}.workspace{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}.panel{background:#111a2df2;border:1px solid var(--line);border-radius:18px;overflow:hidden;min-width:0}.panel-head{padding:18px 20px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}.panel-head h2{font-size:16px;margin:0}.panel-head p{font-size:12px;color:var(--muted);margin:5px 0 0}.tabs{display:flex;gap:6px;background:#0b1220;padding:5px;border:1px solid var(--line);border-radius:12px}.tab{border:0;background:transparent;color:var(--muted);padding:10px 14px;border-radius:8px;font-size:13px;font-weight:700}.tab.active{background:var(--gold);color:#201709}.count{display:inline-grid;place-items:center;min-width:20px;height:20px;border-radius:6px;background:#ffffff15;padding:0 5px;margin-left:4px}.toolbar{padding:14px 20px;display:grid;grid-template-columns:minmax(180px,1fr) 170px 150px auto;gap:10px;border-bottom:1px solid var(--line)}.searchbox{position:relative}.searchbox i{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--muted)}.searchbox input{padding-left:38px}.toolbar select{padding:10px;font-size:12px}.records{padding:12px}.record{border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:10px;background:#0d1627;cursor:pointer;transition:border-color .15s,background .15s}.record:hover,.record.selected{border-color:#a77a2f;background:#131e31}.record-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.record-title{font-weight:800;font-size:14px;overflow-wrap:anywhere}.record-meta{font-size:11px;color:var(--muted);margin-top:5px;overflow-wrap:anywhere}.record-text{font-family:"Mukta","Plus Jakarta Sans",sans-serif;font-size:15px;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere;margin:12px 0;color:#e0e8f5}.record-bottom{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.badge{display:inline-flex;align-items:center;gap:5px;border-radius:7px;padding:5px 8px;font-size:10px;font-weight:800;background:#243047;color:#c8d5e9}.badge.pending{background:#48341b;color:#ffd78a}.badge.answered{background:#163c35;color:#8df0cb}.badge.new{background:#173754;color:#9dd7ff}.record-actions{display:flex;gap:7px;flex-wrap:wrap}.record-actions .btn{padding:7px 9px;font-size:11px}.empty{padding:44px 20px;text-align:center;color:var(--muted)}.empty i{font-size:26px;color:#65738b;margin-bottom:12px}.empty strong{display:block;color:var(--text);margin-bottom:6px}.pagination{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;border-top:1px solid var(--line);gap:10px;font-size:12px;color:var(--muted)}.page-actions{display:flex;gap:6px}.detail{position:fixed;inset:0;z-index:20;background:#050914b8;display:flex;justify-content:flex-end;backdrop-filter:blur(4px)}.detail-panel{width:min(570px,100%);height:100%;overflow:auto;background:#10192b;border-left:1px solid var(--line);box-shadow:var(--shadow);padding:22px}.detail-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}.detail-head h2{font-size:18px;margin:0}.detail-body{font-family:"Mukta",sans-serif;font-size:16px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere;background:#0b1323;border:1px solid var(--line);border-radius:12px;padding:16px;margin:12px 0}.detail-actions{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}.reply-box{margin-top:20px;border-top:1px solid var(--line);padding-top:18px}.reply-row{background:#0c1726;border:1px solid var(--line);padding:12px;border-radius:10px;margin:9px 0}.reply-row p{font-family:"Mukta",sans-serif;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.6;margin:8px 0}.reply-row small{color:var(--muted)}.reply-form textarea{min-height:95px;resize:vertical}.toast-region{position:fixed;right:18px;bottom:18px;z-index:50;display:grid;gap:8px;width:min(360px,calc(100vw - 36px))}.toast{padding:13px 15px;border:1px solid var(--line);border-radius:12px;background:#18243a;box-shadow:var(--shadow);font-size:13px}.toast.bad{border-color:#7e3945}.toast.good{border-color:#236b55}.global-search{max-width:380px;min-width:220px;flex:1}.global-search input{width:100%;background:#0b1425;border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--text)}.footer-note{color:#6f7f98;font-size:11px;text-align:center;padding:20px}.menu-toggle{display:none}
+@media(max-width:900px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}.toolbar{grid-template-columns:1fr 1fr}.toolbar .searchbox{grid-column:1/-1}.topbar{position:static}.global-search{order:3;flex-basis:100%;max-width:none}.hero{align-items:flex-start;flex-direction:column}}
+@media(max-width:560px){.shell{padding:12px}.topbar{padding:13px;border-radius:14px;align-items:flex-start}.brand strong{font-size:14px}.brand small{font-size:10px}.top-actions{gap:6px}.top-actions .btn{font-size:11px;padding:8px}.connection{display:none}.stats{gap:9px}.stat{padding:13px}.stat-number{font-size:25px}.stat-top{font-size:11px}.panel-head{padding:14px}.tabs{width:100%}.tab{flex:1;padding:9px 6px;font-size:11px}.toolbar{padding:12px;grid-template-columns:1fr}.toolbar .searchbox{grid-column:auto}.records{padding:9px}.record{padding:12px}.record-top{flex-direction:column;gap:5px}.record-actions{width:100%}.pagination{padding:12px;flex-wrap:wrap}.detail-panel{padding:16px}.login-card{padding:24px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
-
-    <!-- AUTHENTICATION OVERLAY -->
-    <div id="auth-overlay">
-        <div class="auth-card">
-            <div class="auth-brand">
-                <img src="/favicon.ico" alt="Santvani Logo" onerror="this.src='https://santvani.co.in/favicon.ico';">
-            </div>
-            <h1>संतवाणी व्यवस्थापन कक्ष</h1>
-            <p>सुरक्षित प्रशासकीय प्रवेश (Authorized Personnel Only)</p>
-
-            <form class="auth-form" onsubmit="handleAuthLogin(event)">
-                <div class="form-group">
-                    <label for="admin-email">प्रशासक ईमेल (Admin Email)</label>
-                    <input type="email" id="admin-email" class="form-input" placeholder="admin@santvani.co.in" required autocomplete="username">
-                </div>
-                <div class="form-group">
-                    <label for="admin-password">संकेतशब्द (Password)</label>
-                    <input type="password" id="admin-password" class="form-input" placeholder="••••••••••••" required autocomplete="current-password">
-                </div>
-                <button type="submit" class="btn-primary" id="btn-login-submit">
-                    <span>प्रवेश करा</span> <i class="fa-solid fa-arrow-right"></i>
-                </button>
-            </form>
-            <div id="auth-error-banner" class="auth-error">
-                <i class="fa-solid fa-circle-exclamation"></i>
-                <span id="auth-error-text">लॉगिन अयशस्वी. कृपया तपशील तपासा.</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- MAIN DASHBOARD SHELL -->
-    <div id="app-shell">
-        <!-- SIDEBAR -->
-        <aside class="app-sidebar" id="sidebar-node">
-            <div class="sidebar-brand">
-                <img src="/favicon.ico" alt="Santvani" onerror="this.src='https://santvani.co.in/favicon.ico';">
-                <div class="sidebar-brand-text">
-                    <h2>संतवाणी</h2>
-                    <span>Admin Suite 2.0</span>
-                </div>
-            </div>
-
-            <nav class="sidebar-nav">
-                <a class="nav-item active" onclick="switchNavSection('dashboard')" id="nav-btn-dashboard">
-                    <div class="nav-item-content">
-                        <i class="fa-solid fa-house"></i>
-                        <span>डॅशबोर्ड (Overview)</span>
-                    </div>
-                </a>
-                <a class="nav-item" onclick="switchNavSection('comments')" id="nav-btn-comments">
-                    <div class="nav-item-content">
-                        <i class="fa-solid fa-comments"></i>
-                        <span>प्रतिक्रिया (Comments)</span>
-                    </div>
-                    <span class="nav-counter" id="badge-count-comments">0</span>
-                </a>
-                <a class="nav-item" onclick="switchNavSection('contacts')" id="nav-btn-contacts">
-                    <div class="nav-item-content">
-                        <i class="fa-solid fa-inbox"></i>
-                        <span>संपर्क इनबॉक्स (Messages)</span>
-                    </div>
-                    <span class="nav-counter" id="badge-count-contacts">0</span>
-                </a>
-            </nav>
-
-            <div class="sidebar-footer">
-                <div class="connection-indicator">
-                    <div class="conn-dot" id="firebase-conn-dot"></div>
-                    <span id="firebase-conn-status">सिंक्रोनाइझ होत आहे...</span>
-                </div>
-                <button class="btn-signout" onclick="handleAuthSignOut()">
-                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    <span>बाहेर पडा (Sign Out)</span>
-                </button>
-            </div>
-        </aside>
-
-        <!-- MAIN VIEW CONTAINER -->
-        <main class="app-main">
-            <!-- TOP BAR SEARCH & UTILITIES -->
-            <div class="main-topbar">
-                <button class="topbar-mobile-btn" onclick="toggleMobileSidebar()">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <div class="global-search-container">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="text" id="global-search-box" class="global-search-input" placeholder="प्रतिक्रिया, संदेश, नाव किंवा पान शोधा..." oninput="handleGlobalSearch(event)">
-                    <div id="search-flyout" class="search-results-flyout"></div>
-                </div>
-                <div style="font-size: 13px; color: var(--text-muted); font-weight: 500;">
-                    <span id="live-clock"></span>
-                </div>
-            </div>
-
-            <!-- 1. OVERVIEW / DASHBOARD TAB -->
-            <div id="section-dashboard" class="section-view active-view">
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-info">
-                            <h3>एकूण प्रतिक्रिया</h3>
-                            <div class="stat-number" id="stat-total-comments">0</div>
-                        </div>
-                        <div class="stat-icon icon-amber"><i class="fa-solid fa-comments"></i></div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-info">
-                            <h3>प्रलंबित उत्तरे</h3>
-                            <div class="stat-number" id="stat-pending-comments">0</div>
-                        </div>
-                        <div class="stat-icon icon-rose"><i class="fa-solid fa-clock"></i></div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-info">
-                            <h3>संपर्क संदेश</h3>
-                            <div class="stat-number" id="stat-total-contacts">0</div>
-                        </div>
-                        <div class="stat-icon icon-sky"><i class="fa-solid fa-envelope"></i></div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-info">
-                            <h3>सक्रिय पृष्ठे</h3>
-                            <div class="stat-number" id="stat-active-pages">0</div>
-                        </div>
-                        <div class="stat-icon icon-emerald"><i class="fa-solid fa-file-lines"></i></div>
-                    </div>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
-                    <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 20px;">
-                        <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 14px; color: var(--saffron-main);">
-                            <i class="fa-solid fa-fire"></i> अलीकडील ताज्या प्रतिक्रिया
-                        </h3>
-                        <div id="dashboard-recent-comments">
-                            <div class="skeleton"></div>
-                            <div class="skeleton"></div>
-                        </div>
-                    </div>
-
-                    <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 20px;">
-                        <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 14px; color: var(--sky-accent);">
-                            <i class="fa-solid fa-inbox"></i> अलीकडील संपर्क संदेश
-                        </h3>
-                        <div id="dashboard-recent-contacts">
-                            <div class="skeleton"></div>
-                            <div class="skeleton"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2. COMMENTS MANAGEMENT TAB -->
-            <div id="section-comments" class="section-view">
-                <div class="filter-bar">
-                    <div class="filter-controls">
-                        <select id="filter-comment-status" class="filter-select" onchange="renderFilteredComments()">
-                            <option value="all">सर्व प्रतिक्रिया (All)</option>
-                            <option value="unanswered">फक्त अनुत्तरित (Unanswered)</option>
-                            <option value="answered">उत्तर दिलेले (Answered)</option>
-                        </select>
-                        <select id="filter-comment-sort" class="filter-select" onchange="renderFilteredComments()">
-                            <option value="newest" selected>नवीनतम प्रथम (Newest First)</option>
-                            <option value="oldest">जुने प्रथम (Oldest First)</option>
-                        </select>
-                        <input type="text" id="filter-comment-text" class="filter-input" placeholder="मजकूर किंवा लेखकाचे नाव..." oninput="renderFilteredComments()">
-                    </div>
-                    <div style="font-size: 13px; color: var(--text-secondary); font-weight: 600;">
-                        दर्शवित आहे: <span id="viewing-comments-count">0</span>
-                    </div>
-                </div>
-
-                <div id="comments-container-list">
-                    <div class="skeleton"></div>
-                    <div class="skeleton"></div>
-                    <div class="skeleton"></div>
-                </div>
-            </div>
-
-            <!-- 3. CONTACT MESSAGES TAB -->
-            <div id="section-contacts" class="section-view">
-                <div class="filter-bar">
-                    <div class="filter-controls">
-                        <select id="filter-contact-sort" class="filter-select" onchange="renderFilteredContacts()">
-                            <option value="newest" selected>नवीनतम प्रथम (Newest First)</option>
-                            <option value="oldest">जुने प्रथम (Oldest First)</option>
-                        </select>
-                        <input type="text" id="filter-contact-text" class="filter-input" placeholder="नाव, ईमेल किंवा संदेश..." oninput="renderFilteredContacts()">
-                    </div>
-                    <div style="font-size: 13px; color: var(--text-secondary); font-weight: 600;">
-                        दर्शवित आहे: <span id="viewing-contacts-count">0</span>
-                    </div>
-                </div>
-
-                <div id="contacts-container-list">
-                    <div class="skeleton"></div>
-                    <div class="skeleton"></div>
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <!-- TOAST NOTIFICATION CONTAINER -->
-    <div id="toast-box"></div>
-
-    <script>
-        const FIREBASE_CONFIG = {
-            apiKey: "AIzaSyBQTDVzvz5tFktEEsnPZQ6G_ADoxGL0ZW4",
-            authDomain: "santvani-48d18.firebaseapp.com",
-            databaseURL: "https://santvani-48d18-default-rtdb.firebaseio.com",
-            projectId: "santvani-48d18",
-            storageBucket: "santvani-48d18.firebasestorage.app",
-            messagingSenderId: "769467907364",
-            appId: "1:769467907364:web:4fe85b182eb43359f707b1"
-        };
-
-        if (!firebase.apps.length) {
-            firebase.initializeApp(FIREBASE_CONFIG);
-        }
-
-        const auth = firebase.auth();
-        const db = firebase.database();
-
-        const AppState = {
-            comments: [],
-            contacts: [],
-            activeTab: 'dashboard',
-            isLiveSyncSetup: false
-        };
-
-        function escapeHTML(str) {
-            if (!str) return '';
-            return String(str)
-                .replace(/&/g, '&amp;')
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;')
-                .replace(/"/g, '&quot;')
-                .replace(/'/g, '&#039;');
-        }
-
-        setInterval(() => {
-            const el = document.getElementById("live-clock");
-            if (el) {
-                const now = new Date();
-                el.innerText = now.toLocaleDateString('mr-IN', { weekday: 'short', month: 'short', day: 'numeric' }) + ' | ' + now.toLocaleTimeString('mr-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
-            }
-        }, 1000);
-
-        function showToast(message, type = 'info') {
-            const container = document.getElementById("toast-box");
-            const toast = document.createElement("div");
-            toast.className = "toast-msg";
-            if (type === 'error') toast.style.borderLeftColor = "var(--rose-danger)";
-            if (type === 'success') toast.style.borderLeftColor = "var(--emerald-accent)";
-            toast.innerHTML = `<i class="fa-solid fa-circle-check"></i> <span>${escapeHTML(message)}</span>`;
-            container.appendChild(toast);
-            setTimeout(() => {
-                toast.style.opacity = '0';
-                setTimeout(() => toast.remove(), 300);
-            }, 3500);
-        }
-
-        /**
-         * 1. FIREBASE PUSH ID DECODER (100% Reliable Millisecond Precision)
-         * -P3... is newer than -P2... which is newer than -Oz...
-         */
-        function getTimestampFromFirebaseKey(key) {
-            if (!key || typeof key !== 'string' || key.length < 8) return 0;
-            const PUSH_CHARS = '-0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
-            let time = 0;
-            for (let i = 1; i < 9; i++) {
-                const c = key.charAt(i);
-                const val = PUSH_CHARS.indexOf(c);
-                if (val === -1) return 0;
-                time = time * 64 + val;
-            }
-            return time;
-        }
-
-        /**
-         * 2. MARATHI DATE & DEVANAGARI PARSER
-         */
-        function parseMarathiDateString(timeStr) {
-            if (!timeStr) return 0;
-            
-            const devanagariDigits = ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
-            let str = String(timeStr).trim();
-            for (let i = 0; i < 10; i++) {
-                str = str.replace(new RegExp(devanagariDigits[i], 'g'), i);
-            }
-
-            const marathiMonths = {
-                'जानेवारी': 0, 'फेब्रुवारी': 1, 'मार्च': 2, 'एप्रिल': 3,
-                'मे': 4, 'जून': 5, 'जुलै': 6, 'ऑगस्ट': 7,
-                'सप्टेंबर': 8, 'ऑक्टोबर': 9, 'नोव्हेंबर': 10, 'डिसेंबर': 11
-            };
-
-            for (const [mrMonth, monthIndex] of Object.entries(marathiMonths)) {
-                if (str.includes(mrMonth)) {
-                    const match = str.match(/(\d{1,2})\s+[^\d]+\s+(\d{4})/);
-                    if (match) {
-                        const day = parseInt(match[1], 10);
-                        const year = parseInt(match[2], 10);
-                        return new Date(year, monthIndex, day, 12, 0, 0).getTime();
-                    }
-                }
-            }
-
-            const ddmmyyyyMatch = str.match(/(\d{1,2})[\/\-\.](\d{1,2})[\/\-\.](\d{4})/);
-            if (ddmmyyyyMatch) {
-                const day = parseInt(ddmmyyyyMatch[1], 10);
-                const month = parseInt(ddmmyyyyMatch[2], 10) - 1;
-                const year = parseInt(ddmmyyyyMatch[3], 10);
-
-                let hours = 12, minutes = 0;
-                const timeMatch = str.match(/(\d{1,2}):(\d{1,2})(?::(\d{1,2}))?\s*(AM|PM)?/i);
-                if (timeMatch) {
-                    hours = parseInt(timeMatch[1], 10);
-                    minutes = parseInt(timeMatch[2], 10);
-                    const ampm = timeMatch[4] ? timeMatch[4].toUpperCase() : null;
-                    if (ampm === 'PM' && hours < 12) hours += 12;
-                    if (ampm === 'AM' && hours === 12) hours = 0;
-                }
-                return new Date(year, month, day, hours, minutes).getTime();
-            }
-
-            const parsed = Date.parse(str);
-            if (!isNaN(parsed)) return parsed;
-
-            return 0;
-        }
-
-        /**
-         * 3. COMBINED PRECISE TIME SORT CALCULATOR
-         */
-        function getReliableTimestamp(key, timeStr) {
-            const keyTime = getTimestampFromFirebaseKey(key);
-            if (keyTime > 1577836800000) { // Valid timestamp after Jan 2020
-                return keyTime;
-            }
-            return parseMarathiDateString(timeStr);
-        }
-
-        /* ----------------- AUTHENTICATION ----------------- */
-        auth.onAuthStateChanged((user) => {
-            const overlay = document.getElementById("auth-overlay");
-            const shell = document.getElementById("app-shell");
-
-            if (user) {
-                overlay.style.display = "none";
-                shell.style.display = "flex";
-                if (!AppState.isLiveSyncSetup) {
-                    bindDatabaseListeners();
-                    AppState.isLiveSyncSetup = true;
-                }
-            } else {
-                overlay.style.display = "flex";
-                shell.style.display = "none";
-            }
-        });
-
-        async function handleAuthLogin(e) {
-            e.preventDefault();
-            const emailInput = document.getElementById("admin-email").value.trim();
-            const passInput = document.getElementById("admin-password").value;
-            const errorBox = document.getElementById("auth-error-banner");
-            const errorText = document.getElementById("auth-error-text");
-            const submitBtn = document.getElementById("btn-login-submit");
-
-            errorBox.style.display = "none";
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> तपासत आहे...`;
-
-            try {
-                await auth.signInWithEmailAndPassword(emailInput, passInput);
-                showToast("प्रशासकीय प्रवेश यशस्वी!", "success");
-            } catch (err) {
-                errorBox.style.display = "flex";
-                errorText.innerText = err.message || "लॉगिन अयशस्वी. कृपया तपशील तपासा.";
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.innerHTML = `<span>प्रवेश करा</span> <i class="fa-solid fa-arrow-right"></i>`;
-            }
-        }
-
-        async function handleAuthSignOut() {
-            try {
-                await auth.signOut();
-                showToast("बाहेर पडलो.", "info");
-            } catch (err) {
-                alert("Sign out error: " + err.message);
-            }
-        }
-
-        /* ----------------- DATABASE LISTENERS ----------------- */
-        function bindDatabaseListeners() {
-            const connDot = document.getElementById("firebase-conn-dot");
-            const connText = document.getElementById("firebase-conn-status");
-
-            db.ref(".info/connected").on("value", (snap) => {
-                if (snap.val() === true) {
-                    connDot.className = "conn-dot online";
-                    connText.innerText = "ऑनलाइन जोडले आहे";
-                } else {
-                    connDot.className = "conn-dot";
-                    connText.innerText = "पुनः जोडत आहे...";
-                }
-            });
-
-            // 1. Comments Node
-            db.ref("comments").on("value", (snapshot) => {
-                const flatList = [];
-                if (snapshot.exists()) {
-                    snapshot.forEach((pageSnap) => {
-                        const pageKey = pageSnap.key;
-                        const pageMeta = reconstructPageUrl(pageKey);
-
-                        pageSnap.forEach((commentSnap) => {
-                            const val = commentSnap.val() || {};
-                            const commentKey = commentSnap.key;
-                            const repliesArr = [];
-                            
-                            if (val.replies) {
-                                Object.keys(val.replies).forEach((rKey) => {
-                                    repliesArr.push({
-                                        id: rKey,
-                                        ...val.replies[rKey]
-                                    });
-                                });
-                            }
-
-                            const timeString = val.timestamp || val.date || '';
-                            const calculatedTime = getReliableTimestamp(commentKey, timeString);
-
-                            flatList.push({
-                                pageId: pageKey,
-                                commentId: commentKey,
-                                name: val.name || 'Anonymous',
-                                text: val.text || val.message || '',
-                                timestamp: timeString || 'माहिती नाही',
-                                cleanPath: pageMeta.cleanPath,
-                                fullUrl: pageMeta.fullUrl,
-                                replies: repliesArr,
-                                rawTimestamp: calculatedTime
-                            });
-                        });
-                    });
-                }
-                
-                // Sort absolute latest to top across ALL pages
-                flatList.sort((a, b) => b.rawTimestamp - a.rawTimestamp);
-                AppState.comments = flatList;
-
-                updateOverviewMetrics();
-                renderFilteredComments();
-                renderDashboardRecent();
-            }, (err) => {
-                console.error("Comments read error:", err);
-                showToast("प्रतिक्रिया लोड करण्यात त्रुटी आली", "error");
-            });
-
-            // 2. Contacts Node
-            db.ref("contacts").on("value", (snapshot) => {
-                const list = [];
-                if (snapshot.exists()) {
-                    snapshot.forEach((child) => {
-                        const val = child.val() || {};
-                        const dateString = val.date || '';
-                        const calculatedTime = getReliableTimestamp(child.key, dateString);
-                        
-                        list.push({
-                            id: child.key,
-                            name: val.name || 'User',
-                            email: val.email || 'माहिती उपलब्ध नाही',
-                            message: val.message || '',
-                            date: dateString || '',
-                            rawTimestamp: calculatedTime
-                        });
-                    });
-                }
-
-                list.sort((a, b) => b.rawTimestamp - a.rawTimestamp);
-                AppState.contacts = list;
-
-                updateOverviewMetrics();
-                renderFilteredContacts();
-                renderDashboardRecent();
-            }, (err) => {
-                console.error("Contacts read error:", err);
-                showToast("संपर्क लोड करण्यात त्रुटी आली", "error");
-            });
-        }
-
-        function reconstructPageUrl(pageId) {
-            let raw = pageId.startsWith('_') ? pageId.substring(1) : pageId;
-            let isHtml = false;
-            if (raw.endsWith('_html')) {
-                isHtml = true;
-                raw = raw.slice(0, -5);
-            }
-            if (raw.startsWith('pages_')) {
-                raw = raw.replace('pages_', 'pages/');
-            }
-
-            const knownFolders = [
-                'saints', 'nitya-pathan-stotra', 'blog', 'abhang', 'stotra',
-                'bharude-gavlani', 'granth-sampada', 'kabir-doha',
-                'santache-prasang', 'sant-sahitya', 'san-utsav', 'vangmay-sangrah', 'granth'
-            ];
-
-            knownFolders.forEach(folder => {
-                let folderUnderscore = folder.replace(/-/g, '_');
-                raw = raw.replace(new RegExp('pages/' + folderUnderscore + '_', 'g'), 'pages/' + folder + '/');
-                raw = raw.replace(new RegExp('pages/' + folder + '_', 'g'), 'pages/' + folder + '/');
-            });
-
-            let parts = raw.split('/');
-            let fileName = parts.pop().replace(/_/g, '-');
-            let folderPath = parts.join('/');
-            let cleanPath = (folderPath ? '/' + folderPath : '') + '/' + fileName + (isHtml ? '.html' : '');
-            cleanPath = cleanPath.replace(/\/\//g, '/');
-
-            return {
-                cleanPath: cleanPath,
-                fullUrl: "https://santvani.co.in" + cleanPath
-            };
-        }
-
-        /* ----------------- METRICS & DASHBOARD ----------------- */
-        function updateOverviewMetrics() {
-            const totalComments = AppState.comments.length;
-            const pendingComments = AppState.comments.filter(c => c.replies.length === 0).length;
-            const totalContacts = AppState.contacts.length;
-            const uniquePages = new Set(AppState.comments.map(c => c.cleanPath)).size;
-
-            document.getElementById("stat-total-comments").innerText = totalComments;
-            document.getElementById("stat-pending-comments").innerText = pendingComments;
-            document.getElementById("stat-total-contacts").innerText = totalContacts;
-            document.getElementById("stat-active-pages").innerText = uniquePages;
-
-            document.getElementById("badge-count-comments").innerText = totalComments;
-            document.getElementById("badge-count-contacts").innerText = totalContacts;
-        }
-
-        function renderDashboardRecent() {
-            const recentCommentsBox = document.getElementById("dashboard-recent-comments");
-            const recentContactsBox = document.getElementById("dashboard-recent-contacts");
-
-            const sortedComments = [...AppState.comments]
-                .sort((a, b) => b.rawTimestamp - a.rawTimestamp)
-                .slice(0, 5);
-
-            if (sortedComments.length === 0) {
-                recentCommentsBox.innerHTML = `<div class="empty-placeholder"><p>अजून कोणतीही प्रतिक्रिया नाही.</p></div>`;
-            } else {
-                recentCommentsBox.innerHTML = sortedComments.map(c => `
-                    <div style="border-bottom: 1px solid var(--border-subtle); padding: 12px 0;">
-                        <div style="display: flex; justify-content: space-between; font-size: 13px;">
-                            <strong style="color: #fff;">${escapeHTML(c.name)}</strong>
-                            <span style="color: var(--saffron-main); font-size: 11px; font-weight: 600;">${escapeHTML(c.timestamp)}</span>
-                        </div>
-                        <p style="font-size: 12.5px; color: var(--text-secondary); margin: 6px 0;">${escapeHTML(c.text.substring(0, 85))}${c.text.length > 85 ? '...' : ''}</p>
-                        <a href="${encodeURI(c.fullUrl)}" target="_blank" style="font-size: 11px; color: var(--sky-accent); text-decoration: none;">📌 ${escapeHTML(c.cleanPath)}</a>
-                    </div>
-                `).join('');
-            }
-
-            const sortedContacts = [...AppState.contacts]
-                .sort((a, b) => b.rawTimestamp - a.rawTimestamp)
-                .slice(0, 5);
-
-            if (sortedContacts.length === 0) {
-                recentContactsBox.innerHTML = `<div class="empty-placeholder"><p>कोणताही संपर्क संदेश नाही.</p></div>`;
-            } else {
-                recentContactsBox.innerHTML = sortedContacts.map(m => `
-                    <div style="border-bottom: 1px solid var(--border-subtle); padding: 12px 0;">
-                        <div style="display: flex; justify-content: space-between; font-size: 13px;">
-                            <strong style="color: #fff;">${escapeHTML(m.name)}</strong>
-                            <span style="color: var(--sky-accent); font-size: 11px; font-weight: 600;">${escapeHTML(m.date)}</span>
-                        </div>
-                        <div style="font-size: 11.5px; color: var(--text-secondary); margin: 2px 0;">${escapeHTML(m.email)}</div>
-                        <p style="font-size: 12.5px; color: #cbd5e1; margin-top: 4px;">${escapeHTML(m.message.substring(0, 80))}${m.message.length > 80 ? '...' : ''}</p>
-                    </div>
-                `).join('');
-            }
-        }
-
-        /* ----------------- COMMENTS TAB ----------------- */
-        function renderFilteredComments() {
-            const statusFilter = document.getElementById("filter-comment-status").value;
-            const sortOrder = document.getElementById("filter-comment-sort").value;
-            const query = (document.getElementById("filter-comment-text").value || '').toLowerCase().trim();
-
-            let list = [...AppState.comments];
-
-            if (statusFilter === 'unanswered') {
-                list = list.filter(c => c.replies.length === 0);
-            } else if (statusFilter === 'answered') {
-                list = list.filter(c => c.replies.length > 0);
-            }
-
-            if (query) {
-                list = list.filter(c => 
-                    c.name.toLowerCase().includes(query) ||
-                    c.text.toLowerCase().includes(query) ||
-                    c.cleanPath.toLowerCase().includes(query)
-                );
-            }
-
-            if (sortOrder === 'newest') {
-                list.sort((a, b) => b.rawTimestamp - a.rawTimestamp);
-            } else if (sortOrder === 'oldest') {
-                list.sort((a, b) => a.rawTimestamp - b.rawTimestamp);
-            }
-
-            document.getElementById("viewing-comments-count").innerText = list.length;
-            const container = document.getElementById("comments-container-list");
-
-            if (list.length === 0) {
-                container.innerHTML = `
-                    <div class="empty-placeholder">
-                        <i class="fa-solid fa-comment-slash"></i>
-                        <p>कोणतीही प्रतिक्रिया जुळली नाही.</p>
-                    </div>
-                `;
-                return;
-            }
-
-            container.innerHTML = list.map(c => {
-                const initial = (c.name || 'A').charAt(0).toUpperCase();
-                const isReplied = c.replies.length > 0;
-                
-                let repliesMarkup = c.replies.map(r => `
-                    <div class="reply-bubble">
-                        <div class="reply-meta">
-                            <span class="reply-author"><i class="fa-solid fa-reply"></i> ${escapeHTML(r.name || 'संतवाणी Admin')}</span>
-                            <span style="font-size: 11px; color: var(--text-muted);">${escapeHTML(r.timestamp || '')}</span>
-                        </div>
-                        <div style="font-size: 13px; color: #cbd5e1; margin-top: 3px;">${escapeHTML(r.text)}</div>
-                        <div class="reply-actions" style="margin-top: 6px;">
-                            <button class="btn-link-action" onclick="handleEditReply('${c.pageId}', '${c.commentId}', '${r.id}', \`${escapeHTML(r.text)}\`)"><i class="fa-solid fa-pen"></i> एडिट</button>
-                            <button class="btn-link-action btn-link-danger" onclick="handleDeleteReply('${c.pageId}', '${c.commentId}', '${r.id}')"><i class="fa-solid fa-trash"></i> डिलीट</button>
-                        </div>
-                    </div>
-                `).join('');
-
-                return `
-                    <div class="item-card">
-                        <div class="card-top">
-                            <div class="author-box">
-                                <div class="avatar-initial">${escapeHTML(initial)}</div>
-                                <div>
-                                    <div class="author-name">${escapeHTML(c.name)}</div>
-                                    <div style="font-size: 11px; color: var(--saffron-main); font-weight: 600;">${escapeHTML(c.timestamp)}</div>
-                                </div>
-                            </div>
-                            <div>
-                                ${isReplied ? '<span class="badge-status badge-replied">उत्तर दिलेले</span>' : '<span class="badge-status badge-pending">प्रलंबित</span>'}
-                            </div>
-                        </div>
-
-                        <a href="${encodeURI(c.fullUrl)}" target="_blank" class="item-page-link">
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i> 📌 ${escapeHTML(c.cleanPath)}
-                        </a>
-
-                        <div class="item-body-text">${escapeHTML(c.text)}</div>
-
-                        <div style="display: flex; justify-content: flex-end; margin-bottom: 8px;">
-                            <button class="btn-action-icon btn-danger" onclick="handleDeleteComment('${c.pageId}', '${c.commentId}')">
-                                <i class="fa-solid fa-trash"></i> प्रतिक्रिया डिलीट करा
-                            </button>
-                        </div>
-
-                        <div class="replies-thread">
-                            <div style="font-size: 12px; font-weight: 700; color: var(--text-secondary); margin-bottom: 8px;">
-                                <i class="fa-solid fa-comments"></i> उत्तरे (${c.replies.length})
-                            </div>
-                            ${repliesMarkup}
-                            <div class="reply-input-bar">
-                                <input type="text" id="reply-input-${c.commentId}" placeholder="संतवाणीच्या नावाने उत्तर लिहा...">
-                                <button class="btn-primary" style="padding: 8px 14px; font-size: 13px;" onclick="handleSendReply('${c.pageId}', '${c.commentId}')">
-                                    <i class="fa-solid fa-paper-plane"></i> पाठवा
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        async function handleSendReply(pageId, commentId) {
-            const input = document.getElementById(`reply-input-${commentId}`);
-            const text = (input.value || '').trim();
-            if (!text) {
-                alert("कृपया उत्तराचा संदेश लिहा!");
-                return;
-            }
-
-            const now = new Date();
-            const timeStr = now.toLocaleDateString('mr-IN') + ', ' + now.toLocaleTimeString('mr-IN', { hour: '2-digit', minute: '2-digit' });
-
-            const replyPayload = {
-                name: "संतवाणी Admin",
-                text: text,
-                timestamp: timeStr
-            };
-
-            try {
-                await db.ref(`comments/${pageId}/${commentId}/replies`).push(replyPayload);
-                input.value = "";
-                showToast("उत्तर यशस्वीरित्या जतन झाले!", "success");
-            } catch (err) {
-                alert("Error sending reply: " + err.message);
-            }
-        }
-
-        async function handleEditReply(pageId, commentId, replyId, currentText) {
-            const nextText = prompt("उत्तर संपादन करा:", currentText);
-            if (nextText !== null && nextText.trim() !== "") {
-                try {
-                    await db.ref(`comments/${pageId}/${commentId}/replies/${replyId}`).update({
-                        text: nextText.trim()
-                    });
-                    showToast("उत्तर अपडेट केले!", "success");
-                } catch (err) {
-                    alert("Error editing reply: " + err.message);
-                }
-            }
-        }
-
-        async function handleDeleteReply(pageId, commentId, replyId) {
-            if (confirm("तुम्हाला हा रिप्लाय नक्की काढून टाकायचा आहे?")) {
-                try {
-                    await db.ref(`comments/${pageId}/${commentId}/replies/${replyId}`).remove();
-                    showToast("उत्तर काढून टाकले.", "info");
-                } catch (err) {
-                    alert("Error removing reply: " + err.message);
-                }
-            }
-        }
-
-        async function handleDeleteComment(pageId, commentId) {
-            if (confirm("तुम्हाला ही संपूर्ण प्रतिक्रिया आणि तिची उत्तरे डिलीट करायची आहेत का?")) {
-                try {
-                    await db.ref(`comments/${pageId}/${commentId}`).remove();
-                    showToast("प्रतिक्रिया डिलीट केली गेली.", "info");
-                } catch (err) {
-                    alert("Error deleting comment: " + err.message);
-                }
-            }
-        }
-
-        /* ----------------- CONTACTS TAB ----------------- */
-        function renderFilteredContacts() {
-            const sortOrder = document.getElementById("filter-contact-sort").value;
-            const query = (document.getElementById("filter-contact-text").value || '').toLowerCase().trim();
-
-            let list = [...AppState.contacts];
-
-            if (query) {
-                list = list.filter(m => 
-                    m.name.toLowerCase().includes(query) ||
-                    m.email.toLowerCase().includes(query) ||
-                    m.message.toLowerCase().includes(query)
-                );
-            }
-
-            if (sortOrder === 'newest') {
-                list.sort((a, b) => b.rawTimestamp - a.rawTimestamp);
-            } else if (sortOrder === 'oldest') {
-                list.sort((a, b) => a.rawTimestamp - b.rawTimestamp);
-            }
-
-            document.getElementById("viewing-contacts-count").innerText = list.length;
-            const container = document.getElementById("contacts-container-list");
-
-            if (list.length === 0) {
-                container.innerHTML = `
-                    <div class="empty-placeholder">
-                        <i class="fa-solid fa-envelope-open"></i>
-                        <p>कोणताही संपर्क संदेश आढळला नाही.</p>
-                    </div>
-                `;
-                return;
-            }
-
-            container.innerHTML = list.map(m => {
-                const initial = (m.name || 'U').charAt(0).toUpperCase();
-                return `
-                    <div class="item-card" style="border-left: 4px solid var(--sky-accent);">
-                        <div class="card-top">
-                            <div class="author-box">
-                                <div class="avatar-initial" style="color: var(--sky-accent);">${escapeHTML(initial)}</div>
-                                <div>
-                                    <div class="author-name">${escapeHTML(m.name)}</div>
-                                    <div style="font-size: 11px; color: var(--sky-accent); font-weight: 600;">${escapeHTML(m.date)}</div>
-                                </div>
-                            </div>
-                            <div style="display: flex; gap: 8px;">
-                                <a href="mailto:${encodeURI(m.email)}" class="btn-action-icon">
-                                    <i class="fa-solid fa-paper-plane"></i> ईमेल पाठवा
-                                </a>
-                                <button class="btn-action-icon btn-danger" onclick="handleDeleteContact('${m.id}')">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div style="font-size: 12.5px; color: var(--sky-accent); margin-bottom: 10px; font-weight: 500;">
-                            <i class="fa-solid fa-envelope"></i> ${escapeHTML(m.email)}
-                        </div>
-
-                        <div class="item-body-text" style="background: var(--bg-base); padding: 12px; border-radius: 8px; border: 1px solid var(--border-subtle);">
-                            ${escapeHTML(m.message)}
-                        </div>
-                    </div>
-                `;
-            }).join('');
-        }
-
-        async function handleDeleteContact(id) {
-            if (confirm("हा संदेश नक्की काढून टाकायचा आहे का?")) {
-                try {
-                    await db.ref(`contacts/${id}`).remove();
-                    showToast("संदेश डिलीट करण्यात आला.", "info");
-                } catch (err) {
-                    alert("Error deleting contact: " + err.message);
-                }
-            }
-        }
-
-        /* ----------------- GLOBAL SEARCH ----------------- */
-        function handleGlobalSearch(e) {
-            const query = e.target.value.toLowerCase().trim();
-            const flyout = document.getElementById("search-flyout");
-
-            if (!query) {
-                flyout.style.display = "none";
-                return;
-            }
-
-            const matchedComments = AppState.comments.filter(c => 
-                c.name.toLowerCase().includes(query) ||
-                c.text.toLowerCase().includes(query) ||
-                c.cleanPath.toLowerCase().includes(query)
-            ).slice(0, 5);
-
-            const matchedContacts = AppState.contacts.filter(m => 
-                m.name.toLowerCase().includes(query) ||
-                m.email.toLowerCase().includes(query) ||
-                m.message.toLowerCase().includes(query)
-            ).slice(0, 5);
-
-            if (matchedComments.length === 0 && matchedContacts.length === 0) {
-                flyout.innerHTML = `<div style="padding: 16px; text-align: center; color: var(--text-muted); font-size: 13px;">काहीही सापडले नाही.</div>`;
-                flyout.style.display = "block";
-                return;
-            }
-
-            let resultsHTML = '';
-
-            matchedComments.forEach(c => {
-                resultsHTML += `
-                    <div class="search-result-item" onclick="navigateFromSearch('comments')">
-                        <span class="search-result-badge" style="background: rgba(245, 158, 11, 0.15); color: var(--saffron-main);">प्रतिक्रिया</span>
-                        <div style="font-weight: 700; font-size: 13px; color: #fff;">${escapeHTML(c.name)}</div>
-                        <div style="font-size: 12px; color: var(--text-secondary);">${escapeHTML(c.text.substring(0, 60))}...</div>
-                    </div>
-                `;
-            });
-
-            matchedContacts.forEach(m => {
-                resultsHTML += `
-                    <div class="search-result-item" onclick="navigateFromSearch('contacts')">
-                        <span class="search-result-badge" style="background: rgba(56, 189, 248, 0.15); color: var(--sky-accent);">संपर्क संदेश</span>
-                        <div style="font-weight: 700; font-size: 13px; color: #fff;">${escapeHTML(m.name)} (${escapeHTML(m.email)})</div>
-                        <div style="font-size: 12px; color: var(--text-secondary);">${escapeHTML(m.message.substring(0, 60))}...</div>
-                    </div>
-                `;
-            });
-
-            flyout.innerHTML = resultsHTML;
-            flyout.style.display = "block";
-        }
-
-        function navigateFromSearch(targetTab) {
-            document.getElementById("search-flyout").style.display = "none";
-            document.getElementById("global-search-box").value = "";
-            switchNavSection(targetTab);
-        }
-
-        document.addEventListener('click', (e) => {
-            const flyout = document.getElementById("search-flyout");
-            const box = document.getElementById("global-search-box");
-            if (flyout && !flyout.contains(e.target) && e.target !== box) {
-                flyout.style.display = "none";
-            }
-        });
-
-        /* ----------------- NAVIGATION ----------------- */
-        function switchNavSection(tabName) {
-            AppState.activeTab = tabName;
-
-            document.getElementById("nav-btn-dashboard").classList.toggle("active", tabName === 'dashboard');
-            document.getElementById("nav-btn-comments").classList.toggle("active", tabName === 'comments');
-            document.getElementById("nav-btn-contacts").classList.toggle("active", tabName === 'contacts');
-
-            document.getElementById("section-dashboard").classList.toggle("active-view", tabName === 'dashboard');
-            document.getElementById("section-comments").classList.toggle("active-view", tabName === 'comments');
-            document.getElementById("section-contacts").classList.toggle("active-view", tabName === 'contacts');
-
-            document.getElementById("sidebar-node").classList.remove("open");
-        }
-
-        function toggleMobileSidebar() {
-            document.getElementById("sidebar-node").classList.toggle("open");
-        }
-    </script>
+<div id="login-screen" class="login-wrap">
+  <form id="login-form" class="login-card">
+    <div class="brand"><img src="/favicon.ico" alt="Santvani" onerror="this.onerror=null;this.src='https://santvani.co.in/favicon.ico'"><div><strong>संतवाणी Admin Suite</strong><small>Secure content operations</small></div></div>
+    <h1>Administrator sign in</h1>
+    <p class="muted" style="font-size:13px;line-height:1.7">तुमच्या अधिकृत Firebase administrator खात्याने साइन इन करा.</p>
+    <div class="field"><label for="email">ADMIN EMAIL</label><input id="email" type="email" autocomplete="username" required placeholder="admin@example.com"></div>
+    <div class="field"><label for="password">PASSWORD</label><input id="password" type="password" autocomplete="current-password" required placeholder="Firebase password"></div>
+    <button class="btn primary" id="login-button" type="submit" style="width:100%;margin-top:5px">Sign in securely <i class="fa-solid fa-arrow-right"></i></button>
+    <p id="login-error" class="error" role="alert" style="margin:12px 0 0"></p>
+    <p class="small muted" style="line-height:1.6;margin:18px 0 0">Setup required: enable Firebase Email/Password Authentication and add your administrator UID in the configuration section of this file. The database must also have restrictive Security Rules.</p>
+  </form>
+</div>
+<div id="app" class="shell hidden">
+  <header class="topbar">
+    <div class="brand"><img src="/favicon.ico" alt="Santvani" onerror="this.onerror=null;this.src='https://santvani.co.in/favicon.ico'"><div><strong>संतवाणी Admin</strong><small>Content & community workspace</small></div></div>
+    <div class="top-actions"><span class="connection" id="connection"><span class="dot"></span> Firebase connected</span><div class="global-search"><input id="global-search" type="search" placeholder="Search comments, replies, contacts…" aria-label="Global search"></div><button class="btn ghost" id="theme-button" title="Toggle appearance"><i class="fa-solid fa-circle-half-stroke"></i></button><button class="btn" id="logout-button"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign out</button></div>
+  </header>
+  <section class="hero"><div><div class="eyebrow">ADMINISTRATIVE OVERVIEW</div><h1>नमस्कार, संतवाणी व्यवस्थापक</h1><p>प्रतिक्रिया आणि संपर्क संदेश — एका ठिकाणी, स्पष्ट आणि नियंत्रणात.</p></div><div class="small muted" id="last-updated">डेटा लोड होत आहे…</div></section>
+  <section class="stats" aria-label="Live counts">
+    <article class="stat"><div class="stat-top">एकूण प्रतिक्रिया <span class="stat-icon"><i class="fa-regular fa-comments"></i></span></div><div class="stat-number" id="stat-comments">—</div><div class="stat-note">Firebase मधील उपलब्ध नोंदी</div></article>
+    <article class="stat"><div class="stat-top">उत्तर बाकी <span class="stat-icon"><i class="fa-regular fa-message"></i></span></div><div class="stat-number" id="stat-pending">—</div><div class="stat-note">उत्तर नसलेल्या प्रतिक्रिया</div></article>
+    <article class="stat"><div class="stat-top">संपर्क संदेश <span class="stat-icon"><i class="fa-regular fa-envelope"></i></span></div><div class="stat-number" id="stat-contacts">—</div><div class="stat-note">उपलब्ध संपर्क नोंदी</div></article>
+    <article class="stat"><div class="stat-top">या सत्रातील नवीन <span class="stat-icon"><i class="fa-solid fa-bell"></i></span></div><div class="stat-number" id="stat-new">0</div><div class="stat-note">सत्र सुरू झाल्यानंतर आलेल्या नोंदी</div></article>
+  </section>
+  <main class="workspace">
+    <section class="panel">
+      <div class="panel-head"><div><h2>Community inbox</h2><p>नोंद निवडा — पूर्ण तपशील बाजूच्या पॅनेलमध्ये उघडेल.</p></div><div class="tabs" role="tablist" aria-label="Record type"><button class="tab active" id="tab-comments" role="tab" aria-selected="true" data-tab="comments">Comments <span class="count" id="count-comments">0</span></button><button class="tab" id="tab-contacts" role="tab" aria-selected="false" data-tab="contacts">Contacts <span class="count" id="count-contacts">0</span></button></div></div>
+      <div class="toolbar"><div class="searchbox"><i class="fa-solid fa-magnifying-glass"></i><input id="list-search" type="search" placeholder="मजकूर, नाव, पान किंवा ईमेल शोधा…" aria-label="Search current list"></div><select id="status-filter" aria-label="Filter status"><option value="all">सर्व स्थिती</option><option value="pending">उत्तर बाकी</option><option value="answered">उत्तर दिलेले</option></select><select id="sort-order" aria-label="Sort records"><option value="newest">नवीन प्रथम</option><option value="oldest">जुने प्रथम</option><option value="activity">उत्तर असलेले प्रथम</option></select><button class="btn" id="refresh-button"><i class="fa-solid fa-rotate"></i> Refresh</button></div>
+      <div id="records" class="records" aria-live="polite"><div class="empty"><i class="fa-solid fa-spinner fa-spin"></i><strong>डेटा लोड होत आहे…</strong></div></div>
+      <div class="pagination"><span id="page-info">—</span><div class="page-actions"><button class="btn" id="prev-page">मागे</button><button class="btn" id="next-page">पुढे</button></div></div>
+    </section>
+  </main>
+  <div class="footer-note">Santvani Admin Suite · Marathi-first · Secure administration</div>
+</div>
+<div id="detail-overlay" class="detail hidden" role="dialog" aria-modal="true" aria-labelledby="detail-title"><aside class="detail-panel"><div class="detail-head"><h2 id="detail-title">Record details</h2><button class="btn" id="close-detail" aria-label="Close details"><i class="fa-solid fa-xmark"></i></button></div><div id="detail-content"></div></aside></div>
+<div id="toasts" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+<script>
+'use strict';
+
+/* CONFIGURATION
+   1) Keep this Firebase project config aligned with your existing project.
+   2) Enable Firebase Authentication > Email/Password.
+   3) Replace the placeholder in ADMIN_UIDS with the UID(s) of approved admins.
+   4) Configure Realtime Database Rules to enforce the same admin authorization.
+*/
+const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyBQTDVzvz5tFktEEsnPZQ6G_ADoxGL0ZW4",
+  authDomain: "santvani-48d18.firebaseapp.com",
+  databaseURL: "https://santvani-48d18-default-rtdb.firebaseio.com",
+  projectId: "santvani-48d18",
+  storageBucket: "santvani-48d18.firebasestorage.app",
+  messagingSenderId: "769467907364",
+  appId: "1:769467907364:web:4fe85b182eb43359f707b1"
+};
+const ADMIN_UIDS = ["REPLACE_WITH_APPROVED_ADMIN_UID"];
+const PAGE_SIZE = 12;
+const SITE_ORIGIN = "https://santvani.co.in";
+let db = null, auth = null, comments = [], contacts = [], activeTab = "comments";
+let currentPage = 1, selected = null, detailFocus = null, firstCommentsSnapshot = true, firstContactsSnapshot = true;
+let newSinceSession = 0, knownCommentKeys = new Set(), knownContactKeys = new Set(), listeners = [], connected = false;
+const $ = id => document.getElementById(id);
+const state = {theme: "dark"};
+function toast(message, type="good"){const node=document.createElement("div");node.className="toast "+(type==="bad"?"bad":"good");node.textContent=message;$("toasts").appendChild(node);setTimeout(()=>node.remove(),4500);}
+function setConnection(ok){connected=ok;$("connection").innerHTML="";const dot=document.createElement("span");dot.className="dot";$("connection").append(dot,document.createTextNode(ok?" Firebase connected":" Firebase disconnected"));$("connection").style.color=ok?"var(--green)":"var(--red)";}
+function safeDate(value){if(value===undefined||value===null||value==="")return 0;if(typeof value==="number")return value;const parsed=Date.parse(String(value));return Number.isFinite(parsed)?parsed:0;}
+function displayDate(value){return value?String(value):"तारीख उपलब्ध नाही";}
+function safeUrl(path){try{const u=new URL(path,SITE_ORIGIN);if(u.origin!==SITE_ORIGIN)return SITE_ORIGIN;return u.href;}catch(_){return SITE_ORIGIN;}}
+function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=String(text);return n;}
+function button(label,cls,icon,handler){const b=el("button","btn "+(cls||""));b.type="button";if(icon){const i=el("i");i.className=icon;b.append(i);}b.append(document.createTextNode(" "+label));b.addEventListener("click",handler);return b;}
+function pagePathFromKey(pageId){
+ let raw=String(pageId||"");if(raw.startsWith("_"))raw=raw.slice(1);
+ let isHtml=false;if(raw.endsWith("_html")){isHtml=true;raw=raw.slice(0,-5);}
+ if(raw.startsWith("pages_"))raw=raw.replace("pages_","pages/");
+ const folders=["saints","nitya-pathan-stotra","blog","abhang","stotra","bharude-gavlani","granth-sampada","kabir-doha","santache-prasang","sant-sahitya","san-utsav","vangmay-sangrah"];
+ folders.forEach(folder=>{const underscored=folder.replace(/-/g,"_");raw=raw.replace(new RegExp("pages/"+underscored+"_","g"),"pages/"+folder+"/");raw=raw.replace(new RegExp("pages/"+folder+"_","g"),"pages/"+folder+"/");});
+ const parts=raw.split("/");const file=(parts.pop()||"").replace(/_/g,"-");const folder=parts.join("/");
+ let path=(folder?"/"+folder:"")+"/"+file+(isHtml?".html":"");path=path.replace(/\/+/g,"/");
+ return path.startsWith("/")?path:"/"+path;
+}
+function flattenComments(snapshot){
+ const out=[];
+ snapshot.forEach(pageSnap=>{const pageId=pageSnap.key;const pagePath=pagePathFromKey(pageId);
+  pageSnap.forEach(commentSnap=>{const d=commentSnap.val()||{};const replies=d.replies&&typeof d.replies==="object"?Object.entries(d.replies).map(([key,value])=>({key,...(value||{})})):[];out.push({type:"comment",pageId,key:commentSnap.key,id:pageId+"__"+commentSnap.key,name:d.name||"Anonymous",text:d.text||d.message||"",timestamp:d.timestamp||d.date||"",time:safeDate(d.timestamp||d.date),pagePath,pageUrl:safeUrl(pagePath),replies});});
+ });return out.sort((a,b)=>b.time-a.time);
+}
+function flattenContacts(snapshot){const out=[];snapshot.forEach(s=>{const d=s.val()||{};out.push({type:"contact",key:s.key,id:s.key,name:d.name||"User",email:d.email||"",subject:d.subject||"",text:d.message||"",timestamp:d.date||d.timestamp||"",time:safeDate(d.date||d.timestamp)});});return out.sort((a,b)=>b.time-a.time);}
+function startListeners(){
+ listeners.forEach(fn=>{try{fn();}catch(_){}});listeners=[];
+ const cRef=db.ref("comments"),mRef=db.ref("contacts");
+ const onComments=cRef.on("value",snap=>{
+  const next=flattenComments(snap);const keys=new Set(next.map(x=>x.id));
+  if(!firstCommentsSnapshot){const added=next.filter(x=>!knownCommentKeys.has(x.id));if(added.length){newSinceSession+=added.length;$("stat-new").textContent=String(newSinceSession);toast(added.length+" नवीन comment(s) आले.");}}
+  firstCommentsSnapshot=false;knownCommentKeys=keys;comments=next;render();
+ },err=>{toast("Comments वाचता आले नाहीत: "+err.message,"bad");});
+ const onContacts=mRef.on("value",snap=>{
+  const next=flattenContacts(snap);const keys=new Set(next.map(x=>x.key));
+  if(!firstContactsSnapshot){const added=next.filter(x=>!knownContactKeys.has(x.key));if(added.length){newSinceSession+=added.length;$("stat-new").textContent=String(newSinceSession);toast(added.length+" नवीन contact message(s) आले.");}}
+  firstContactsSnapshot=false;knownContactKeys=keys;contacts=next;render();
+ },err=>{toast("Contacts वाचता आले नाहीत: "+err.message,"bad");});
+ listeners.push(()=>cRef.off("value",onComments),()=>mRef.off("value",onContacts));
+ const connectedRef=db.ref(".info/connected");const onConn=s=>setConnection(s.val()===true);connectedRef.on("value",onConn);listeners.push(()=>connectedRef.off("value",onConn));
+}
+function initApp(){try{if(!firebase.apps.length)firebase.initializeApp(FIREBASE_CONFIG);auth=firebase.auth();db=firebase.database();auth.onAuthStateChanged(user=>{
+ if(!user){$("app").classList.add("hidden");$("login-screen").classList.remove("hidden");return;}
+ if(!ADMIN_UIDS.includes(user.uid)){auth.signOut();$("login-error").textContent="या खात्याला admin परवानगी नाही. ADMIN_UIDS मध्ये अधिकृत UID सेट करा.";return;}
+ $("login-screen").classList.add("hidden");$("app").classList.remove("hidden");if(!listeners.length)startListeners();
+ });}catch(err){$("login-error").textContent="Firebase initialization failed: "+err.message;}}
+$("login-form").addEventListener("submit",async e=>{e.preventDefault();$("login-error").textContent="";$("login-button").disabled=true;try{if(ADMIN_UIDS.includes("REPLACE_WITH_APPROVED_ADMIN_UID"))throw new Error("Setup अपूर्ण आहे: ADMIN_UIDS मध्ये तुमचा Firebase Auth UID टाका.");await firebase.auth().signInWithEmailAndPassword($("email").value.trim(),$("password").value);}catch(err){$("login-error").textContent=err.code==="auth/invalid-credential"||err.code==="auth/wrong-password"?"Email किंवा password चुकीचा आहे.":err.message;}$("login-button").disabled=false;});
+$("logout-button").addEventListener("click",async()=>{listeners.forEach(fn=>fn());listeners=[];await auth.signOut();});
+function activeRecords(){return activeTab==="comments"?comments:contacts;}
+function recordSearchText(r){return [r.name,r.email,r.subject,r.text,r.pagePath,...(r.replies||[]).flatMap(x=>[x.name,x.text,x.timestamp])].join(" ").toLocaleLowerCase();}
+function filteredRecords(){
+ const query=($("list-search").value+" "+$("global-search").value).trim().toLocaleLowerCase();
+ const status=$("status-filter").value,sort=$("sort-order").value;
+ let rows=activeRecords().filter(r=>!query||recordSearchText(r).includes(query));
+ if(activeTab==="comments"&&status!=="all")rows=rows.filter(r=>status==="answered"?r.replies.length>0:r.replies.length===0);
+ if(activeTab==="contacts"&&status!=="all")rows=[]; // Contact read/handled state is not present in the existing schema.
+ if(sort==="oldest")rows.sort((a,b)=>(a.time||0)-(b.time||0));
+ else if(sort==="activity"&&activeTab==="comments")rows.sort((a,b)=>(b.replies.length-a.replies.length)||(b.time-a.time));
+ else rows.sort((a,b)=>(b.time||0)-(a.time||0));
+ return rows;
+}
+function render(){
+ $("count-comments").textContent=String(comments.length);$("count-contacts").textContent=String(contacts.length);
+ $("stat-comments").textContent=String(comments.length);$("stat-pending").textContent=String(comments.filter(c=>!c.replies.length).length);$("stat-contacts").textContent=String(contacts.length);
+ $("last-updated").textContent="शेवटचे अपडेट: "+new Date().toLocaleTimeString("mr-IN",{hour:"2-digit",minute:"2-digit"});
+ const rows=filteredRecords(),pages=Math.max(1,Math.ceil(rows.length/PAGE_SIZE));currentPage=Math.min(currentPage,pages);
+ const shown=rows.slice((currentPage-1)*PAGE_SIZE,currentPage*PAGE_SIZE),root=$("records");root.replaceChildren();
+ if(!shown.length){const empty=el("div","empty");const ico=el("i");ico.className="fa-regular fa-folder-open";empty.append(ico,el("strong","",rows.length?"या पानावर नोंदी नाहीत":"नोंदी सापडल्या नाहीत"),el("span","",rows.length?"पुढील/मागील पान तपासा.":"Search किंवा filter बदलून पुन्हा प्रयत्न करा."));root.append(empty);}
+ shown.forEach(r=>root.append(renderRecord(r)));
+ $("page-info").textContent=rows.length?`${(currentPage-1)*PAGE_SIZE+1}–${Math.min(currentPage*PAGE_SIZE,rows.length)} / ${rows.length}`:"0 नोंदी";
+ $("prev-page").disabled=currentPage<=1;$("next-page").disabled=currentPage>=pages;
+}
+function renderRecord(r){
+ const card=el("article","record"+(selected&&selected.id===r.id?" selected":""));card.tabIndex=0;card.setAttribute("role","button");card.setAttribute("aria-label",(r.type==="comment"?"Comment by ":"Contact from ")+r.name);card.addEventListener("click",()=>openDetail(r));card.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();openDetail(r);}});
+ const top=el("div","record-top"),left=el("div");left.append(el("div","record-title",r.name));
+ const meta=r.type==="comment"?`${r.pagePath} · ${displayDate(r.timestamp)}`:`${r.email||"Email उपलब्ध नाही"} · ${displayDate(r.timestamp)}`;
+ left.append(el("div","record-meta",meta));const badge=el("span","badge "+(r.type==="comment"?(r.replies.length?"answered":"pending"):"new"),r.type==="comment"?(r.replies.length?"उत्तर दिले":"उत्तर बाकी"):"संपर्क संदेश");
+ top.append(left,badge);card.append(top);card.append(el("p","record-text",r.text||"(मजकूर उपलब्ध नाही)"));
+ const bottom=el("div","record-bottom"),kind=el("span","small muted",r.type==="comment"?`${r.replies.length} reply/replies`:(r.subject||"Contact message"));bottom.append(kind);
+ const actions=el("div","record-actions");actions.append(button("तपशील","", "fa-solid fa-arrow-up-right-from-square",e=>{e.stopPropagation();openDetail(r);}));if(r.type==="comment")actions.append(button("मूळ पान","", "fa-solid fa-globe",e=>{e.stopPropagation();window.open(r.pageUrl,"_blank","noopener,noreferrer");}));bottom.append(actions);card.append(bottom);return card;
+}
+function openDetail(r){
+ selected=r;detailFocus=document.activeElement;$("detail-title").textContent=r.type==="comment"?"Comment details":"Contact message";const root=$("detail-content");root.replaceChildren();
+ const meta=el("div","record-meta",`${r.name} · ${displayDate(r.timestamp)}`);root.append(meta);
+ if(r.type==="comment"){
+  const page=el("a","badge","मूळ वेबसाइट पान उघडा");page.href=r.pageUrl;page.target="_blank";page.rel="noopener noreferrer";page.style.marginTop="12px";root.append(page);
+ }else{
+  if(r.email){const email=el("a","badge","Email: "+r.email);email.href="mailto:"+r.email;email.style.marginTop="12px";root.append(email);const copy=button("Email कॉपी","", "fa-regular fa-copy",()=>copyText(r.email));root.append(copy);}
+  if(r.subject)root.append(el("h3","",r.subject));
+ }
+ root.append(el("div","detail-body",r.text||"(मजकूर उपलब्ध नाही)"));
+ root.append(button("मजकूर कॉपी","", "fa-regular fa-copy",()=>copyText(r.text||"")));
+ if(r.type==="comment"){
+  root.append(button("मूळ पान उघडा","", "fa-solid fa-arrow-up-right-from-square",()=>window.open(r.pageUrl,"_blank","noopener,noreferrer")));
+  const section=el("section","reply-box");section.append(el("h3","",`Replies (${r.replies.length})`));
+  if(!r.replies.length)section.append(el("p","muted small","अजून उत्तर दिलेले नाही."));
+  r.replies.forEach(reply=>{
+   const row=el("div","reply-row");const head=el("div","record-bottom");head.append(el("strong","",reply.name||"संतवाणी Admin"),el("small","",reply.timestamp||""));row.append(head,el("p","",reply.text||""));
+   const acts=el("div","record-actions");acts.append(button("Edit","", "fa-solid fa-pen",()=>editReply(r,reply)),button("Delete","danger","fa-solid fa-trash",()=>removeReply(r,reply)));row.append(acts);section.append(row);
+  });
+  const form=el("form","reply-form");const label=el("label","small muted","उत्तर लिहा");label.htmlFor="reply-text";const area=el("textarea");area.id="reply-text";area.required=true;area.maxLength=5000;area.placeholder="मराठीत उत्तर लिहा…";area.style.cssText="width:100%;margin:8px 0;background:#0b1425;border:1px solid var(--line);border-radius:10px;padding:12px;color:var(--text);font-family:Mukta,sans-serif";form.append(label,area);const send=el("button","btn primary","");send.type="submit";send.append(el("i","",""));send.firstChild.className="fa-solid fa-paper-plane";send.append(document.createTextNode(" उत्तर प्रकाशित करा"));form.append(send);
+  form.addEventListener("submit",async e=>{e.preventDefault();const textValue=area.value.trim();if(!textValue)return;send.disabled=true;const now=new Date();const payload={name:"संतवाणी Admin",text:textValue,timestamp:now.toLocaleDateString("mr-IN")+", "+now.toLocaleTimeString("mr-IN",{hour:"2-digit",minute:"2-digit"})};try{await db.ref(`comments/${r.pageId}/${r.key}/replies`).push(payload);toast("उत्तर प्रकाशित झाले.");area.value="";}catch(err){toast("उत्तर सेव्ह झाले नाही: "+err.message,"bad");}finally{send.disabled=false;}});
+  section.append(form);root.append(section);
+ }else{
+  root.append(button("Delete contact message","danger","fa-solid fa-trash",()=>removeContact(r)));
+ }
+ $("detail-overlay").classList.remove("hidden");$("close-detail").focus();
+}
+async function copyText(value){try{await navigator.clipboard.writeText(value);toast("कॉपी केले.");}catch(_){toast("कॉपी करता आली नाही. मजकूर manually निवडा.","bad");}}
+async function editReply(r,reply){const next=prompt("उत्तर संपादित करा:",reply.text||"");if(next===null)return;if(!next.trim()){toast("रिकामे उत्तर सेव्ह करता येणार नाही.","bad");return;}try{await db.ref(`comments/${r.pageId}/${r.key}/replies/${reply.key}`).update({text:next.trim()});toast("उत्तर अपडेट झाले.");}catch(e){toast("Update अयशस्वी: "+e.message,"bad");}}
+async function removeReply(r,reply){if(!confirm("हे उत्तर कायमचे delete करायचे?"))return;try{await db.ref(`comments/${r.pageId}/${r.key}/replies/${reply.key}`).remove();toast("उत्तर delete झाले.");}catch(e){toast("Delete अयशस्वी: "+e.message,"bad");}}
+async function removeContact(r){if(!confirm("हा contact message कायमचा delete करायचा?"))return;try{await db.ref("contacts/"+r.key).remove();$("detail-overlay").classList.add("hidden");toast("Contact message delete झाला.");}catch(e){toast("Delete अयशस्वी: "+e.message,"bad");}}
+$("close-detail").addEventListener("click",()=>{$("detail-overlay").classList.add("hidden");selected=null;if(detailFocus&&detailFocus.focus)detailFocus.focus();render();});
+$("detail-overlay").addEventListener("click",e=>{if(e.target===$("detail-overlay"))$("close-detail").click();});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("detail-overlay").classList.contains("hidden"))$("close-detail").click();if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();$("global-search").focus();}});
+document.querySelectorAll("[data-tab]").forEach(b=>b.addEventListener("click",()=>{activeTab=b.dataset.tab;currentPage=1;document.querySelectorAll("[data-tab]").forEach(x=>{x.classList.toggle("active",x===b);x.setAttribute("aria-selected",String(x===b));});$("status-filter").value="all";render();}));
+["list-search","global-search","status-filter","sort-order"].forEach(id=>$(id).addEventListener(id==="list-search"||id==="global-search"?"input":"change",()=>{currentPage=1;render();}));
+$("prev-page").addEventListener("click",()=>{currentPage=Math.max(1,currentPage-1);render();});$("next-page").addEventListener("click",()=>{currentPage++;render();});
+$("refresh-button").addEventListener("click",()=>{if(!db){toast("Firebase जोडलेले नाही.","bad");return;}Promise.all([db.ref("comments").once("value"),db.ref("contacts").once("value")]).then(([c,m])=>{comments=flattenComments(c);contacts=flattenContacts(m);render();toast("डेटा refresh झाला.");}).catch(e=>toast("Refresh अयशस्वी: "+e.message,"bad"));});
+$("theme-button").addEventListener("click",()=>{const light=document.documentElement.dataset.theme!=="light";document.documentElement.dataset.theme=light?"light":"dark";if(light){document.documentElement.style.setProperty("--bg","#f3f5f9");document.documentElement.style.setProperty("--surface","#fff");document.documentElement.style.setProperty("--surface2","#e8edf5");document.documentElement.style.setProperty("--line","#d8dfeb");document.documentElement.style.setProperty("--text","#172238");document.documentElement.style.setProperty("--muted","#65738b");document.body.style.background="#f3f5f9";document.body.style.color="#172238";document.querySelectorAll(".panel,.topbar,.stat,.record,.detail-panel,.login-card").forEach(n=>{n.style.background="#fff";n.style.color="#172238";});}else{location.reload();}});
+initApp();
+</script>
 </body>
 </html>
