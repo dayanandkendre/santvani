@@ -83,7 +83,7 @@ FILE: pages\blog\kartiki-wari.html
      - <h1> missing
      - Orphan page - konatyahi page varun link nahi
 ------------------------------------------------------------
-FILE: pages\blog\mauli-samadhi.html
+FILE: pages\blog\dnyaneshwar-samadhi.html
   ❌ ERRORS (1)
      - L125: <a href="#history-section"> -> anchor '#history-section' ya page madhe nahi
 ------------------------------------------------------------

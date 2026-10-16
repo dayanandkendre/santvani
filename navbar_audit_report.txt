@@ -112,7 +112,7 @@ pages/blog/magh-wari.html
 pages/blog/mahadevanchya-leela-nat-roop-shivpuran-katha.html
 pages/blog/mahadevanni-saptarshinna-himadrikade-pathavle-shivpuran-katha.html
 pages/blog/mangalagauri-pooja-mahiti-katha-marathi.html
-pages/blog/mauli-samadhi.html
+pages/blog/dnyaneshwar-samadhi.html
 pages/blog/menechya-poti-jagadambecha-janma-shivpuran-katha.html
 pages/blog/mohini-ekadashi.html
 pages/blog/mokshada-ekadashi.html
@@ -1379,7 +1379,7 @@ FILE: pages/blog/mangalagauri-pooja-mahiti-katha-marathi.html
     93:                     </ul>
     94:                 </li>
 
-FILE: pages/blog/mauli-samadhi.html
+FILE: pages/blog/dnyaneshwar-samadhi.html
     101: <li><a href="/san-utsav.html">सन आणि उत्सव</a></li>
     102:                         <li><a href="/pages/artisangrah/artya-sangrah.html">आरत्या संग्रह</a></li>
     103:                         <li><a href="/santache-prasang.html">संतांचे प्रसंग</a></li>
