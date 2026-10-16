@@ -2534,7 +2534,7 @@ FILE: photo\marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya pora.html
 --------------------------------------------------
 FILE: photo\marathi-sant-sahitya-gavlani-jau-de re-mla.html
   [!] Broken Links (2):
-      - /images/gallery/nivdak-gavlani/marathi-sant-sahitya-gavlani-jau-de%20re-mla.webp
+      - /images/gallery/nivdak-gavlani/marathi-sant-sahitya-gavlani-jau-de-re-mla.webp
       - /photo/marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya-pora.html
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
