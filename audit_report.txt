@@ -22,113 +22,34 @@ FILE: disclaimer.html
   ⚠️  WARNINGS (1)
      - meta description missing
 ------------------------------------------------------------
-FILE: gallery-haripath-eknath.html
-  ❌ ERRORS (2)
-     - L182: <img src="/images/gallery/haripath-eknath/thumbs/06-sant-eknath-haripath-jeje-drushti-te-te-harirup.webp"> -> file sapadli nahi
-     - L218: <img src="/images/gallery/haripath-eknath/thumbs/14-sant-eknath-haripath-olkhicha-hari.webp"> -> file sapadli nahi
-------------------------------------------------------------
 FILE: gallery-nivdak-abhang.html
-  ❌ ERRORS (2)
+  ❌ ERRORS (1)
      - L230: <img src="/images/gallery/haripath-dnyaneshwar/sant-dnyaneshwar-haripath-abhang-chala-ho-pandhri.webp"> -> file sapadli nahi
-     - L298: <img src="/images/gallery/nivdak-abhang/thumbs/marathi-sant-sahitya-abhag-ladaki-lek-mi-samtanchi.webp"> -> file sapadli nahi
 ------------------------------------------------------------
 FILE: gallery-nivdak-gavlani.html
-  ❌ ERRORS (2)
-     - L146: <a href="/photo/marathi-sant-sahitya-gavlani-jau-de-re-mla.html"> -> file sapadli nahi
+  ❌ ERRORS (1)
      - L147: <img src="/images/gallery/nivdak-gavlani/thumbs/marathi-sant-sahitya-gavlani-jau-de-re-mla.webp"> -> file sapadli nahi
 ------------------------------------------------------------
-FILE: index.html
-  ❌ ERRORS (2)
-     - L142: <a href="#daily-quote"> -> anchor '#daily-quote' ya page madhe nahi
-     - L559: link "pages/saints/sant-balumama-charitra-mahiti-admapur.html#philosophy-section" -> target page madhe id 'philosophy-section' nahi
-------------------------------------------------------------
-FILE: pages\abhang\sant-gadge-maharaj-abhang.html
-  ⚠️  WARNINGS (2)
-     - <html lang="mr"> missing
-     - <h1> missing
-------------------------------------------------------------
-FILE: pages\abhang\sant-gulabrao-abhang.html
-  ⚠️  WARNINGS (2)
-     - <html lang="mr"> missing
-     - <h1> missing
-------------------------------------------------------------
-FILE: pages\abhang\sant-tukdoji-maharaj.html
-  ⚠️  WARNINGS (2)
-     - <html lang="mr"> missing
-     - <h1> missing
-------------------------------------------------------------
-FILE: pages\bharud\eknath-bharud.html
-  ❌ ERRORS (3)
-     - L96: <a href="#bharud-content"> -> anchor '#bharud-content' ya page madhe nahi
-     - L109: <a href="#bharud-content"> -> anchor '#bharud-content' ya page madhe nahi
-     - L110: <a href="#meaning-section"> -> anchor '#meaning-section' ya page madhe nahi
-------------------------------------------------------------
-FILE: pages\blog\ashadhi-wari.html
-  ❌ ERRORS (1)
-     - L126: <a href="#palkhi-routes"> -> anchor '#palkhi-routes' ya page madhe nahi
-------------------------------------------------------------
 FILE: pages\blog\dnyaneshwar-samadhi.html
-  ❌ ERRORS (1)
-     - L67: <a href="#history-section"> -> anchor '#history-section' ya page madhe nahi
   ⚠️  WARNINGS (1)
      - meta description missing
 ------------------------------------------------------------
-FILE: pages\blog\hartalika-tritiya-2026-date-puja-muhurat-vrat-vidhi.html
-  ❌ ERRORS (1)
-     - L125: <a href="#fast-facts"> -> anchor '#fast-facts' ya page madhe nahi
-------------------------------------------------------------
 FILE: pages\blog\kartiki-wari.html
-  ⚠️  WARNINGS (3)
-     - <html lang="mr"> missing
-     - <h1> missing
+  ⚠️  WARNINGS (1)
      - Orphan page - konatyahi page varun link nahi
 ------------------------------------------------------------
-FILE: pages\blog\dnyaneshwar-samadhi.html
+FILE: pages\blog\mauli-samadhi.html
   ❌ ERRORS (1)
      - L125: <a href="#history-section"> -> anchor '#history-section' ya page madhe nahi
-------------------------------------------------------------
-FILE: pages\blog\namdev-visoba-bhet.html
-  ❌ ERRORS (1)
-     - L127: <a href="#abhang-section"> -> anchor '#abhang-section' ya page madhe nahi
-------------------------------------------------------------
-FILE: pages\blog\tukaram-beej.html
-  ❌ ERRORS (1)
-     - L125: <a href="#वैकुंठगमन"> -> anchor '#वैकुंठगमन' ya page madhe nahi
-------------------------------------------------------------
-FILE: pages\ganeshpuran-katha\tripurasur-vadh-katha-ganesh-puran.html
   ⚠️  WARNINGS (1)
-     - Marathi+English akshare ekach shabdat x1 -> “पी महाबाण सूंss करत सोडल”
-------------------------------------------------------------
-FILE: pages\granth\bhaktishastra.html
-  ⚠️  WARNINGS (2)
-     - <html lang="mr"> missing
-     - <h1> missing
-------------------------------------------------------------
-FILE: pages\granth\gajanan-vijay.html
-  ⚠️  WARNINGS (2)
-     - <html lang="mr"> missing
-     - <h1> missing
-------------------------------------------------------------
-FILE: pages\granth\gitasar.html
-  ⚠️  WARNINGS (3)
-     - <html lang="mr"> missing
-     - <h1> missing
      - Orphan page - konatyahi page varun link nahi
 ------------------------------------------------------------
-FILE: pages\granth\kabir-bijak.html
-  ⚠️  WARNINGS (2)
-     - <html lang="mr"> missing
-     - <h1> missing
-------------------------------------------------------------
-FILE: pages\granth\meera-padavali.html
-  ⚠️  WARNINGS (2)
-     - <html lang="mr"> missing
-     - <h1> missing
+FILE: pages\granth\gitasar.html
+  ⚠️  WARNINGS (1)
+     - Orphan page - konatyahi page varun link nahi
 ------------------------------------------------------------
 FILE: pages\granth\yogasangram.html
-  ⚠️  WARNINGS (3)
-     - <html lang="mr"> missing
-     - <h1> missing
+  ⚠️  WARNINGS (1)
      - Orphan page - konatyahi page varun link nahi
 ------------------------------------------------------------
 FILE: photo\06-sant-eknath-haripath-jeje-drushti-te-te-harirup.html
@@ -136,35 +57,9 @@ FILE: photo\06-sant-eknath-haripath-jeje-drushti-te-te-harirup.html
      - L19: <img src="/images/gallery/haripath-eknath/06-sant-eknath-haripath-jeje-drushti-te-te-harirup.webp"> -> file sapadli nahi
      - L20: <a href="/images/gallery/haripath-eknath/06-sant-eknath-haripath-jeje-drushti-te-te-harirup.webp"> -> file sapadli nahi
 ------------------------------------------------------------
-FILE: photo\marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya-pora.html
-  ❌ ERRORS (1)
-     - L25: <a href="/photo/marathi-sant-sahitya-gavlani-jau-de-re-mla.html"> -> file sapadli nahi
-------------------------------------------------------------
-FILE: photo\marathi-sant-sahitya-gavlani-jau-de re-mla.html
-  ⚠️  WARNINGS (1)
-     - Orphan page - konatyahi page varun link nahi
-------------------------------------------------------------
-FILE: photo\marathi-sant-sahitya-gavlani-krishna-tula-mi.html
-  ❌ ERRORS (1)
-     - L25: <a href="/photo/marathi-sant-sahitya-gavlani-jau-de-re-mla.html"> -> file sapadli nahi
-------------------------------------------------------------
 FILE: privacy-policy.html
   ⚠️  WARNINGS (1)
      - meta description missing
-------------------------------------------------------------
-FILE: sant-sahitya.html
-  ❌ ERRORS (5)
-     - L469: link "pages/saints/sant-balumama-charitra-mahiti-admapur.html#philosophy-section" -> target page madhe id 'philosophy-section' nahi
-     - L483: link "pages/saints/vasudevanand-saraswati-tembe-swami-charitra.html#overview-table" -> target page madhe id 'overview-table' nahi
-     - L497: link "pages/saints/sant-krishnasaraswati-kumbharswami-charitra.html#overview-table" -> target page madhe id 'overview-table' nahi
-     - L511: link "pages/saints/sant-brahmachaitanya-gondavalekar-maharaj-charitra.html#bodhvachane-section" -> target page madhe id 'bodhvachane-section' nahi
-     - L525: link "pages/saints/sant-narasimha-saraswati-swami-charitra.html#guru-parampara" -> target page madhe id 'guru-parampara' nahi
-------------------------------------------------------------
-FILE: sarth-haripath.html
-  ❌ ERRORS (3)
-     - L106: <a href="#features"> -> anchor '#features' ya page madhe nahi
-     - L119: <a href="#haripath-content"> -> anchor '#haripath-content' ya page madhe nahi
-     - L120: <a href="#importance"> -> anchor '#importance' ya page madhe nahi
 ------------------------------------------------------------
 FILE: terms.html
   ⚠️  WARNINGS (1)
@@ -173,6 +68,6 @@ FILE: terms.html
 
 SUMMARY
   Files scanned        : 900
-  Files with errors    : 16
-  Total errors         : 29
-  Total warnings       : 34
+  Files with errors    : 4
+  Total errors         : 5
+  Total warnings       : 13
