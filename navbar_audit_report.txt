@@ -3996,7 +3996,7 @@ FILE: photo/marathi-sant-sahitya-abhag-ladaki-lek-mi samtanchi.html
     16: <li><a href="/san-utsav.html">सन आणि उत्सव</a></li><li><a href="/pages/artisangrah/artya-sangrah.html">आरत्या संग्रह</a></li><li><a href="/santache-prasang.html">संतांचे प्रसंग</a></li><li><a href="/shivpuran-katha-sangrah.html">शिवपुराण कथ
     17: <div class="nav-cta"><a href="/index.html#sant-home-gallery" class="btn-nav">वाचन सुरू करा</a></div></div></nav>
     18: <section class="features-section" style="padding:40px 20px"><div class="section-container"><div class="gx-crumb"><a href="/index.html">मुख्य पृष्ठ</a> › <a href="/photo-gallery.html">फोटो गॅलरी</a> › <a href="/gallery-nivdak-abhang.html">नि
-    19: <div class="gx-photo"><img src="/images/gallery/nivdak-abhang/marathi-sant-sahitya-abhag-ladaki-lek-mi%20samtanchi.webp" alt="Marathi Sant Sahitya Abhag Ladaki Lek Mi Samtanchi"><h1>Marathi Sant Sahitya Abhag Ladaki Lek Mi Samtanchi</h1><p>
+    19: <div class="gx-photo"><img src="/images/gallery/nivdak-abhang/marathi-sant-sahitya-abhag-ladaki-lek-mi-samtanchi.webp" alt="Marathi Sant Sahitya Abhag Ladaki Lek Mi Samtanchi"><h1>Marathi Sant Sahitya Abhag Ladaki Lek Mi Samtanchi</h1><p>
 
 FILE: photo/marathi-sant-sahitya-abhag-lagoniya-paya.html
     13: <nav class="navbar"><div class="nav-container"><a href="/index.html" class="logo"><span class="logo-icon">✨</span> संत<span class="logo-highlight">वाणी</span></a>
@@ -4212,7 +4212,7 @@ FILE: photo/marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya pora.html
     16: <li><a href="/san-utsav.html">सन आणि उत्सव</a></li><li><a href="/pages/artisangrah/artya-sangrah.html">आरत्या संग्रह</a></li><li><a href="/santache-prasang.html">संतांचे प्रसंग</a></li><li><a href="/shivpuran-katha-sangrah.html">शिवपुराण कथ
     17: <div class="nav-cta"><a href="/index.html#sant-home-gallery" class="btn-nav">वाचन सुरू करा</a></div></div></nav>
     18: <section class="features-section" style="padding:40px 20px"><div class="section-container"><div class="gx-crumb"><a href="/index.html">मुख्य पृष्ठ</a> › <a href="/photo-gallery.html">फोटो गॅलरी</a> › <a href="/gallery-nivdak-gavlani.html">न
-    19: <div class="gx-photo"><img src="/images/gallery/nivdak-gavlani/marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya%20pora.webp" alt="Marathi Sant Sahitya Gavlani Jare Jare Tu Nandachya Pora"><h1>Marathi Sant Sahitya Gavlani Jare Jare Tu Nan
+    19: <div class="gx-photo"><img src="/images/gallery/nivdak-gavlani/marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya-pora.webp" alt="Marathi Sant Sahitya Gavlani Jare Jare Tu Nandachya Pora"><h1>Marathi Sant Sahitya Gavlani Jare Jare Tu Nan
 
 FILE: photo/marathi-sant-sahitya-gavlani-jau-de re-mla.html
     13: <nav class="navbar"><div class="nav-container"><a href="/index.html" class="logo"><span class="logo-icon">✨</span> संत<span class="logo-highlight">वाणी</span></a>

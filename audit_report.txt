@@ -30,8 +30,8 @@ FILE: gallery-haripath-dnyaneshwar.html
 --------------------------------------------------
 FILE: gallery-haripath-eknath.html
   [!] Broken Links (2):
-      - /photo/06-sant-eknath-haripath-jeje-drushti-te-te%20harirup.html
-      - /photo/14-sant-eknath-haripath-olkhicha%20hari.html
+      - /photo/06-sant-eknath-haripath-jeje-drushti-te-te-harirup.html
+      - /photo/14-sant-eknath-haripath-olkhicha-hari.html
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
 FILE: gallery-haripath-tukaram.html
@@ -2115,17 +2115,17 @@ FILE: photo\04-sant-eknath-haripath-hari-bola-hari-bola.html
 --------------------------------------------------
 FILE: photo\05-sant-eknath-haripath-olkila-hari-dhnaya.html
   [!] Broken Links (1):
-      - /photo/06-sant-eknath-haripath-jeje-drushti-te-te%20harirup.html
+      - /photo/06-sant-eknath-haripath-jeje-drushti-te-te-harirup.html
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
 FILE: photo\06-sant-eknath-haripath-jeje-drushti-te-te harirup.html
   [!] Broken Links (1):
-      - /images/gallery/haripath-eknath/06-sant-eknath-haripath-jeje-drushti-te-te%20harirup.webp
+      - /images/gallery/haripath-eknath/06-sant-eknath-haripath-jeje-drushti-te-te-harirup.webp
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
 FILE: photo\07-sant-eknath-haripath-namavin-mukh-sarpanche-te-bil.html
   [!] Broken Links (1):
-      - /photo/06-sant-eknath-haripath-jeje-drushti-te-te%20harirup.html
+      - /photo/06-sant-eknath-haripath-jeje-drushti-te-te-harirup.html
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
 FILE: photo\08-sant-eknath-haripath-dhanyamay-vyali.html
@@ -2148,17 +2148,17 @@ FILE: photo\12.1-sant-eknath-haripath-sawahitakarne-sangti-sadhuchi.html
 --------------------------------------------------
 FILE: photo\13-sant-eknath-haripath-nakale-tekale.html
   [!] Broken Links (1):
-      - /photo/14-sant-eknath-haripath-olkhicha%20hari.html
+      - /photo/14-sant-eknath-haripath-olkhicha-hari.html
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
 FILE: photo\14-sant-eknath-haripath-olkhicha hari.html
   [!] Broken Links (1):
-      - /images/gallery/haripath-eknath/14-sant-eknath-haripath-olkhicha%20hari.webp
+      - /images/gallery/haripath-eknath/14-sant-eknath-haripath-olkhicha-hari.webp
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
 FILE: photo\15-sant-eknath-haripath-haribola-deta-haribola-gheta.html
   [!] Broken Links (1):
-      - /photo/14-sant-eknath-haripath-olkhicha%20hari.html
+      - /photo/14-sant-eknath-haripath-olkhicha-hari.html
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
 FILE: photo\16-sant-eknath-haripath-ek-pach-teen-mela.html
@@ -2450,7 +2450,7 @@ FILE: photo\marathi-sant-sahitya-abhag-krupalu-sanjjan-tumhi.html
 --------------------------------------------------
 FILE: photo\marathi-sant-sahitya-abhag-ladaki-lek-mi samtanchi.html
   [!] Broken Links (1):
-      - /images/gallery/nivdak-abhang/marathi-sant-sahitya-abhag-ladaki-lek-mi%20samtanchi.webp
+      - /images/gallery/nivdak-abhang/marathi-sant-sahitya-abhag-ladaki-lek-mi-samtanchi.webp
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
 FILE: photo\marathi-sant-sahitya-abhag-lagoniya-paya.html
@@ -2528,7 +2528,7 @@ FILE: photo\marathi-sant-sahitya-gavlani-aikuni-venucha-naad.html
 --------------------------------------------------
 FILE: photo\marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya pora.html
   [!] Broken Links (2):
-      - /images/gallery/nivdak-gavlani/marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya%20pora.webp
+      - /images/gallery/nivdak-gavlani/marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya-pora.webp
       - /photo/marathi-sant-sahitya-gavlani-jau-de-re-mla.html
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
