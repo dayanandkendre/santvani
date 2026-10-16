@@ -42,13 +42,13 @@ FILE: gallery-kakda-aarti.html
 --------------------------------------------------
 FILE: gallery-nivdak-abhang.html
   [!] Broken Links (1):
-      - /photo/marathi-sant-sahitya-abhag-ladaki-lek-mi%20samtanchi.html
+      - /photo/marathi-sant-sahitya-abhag-ladaki-lek-mi-samtanchi.html
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
 FILE: gallery-nivdak-gavlani.html
   [!] Broken Links (2):
-      - /photo/marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya%20pora.html
-      - /photo/marathi-sant-sahitya-gavlani-jau-de%20re-mla.html
+      - /photo/marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya-pora.html
+      - /photo/marathi-sant-sahitya-gavlani-jau-de-re-mla.html
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
 FILE: gallery-pandurang.html
@@ -2445,7 +2445,7 @@ FILE: photo\marathi-sant-sahitya-abhag-kanda-muli-bhaji.html
 --------------------------------------------------
 FILE: photo\marathi-sant-sahitya-abhag-krupalu-sanjjan-tumhi.html
   [!] Broken Links (1):
-      - /photo/marathi-sant-sahitya-abhag-ladaki-lek-mi%20samtanchi.html
+      - /photo/marathi-sant-sahitya-abhag-ladaki-lek-mi-samtanchi.html
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
 FILE: photo\marathi-sant-sahitya-abhag-ladaki-lek-mi samtanchi.html
@@ -2455,7 +2455,7 @@ FILE: photo\marathi-sant-sahitya-abhag-ladaki-lek-mi samtanchi.html
 --------------------------------------------------
 FILE: photo\marathi-sant-sahitya-abhag-lagoniya-paya.html
   [!] Broken Links (1):
-      - /photo/marathi-sant-sahitya-abhag-ladaki-lek-mi%20samtanchi.html
+      - /photo/marathi-sant-sahitya-abhag-ladaki-lek-mi-samtanchi.html
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
 FILE: photo\marathi-sant-sahitya-abhag-man-ha-mogra.html
@@ -2523,24 +2523,24 @@ FILE: photo\marathi-sant-sahitya-abhag-yare-nachu-premanande.html
 --------------------------------------------------
 FILE: photo\marathi-sant-sahitya-gavlani-aikuni-venucha-naad.html
   [!] Broken Links (1):
-      - /photo/marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya%20pora.html
+      - /photo/marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya-pora.html
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
 FILE: photo\marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya pora.html
   [!] Broken Links (2):
       - /images/gallery/nivdak-gavlani/marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya%20pora.webp
-      - /photo/marathi-sant-sahitya-gavlani-jau-de%20re-mla.html
+      - /photo/marathi-sant-sahitya-gavlani-jau-de-re-mla.html
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
 FILE: photo\marathi-sant-sahitya-gavlani-jau-de re-mla.html
   [!] Broken Links (2):
       - /images/gallery/nivdak-gavlani/marathi-sant-sahitya-gavlani-jau-de%20re-mla.webp
-      - /photo/marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya%20pora.html
+      - /photo/marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya-pora.html
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
 FILE: photo\marathi-sant-sahitya-gavlani-krishna-tula-mi.html
   [!] Broken Links (1):
-      - /photo/marathi-sant-sahitya-gavlani-jau-de%20re-mla.html
+      - /photo/marathi-sant-sahitya-gavlani-jau-de-re-mla.html
   [!] Garbled / Broken Characters: 
 --------------------------------------------------
 FILE: photo\marathi-sant-sahitya-gavlani-lahan-lahan-mule.html
