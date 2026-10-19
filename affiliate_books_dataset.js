@@ -730,25 +730,21 @@ const affiliateBooksData = {
 };
 
 /**
- * Random Book Picker Logic with Smart Fallback:
- * Matches current URL with Saint. If no direct link exists, randomly picks
- * high-converting classics (Dnyaneshwari, Tukaram Gatha, Dasbodh, Eknathi Bhagwat).
+ * Random Book Picker Logic with Blog Support:
  */
 function getRandomAffiliateBook() {
   const currentPath = window.location.pathname.toLowerCase();
 
-  // 1. Current URL match check
+  // 1. संतांच्या पानासाठी मॅच तपासणे
   for (const key of Object.keys(affiliateBooksData)) {
-    if (currentPath.includes(key)) {
+    if (currentPath.includes(key) && affiliateBooksData[key].length > 0) {
       const books = affiliateBooksData[key];
-      if (books && books.length > 0) {
-        const randomIndex = Math.floor(Math.random() * books.length);
-        return books[randomIndex];
-      }
+      const randomIndex = Math.floor(Math.random() * books.length);
+      return books[randomIndex];
     }
   }
 
-  // 2. Sub-slug fallback helper
+  // 2. सब-स्लग्स मॅच
   if (currentPath.includes("dhondutatya") && affiliateBooksData["samarth-dhondutatya"] && affiliateBooksData["samarth-dhondutatya"].length > 0) {
     return affiliateBooksData["samarth-dhondutatya"][0];
   }
@@ -759,7 +755,22 @@ function getRandomAffiliateBook() {
     return affiliateBooksData["sant-balumama-charitra-mahiti-admapur"][0];
   }
 
-  // 3. Smart Universal Fallback
+  // 3. Blog पेजेस (/blog/...) किंवा इतर पानांसाठी सर्व पुस्तकांमधून रँडम निवड
+  const allAvailableBooks = [];
+  Object.keys(affiliateBooksData).forEach((key) => {
+    affiliateBooksData[key].forEach((item) => {
+      if (item && item.link) {
+        allAvailableBooks.push(item);
+      }
+    });
+  });
+
+  if (allAvailableBooks.length > 0) {
+    const randomIdx = Math.floor(Math.random() * allAvailableBooks.length);
+    return allAvailableBooks[randomIdx];
+  }
+
+  // 4. युनिव्हर्सल फॉलबॅक
   const randomPopularIndex = Math.floor(Math.random() * popularGrandLibrary.length);
   return popularGrandLibrary[randomPopularIndex];
 }
