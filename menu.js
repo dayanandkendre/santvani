@@ -490,19 +490,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Auto-load Amazon Affiliate Scripts globally
-(function() {
-  const s1 = document.createElement("script");
-  s1.src = "/affiliate_books_dataset.js";
-  s1.onload = () => {
-    const s2 = document.createElement("script");
-    s2.src = "/affiliate-widget.js";
-    document.body.appendChild(s2);
-  };
-  document.body.appendChild(s1);
-})();
+/* ==========================================================================
+   AMAZON AFFILIATE SCRIPTS (AdSense Review Sathi Tatpurte Band Kele Ahe)
+   Ekda AdSense Approve zale ki fakt he /* aani */ comment kadha.
+   ========================================================================== */
 
-// Auto-load Amazon Affiliate System Globally (Saints + Blogs)
+/*
 (function () {
   const s1 = document.createElement("script");
   s1.src = "/affiliate_books_dataset.js";
@@ -513,3 +506,4 @@ document.addEventListener("DOMContentLoaded", function () {
   };
   document.body.appendChild(s1);
 })();
+*/
