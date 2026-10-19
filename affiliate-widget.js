@@ -1,22 +1,23 @@
 (function () {
-  // Pratyek page open kelyavar popup disnyasathi session check kadhla ahe
+  // 1. Ekavar ek don boxes hou naye mhanun duplicate check
+  if (document.getElementById("sv-affiliate-card")) return;
+
   let book = null;
   if (typeof getRandomAffiliateBook === "function") {
     book = getRandomAffiliateBook();
   }
 
-  if (!book) return;
+  if (!book || !book.link) return;
 
-  // Category nusaar icon
   let icon = "📖";
   if (book.category && book.category.includes("फोटो")) icon = "🖼️";
   else if (book.category && book.category.includes("अभंग")) icon = "📿";
   else if (book.category && book.category.includes("संदर्भ")) icon = "📜";
 
-  // Responsive CSS Styles
   const style = document.createElement("style");
+  style.id = "sv-affiliate-style";
   style.innerHTML = `
-    .sv-affiliate-card {
+    #sv-affiliate-card {
       position: fixed;
       background: #ffffff;
       border: 1px solid #fed7aa;
@@ -33,34 +34,34 @@
       pointer-events: none;
     }
 
-    /* Desktop View: Center Right Slider */
+    /* Desktop View: Center Right */
     @media (min-width: 768px) {
-      .sv-affiliate-card {
+      #sv-affiliate-card {
         top: 50%;
         right: 0;
         width: 300px;
-        transform: translate(110%, -50%); /* Right side baher thevne */
+        transform: translate(110%, -50%);
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         border-right: none;
       }
-      .sv-affiliate-card.visible {
-        transform: translate(0, -50%); /* Slide inside from right */
+      #sv-affiliate-card.visible {
+        transform: translate(0, -50%);
         opacity: 1;
         pointer-events: auto;
       }
     }
 
-    /* Mobile View: OneSignal bell la adthala na karta */
+    /* Mobile View: Bottom Left (OneSignal bell la overlap na honara) */
     @media (max-width: 767px) {
-      .sv-affiliate-card {
-        bottom: 80px; /* OneSignal bell chya varti thevle */
+      #sv-affiliate-card {
+        bottom: 80px;
         right: 15px;
         left: 15px;
         max-width: calc(100vw - 30px);
         transform: translateY(140%);
       }
-      .sv-affiliate-card.visible {
+      #sv-affiliate-card.visible {
         transform: translateY(0);
         opacity: 1;
         pointer-events: auto;
@@ -139,9 +140,8 @@
   `;
   document.head.appendChild(style);
 
-  // Card HTML
   const card = document.createElement("div");
-  card.className = "sv-affiliate-card";
+  card.id = "sv-affiliate-card";
   card.innerHTML = `
     <button class="sv-close-btn" aria-label="Close">&times;</button>
     <div class="sv-card-icon">${icon}</div>
@@ -154,12 +154,10 @@
   `;
   document.body.appendChild(card);
 
-  // Close Button Action
   card.querySelector(".sv-close-btn").addEventListener("click", () => {
     card.classList.remove("visible");
   });
 
-  // Trigger Logic: Page load zalyaver 3 secondani kiva scroll kelyavar popup slider yeto
   let hasTriggered = false;
   function triggerCard() {
     if (hasTriggered) return;
@@ -171,7 +169,7 @@
     const scrollPos = window.scrollY + window.innerHeight;
     const totalHeight = document.documentElement.scrollHeight;
     if (scrollPos / totalHeight >= 0.25) triggerCard();
-  });
+  }, { passive: true });
 
-  setTimeout(() => triggerCard(), 3000);
+  setTimeout(() => triggerCard(), 3500);
 })();
