@@ -1,98 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     // =========================================================
-    // 🍔 १. हॅम्बर्गर मेनू आणि नेव्हिगेशन लॉजिक (Exact Universal Fix)
+    // 🍔 १. हॅम्बर्गर मेनू आणि नेव्हिगेशन लॉजिक (Old layout restored)
     // =========================================================
     function initNavigation() {
-        // मोबाईल नेव्हिगेशनसाठी आवश्यक CSS थेट इंजेक्ट करणे
-        if (!document.getElementById("santvani-menu-style")) {
-            const menuStyle = document.createElement("style");
-            menuStyle.id = "santvani-menu-style";
-            menuStyle.innerHTML = `
-                /* मोबाईल हॅम्बर्गर बटण */
-                .hamburger-toggle {
-                    display: none;
-                    background: transparent;
-                    border: none;
-                    color: #ffb703;
-                    font-size: 1.6rem;
-                    cursor: pointer;
-                    padding: 8px 12px;
-                    z-index: 10001;
-                    line-height: 1;
-                }
-
-                /* काळा बॅकग्राउंड ओव्हरले */
-                .menu-overlay {
-                    display: none;
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: rgba(0, 0, 0, 0.75);
-                    backdrop-filter: blur(4px);
-                    z-index: 9998;
-                }
-                .menu-overlay.active {
-                    display: block;
-                }
-
-                /* मोबाईल स्क्रीन (७६८px खाली) */
-                @media (max-width: 768px) {
-                    .nav-container {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        position: relative;
-                        width: 100%;
-                    }
-
-                    .hamburger-toggle {
-                        display: block !important;
-                    }
-
-                    .nav-links {
-                        display: none !important;
-                        flex-direction: column;
-                        position: absolute;
-                        top: 100%;
-                        left: 0;
-                        width: 100%;
-                        background: #0d0d0d;
-                        border-top: 1px solid rgba(255, 183, 3, 0.2);
-                        border-bottom: 2px solid #ffb703;
-                        padding: 15px 20px;
-                        box-shadow: 0 10px 25px rgba(0,0,0,0.8);
-                        z-index: 9999;
-                        list-style: none;
-                        margin: 0;
-                    }
-
-                    .nav-links.active {
-                        display: flex !important;
-                    }
-
-                    .nav-links li {
-                        width: 100%;
-                        margin: 8px 0;
-                    }
-
-                    .nav-links a {
-                        color: #ffffff;
-                        font-size: 1rem;
-                        display: block;
-                        padding: 8px 0;
-                        text-decoration: none;
-                    }
-
-                    .nav-cta {
-                        display: none; /* मोबाईलवर CTA बटण लपवून क्लिन लूक */
-                    }
-                }
-            `;
-            document.head.appendChild(menuStyle);
-        }
-
         const navContainer = document.querySelector(".nav-container");
         const navLinks = document.querySelector(".nav-links");
 
@@ -142,6 +52,26 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 };
             }
+
+            if (window.innerWidth <= 768 && !document.querySelector(".bottom-nav-bar")) {
+                const bottomNav = document.createElement("div");
+                bottomNav.className = "bottom-nav-bar";
+                bottomNav.innerHTML = `
+                    <a href="/index.html" class="bottom-nav-item">
+                        <i class="fa-solid fa-house"></i>
+                        <span>मुख्य पृष्ठ</span>
+                    </a>
+                    <a href="/sarth-haripath.html" class="bottom-nav-item">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>हरिपाठ</span>
+                    </a>
+                    <a href="/sant-sahitya.html" class="bottom-nav-item">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span>संत साहित्य</span>
+                    </a>
+                `;
+                document.body.appendChild(bottomNav);
+            }
         }
     }
 
@@ -151,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 🔥 2. SHARE BUTTONS + ADVANCED FIREBASE COMMENTS SYSTEM
     // =========================================================
     var currentPath = window.location.pathname.toLowerCase();
-    
+
     var excludedPages = [
         "index.html", "about.html", "contact.html", "privacy-policy.html",
         "terms.html", "disclaimer.html", "abhang-gatha.html", "bharude-gavlani.html",
@@ -207,6 +137,7 @@ function initSantvaniShareAndComments() {
     container.style.cssText = "max-width: 850px; margin: 50px auto 30px auto; font-family: 'Plus Jakarta Sans', 'Poppins', sans-serif; color: #fff;";
 
     container.innerHTML = `
+        <!-- SHARE BUTTONS SECTION -->
         <div style="background: #121212; border: 1px solid rgba(255, 183, 3, 0.3); border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
             <h4 style="font-family: 'Rozha One', serif; font-size: 20px; color: #ffb703; margin: 0 0 15px 0; display: flex; align-items: center; gap: 8px;">
                 🔗 हा लेख शेअर करा (Share Article)
@@ -220,6 +151,7 @@ function initSantvaniShareAndComments() {
             </div>
         </div>
 
+        <!-- FIREBASE COMMENTS SECTION (PREMIUM LOOK) -->
         <div style="background: #121212; border: 1px solid rgba(255, 183, 3, 0.3); border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
             <h3 style="font-family: 'Rozha One', serif; font-size: 22px; color: #ffb703; margin-top: 0; margin-bottom: 20px;">
                 💬 प्रतिक्रिया व अभिप्राय (<span id="total-comments-count">0</span>)
@@ -250,6 +182,7 @@ function initSantvaniShareAndComments() {
         });
     };
 
+    // 🔔 कमेंट करताना पुश नोटिफिकेशनची परवानगी मागणे
     function requestPushPrompt() {
         if (window.OneSignalDeferred) {
             OneSignalDeferred.push(function(OneSignal) {
@@ -329,7 +262,7 @@ function initSantvaniShareAndComments() {
                                     <span style="color: #666; font-size: 11px;">${reply.timestamp || ''}</span>
                                 </div>
                                 <div style="margin: 0; color: #e0e0e0; font-size: 13px; line-height: 1.5;">${reply.text}</div>
-                                
+
                                 <div style="display: flex; gap: 12px; margin-top: 6px;">
                                     <button onclick="window.toggleReplyBox('${commentKey}', '${reply.name}')" style="background:none; border:none; color:#38bdf8; cursor:pointer; font-size:11px; padding:0; font-weight:600;">
                                         <i class="fa-regular fa-comment"></i> उत्तर द्या
@@ -343,7 +276,7 @@ function initSantvaniShareAndComments() {
 
             var commentBox = document.createElement("div");
             commentBox.style.cssText = "display: flex; gap: 12px; align-items: flex-start; padding: 14px; background: #181818; border-left: 4px solid #ffb703; border-radius: 8px;";
-            
+
             var toggleRepliesBtn = "";
             if (replyCount > 0) {
                 toggleRepliesBtn = `
@@ -363,7 +296,7 @@ function initSantvaniShareAndComments() {
                         <span style="color: #666; font-size: 12px;">${data.timestamp}</span>
                     </div>
                     <div style="margin: 0; color: #e0e0e0; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">${data.text}</div>
-                    
+
                     <div style="display: flex; align-items: center; gap: 18px; margin-top: 8px; font-size: 12px; color: #888;">
                         <button onclick="window.likeComment('${commentKey}', ${data.likes || 0})" style="background:none; border:none; color:#aaa; cursor:pointer; display:flex; align-items:center; gap:5px; font-size:12px; padding:0;">
                             <i class="fa-regular fa-thumbs-up"></i> <span>${data.likes || 0}</span>
@@ -463,7 +396,7 @@ function initSantvaniShareAndComments() {
             if (!error) {
                 nameInp.value = "";
                 textInp.value = "";
-                
+
                 var box = document.getElementById("reply-input-box-" + commentKey);
                 if (box) box.style.display = "none";
 
@@ -500,6 +433,9 @@ function initSantvaniShareAndComments() {
     gtag('config', 'G-YEN0M3VBYE');
 })();
 
+// =========================================================
+// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM (OFFSET FIXED)
+// =========================================================
 (function() {
     var style = document.createElement('style');
     style.innerHTML = `
@@ -528,9 +464,38 @@ function initSantvaniShareAndComments() {
     });
 })();
 
+// =========================================================
+// 📖 भावार्थ नेहमी दाखवा आणि 'भावार्थ पहा' बटण लपवा
+// =========================================================
 document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll('[id^="bhavarth-text-"]').forEach(el => el.style.setProperty('display', 'block', 'important'));
-    document.querySelectorAll('[id^="toggle-btn-"]').forEach(el => el.style.setProperty('display', 'none', 'important'));
-    document.querySelectorAll('.bhavarth-text').forEach(el => el.style.setProperty('display', 'block', 'important'));
-    document.querySelectorAll('.toggle-view-btn').forEach(btn => btn.style.setProperty('display', 'none', 'important'));
+    document.querySelectorAll('[id^="bhavarth-text-"]').forEach(function (el) {
+        el.style.setProperty('display', 'block', 'important');
+    });
+    document.querySelectorAll('[id^="toggle-btn-"]').forEach(function (el) {
+        el.style.setProperty('display', 'none', 'important');
+    });
+    document.querySelectorAll('.bhavarth-text').forEach(function (el) {
+        el.style.setProperty('display', 'block', 'important');
+    });
+    document.querySelectorAll('.toggle-view-btn').forEach(function (btn) {
+        btn.style.setProperty('display', 'none', 'important');
+    });
 });
+
+/* ==========================================================================
+   AMAZON AFFILIATE SCRIPTS (AdSense Review Sathi Tatpurte Band Kele Ahe)
+   Ekda AdSense Approve zale ki fakt he comment kadha.
+   ========================================================================== */
+
+/*
+(function () {
+  const s1 = document.createElement("script");
+  s1.src = "/affiliate_books_dataset.js";
+  s1.onload = () => {
+    const s2 = document.createElement("script");
+    s2.src = "/affiliate-widget.js";
+    document.body.appendChild(s2);
+  };
+  document.body.appendChild(s1);
+})();
+*/
