@@ -193,3 +193,26 @@
     .sarth-haripath-section .tukaram-container { grid-template-columns: 1fr !important; gap: 16px !important; }
     .sarth-haripath-section .sarth-grid { padding: 16px !important; }
 }
+
+/* बटणांचे शब्द CSS द्वारे दाखवणे (Googlebot ला हे मोजता येत नाही) */
+.action-btn.btn-copy::after {
+    content: " कॉपी";
+}
+
+.action-btn.btn-share::after {
+    content: " शेअर";
+}
+
+.action-btn.btn-img::after {
+    content: " इमेज ९:१६";
+}
+
+/* भावार्थ बटणासाठी */
+.toggle-view-btn.btn-meaning span::after {
+    content: "भावार्थ पहा";
+}
+
+/* भावार्थ उघडल्यावर जर क्लास active होत असेल तर */
+.toggle-view-btn.btn-meaning.active span::after {
+    content: "भावार्थ लपवा";
+}
