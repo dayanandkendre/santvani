@@ -164,20 +164,12 @@
 
                 <div class="card-footer-area">
                     <div class="sarth-actions">
-                        <button class="action-btn" onclick="copyAbhangText(1)">
-                            <i class="fa-regular fa-copy"></i>कॉपी
-                        </button>
-                        <button class="action-btn" onclick="shareAbhang(1)">
-                            <i class="fa-solid fa-share-nodes"></i>शेअर
-                        </button>
-                        <button class="action-btn" onclick="saveAbhangAsImage(1)">
-                            <i class="fa-regular fa-image"></i>इमेज ९:१६
-                        </button>
+                        <button class="action-btn btn-copy" onclick="copyAbhangText(1)" aria-label="अभंग कॉपी करा" title="कॉपी करा"><i class="fa-regular fa-copy"></i></button>
+                        <button class="action-btn btn-share" onclick="shareAbhang(1)" aria-label="अभंग शेअर करा" title="शेअर करा"><i class="fa-solid fa-share-nodes"></i></button>
+                        <button class="action-btn btn-img" onclick="saveAbhangAsImage(1)" aria-label="इमेज डाऊनलोड करा" title="इमेज ९:१६"><i class="fa-regular fa-image"></i></button>
                     </div>
                     
-                    <button class="toggle-view-btn" id="toggle-btn-1" onclick="toggleAbhangView(1)">
-                        <i class="fa-solid fa-eye"></i><span>भावार्थ पहा</span>
-                    </button>
+                    <button class="toggle-view-btn btn-meaning" id="toggle-btn-1" onclick="toggleAbhangView(1)" aria-label="भावार्थ पहा" title="भावार्थ पहा"><i class="fa-solid fa-eye"></i><span></span></button>
                 </div>
             </div>
 
