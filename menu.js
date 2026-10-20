@@ -488,3 +488,22 @@ document.addEventListener("DOMContentLoaded", function () {
         btn.style.setProperty('display', 'none', 'important');
     });
 });
+
+
+/* ==========================================================================
+   AMAZON AFFILIATE SCRIPTS (AdSense Review Sathi Tatpurte Band Kele Ahe)
+   Ekda AdSense Approve zale ki fakt he /* aani */ comment kadha.
+   ========================================================================== */
+
+/*
+(function () {
+  const s1 = document.createElement("script");
+  s1.src = "/affiliate_books_dataset.js";
+  s1.onload = () => {
+    const s2 = document.createElement("script");
+    s2.src = "/affiliate-widget.js";
+    document.body.appendChild(s2);
+  };
+  document.body.appendChild(s1);
+})();
+*/
