@@ -1,8 +1,98 @@
 document.addEventListener("DOMContentLoaded", function () {
     // =========================================================
-    // 🍔 १. हॅम्बर्गर मेनू आणि नेव्हिगेशन लॉजिक (Fixed)
+    // 🍔 १. हॅम्बर्गर मेनू आणि नेव्हिगेशन लॉजिक (Exact Universal Fix)
     // =========================================================
     function initNavigation() {
+        // मोबाईल नेव्हिगेशनसाठी आवश्यक CSS थेट इंजेक्ट करणे
+        if (!document.getElementById("santvani-menu-style")) {
+            const menuStyle = document.createElement("style");
+            menuStyle.id = "santvani-menu-style";
+            menuStyle.innerHTML = `
+                /* मोबाईल हॅम्बर्गर बटण */
+                .hamburger-toggle {
+                    display: none;
+                    background: transparent;
+                    border: none;
+                    color: #ffb703;
+                    font-size: 1.6rem;
+                    cursor: pointer;
+                    padding: 8px 12px;
+                    z-index: 10001;
+                    line-height: 1;
+                }
+
+                /* काळा बॅकग्राउंड ओव्हरले */
+                .menu-overlay {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.75);
+                    backdrop-filter: blur(4px);
+                    z-index: 9998;
+                }
+                .menu-overlay.active {
+                    display: block;
+                }
+
+                /* मोबाईल स्क्रीन (७६८px खाली) */
+                @media (max-width: 768px) {
+                    .nav-container {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        position: relative;
+                        width: 100%;
+                    }
+
+                    .hamburger-toggle {
+                        display: block !important;
+                    }
+
+                    .nav-links {
+                        display: none !important;
+                        flex-direction: column;
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                        background: #0d0d0d;
+                        border-top: 1px solid rgba(255, 183, 3, 0.2);
+                        border-bottom: 2px solid #ffb703;
+                        padding: 15px 20px;
+                        box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+                        z-index: 9999;
+                        list-style: none;
+                        margin: 0;
+                    }
+
+                    .nav-links.active {
+                        display: flex !important;
+                    }
+
+                    .nav-links li {
+                        width: 100%;
+                        margin: 8px 0;
+                    }
+
+                    .nav-links a {
+                        color: #ffffff;
+                        font-size: 1rem;
+                        display: block;
+                        padding: 8px 0;
+                        text-decoration: none;
+                    }
+
+                    .nav-cta {
+                        display: none; /* मोबाईलवर CTA बटण लपवून क्लिन लूक */
+                    }
+                }
+            `;
+            document.head.appendChild(menuStyle);
+        }
+
         const navContainer = document.querySelector(".nav-container");
         const navLinks = document.querySelector(".nav-links");
 
@@ -51,26 +141,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         dropdown.classList.toggle("active");
                     }
                 };
-            }
-
-            if (window.innerWidth <= 768 && !document.querySelector(".bottom-nav-bar")) {
-                const bottomNav = document.createElement("div");
-                bottomNav.className = "bottom-nav-bar";
-                bottomNav.innerHTML = `
-                    <a href="/index.html" class="bottom-nav-item">
-                        <i class="fa-solid fa-house"></i>
-                        <span>मुख्य पृष्ठ</span>
-                    </a>
-                    <a href="/sarth-haripath.html" class="bottom-nav-item">
-                        <i class="fa-solid fa-book-open"></i>
-                        <span>हरिपाठ</span>
-                    </a>
-                    <a href="/sant-sahitya.html" class="bottom-nav-item">
-                        <i class="fa-solid fa-layer-group"></i>
-                        <span>संत साहित्य</span>
-                    </a>
-                `;
-                document.body.appendChild(bottomNav);
             }
         }
     }
@@ -137,7 +207,6 @@ function initSantvaniShareAndComments() {
     container.style.cssText = "max-width: 850px; margin: 50px auto 30px auto; font-family: 'Plus Jakarta Sans', 'Poppins', sans-serif; color: #fff;";
 
     container.innerHTML = `
-        <!-- SHARE BUTTONS SECTION -->
         <div style="background: #121212; border: 1px solid rgba(255, 183, 3, 0.3); border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
             <h4 style="font-family: 'Rozha One', serif; font-size: 20px; color: #ffb703; margin: 0 0 15px 0; display: flex; align-items: center; gap: 8px;">
                 🔗 हा लेख शेअर करा (Share Article)
@@ -151,7 +220,6 @@ function initSantvaniShareAndComments() {
             </div>
         </div>
 
-        <!-- FIREBASE COMMENTS SECTION (PREMIUM LOOK) -->
         <div style="background: #121212; border: 1px solid rgba(255, 183, 3, 0.3); border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.5);">
             <h3 style="font-family: 'Rozha One', serif; font-size: 22px; color: #ffb703; margin-top: 0; margin-bottom: 20px;">
                 💬 प्रतिक्रिया व अभिप्राय (<span id="total-comments-count">0</span>)
@@ -182,7 +250,6 @@ function initSantvaniShareAndComments() {
         });
     };
 
-    // 🔔 कमेंट करताना पुश नोटिफिकेशनची परवानगी मागणे
     function requestPushPrompt() {
         if (window.OneSignalDeferred) {
             OneSignalDeferred.push(function(OneSignal) {
@@ -202,7 +269,6 @@ function initSantvaniShareAndComments() {
             return;
         }
 
-        // ऑटो नोटिफिकेशन प्रॉम्ट मागणे
         requestPushPrompt();
 
         var commentsRef = db.ref("comments/" + pageId);
@@ -385,7 +451,6 @@ function initSantvaniShareAndComments() {
             return;
         }
 
-        // रिप्लाय देतानासुद्धा नोटिफिकेशन प्रॉम्ट कॉल करणे
         requestPushPrompt();
 
         var replyData = {
@@ -435,15 +500,11 @@ function initSantvaniShareAndComments() {
     gtag('config', 'G-YEN0M3VBYE');
 })();
 
-// =========================================================
-// 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM (OFFSET FIXED)
-// =========================================================
 (function() {
-    // 🎯 मोबाईल आणि डेस्कटॉप दोन्हीवर घंटी वर घेण्यासाठी CSS
     var style = document.createElement('style');
     style.innerHTML = `
         #onesignal-bell-container.onesignal-reset {
-            bottom: 75px !important; /* बॉटम बारपासून वर उचलण्यासाठी */
+            bottom: 75px !important;
             right: 15px !important;
             z-index: 999999 !important;
         }
@@ -467,43 +528,9 @@ function initSantvaniShareAndComments() {
     });
 })();
 
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
-    // १. सर्व भावार्थ थेट शो करा (Inline Style काढून टाका)
     document.querySelectorAll('[id^="bhavarth-text-"]').forEach(el => el.style.setProperty('display', 'block', 'important'));
-    
-    // २. 'भावार्थ पहा' हे टॉगल बटण पूर्णपणे लपवा
     document.querySelectorAll('[id^="toggle-btn-"]').forEach(el => el.style.setProperty('display', 'none', 'important'));
+    document.querySelectorAll('.bhavarth-text').forEach(el => el.style.setProperty('display', 'block', 'important'));
+    document.querySelectorAll('.toggle-view-btn').forEach(btn => btn.style.setProperty('display', 'none', 'important'));
 });
-document.addEventListener("DOMContentLoaded", function () {
-    // १. HTML मधील 'display: none' काढून भावार्थ १००% नेहमी दाखवा
-    document.querySelectorAll('.bhavarth-text').forEach(function (el) {
-        el.style.setProperty('display', 'block', 'important');
-    });
-
-    // २. 'भावार्थ पहा' हे बटण लपवा
-    document.querySelectorAll('.toggle-view-btn').forEach(function (btn) {
-        btn.style.setProperty('display', 'none', 'important');
-    });
-});
-
-
-/* ==========================================================================
-   AMAZON AFFILIATE SCRIPTS (AdSense Review Sathi Tatpurte Band Kele Ahe)
-   Ekda AdSense Approve zale ki fakt he /* aani */ comment kadha.
-   ========================================================================== */
-
-/*
-(function () {
-  const s1 = document.createElement("script");
-  s1.src = "/affiliate_books_dataset.js";
-  s1.onload = () => {
-    const s2 = document.createElement("script");
-    s2.src = "/affiliate-widget.js";
-    document.body.appendChild(s2);
-  };
-  document.body.appendChild(s1);
-})();
-*/
