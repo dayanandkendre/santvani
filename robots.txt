@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
 
-# Private Admin / Orphan Pages Block (No Crawl)
-Disallow: /admin.html
-
-# Sitemap Link
 Sitemap: https://santvani.co.in/sitemap.xml
