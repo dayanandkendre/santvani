@@ -102,11 +102,11 @@
 <div class="aarti-filter-wrapper" style="text-align: center; margin: 30px auto 10px auto; max-width: 1280px; padding: 0 20px;">
 <div class="filter-title" style="color: #a69079; font-size: 0.95rem; margin-bottom: 12px; font-weight: 500; letter-spacing: 1px;">आरती संग्रह श्रेणी निवडा</div>
 <div class="aarti-filter-bar">
-<button class="filter-btn active" onclick="filterAarti('all')">सर्व आरत्या</button>
-<button class="filter-btn" onclick="filterAarti('ganesh')">✨ श्री गणेश आरत्या</button>
-<button class="filter-btn" onclick="filterAarti('vitthal')">🕉️ श्री विठ्ठल आरत्या</button>
-<button class="filter-btn" onclick="filterAarti('sant')">🙏 संतांच्या आरत्या</button>
-<button class="filter-btn" onclick="filterAarti('devi-devta')">🔱 देवी-देवता आरत्या</button>
+<button class="filter-btn active" data-filter="all">सर्व आरत्या</button>
+<button class="filter-btn" data-filter="ganesh">✨ श्री गणेश आरत्या</button>
+<button class="filter-btn" data-filter="vitthal">🕉️ श्री विठ्ठल आरत्या</button>
+<button class="filter-btn" data-filter="sant">🙏 संतांच्या आरत्या</button>
+<button class="filter-btn" data-filter="devi-devta">🔱 देवी-देवता आरत्या</button>
 </div>
 </div>
 <!-- ४-बॉक्स मुख्य ग्रिड लेआउट विभाग -->
@@ -118,8 +118,8 @@
 <h3>१. सुखकर्ता दुःखहर्ता</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -143,13 +143,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(1)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="1" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(1)" title="शेअर करा">
+<button class="action-icon-btn" data-share="1" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(1, 'Sukhkarta-Dukhharta')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="1" data-file="Sukhkarta-Dukhharta" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -160,8 +160,8 @@
 <h3>२. नानापरिमळ दुर्वा</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -185,13 +185,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(2)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="2" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(2)" title="शेअर करा">
+<button class="action-icon-btn" data-share="2" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(2, 'Nana-Parimal-Durva')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="2" data-file="Nana-Parimal-Durva" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -202,8 +202,8 @@
 <h3>३. उंदरावरि बैसोनि</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -230,13 +230,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(3)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="3" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(3)" title="शेअर करा">
+<button class="action-icon-btn" data-share="3" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(3, 'Undravar-Baisoni')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="3" data-file="Undravar-Baisoni" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -247,8 +247,8 @@
 <h3>४. आरती करु तुज मोरया</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -266,13 +266,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(4)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="4" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(4)" title="शेअर करा">
+<button class="action-icon-btn" data-share="4" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(4, 'Aarti-Karu-Tuj-Morya')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="4" data-file="Aarti-Karu-Tuj-Morya" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -283,8 +283,8 @@
 <h3>५. स्थापित प्रथमारंभी तुज</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -312,13 +312,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(5)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="5" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(5)" title="शेअर करा">
+<button class="action-icon-btn" data-share="5" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(5, 'Sthapit-Prathamrambhi')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="5" data-file="Sthapit-Prathamrambhi" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -329,8 +329,8 @@
 <h3>६. जय मोरेश्वरा आरती</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -354,13 +354,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(6)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="6" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(6)" title="शेअर करा">
+<button class="action-icon-btn" data-share="6" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(6, 'Jai-Moreshwara')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="6" data-file="Jai-Moreshwara" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -371,8 +371,8 @@
 <h3>७. जय वक्रतुंडा आरती</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -395,13 +395,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(7)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="7" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(7)" title="शेअर करा">
+<button class="action-icon-btn" data-share="7" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(7, 'Jai-Vakratunda')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="7" data-file="Jai-Vakratunda" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -412,8 +412,8 @@
 <h3>८. जय गजानना आरती</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -437,13 +437,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(8)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="8" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(8)" title="शेअर करा">
+<button class="action-icon-btn" data-share="8" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(8, 'Jai-Gajanana-Aarti')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="8" data-file="Jai-Gajanana-Aarti" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -454,8 +454,8 @@
 <h3>९. दीनदयाळा गणपति आरती</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -477,13 +477,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(9)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="9" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(9)" title="शेअर करा">
+<button class="action-icon-btn" data-share="9" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(9, 'Deendayala-Ganpati-Aarti')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="9" data-file="Deendayala-Ganpati-Aarti" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -495,8 +495,8 @@
 <h3>१०. युगे अठ्ठावीस विठ्ठल आरती</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -520,13 +520,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(10)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="10" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(10)" title="शेअर करा">
+<button class="action-icon-btn" data-share="10" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(10, 'Yuge-Athavis-Vitthal-Aarti')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="10" data-file="Yuge-Athavis-Vitthal-Aarti" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -537,8 +537,8 @@
 <h3>११. येई हो येई बा विठ्ठला</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -556,13 +556,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(11)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="11" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(11)" title="शेअर करा">
+<button class="action-icon-btn" data-share="11" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(11, 'Yei-Ho-Yei-Ba-Vitthala')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="11" data-file="Yei-Ho-Yei-Ba-Vitthala" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -574,8 +574,8 @@
 <h3>१२. श्री ज्ञानराजा आरती</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -605,13 +605,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(12)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="12" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(12)" title="शेअर करा">
+<button class="action-icon-btn" data-share="12" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(12, 'Shree-Dnyanraja-Aarti')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="12" data-file="Shree-Dnyanraja-Aarti" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -622,8 +622,8 @@
 <h3>१३. श्री तुकाराम आरती</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -648,13 +648,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(13)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="13" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(13)" title="शेअर करा">
+<button class="action-icon-btn" data-share="13" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(13, 'Sant-Tukaram-Aarti')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="13" data-file="Sant-Tukaram-Aarti" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -665,8 +665,8 @@
 <h3>१४. श्री एकनाथा आरती</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -688,13 +688,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(14)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="14" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(14)" title="शेअर करा">
+<button class="action-icon-btn" data-share="14" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(14, 'Sant-Eknath-Aarti')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="14" data-file="Sant-Eknath-Aarti" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -705,8 +705,8 @@
 <h3>१५. श्री नामदेव आरती</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -736,13 +736,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(15)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="15" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(15)" title="शेअर करा">
+<button class="action-icon-btn" data-share="15" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(15, 'Sant-Namdev-Aarti')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="15" data-file="Sant-Namdev-Aarti" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -754,8 +754,8 @@
 <h3>१६. श्री शंकराची आरती</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -779,13 +779,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(16)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="16" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(16)" title="शेअर करा">
+<button class="action-icon-btn" data-share="16" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(16, 'Shree-Shankar-Aarti')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="16" data-file="Shree-Shankar-Aarti" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -796,8 +796,8 @@
 <h3>१७. श्री दुर्गेची आरती</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -821,13 +821,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(17)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="17" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(17)" title="शेअर करा">
+<button class="action-icon-btn" data-share="17" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(17, 'Shree-Durga-Aarti')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="17" data-file="Shree-Durga-Aarti" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -838,8 +838,8 @@
 <h3>१८. श्री महालक्ष्मी आरती</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -857,13 +857,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(18)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="18" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(18)" title="शेअर करा">
+<button class="action-icon-btn" data-share="18" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(18, 'Shree-Mahalaxmi-Aarti')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="18" data-file="Shree-Mahalaxmi-Aarti" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -874,8 +874,8 @@
 <h3>१९. श्री मारुतीची आरती</h3>
 </div>
 <div class="card-tab-nav">
-<button class="card-tab-btn active" onclick="toggleCardTab(this, 'lyrics')">आरती वाचा</button>
-<button class="card-tab-btn" onclick="toggleCardTab(this, 'arth')">अर्थ पहा</button>
+<button class="card-tab-btn active" data-tab="lyrics">आरती वाचा</button>
+<button class="card-tab-btn" data-tab="arth">अर्थ पहा</button>
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
@@ -897,13 +897,13 @@
                     </div>
 </div>
 <div class="card-footer-actions">
-<button class="action-icon-btn" onclick="copyAartiText(19)" title="कॉपी करा">
+<button class="action-icon-btn" data-copy="19" title="कॉपी करा">
 <svg viewbox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></svg>
 </button>
-<button class="action-icon-btn" onclick="shareAarti(19)" title="शेअर करा">
+<button class="action-icon-btn" data-share="19" title="शेअर करा">
 <svg viewbox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg>
 </button>
-<button class="action-icon-btn download-accent" onclick="downloadAartiCard(19, 'Shree-Maruti-Aarti')" title="इमेज डाऊनलोड करा">
+<button class="action-icon-btn download-accent" data-download="19" data-file="Shree-Maruti-Aarti" title="इमेज डाऊनलोड करा">
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
@@ -976,8 +976,7 @@
             c.style.display = (cat === "all" || c.getAttribute("data-category") === cat) ? "" : "none";
         });
         document.querySelectorAll(".filter-btn").forEach(function (b) {
-            var on = (b.getAttribute("onclick") || "").indexOf("'" + cat + "'") !== -1;
-            b.classList.toggle("active", on);
+            b.classList.toggle("active", b.getAttribute("data-filter") === cat);
         });
     };
 
@@ -1114,6 +1113,23 @@
             alert("इमेज तयार करताना अडचण आली. कृपया पुन्हा प्रयत्न करा.");
         });
     };
+
+    // ---------- एकच click listener (capture): inline onclick वर अवलंबून नाही ----------
+    document.addEventListener("click", function (e) {
+        var t = e.target;
+        if (!t || !t.closest) return;
+        var el;
+        if ((el = t.closest("[data-filter]"))) { window.filterAarti(el.getAttribute("data-filter")); return; }
+        if ((el = t.closest("[data-tab]"))) { window.toggleCardTab(el, el.getAttribute("data-tab")); return; }
+        if ((el = t.closest("[data-copy]"))) { window.copyAartiText(el.getAttribute("data-copy")); return; }
+        if ((el = t.closest("[data-share]"))) { window.shareAarti(el.getAttribute("data-share")); return; }
+        if ((el = t.closest("[data-download]"))) {
+            window.downloadAartiCard(el.getAttribute("data-download"), el.getAttribute("data-file"));
+            return;
+        }
+    }, true);
+
+    console.info("Aarti JS v2 loaded");
 })();
 </script>
 <script src="/menu.js"></script>
