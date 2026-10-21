@@ -4,9 +4,9 @@
 Total HTML files      : 930
 noindex pages (vagale) : 335
 Low text pages        : 0  (< 150 shabd, noindex vagale)
-Duplicate blocks      : 1123 (veg-vegle pages), 383 (ekach page madhe)
+Duplicate blocks      : 1123 (veg-vegle pages), 363 (ekach page madhe)
 Near-duplicate pages  : 0
-Mixed/chukiche shabd  : 322 (85 pages madhe)
+Mixed/chukiche shabd  : 297 (67 pages madhe)
 
 ------------------------------------------------------------------------
 1) LOW TEXT PAGES (< 150 shabd)  - AdSense sathi dhokyache
@@ -4815,30 +4815,16 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
 3) EKACH PAGE MADHE PUNHA PUNHA AALELE TEXT
 ------------------------------------------------------------------------
   kabir-doha.html  -> 3 vela: "✨ संतवाणी — www.santvani.co.in ✨..."
-  kabir-doha.html  -> 2 vela: ""जाति न पूछो साधु की, पूछि लीजिए ज्ञान ।..."
-  kabir-doha.html  -> 2 vela: "मोल करो तलवार का, पड़ा रहन दो म्यान ॥१०॥"..."
-  kabir-doha.html  -> 2 vela: ""धीरे-धीरे रे मना, धीरे सब कुछ होय ।..."
-  kabir-doha.html  -> 2 vela: ""पाँच पहर धन्धे गया, तीन पहर गया सोय ।..."
-  kabir-doha.html  -> 2 vela: ""कबीरा सोया क्या करे, उठि न भजे भगवान ।..."
-  kabir-doha.html  -> 2 vela: ""रात गंवाई सोय के, दिवस गंवाया खाय ।..."
   kabir-doha.html  -> 2 vela: "तरुवर ज्यों पत्ती झड़े, बहुरि न लागे डार ॥२२॥"..."
   kabir-doha.html  -> 2 vela: ""काल करे सो आज कर, आज करे सो अब ।..."
-  kabir-doha.html  -> 2 vela: ""माया छाया एक सी, बिरला जाने कोय ।..."
   kabir-doha.html  -> 2 vela: ""अटकी भाल शरीर में तीर रहा है टूट ।..."
-  kabir-doha.html  -> 2 vela: ""घट का परदा खोलकर, सन्मुख दे दीदार ।..."
   kabir-doha.html  -> 2 vela: "कहा काज संसार से, तुझे धनी से काम ॥९३॥"..."
-  kabir-doha.html  -> 2 vela: ""कबिरा यह तन जात है, सके तो ठौर लगा ।..."
   kabir-doha.html  -> 2 vela: "सो जाने जो जरमुआ, जाकी लाई होय ॥१०६॥"..."
   kabir-doha.html  -> 2 vela: "जाके विषय विष भरा, दास बन्दगी होय ॥१०९॥"..."
-  kabir-doha.html  -> 2 vela: ""कबीर जात पुकारया, चढ़ चन्दन की डार ।..."
-  kabir-doha.html  -> 2 vela: ""एक कहूँ तो है नहीं, दूजा कहूँ तो गार ।..."
-  kabir-doha.html  -> 2 vela: ""केतन दिन ऐसे गए, अन रुचे का नेह ।..."
   kabir-doha.html  -> 2 vela: "सीस दिये जो गुरु मिलै, तो भी सस्ता जान ॥२४७॥"..."
-  kabir-doha.html  -> 2 vela: ""बैरागी बिरकत भला, गिरही चित्त उदार ।..."
   kabir-doha.html  -> 2 vela: "लज्जावान अति निछलता, कोमल हिरदा सोय ॥६०६॥"..."
   kabir-doha.html  -> 2 vela: "एकहिं गुरु के नाम बिन, जदि तदि परलय जाय ॥७८९॥"..."
   kabir-doha.html  -> 2 vela: "अजहुँ झोला बहुत है, घर आवै तब जान ॥७९४॥"..."
-  kabir-doha.html  -> 2 vela: ""काल काम तत्काल है, बुरा न कीजै कोय ।..."
   pages/abhang/bhanudas-gatha-part6.html  -> 4 vela: "वायां शीण तळवटीं तुज होय ॥२॥..."
   pages/abhang/eknath-gatha-part17.html  -> 2 vela: "एका जनार्दनी विश्वव्यापक हा देव । एक एक पाहतां अवघें स्वप्नवत वाव ॥४॥..."
   pages/abhang/lokpriya-tukaram-abhang.html  -> 2 vela: "कंथा कमंडलू देह उपचारा । जाणवितो वारा अवसरु ॥४॥..."
@@ -4866,12 +4852,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   pages/abhang/sant-sena-maharaj-abhang.html  -> 2 vela: "सेना म्हणे सर्व संग । केला त्याग यासाठीं ॥४॥..."
   pages/abhang/sant-sopandev-abhang.html  -> 2 vela: "हरि हरि जाला प्रपंच अबोला ।..."
   pages/abhang/tukaram-gatha-part13.html  -> 2 vela: "तुका ह्मणे भावें । शरण ह्मणवितां बरवें ॥३॥..."
-  pages/artisangrah/artya-sangrah.html  -> 19 vela: "सौजन्य: www.santvani.co.in..."
-  pages/artisangrah/artya-sangrah.html  -> 2 vela: "उंदरावरि बैसोनि दूडदूडा येसी। हाती मोद्क लाडू घेउनियां खासी। भक्तांचे संकटी धावू..."
-  pages/artisangrah/artya-sangrah.html  -> 2 vela: "स्थापित प्रथमारंभी तुज मंगलमूर्ती। विघ्ने वारुनी करिसी दीनेच्छा पुरती। ब्रह्मा व..."
-  pages/artisangrah/artya-sangrah.html  -> 2 vela: "वेदशास्त्रांमाजी तूं मंगलमूर्ती। अगणित महिमा तुझा कल्याण स्फ़ूर्ती॥ भक्तांलागी द..."
-  pages/artisangrah/artya-sangrah.html  -> 2 vela: "जय देव जय देव जय वक्रतुंडा। सिंदुरमंडीत विशाळ सरळ भुजदंडा॥ ध्रु० ॥ प्रसन्न भाळा ..."
-  pages/artisangrah/artya-sangrah.html  -> 2 vela: "युगे अठ्ठावीस विठ्ठल विटेवरी उभा । वामांगी रखुमाई दिसे दिव्य शोभा ॥ पुंडलिकाचे भ..."
   pages/blog/ashtavinayak-yatra-sampurna-mahiti.html  -> 8 vela: "📍 मंदिर लोकेशन व कसे जावे (How to Reach):..."
   pages/blog/bhaubeej-yamadwitiya-katha-mahatva-ovalani.html  -> 2 vela: "सीमोल्लंघन, शमी पूजन व आपट्याची पाने..."
   pages/blog/dhanteras-dhanvantari-puja-yamdeepdan-mahatva.html  -> 2 vela: "सीमोल्लंघन, शमी पूजन व आपट्याची पाने..."
@@ -5207,80 +5187,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
 5) MIXED / CHUKICHE / CHIKTALELE SHABD
 ------------------------------------------------------------------------
 
-  index.html  (1 shabd)
-      'श्रीरामांच्याा'  <- dohri matra/virama
-          ...संत एकनाथ महाराजांनी रचलेले प्रभू श्रीरामांच्याा चरित्रावरील भावपूर्ण ...
-
-  pages/abhang/eknath-gatha-part11.html  (1 shabd)
-      'जनार्दनींं'  <- dohri matra/virama
-          ...तव ती म्हणे परतां सर । कृष्ण म्हणे दे चेंडूं सत्वर । एका जनार्दनींं नि...
-
-  pages/abhang/eknath-gatha-part14.html  (1 shabd)
-      'विरहावस्थाातील'  <- dohri matra/virama
-          ...संत एकनाथ महाराजांच्या विरहावस्थाातील अभंग आणि त्यांचा सार्थ मराठी भाव...
-
-  pages/abhang/eknath-gatha-part15.html  (1 shabd)
-      'वनक्रीडाातील'  <- dohri matra/virama
-          ...संत एकनाथ महाराजांच्या वनक्रीडाातील अभंग आणि त्यांचा सार्थ मराठी भावार...
-
-  pages/abhang/eknath-gatha-part17.html  (1 shabd)
-      'रासक्रीडाातील'  <- dohri matra/virama
-          ...संत एकनाथ महाराजांच्या रासक्रीडाातील अभंग आणि त्यांचा सार्थ मराठी भावा...
-
-  pages/abhang/eknath-gatha-part2.html  (1 shabd)
-      'बालक्रीडाातील'  <- dohri matra/virama
-          ...संत एकनाथ महाराजांच्या बालक्रीडाातील अभंग आणि त्यांचा सार्थ मराठी भावा...
-
-  pages/abhang/eknath-gatha-part20.html  (1 shabd)
-      'पिंगाातील'  <- dohri matra/virama
-          ...संत एकनाथ महाराजांच्या पिंगाातील अभंग आणि त्यांचा सार्थ मराठी भावार्थ....
-
-  pages/abhang/eknath-gatha-part27.html  (1 shabd)
-      'भोंवराातील'  <- dohri matra/virama
-          ...संत एकनाथ महाराजांच्या भोंवराातील अभंग आणि त्यांचा सार्थ मराठी भावार्थ...
-
-  pages/abhang/eknath-gatha-part3.html  (1 shabd)
-      'प्रगटलाातील'  <- dohri matra/virama
-          ...संत एकनाथ महाराजांच्या श्रीकृष्ण प्रगटलाातील अभंग आणि त्यांचा सार्थ मर...
-
-  pages/abhang/mahadev-abhang.html  (1 shabd)
-      'ारिताती'  <- matra/jodakshar shabdachya survatila
-          ...ारिताती घणी माथा घाव ॥४॥...
-
-  pages/abhang/namdev-gatha-part4.html  (1 shabd)
-      'येईंंगे'  <- dohri matra/virama
-          ...येईंंगे माधवे पाजीं प्रेमपान्हा । विषयाचा आंदणा नको करूं ॥१॥...
-
-  pages/abhang/nilobaray-gatha-part11.html  (1 shabd)
-      'दुुसऱ्या'  <- dohri matra/virama
-          ...हा श्रीहरी असा चतुर आहे की, तो एकटा राहूनही दुुसऱ्या कोणाला आड येऊ देत...
-
-  pages/abhang/nilobaray-gatha-part13.html  (1 shabd)
-      'संंतांनो'  <- dohri matra/virama
-          ...मी दीन, अनाथ आणि तुझा गरीब याचक आहे, मला भक्तीची भीक दे. हे संंतांनो, ...
-
-  pages/abhang/sant-sena-maharaj-abhang.html  (1 shabd)
-      '्षोभ'  <- matra/jodakshar shabdachya survatila
-          ...खूण जाणे चित्तीं ्षोभ उपजेना । कळवळुनि स्तना लाव पाळी ॥२॥...
-
-  pages/abhang/tukaram-gatha-part11.html  (3 shabd)
-      'नििंश्चत'  <- dohri matra/virama
-          ...अवघें आलें आंत पोटा पडिलें थीतें । सारूनि नििंश्चत जालों देवा ॥ध्रु.॥...
-      'िस्थर'  <- matra/jodakshar shabdachya survatila
-          ...देसी कीं न देसी पायांचें दर्शन । ह्मणऊनि मन िस्थर नाहीं ॥ध्रु.॥...
-      'रििद्धसिद्धी'  <- dohri matra/virama
-          ...तुका ह्मणे हा हो प्रपंच गाढा । थोरली ते पीडा रििद्धसिद्धी ॥३॥...
-
-  pages/abhang/tukaram-gatha-part12.html  (2 shabd)
-      'सििद्ध'  <- dohri matra/virama
-          ...जया वोळगती सििद्ध सर्वठायीं । तुझें नाम हें चांगलें गे विठाइऩ ॥३॥...
-      'रििद्धसिद्धी'  <- dohri matra/virama
-          ...दास्य करील किळकाळ बंद तुटेल मायाजाळ । होतील सकळ रििद्धसिद्धी ह्मणियारी...
-
-  pages/abhang/tukaram-gatha-part14.html  (1 shabd)
-      'फुुकट'  <- dohri matra/virama
-          ...पतिव्रता स्त्रीने केलेले अलंकार पतीच्या सुखासाठी असतात तेव्हाच ते शोभत...
-
   pages/abhang/tukaram-gatha-part2.html  (1 shabd)
       'ात'  <- matra/jodakshar shabdachya survatila
           ...या अभंगात श्रीकृष्णाच्या अद्भूत आणि दिव्य स्वरूपाचे आश्चर्य व्यक्त केल...
@@ -5297,13 +5203,7 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       'िश्रयाळ'  <- matra/jodakshar shabdachya survatila
           ...िश्रयाळ बापुडे सात्विकवाणी । खादलें कापूनि त्याचें पोर ।...
 
-  pages/blog/ashtavinayak-yatra-sampurna-mahiti.html  (1 shabd)
-      'पौरााणिक'  <- dohri matra/virama
-          ...अष्टविनायकांमधील चौथा गणपती म्हणजे रांजणगावचा श्री महागणपती. अष्टविनाय...
-
-  pages/blog/sankashti-chaturthi-mahatmya-pothi-marathi.html  (2 shabd)
-      'श्रीसकलविघ्नहरणगजानानापर्णमस्तु'  <- khup motha shabd (shabd chiktalele?)
-          ...॥ श्रीसकलविघ्नहरणगजानानापर्णमस्तु ॥...
+  pages/blog/sankashti-chaturthi-mahatmya-pothi-marathi.html  (1 shabd)
       'श्रीसकलविघ्नहरणगजाननार्पणमस्तु'  <- khup motha shabd (shabd chiktalele?)
           ...॥ श्रीसकलविघ्नहरणगजाननार्पणमस्तु ॥...
 
@@ -5463,15 +5363,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       'कट्वम्ललवणात्युष्णतीक्ष्णरूक्षविदाहिनः'  <- khup motha shabd (shabd chiktalele?)
           ...कट्वम्ललवणात्युष्णतीक्ष्णरूक्षविदाहिनः ।...
 
-  pages/granth/dnyaneshwari/adhyay-18.html  (9 shabd)
+  pages/granth/dnyaneshwari/adhyay-18.html  (6 shabd)
       'विषयेन्द्रियसंयोगाद्यत्तदग्रेऽमृतोपमम्'  <- khup motha shabd (shabd chiktalele?)
           ...विषयेन्द्रियसंयोगाद्यत्तदग्रेऽमृतोपमम् ।...
-      'इष्टानिष्टींंं'  <- dohri matra/virama
-          ...यापरी इष्टानिष्टींंं । रागद्वेष किरीटी ।...
-      'उदकपणेंं'  <- dohri matra/virama
-          ...गेलियाही भलतेउता । उदकपणेंं पंडुसुता ।...
-      'दर्पणातेंं'  <- dohri matra/virama
-          ...पैं दर्पणातेंं दर्पणें । पाहिलिया होय न पाहणें ।...
       'आनंंदु'  <- dohri matra/virama
           ...तेथ बुझिजे बोधु बोधें । आनंंदु घेपे आनंदें ।...
       'बाहाळींं'  <- dohri matra/virama
