@@ -27,11 +27,27 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <!-- Link to Old Root CSS -->
 <link href="../../style.css" rel="stylesheet"/>
+<style>
+/* fallback (सर्वात कमी प्राधान्य): पोस्टर स्क्रीनबाहेर ठेवणे. मुख्य स्टाइल css/aarti-grid.css मध्ये */
+.hidden-poster { position: fixed; left: -99999px; top: 0; }
+</style>
 <!-- Link to Aarti Grid CSS Component -->
 <link href="css/aarti-grid.css" rel="stylesheet"/>
-<!-- HTML2Canvas Library -->
+<!-- HTML2Canvas Library (फक्त इमेज डाऊनलोडसाठी) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
 
 <!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "संपूर्ण आरती संग्रह",
+  "url": "https://santvani.co.in/pages/artisangrah/artya-sangrah.html",
+  "description": "गणपती, विठ्ठल, संत आणि देवी-देवतांच्या प्रसिद्ध आरत्या देवनागरी लिपीत अर्थासह.",
+  "publisher": { "@type": "Organization", "name": "संतवाणी" }
+}
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8300473989533585" crossorigin="anonymous"></script>
 
 
 </head>
@@ -44,8 +60,43 @@
 </div>
 </div>
 <!-- मुख्य मेनू बार -->
+<nav class="navbar">
+<div class="nav-container">
+<a href="/index.html" class="logo"><span class="logo-icon">✨</span> संत<span class="logo-highlight">वाणी</span></a>
+<ul class="nav-links">
+<li><a href="/index.html">मुख्य पृष्ठ</a></li>
+<li><a href="/sant-sahitya.html">संत साहित्य</a></li>
+<li><a href="/vangmay-sangrah.html" class="active">वाङ्मय संग्रह</a></li>
+<li><a href="/sarth-haripath.html">हरिपाठ</a></li>
+<li><a href="/granth-sampada.html">ग्रंथ संपदा</a></li>
+<li><a href="/nitya-pathan-stotra.html">नित्य पठण स्तोत्रे</a></li>
+<li><a href="/pages/blog/ekadashi-vrat.html">सर्व एकादशी</a></li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle">इतर <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i></a>
+<ul class="dropdown-menu">
+<li><a href="/photo-gallery.html">फोटो गॅलरी</a></li>
+<li><a href="/san-utsav.html">सण आणि उत्सव</a></li>
+<li><a href="/pages/artisangrah/artya-sangrah.html">आरत्या संग्रह</a></li>
+<li><a href="/santache-prasang.html">संतांचे प्रसंग</a></li>
+<li><a href="/shivpuran-katha-sangrah.html">शिवपुराण कथा संग्रह</a></li>
+<li><a href="/ganeshpuran-katha-sangrah.html">गणेशपुराण कथा संग्रह</a></li>
+<li><a href="/nivdak-abhang.html">निवडक अभंग</a></li>
+</ul>
+</li>
+</ul>
+<div class="nav-cta"><a href="#aarti-grid-section" class="btn-nav">आरती वाचा</a></div>
+</div>
+</nav>
 
-<!-- =================== नवीन प्रीमियम हिरो सेक्शन =================== -->
+<!-- =================== हिरो सेक्शन =================== -->
+<section class="inner-hero">
+<div class="hero-bg-overlay"></div>
+<div class="inner-hero-content">
+<span class="gold-badge">नित्य उपासना</span>
+<h1 class="inner-title">संपूर्ण <span class="text-gradient">आरती संग्रह</span></h1>
+<p class="inner-tagline">गणपती, विठ्ठल, संत आणि देवी-देवतांच्या प्रसिद्ध आरत्या देवनागरी लिपीत, भावार्थासह. प्रत्येक आरतीचा सुंदर फोटो डाऊनलोड करून शेअर करता येतो.</p>
+</div>
+</section>
 
 <!-- प्रीमियम क्विक नेव्हिगेशन फिल्टर बार -->
 <div class="aarti-filter-wrapper" style="text-align: center; margin: 30px auto 10px auto; max-width: 1280px; padding: 0 20px;">
@@ -62,7 +113,7 @@
 <section id="aarti-grid-section" style="background-color: #000000; padding: 20px 0;">
 <div class="aarti-premium-grid">
 <!-- =================== कार्ड १: सुखकर्ता दुःखहर्ता =================== -->
-<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-1">
+<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-1" data-poster-title="श्री गणपतीची आरती" data-poster-sub="१. सुखकर्ता दुःखहर्ता">
 <div class="card-header">
 <h3>१. सुखकर्ता दुःखहर्ता</h3>
 </div>
@@ -72,19 +123,19 @@
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
-                        सुखकर्ता दुःखहर्ता वार्ता विघ्नाची। 
+                        सुखकर्ता दुःखहर्ता वार्ता विघ्नाची।
                         नुरवी पुरवी प्रेम कृपा जयाची ।
-                        सर्वांगी सुंदर उटी शेंदुराची। 
+                        सर्वांगी सुंदर उटी शेंदुराची।
                         कंठी झळके माळ मुक्ताफळांची ॥१॥
-                        जय देव जयदेव  जय मंगलमूर्ती। 
+                        जय देव जय देव जय मंगलमूर्ती।
                         दर्शनमात्रें मनकामना पुरती ॥धृ.॥
-                        रत्नखचित फरा तुज गौरीकुमरा। 
+                        रत्नखचित फरा तुज गौरीकुमरा।
                         चंदनाची उटी कुंकुमकेशरा ।
-                        हिरे जडित मुकुट शोभतो बरा। 
+                        हिरे जडित मुकुट शोभतो बरा।
                         रुणझुणती नुपुरें चरणी घागरिया ॥२॥
-                        लंबोदर पीतांबर फणीवरबंधना। 
+                        लंबोदर पीतांबर फणीवरबंधना।
                         सरळ सोंड वक्रतुंड त्रिनयना ।
-                        दास रामाचा वाट पाहे सदना। 
+                        दास रामाचा वाट पाहे सदना।
                         संकटी पावावे निर्वाणी रक्षावे, सुरवरवंदना ॥३॥
                     </div>
 <div class="tab-text-block arth-text">
@@ -102,31 +153,9 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-1">
-<h2 class="poster-title-pink">श्री गणपतीची आरती</h2>
-<div class="poster-subtitle-gold">१. सुखकर्ता दुःखहर्ता</div>
-<div class="poster-divider"></div>
-<div class="poster-lyrics-body">
-                        सुखकर्ता दुःखहर्ता वार्ता विघ्नाची। 
-                        नुरवी पुरवी प्रेम कृपा जयाची ।
-                        सर्वांगी सुंदर उटी शेंदुराची। 
-                        कंठी झळके माळ मुक्ताफळांची ॥१॥
-                        जय देव जय देव जय मंगलमूर्ती। 
-                        दर्शनमात्रें मनकामना पुरती ॥धृ.॥
-                        रत्नखचित फरा तुज गौरीकुमरा..
-                        चंदनाची उटी कुंकुमकेशरा ।
-                        हिरे जडित मुकुट शोभतो बरा। 
-                        रुणझुणती नुपुरें चरणी घागरिया ॥२॥
-                        लंबोदर पीतांबर फणीवरबंधना। 
-                        सरळ सोंड वक्रतुंड त्रिनयना ।
-                        दास रामाचा वाट पाहे सदना। 
-                        संकटी पावावे निर्वाणी रक्षावे, सुरवरवंदना ॥३॥
-                    </div>
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== कार्ड २: नानापरिमळ दुर्वा =================== -->
-<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-2">
+<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-2" data-poster-title="श्री गणपतीची आरती" data-poster-sub="२. नानापरिमळ दुर्वा">
 <div class="card-header">
 <h3>२. नानापरिमळ दुर्वा</h3>
 </div>
@@ -137,18 +166,18 @@
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
                         नानापरिमळ दुर्वा शेंदूर शमिपत्रें।
-                        लाडू मोद्क अन्ने परिपूरित पात्रें।
-                        ऎसे पूजन केल्या बीजाक्षरमंत्रे।
+                        लाडू मोदक अन्ने परिपूरित पात्रें।
+                        ऐसे पूजन केल्या बीजाक्षरमंत्रे।
                         अष्टहि सिद्धी नवनिधी देसी क्षणमात्रें॥१॥
                         जय देव जय देव जय मंगलमूर्ती।
-                        तुझे गुण वर्णाया मज कैची स्फ़ूर्ती ॥धृ.॥
-                         तुझे ध्यान निरंतर जे कोणी करिती।
+                        तुझे गुण वर्णाया मज कैची स्फूर्ती ॥धृ.॥
+                        तुझे ध्यान निरंतर जे कोणी करिती।
                         त्यांची सकलही पापे विघ्नेंही हरती।
                         वाजी वारण शिबिका सेवक सुत युवती।
                         सर्वहि पावती अंती भवसागर तरती॥२॥
-                        शरणांगत सर्वस्वें भजती तव चरणी। 
+                        शरणागत सर्वस्वें भजती तव चरणी।
                         कीर्ती तयांची राहे जोवर शशितरणि।
-                        त्रैलोक्यी ते विजयी अदभूत हे करणी।
+                        त्रैलोक्यी ते विजयी अद्भुत हे करणी।
                         गोसावीनंदन रत नामस्मरणी॥३॥
                     </div>
 <div class="tab-text-block arth-text">
@@ -166,31 +195,9 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-2">
-<h2 class="poster-title-pink">श्री गणपतीची आरती</h2>
-<div class="poster-subtitle-gold">२. नानापरिमळ दुर्वा</div>
-<div class="poster-divider"></div>
-<div class="poster-lyrics-body">
-                        नानापरिमळ दुर्वा शेंदूर शमिपत्रें।
-                        लाडू मोद्क अन्ने परिपूरित पात्रें।
-                        ऎसे पूजन केल्या बीजाक्षरमंत्रे।
-                        अष्टहि सिद्धी नवनिधी देसी क्षणमात्रें॥१॥
-                        जयदेव  जय देव जय मंगलमूर्ती।
-                        तुझे गुण वर्णाया मज कैची स्फ़ूर्ती ॥धृ.॥
-                        तुझे ध्यान निरंतर जे कोणी करिती।
-                        त्यांची सकलही पापे विघ्नेंही हरती।
-                        वाजी वारण शिबिका सेवक सुत युवती।
-                        सर्वहि पावती अंती भवसागर तरती॥२॥
-                        शरणांगत सर्वस्वें भजती तव चरणी। 
-                        कीर्ती तयांची राहे जोवर शशितरणि।
-                        त्रैलोक्यी ते विजयी अदभूत हे करणी।
-                        गोसावीनंदन रत नामस्मरणी॥३॥
-                    </div>
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== कार्ड ३: उंदरावरि बैसोनि दूडदूडा येसी =================== -->
-<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-3">
+<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-3" data-poster-title="श्री गणपतीची आरती" data-poster-sub="३. उंदरावरि बैसोनि">
 <div class="card-header">
 <h3>३. उंदरावरि बैसोनि</h3>
 </div>
@@ -200,22 +207,22 @@
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
-                        उंदरावरि बैसोनि दूडदूडा येसी। 
-                        हाती मोद्क लाडू घेउनियां खासी।
-                        भक्तांचे संकटी धावूनि पावसी। 
+                        उंदरावरि बैसोनि दूडदूडा येसी।
+                        हाती मोदक लाडू घेउनियां खासी।
+                        भक्तांचे संकटी धावूनि पावसी।
                         दास विनविती तुझियां चरणासी॥१॥
                         जय देव जय देव जय गणराजा सकळ देवां आधी तूं देव माझा॥धृ.॥
-                        भाद्रपदमासी होसी तू भोळा। 
+                        भाद्रपदमासी होसी तू भोळा।
                         आरक्त पुष्पांच्या घालूनिया माळा।
-                        कपाळी लावूनी कस्तुरी टीळा। 
+                        कपाळी लावूनी कस्तुरी टीळा।
                         तेणे तू दिससी सुंदर सांवळा॥२॥
-                        प्रदोषाचे दिवशी चंद्र श्रापीला। 
+                        प्रदोषाचे दिवशी चंद्र श्रापीला।
                         समयी देवे मोठा आकांत केला।
-                        इंदु येवोनि चरणी लागला। 
+                        इंदु येवोनि चरणी लागला।
                         श्रीराम बहुत श्राप दिधला॥३॥
-                        पार्वतीच्या सुता तू ये गणनाथा। 
+                        पार्वतीच्या सुता तू ये गणनाथा।
                         नेत्र शिणले तुझी वाट पाहतां॥
-                        किती अंत पाहासी बा विघ्नहर्ता। 
+                        किती अंत पाहासी बा विघ्नहर्ता।
                         मला बुद्धी देई तू गणनाथा॥४॥
                     </div>
 <div class="tab-text-block arth-text">
@@ -233,34 +240,9 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-3">
-<h2 class="poster-title-pink">श्री गणपतीची आरती</h2>
-<div class="poster-subtitle-gold">३. उंदरावरि बैसोनि</div>
-<div class="poster-divider"></div>
-<div class="poster-lyrics-body">
-                        उंदरावरि बैसोनि दूडदूडा येसी। 
-                        हाती मोद्क लाडू घेउनियां खासी।
-                        भक्तांचे संकटी धावूनि पावसी। 
-                        दास विनविती तुझियां चरणासी॥१॥
-                        जय देव जय देव जय गणराजा सकळ देवां आधी तूं देव माझा॥धृ.॥
-                        भाद्रपदमासी होसी तू भोळा। 
-                        आरक्त पुष्पांच्या घालूनिया माळा।
-                        कपाळी लावूनी कस्तुरी टीळा। 
-                        तेणे तू दिससी सुंदर सांवळा॥२॥
-                        प्रदोषाचे दिवशी चंद्र श्रापीला। 
-                        समयी देवे मोठा आकांत केला।
-                        इंदु येवोनि चरणी लागला। 
-                        श्रीराम बहुत श्राप दिधला॥३॥
-                        पार्वतीच्या सुता तू ये गणनाथा। 
-                        नेत्र शिणले तुझी वाट पाहतां॥
-                        किती अंत पाहासी बा विघ्नहर्ता। 
-                        मला बुद्धी देई तू गणनाथा॥४॥
-                    </div>
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== कार्ड ४: आरती करु तुज मोरया =================== -->
-<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-4">
+<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-4" data-poster-title="आरती करु तुज मोरया" data-poster-sub="४. गणपती बाप्पा विशेष">
 <div class="card-header">
 <h3>४. आरती करु तुज मोरया</h3>
 </div>
@@ -294,16 +276,9 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-4">
-<h2 class="poster-title-pink">आरती करु तुज मोरया</h2>
-<div class="poster-subtitle-gold">४. गणपती बाप्पा विशेष</div>
-<div class="poster-divider"></div>
-
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== कार्ड ५: स्थापित प्रथमारंभी तुज =================== -->
-<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-5">
+<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-5" data-poster-title="श्री गणपतीची आरती" data-poster-sub="५. स्थापित प्रथमारंभी तुज">
 <div class="card-header">
 <h3>५. स्थापित प्रथमारंभी तुज</h3>
 </div>
@@ -317,19 +292,19 @@
                         विघ्ने वारुनी करिसी दीनेच्छा पुरती।
                         ब्रह्मा विष्णु महेश तीघे स्तुती करिती।
                         सुरवर मुनिवर गाती तुझिया गुणकीर्ती॥१॥
-                        जय देव जय देव जय गणराजा। 
+                        जय देव जय देव जय गणराजा।
                         आरती ओवाळू तुजला महाराजा॥धृ.॥
-                        एकदंता स्वामी हे वक्रतुंडा। 
-                        सर्वाआधी तुझा फ़डकतसे झेंडा।
-                        लप हालति गज शुंडा। 
-                        गप गप मोद्क भक्षिसी घेऊनि करि उंडा॥२॥
-                        शेंदूर अंगी चर्चित शोभत वेदभुजा। 
-                        कर्णी कुंडल झळ्के दिनमनी उदय तुझा।
-                        परशांकुश करि तळपे मूषक वाहन दुजा। 
-                        नाभिकमलावरती खेळत फ़णिराजा॥३॥
+                        एकदंता स्वामी हे वक्रतुंडा।
+                        सर्वाआधी तुझा फडकतसे झेंडा।
+                        लप हालति गज शुंडा।
+                        गप गप मोदक भक्षिसी घेऊनि करि उंडा॥२॥
+                        शेंदूर अंगी चर्चित शोभत वेदभुजा।
+                        कर्णी कुंडल झळके दिनमनी उदय तुझा।
+                        परशांकुश करि तळपे मूषक वाहन दुजा।
+                        नाभिकमलावरती खेळत फणिराजा॥३॥
                         भाळी केशरिगंधावर कस्तुरी टीळा।
-                        हीरेजडित कंठी मुक्ताफ़ळ माळा॥
-                        माणिकदास शरण तुज पार्वतिबाळा। 
+                        हीरेजडित कंठी मुक्ताफळ माळा॥
+                        माणिकदास शरण तुज पार्वतिबाळा।
                         प्रेमे आरती ओवाळिन वेळोवेळा॥४॥
                     </div>
 <div class="tab-text-block arth-text">
@@ -347,35 +322,9 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-5">
-<h2 class="poster-title-pink">श्री गणपतीची आरती</h2>
-<div class="poster-subtitle-gold">५. स्थापित प्रथमारंभी तुज</div>
-<div class="poster-divider"></div>
-<div class="poster-lyrics-body">
-                        स्थापित प्रथमारंभी तुज मंगलमूर्ती।
-                        विघ्ने वारुनी करिसी दीनेच्छा पुरती।
-                        ब्रह्मा विष्णु महेश तीघे स्तुती करिती।
-                        सुरवर मुनिवर गाती तुझिया गुणकीर्ती॥१॥
-                        जय देव जय देव जय गणराजा। 
-                        आरती ओवाळू तुजला महाराजा॥धृ.॥
-                        एकदंता स्वामी हे वक्रतुंडा।
-                        सर्वाआधी तुझा फ़डकतसे झेंडा।
-                        लप हालति गज शुंडा। 
-                        गप गप मोद्क भक्षिसी घेऊनि करि उंडा॥२॥
-                        शेंदूर अंगी चर्चित शोभत वेदभुजा। 
-                        कर्णी कुंडल झळ्के दिनमनी उदय तुझा।
-                        परशांकुश करि तळपे मूषक वाहन दुजा। 
-                        नाभिकमलावरती खेळत फ़णिराजा॥३॥
-                        भाळी केशरिगंधावर कस्तुरी टीळा। 
-                        हीरेजडित कंठी मुक्ताफ़ळ माळा॥
-                        माणिकदास शरण तुज पार्वतिबाळा। 
-                        प्रेमे आरती ओवाळिन वेळोवेळा॥४॥
-                    </div>
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== कार्ड ६: जय मोरेश्वरा आरती =================== -->
-<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-6">
+<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-6" data-poster-title="श्री मोरेश्वराची आरती" data-poster-sub="६. मयूरेश्वर आराधना">
 <div class="card-header">
 <h3>६. जय मोरेश्वरा आरती</h3>
 </div>
@@ -386,11 +335,11 @@
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
                         वेदशास्त्रांमाजी तूं मंगलमूर्ती।
-                        अगणित महिमा तुझा कल्याण स्फ़ूर्ती॥
+                        अगणित महिमा तुझा कल्याण स्फूर्ती॥
                         भक्तांलागी देसी विद्या अभिमत ती।
                         मोरेश्वर नाम तुझे प्रसिद्ध या जगती॥१॥
                         जय देव जय देव जय मोरेश्वरा।
-                        तुझा न कळे पार शेषा फ़णिवरा॥धृ.॥
+                        तुझा न कळे पार शेषा फणिवरा॥धृ.॥
                         पुळ्यापश्ये नांदे महागणपती।
                         माघ चतुर्थीला जनयात्रे याती।
                         जें जें इच्छिति तें तें सर्वही पावती।
@@ -415,31 +364,9 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-6">
-<h2 class="poster-title-pink">श्री मोरेश्वराची आरती</h2>
-<div class="poster-subtitle-gold">६. मयूरेश्वर आराधना</div>
-<div class="poster-divider"></div>
-<div class="poster-lyrics-body">
-                        वेदशास्त्रांमाजी तूं मंगलमूर्ती।
-                        अगणित महिमा तुझा कल्याण स्फ़ूर्ती॥
-                        भक्तांलागी देसी विद्या अभिमत ती।
-                        मोरेश्वर नाम तुझे प्रसिद्ध या जगती॥१॥
-                        जय देव जय देव जय मोरेश्वरा।
-                        तुझा न कळे पार शेषा फ़णिवरा॥धृ.॥
-                        पुळ्यापश्ये नांदे महागणपती।
-                        माघ चतुर्थीला जनयात्रे याती।
-                        जें जें इच्छिति तें तें सर्वही पावती।
-                        गणराजा मज बाळा द्यावी अभिमती॥२॥
-                        एकवीस दुर्वांकुरा नित्ये नेमेसी।
-                        आणूनि जे अर्पिती गणराजयासी॥
-                        त्याचे तू भवबंधन देवा चुकविसी।
-                        विठ्ठलसुत हा ध्यातो तुझिया चरणासी॥३॥
-                    </div>
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== कार्ड ७: जय देव जय देव जय वक्रतुंडा =================== -->
-<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-7">
+<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-7" data-poster-title="जय श्री वक्रतुंड आरती" data-poster-sub="७. वक्रतुंड महाकाय">
 <div class="card-header">
 <h3>७. जय वक्रतुंडा आरती</h3>
 </div>
@@ -478,30 +405,9 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-7">
-<h2 class="poster-title-pink">जय श्री वक्रतुंड आरती</h2>
-<div class="poster-subtitle-gold">७. वक्रतुंड महाकाय</div>
-<div class="poster-divider"></div>
-<div class="poster-lyrics-body">
-                        जय देव जय देव जय वक्रतुंडा।
-                        सिंदुरमंडीत विशाळ सरळ भुजदंडा॥ ध्रु० ॥
-                        प्रसन्न भाळा विमला करिं घेवूनि कमळा।
-                        उंदिरवाहन दोंदिल नाचसि बहुलील।
-                        रुणझुण करिती घागरिया घोळा।
-                        सतार सुस्वर गायन शोभित अवलीला॥१॥
-                        सारीगपमधनीसप्तस्वर भेदा।
-                        धिमकिट धिमकिट मृदंग वाजती गतिछंदा॥
-                        तातग थैया करिसी आनंदा।
-                        ब्रह्मादिक अवलोकिती तव पदारविंदा॥२॥
-                        अभयवरदा सुखदा राजिवरलनयना।
-                        परशांकुशलड्डूधर शोभित शुभवदना।
-                        मुक्तेश्वर चरणांबूजिं अलिपरि करि भ्रमणा॥३॥
-                    </div>
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== कार्ड ८: जय गजानना सुंदर वदना =================== -->
-<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-8">
+<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-8" data-poster-title="श्री गणपतीची आरती" data-poster-sub="८. जय देव जय देव जय गजानना">
 <div class="card-header">
 <h3>८. जय गजानना आरती</h3>
 </div>
@@ -511,15 +417,15 @@
 </div>
 <div class="card-body-content">
 <div class="tab-text-block lyrics-text active">
-                        हरिहरब्रह्मादीकी तुजला पूजीलें। 
+                        हरिहरब्रह्मादीकी तुजला पूजीलें।
                         म्हणोनि त्यांचे कार्य सिद्धी त्वां नेले॥
-                        ऎसा तू गणराजा नवसा योजिले।
+                        ऐसा तू गणराजा नवसा योजिले।
                         वर्णावया नकळे तुझी पाऊलें॥१॥
                         जय देव जय देव जय गजानना।
                         आरती ओवाळू तुज सुंदर वदना॥जय.॥धृ.॥
-                        तुज ऎसा सुंदर आणिक न दीसे।
+                        तुज ऐसा सुंदर आणिक न दीसे।
                         जिकडे पहावे तिकडे गणराज भासे।
-                        श्रवणी कुंड्लांची दीप्ती प्रकाशे॥
+                        श्रवणी कुंडलांची दीप्ती प्रकाशे॥
                         चंद्र सूर्य दोन्ही हेलावति जैसे॥जय.॥२॥
                         गंधपुष्पे दुर्वा तुजला जे वाहती।
                         ते नर भाग्यवंत लक्ष्मी पावती॥
@@ -541,34 +447,9 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-8">
-<h2 class="poster-title-pink">श्री गणपतीची आरती</h2>
-<div class="poster-subtitle-gold">८. जय देव जय देव जय गजानना</div>
-<div class="poster-divider"></div>
-<div class="poster-lyrics-body">
-                        हरिहरब्रह्मादीकी तुजला पूजीलें। 
-                        म्हणोनि त्यांचे कार्य सिद्धी त्वां नेले॥
-                        ऎसा तू गणराजा नवसा योजिले।
-                        वर्णावया नकळे तुझी पाऊलें॥१॥
-                        
-                        जय देव जय देव जय गजानना।
-                        आरती ओवाळू तुज सुंदर वदना॥धृ.॥
-                        
-                        तुज ऎसा सुंदर आणिक न दीसे।
-                        जिकडे पहावे तिकडे गणराज भासे।
-                        श्रवणी कुंड्लांची दीप्ती प्रकाशे॥
-                        चंद्र सूर्य दोन्ही हेलावति जैसे॥२॥
-                        
-                        गंधपुष्पे दुर्वा तुजला जे वाहती।
-                        ते नर भाग्यवंत लक्ष्मी पावती॥
-                        दर्शन हेळामात्रे तया होय मुक्ती।
-                        सहज नामा याणें गाइली आरती॥३॥
-                    </div>
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== कार्ड ९: दीनदयाळा गणपति स्वामी =================== -->
-<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-9">
+<div class="aarti-premium-card" data-category="ganesh" id="aarti-card-9" data-poster-title="श्री गणपतीची आरती" data-poster-sub="९. दीनदयाळा गणपति स्वामी">
 <div class="card-header">
 <h3>९. दीनदयाळा गणपति आरती</h3>
 </div>
@@ -584,7 +465,7 @@
                         अहर्निशी मी हृदयी तुझा करितसे धांवा॥१॥
                         चिंताकूपी पडलों कोण काढील बाहेरी।
                         धांवें पावें सखया करुणा करुनि उद्धरी॥२॥
-                        icon ऐसे होते चित्ती तरि का प्रथमचि देवा।
+                        तैसे होते चित्ती तरि का प्रथमचि देवा।
                         अंगीकार करुनि केला कृपेचा ठेवा॥३॥
                         आतां करणें त्याग तरिही स्वामी अघटित।
                         शरण आलों माझा आता चुकवी अनर्थ॥४॥
@@ -606,35 +487,10 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-9">
-<h2 class="poster-title-pink">श्री गणपतीची आरती</h2>
-<div class="poster-subtitle-gold">९. दीनदयाळा गणपति स्वामी</div>
-<div class="poster-divider"></div>
-<div class="poster-lyrics-body">
-                        दीनदयाळा गणपति स्वामी द्यावी मज भेटी।
-                        तव चरणांची सखया मजला आवडी मोठी॥धृ.॥
-                        
-                        कवण अपराध म्हणवुनि देवा केला रुसवा।
-                        अहर्निशी मी हृदयी तुझा करितसे धांवा॥१॥
-                        
-                        चिंताकूपी पडलों कोण काढील बाहेरी।
-                        धांवें पावें सखया करुणा करुनि उद्धरी॥२॥
-                        
-                        तैसे होते चित्ती तरि का प्रथमचि देवा।
-                        अंगीकार करुनि केला कृपेचा ठेवा॥३॥
-                        
-                        आतां करणें त्याग तरिही स्वामी अघटित।
-                        शरण आलों माझा आता चुकवी अनर्थ॥४॥
-                        
-                        यादवसुत हा विनवी दोन्ही जोडूनियां कर॥
-                        तव चरणाचा सखया मजला आहे आधार॥५॥
-                    </div>
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== श्री विठ्ठल आरत्या विभाग =================== -->
 <!-- =================== कार्ड १०: युगे अठ्ठावीस विठ्ठल आरती =================== -->
-<div class="aarti-premium-card" data-category="vitthal" id="aarti-card-10">
+<div class="aarti-premium-card" data-category="vitthal" id="aarti-card-10" data-poster-title="श्री विठ्ठलाची आरती" data-poster-sub="१०. युगे अठ्ठावीस विठ्ठल विटेवरी उभा">
 <div class="card-header">
 <h3>१०. युगे अठ्ठावीस विठ्ठल आरती</h3>
 </div>
@@ -674,31 +530,9 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-10">
-<h2 class="poster-title-pink">श्री विठ्ठलाची आरती</h2>
-<div class="poster-subtitle-gold">१०. युगे अठ्ठावीस विठ्ठल विटेवरी उभा</div>
-<div class="poster-divider"></div>
-<div class="poster-lyrics-body">
-                        युगे अठ्ठावीस विठ्ठल विटेवरी उभा ।
-                        वामांगी रखुमाई दिसे दिव्य शोभा ॥
-                        पुंडलिकाचे भेटी परब्रह्म आले गा ।
-                        चरणी वाहे भीमा उद्धरी जगा ॥१॥
-                        जय देव जय देव जय पांडुरंगा ।
-                        आरती ओवाळू रखुमाईच्या वल्लभा ॥धृ.॥              
-                        तुळसीमाळा गळा कर ठेवूनि कटीं ।
-                        कासे पितांबर कस्तुरी लल्लाटी ॥
-                        देव मुनी जन ध्याती गरुडपारापाशीं ।
-                        दर्शनमात्रे संकटे पळती भक्तांची ॥२॥              
-                        आषाढी कार्तिकी भक्त पूजक येती ।
-                        चंद्रभागेमाजी स्नाने जे करिती ॥
-                        दर्शन हेळामात्रे तया होय मुक्ती ।
-                        केशवचरणी नामे गाइली आरती ॥३॥
-                    </div>
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== कार्ड ११: येई हो येई बा विठ्ठला =================== -->
-<div class="aarti-premium-card" data-category="vitthal" id="aarti-card-11">
+<div class="aarti-premium-card" data-category="vitthal" id="aarti-card-11" data-poster-title="श्री विठ्ठलाची आरती" data-poster-sub="११. येई हो येई बा विठ्ठला माऊलीये राया">
 <div class="card-header">
 <h3>११. येई हो येई बा विठ्ठला</h3>
 </div>
@@ -732,17 +566,10 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-11">
-<h2 class="poster-title-pink">श्री विठ्ठलाची आरती</h2>
-<div class="poster-subtitle-gold">११. येई हो येई बा विठ्ठला माऊलीये राया</div>
-<div class="poster-divider"></div>
-
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== थोर संतांच्या आरत्या विभाग =================== -->
 <!-- =================== कार्ड १२: संत ज्ञानेश्वर महाराज आरती =================== -->
-<div class="aarti-premium-card" data-category="sant" id="aarti-card-12">
+<div class="aarti-premium-card" data-category="sant" id="aarti-card-12" data-poster-title="संतांची आरती" data-poster-sub="१२. आरती ज्ञानराजा महाकैवल्यतेजा">
 <div class="card-header">
 <h3>१२. श्री ज्ञानराजा आरती</h3>
 </div>
@@ -788,16 +615,9 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-12">
-<h2 class="poster-title-pink">संतांची आरती</h2>
-<div class="poster-subtitle-gold">१२. आरती ज्ञानराजा महाकैवल्यतेजा</div>
-<div class="poster-divider"></div>
-
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== कार्ड १३: जगद्गुरु संत तुकाराम महाराज आरती =================== -->
-<div class="aarti-premium-card" data-category="sant" id="aarti-card-13">
+<div class="aarti-premium-card" data-category="sant" id="aarti-card-13" data-poster-title="संतांची आरती" data-poster-sub="१३. आरती तुकाराम स्वामी सद्गुरु धाम">
 <div class="card-header">
 <h3>१३. श्री तुकाराम आरती</h3>
 </div>
@@ -838,16 +658,9 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-13">
-<h2 class="poster-title-pink">संतांची आरती</h2>
-<div class="poster-subtitle-gold">१३. आरती तुकाराम स्वामी सद्गुरु धाम</div>
-<div class="poster-divider"></div>
-
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== कार्ड १४: संत एकनाथ महाराज आरती =================== -->
-<div class="aarti-premium-card" data-category="sant" id="aarti-card-14">
+<div class="aarti-premium-card" data-category="sant" id="aarti-card-14" data-poster-title="संतांची आरती" data-poster-sub="१४. आरती एकनाथा महाराजा समर्था">
 <div class="card-header">
 <h3>१४. श्री एकनाथा आरती</h3>
 </div>
@@ -862,7 +675,7 @@
                         त्रिभुवनी तूंचि थोर ॥
                         जगद्गुरू जगन्नाथा ॥ धृ ॥
                         एकनाथ नाम सार ॥
-                        वेदशात्रांचे गूज ॥
+                        वेदशास्त्रांचे गूज ॥
                         संसार दुःख नासे ॥
                         महाराजांचे बीज ॥१॥
                         एकनाथ नाम घेतां ॥
@@ -885,16 +698,9 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-14">
-<h2 class="poster-title-pink">संतांची आरती</h2>
-<div class="poster-subtitle-gold">१४. आरती एकनाथा महाराजा समर्था</div>
-<div class="poster-divider"></div>
-
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== कार्ड १५: भक्तराज संत नामदेव महाराज आरती =================== -->
-<div class="aarti-premium-card" data-category="sant" id="aarti-card-15">
+<div class="aarti-premium-card" data-category="sant" id="aarti-card-15" data-poster-title="संतांची आरती" data-poster-sub="१५. आरती ओवाळितो परिसा कर जोडू">
 <div class="card-header">
 <h3>१५. श्री नामदेव आरती</h3>
 </div>
@@ -940,17 +746,10 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-15">
-<h2 class="poster-title-pink">संतांची आरती</h2>
-<div class="poster-subtitle-gold">१५. आरती ओवाळितो परिसा कर जोडू</div>
-<div class="poster-divider"></div>
-
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== देवी-देवतांच्या आरत्या विभाग =================== -->
 <!-- =================== कार्ड १६: श्री शंकराची आरती =================== -->
-<div class="aarti-premium-card" data-category="devi-devta" id="aarti-card-16">
+<div class="aarti-premium-card" data-category="devi-devta" id="aarti-card-16" data-poster-title="देवी-देवता आरती" data-poster-sub="१६. जय देव जय देव जय श्रीशंकरा">
 <div class="card-header">
 <h3>१६. श्री शंकराची आरती</h3>
 </div>
@@ -990,31 +789,9 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-16">
-<h2 class="poster-title-pink">देवी-देवता आरती</h2>
-<div class="poster-subtitle-gold">१६. जय देव जय देव जय श्रीशंकरा</div>
-<div class="poster-divider"></div>
-<div class="poster-lyrics-body">
-                        लवथवती विक्राळा ब्रह्मांडी माळा ।
-                        विषे कंठ काळा त्रिनेत्री ज्वाळा ॥
-                        लावण्यसुंदर मस्तकी बाळा ।
-                        तेथुनिया जळ मिळे निर्मळ वाळा ॥
-                        जय देव जय देव जय श्रीशंकरा ।
-                        आरती ओवाळू भावें कर्पूरगौरा ॥
-                        कर्पूरगौरा भोळा नयनी विशाळा ।
-                        अर्धांगी पार्वती सुमनमाळा ॥
-                        कंठी झळके मुंडमाळा मुकूट विशाळा ।
-                        शेंदूर अंगी चर्चित लाविला वेल्हाळा ॥
-                        व्याघ्रांबर फणिवरधर सुंदर मदनारी ।
-                        पंचानन मनमोहन कैलासविहारी ॥
-                        सदाशिव सर्वेश्वर संकट हारी ।
-                        मुक्तेश्वर चरणांबुजी अलिपरि भ्रमणा ॥
-                    </div>
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== कार्ड १७: श्री दुर्गेची आरती =================== -->
-<div class="aarti-premium-card" data-category="devi-devta" id="aarti-card-17">
+<div class="aarti-premium-card" data-category="devi-devta" id="aarti-card-17" data-poster-title="देवी-देवता आरती" data-poster-sub="१७. दुर्गे दुर्घट भारी तुजविण संसारी">
 <div class="card-header">
 <h3>१७. श्री दुर्गेची आरती</h3>
 </div>
@@ -1054,31 +831,9 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-17">
-<h2 class="poster-title-pink">देवी-देवता आरती</h2>
-<div class="poster-subtitle-gold">१७. दुर्गे दुर्घट भारी तुजविण संसारी</div>
-<div class="poster-divider"></div>
-<div class="poster-lyrics-body">
-                        दुर्गे दुर्घट भारी तुजविण संसारी ।
-                        अनाथनाथे आंबे करुणा विस्तारी ॥
-                        वारी वारी जन्ममरणते वारी ।
-                        हारी पडलो आता संकट निवारी ॥
-                       जय देव जय देव जय महिषासूरमर्दिनी ।
-                        सुरवरईश्वरवरदे तारक संजीवनी ॥
-                        त्रिभुवनभुवनी पाहतां तुजऐसे नाही ।
-                        चारी श्रमले परंतु न बोलवे काही ॥
-                        साही विवाद करितां पडले प्रवाही ।
-                        ते तू भक्तांलागी पावावे लवलाही ॥
-                        प्रसन्नवदने प्रसन्न होसी निजदासा ।
-                        क्लेशांपासुनी सोडी तोडी भवपाशा ॥
-                        अंबे तुजविण कोठें गाऊ... मी आशा ।
-                        नरहरि तल्लीन झाला पदपंकजलेशा ॥
-                    </div>
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== कार्ड १८: श्री महालक्ष्मीची आरती =================== -->
-<div class="aarti-premium-card" data-category="devi-devta" id="aarti-card-18">
+<div class="aarti-premium-card" data-category="devi-devta" id="aarti-card-18" data-poster-title="देवी-देवता आरती" data-poster-sub="१८. जय देवी जय देवी जय महालक्ष्मी">
 <div class="card-header">
 <h3>१८. श्री महालक्ष्मी आरती</h3>
 </div>
@@ -1112,16 +867,9 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-18">
-<h2 class="poster-title-pink">देवी-देवता आरती</h2>
-<div class="poster-subtitle-gold">१८. जय देवी जय देवी जय महालक्ष्मी</div>
-<div class="poster-divider"></div>
-
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 <!-- =================== कार्ड १९: श्री मारुतीची आरती =================== -->
-<div class="aarti-premium-card" data-category="devi-devta" id="aarti-card-19">
+<div class="aarti-premium-card" data-category="devi-devta" id="aarti-card-19" data-poster-title="देवी-देवता आरती" data-poster-sub="१९. सत्राणे उड्डाणे हुंकार वदनी">
 <div class="card-header">
 <h3>१९. श्री मारुतीची आरती</h3>
 </div>
@@ -1159,21 +907,215 @@
 <svg style="fill: none; stroke: currentColor; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;" viewbox="0 0 24 24"><line x1="12" x2="12" y1="5" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
 </button>
 </div>
-<div class="hidden-poster" id="poster-19">
-<h2 class="poster-title-pink">देवी-देवता आरती</h2>
-<div class="poster-subtitle-gold">१९. सत्राणे उड्डाणे हुंकार वदनी</div>
-<div class="poster-divider"></div>
-
-<div class="poster-footer-credits">सौजन्य: www.santvani.co.in</div>
-</div>
 </div>
 </div>
 </section>
 <!-- फूटर लेआउट -->
+<footer class="footer">
+<div class="footer-top">
+<div class="footer-brand-box">
+<h3 class="footer-logo">✨ संतवाणी</h3>
+<p class="footer-about">मराठी संतांच्या समृद्ध विचारांचा आणि साहित्याचा डिजिटल वारसा पुढील पिढीपर्यंत पोहोचवण्याचा एक नम्र प्रयत्न.</p>
+</div>
+<div class="footer-links-box">
+<h4>महत्त्वाचे दुवे</h4>
+<ul>
+<li><a href="/about.html">आमच्याबद्दल (About Us)</a></li>
+<li><a href="/contact.html">संपर्क (Contact Us)</a></li>
+<li><a href="/privacy-policy.html">गोपनीयता धोरण (Privacy Policy)</a></li>
+<li><a href="/terms.html">नियम व अटी (Terms &amp; Conditions)</a></li>
+<li><a href="/disclaimer.html">अस्वीकरण (Disclaimer)</a></li>
+</ul>
+</div>
+<div class="footer-links-box">
+<h4>त्वरित लिंक्स</h4>
+<ul>
+<li><a href="/index.html">मुख्य पृष्ठ</a></li>
+<li><a href="/sant-sahitya.html">संत साहित्य</a></li>
+<li><a href="/vangmay-sangrah.html">वाङ्मय संग्रह</a></li>
+<li><a href="/sarth-haripath.html">सार्थ हरिपाठ</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p class="copyright-text">© २०२६ संतवाणी लायब्ररी. सर्व हक्क सुरक्षित. | रचना वारकरी संप्रदाय चरणी समर्पित.</p>
+</div>
+</footer>
 
 
 <!-- रिसेट हॅक: जुन्या डिझाईन मधील उरलेले मजकूर साफ करण्यासाठी -->
 
 
+<script>
+(function () {
+    "use strict";
+
+    // वॉटरमार्क फक्त येथे एकदाच लिहिला आहे. HTML मध्ये तो repeat होत नाही.
+    var WATERMARK = "सौजन्य: www.santvani.co.in";
+    var PAGE_URL = "https://santvani.co.in/pages/artisangrah/artya-sangrah.html";
+
+    function $(id) { return document.getElementById(id); }
+
+    function cardOf(n) { return $("aarti-card-" + n); }
+
+    function lyricsLines(card) {
+        var box = card.querySelector(".lyrics-text");
+        return (box ? box.textContent : "").split("\n")
+            .map(function (l) { return l.replace(/\s+/g, " ").trim(); })
+            .filter(Boolean);
+    }
+
+    function cardTitle(card) {
+        var h = card.querySelector(".card-header h3");
+        return h ? h.textContent.trim() : "";
+    }
+
+    // ---------- श्रेणी फिल्टर ----------
+    window.filterAarti = function (cat) {
+        document.querySelectorAll(".aarti-premium-card").forEach(function (c) {
+            c.style.display = (cat === "all" || c.getAttribute("data-category") === cat) ? "" : "none";
+        });
+        document.querySelectorAll(".filter-btn").forEach(function (b) {
+            var on = (b.getAttribute("onclick") || "").indexOf("'" + cat + "'") !== -1;
+            b.classList.toggle("active", on);
+        });
+    };
+
+    // ---------- आरती वाचा / अर्थ पहा टॅब ----------
+    window.toggleCardTab = function (btn, tab) {
+        var card = btn.closest(".aarti-premium-card");
+        if (!card) return;
+        card.querySelectorAll(".card-tab-btn").forEach(function (b) { b.classList.remove("active"); });
+        btn.classList.add("active");
+        var lyr = card.querySelector(".lyrics-text");
+        var arth = card.querySelector(".arth-text");
+        if (lyr) lyr.classList.toggle("active", tab === "lyrics");
+        if (arth) arth.classList.toggle("active", tab === "arth");
+    };
+
+    // ---------- कॉपी ----------
+    window.copyAartiText = function (n) {
+        var card = cardOf(n);
+        if (!card) return;
+        var text = cardTitle(card) + "\n\n" + lyricsLines(card).join("\n") +
+                   "\n\n" + WATERMARK + "\n" + PAGE_URL + "#aarti-card-" + n;
+        var done = function () { flash(card, "✅ कॉपी झाले"); };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done, function () { legacyCopy(text); done(); });
+        } else { legacyCopy(text); done(); }
+    };
+
+    function legacyCopy(text) {
+        var ta = document.createElement("textarea");
+        ta.value = text; ta.style.position = "fixed"; ta.style.left = "-9999px";
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); } catch (e) {}
+        document.body.removeChild(ta);
+    }
+
+    // ---------- शेअर ----------
+    window.shareAarti = function (n) {
+        var card = cardOf(n);
+        if (!card) return;
+        var title = cardTitle(card);
+        var url = PAGE_URL + "#aarti-card-" + n;
+        var text = title + "\n\n" + lyricsLines(card).join("\n") + "\n\n" + WATERMARK;
+        if (navigator.share) {
+            navigator.share({ title: title, text: text, url: url }).catch(function () {});
+        } else {
+            window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(text + "\n" + url), "_blank");
+        }
+    };
+
+    function flash(card, msg) {
+        var el = document.createElement("div");
+        el.textContent = msg;
+        el.style.cssText = "position:fixed;left:50%;bottom:90px;transform:translateX(-50%);" +
+            "background:#ffcc00;color:#000;padding:8px 18px;border-radius:20px;" +
+            "font:600 14px Poppins,sans-serif;z-index:99999;box-shadow:0 4px 14px rgba(0,0,0,.5)";
+        document.body.appendChild(el);
+        setTimeout(function () { el.remove(); }, 1600);
+    }
+
+    // ---------- पोस्टर तयार करणे (डाऊनलोडच्या वेळीच, नंतर काढून टाकले जाते) ----------
+    function buildPoster(card, n) {
+        var poster = document.createElement("div");
+        poster.className = "hidden-poster";
+        poster.id = "poster-tmp-" + n;
+
+        var h2 = document.createElement("h2");
+        h2.className = "poster-title-pink";
+        h2.textContent = card.getAttribute("data-poster-title") || cardTitle(card);
+
+        var sub = document.createElement("div");
+        sub.className = "poster-subtitle-gold";
+        sub.textContent = card.getAttribute("data-poster-sub") || cardTitle(card);
+
+        var div = document.createElement("div");
+        div.className = "poster-divider";
+
+        var body = document.createElement("div");
+        body.className = "poster-lyrics-body";
+        lyricsLines(card).forEach(function (line, i) {
+            if (i) body.appendChild(document.createElement("br"));
+            body.appendChild(document.createTextNode(line));
+        });
+
+        var credit = document.createElement("div");
+        credit.className = "poster-footer-credits";
+        credit.textContent = WATERMARK;
+
+        [h2, sub, div, body, credit].forEach(function (el) { poster.appendChild(el); });
+        return poster;
+    }
+
+    window.downloadAartiCard = function (n, fileName) {
+        var card = cardOf(n);
+        if (!card) return;
+        if (typeof html2canvas === "undefined") {
+            alert("इमेज तयार करण्याची सुविधा लोड होत आहे. कृपया काही सेकंदांनी पुन्हा प्रयत्न करा.");
+            return;
+        }
+        var btn = card.querySelector(".download-accent");
+        if (btn) btn.disabled = true;
+
+        var poster = buildPoster(card, n);
+        poster.style.display = "block";
+        card.appendChild(poster);
+
+        var scale = Math.min(3, Math.max(1, 1080 / (poster.offsetWidth || 1080)));
+
+        var finish = function () {
+            if (poster.parentNode) poster.parentNode.removeChild(poster);
+            if (btn) btn.disabled = false;
+        };
+
+        // फॉन्ट लोड झाल्यावरच इमेज काढणे
+        var ready = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+        ready.then(function () {
+            return html2canvas(poster, {
+                scale: scale,
+                backgroundColor: null,
+                useCORS: true,
+                onclone: function (doc) {
+                    var c = doc.getElementById(poster.id);
+                    if (c) { c.style.position = "fixed"; c.style.left = "0"; c.style.top = "0"; c.style.display = "block"; }
+                }
+            });
+        }).then(function (canvas) {
+            var a = document.createElement("a");
+            a.download = (fileName || ("aarti-" + n)) + ".png";
+            a.href = canvas.toDataURL("image/png");
+            document.body.appendChild(a); a.click(); document.body.removeChild(a);
+            finish();
+        }).catch(function (err) {
+            console.error("Aarti poster error:", err);
+            finish();
+            alert("इमेज तयार करताना अडचण आली. कृपया पुन्हा प्रयत्न करा.");
+        });
+    };
+})();
+</script>
+<script src="/menu.js"></script>
 </body>
 </html>
