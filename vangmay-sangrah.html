@@ -51,6 +51,263 @@
       }
     }
     </script>
+    <style>
+        /* ===== वाङ्मय संग्रह : प्रीमियम लूक (सर्व क्लास vs- ने सुरू होतात) ===== */
+        .vs-section {
+            position: relative;
+            padding: 64px 16px 72px 16px;
+            color: #f2ece0;
+            background:
+                radial-gradient(circle at 12% 0%, rgba(255, 204, 0, 0.10), transparent 45%),
+                radial-gradient(circle at 92% 28%, rgba(255, 153, 0, 0.08), transparent 42%),
+                #0f0c08;
+            overflow: hidden;
+        }
+        .vs-section + .vs-section { padding-top: 24px; }
+        .vs-wrap { max-width: 1100px; margin: 0 auto; }
+
+        .vs-head { text-align: center; margin: 0 auto 44px auto; max-width: 780px; }
+        .vs-eyebrow {
+            display: inline-block;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.78rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #ffcc00;
+            padding: 6px 16px;
+            border: 1px solid rgba(255, 204, 0, 0.35);
+            border-radius: 999px;
+            background: rgba(255, 204, 0, 0.06);
+            margin-bottom: 18px;
+        }
+        .vs-title {
+            font-family: 'Rozha One', serif;
+            font-size: clamp(1.7rem, 4.6vw, 2.5rem);
+            line-height: 1.3;
+            color: #fff7e0;
+            margin: 0 0 14px 0;
+        }
+        .vs-title span {
+            background: linear-gradient(90deg, #ffe27a, #ff9900);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .vs-lead {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.02rem;
+            line-height: 1.9;
+            color: #d6cbb8;
+            margin: 0;
+        }
+        .vs-orn {
+            display: flex; align-items: center; justify-content: center;
+            gap: 14px; margin: 22px 0 0 0; color: #ffcc00; font-size: 1.1rem;
+        }
+        .vs-orn::before, .vs-orn::after {
+            content: ""; height: 1px; width: 90px;
+            background: linear-gradient(to right, transparent, #ffcc00, transparent);
+        }
+
+        /* आकडेवारी पट्टी */
+        .vs-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+            gap: 14px;
+            margin: 0 auto 56px auto;
+            max-width: 820px;
+        }
+        .vs-stat {
+            text-align: center;
+            padding: 18px 10px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 204, 0, 0.16);
+        }
+        .vs-stat b {
+            display: block;
+            font-family: 'Rozha One', serif;
+            font-size: 1.9rem;
+            font-weight: 400;
+            color: #ffcc00;
+            line-height: 1.2;
+        }
+        .vs-stat small {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.82rem;
+            color: #bdb19b;
+        }
+
+        /* कार्ड ग्रिड */
+        .vs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+            gap: 24px;
+        }
+        .vs-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 30px 26px 26px 26px;
+            border-radius: 20px;
+            background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.015));
+            border: 1px solid rgba(255, 204, 0, 0.18);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .vs-card::before {
+            content: "";
+            position: absolute; left: 0; right: 0; top: 0; height: 3px;
+            background: linear-gradient(90deg, transparent, #ffcc00, #ff9900, transparent);
+            opacity: 0.8;
+        }
+        .vs-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(255, 204, 0, 0.55);
+            box-shadow: 0 20px 44px rgba(0, 0, 0, 0.6), 0 0 28px rgba(255, 204, 0, 0.12);
+        }
+        .vs-card.vs-featured {
+            border-color: rgba(255, 204, 0, 0.5);
+            background: linear-gradient(160deg, rgba(255,204,0,0.12), rgba(255,255,255,0.02));
+        }
+        .vs-num {
+            position: absolute; top: 14px; right: 22px;
+            font-family: 'Rozha One', serif;
+            font-size: 2.6rem; line-height: 1;
+            color: rgba(255, 204, 0, 0.13);
+        }
+        .vs-tag {
+            align-self: flex-start;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
+            color: #1a1204;
+            background: linear-gradient(90deg, #ffe27a, #ffb000);
+            padding: 4px 12px; border-radius: 999px; margin-bottom: 14px;
+        }
+        .vs-icon {
+            width: 58px; height: 58px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; color: #1a1204;
+            background: linear-gradient(135deg, #ffe27a, #ff9900);
+            box-shadow: 0 6px 18px rgba(255, 153, 0, 0.35);
+            margin-bottom: 18px;
+        }
+        .vs-card h3 {
+            font-family: 'Rozha One', serif;
+            font-weight: 400;
+            font-size: 1.4rem; line-height: 1.35;
+            color: #fff2c6; margin: 0 0 10px 0;
+        }
+        .vs-card p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem; line-height: 1.8;
+            color: #d0c6b3; margin: 0 0 16px 0;
+        }
+        .vs-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px 0; padding: 0; list-style: none; }
+        .vs-chips li {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.78rem; color: #f3e5ab;
+            padding: 4px 12px; border-radius: 999px;
+            border: 1px solid rgba(255, 204, 0, 0.28);
+            background: rgba(255, 204, 0, 0.07);
+        }
+        .vs-btn {
+            margin-top: auto;
+            align-self: flex-start;
+            display: inline-flex; align-items: center; gap: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.92rem; font-weight: 600;
+            color: #ffcc00; text-decoration: none;
+            padding: 10px 22px; border-radius: 999px;
+            border: 1px solid rgba(255, 204, 0, 0.55);
+            transition: background 0.25s ease, color 0.25s ease, gap 0.25s ease;
+        }
+        .vs-btn:hover { background: #ffcc00; color: #1a1204; gap: 14px; }
+
+        /* वाचनक्रम */
+        .vs-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+            gap: 18px; counter-reset: vs; padding: 0; margin: 0; list-style: none;
+        }
+        .vs-steps li {
+            counter-increment: vs;
+            position: relative;
+            padding: 56px 20px 22px 20px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 204, 0, 0.16);
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.93rem; line-height: 1.75; color: #d0c6b3;
+        }
+        .vs-steps li::before {
+            content: counter(vs);
+            position: absolute; top: 14px; left: 20px;
+            width: 32px; height: 32px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Rozha One', serif; font-size: 1rem;
+            color: #1a1204; background: linear-gradient(135deg, #ffe27a, #ff9900);
+        }
+        .vs-steps strong { display: block; color: #ffcc00; font-weight: 600; margin-bottom: 4px; }
+
+        /* काव्यप्रकार */
+        .vs-forms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+            gap: 16px;
+        }
+        .vs-form {
+            padding: 20px 22px; border-radius: 14px;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid #ff9900;
+        }
+        .vs-form h4 {
+            font-family: 'Rozha One', serif; font-weight: 400;
+            font-size: 1.15rem; color: #ffcc00; margin: 0 0 6px 0;
+        }
+        .vs-form p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.92rem; line-height: 1.75; color: #d0c6b3; margin: 0;
+        }
+
+        /* FAQ */
+        .vs-faq { max-width: 820px; margin: 0 auto; }
+        .vs-faq details {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 204, 0, 0.18);
+            border-radius: 12px; margin-bottom: 12px; padding: 0 20px;
+        }
+        .vs-faq summary {
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif; font-weight: 500;
+            color: #ffcc00; padding: 16px 0; list-style-position: inside;
+        }
+        .vs-faq p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.94rem; line-height: 1.8; color: #d0c6b3; margin: 0 0 16px 0;
+        }
+        .vs-faq a { color: #ff9900; }
+
+        .vs-sub { text-align: center; margin: 0 0 26px 0; }
+        .vs-sub h2 {
+            font-family: 'Rozha One', serif; font-weight: 400;
+            font-size: clamp(1.4rem, 3.6vw, 1.9rem); color: #fff7e0; margin: 0 0 8px 0;
+        }
+        .vs-sub p {
+            font-family: 'Poppins', sans-serif; font-size: 0.95rem; color: #bdb19b; margin: 0;
+        }
+
+        @media (max-width: 600px) {
+            .vs-section { padding: 44px 16px 52px 16px; }
+            .vs-card { padding: 26px 20px 22px 20px; }
+            .vs-orn::before, .vs-orn::after { width: 50px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .vs-card, .vs-btn { transition: none; }
+            .vs-card:hover { transform: none; }
+        }
+    </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8300473989533585" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -106,79 +363,174 @@
         </div>
     </section>
 
-    <!-- VANGMAY COLLECTION GRID -->
-    <section class="vangmay-section" id="features-grid-section">
-        <div class="section-container">
-            
-            <div class="royal-divider">
-                <span class="line"></span>
-                <span class="flower">📿</span>
-                <span class="line"></span>
+    <!-- ===== वाङ्मय संग्रह : प्रीमियम मुख्य विभाग ===== -->
+    <section class="vs-section" id="features-grid-section">
+        <div class="vs-wrap">
+
+            <div class="vs-head">
+                <span class="vs-eyebrow">संतवाणी वाङ्मय खजिना</span>
+                <h2 class="vs-title">संतांच्या वाणीचा <span>एकत्रित संग्रह</span></h2>
+                <p class="vs-lead">वारकरी संतांनी आपल्या अनुभवातून आणि भक्तीतून रचलेले अभंग, हरिपाठ, भारुडे, गवळणी, ग्रंथ आणि आरत्या एकाच ठिकाणी वाचता यावेत, यासाठी हा वाङ्मय संग्रह तयार केला आहे. आपल्या आवडीचा विभाग निवडा आणि वाचनाला सुरुवात करा.</p>
+                <div class="vs-orn">📿</div>
             </div>
 
-            <div class="features-grid">
-                
-                <!-- Category 1: हरिपाठ -->
-                <div class="feature-card">
-                    <div class="card-icon-box">
-                        <i class="fa-solid fa-book-open"></i>
-                    </div>
-                    <h3 class="card-title">श्री हरिपाठ संग्रह</h3>
-                    <p class="card-desc">संत ज्ञानेश्वर महाराज, संत नामदेव, संत एकनाथ, संत तुकाराम आणि संत निवृत्तीनाथ महाराज यांचे पाच प्रमुख हरिपाठ अर्थासह.</p>
-                    <a href="sarth-haripath.html" class="btn-read-more">वाचन करा <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+            <div class="vs-stats">
+                <div class="vs-stat"><b>६</b><small>मुख्य विभाग</small></div>
+                <div class="vs-stat"><b>५</b><small>प्रमुख हरिपाठ</small></div>
+                <div class="vs-stat"><b>१९</b><small>संतांचे अभंग संग्रह</small></div>
+                <div class="vs-stat"><b>४</b><small>थोर ग्रंथ</small></div>
+            </div>
 
-                <!-- Category 2: अभंग गाथा (दुरुस्त पाथ: index.html च्या ग्रिडवर पाठवण्यासाठी किंवा स्वतंत्र अभंग डिझाईनसाठी) -->
-                <div class="feature-card special-card">
-                    <div class="card-badge">मुख्य</div>
-                    <div class="card-icon-box">
-                        <i class="fa-solid fa-music"></i>
-                    </div>
-                    <h3 class="card-title">संत अभंग गाथा</h3>
-                    <p class="card-desc">तुकाराम महाराज गाथा, ज्ञानेश्वर माऊलींचे विराण्या अभंग, चोखामेळा व गोरा कुंभार यांचे निवडक १०००+ भक्तीरस अभंग.</p>
-                    <a href="abhang-gatha.html" class="btn-read-more text-gold">गाथा उघडा <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+            <div class="vs-grid">
 
-                <!-- Category 3: भारुडे व गवळणी -->
-                <div class="feature-card">
-                    <div class="card-icon-box">
-                        <i class="fa-solid fa-hands-clapping"></i>
-                    </div>
-                    <h3 class="card-title">भारुडे आणि गवळणी</h3>
-                    <p class="card-desc">संत एकनाथ महाराज विरचित लोकप्रबोधनपर प्रसिद्ध भारुडे, रूपके आणि विठ्ठलाच्या नितांत सुंदर गवळणींचा संग्रह.</p>
-                    <a href="bharude-gavlani.html" class="btn-read-more">वाचन करा <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+                <!-- १. हरिपाठ -->
+                <article class="vs-card">
+                    <span class="vs-num">०१</span>
+                    <div class="vs-icon"><i class="fa-solid fa-book-open"></i></div>
+                    <h3>श्री हरिपाठ संग्रह</h3>
+                    <p>संत ज्ञानेश्वर महाराज, संत नामदेव, संत एकनाथ, संत तुकाराम आणि संत निवृत्तीनाथ महाराज यांचे पाच प्रमुख हरिपाठ अर्थासह.</p>
+                    <ul class="vs-chips">
+                        <li>ज्ञानेश्वर</li><li>नामदेव</li><li>एकनाथ</li><li>तुकाराम</li><li>निवृत्तीनाथ</li>
+                    </ul>
+                    <a href="sarth-haripath.html" class="vs-btn">वाचन करा <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
 
-                <!-- Category 4: प्रासादिक ग्रंथ संपदा -->
-                <div class="feature-card">
-                    <div class="card-icon-box">
-                        <i class="fa-solid fa-scroll"></i>
-                    </div>
-                    <h3 class="card-title">थोर ग्रंथ संपदा</h3>
-                    <p class="card-desc">श्रीमद्भगवद्गीतेचे सार असलेली 'ज्ञानेश्वरी' (भावार्थ दीपिका), 'अमृतानुभव', 'दासबोध' आणि 'एकनाथी भागवत' ग्रंथांची माहिती.</p>
-                    <a href="granth-sampada.html" class="btn-read-more">ग्रंथ पहा <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+                <!-- २. अभंग गाथा -->
+                <article class="vs-card vs-featured">
+                    <span class="vs-num">०२</span>
+                    <span class="vs-tag">मुख्य विभाग</span>
+                    <div class="vs-icon"><i class="fa-solid fa-music"></i></div>
+                    <h3>संत अभंग गाथा</h3>
+                    <p>तुकाराम महाराज गाथा, ज्ञानेश्वर माऊलींचे विराण्या अभंग, चोखामेळा व गोरा कुंभार यांचे निवडक १०००+ भक्तीरस अभंग.</p>
+                    <ul class="vs-chips">
+                        <li>तुकाराम गाथा</li><li>ज्ञानेश्वर</li><li>नामदेव</li><li>एकनाथ</li><li>१९ संत</li>
+                    </ul>
+                    <a href="abhang-gatha.html" class="vs-btn">गाथा उघडा <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
 
-                <!-- Category 5: भूपाळ्या व आरत्या (प्रीमियम पाथ दुरुस्ती) -->
-                <div class="feature-card">
-                    <div class="card-icon-box">
-                        <i class="fa-solid fa-bell"></i>
-                    </div>
-                    <h3 class="card-title">संपूर्ण आरती संग्रह</h3>
-                    <p class="card-desc">काकड आरती, विठ्ठलाच्या मुख्य आरत्या, संतांच्या भूपाळ्या आणि रोजच्या पूजेमध्ये म्हटली जाणारी पारंपारिक स्तोत्रे.</p>
-                    <a href="pages/artisangrah/artya-sangrah.html" class="btn-read-more">आरती संग्रह <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+                <!-- ३. भारुडे व गवळणी -->
+                <article class="vs-card">
+                    <span class="vs-num">०३</span>
+                    <div class="vs-icon"><i class="fa-solid fa-hands-clapping"></i></div>
+                    <h3>भारुडे आणि गवळणी</h3>
+                    <p>संत एकनाथ महाराज विरचित लोकप्रबोधनपर प्रसिद्ध भारुडे, रूपके आणि विठ्ठलाच्या नितांत सुंदर गवळणींचा संग्रह.</p>
+                    <ul class="vs-chips">
+                        <li>विंचू चावला</li><li>वासुदेव</li><li>जोशी</li><li>गवळणी</li>
+                    </ul>
+                    <a href="bharude-gavlani.html" class="vs-btn">वाचन करा <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
 
-                <!-- Category 6: संत विचार आणि वचने -->
-                <div class="feature-card">
-                    <div class="card-icon-box">
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-                    <h3 class="card-title">संत सुभाषिते व वचने</h3>
-                    <p class="card-desc">दैनंदिन जीवनात सुख, शांती आणि समाधान देणारे संतांचे अनमोल विचार, सुवचने आणि नैतिक शिकवणुकीचे डोस.</p>
-                    <a href="sant-subhashite.html" class="btn-read-more">वाचन करा <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
+                <!-- ४. ग्रंथ संपदा -->
+                <article class="vs-card">
+                    <span class="vs-num">०४</span>
+                    <div class="vs-icon"><i class="fa-solid fa-scroll"></i></div>
+                    <h3>थोर ग्रंथ संपदा</h3>
+                    <p>श्रीमद्भगवद्गीतेचे सार असलेली 'ज्ञानेश्वरी' (भावार्थ दीपिका), 'अमृतानुभव', 'दासबोध' आणि 'एकनाथी भागवत' ग्रंथांची माहिती.</p>
+                    <ul class="vs-chips">
+                        <li>ज्ञानेश्वरी</li><li>अमृतानुभव</li><li>दासबोध</li><li>एकनाथी भागवत</li>
+                    </ul>
+                    <a href="granth-sampada.html" class="vs-btn">ग्रंथ पहा <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
 
+                <!-- ५. आरती संग्रह -->
+                <article class="vs-card">
+                    <span class="vs-num">०५</span>
+                    <div class="vs-icon"><i class="fa-solid fa-bell"></i></div>
+                    <h3>संपूर्ण आरती संग्रह</h3>
+                    <p>काकड आरती, विठ्ठलाच्या मुख्य आरत्या, संतांच्या भूपाळ्या आणि रोजच्या पूजेमध्ये म्हटली जाणारी पारंपारिक स्तोत्रे.</p>
+                    <ul class="vs-chips">
+                        <li>काकड आरती</li><li>विठ्ठल आरत्या</li><li>भूपाळ्या</li><li>स्तोत्रे</li>
+                    </ul>
+                    <a href="pages/artisangrah/artya-sangrah.html" class="vs-btn">आरती संग्रह <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+                <!-- ६. सुभाषिते -->
+                <article class="vs-card">
+                    <span class="vs-num">०६</span>
+                    <div class="vs-icon"><i class="fa-solid fa-heart"></i></div>
+                    <h3>संत सुभाषिते व वचने</h3>
+                    <p>दैनंदिन जीवनात सुख, शांती आणि समाधान देणारे संतांचे अनमोल विचार, सुवचने आणि नैतिक शिकवणुकीचे डोस.</p>
+                    <ul class="vs-chips">
+                        <li>सुवचने</li><li>संत विचार</li><li>नैतिक शिकवण</li>
+                    </ul>
+                    <a href="sant-subhashite.html" class="vs-btn">वाचन करा <i class="fa-solid fa-arrow-right"></i></a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== वाचनाची सुरुवात कुठून करावी ===== -->
+    <section class="vs-section">
+        <div class="vs-wrap">
+            <div class="vs-sub">
+                <h2>वाचनाची सुरुवात कुठून करावी?</h2>
+                <p>संतसाहित्य पहिल्यांदाच वाचत असाल तर हा क्रम उपयुक्त ठरेल.</p>
+            </div>
+            <ol class="vs-steps">
+                <li><strong>हरिपाठापासून सुरुवात</strong>हरिपाठ छोटा आणि रोज म्हणता येण्याजोगा असल्याने नित्य वाचनासाठी सोयीचा आहे.</li>
+                <li><strong>नंतर अभंग गाथा</strong>आवडत्या संतांचे निवडक अभंग वाचा आणि त्यांचा भावार्थ समजून घ्या.</li>
+                <li><strong>मग भारुडे आणि गवळणी</strong>लोककलेच्या रूपातून दिलेला संतांचा संदेश वाचायला रंजक आणि सोपा आहे.</li>
+                <li><strong>शेवटी मोठे ग्रंथ</strong>ज्ञानेश्वरी, दासबोध, एकनाथी भागवत असे मोठे ग्रंथ सावकाश, एका वेळी थोडे थोडे वाचा.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ===== संतसाहित्याचे काव्यप्रकार ===== -->
+    <section class="vs-section">
+        <div class="vs-wrap">
+            <div class="vs-sub">
+                <h2>संतसाहित्यातील प्रमुख प्रकार</h2>
+                <p>या संग्रहात आढळणाऱ्या रचनांचे स्वरूप थोडक्यात समजून घ्या.</p>
+            </div>
+            <div class="vs-forms">
+                <div class="vs-form">
+                    <h4>अभंग</h4>
+                    <p>वारकरी संतांचा सर्वात लोकप्रिय काव्यप्रकार. यात 'ध्रु.' म्हणजे ध्रुवपद (टेक) असते आणि शेवटी संतांचे नाव येते.</p>
+                </div>
+                <div class="vs-form">
+                    <h4>ओवी</h4>
+                    <p>ज्ञानेश्वरीसारख्या मोठ्या ग्रंथांत वापरलेला काव्यबंध. सलग निरूपणासाठी तो उपयुक्त मानला जातो.</p>
+                </div>
+                <div class="vs-form">
+                    <h4>हरिपाठ</h4>
+                    <p>हरिनामाचा पाठ. वारकरी हा दररोज म्हणतात आणि तो नामस्मरणाचे महत्त्व सांगतो.</p>
+                </div>
+                <div class="vs-form">
+                    <h4>भारूड आणि गवळण</h4>
+                    <p>भारूड रूपकातून प्रबोधन करते, तर गवळण श्रीकृष्णाच्या बाललीलांवर आधारित भक्तिरचना आहे.</p>
+                </div>
+                <div class="vs-form">
+                    <h4>आरती आणि भूपाळी</h4>
+                    <p>देवतेच्या स्तुतीसाठी म्हटली जाणारी गीते. काकड आरती सकाळच्या वेळी देवाला जागवण्यासाठी म्हटली जाते.</p>
+                </div>
+                <div class="vs-form">
+                    <h4>ग्रंथ आणि सुवचने</h4>
+                    <p>तत्त्वज्ञान, उपासना आणि आचरणाचे मार्गदर्शन करणारे मोठे ग्रंथ तसेच संतांची संक्षिप्त शिकवण.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== वारंवार विचारले जाणारे प्रश्न ===== -->
+    <section class="vs-section">
+        <div class="vs-wrap">
+            <div class="vs-sub">
+                <h2>वारंवार विचारले जाणारे प्रश्न</h2>
+            </div>
+            <div class="vs-faq">
+                <details>
+                    <summary>वाङ्मय संग्रह म्हणजे काय?</summary>
+                    <p>संतांनी रचलेले अभंग, ओव्या, हरिपाठ, भारुडे, गवळणी, आरत्या आणि ग्रंथ या सर्व रचनांना वाङ्मय म्हणतात. हे पान या सर्व विभागांचे प्रवेशद्वार आहे.</p>
+                </details>
+                <details>
+                    <summary>वाचनाची सुरुवात कशी करावी?</summary>
+                    <p>वर दिलेल्या वाचनक्रमाप्रमाणे आधी हरिपाठ, नंतर अभंग, मग भारुडे व गवळणी आणि शेवटी मोठे ग्रंथ वाचणे सोयीचे आहे. मात्र आपल्याला आवडेल त्या विभागापासून आपण सुरुवात करू शकता.</p>
+                </details>
+                <details>
+                    <summary>एखाद्या रचनेत चूक आढळल्यास काय करावे?</summary>
+                    <p>आपल्याला एखाद्या अभंगात किंवा ओवीत चूक आढळल्यास <a href="contact.html">संपर्क</a> पानावरून आम्हाला कळवा. पृष्ठाची लिंक आणि चुकीचा शब्द सांगितल्यास सुधारणा करणे सोपे होते.</p>
+                </details>
             </div>
         </div>
     </section>
