@@ -2,348 +2,16 @@
 संतवाणी - CONTENT REPORT
 ========================================================================
 Total HTML files      : 930
-Low text pages        : 339  (< 150 shabd)
-Duplicate blocks      : 1655 (veg-vegle pages), 383 (ekach page madhe)
-Near-duplicate pages  : 1
+noindex pages (vagale) : 333
+Low text pages        : 6  (< 150 shabd, noindex vagale)
+Duplicate blocks      : 1123 (veg-vegle pages), 383 (ekach page madhe)
+Near-duplicate pages  : 0
 Mixed/chukiche shabd  : 322 (85 pages madhe)
 
 ------------------------------------------------------------------------
 1) LOW TEXT PAGES (< 150 shabd)  - AdSense sathi dhokyache
 ------------------------------------------------------------------------
-      7 shabd   pages/granth/bhaktishastra.html
-      7 shabd   pages/granth/yogasangram.html
-      8 shabd   pages/granth/gitasar.html
-      8 shabd   pages/granth/kabir-bijak.html
-      8 shabd   pages/granth/meera-padavali.html
-      9 shabd   pages/abhang/sant-gulabrao-abhang.html
-      9 shabd   pages/blog/kartiki-wari.html
-     11 shabd   pages/abhang/sant-gadge-maharaj-abhang.html
-     11 shabd   pages/abhang/sant-tukdoji-maharaj.html
-     30 shabd   photo/pandharpur-live-darshan-photo-010.html
-     30 shabd   photo/pandharpur-live-darshan-photo-020.html
-     30 shabd   photo/pandharpur-live-darshan-photo-030.html
-     30 shabd   photo/pandharpur-live-darshan-photo-040.html
-     30 shabd   photo/pandharpur-live-darshan-photo-050.html
-     30 shabd   photo/pandharpur-live-darshan-photo-060.html
-     30 shabd   photo/pandharpur-live-darshan-photo-070.html
-     30 shabd   photo/pandharpur-live-darshan-photo-080.html
-     30 shabd   photo/pandharpur-live-darshan-photo-090.html
-     30 shabd   photo/pandharpur-live-darshan-photo-100.html
-     30 shabd   photo/pandharpur-live-darshan-photo-110.html
-     30 shabd   photo/pandharpur-live-darshan-photo-120.html
-     30 shabd   photo/pandharpur-live-darshan-photo-130.html
-     30 shabd   photo/pandharpur-live-darshan-photo-140.html
-     30 shabd   photo/pandharpur-vitthal-darshan-image-002.html
-     30 shabd   photo/pandharpur-vitthal-darshan-image-012.html
-     30 shabd   photo/pandharpur-vitthal-darshan-image-022.html
-     30 shabd   photo/pandharpur-vitthal-darshan-image-032.html
-     30 shabd   photo/pandharpur-vitthal-darshan-image-042.html
-     30 shabd   photo/pandharpur-vitthal-darshan-image-052.html
-     30 shabd   photo/pandharpur-vitthal-darshan-image-062.html
-     30 shabd   photo/pandharpur-vitthal-darshan-image-072.html
-     30 shabd   photo/pandharpur-vitthal-darshan-image-082.html
-     30 shabd   photo/pandharpur-vitthal-darshan-image-092.html
-     30 shabd   photo/pandharpur-vitthal-darshan-image-102.html
-     30 shabd   photo/pandharpur-vitthal-darshan-image-112.html
-     30 shabd   photo/pandharpur-vitthal-darshan-image-122.html
-     30 shabd   photo/pandharpur-vitthal-darshan-image-132.html
-     30 shabd   photo/pandharpur-vitthal-darshan-image-142.html
-     30 shabd   photo/vithoba-rukmai-hd-wallpaper-009.html
-     30 shabd   photo/vithoba-rukmai-hd-wallpaper-019.html
-     30 shabd   photo/vithoba-rukmai-hd-wallpaper-029.html
-     30 shabd   photo/vithoba-rukmai-hd-wallpaper-039.html
-     30 shabd   photo/vithoba-rukmai-hd-wallpaper-049.html
-     30 shabd   photo/vithoba-rukmai-hd-wallpaper-059.html
-     30 shabd   photo/vithoba-rukmai-hd-wallpaper-069.html
-     30 shabd   photo/vithoba-rukmai-hd-wallpaper-079.html
-     30 shabd   photo/vithoba-rukmai-hd-wallpaper-089.html
-     30 shabd   photo/vithoba-rukmai-hd-wallpaper-099.html
-     30 shabd   photo/vithoba-rukmai-hd-wallpaper-109.html
-     30 shabd   photo/vithoba-rukmai-hd-wallpaper-119.html
-     30 shabd   photo/vithoba-rukmai-hd-wallpaper-129.html
-     30 shabd   photo/vithoba-rukmai-hd-wallpaper-139.html
-     30 shabd   photo/vithoba-rukmai-hd-wallpaper-149.html
-     30 shabd   photo/vitthal-mauli-pandharpur-darshan-007.html
-     30 shabd   photo/vitthal-mauli-pandharpur-darshan-017.html
-     30 shabd   photo/vitthal-mauli-pandharpur-darshan-027.html
-     30 shabd   photo/vitthal-mauli-pandharpur-darshan-037.html
-     30 shabd   photo/vitthal-mauli-pandharpur-darshan-047.html
-     30 shabd   photo/vitthal-mauli-pandharpur-darshan-057.html
-     30 shabd   photo/vitthal-mauli-pandharpur-darshan-067.html
-     30 shabd   photo/vitthal-mauli-pandharpur-darshan-077.html
-     30 shabd   photo/vitthal-mauli-pandharpur-darshan-087.html
-     30 shabd   photo/vitthal-mauli-pandharpur-darshan-097.html
-     30 shabd   photo/vitthal-mauli-pandharpur-darshan-107.html
-     30 shabd   photo/vitthal-mauli-pandharpur-darshan-117.html
-     30 shabd   photo/vitthal-mauli-pandharpur-darshan-127.html
-     30 shabd   photo/vitthal-mauli-pandharpur-darshan-137.html
-     30 shabd   photo/vitthal-mauli-pandharpur-darshan-147.html
-     30 shabd   photo/vitthal-rukmini-mandir-pandharpur-003.html
-     30 shabd   photo/vitthal-rukmini-mandir-pandharpur-013.html
-     30 shabd   photo/vitthal-rukmini-mandir-pandharpur-023.html
-     30 shabd   photo/vitthal-rukmini-mandir-pandharpur-033.html
-     30 shabd   photo/vitthal-rukmini-mandir-pandharpur-043.html
-     30 shabd   photo/vitthal-rukmini-mandir-pandharpur-053.html
-     30 shabd   photo/vitthal-rukmini-mandir-pandharpur-063.html
-     30 shabd   photo/vitthal-rukmini-mandir-pandharpur-073.html
-     30 shabd   photo/vitthal-rukmini-mandir-pandharpur-083.html
-     30 shabd   photo/vitthal-rukmini-mandir-pandharpur-093.html
-     30 shabd   photo/vitthal-rukmini-mandir-pandharpur-103.html
-     30 shabd   photo/vitthal-rukmini-mandir-pandharpur-113.html
-     30 shabd   photo/vitthal-rukmini-mandir-pandharpur-123.html
-     30 shabd   photo/vitthal-rukmini-mandir-pandharpur-133.html
-     30 shabd   photo/vitthal-rukmini-mandir-pandharpur-143.html
-     32 shabd   photo/001-sant-eknath-haripath-banner.html
-     32 shabd   photo/lord-vithoba-pandurang-wallpaper-hd-004.html
-     32 shabd   photo/lord-vithoba-pandurang-wallpaper-hd-014.html
-     32 shabd   photo/lord-vithoba-pandurang-wallpaper-hd-024.html
-     32 shabd   photo/lord-vithoba-pandurang-wallpaper-hd-034.html
-     32 shabd   photo/lord-vithoba-pandurang-wallpaper-hd-044.html
-     32 shabd   photo/lord-vithoba-pandurang-wallpaper-hd-054.html
-     32 shabd   photo/lord-vithoba-pandurang-wallpaper-hd-064.html
-     32 shabd   photo/lord-vithoba-pandurang-wallpaper-hd-074.html
-     32 shabd   photo/lord-vithoba-pandurang-wallpaper-hd-084.html
-     32 shabd   photo/lord-vithoba-pandurang-wallpaper-hd-094.html
-     32 shabd   photo/lord-vithoba-pandurang-wallpaper-hd-104.html
-     32 shabd   photo/lord-vithoba-pandurang-wallpaper-hd-114.html
-     32 shabd   photo/lord-vithoba-pandurang-wallpaper-hd-124.html
-     32 shabd   photo/lord-vithoba-pandurang-wallpaper-hd-134.html
-     32 shabd   photo/lord-vithoba-pandurang-wallpaper-hd-144.html
-     32 shabd   photo/pandurang-rukmini-beautiful-hd-image-006.html
-     32 shabd   photo/pandurang-rukmini-beautiful-hd-image-016.html
-     32 shabd   photo/pandurang-rukmini-beautiful-hd-image-026.html
-     32 shabd   photo/pandurang-rukmini-beautiful-hd-image-036.html
-     32 shabd   photo/pandurang-rukmini-beautiful-hd-image-046.html
-     32 shabd   photo/pandurang-rukmini-beautiful-hd-image-056.html
-     32 shabd   photo/pandurang-rukmini-beautiful-hd-image-066.html
-     32 shabd   photo/pandurang-rukmini-beautiful-hd-image-076.html
-     32 shabd   photo/pandurang-rukmini-beautiful-hd-image-086.html
-     32 shabd   photo/pandurang-rukmini-beautiful-hd-image-096.html
-     32 shabd   photo/pandurang-rukmini-beautiful-hd-image-106.html
-     32 shabd   photo/pandurang-rukmini-beautiful-hd-image-116.html
-     32 shabd   photo/pandurang-rukmini-beautiful-hd-image-126.html
-     32 shabd   photo/pandurang-rukmini-beautiful-hd-image-136.html
-     32 shabd   photo/pandurang-rukmini-beautiful-hd-image-146.html
-     32 shabd   photo/sant-dnyaneshwar-haripath-banner.html
-     32 shabd   photo/shree-hari-vitthal-mauli-photo-005.html
-     32 shabd   photo/shree-hari-vitthal-mauli-photo-015.html
-     32 shabd   photo/shree-hari-vitthal-mauli-photo-025.html
-     32 shabd   photo/shree-hari-vitthal-mauli-photo-035.html
-     32 shabd   photo/shree-hari-vitthal-mauli-photo-045.html
-     32 shabd   photo/shree-hari-vitthal-mauli-photo-055.html
-     32 shabd   photo/shree-hari-vitthal-mauli-photo-065.html
-     32 shabd   photo/shree-hari-vitthal-mauli-photo-075.html
-     32 shabd   photo/shree-hari-vitthal-mauli-photo-085.html
-     32 shabd   photo/shree-hari-vitthal-mauli-photo-095.html
-     32 shabd   photo/shree-hari-vitthal-mauli-photo-105.html
-     32 shabd   photo/shree-hari-vitthal-mauli-photo-115.html
-     32 shabd   photo/shree-hari-vitthal-mauli-photo-125.html
-     32 shabd   photo/shree-hari-vitthal-mauli-photo-135.html
-     32 shabd   photo/shree-hari-vitthal-mauli-photo-145.html
-     32 shabd   photo/shree-vitthal-murti-pandharpur-photo-008.html
-     32 shabd   photo/shree-vitthal-murti-pandharpur-photo-018.html
-     32 shabd   photo/shree-vitthal-murti-pandharpur-photo-028.html
-     32 shabd   photo/shree-vitthal-murti-pandharpur-photo-038.html
-     32 shabd   photo/shree-vitthal-murti-pandharpur-photo-048.html
-     32 shabd   photo/shree-vitthal-murti-pandharpur-photo-058.html
-     32 shabd   photo/shree-vitthal-murti-pandharpur-photo-068.html
-     32 shabd   photo/shree-vitthal-murti-pandharpur-photo-078.html
-     32 shabd   photo/shree-vitthal-murti-pandharpur-photo-088.html
-     32 shabd   photo/shree-vitthal-murti-pandharpur-photo-098.html
-     32 shabd   photo/shree-vitthal-murti-pandharpur-photo-108.html
-     32 shabd   photo/shree-vitthal-murti-pandharpur-photo-118.html
-     32 shabd   photo/shree-vitthal-murti-pandharpur-photo-128.html
-     32 shabd   photo/shree-vitthal-murti-pandharpur-photo-138.html
-     32 shabd   photo/shree-vitthal-murti-pandharpur-photo-148.html
-     32 shabd   photo/shree-vitthal-pandurang-hd-photo-001.html
-     32 shabd   photo/shree-vitthal-pandurang-hd-photo-011.html
-     32 shabd   photo/shree-vitthal-pandurang-hd-photo-021.html
-     32 shabd   photo/shree-vitthal-pandurang-hd-photo-031.html
-     32 shabd   photo/shree-vitthal-pandurang-hd-photo-041.html
-     32 shabd   photo/shree-vitthal-pandurang-hd-photo-051.html
-     32 shabd   photo/shree-vitthal-pandurang-hd-photo-061.html
-     32 shabd   photo/shree-vitthal-pandurang-hd-photo-071.html
-     32 shabd   photo/shree-vitthal-pandurang-hd-photo-081.html
-     32 shabd   photo/shree-vitthal-pandurang-hd-photo-091.html
-     32 shabd   photo/shree-vitthal-pandurang-hd-photo-101.html
-     32 shabd   photo/shree-vitthal-pandurang-hd-photo-111.html
-     32 shabd   photo/shree-vitthal-pandurang-hd-photo-121.html
-     32 shabd   photo/shree-vitthal-pandurang-hd-photo-131.html
-     32 shabd   photo/shree-vitthal-pandurang-hd-photo-141.html
-     34 shabd   photo/08-sant-eknath-haripath-dhanyamay-vyali.html
-     34 shabd   photo/10-sant-eknath-haripath-harinamkrut-sevi.html
-     34 shabd   photo/11-sant-eknath-haripath-bhatkivin-pashu.html
-     34 shabd   photo/13-sant-eknath-haripath-nakale-tekale.html
-     34 shabd   photo/14-sant-eknath-haripath-olkhicha-hari.html
-     34 shabd   photo/17-sant-eknath-haripath-kalpane-pasuni.html
-     34 shabd   photo/18-sant-eknath-haripath-kay-padminiche.html
-     34 shabd   photo/19-sant-eknath-haripath-n-nayechi.html
-     34 shabd   photo/20-sant-eknath-haripath-parimal-gopiya.html
-     34 shabd   photo/25-sant-eknath-haripath-durbalachi-kannya.html
-     34 shabd   photo/kakda-aarti-01.html
-     34 shabd   photo/kakda-aarti-02.html
-     34 shabd   photo/kakda-aarti-03.html
-     34 shabd   photo/kakda-aarti-04.html
-     34 shabd   photo/kakda-aarti-11.html
-     34 shabd   photo/kakda-aarti-12.html
-     34 shabd   photo/kakda-aarti-13.html
-     34 shabd   photo/kakda-aarti-15.html
-     34 shabd   photo/kakda-aarti-22.html
-     34 shabd   photo/kakda-aarti-23.html
-     34 shabd   photo/kakda-aarti-25.html
-     34 shabd   photo/kakda-aarti-26.html
-     34 shabd   photo/kakda-aarti-29.html
-     34 shabd   photo/kakda-aarti-34.html
-     34 shabd   photo/kakda-aarti-35.html
-     34 shabd   photo/kakda-aarti-36.html
-     34 shabd   photo/marathi-sant-sahitya-abhag-aarambhi-vaandito.html
-     34 shabd   photo/marathi-sant-sahitya-abhag-amurutachi-godi.html
-     34 shabd   photo/marathi-sant-sahitya-abhag-dekhoniya-tuza.html
-     34 shabd   photo/marathi-sant-sahitya-abhag-deva-tuza.html
-     34 shabd   photo/marathi-sant-sahitya-abhag-jata-pandhrishi.html
-     34 shabd   photo/marathi-sant-sahitya-abhag-lagoniya-paya.html
-     34 shabd   photo/marathi-sant-sahitya-abhag-mazya-vithobacha.html
-     34 shabd   photo/marathi-sant-sahitya-abhag-omkar-swaprupa.html
-     34 shabd   photo/marathi-sant-sahitya-abhag-pandhri-vari.html
-     34 shabd   photo/marathi-sant-sahitya-abhag-sampada-sohale.html
-     34 shabd   photo/marathi-sant-sahitya-abhag-santane-sarita.html
-     34 shabd   photo/sant-dnyaneshwar-haripath-abhang-trivenisangami.html
-     36 shabd   photo/01-sant-eaknath-haripth-rup-pahata-lochani.html
-     36 shabd   photo/02-sant-eknath-haripath-sunder-te-dhyan.html
-     36 shabd   photo/05-sant-eknath-haripath-olkila-hari-dhnaya.html
-     36 shabd   photo/09-sant-eknath-haripath-bahita-sukrute-nardeh.html
-     36 shabd   photo/12-sant-eknath-haripath-satpad-te-brahm.html
-     36 shabd   photo/12.1-sant-eknath-haripath-sawahitakarne-sangti-sadhuchi.html
-     36 shabd   photo/21-sant-eknath-haripath-kara-re-bapano.html
-     36 shabd   photo/22-sant-eknath-haripath-bara-sola-jani.html
-     36 shabd   photo/23-sant-eknath-haripath-pindi-deh-sthiti.html
-     36 shabd   photo/24-sant-eknath-haripath-aavdine-bhave-harinaam.html
-     36 shabd   photo/26-sant-eknath-haripath-mudra-ti-pachvi.html
-     36 shabd   photo/kakda-aarti-06.html
-     36 shabd   photo/kakda-aarti-07.html
-     36 shabd   photo/kakda-aarti-09.html
-     36 shabd   photo/kakda-aarti-14.html
-     36 shabd   photo/kakda-aarti-16.html
-     36 shabd   photo/kakda-aarti-18.html
-     36 shabd   photo/kakda-aarti-19.html
-     36 shabd   photo/kakda-aarti-20.html
-     36 shabd   photo/kakda-aarti-21.html
-     36 shabd   photo/kakda-aarti-24.html
-     36 shabd   photo/kakda-aarti-27.html
-     36 shabd   photo/kakda-aarti-28.html
-     36 shabd   photo/kakda-aarti-32.html
-     36 shabd   photo/kakda-aarti-37.html
-     36 shabd   photo/kakda-aarti-38.html
-     36 shabd   photo/kakda-aarti-39.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-aaj-soniyacha-dinu.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-aaji-sansar-suphal.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-aamha-vrat-ekadashi.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-aamhi-tene-sukhi.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-aavde-pandhri-bhima.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-bajan-kari-mahadev.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-chala-aalandi-jau.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-chala-ho-pandhri.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-datt-vase-audumbari.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-dei-maz-prem.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-deva-maze-man.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-dhrila-padhricha-chor.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-jali-budbade-dekhata.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-janmo-janmi-aamhi.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-jato-maghri-andhrinatha.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-jaya-sukha-karne.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-kanda-muli-bhaji.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-krupalu-sanjjan-tumhi.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-man-ha-mogra.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-maze-maher-pandhri.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-pandhra-divasa-ekadashi.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-pandhri-nivas-sakhya.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-pandhrisi-ja-re.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-rajas-sukumar-madnacha.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-rup-pahata-lochani.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-samdhi-ghetli-aalnadi.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-sharan-sharan-hanumanta.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-shiv-bhola-charvrati.html
-     36 shabd   photo/marathi-sant-sahitya-abhag-yare-nachu-premanande.html
-     36 shabd   photo/marathi-sant-sahitya-gavlani-aikuni-venucha-naad.html
-     36 shabd   photo/marathi-sant-sahitya-gavlani-krishna-tula-mi.html
-     36 shabd   photo/marathi-sant-sahitya-gavlani-lahan-lahan-mule.html
-     36 shabd   photo/marathi-sant-sahitya-gavlani-yati-kul-maze.html
-     36 shabd   photo/marathi-sant-sahitya-gavlani-yeg-yeg-vithabai.html
-     36 shabd   photo/sant-dnyaneshwar-haripath-abhang-devachiya-dwari.html
-     36 shabd   photo/sant-dnyaneshwar-haripath-abhang-ektatav-naam.html
-     36 shabd   photo/sant-dnyaneshwar-haripath-abhang-hari-ucharani.html
-     36 shabd   photo/sant-dnyaneshwar-haripath-abhang-harinam-jape.html
-     36 shabd   photo/sant-dnyaneshwar-haripath-abhang-harivansh-puran.html
-     36 shabd   photo/sant-dnyaneshwar-haripath-abhang-namsangh-kirtan.html
-     36 shabd   photo/sant-dnyaneshwar-haripath-abhang-nityanem-nami.html
-     36 shabd   photo/sant-dnyaneshwar-haripath-abhang-sadhubodh-zala.html
-     36 shabd   photo/sant-dnyaneshwar-haripath-abhang-samadhi-harichi.html
-     36 shabd   photo/sant-dnyaneshwar-haripath-abhang-santache-sangati.html
-     36 shabd   photo/sant-dnyaneshwar-haripath-abhang-tirthvrat-nem.html
-     36 shabd   photo/sant-dnyaneshwar-haripath-abhang-vedshastra-puran.html
-     36 shabd   photo/sant-dnyaneshwar-haripath-abhang-vishnuvin-jap.html
-     36 shabd   photo/sant-dnyaneshwar-haripath-abhang-yogyag-vidhi.html
-     36 shabd   photo/sant-sahitya-guru-parampareche-abhang-avghachi-sansar.html
-     36 shabd   photo/sant-sahitya-guru-parampareche-abhang-avghechi-trilokya.html
-     36 shabd   photo/sant-sahitya-guru-parampareche-abhang-shreeguru-sarikha.html
      38 shabd   admin.html
-     38 shabd   photo/04-sant-eknath-haripath-hari-bola-hari-bola.html
-     38 shabd   photo/15-sant-eknath-haripath-haribola-deta-haribola-gheta.html
-     38 shabd   photo/16-sant-eknath-haripath-ek-pach-teen-mela.html
-     38 shabd   photo/kakda-aarti-05.html
-     38 shabd   photo/kakda-aarti-08.html
-     38 shabd   photo/kakda-aarti-10.html
-     38 shabd   photo/kakda-aarti-30.html
-     38 shabd   photo/kakda-aarti-31.html
-     38 shabd   photo/kakda-aarti-33.html
-     38 shabd   photo/kakda-aarti-40.html
-     38 shabd   photo/marathi-sant-sahitya-abhag-aamhi-jato-aamchya-gava.html
-     38 shabd   photo/marathi-sant-sahitya-abhag-bolava-vitthal-pahava-vitthal.html
-     38 shabd   photo/marathi-sant-sahitya-abhag-deh-javo-athva-rahavo.html
-     38 shabd   photo/marathi-sant-sahitya-abhag-hechi-vavi-mazi-aas.html
-     38 shabd   photo/marathi-sant-sahitya-abhag-ladaki-lek-mi-samtanchi.html
-     38 shabd   photo/marathi-sant-sahitya-abhag-naam-gau-naam-gheu.html
-     38 shabd   photo/marathi-sant-sahitya-abhag-raho-aata-hechi-dhyan.html
-     38 shabd   photo/marathi-sant-sahitya-abhag-savale-rupade-chorte-chitache.html
-     38 shabd   photo/marathi-sant-sahitya-abhag-vishvana-ghari-sarv-kal.html
-     38 shabd   photo/marathi-sant-sahitya-gavlani-jau-de-re-mla.html
-     38 shabd   photo/marathi-sant-sahitya-gavlani-naam-tuze-re-narayana.html
-     38 shabd   photo/marathi-sant-sahitya-gavlani-radate-maze-baal-tanhe.html
-     38 shabd   photo/sant-dnyaneshwar-haripath-abhang-chahu-vedi-jaan.html
-     38 shabd   photo/sant-dnyaneshwar-haripath-abhang-devachiya-dwari-ubha.html
-     38 shabd   photo/sant-dnyaneshwar-haripath-abhang-ek-nam-hari.html
-     38 shabd   photo/sant-dnyaneshwar-haripath-abhang-haripath-asati-aathavis.html
-     38 shabd   photo/sant-dnyaneshwar-haripath-abhang-haripath-kirti-mukhe.html
-     38 shabd   photo/sant-dnyaneshwar-haripath-abhang-janiv-neniv-bhagvanti.html
-     38 shabd   photo/sant-dnyaneshwar-haripath-abhang-jap-tap-karm.html
-     38 shabd   photo/sant-dnyaneshwar-haripath-abhang-kal-vel-nam.html
-     38 shabd   photo/sant-dnyaneshwar-haripath-abhang-nam-shang-kirtan.html
-     38 shabd   photo/sant-dnyaneshwar-haripath-abhang-nitya-satya-mit.html
-     38 shabd   photo/sant-dnyaneshwar-haripath-abhang-parvtapramane-patak-karane.html
-     38 shabd   photo/sant-dnyaneshwar-haripath-abhang-sarv-sukh-godi.html
-     38 shabd   photo/sant-dnyaneshwar-haripath-abhang-sat-pach-teen.html
-     38 shabd   photo/sant-dnyaneshwar-haripath-abhang-sundar-te-dhyan.html
-     38 shabd   photo/sant-sahitya-guru-parampareche-abhang-adinath-guru-sakal.html
-     38 shabd   photo/sant-sahitya-guru-parampareche-abhang-adinath-uma-beej.html
-     38 shabd   photo/sant-sahitya-guru-parampareche-abhang-ghaluniya-bhar-rahilo.html
-     38 shabd   photo/sant-sahitya-guru-parampareche-abhang-sant-bhar-pandhrit.html
-     40 shabd   photo/03-sant-eknath-haripath-harichiya-dasa-hari-dahi-disha.html
-     40 shabd   photo/06-sant-eknath-haripath-jeje-drushti-te-te-harirup.html
-     40 shabd   photo/07-sant-eknath-haripath-namavin-mukh-sarpanche-te-bil.html
-     40 shabd   photo/kakda-aarti-17.html
-     40 shabd   photo/marathi-sant-sahitya-abhag-amuratahuni-god-naam-tuze-deva.html
-     40 shabd   photo/marathi-sant-sahitya-abhag-jethe-jato-tethe-tu-maza.html
-     40 shabd   photo/marathi-sant-sahitya-abhag-rupe-sunder-savle-ge-may.html
-     40 shabd   photo/marathi-sant-sahitya-gavlani-jare-jare-tu-nandachya-pora.html
-     40 shabd   photo/sant-dnyaneshwar-haripath-abhang-bhavevin-bhakti-bhaktivin-mukti.html
-     40 shabd   photo/sant-dnyaneshwar-haripath-abhang-konache-he-ghar-ha.html
-     40 shabd   photo/sant-sahitya-guru-parampareche-abhang-bolile-lekaru-vedi-vakudi.html
-     40 shabd   photo/sant-sahitya-guru-parampareche-abhang-majiya-manicha-janoniya-bhav.html
-     40 shabd   photo/sant-sahitya-guru-parampareche-abhang-pahe-paha-dhavjache-chirgut.html
-     40 shabd   photo/sant-sahitya-guru-parampareche-abhang-sadguraye-krupa-maj-keli.html
-     42 shabd   photo/sant-dnyaneshwar-haripath-abhang-trigun-asar-nirgun-he-sar.html
-     42 shabd   photo/sant-sahitya-guru-parampareche-abhang-kon-punya-yancha-hoil-sevak.html
-     42 shabd   photo/sant-sahitya-guru-parampareche-abhang-mazya-vithobacha-kaisa-prem-bhav.html
      68 shabd   bharude-gavlani.html
      69 shabd   contact.html
     113 shabd   abhang-gatha.html
@@ -844,11 +512,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/blog/magh-wari.html
       - pages/blog/namdev-maharaj-samadhi.html
 
-  [3 pages]  "तुका म्हणे काय जालासी निर्गुण । आम्हां येथें कोण सोडवील ॥३॥..."
-      - pages/abhang/tukaram-gatha-part36.html
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [3 pages]  "तुम्हाला ज्या अध्यायाचे वाचन करायचे आहे, त्यावर क्लिक करा...."
       - pages/granth/dnyaneshwari/dnyaneshwari.html
       - pages/granth/eknathi-bhagvat/eknathi-bhagvat.html
@@ -929,37 +592,13 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/nitya-pathan-stotra/shiv-panchakshar-stotra.html
       - pages/nitya-pathan-stotra/shiv-tandav-stotra.html
 
-  [2 pages]  "अंतकाळीं ज्याच्या नाम आलें मुखा । तुका म्हणे सुखा पार नाहीं ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "अंतरीचा रंग उमटे बाहेरी । वोळखियापरी आपेंआप ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "अंधक उपाख्यान अध्याय १ २८ मिनिटे वाचन रुद्र संहिता - युद्ध खंड..."
       - pages/blog/andhak-janma-hiranyaksha-hiranyakashipu-vadh-shivpuran-24-a.html
       - pages/blog/andhak-tapascharya-swairachar-shivpuran-katha-24-b.html
 
-  [2 pages]  "अंधळ्याचे काठी अंधळें लागलें । घात एकवेळे मागेंपुढें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "अंबॠषीसाटीं जन्म सोसियेलें । दुष्ट निर्दाळिले किती एक ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "अगा योगी जो म्हणिजे । तो देवांचा देव जाणिजे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "अजामिळ मरेपर्यंत तुला कधीही आठवत नव्हता, पण मरताना त्याने मुलाच्या नावाने 'नारायण' अशी हाक..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "अत्यंत मोलाचे आयुष्य हळूहळू संपत चालले आहे, पूर्वपुण्याईमुळेच हा मानवी जन्म लाभला आहे. अने..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "अथवा आग्रहाचिये बांदोडी । क्षुधा तृषा कोंडी ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -981,49 +620,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/lokpriya-namdev-abhang.html
       - pages/liturgy/gavlani.html
 
-  [2 pages]  "अनंतजन्मींचे शेवट पाहतां । नर देह हातां आला तुझ्या ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "अनाथ अज्ञान कोणी नाहीं त्यासि । पायापें विठ्ठला ठेवीं मज ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "अनाथ परदेशी हीन दीन भोळें । उगलें चि लोळे तुझे रंगीं ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "अनामिका हातीं समर्थाचा सिक्का । न मानितां लोकां येइल कळों ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "अन्यायाविरुद्ध किंवा सत्यासाठी न बोलता गप्प बसल्यास आपलेच नुकसान होते, तर मूर्ख माणसे स्वत..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "अन्यायासी राजा जरि न करितां दंड । बहुचक ते लंड पीडिती जना ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "अपवित्र वाचा जातीचा अधम । आचरण धर्म नाहीं जया ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "अप्रतिष्ठो महाबाहो विमूढो ब्राह्मणः पथि ॥ ३८ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "अबद्ध चांगलें गाऊं भलतैसें । कळलें हें जैसें मायबापा ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "अभयदान मज देई गा उदारा । कृपेच्या सागरा पांडुरंगा ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "अभ्यास तो नाहीं स्वप्नीं ही दुश्चिता । प्रत्यक्ष कैंचा चि तो ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "अभ्यासुचि आपणयातें करी । हृदयातें अनुभव वरि ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -1036,10 +635,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "अमरीं भाट होईजे । मग मृत्युलोकातें वानिजे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "अमृताची दृष्टी घालूनियां वरी । शीतळ हा करीं जीव माझा ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "अर्जुन म्हणे देवा । तुम्ही सांगा कीर आमुचिया कणवा ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -1057,25 +652,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/blog/kamada-ekadashi.html
       - pages/blog/papmochani-ekadashi.html
 
-  [2 pages]  "अलभ्य लाभ कैंचा संचितावेगळा । विनवी गोपाळा दास तुका ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "अवघा निरोपिला तुज देहभाव । आतां मज पाव पांडुरंगा ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "अवघा विठ्ठल तेथें दुजा नाहीं । भरला अंतर्बाहि सदोदीत ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "अवघाची संसार सुखाचा करीन । आनंदे भरीन तिन्ही लोक ॥१॥..."
       - pages/abhang/lokpriya-dnyaneshwar-abhang.html
       - pages/liturgy/guru-parampara.html
-
-  [2 pages]  "अवघें आणिलें अंबर । विठोसहित तेथें धुर । भेदूनि जिव्हार । नामबाणीं धरियेला ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "अवघ्या अवघ्या चोरा । विना वरा मायबापा ॥२॥..."
       - pages/abhang/tukaram-gatha-part24.html
@@ -1085,14 +664,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/sant-bhagubai-abhang.html
       - pages/saints/sant-bhagubai.html
 
-  [2 pages]  "अष्टोत्तरदशें व्याधि ज्य वैद्यें दवडुनी । तो वैद्य मारूनि उत्तीर्ण जाला ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "असंत लक्षण भूतांचा मत्सर । मनास निष्ठ‍ अतिवादी ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "असंयतात्मना योगो दुष्पाप इति मे मतिः ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -1100,14 +671,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "असतेनि देहें एतुला । जो चेतुचि दिसे निदेला ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "असा माणूस नातेवाइकांचा छान पाहुणचार करतो पण संतांसाठी मात्र निकृष्ट अन्न देतो; गाईला काठीन..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "असो आतां यासी काय चाले बळ । आपुलें कपाळ वोडवलें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "असो तो अकुळी असो भलते याती । माथां बंदी प्रीती जनी त्यासी ॥५॥..."
       - pages/abhang/namdev-gatha-part20.html
@@ -1132,10 +695,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "आंधळ्याची काठी । अडकली कवणें बेटीं ॥१॥..."
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
-
-  [2 pages]  "आइक नारायणा वचन माझें खरें । सांगतों निर्धारें तुजपासीं ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "आइका यश श्री औदार्य । ज्ञान वैराग्य ऐश्वर्य ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -1164,34 +723,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "आकाशीं दिसे दुसरें । ते अभ्र जैं विरे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "आज सोन्याचा दिवस उगवला आहे, कारण मी साक्षात वैकुंठ स्वरूप पंढरपुरात पोहोचलो आहे. आनंदाच्या..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आजचा दिवस धन्य आहे कारण माझ्या डोळ्यांना पांडुरंगाचे रूप पाहून भरभरून आनंद मिळाला. माझी जी..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आजची वेळ आणि संधी अत्यंत उत्तम साधली आहे, माझ्या पूर्वपुण्याईने मला चांगली बुद्धी दिली. मा..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आजपर्यंत मी संसाराच्या तावडीत होतो, पण आता माझ्या मनात असा विचार आला आहे की साक्षात नारायण..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आजामेळा अंत मरणासी आला । तोंवरि स्मरला नाहीं तुज ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आजिवरी होतों संसाराचे हातीं । आतां ऐसें चित्तीं उपजलें ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आज्ञा तये काळीं केली पावकासी । झणी पिलीयासी तापवीसी ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "आणि अप्राप्तीही सांडवली । श्रध्दा तया ॥ ४३५ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -1249,10 +780,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "आणिक माझ्या जीवें मोकलिली आस । पाहे तुझी वास पांडुरंगा ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "आणिकचि सुख होऊनि जाये । म्हणूनि विसरे ॥ ३७१ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -1260,10 +787,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "आणिकही एक पहावें । साधकीं वसतें होआवें ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "आणीक कोणाचा मज नाहीं आधार । तुजवरि भार जीवें भावें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "आतां अर्जुनेंसीं श्रीमुकुंदे । नागर बोलिजेल विनोदें ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -1285,14 +808,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
 
-  [2 pages]  "आतां तरी मज सांगा साच भाव । काय म्यां करावें ऐसें देवा ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आतां धरितों पदरीं । तुज मज करीन सरी ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "आतां नाद बिंदु नेणिजे । कला ज्योती ॥ २८८ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -1300,22 +815,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "आतां नियमुचि हा एकला । जीवें करावा आपुला ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "आतां पहाशील काय माझा अंत । आलों शरणागत तुज देवा ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आतां पायांपाशीं लपवावें देवा । नको पाहूं सेवा भक्ती माझी ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आतां पुढें लाज वाटे पांडुरंगा । भक्त ऐसें जगामाजी जालें ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आतां मी अनन्य येथें अधिकारी । होइन कोणे परी नेणें देवा ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "आतां योगाचळाचा निमथा । जरी ठाकावा आथि पार्था ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -1357,14 +856,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/nilobaray-gatha-part32.html
       - pages/abhang/nilobaray-gatha-part33.html
 
-  [2 pages]  "आनंदें कीर्तन कथा करीं घोष । आवडी का रस प्रेमसुख ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आनंदें गर्जती निर्भर । घोष करिती निरंतर । कांपती असुर । वीर कवणा नांगवती ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "आपआपणाशीं करिती नवल । परि वादावाद न संडिती बोल ।..."
       - pages/abhang/tukaram-gatha-part4.html
       - pages/liturgy/gavlani.html
@@ -1373,45 +864,13 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/nilobaray-gatha-part24.html
       - pages/abhang/nilobaray-gatha-part33.html
 
-  [2 pages]  "आपणा लागे काम वाण्याघरीं गुळ । त्याचे याति कुळ काय कीजे ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आपल्याला गुळाची गरज असेल तर वाण्याच्या दुकानात जातो, तेथे त्याची जात कोणती हे आपण विचारत न..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "आपुलिया मना बरवी । असमाई गोठी जीवीं ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "आपुलिये घरीं मैंद होऊनी बसे । कवण कवणासी बोलों नका ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आपुलें म्हणावें मज नुपेक्षावें । प्रेमसुख द्यावें मायबापा ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आपुलें वचन राहावें सांभाळून । तुम्हां आम्हां जाण पडिपाडु ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आमिषाच्या आशेने मासा गळ गिळतो आणि त्याचा घसा फुटून तो मरण पावतो. पण मरणाच्या वेळी जर त्यान..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आम्हां देणें धरा सांगतों तें कानीं । चिंता पाय मनीं विठोबाचे ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "आम्हीं सांगतसों आपैसें । वरि पुशिले तुवां ॥ १६२ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "आराथकरी सोसी । त्यासि हांसे तो आळसी ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "आले वैष्णवांचे भार । दिले हरिनाम नगार ॥१॥..."
       - pages/abhang/namdev-gatha-part21.html
@@ -1420,30 +879,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "आवडी आणि लाजवी । व्यसन आणि शिणवी ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "आवडी धरोनी आलेती आकारा । केला हा पसारा याजसाटीं ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आवडीसारखें मागितलें जरी । तुका म्हणे करीं समाधान ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आवडेल तैसें तुज आळवीन । वाटे समाधान जीवा तैसें ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आविसाचे आसे गळ गिळी मासा । फुटोनियां घसा मरण पावे ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आषाढी आणि कार्तिकी या पंढरपूरच्या दोन्ही वारी-यात्रा अगदी जवळ आल्या आहेत आणि भक्तीचा हा बा..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "आषाढी निकट । आणी कार्तिकीचा हाट ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "आहाच बोलाचि वालीफ फेडिजे । आणि ब्रह्माचियाचि आंगा घडिजे । मग सुखेंसी सुरवाडिजे । सुखाचिमाज..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -1456,10 +891,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "इंद्रियें कर्माच्या ठायी । वाढीनलीं परी कहीं ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "इंिद्रयांचे आम्ही पांगिलों अंकित । त्यांच्यासंगें चित्त रंगलें तें ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "इडा पिंगळा एकवटती । गांठी तिन्ही सुटती ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -1481,21 +912,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "उकरड्यावरी वाढली तुळसी । टाकावी ते कैसी ठायागुणें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "उचलिले कां नेणिजे । तैसें पृष्ठांत उचलिजे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "उत्कंठा हे आजी जाली माझे पोटीं । मोकळिली गोष्टी टाळाटाळ ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "उत्तम चांडाळ नर नारी बाळ । अवघे चि सकळ चतुर्भुज ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "उत्तर: यंदा विजयादशमी (दसरा) मंगळवार, २० ऑक्टोबर २०२६ रोजी आहे...."
       - pages/blog/dasara-vijayadashami-2026-muhurat-simollanghan.html
@@ -1509,33 +928,17 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/eknathi-bhagvat/adhyay-28.html
       - pages/granth/eknathi-bhagvat/adhyay-29.html
 
-  [2 pages]  "उपदेश किती करावा खळासी । नावडे तयासी बरें कांहीं ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "उपलविली म्यां जाणुनि । ग्राहीक श्रोते ॥ २९२ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "एक चि मागणें देई तुझी गोडी । न लगे आवडी आणिकाची ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "एकनाथी भागवत - श्लोक २ व ३ रा..."
       - pages/granth/eknathi-bhagvat/adhyay-06.html
       - pages/granth/eknathi-bhagvat/adhyay-22.html
 
-  [2 pages]  "एका दृढ करीं पंढरीचा राव । मग तुज उपाव पुढिल सुचे ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "एका विनवी जनार्दन । श्रोतां अवधान मज द्यावें ॥२५॥..."
       - pages/granth/eknathi-bhagvat/adhyay-19.html
       - pages/granth/eknathi-bhagvat/adhyay-20.html
-
-  [2 pages]  "एकाचें ही जेथें न घडे दमन । अवघीं नेमून कैसीं राखों ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "एकें पाडें तैसें । वोजा घाली ॥ १८३ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -1657,10 +1060,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "ऐसा कैसा रे तूं धीट । मागें भिरकाविली वीट ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "ऐसा तोचि संन्यासी । पार्था गा परियेसीं ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -1741,14 +1140,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "ऐसी हा निर्धार करी जो मनाचा । तुका म्हणे त्याचा पांग फिटे ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "ऐसे जन्म किती पावलासी देहीं । अझूनि का नाहीं कळली सोय ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "ऐसे साम्यचि एक उपासिजे । पांडवा गा ॥ ४०९ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -1801,10 +1192,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "ऐसें माझें मनीं वाटे नारायणा । घालावी चरणावरि मिठी ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "ऐसें युक्तीचेनि हातें । जें इंद्रियां वोपिजे भातें ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -1841,18 +1228,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "कइं तें सुंदर देखोनि रूपडें । आवडीच्या कोडें आळंगीन ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "कढईतील उकळत्या पाण्यात बेडकाचे पिल्लू राम-राम जप करू लागले, तेव्हा देवाने ते पाणी त्याला त..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "कढेमाजी बाळ करी तळमळ । गोविंद गोपाळ पावें वेगीं ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "कनक आणि कामिनी । ज्यासी नावडे मनींहुनी ।..."
       - pages/granth/eknathi-bhagvat/adhyay-08.html
       - pages/granth/eknathi-bhagvat/adhyay-19.html
@@ -1873,25 +1248,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
 
-  [2 pages]  "कर ठेवुनियां करीं । उभा चंद्रभागे तिरीं ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "करा हरिभक्ती परलोकीं ये कामा । सोडवील यमापासोनियां ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "कराल ते जोडी येईंल कार्यासी । ध्यावें विठ्ठलासी सुखालागीं ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "कराल तें काय नव्हे जी विठ्ठला । चत्ति द्यावें बोला बोबडिया ॥१॥..."
       - pages/abhang/tukaram-gatha-part33.html
       - pages/abhang/tukaram-gatha-part43.html
-
-  [2 pages]  "करावा संसार लोक लाजे भेणें । वचनासी उणें येऊं नेदीं ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "करिसी लाघवें । तूं हें खेळसी आघवें ॥१॥..."
       - pages/abhang/tukaram-gatha-part32.html
@@ -1909,14 +1268,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/tukaram-gatha-part4.html
       - pages/liturgy/gavlani.html
 
-  [2 pages]  "करीं अंगीकार राखें पायांपाशीं । झणी दिसों देसी केविलवाणें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "करुणा बहुत तुझिया अंतरा । मज विश्वंभरा कळों आलें ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "करूं अमृताचें पान । दुजें नेणों कांहीं आन ॥ध्रु.॥..."
       - pages/abhang/tukaram-gatha-part33.html
       - pages/abhang/tukaram-gatha-part41.html
@@ -1928,10 +1279,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "कर्मिभ्यश्चाधिको योगी तस्मात् योगी भवार्जुन ॥ ४६ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "कळों आला भाव माझा मज देवा । वांयांविण जीवा आठविलें ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "कवणासि काय दिजेल कवणें । अद्वैतीं इये ॥ ६७ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -1993,10 +1340,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "कां रे पुंड्या मातलासी । उभें केलें विठ्ठलासी ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "कां लखलखोनि हारपली । वीजु गगनीं ॥ २८५ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -2013,26 +1356,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "कां हो पांडुरंगा न करा धांवणें । तरि मज कोणें सोडवावें ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "कांहीं कोणा नेणे । विठो वांचूनि तुका म्हणे ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "कागदीं लिहितां नामाची साकर । चाटितां मधुर गोडी नेदी ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "कापुराचे सांते आणिला लसण । वागवितां सीण दुःख होय ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "काय तुझी ऐसी वेचते गांठोळी । मांहे टाळाटाळी करीतसां ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "काय नादातें हन बरव । जिणोनी आली ॥ १३२ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -2041,53 +1364,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "काय बडबड अमित । सुख जिव्हारी सिणविसी ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "काय महदादि हें सकळ । आपु नोहे ॥ ४२६ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "काय मुख बळि श्वापदाचे धांव । नित्य तुझें नांव नुच्चारितां ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "काय वांचोनियां जालों भूमिभार । तुझ्या पायीं थार नाहीं तरि ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "काय समाधान केलें कोण वेळे । कोणें माझे लळे पाळियेले ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "काळें पुरविली पाठी दुरवरी । पुढें पायां धीरी राहों नेदी ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "कावळ्याच्या गळां मुक्ताफळमाळा । तरी काय त्याला भूषण शोभे ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "कावळ्याच्या गळ्यात मोत्यांची माळ घातली तरी ती त्याला शोभत नाही. हत्तीला कस्तुरीचा लेप लावल..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "काशानें उदार तुम्हांसी म्हणावें । एक नेसी भावें एक देसी ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "कासया जिकीर करणें येविसीं । भयाची मानसीं चिंता खंती ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "कासवीचे परि दृष्टी पाहें मज । विज्ञानीं उमज दावुनियां ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "कितीही लुटली तरी कधीही न संपणारी हरिनामाची आणि भक्तीची ही जुनी खाण आता उघडली आहे. सिद्ध, ऋ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "की तेंचि संन्याससवा ठेविजे । सरिसें पुढती ॥ ५० ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -2145,33 +1424,13 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/sant-bhagubai-abhang.html
       - pages/saints/sant-bhagubai.html
 
-  [2 pages]  "कीर्त्तना जावया होतसे हींपुष्टी । खेळतो सोंकटीं रात्रंदिवस॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "कुंटिणी ते दोष बहुता आचरली । नाम घेतां आली करुणा तुज ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "कुरळ होऊनियां देती ते सुढाळ । म्हणे जनी वोवाळ जीवेंभावें ॥१३॥..."
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
 
-  [2 pages]  "कृपावंता करा ज्याचा अंगीकार । तया संवसार नाहीं पुन्हां ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "कृपेचे सागर तुम्ही संत सारे । निरोप हा फार सांगा देवा ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "केवळ एकत्वचि माझें जाणें । सर्वत्र जो ॥ ३९४ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "केवळ कपडे भगवे केले म्हणून कोणी साधू होत नाही, कारण कुत्र्याचा रंगही नैसर्गिक भगवाच असतो; ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "केवळ विषयजळीं ठाकिजे । बुडी देऊनी ॥ ४२२ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -2193,45 +1452,17 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/blog/nageshwar-rameshwar-ghrushneshwar-mahatmya-shivpuran-29.html
       - pages/blog/omkareshwar-kedareshwar-vaidyanath-mahatmya-shivpuran-27.html
 
-  [2 pages]  "कोण तुम्हां सुख असे या कवतुकें । भोगितां अनेकें दुःखें आम्ही ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "कोणताही विचार न करता घाईघाईने दाखवलेला उत्साह आणि भाव शेवटी निश्चयाअभावी अडकून पडतो. म्हणू..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "कोण्या नेत्रें देव पाहे तुजकडे । यासाठीं आवडे संत करी ॥२॥..."
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
-
-  [2 pages]  "कोरडें वैराग्य माजिरा बडिवार । उतरे तो शूर अंगींचें तें ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "कोरोनियां भूमी करिती मधीं वास । तरी उंदरास काय वाणी ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "क्रमी ध्यानाचें चवरें । सांडे तंव ॥ ५८ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "क्षयरोगी म्हणे परता । सर रोगिया तूं आतां ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "क्षीरीमध्यें हिंग दुधामध्यें बोळ । थितें चि वोंगळ कैसें केलें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "क्षुधा काय जाहाली । निद्रा केउती गेली ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "क्षुधारथी अन्नें दुष्काळें पीडिलें । मिष्टान्न देखिलें तेणें जैसें ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "क्षोभलेपणें माजे । उवाइला ठायी गाजे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -2241,37 +1472,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "गजालागीं केला कस्तुरीचा लेप । तिचें तो स्वरूप काय जाणे ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "गण गोत मित्र तूं माझें जीवन । अनन्यशरण तुझ्या पांयीं ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "॥ गणपती बाप्पा मोरया ॥ संतवाणी डिजिटल लायब्ररी २०२६..."
       - pages/blog/ganpati-visarjan-anant-chaturdashi.html
       - pages/blog/ganpatichi-108-nave-arthasahit.html
-
-  [2 pages]  "गळां बांधोनियां दोरी । वांनर हिंडवी घरोघरीं ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "गळां वैजयंतीमाळा। रूपें डोळस सांवळा ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "गाईंचा जो भक्ष अमंगळ खाय । तीचें दूध काय सेवूं नये ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "गाईंसी देखोनी बदबदा मारी । घोडएाची चाकरी गोड वाटे ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "गायत्रीचें क्षीर पिळुनी घेऊनी । उपवासी बांधोनी ताडन करी ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "गुण एकेक काय तयाचे । आकळशील तूं ॥ १११ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -2289,25 +1492,13 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "घाला घातला वैकुंठीं । करूनियां जीवें साटी । पुरविली पाठी । वैष्णवीं काळाची ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "घालुनियां भार राहिलों निश्चितीं । निरविलें संतीं विठोबासि ॥१॥..."
       - pages/abhang/tukaram-gatha-part4.html
       - pages/liturgy/guru-parampara.html
 
-  [2 pages]  "घेई उचलूनि पुसें तानभूक । पुसीं माझें मुख पीतांबरें ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "घेऊनियां कृत्रिम सोंगे । नानापरींच्या नटती रंगें ॥१॥..."
       - pages/abhang/nilobaray-gatha-part24.html
       - pages/abhang/nilobaray-gatha-part33.html
-
-  [2 pages]  "घ्या रे लुटी प्रेम सुख । फेडा आजि धणी । चुकला तो मुकला । जाली वेरझार हाणी ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "चंदनाचे संगें पालटती झाडें । दुर्बळ लांकडें देवामायां ॥२॥..."
       - pages/abhang/namdev-gatha-part21.html
@@ -2325,10 +1516,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "चतुराच्या राया आहो पांडुरंगा । ऐसें तरि सांगा निवडूनि ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "चरणीं अनन्य शरण । त्यासि नाहीं जन्म मरण ॥३॥..."
       - pages/abhang/namdev-gatha-part20.html
       - pages/abhang/sant-janabai-abhang.html
@@ -2336,10 +1523,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "चाडचि निचाडां करी । ऐसी मनोरथीं ये थोरी ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "चातकां लागूनि मेघ नित्य वर्षे । तो तुज उदास करील केवीं ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "चालतां पाऊल जेथ पडे । तेथ अपवर्गाची खाणी उघडे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -2349,32 +1532,12 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "चुकावया कर्म नव्हतें कारण । केला होय सीण अवघा चि ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "जगात करोडो रुपयांची संपत्ती मिळवली तरी मृत्यूनंतर सोबत साधी लंगोटीही येत नाही. हयातभर किती..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "जननिंदा होय तो बरा विचार । थोरवीचा भार कामा नये ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "जननीचे पोटीं उपजलासी जेव्हां । चिंता तुझी तेव्हां केली तेणें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "जन्म, घराणे आणि कौटुंबिक पार्श्वभूमी..."
       - pages/saints/sant-gora-kumbhar-maharaj.html  (x2)
       - pages/saints/sant-nivruttinath-maharaj.html  (x2)
 
-  [2 pages]  "जन्मजराव्याधि निवारिलें दुःख । वोसंडलें सुख प्रेम धरी ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "जन्ममरण तुजसाटीं । आणीक नेणें दुजी गोष्टी ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
+  [2 pages]  "जन्मोजन्मीं ऐसें मागितलें तुज । आम्हांसी सहज द्यावें आतां ॥३॥..."
+      - pages/abhang/lokpriya-tukaram-abhang.html
       - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "🚩 जय श्री राम! जय हनुमान!..."
@@ -2441,18 +1604,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "जयासी नावडे वैष्णवांचा संग । जाणावा तो मांग जन्मांतरीं ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "जर राजाने अन्यायाविरुद्ध किंवा गुन्हेगारांना योग्य दंड दिला नाही, तर उपद्रवी आणि उद्धट लोक..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "जरि तुज कांहीं करणें उचित । तारीं तूं पतित तुका म्हणे ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "जरी तयाचा न देखतां । अतिशयो एथ ॥ १२२ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -2460,14 +1611,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "जरी दैवयोगें चढे । परिसु हातां ॥ ३४ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "जळो अंतरींचें सर्व जाणपण । विवादवचन अहंतेचें ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "जसे लहान मूल भुंग्याच्या पायाला दोरी बांधून त्याला पकडून ठेवते किंवा मदारी माकडाच्या गळ्या..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "जाउनि एकांतीं बैसणें । करुनी चावटी बोलणें ॥३॥..."
       - pages/abhang/nilobaray-gatha-part24.html
@@ -2481,14 +1624,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "जाणोनि नेणती अंगा आली दशा । मग होय इच्छा आपणे चि ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "जातां भलें काय डोळियांचें काम । जरि पुरुषोत्तम न देखती ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "जाती पुढें एक उतरले पार । हा भवसागर साधुसंत ॥२॥..."
       - pages/abhang/tukaram-gatha-part4.html
       - pages/liturgy/guru-parampara.html
@@ -2497,25 +1632,13 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "जायाचें शरीर जाईंल क्षणांत । कां हा गोपिनाथ पावे चि ना ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "जालंधर उपाख्यान अध्याय २ २७ मिनिटे वाचन रुद्र संहिता - युद्ध खंड..."
       - pages/blog/devasur-sangram-kirtimukh-utpatti-shivpuran-katha-22-b.html
       - pages/blog/jalandhar-utpatti-shivpuran-katha-22-a.html
 
-  [2 pages]  "जालों जीवासी उदार । उभा ठाकलों समोर ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "जाळीयेली लंका । धन्य धन्य म्हणे तुका ॥३॥..."
       - pages/abhang/lokpriya-tukaram-abhang.html
       - pages/abhang/tukaram-gatha-part3.html
-
-  [2 pages]  "जिथे घरोघरी ब्रह्मज्ञान आहे आणि प्रत्येक जण साक्षात ईश्वराचे रूप झाला आहे, तेथे पापाला अजि..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "जिये कोंवळिकेचेनि पाडें । दिसती नादींचे रंग थोडे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -2533,17 +1656,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "जीवीं गातां गोड आइकतां कानीं । पाहातां लोचनीं मूर्ती तुझी ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "जीवींचिये ऐसी धारण । म्हणोनि पुसावया जाहलें कारण ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "जुंझायाच्या गोष्टी ऐकतां चि सुख । करितां हें दुःख थोर आहे ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "जे एथ अधिकारिये स्वभावें । निष्कामकामु ॥ २७ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -2633,10 +1748,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "जें दुर्लभ ब्रम्हादिकां । आजि सांपडलें फुका । घ्या रे म्हणे तुका । सावचित्त होउनी ॥५॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "जें निरोधलें घे उवावो । जया संयमुचि होय सावावो ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -2672,14 +1783,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "जें साधकांचें कारण । सिद्ध तत्व ॥ ४७८ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "जेजे आळी केली तेते गेली वांयां । उरला पंढरिराया श्रम माझा ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "जेजे शरण आले तेते आपंगिले । पवाडे विठ्ठले ऐसे तुझे ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "जेणें ऐक्याचिये दिठी । सर्वत्र मातेचि किरीटी ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -2829,10 +1932,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "जो मुळव्याधी पीडिला । त्यासी देखोन हांसे खरजुला ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "जो रसनेद्रियाचा अंकिला । कां निद्रेसी जीवें विकला ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -2849,14 +1948,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "जोडूनि अक्षरें केलीं तोंडपिटी । न लगे सेवटीं हातीं कांहीं ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "जोपर्यंत मनात खरा प्रेमभाव नाही, तोपर्यंत डोळे झाकून जप करण्यात काय अर्थ आहे? 'रामनाम' हाच..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "ज्ञानदेव म्हणे मी चाडें । सद्गुरुंनी केलें कोडें ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -2865,57 +1956,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/blog/dnyaneshwar-samadhi.html
       - pages/saints/sant-dnyaneshwar-maharaj.html
 
-  [2 pages]  "ज्या गोष्टीमुळे माझ्या स्वामीला म्हणजेच देवाला संकट किंवा त्रास होईल, अशा प्रेमाचे सुख मला..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "ज्या दोरीच्या आधाराने पर्वत चढला, वर पोहोचल्यावर त्याच दोरीला आणि पावलांना नुकसान पोहोचवणे..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "ज्या माणसाला संतांचा आणि वैष्णवांचा संग आवडत नाही, तो विचाराने नीच समजावा. त्याची वाणी अपव..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "ज्यांचे ध्यानी मनीं हरी । राहिला निरंतरीं दृष्टीपुढें ॥३॥..."
       - pages/abhang/nilobaray-gatha-part23.html
       - pages/abhang/nilobaray-gatha-part33.html
-
-  [2 pages]  "ज्यांना पंढरपुरात राहावयास मिळाले ते प्राणी आणि त्यांचा जन्म खरोखर धन्य आहे. अनेक योनींमध्..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "ज्यांना सांसारिक सुखाची आशा नाही आणि जे सुख-दुःखाच्या पलीकडे गेले आहेत, अशा भक्तांचा मी दा..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "ज्यांनी आपले चित्त खऱ्या भावाने देवाला अर्पण केले आहे, ते सर्व भक्तीच्या परम वैभवाचे मालक ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "ज्यांनी सर्व संसाराचा आणि उपाधींचा नाश करून प्रयत्नपूर्वक देवाला धरून ठेवले, त्यांनी विषया..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "ज्याच्या वचनासी अंतर पडेल । बोल तो होईंल तयाकडे ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "ज्याला ब्रह्मज्ञान, चांगला आचार आणि विचार काहीही ठाऊक नाही आणि तो खोटा व्यवहार करतो, असा म..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "झांकूनियां नेत्र काय जपतोसी । जंव नाहीं मानसीं प्रेमभाव ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "झाडा वरपोनि खाऊनियां पाला । आठवी विठ्ठला वेळोवेळां ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "झाडाचा पाला खाऊन आणि झाडाची साली नेसून जो निरंतर विठ्ठलाचे स्मरण करतो, लोकांच्या आदराला उल..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "झुंजत प्रपंचेंशीं समरंगीं । ज्ञानिये गा ॥ ४७५ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -3077,10 +2120,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "तये नावेसंगें ब्राम्हण तरती । केवीं ते बुडती अनामिक ॥५॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "तरि केतुलेनि एके अवसरें । स्थिरावेल ॥ ४१९ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -3197,10 +2236,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "तातडीची धांव अंगा आणि भाव । खोळंबा तो मग निश्चियाचा ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "तातलिये मुसें । मेण निघोनि जाय जैसें ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -3221,69 +2256,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "तुका म्हणे आतां झडी घालूं पाहें । पांडुरंगे माये तुझे पायीं ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे आतां धरीं अभिमान । आहेसी तूं दानशूर दाता ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे आतां नाहीं भरवसा । मोकलिसी ऐसा वाटतोसी ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे आतां होईं तूं सावध । तोडीं भवबंध एका जन्में ॥७॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे आम्हां भांडवल चित्त । देउनी दुश्चित पाडियेलें ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे आम्हांसाटी येणें रूपा । माझ्या मायबापा पांडुरंगा ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे आम्हीं वेचिलीं उत्तरें । घेतलीं उदारें साच भावें ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे आलों सोसीत संकटें । मी माझें वोखटें आहे देवा ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे एक विठ्ठल चि खरा । येर तो पसारा वाउगा चि ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे एके वेळे देई भेटी । वोरसोनि पोटीं आलिंगावें ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे ऐक सुंदर मंत्र एक । भवसिंधुतारक रामनाम ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "तुका म्हणे ऐसे मावेचे मइंद । त्यांपाशीं गोविंद नाहीं नाहीं ॥४॥..."
       - pages/abhang/tukaram-gatha-part45.html
       - pages/abhang/tukaram-gatha-part8.html
-
-  [2 pages]  "तुका म्हणे ऐसें अंतरींचें आर्त । यावें जी त्वरित नारायणा ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे ऐसें करावें निर्वाण । मग तो रक्षण करिल माझें ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे ऐसें कासया करावें । देहासी दंडावें वाउगें चि ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे करा आयुष्याचें मोल । नका वेचूं बोल नामेंविण ॥५॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "तुका म्हणे कळा । अंगीं जयाच्या सकळा ॥३॥..."
       - pages/abhang/tukaram-gatha-part25.html
@@ -3293,157 +2268,33 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/tukaram-gatha-part15.html
       - pages/abhang/tukaram-gatha-part16.html
 
-  [2 pages]  "तुका म्हणे कांहीं न वेचितां धन । जोडे नारायण नामासाटीं ॥४॥..."
+  [2 pages]  "तुका म्हणे काय जालासी निर्गुण । आम्हां येथें कोण सोडवील ॥३॥..."
+      - pages/abhang/tukaram-gatha-part36.html
       - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
-  [2 pages]  "तुका म्हणे काय सलपटासी काज । फणसांतील बीज काढुनि घ्यावें ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
+  [2 pages]  "तुका म्हणे गाढव लेखा । जेथें भेटेल तेथें ठोका ॥३॥..."
       - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे केला निवाडा रोकडा । राऊत हा घोडा हातोहातीं ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे घालूं इच्छेचिये पोटीं । कवळुनी धाकुटी मूर्ती जीवें ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे चाले आणिकांची सत्ता । तुज आळवितां नवल हें ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे चित्त रंगलेंसे ठायीं । माझें तुझ्या पायीं पांडुरंगा ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे चित्तीं भाव निष्टावंत । दया क्षमा शांत सर्वां भूतीं ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे जरि दिली आठवण । तरि अभिमान धरीं याचा ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे जरी मोकळिसी आतां । तरी मी अनंता वांयां गेलों ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे जरी योग घडे निका । न घडतां थुंका तोंडावरी ॥५॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे जळो जळो ते महंती । नाहीं लाज चित्तीं आठवण ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे जाला अवघा व्यापार । आली वेरझार फळासी हे ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
+      - pages/abhang/tukaram-gatha-part41.html
 
   [2 pages]  "तुका म्हणे जैसें दास केलें देवा । तैसें हें अनुभवा आणीं मज ॥४॥..."
       - pages/abhang/tukaram-gatha-part7.html
       - pages/liturgy/haripath-tukaram.html
 
-  [2 pages]  "तुका म्हणे ज्याचा पिता नाहीं शुद्ध । तयासी गोविंद अंतरला ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे तया काय व्याली रांड । येउनिया भंड जनामध्यें ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे तुज असो माझा भार । बोलतों मी फार काय जाणें ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे तुज वणिऩती पुराणें । होय नारायणें दयासिंधु ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे तुजविण । कोण हरिल माझा सीण ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे तुजें नाम दिनानाथ । तें मज उचित करीं आतां ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे तुझा जालों शरणागत । काया वाचा चित्त दुजें नाहीं ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे तुझा दास ऐसें लोकां । कांहीं सकळिकां कळों यावें ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे तुझा नाहीं अंतपार । म्हणोनि विचार पडिला मज ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे तुझे ऐसे हे पवाडे । वणिऩतां निवाडे सुख वाटे ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे तुम्हां बोल नाहीं देवा । नाहीं केली सेवा मनोभावें ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे तुम्हां सांगतों मी खुण । देवासी तें ध्यान लावुनि बसा ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
+  [2 pages]  "तुका म्हणे तुज ऐसे दयाळ । धुंडितां सकळ नाहीं आम्हां ॥४॥..."
+      - pages/abhang/lokpriya-tukaram-abhang.html
       - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "तुका म्हणे तैसा ओतलासे ठसा । अनुभव सरिसा मुखा आला ॥३॥..."
       - pages/abhang/lokpriya-tukaram-abhang.html
       - pages/abhang/tukaram-gatha-part33.html
 
-  [2 pages]  "तुका म्हणे तैसे अभाविक जन । त्यांसी वांयां सीण करूं नये ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे त्याचे घरींची उष्टावळी । मज ते दिवाळी दसरा सण ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे त्याच्या थुंका तोंडावरि । जातो यमपुरी भोगावया ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे त्याच्या थुंका तोंडावरी । जातो यमपुरी भोगावया ॥६॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे त्यासी काय व्याली रांड । करी बडबड रिती दिसे ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे त्यासी गाईंन मी गीतीं । आणीक तें चित्तीं न धरीं कांहीं ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे दासां निंदी त्याचें तोंड । पहातां नरककुंड पूर्वजांसी ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "तुका म्हणे देवा ऐशा । देवपिशा उदारा ॥३॥..."
       - pages/abhang/tukaram-gatha-part5.html
       - pages/liturgy/gavlani.html
 
-  [2 pages]  "तुका म्हणे देवा तूं काय करिसी । कर्मा दुस्तरासी आमुचिया ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "तुका म्हणे देवा । माझे अंतर वसवा ॥३॥..."
       - pages/abhang/tukaram-gatha-part33.html
       - pages/abhang/tukaram-gatha-part42.html
-
-  [2 pages]  "तुका म्हणे नको पाहूं निरवाण । देई कृपादान याचकासी ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे नाहीं जाणत आणीक । तुजविण एक पांडुरंगा ॥५॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "तुका म्हणे नाहीं विश्वास ज्या मनीं । पाहावें पुराणीं विचारूनी ॥४॥..."
       - pages/abhang/tukaram-gatha-part9.html
@@ -3453,77 +2304,17 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/tukaram-gatha-part3.html
       - pages/abhang/tukaram-gatha-part44.html
 
-  [2 pages]  "तुका म्हणे पाहें । रीस धांपा देत आहे ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे पुंडलिका । तूं चि बळिया एक निका ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे पैं या पांडुरंगाविण । न वचे चि क्षण जीव भला ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे बरी झर्‍याची ते चाली । सांचवण्या खोली कैसीयांची ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे बरे धाकट्याचें जिणें । माता स्तनपानें वाढविते ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे बळी । जीव दिला पायांतळीं ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे बापा आहो विश्वंभरा । आतां कृपा करा ऐसी कांहीं ॥५॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे भक्तकाज तूं कैवारी । तुज साही चारी वणिऩताती ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे भाव धरुन राहें चित्तीं । तरि तो श्रीपति उपेक्षीना ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे भेटावया । सदा उभारिल्या बाह्या ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "तुका म्हणे मज आठवा । मुळ लवकरी पाठवा ॥३॥..."
       - pages/abhang/tukaram-gatha-part16.html
       - pages/liturgy/kakda-aarti.html
-
-  [2 pages]  "तुका म्हणे मज उदंड एवढें । न वांचावें पुढें मायबापा ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे मज जाला हा निर्धार । आतां वांयां फार काय बोलों ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "तुका म्हणे मज दावियेला तारू । कृपेचा सागरु पांडुरंग ॥४॥..."
       - pages/abhang/tukaram-gatha-part4.html
       - pages/liturgy/guru-parampara.html
 
-  [2 pages]  "तुका म्हणे मज न लगे वांकडें । मी तुझें बोबडें बाळ तान्हें ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "तुका म्हणे मज लागलीसे भूक । धांवूनि श्रीमुख दावीं देवा ॥४॥..."
       - pages/abhang/lokpriya-tukaram-abhang.html
       - pages/abhang/tukaram-gatha-part29.html
-
-  [2 pages]  "तुका म्हणे माझा जीव जैसा ओढे । तैसा चि तिकडे पाहिजेल ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे माझे गेले दोन्ही ठाय । सवसार ना पाय तुझे मज ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "तुका म्हणे माझे हेचि सर्व सुख । पाहीन श्रीमुख आवडीने ॥४॥..."
       - pages/liturgy/haripath-dnyaneshwar.html
@@ -3533,185 +2324,37 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/tukaram-gatha-part33.html
       - pages/abhang/tukaram-gatha-part45.html
 
-  [2 pages]  "तुका म्हणे माझें पाळणें पोषणें । करी नारायण सर्वस्वेंसी ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "तुका म्हणे माझें हें चि सर्व सुख । पाहीन श्रीमुख आवडीनें ॥3॥..."
       - pages/abhang/lokpriya-tukaram-abhang.html
       - pages/abhang/tukaram-gatha-part1.html
 
-  [2 pages]  "तुका म्हणे मी तों पतित चि खरा । परि आलों दातारा शरण तुज ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे यासी न चले तांतडी । अनुभवें गोडी येइल कळों ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे येथें दुराग्रह खोटा । आपुल्या अदृष्टा शरण जावें ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे येथें होउनी राहेन । सांडोवा पाषाण पंढरीचा ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे येथें होतों मी दुबळें । आलें या कपाळें थोडें बहु ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे राम । एक विसरतां श्रम ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
+  [2 pages]  "तुका म्हणे माते । पांडुरंगे कृपावंते ॥३॥..."
+      - pages/abhang/tukaram-gatha-part36.html
       - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "तुका म्हणे रुद्रा । अंजनीचिया कुमरा ॥४॥..."
       - pages/abhang/maruti-janma-abhang.html
       - pages/abhang/tukaram-gatha-part3.html
 
-  [2 pages]  "तुका म्हणे लागों पायां । शुद्ध करा आपणियां ॥६॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे लेंकी आळवी माहेरा । गाऊं या संसारा तुज तैसें ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे विज्ञापना परिसावी । आवडी हे जीवीं जाली तैसी ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे व्हावें देहासी उदार । रकुमादेवीवर जोडावया ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे संतपण यां चि नांवें । जरि होय जीव सकळांचा ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे संतां करूं नये अनुचित । पाप नाहीं नीत विचारिता ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे सर्वगुणें तुझा दास । आवडे अभ्यास सदा तुझा ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे सांगूं किती । बाप लेंकासी मारिती ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे सिगे भरूं आलें माप । वियोग संताप जाला तुझा ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे सीमा नाहीं तुझे दये । कोमळ हृदय पांडुरंगा ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे हा चि भाव माझ्या चित्तीं । नाहीं आणिकां गती चाड मज ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे हित उचित अनुचित । मज लागे नित आचरावें ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुका म्हणे हें तूं सर्व जाणसी । मज अधिरासी धीर नाहीं ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "तुका म्हणे हो श्रीपती । आतां चाळवाल किती ॥३॥..."
       - pages/abhang/tukaram-gatha-part32.html
       - pages/abhang/tukaram-gatha-part35.html
-
-  [2 pages]  "तुका विनवीतसे संतां । ऐसें सांगा पंढरिनाथा ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुज पाहातां समोरी । दृष्टि न फिरे माघारी ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "तुज वाटे आतां तें करीं अनंता । तुका म्हणे संता लाज माझी ॥४॥..."
       - pages/abhang/tukaram-gatha-part4.html
       - pages/liturgy/guru-parampara.html
 
-  [2 pages]  "तुजविण प्राण कैसा राहों पाहे । वियोग न साहे क्षणभरि ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुझा म्हणऊनि आणिकापें उभा । राहों हें तों शोभा नेदी आतां ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुझिया दासांचा हीन जालों दास । न धरीं उदास मायबापा ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुझिया पाळणा ओढे माझें मन । गेलों विसरोन देहभाव ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुझे दास ऐसें जगीं वाखाणिलें । आतां नव्हे भलें मोकलितां ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "तुझे पदरीं पडलें खरी । आतां सांभाळ करीं हरी ॥३॥..."
       - pages/abhang/namdev-gatha-part20.html
       - pages/abhang/sant-janabai-abhang.html
-
-  [2 pages]  "तुझें नाम गुण वर्णीन पवाडे । आवडीच्या कोडें नाचों रंगीं ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुझ्या दर्शनाव्यतिरिक्त माझ्या मनात दुसरा कोणताही विचार नाही, म्हणूनच मी एवढा काकुळतीला आल..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुमचा स्वधर्म माझा अधिकार । भोजन उत्तर तुका म्हणे ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुम्हां आम्हां तैसें नाहीं म्हणे तुका । होशील तूं सखा जीवलग ॥५॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुम्हां आम्हां तैसें नाहीं म्हणे तुका । होशील तूं सखा जीवलगा ॥५॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तुम्हांपासाव हें इच्छीतसें दान । अंतरींचें ध्यान मुखीं नाम ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "तुम्ही सध्या हा लेख वाचत आहात..."
       - pages/blog/diwali-5-divas-vasubaras-te-bhaubeej-mahatva-muhurat.html
       - pages/blog/kojagiri-purnima-sharad-purnima-masala-doodh-lakshmi-pujan.html
 
-  [2 pages]  "तुला शरणागत व्हावें नारायणा । अंगीकारा दिना आपुलिया ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तू आम्हां सोयरा सज्जन सांगाति । तुजलागीं प्रीति चालो सदा ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तू दररोज सकाळी उठून केवळ पोटाची आणि खाण्याची चिंता करतोस, पण स्वतःच्या आत्मिक हिताचा विचार..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "तूं प्राप्तीची चाड वाहसी । परि अभ्यासीं दक्ष नव्हसी ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "तूं माझा जिव्हाळा जीवाचा जिवलग । होसी अंतरंग अंतरींचा ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तूच आमचा खरा सोयरा, सज्जन आणि सोबती आहेस, तुझ्यावर माझे नेहमी प्रेम राहो. तू माझ्या जिवाचा..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "ते आमुचेनि पाडें आले । निर्वाळलेया ॥ ३२६ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -3821,10 +2464,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "तें चि घ्यावें तें चि घ्यावें । कैवल्याच्या रासी भावें ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "तें जयाचिया यशा धाकुटें । वेढूं न पुरे ॥ १०९ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -3848,10 +2487,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "तें मानी जैसे अवयव । आपुले होती ॥ ४४६ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "तें मी तुझें नाम गाईंन आवडी । क्षण एक घडी विसंबेना ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "तें वज्रासनें चिमुटली । सावधु होय ॥ २२५ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -3893,10 +2528,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/eknathi-bhagvat/adhyay-22.html
       - pages/granth/eknathi-bhagvat/adhyay-24.html
 
-  [2 pages]  "तेचि करी मात । जे ने होईल तुझे हित ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "तेणे होईल तरी हो कां । निरोधु यया ॥ ३६४ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -3924,10 +2555,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "तेणें बहुतीं जन्मीं मागिलीं । विक्षेपांची पाणिवळें झाडिलीं ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "तेणें माझें चित्त होय समाधान । विलास मिष्टान्न न लगे सोनें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "तेणें विवळले अंतरी । तेथ डोलु आला ॥ १३५ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -4033,10 +2660,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "तेथें निवडेना घुरे कीं चंदन । तैसा वर्णावर्ण नामीं नाहीं ॥७॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "तेथें सहजचि योगु घडे । नाभ्यासितां ॥ ३५३ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -4044,10 +2667,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "तेवीं पिंडाचेनि मिषें । पदीं पद प्रवेशे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "तेवीं शब्दज्ञानी करिती चावटी । ज्ञान पोटासाटीं विकूनियां ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "तेवींचि येरु से घेईल । म्हणौनि बिहे ॥ ७ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -4097,14 +2716,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "तैसा नव्हे देवराव । याचा कृपाळु स्वभाव ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "तैसा पावसी बंधन । मग सोडवील कोण ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "तैसा माझेनि रुपें रुपसु । पुरुष तो गा ॥ ३९७ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -4145,10 +2756,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "तैसी हरिभक्ति सुळावरील पोळी । निवडे तो बळी विरळा शूर ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "तैसे आम्हां तुम्हां जाहले । जें आडमुठी तत्व फावलें ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -4176,10 +2783,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "तैसें जीवा ब्रम्हत्व आहे । संकल्पलोपीं ॥ ८२ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "तैसें तुझे पायीं लांचावलें मन । झुरे माझा प्राण भेटावया ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "तैसें दुर्भेद जे अभिप्राय । कां गुरुगम्य हन ठाय ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -4321,18 +2924,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/eknathi-bhagvat/adhyay-03.html
       - pages/granth/eknathi-bhagvat/adhyay-13.html
 
-  [2 pages]  "त्रासला हा जीव संसारींच्या सुखा । तुजविण सखा नाहीं कोणी ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "त्रासिलें दरिद्रें दोषा जाला खंड । त्या चि काळें पिंड पुनीत जाला ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "त्राहे त्राहे सोडवीं अनंता । लागों दे ममता तुझे पायीं॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "त्वदन्यः संशयस्यास्य छेत्ता न ह्युपपद्दते ॥ ३९ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -4340,22 +2931,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "दंतधावनाचा मुखामाजी हात । वाद्यें वाजती नाइके जनमात ।..."
       - pages/abhang/tukaram-gatha-part4.html
       - pages/liturgy/gavlani.html
-
-  [2 pages]  "दंभें करी भक्ती सोंग दावी जना । अंतरीं भावना वेगळिया ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "दगडाची मूर्ती किंवा सोन्याच्या पादुका या गोष्टी समर्थ आणि अधिकार असणाऱ्या माणसाच्या हातात ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "दर्दुराचें पिलुं म्हणे रामराम । नाहीं उदक उष्ण होऊं दिलें ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "दळण दळोनी भरूं गेली पाळी । भरडोनि वोंगळी नास केला ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "दांतही आन होती । परि अपाडें सानेजती ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -4381,41 +2956,13 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "दुःखवीना चित्त तुझें नारायणा । कांहीं च मागेना तुजपासीं ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "दुणावली हें यदुनाथा । पावों सरले ॥ ४८७ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "दुष्काळाने पीडलेल्या आणि भुकेलेल्या माणसाला मिष्टान्न दिसल्यावर जशी त्याची स्थिती होते; तस..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "दुष्ट माणसाचे लक्षण म्हणजे तो सर्व प्राण्यांचा द्वेष करतो, त्याचे मन कठोर असते आणि तो व्यर..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "दुष्ट माणसाला कितीही उपदेश केला तरी त्याला चांगल्या गोष्टी आवडत नाहीत. अशा माणसाची बुद्धी ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "दुस्तर डोहीं बुडसी पाही । तारूं हें विठ्ठलनाम धरी रे ॥..."
       - pages/abhang/sant-bhagubai-abhang.html
       - pages/saints/sant-bhagubai.html
-
-  [2 pages]  "देउनि आलिंगन प्रीतीच्या पडिभरें । अंगें हीं दातारें निववावीं ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "देऊनियां थोडें नेसील हें फार । कुंटिसी विचार अवघियांचा ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "देऊनियां प्रेम मागितलें चित्त । जाली फिटाफिट तुम्हां आम्हां ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "देखतखेवों वोळखे । म्हणे तत्त्व हें मी ॥ ३६६ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -4453,10 +3000,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "देव तिंहीं बळें धरिला सायासें । करूनियां नास उपाधीचा ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "देव भावाचा अंकित । जाणे दासाचें तें चित्त ॥२॥..."
       - pages/abhang/namdev-gatha-part20.html
       - pages/abhang/sant-janabai-abhang.html
@@ -4469,45 +3012,17 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "देवा कांहीं व्हावें ऐसें नाहीं माझ्या जीवा । आणीक केशवा तुजविण ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "देवा गोठीचि हे ऐकतां । बोधु उपजतसे चित्ता ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "देवाची पूजा हे भूताचें पाळण । मत्सर तो सीण बहुतांचा ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "देवाचे नाव घेणाऱ्या भक्तांमध्ये कोणतीही जात किंवा वर्णभेद राहत नाही, जसे लोखंड कोणत्याही प..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "देह तंव आहे प्रारब्धा अधीन । याचा मी कां सीण वाहूं भार ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "देहभाव तुझ्या ठेवियेला पायीं । आणीक मी कांही नेणें दुजें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "दोनी ऐसी मनोधर्में । नेणेचि जो ॥ ४०५ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "दोराच्या आधारें पर्वत चढला । पाउलासाटीं केला अपघात ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "दोहींमाजी आवडे तें । जें मानलें होय चित्तें ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "द्रव्यइच्छेसाटीं करीतसे कथा । काय त्या पापिष्ठा न मिळे खाया ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "द्वादशी पारणे: दुसऱ्या दिवशी (द्वादशीला) सकाळी ब्राह्मणांना अन्नदान व दक्षिणा देऊन उपवासाच..."
       - pages/blog/mokshada-ekadashi.html
@@ -4521,121 +3036,29 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "धन मेळवूनि कोटी । सवें नये रे लंगोटी ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "धन संपत्तीचा दाता । होय पाहतां पंढरिनाथा ॥३॥..."
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
-
-  [2 pages]  "धन्य आजि पंथें चालती पाउलें । टाळिया शोभले धन्य कर ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "धन्य जालें मुख निवाली रसना । नाम नारायणा घोंष करूं ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "धन्य तुका म्हणे आम्हांसी फावलें । पावलों पाउलें विठोबाचीं ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "धन्य तुज कृपासिंधु म्हणतील । आपुला तूं बोल साच करीं ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "धन्य दिवस आजि डोळियां लाधला । आनंद देखिला धणीवरी ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "धन्य हें मस्तक सर्वांग शोभलें । संताचीं पाउलें लागताती ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "धन्यधन्य ज्यास पंढरीसी वास । धन्य ते जन्मास प्राणी आले ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "धरिये गोडी बहुत आला रस । तुका म्हणे हा मागुता न ये दिवस वो ॥३॥..."
       - pages/abhang/tukaram-gatha-part4.html
       - pages/liturgy/gavlani.html
 
-  [2 pages]  "धरूनियां मनीं बोलिलों संकल्प । होसी तरि बाप सिद्धी पाव ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "धर्म रक्षावया अवतार घेशी । आपुल्या पाळिसी भक्तजना ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "धर्माचे रक्षण करण्यासाठी तू अवतार घेतोस आणि तुझ्या भक्तांचे पालन करतोस. अमरीष ऋषींसाठी तू ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "धांतुचे समुद्र उलंडी । मेदाचे पर्वत फोडी ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "धाड पडो तुझ्या थोरपणावरि । वाचे नरहरि उच्चारीना ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "न कळसी ज्ञाना न कळसी ध्याना । न कळेसी दर्शना धुंडाळितां ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "न कळे ब्रम्हज्ञान आचार विचार । लटिका वेव्हार करीतसे ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "न कळे हरीची करणी । म्हणे नामयाची जनी ॥४॥..."
       - pages/abhang/namdev-gatha-part20.html
       - pages/abhang/sant-janabai-abhang.html
 
-  [2 pages]  "न कळेसी आगमा न कळेसी निगमा । न बोलवे सीमा वेदां पार ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "न चाति स्वप्नशीलस्य जाग्रतो नैव चार्जुन ॥ १६ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "न ठेवावी चाली करावा विचार । वरील आहार गळी लावी ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "न पाहे तयाचे गुण दोष अन्याय । सुख देउनि साहे दुःख त्याचें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "न लगती कष्ट न लगे सायास । करावा अभ्यास विठ्ठलाचा ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "न लगे तप तीर्थ करणें महादान । केल्या एक मन जोडे हरि ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "न लगे वैकुंठ मोक्ष सायुज्यता । सुख वाटे घेतां जन्म ऐसें ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "न सरे लुटितां मागें बहुतां जनीं । जुनाट हे खाणी उघडिली ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "न हि कल्याणकृत् कश्चित् दुर्गतिं तात गच्छति ॥ ४० ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "नको आणूं माझें संचित मनासी । पावन आहेसी पतितां तूं ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "नको करूं कांहीं देवतापूजन । जप तप ध्यान तें ही नको ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "नखी लागेल ढाळें ढाळें । वैराग्याची ॥ ५७ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -4645,29 +3068,13 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "नये काकुलती गर्भवासांसाटीं । न धरीं हें पोटीं भय कांहीं ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "नलगे मिळो जाणें आकाशा । आना ठाया ॥ ८३ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "नव मास माया वाइलें उदरीं । ते माता चौबारीं नग्न केली ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "नवल काय तरी पाचारितां पावे । न स्मरत धांवे भक्तकाजा ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "नवल बोलतीये रेखेची वाहणी । देखतां डोळ्यांही पुरों लागे धणी ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "नव्हे सारितां निराळें । लवण मेळवितां जळें ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "ना तरी जें धातुवादाही न जोडे । तें लोहींचि पंधरें सापडे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -4701,25 +3108,13 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "नाना काष्ठजात पडतां हुताशनीं । ते जात होउनी एकरूप ॥६॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "नाभीवरी पोखे । उदर हें थोके ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "नामधारकासी नाहीं वर्णावर्ण । लोखंड प्रमाण नाना जात ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "नामयाची जनी म्हणावी आपुली । पायीं सांभाळिली मायमापें ॥४॥..."
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
-
-  [2 pages]  "नामामृतें जालें मुळीचें स्मरण । सहज साधन तुका म्हणे ॥९॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "नावेक विरक्तु । जाहला देहधर्मी नियतु ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -4733,57 +3128,13 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/namdev-gatha-part22.html
       - pages/abhang/sant-janabai-abhang.html
 
-  [2 pages]  "नाहीं आइकिली मागें ऐसी मात । जे त्वां शरणागत उपेक्षिले ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "नाहीं आणूनियां समपिऩलें जळ । सेवा ते केवळ चिंतनाची ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "नाहीं जप तप जीवाची आटणी । मनासी दाटणी नाहीं केली ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "नाहीं तरी ब्रीद टाकीं सोडूनियां । न धरिसी माया जरी माझी ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "नाहीं पूर्व पुण्य मज पापरासी । म्हणोनि पायांसी अंतरलों ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "नाहीं भाव मज पडिली लोककाज । राहिलेंसे काज तुझे पायीं ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "नाहीं भाव मनीं नाइके वचन । आपला आपण उणें घेतों ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "नाहीं येथें कांहीं लौकिकाची चाड । तुजविण गोड देवराया ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "नाहीं हित ठावें जननीजनका । दाविले लौकिकाचार तींहीं ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "निःस्पृहः सर्वकामेभ्यो युक्त इत्युच्यते तदा ॥ १८ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "निजलिया ठायीं पोकारिला धांवा । सांकडें तें देवा तुझें मज ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "निडाराचेनि कोंदाटें । मोतियें नावरती संपुटें ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "नित्य उठोनियां खायाची चिंता । आपुल्या तूं हिता नाठवीसी ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "निद्रेचिया वाटा न वचे । ऐसा दृढिवेचेनि अवतरणें नाचे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -4829,37 +3180,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/nilobaray-gatha-part17.html
       - pages/abhang/nilobaray-gatha-part27.html
 
-  [2 pages]  "निष्ठ‍ अथवा होई तूं कृपाळ । तुज सर्वकाळ विसरेंना ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "ने करी निगा कुणबी न काढितां तण । कैंचे येती कण हातासी ते ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "नेदी उरों देव आपणांवेगळें । भावाचिया बळें ठायाठाव ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "नेदीं दिसों किविलवाणें । पांडुरंगा तुझें तान्हें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "पंढरीचा वारकरी । त्याचे पाय माझे शिरीं ॥१॥..."
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
-
-  [2 pages]  "पक्षी वनचरें आहेत भूमीवरि । तयांलागीं हरि उपेक्षीना ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पक्षीयासी तुझें नाम जें ठेविलें । तयें उद्धरिलें गणिकेसी ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पतितपावन म्हणविसी जरी । आवरण करीं तरी माझें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "परतोनि पाठिमोरें ठाके । आणि आपणियांते आपण देखे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -4973,18 +3296,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "पर्वकाळीं धर्म न करी नासरी । वेची राजद्वारीं उदंड चि ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पर्वपक्षी धातु धिःकारिलें जन । स्वयें जनार्दन ते चि जाले ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पलंग न्याहाल्या सुपती । शेवटीं गोवर्‍या सांगाती ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "पवन अति निश्चळु । मंद झुळके ॥ १७५ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -5049,34 +3360,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "पान फुल नेतो वेश्येसी उदंड । ब्राम्हणासी खांड देऊं नेदी ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पानें खाशील उदंड । अंतीं जासी सुकल्या तोंडें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पापा नाहीं रीग काळाचें खंडण । हरिनामकीर्तन परोपरी ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पापिया चांडाळा हरिकथा नावडे । विषयालागीं आवडें गाणें त्याला ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पापी आणि दुष्ट माणसाला हरिकथा आवडत नाही, पण विषयांची आणि कामवासाने भरलेली गाणी ऐकायला खूप ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पायां लावुनियां दोरी । भृंग बांधिला लेंकुरीं ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पायाळाच्या गुणें पडिलें ठाउकें । जगा पुंडलिकें दाखविलें ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "पार्थु अधिष्ठात्री तेथिंची । मातृका गा ॥ १.२७ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -5084,34 +3367,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "पावलो प्रसाद इच्छा केली तैसी । झाले या चित्तासी समाधान ॥१॥..."
       - pages/abhang/nilobaray-gatha-part15.html
       - pages/abhang/tukaram-gatha-part42.html
-
-  [2 pages]  "पावलों पंढरी आनंदगजरें । वाजतील तुरें शंख भेरी ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पावलों पंढरी आपुलें माहेर । नाहीं संवसार तुका म्हणे ॥५॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पावलों पंढरी क्षेमआलिंगनीं । संत या सज्जनीं निवविलें ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पावलों पंढरी पार नाहीं सुखा । भेटला हा सखा मायबाप ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पावलों पंढरी येरझार खुंटली । माउली वोळली प्रेमपान्हा ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पावलों पंढरी वैकुंठभवन । धन्य आजि दिन सोनियाचा ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पाषाण प्रतिमा सोन्याच्या पादुका । हें हो हातीं एका समर्थाचे ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "पासींचि गोसावी न वर्णिजे । मग पाइकाचा गुण घेईजे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -5144,10 +3399,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "पाहें पां आयुष्याचा अढळ करी । जें सरतें जीवित वारी ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "पिंड पोसिलियां विषयांचा पाइक । वैकुंठनायक कैंचा तेथें ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "पिंडे पिंडाचा ग्रासु । तो हा नाथसंकेतीचा दंशु ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -5189,33 +3440,13 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/namdev-gatha-part20.html
       - pages/abhang/sant-janabai-abhang.html
 
-  [2 pages]  "पुरवीं मनोरथ अंतरींचें आर्त । धायेवरि गीत गाई तुझे ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पुराणींचा अर्थ ऐकतां मानस । होतो कासावीस जीव माझा ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "पुरे दोन्ही च बाजार । न लगे आणीक व्यापार ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "पूर्णाहि परी लागे । अवस्था जयाची ॥ १३१ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "पूर्वानुवोळख तें चि पैं मरण । जरि पावे जीवन नामामृत ॥८॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "पूर्वाभ्यासेन तेनैव ह्रियते ह्यवशोऽपि सः ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "पूवाअहूनि बहु भक्त सांभाळिले । नाहीं अव्हेरिले दास कोणी ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "पृथ्वीतें आप विरवी । आपातें तेज जिरवी ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -5241,10 +3472,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "पोट पोसावया तोंडें बडबडी । नाहीं धडफुडी एक गोष्टी ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "प्र.१ कमला एकादशी कधी येते?..."
       - pages/blog/kamala-krishna-ekadashi.html
       - pages/blog/kamala-shukla-ekadashi.html
@@ -5256,10 +3483,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "प्र.३ या एकादशीच्या व्रताने पितरांना काय लाभ होतो?..."
       - pages/blog/indira-ekadashi.html
       - pages/blog/mokshada-ekadashi.html
-
-  [2 pages]  "प्रजन्य वर्षतां जीवना वाहावट । तें समसकट गंगे मिळे ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "प्रणवाचा माथा बुडे । येतुलेनि अनिर्वाच्य सुख जोडे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -5277,14 +3500,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "प्राण जातेवेळे म्हणे नारायण । त्यासाटीं विमान पाठविलें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "प्राणावेगळा न करी नारायण । मग नसो ज्ञान मूर्ख बरा ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "प्राप्य पुण्यकृतां लोकानुषित्वा शाश्वतीः समाः ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -5296,14 +3511,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "बंधु पडे किरीटी । वोढियाणा तो ॥ २१० ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "बकापुढें सांगे भावार्थे वचन । वाउगा चि सीण होय त्यासी ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "बरवी हे वेळ सांपडली संधि । साह्य जाली बुद्धि संचितासी ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "बळियें इंद्रियें येती मना । मन एकवटे पवना ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -5317,49 +3524,13 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
 
-  [2 pages]  "बहु खाणीमध्यें होत कोणी एक । त्रिगुण कीटक पक्षिराज ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "बहु भय वाटे एकाच्या बोभाटें । आली घायवटे फिरोनियां ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "बहु या प्रपंचें भोगविल्या खाणी । टाकोनियां मनीं ठेविला सीण ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "बहुत असती मागें सुखी केलीं । अनाथा माउली जिवांची तूं ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "बहुत करुनि निःशद्ब । दाट न रिगे श्वापद ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "बहुत कृपाळु होसी जगन्नाथा । त्रैलोक्यसमर्था सोइरिया ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "बाइलेच्या गोता आवडीनें पोसी । मातापितियासाठी दवडितो ॥५॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "बाप माझा दिनानाथ । वाट भक्तांची पाहात ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "बापा विठ्ठलराया हें चि देई दान । जोडती चरण जेणें तुझे ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "बाहेर युक्तीची मुद्रा पडे । तंव आंत सुख वाढे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "बुझावोनि माझी धरीं हनुवंटी । ओवाळुनि दिठी करुनी सांडीं ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "बुडाला तया हो जी । कवण गति ॥ ४३६ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -5377,21 +3548,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "बोल नाहीं तुझ्या दातृत्वपणासी । आम्ही अविश्वासी सर्वभावें ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "बोलाचि च कढी बोलाचा चि भात । जेवुनियां तृप्त कोण जाला ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "बोलामाजि मन मनें । आलिंगुं सरले ॥ ११९ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "बोलिला तो बोल करावा साचार । तरि लोक बरें म्हणतील ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "बोले इंद्रियां लागे कळंभा । एकमेकां ॥ १६ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -5401,25 +3560,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/lokpriya-tukaram-abhang.html
       - pages/abhang/tukaram-gatha-part20.html
 
-  [2 pages]  "ब्रम्हज्ञान जेथें आहे घरोघरीं । सर्व निरंतरी चतुर्भुज ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "ब्राम्हणा दक्षणा देतां रडे रुका । विषयालागीं फुका लुटीतसे ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "भक्तांच्या प्रेमापोटीच तू साकार रूप घेतले आहेस आणि हा सर्व पसारा मांडला आहेस. म्हणूनच मी ए..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "भक्ति जनी मागे देवा । तिचा मनोरथ पुरवा ॥३॥..."
       - pages/abhang/namdev-gatha-part20.html
       - pages/abhang/sant-janabai-abhang.html
-
-  [2 pages]  "भक्तिभावें करी बैसोनि निश्चित । नको गोवूं चित्त प्रपंचासी ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "भक्ती धरी दृढ, काम त्यजी रे । साधूचा संग धरीरे ॥..."
       - pages/abhang/sant-bhagubai-abhang.html
@@ -5429,17 +3572,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - index.html
       - sant-sahitya.html
 
-  [2 pages]  "भगवें तरी श्वान सहज वेष त्याचा । तेथें अनुभवाचा काय पंथ ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "भरती गमे सागरीं । सरिता जेवीं ॥ ३०४ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "भले लोक नाहीं सांडीत ओळखी । हे तों झाली देखी दुसर्‍याची ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "भाग 4 (पुढे) सर्व भाग (अनुक्रमणिका) भाग 4 (पुढे)..."
       - pages/abhang/eknath-gatha-part3.html
@@ -5449,17 +3584,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/saints/samarth-dhondutatya-part10.html
       - pages/saints/samarth-dhondutatya-part9.html
 
-  [2 pages]  "भागलों मी आतां आपुल्या स्वभावें । कृपा करोनि देवें आश्वासीजे ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "भागू म्हणे विठोबासी । मज धरावें पोटासी ॥..."
       - pages/abhang/sant-bhagubai-abhang.html
       - pages/saints/sant-bhagubai.html
-
-  [2 pages]  "भाव देखोनि निकट । देवें सोडिलें वैकुंठ ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "भीतरीं वळी न धरे । कोठ्यामाजीं संचरे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -5473,14 +3600,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "भेटीवांचोनियां दुजें नाहीं चित्तीं । येणें काकुलती याजसाटीं ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "भेटोनियां बोलें आवडीचें गुज । आनंदाच्या भोजें जेवूं संगें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "भोजना मागती तूप पावशेर । पडिला विसर स्वप्नामाजी ॥२॥..."
       - pages/abhang/tukaram-gatha-part4.html
       - pages/liturgy/guru-parampara.html
@@ -5488,14 +3607,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "भ्रूलता मागिलीकडे । तेथ मकाराचेंचि आंग न मांडे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "मंजुळवदनीं बचनागाची कांडी । शेवटीं विघडी जीवप्राणा ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "मंत्र यंत्र संध्या करिसी जडीबुटी । तेणें भूतसृष्टी पावसील ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "मकरकुंडलें तळपती श्रवणीं । कंठीं कौस्तुभमणि विराजित ॥2॥..."
       - pages/abhang/lokpriya-tukaram-abhang.html
@@ -5673,10 +3784,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "मज नाहीं कोठें उरला दुर्जन । मायबापाविण ब्रम्हांडीं हें ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "मज पाहतां सावेव । शांतिचि ते ॥ २५५ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -5684,18 +3791,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "मज भुली पडली कैशापरी । आम्हां भोगूनि म्हणे मी ब्रम्हचारी ।..."
       - pages/abhang/tukaram-gatha-part4.html
       - pages/liturgy/gavlani.html
-
-  [2 pages]  "मज या आवडे वैष्णवांचा संग । तेथें नाहीं लाग कळिकाळा ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "मधुरा उत्तरासवें नाहीं चाड । अंतरंगीं वाड भाव असो ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "मन स्थिर माझें जालेंसे निश्चळि । वारिलीं सकळ आशापाश ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "मनः संयम्य मच्चित्तो युक्त आसीत मत्परः ॥ १४ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -5705,10 +3800,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "मनासारिखें न होतां । बाळकासी मारी माता ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "मन्मना भव मद्भक्तो मद्याजी मां नमस्कुरु ।..."
       - pages/granth/dnyaneshwari/adhyay-09.html
       - pages/granth/dnyaneshwari/adhyay-18.html
@@ -5717,25 +3808,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "मरणाचे वेळे करी तळमळ । आठवी कृपाळ तये वेळीं ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "मला केवळ गोड बोलण्याची हौस नाही, मनात खरा भक्तीभाव असावा. नारायणाला प्राणापेक्षा वेगळे न क..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "महांपुरीं जैसें जातसे उदक । मध्यें तें तारक नाव जैसी ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "मा अनुभवें तल्लीनता । नव्हेल केंवी ॥ ३३१ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "मांजरें देखिला लोणियांचा गोळा । लावुनियां डोळा बैसलेंसे ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "मागणें तें हेंचि देवा । कृपा करीं हो केशवा ॥२॥..."
       - pages/abhang/namdev-gatha-part20.html
@@ -5757,21 +3832,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "माझा अनाथ आणि दीनांचा नात असलेला विठ्ठल चंद्रभागेच्या तीरावर भक्तांची वाट पाहत उभा आहे. त्..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "माझा मज असे ठाउका निर्धार । उपाधि उत्तर न साहे पैं ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "माझा मराठाचि बोलु कौतुकें । परि अमृतातेहीं पैजासीं जिंके ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "माझिया संकटा न धरीं अळस । लावुनियां कास पार पावीं ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "माझिये मनींचा जाणोनियां भाव । तो करी उपाव गुरुराजा ॥१॥..."
       - pages/abhang/tukaram-gatha-part4.html
@@ -5785,22 +3848,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
 
-  [2 pages]  "माझे गुणदोष कोण जाणे मात । पावनपतित नाम तुझें ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "माझे मुख गोविंद, गोपाळ, राम, कृष्ण या हरिनामात नेहमी रंगून जावो. हे मायबापा, मला जसे सुचेल..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "माझें चित्त तुझ्या पायां । मिठी पडिली पंढरिराया ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "माझें जीवन तुझे पाय । कृपाळुं तूं माझी माय ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "माझें मुख नामीं रंगो सर्वकाळ । गोविंद गोपाळ राम कृष्ण ॥१॥..."
       - pages/abhang/tukaram-gatha-part39.html
       - pages/abhang/tukaram-gatha-part40.html
@@ -5809,37 +3856,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "माझ्या जिवाला जसे समाधान वाटेल, तसे मी तुला आवडीने हाक मारीन. मला लौकिक जगाची अजिबात पर्वा..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "माझ्या डोळ्यांत नेहमी नारायणाची मूर्ती राहो आणि मनात कसलाही अहंकार न येवो. ज्या थोरपणाने त..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "माझ्या नशिबात जे भोग असतील ते मी भोगेन, हे विठ्ठला, मी तुझ्यावर त्याचा भार घालणार नाही. मल..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "माणूस नेहमी अशाच गोष्टी करतो ज्यातून त्याचे हित होत नाही. व्यर्थ बडबड करून तू स्वतःच्या जि..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "माथां हात ठेविला तें फुडें । बीजचि वाइलें ॥ ४९२ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "मान भलेपण नाहीं फुकासाटीं । जयावरि गांठी झीज साहे ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "मानिसील झणी आपलिक कांहीं । येरझार पाहीं न चुके कदा ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "मायलेकरासीं नाहीं दुजी परि । जेऊं बरोबरी बैसोनियां ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "माया करुणा हे करिते बहुत । किती सोसूं या जनांचे आघात ।..."
       - pages/abhang/tukaram-gatha-part4.html
@@ -5853,53 +3872,17 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "मिरवे चरणीं ऐसीये गोष्टीचें । भक्तसांभाळाचें ब्रीद ऐसें ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "मी अत्यंत आनंदाने आणि प्रेमाने कीर्तन व हरिकथा करतो, ज्यातून भक्तीचा रस मिळतो. मला वैष्णवा..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "मी अनाथ, परदेशी, दीन आणि भोळा जीव तुझ्या भक्तीच्या रंगात लोळत आहे. हे मायबापा, मला तुझे म्..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "मी ऐसें स्वभावें । बोधा आलें ॥ ४०७ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "मी कोणतेही मोठे जप, तप किंवा शरीराला त्रास देणारे कष्ट केले नाहीत, ना मनावर कसली बळजबरी के..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "मी तान्हुलें अज्ञान । म्हणू का देऊ नये स्तन ॥..."
       - pages/abhang/sant-bhagubai-abhang.html
       - pages/saints/sant-bhagubai.html
 
-  [2 pages]  "मी तुमच्या कानात एक उपदेश सांगतो, तो ऐका – नेहमी मनात विठोबाच्या चरणांचे ध्यान करा. त्याने..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "मी तों बहु सुखी आनंदभरिता । आहें साधुसंतां मेळीं सदा ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "मी दास तयांचा जयां चाड नाहीं । सुखदुःख दोहीं विरहित ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "मी नेहमी साधुसंतांच्या संगतीत असल्याने अत्यंत सुखी आणि आनंदी आहे. हे केशवा, तुझ्याशिवाय मा..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "मी रे अपराधी मोठी । मज घालावें बा पोटीं ।..."
       - pages/abhang/sant-bhagubai-abhang.html
       - pages/saints/sant-bhagubai.html
-
-  [2 pages]  "मी संपूर्ण विश्वासाने तुझ्या चरणी आश्रय घेतला आहे, आता मला निराश करू नकोस. तुझे नाव गाताना..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "मीचि विश्व ऐसा जयाचा । बोधु जाहला ॥ ९५ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -5909,10 +3892,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
 
-  [2 pages]  "मुकें होतां तुझ्या पदरीचें जातें । मूर्ख तें भोगितें मीमीपण ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "मुद्रेची प्रौढी ऐशी । तेचि सांगिजेल आतां परियेसीं ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -5921,25 +3900,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/eknath-gatha-part16.html
       - pages/liturgy/gavlani.html
 
-  [2 pages]  "मृत्युलोकीं कोण धरिलें वासना । पावावया जनासवें दुःख ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "मोटकी देहाकृती उमटे । आणि निजज्ञानाची पाहांट फुटे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "मोलाचें आयुष्य वेचुनियां जाय । पूर्वपुण्यें होय लाभ याचा ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "म्हणउनि दिला मुळीं जीवभाव । देह केला वाव समाधिस्थ ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "म्हणउनि बरी विचारावी चाली । उरीचि ते बोली कामा येते ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "म्हणउनि भावार्थु तो ऐसा । अर्जुन मैत्रियेचा कुवासा ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -5964,10 +3927,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "म्हणऊनि येणे मुखें जें जें निगे । तें संतांच्या हृदयीं साचचि लागे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "म्हणूनच आवडीने राम आणि कृष्ण म्हणा आणि सर्वकाळ नारायणाला आपल्याशी जोडून घ्या. हे अत्यंत सो..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "म्हणे जें जें हा अधिष्ठील । तें आरंभींच यया फळेल ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -6065,10 +4024,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "म्हणोनियां तुम्हां करितों विनंती । द्यावें शेष हातीं उरलें तें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "म्हणौनि अग्निसेवा न सांडितां । कर्माची रेखा नोलांडितां ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -6149,25 +4104,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
 
-  [2 pages]  "या संपूर्ण ब्रह्मांडात माझ्या आई-वडिलांसारख्या देवाव्यतिरिक्त मला कुठेही दुर्जन किंवा शत्र..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "या संसारातील क्षणभंगुर सुखाला माझा जीव कंटाळला आहे, तुझ्याशिवाय माझा कोणीही सखा नाही. हे न..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "या संसाराने मला खूप त्रास दिला आहे आणि माझ्या मनात केवळ थकवा उरला आहे. हे देवा, आता मला तु..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "या सोपिया योगस्थिती । उकलु देखिला गा बहुतीं ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "यालागीं आवडी म्हणा राम कृष्ण । जोडा नारायण सर्वकाळ ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "यावरी बाप पुण्यपवित्र । जगीं भक्तिबीजासि सुक्षेत्र ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -6181,29 +4120,13 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "युगें जालीं अठ्ठावीस । अजुनी न म्हणसी बैस ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "युद्धाच्या गोष्टी ऐकायला चांगल्या वाटतात, पण प्रत्यक्षात लढणे खूप कठीण असते. तशीच हरिभक्ती..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "येई प्राणायामाचेनि आडकंठें । वरौता गा ॥ ५५ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "येउनी जाउनी पाहें तुजकडे । पडिल्या सांकडें नारायणा ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "येणें उपायें योगारूढु । जो निरवधि जाहला प्रौढु ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "येणें पंथें माझीं चालिलीं पाउलें । दरुषण जालें संतां पायीं ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "येणें यमनियमाचेनि तळवटें । रिगे असनाचिये पाउलवाटें ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -6241,33 +4164,17 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/lokpriya-tukaram-abhang.html
       - pages/abhang/tukaram-gatha-part16.html
 
-  [2 pages]  "रत्नाचा जोहारी रत्न चि पारखी । येर देखोदेखीं हातीं घेती ॥४॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "रात्र झाली दोन प्रहर । तमें आक्रमिलें अंबर ।..."
       - pages/granth/gajanan-vijay/adhyay-04.html
       - pages/granth/gajanan-vijay/adhyay-09.html
-
-  [2 pages]  "रामनाम म्हणा उघड मंत्र जाणा । चुकती यातना गर्भवास ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "रामायण अदभुत सप्तकांड साचार । तंव प्रयाण विचार आरंभिला ॥२॥..."
       - pages/abhang/nilobaray-gatha-part32.html
       - pages/abhang/nilobaray-gatha-part33.html
 
-  [2 pages]  "राहिलासे उभा भीवरेच्या तीरीं । कट दोहीं करीं धरोनियां ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "राहेल तेथ रचावें । आसन ऐसें ॥ १८१ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "रिद्धि सिद्धि मोक्ष संपित्त विलास । सोडियेली आस याची जीवें ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "रिद्धिसिद्धी सुखें हाणितल्या लाता । तेथें या प्राकृता कोण मानी ॥२॥..."
       - pages/abhang/tukaram-gatha-part17.html
@@ -6277,41 +4184,13 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/namdev-gatha-part20.html
       - pages/abhang/sant-janabai-abhang.html
 
-  [2 pages]  "रुसावें फुगावें आपुलियावरि । उरला तो हरि सकळ ही ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "लागला पालट फेडणें उसणें । येणें चि प्रमाणें पांडुरंगा ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "लागो तुझी सोय ऐसे कोणी करी । माझे विठाबाईं जननिये ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "लागोनियां पायां विनवितों तुम्हाला । करें टाळी बोला मुखें नाम ॥१॥..."
       - pages/abhang/lokpriya-tukaram-abhang.html
       - pages/abhang/tukaram-gatha-part29.html
 
-  [2 pages]  "लाभ तो न दिसे याहूनि दुसरा । आणीक दातारा येणें जन्में ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "लोकमान वमनासमान मानणें । एकांतीं राहणें विठोसाटीं ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "लोप आथी भूतत्रया । देहींचा देहीं ॥ २९८ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "लोभ मोह माया आम्हां बांधवितां । तरि हा अनंता बोल कोणा ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "वडस दोहीं डोळां वाढले । आणिकां कानें कोंचें म्हणे ॥५॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "वयसा तरी येतुलेवरी । एऱ्हवी बळाचा बळार्थु करी ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -6337,14 +4216,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "वर्म धरावें हा मुख्यधर्मसार । अवघे प्रकार तयापासीं ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "वल्कलें नेसुनि ठुंगा गुंडाळुनी । सांडी देहभान जवळुनी ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "वळण घेऊनि आलें । सेजे जैसें ॥ २२२ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -6357,21 +4228,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "वांझ स्त्रीने पोटाला फडके बांधून गर्भवती असल्याचे सोंग आणावे, तसेच केवळ कोरडे शब्दज्ञान अस..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "वांझेनें दाविलें ग†हवार लक्षणें । चिरगुटें घालून वाथयाला ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "वाक्या वाळे अंदु कृष्ण नवनीत चोरी ॥१॥..."
       - pages/abhang/lokpriya-namdev-abhang.html
       - pages/liturgy/gavlani.html
-
-  [2 pages]  "वाढवुनी चटा फिरे दाही दिशा । तरी जंबुवेषा सहज स्थिति ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "वायां बागूल इये दुर्जनें । इंद्रिये करिती ॥ ३६१ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -6381,14 +4240,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "विचारितां नाहीं दुजा बळिवंत । ऐसा सर्वगत व्यापी कोणी ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "विचारितां मज दुजें वाटे लाज । उपदेशें काज आणीक नाहीं ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "विठो वटावरीं पारविया झाले । केश ते वाढले माय संत ॥१२॥..."
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
@@ -6397,33 +4248,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/lokpriya-tukaram-abhang.html
       - pages/abhang/tukaram-gatha-part29.html
 
-  [2 pages]  "विठ्ठलांवाचूनि जें कांहीं जाणती । तितुल्या वित्पित्त वाउगीया ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "विठ्ठलाला सोडून जे केवळ ब्रह्मज्ञानाच्या गोष्टी सांगतील, त्यांचे शब्द संतांनी मानू नयेत. व..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "विठ्ठलावांचूनि जेजे उपासना । अवघा चि जाणा संभ्रमु तो ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "विठ्ठलावांचूनि सांगतील गोष्टी । वांयां ते हिंपुटी होत जाणा ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "विठ्ठलावांचोनि ब्रम्ह जें बोलती । वचन तें संतीं मानूं नये ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "विद्येच्या अभिमानें नाइके कीर्तन । पाखांडी हें म्हणे करिती काई ॥४॥..."
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
-
-  [2 pages]  "विनवितों चतुरा तुज विश्वंभरा । परियेसी दातारा पांडुरंगा ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "विपायें अंहभाव ययाचा जाईल । मी तेंचि हो जरी होईल ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -6445,14 +4272,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/sant-narhari-sonar-abhang.html
       - pages/blog/narahari-sonar-bhangar-katha.html
 
-  [2 pages]  "विश्वंभराचिये लागलों सांभाळीं । संत नेती चाली आपुलिया ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "विश्वामित्री पोटीं तयाचा अवतार । नांव महाखर चांडाळाचें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "विषय पासींही आलियां से न रिगे । हे काय म्हणउनि ॥ ६३ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -6465,25 +4284,13 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
 
-  [2 pages]  "विसरलों काम याजसाठीं धंदा । सकळ गोविंदा माझें तुझें ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "विसरोनि गेलों अर्जुना । जंव नाशु नाही पवना ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "वीतभरि लंगोटी नेदी अतीताला । खीरम्या देतो शाला भोरप्यासी ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "वृध्दाप्य तरी बहुडे । तारुण्याची गांठी विघडे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "वेगळ्या विचारें वेगळाले भाव । धरायासी ठाव बहु नाहीं ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "वेत्ति यत्र न चैवायं स्थितश्चलति तत्त्वतः ॥ २१ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -6493,17 +4300,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "वेदीं कर्म जैसें बोलिलें विहित । करावी ते नीत विचारूनि ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "वेधें परिमळाचें बीक मोडे । जयाचेनि ॥ १५ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "वैभवाचे धनी सकळ शरणागत । सत्यभावें चित्त अर्पिलें तें ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "वैराग्यासी दुणीव चढे । देखलिया जें ॥ १६४ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -6516,10 +4315,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "वोतींव जाहले तैसे । दिसती आंगें ॥ ३२७ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "व्रत एकादशी दारीं वृंदावन । कंठीं ल्या रे लेणें तुळसीमाळा ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "शंख चक्र गदा पद्म शारंगपाणी ॥४॥..."
       - pages/abhang/lokpriya-namdev-abhang.html
@@ -6541,21 +4336,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
 
-  [2 pages]  "शस्त्र अथवा गोळे भलता प्रकार । परिसीं संस्कार सकळ ही हेम ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "शांत बसून भक्तीभावाने विठ्ठलाचे स्मरण कर आणि संसारात मन गुंतवू नकोस. पंढरीच्या रायाला म्हण..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "शुक हन षट्पद । तेउतें नाहीं ॥ १७६ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "शुद्ध कां वासना नव्हे चांडाळाची । होळी संचिताची केली तेणें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "श्रद्धावान् भजते यो मां स मे युक्ततमो मतः ॥ ४७ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -6593,21 +4376,9 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "संचित प्रारब्ध क्रियमाण । अवघीं जालीं गहन । केलीं पापपुण्यें । देशधडी बापुडीं ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "संत आणि वैष्णव भक्तीच्या प्रेमानंदाची लूट करत आहेत, तुम्हीही मनापासून तो आनंद लुटून घ्या; ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "संत ऐसे करी देवाचे कान । सांडियेल्या ध्यान कोण ऐके ॥३॥..."
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
-
-  [2 pages]  "संत ते समय वोळखती वेळ । चतुष्ट निर्मळ चित्त सदा ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "संत दयाळ परम । तया साक्षी नारायण ॥३॥..."
       - pages/abhang/namdev-gatha-part20.html
@@ -6649,18 +4420,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/blog/shravan-mahina-vrat-puja-vidhi.html
       - pages/blog/shravani-somvar-vrat-katha.html
 
-  [2 pages]  "संसारातील आई-वडील मुलांचा सांभाळ करतात, पण त्यामागे बर्‍याचदा काही ना काही स्वार्थ किंवा अ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "सकळ तुझे पायीं मानिला विश्वास । न करीं उदास आतां मज ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "सकळां चरणीं गळित माझा जीव । तुका म्हणे भाव एकविध ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "सकोमळ सरिसे । सुबध्द राहती आपैसे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -6672,10 +4431,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "सजीव वाघ आणि सर्पाचा लगाम..."
       - pages/blog/changdev-dnyaneshwar-samvad.html
       - pages/blog/muktabai-changdev-bhet.html
-
-  [2 pages]  "सज्जन आणि चांगले लोक कठीण प्रसंगातही आपली ओळख किंवा नातं सोडत नाहीत, पण इथे तर इतरांचेही त..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "सडेया प्राणा सांकडें । गगना येतां ॥ ३१३ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -6689,69 +4444,25 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/shivlilamrut/shivlilamrut.html
       - pages/granth/shivlilamrut/shivlilamruta-mahiti.html
 
-  [2 pages]  "सद्धि महामुनि साधक संपन्न । तिहीं हें जतन केलें होतें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "समर्थ असलेल्या देवाला स्वतःच्या पतितपावन नावाचा अभिमान असतो, त्यामुळे शरण आलेल्या भक्ताची ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "समर्थ सद्गुरू श्री धोंडूतात्या महाराज..."
       - index.html
       - sant-sahitya.html
-
-  [2 pages]  "समर्थासी काय कोणें हें म्हणावें । आपुलिया जावें भोगावरि ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "समर्थासी लाज आपुल्या नामाची । शरण आल्याची लागे चिंता ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "सरो माझा काळ तुझिया चिंतनें । कायावाचामनें इच्छीतसें ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "सर्व एकादशी व्रत व कथा संग्रह ➔..."
       - pages/blog/chaitri-wari.html
       - pages/blog/magh-wari.html
 
-  [2 pages]  "सर्व काळ डोळां बैसो नारायण । नयो अभिमान आड मध्यें ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "सर्व तें हें जाय गंगा चि होऊन । तैसा वर्णावर्ण नाहीं नामीं ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "सर्व प्रसंग सूची प्रसंग २ रा..."
       - pages/granth/rukmini-swayamvar/prasang-02.html
       - pages/granth/rukmini-swayamvar/prasang-03.html
-
-  [2 pages]  "सर्व भार माझा त्यासी आहे चिंता । तो चि माझा दाता स्वहिताचा ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "सर्व सजीवांचे आणि प्राण्यांचे पालन-पोषण करणे हीच खरी देवाची पूजा आहे, कोणाचाही द्वेष किंवा..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "सर्वथा वर्तमानोऽपि स योगी मयि वर्तते ॥ ३१ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "सर्वभावें तुज आणिला उचित । राहिलों निश्चिंत तुझे पायीं ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "सव्य तो तळीं ठेविजे । तेणें सिवणीमध्यु पीडिजे ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "सहज कैसें आहे तेथीचें तें गुज । अनुभवें निज पाहे तुकीं ॥६॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "सहजें अपरिग्रही जो तिहीं लोकी । तोचि म्हणऊनि ॥ १०६ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -6773,10 +4484,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "सहसा करूं नये प्रपंचीं सौजन्य । सेवावें अरण्य एकांतवास ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "सांगिजैल म्हणौनि परिसावा । चित्त देउनी ॥ १३ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -6784,10 +4491,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "सांगे तया ऐसी योग्यता । कवणें दीजे ॥ ६६ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "सांचलिया धन होईंल ठेवणें । तैसा नारायण जोडी करा ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "सांडिजे दुजया नामाचा आभासु । तरी योगी तोचि संन्यासु ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -6821,6 +4524,10 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - nitya-pathan-stotra.html
       - pages/nitya-pathan-stotra/shiv-mahima-stotra.html
 
+  [2 pages]  "सावळें सुंदर रूप मनोहर । राहो निरंतर हृदयीं माझे ॥१॥..."
+      - pages/abhang/lokpriya-tukaram-abhang.html
+      - pages/abhang/tukaram-gatha-part40.html
+
   [2 pages]  "साही पदर फुटती । चक्रांचे हे ॥ २४४ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -6849,49 +4556,21 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
+  [2 pages]  "सुखसागरीं नेघे वस्ती । अंगीं ज्ञानपणाची मस्ती ॥२॥..."
+      - pages/abhang/tukaram-gatha-part40.html
+      - pages/abhang/tukaram-gatha-part41.html
+
   [2 pages]  "सुखें धृतीचिया धवळारीं । बुद्धी नांदे ॥ ३७७ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "सुगरणीबाईं थिता नास केला । गुळ तो घातला भाजीमध्यें ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "सेवा भक्ति भाव नेणें मी पतित । आतां माझें हित तुझ्या पायीं ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "सोइर्‍यासी करी पाहुणेर बरा । कांडितो ठोंबरा संता साटीं ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "सोपें हें साधन लाभ येतो घरा । वाचेसी उच्चारा राम हरि ॥ध्रु.॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "सोय घरीं आतां होय पां सावध । अनुभव आनंद आहे कैसा ॥५॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "स्वतःच्या आई-वडिलांनाही खरे परमार्थिक हित कशात आहे हे ठाऊक नव्हते, त्यांनी फक्त संसाराचे ल..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "स्वभावें वाटे येतां । जरी वरपडा जाहला अवचितां ।..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "स्वयंपाकात ज्ञान नसलेल्या स्त्रीने भाजीमध्ये गूळ टाकून, खिरीमध्ये हिंग आणि दुधात कडू बोळ ट..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "स्वर्गीं ठेले जप होम । करिती सदा ॥ ४५५ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "स्वल्प मात्र वाचे बैसलासे निका । राम कृष्ण सखा नारायण ॥२॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "स्वाद सीण देहभान निद्रा खंडन । पाहिले तटस्थ उन्मळित लोचन ।..."
       - pages/abhang/tukaram-gatha-part4.html
@@ -6900,10 +4579,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "स्वामी तुकयाचा भोगिया चतुर । भोग भोगी त्यांचा राखे लोकाचार वो ॥३॥..."
       - pages/abhang/tukaram-gatha-part4.html
       - pages/liturgy/gavlani.html
-
-  [2 pages]  "स्वामीसी संकट पडे जे गोष्टीचें । काय त्या प्रेमाचें सुख मज ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "हनुमंत महाबळी । रावणाची दाढी जाळी ॥१॥..."
       - pages/abhang/lokpriya-tukaram-abhang.html
@@ -6985,18 +4660,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "हृदय कोमळ तुझें नारायणा । ऐसें बहुता जनां तारियेलें ॥३॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे अत्यंत उदार आणि कृपेच्या सागरा पांडुरंगा, मला अभयदान दे. मी माझा देहभाव तुझ्या चरणी ठेव..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे अनंता, मला या संसारातून वाचव आणि तुझ्या चरणी माझे प्रेम जडू दे. माझे एकच मागणे आहे की म..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "हे आठवणही हारपली । न दिसे वेगां ॥ २१३ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -7013,102 +4676,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
 
-  [2 pages]  "हे देवा, आता तरी मला खरा मार्ग काय तो सांग, मी खरोखर काय केले पाहिजे? कर्माचे फळ चुकवणे मा..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे देवा, आता तू माझा अंत का पाहत आहेस? मी पूर्णपणे तुला शरण आलो आहे. माझा स्वीकार कर आणि त..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे देवा, आता मला माझ्याच मनातील खरा भाव कळला आहे, मी व्यर्थच तुझ्या नावाची आठवण करत राहिलो..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे देवा, आता मी तुझा पदर घट्ट धरून ठेवणार आहे आणि तुझा आणि माझा हिशोब बरोबर करणार आहे. मी ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे देवा, जर तुझ्या चरणी स्थान मिळाले नाही, तर माझे जगणे म्हणजे जमिनीला केवळ भार आहे. ज्या ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे देवा, तुझे चरण हेच माझे जीवन आहे आणि तू माझी दयाळू आई आहेस. हे पांडुरंगा, तुझे हे लहान ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे देवा, तुझ्या दातृत्वाला कोणताही दोष नाही, दोष आमचाच आहे कारण आम्ही पूर्णपणे अविश्वासू आ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे देवा, तू आम्हाला प्रेम दिले आणि बदल्यात आमचे चित्त मागून घेतलेस, त्यामुळे आपल्यातील हिश..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे देवा, तू केवळ ज्ञानाने किंवा ध्यानाने समजणारा नाहीस, शोधूनही तुझे दर्शन सहजासहजी होत ना..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे देवा, मी तुझ्या भक्तीचा अनन्य अधिकारी कसा होईन हे मला कळत नाही. पुराणातील कठीण नियम ऐकू..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे देवा, मी मनात एक संकल्प धरून तुला सांगत आहे, तू माझा बाप आहेस तर हा संकल्प पूर्ण कर. मा..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे देवा, मी माझ्या सांसारिक स्वभावाला कंटाळलो आणि थकलो आहे, आता कृपा करून मला धीर दे. मला ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे देवा, हे शरीर तर प्रारब्धाच्या आधीन आहे, मग मी त्याचा उगाच ताण किंवा भार का बाळगू? माझा..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे नशिवंत शरीर क्षणात नष्ट होऊन जाईल, मग हा गोपीनाथ विठ्ठल का भेटत नाही? हे संतजनहो, तुम्ह..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे नारायणा, माझे हे खरे आणि निश्चयी शब्द ऐक. माझ्या मनात पुरेसा भाव नाही आणि मी लोकांच्या ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे नारायणा, संकटाच्या वेळी मी पुन्हा पुन्हा तुझ्याकडेच पाहत असतो, कारण मला तुझ्याशिवाय दुस..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे पांडुरंगा, आम्हाला तुझे दर्शन आणि कृपा देण्यात तुझे काय खर्च होणार आहे? मग तू आमची अशी ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे पांडुरंगा, तुला समोर पाहिल्यावर माझी दृष्टी तुझ्यावरून हटतच नाही. माझे चित्त तुझ्या चरण..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे पांडुरंगा, तू माझ्या हाकेला धावून का येत नाहीस? तू जर सोडवले नाहीस तर मला कोण सोडवणार? ..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे पांडुरंगा, तू यापूर्वी अनेक अनाथ भक्तांना सुखी केले आहेस, तू सर्वांची माऊली आहेस. माझ्य..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे पांडुरंगा, माझे मन सतत तुझ्या चरणांकडे धाव घेते, मी माझा देहभाव पूर्णपणे विसरून गेलो आह..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे पांडुरंगा, माझ्या मायबापा, मी तुझ्या भक्तांच्या दासांचाही नम्र दास झालो आहे, आता मला उद..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे पांडुरंगा, मी तुझ्याकडे जे जे हट्ट केले ते सर्व वाया गेले आणि माझा केवळ श्रम उरला. तू म..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे पुंडलिका, तू इतका कसा धीट झालास की तू साक्षात विठ्ठलाला उभे करून ठेवलेस? तू त्याच्याकडे..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
   [2 pages]  "हे मनाचेनि निजांगें । भोगिजे गा ॥ २४ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
@@ -7116,26 +4683,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "हे महाभूतांची फुडी । आटणी देखां ॥ २९० ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
       - pages/granth/dnyaneshwari/adhyay-07.html
-
-  [2 pages]  "हे माझी आई विठाबाई, मला तुझा मार्ग आणि आधार मिळावा असे काहीतरी कर. जर तू स्वतःला 'पतितपावन..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे विठ्ठला, तू पूर्वी अनेक भक्तांचा सांभाळ केलास आणि शरण आलेल्या कोणाचाही अनादर केला नाहीस..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे विश्वंभरा, तुझे हृदय अत्यंत दयाळू आहे हे मला कळून आले आहे. गणिकेने (पिंजऱ्यातील पोपटाला..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे श्रेष्ठ ब्राह्मणांनो, माझ्या शब्दांचा किंवा स्पर्शाचा तुम्हाला विटाळ होऊ नये ही माझी नम..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "हे सर्वज्ञ, सर्वव्यापी पांडुरंगा, माझी ही विनंती ऐकून घे. जगात मला तुझा दास म्हणून ओळखले ज..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "हे साही गुणवर्य । वसती जेथ ॥ ३७ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -7252,14 +4799,6 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
   [2 pages]  "हो का उत्तम चांडाळ । पायीं ठेवीन कपाळ ॥२॥..."
       - pages/abhang/namdev-gatha-part21.html
       - pages/abhang/sant-janabai-abhang.html
-
-  [2 pages]  "होईंल तो भोग भोगीन आपुला । न घलीं विठ्ठला भार तुज ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
-
-  [2 pages]  "होऊं शब्दस्पर्श नये माझा तुम्हां । विप्रवृंदा तुम्हां ब्राम्हणांसी ॥१॥..."
-      - pages/abhang/tukaram-gatha-part39.html
-      - pages/abhang/tukaram-gatha-part40.html
 
   [2 pages]  "होतु कां मयुरेंही । आम्ही ना न म्हणों ॥ १७८ ॥..."
       - pages/granth/dnyaneshwari/adhyay-06.html
@@ -7667,7 +5206,7 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
 ------------------------------------------------------------------------
 4) NEAR-DUPLICATE PAGES (60%+ content same)
 ------------------------------------------------------------------------
-   98.2%  (540 blocks)  pages/abhang/tukaram-gatha-part39.html   <->   pages/abhang/tukaram-gatha-part40.html
+  kahi nahi.
 
 ------------------------------------------------------------------------
 5) MIXED / CHUKICHE / CHIKTALELE SHABD

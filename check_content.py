@@ -15,6 +15,7 @@ Kay tapasto:
   3. Near-dup  : don page madhe jast bhag same aahe
   4. Mixed word: Marathi + English akshare ek shabdat, tutleli/chukichi akshare, chiktalele shabd
 Report: duplicate_report.txt (root folder madhe tayar hoto)
+  --ignore-noindex-all   noindex pages purna report madhun kadha (default: fakt low text madhun)
 """
 import argparse
 import os
@@ -83,6 +84,21 @@ def read_file(path):
         except UnicodeDecodeError:
             pass
     return raw.decode("utf-8", errors="replace")
+
+
+META_RE = re.compile(r"<meta\b[^>]*>", re.I | re.S)
+
+
+def is_noindex(path):
+    """<meta name="robots"/"googlebot" content="...noindex..."> asel tar True."""
+    raw = read_file(path)
+    head_end = raw.lower().find("</head>")
+    head = raw if head_end == -1 else raw[:head_end]
+    for tag in META_RE.findall(head):
+        t = tag.lower()
+        if re.search(r"name\s*=\s*[\"']?(robots|googlebot)[\"']?", t) and "noindex" in t:
+            return True
+    return False
 
 
 def extract_blocks(path):
@@ -155,6 +171,8 @@ def main():
     ap.add_argument("--block-min-words", type=int, default=5)
     ap.add_argument("--boiler", type=int, default=15)
     ap.add_argument("--out", default="duplicate_report.txt")
+    ap.add_argument("--ignore-noindex-all", action="store_true",
+                    help="noindex pages purna report madhun kadha (fakt low text nahi)")
     args = ap.parse_args()
 
     root = os.path.abspath(args.root)
@@ -173,14 +191,20 @@ def main():
 
     page_blocks = {}
     page_words = {}
+    noindex = set()
     for p in files:
         rel = os.path.relpath(p, root).replace("\\", "/")
+        if is_noindex(p):
+            noindex.add(rel)
+            if args.ignore_noindex_all:
+                continue
         blocks = extract_blocks(p)
         page_blocks[rel] = blocks
         page_words[rel] = word_count(blocks)
 
-    # ---------- 1. LOW TEXT ----------
-    low = sorted([(w, r) for r, w in page_words.items() if w < args.min_words])
+    # ---------- 1. LOW TEXT (noindex pages vagale) ----------
+    low = sorted([(w, r) for r, w in page_words.items()
+                  if w < args.min_words and r not in noindex])
 
     # ---------- 2. BLOCK DUPLICATES ----------
     index = defaultdict(lambda: defaultdict(int))   # norm -> {file: count}
@@ -238,7 +262,8 @@ def main():
     add("संतवाणी - CONTENT REPORT")
     add("=" * 72)
     add(f"Total HTML files      : {len(files)}")
-    add(f"Low text pages        : {len(low)}  (< {args.min_words} shabd)")
+    add(f"noindex pages (vagale) : {len(noindex)}")
+    add(f"Low text pages        : {len(low)}  (< {args.min_words} shabd, noindex vagale)")
     add(f"Duplicate blocks      : {len(cross)} (veg-vegle pages), {len(same_file)} (ekach page madhe)")
     add(f"Near-duplicate pages  : {len(near)}")
     add(f"Mixed/chukiche shabd  : {sum(len(v) for v in mixed.values())} ({len(mixed)} pages madhe)")
@@ -251,7 +276,7 @@ def main():
         for w, r in low:
             add(f"  {w:5d} shabd   {r}")
     else:
-        add("  kahi nahi - sagle pages madhe paratse text aahe.")
+        add("  kahi nahi - sagle index hot asleli pages madhe paratse text aahe.")
     add("")
 
     add("-" * 72)
