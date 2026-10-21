@@ -2,8 +2,8 @@
 संतवाणी - CONTENT REPORT
 ========================================================================
 Total HTML files      : 930
-noindex pages (vagale) : 333
-Low text pages        : 6  (< 150 shabd, noindex vagale)
+noindex pages (vagale) : 335
+Low text pages        : 0  (< 150 shabd, noindex vagale)
 Duplicate blocks      : 1123 (veg-vegle pages), 383 (ekach page madhe)
 Near-duplicate pages  : 0
 Mixed/chukiche shabd  : 322 (85 pages madhe)
@@ -11,12 +11,7 @@ Mixed/chukiche shabd  : 322 (85 pages madhe)
 ------------------------------------------------------------------------
 1) LOW TEXT PAGES (< 150 shabd)  - AdSense sathi dhokyache
 ------------------------------------------------------------------------
-     38 shabd   admin.html
-     68 shabd   bharude-gavlani.html
-     69 shabd   contact.html
-    113 shabd   abhang-gatha.html
-    145 shabd   pages/abhang/sant-rohidas-abhang.html
-    147 shabd   vangmay-sangrah.html
+  kahi nahi - sagle index hot asleli pages madhe paratse text aahe.
 
 ------------------------------------------------------------------------
 2) DUPLICATE ABHANG / OVI / PARAGRAPH (veg-vegle pages madhe)
