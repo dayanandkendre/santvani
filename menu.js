@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // =========================================================
-    // 🍔 १. हॅम्बर्गर मेनू आणि नेव्हिगेशन लॉजिक (Old layout restored)
+    // 🍔 १. हॅम्बर्गर मेनू आणि नेव्हिगेशन लॉजिक (Fixed)
     // =========================================================
     function initNavigation() {
         const navContainer = document.querySelector(".nav-container");
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 🔥 2. SHARE BUTTONS + ADVANCED FIREBASE COMMENTS SYSTEM
     // =========================================================
     var currentPath = window.location.pathname.toLowerCase();
-
+    
     var excludedPages = [
         "index.html", "about.html", "contact.html", "privacy-policy.html",
         "terms.html", "disclaimer.html", "abhang-gatha.html", "bharude-gavlani.html",
@@ -202,6 +202,7 @@ function initSantvaniShareAndComments() {
             return;
         }
 
+        // ऑटो नोटिफिकेशन प्रॉम्ट मागणे
         requestPushPrompt();
 
         var commentsRef = db.ref("comments/" + pageId);
@@ -262,7 +263,7 @@ function initSantvaniShareAndComments() {
                                     <span style="color: #666; font-size: 11px;">${reply.timestamp || ''}</span>
                                 </div>
                                 <div style="margin: 0; color: #e0e0e0; font-size: 13px; line-height: 1.5;">${reply.text}</div>
-
+                                
                                 <div style="display: flex; gap: 12px; margin-top: 6px;">
                                     <button onclick="window.toggleReplyBox('${commentKey}', '${reply.name}')" style="background:none; border:none; color:#38bdf8; cursor:pointer; font-size:11px; padding:0; font-weight:600;">
                                         <i class="fa-regular fa-comment"></i> उत्तर द्या
@@ -276,7 +277,7 @@ function initSantvaniShareAndComments() {
 
             var commentBox = document.createElement("div");
             commentBox.style.cssText = "display: flex; gap: 12px; align-items: flex-start; padding: 14px; background: #181818; border-left: 4px solid #ffb703; border-radius: 8px;";
-
+            
             var toggleRepliesBtn = "";
             if (replyCount > 0) {
                 toggleRepliesBtn = `
@@ -296,7 +297,7 @@ function initSantvaniShareAndComments() {
                         <span style="color: #666; font-size: 12px;">${data.timestamp}</span>
                     </div>
                     <div style="margin: 0; color: #e0e0e0; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">${data.text}</div>
-
+                    
                     <div style="display: flex; align-items: center; gap: 18px; margin-top: 8px; font-size: 12px; color: #888;">
                         <button onclick="window.likeComment('${commentKey}', ${data.likes || 0})" style="background:none; border:none; color:#aaa; cursor:pointer; display:flex; align-items:center; gap:5px; font-size:12px; padding:0;">
                             <i class="fa-regular fa-thumbs-up"></i> <span>${data.likes || 0}</span>
@@ -384,6 +385,7 @@ function initSantvaniShareAndComments() {
             return;
         }
 
+        // रिप्लाय देतानासुद्धा नोटिफिकेशन प्रॉम्ट कॉल करणे
         requestPushPrompt();
 
         var replyData = {
@@ -396,7 +398,7 @@ function initSantvaniShareAndComments() {
             if (!error) {
                 nameInp.value = "";
                 textInp.value = "";
-
+                
                 var box = document.getElementById("reply-input-box-" + commentKey);
                 if (box) box.style.display = "none";
 
@@ -437,10 +439,11 @@ function initSantvaniShareAndComments() {
 // 🔔 ONESIGNAL WEB PUSH NOTIFICATION SYSTEM (OFFSET FIXED)
 // =========================================================
 (function() {
+    // 🎯 मोबाईल आणि डेस्कटॉप दोन्हीवर घंटी वर घेण्यासाठी CSS
     var style = document.createElement('style');
     style.innerHTML = `
         #onesignal-bell-container.onesignal-reset {
-            bottom: 75px !important;
+            bottom: 75px !important; /* बॉटम बारपासून वर उचलण्यासाठी */
             right: 15px !important;
             z-index: 999999 !important;
         }
@@ -464,27 +467,32 @@ function initSantvaniShareAndComments() {
     });
 })();
 
-// =========================================================
-// 📖 भावार्थ नेहमी दाखवा आणि 'भावार्थ पहा' बटण लपवा
-// =========================================================
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll('[id^="bhavarth-text-"]').forEach(function (el) {
-        el.style.setProperty('display', 'block', 'important');
-    });
-    document.querySelectorAll('[id^="toggle-btn-"]').forEach(function (el) {
-        el.style.setProperty('display', 'none', 'important');
-    });
+    // १. सर्व भावार्थ थेट शो करा (Inline Style काढून टाका)
+    document.querySelectorAll('[id^="bhavarth-text-"]').forEach(el => el.style.setProperty('display', 'block', 'important'));
+    
+    // २. 'भावार्थ पहा' हे टॉगल बटण पूर्णपणे लपवा
+    document.querySelectorAll('[id^="toggle-btn-"]').forEach(el => el.style.setProperty('display', 'none', 'important'));
+});
+document.addEventListener("DOMContentLoaded", function () {
+    // १. HTML मधील 'display: none' काढून भावार्थ १००% नेहमी दाखवा
     document.querySelectorAll('.bhavarth-text').forEach(function (el) {
         el.style.setProperty('display', 'block', 'important');
     });
+
+    // २. 'भावार्थ पहा' हे बटण लपवा
     document.querySelectorAll('.toggle-view-btn').forEach(function (btn) {
         btn.style.setProperty('display', 'none', 'important');
     });
 });
 
+
 /* ==========================================================================
    AMAZON AFFILIATE SCRIPTS (AdSense Review Sathi Tatpurte Band Kele Ahe)
-   Ekda AdSense Approve zale ki fakt he comment kadha.
+   Ekda AdSense Approve zale ki fakt he block comment kadha.
    ========================================================================== */
 
 /*

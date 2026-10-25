@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <!-- ================= Primary SEO Meta Tags ================= -->
     <title>संतवाणी | हरिपाठ, अभंग संग्रह, सार्थ ग्रंथ आणि संत चरित्र</title>
     <meta name="description" content="संतवाणी डिजिटल लायब्ररी - संत ज्ञानेश्वर माऊलींचा हरिपाठ, संत एकनाथी भागवत, ज्ञानेश्वरी, दासबोध, संतांचे अभंग व पावन चरित्रे सोप्या मराठी अर्थासह वाचा.">
     <meta name="keywords" content="संतवाणी, हरिपाठ, अभंग संग्रह, संत चरित्र, संत ज्ञानेश्वर, संत तुकाराम, संत एकनाथ, एकनाथी भागवत, ज्ञानेश्वरी, दासबोध, वारकरी संप्रदाय">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="संतवाणी">
-
+    
     <!-- Exact Canonical URL -->
     <link rel="canonical" href="https://santvani.co.in/">
 
@@ -21,16 +21,17 @@
     <meta property="og:image" content="https://santvani.co.in/images/site-banner.webp">
     <meta property="og:url" content="https://santvani.co.in/">
     <meta property="og:site_name" content="संतवाणी">
-    <meta property="og:locale" content="mr_IN">
-    <meta name="twitter:card" content="summary_large_image">
 
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico">
 
-    <!-- Preconnect & Google Fonts (Cinzel, Rozha One, Noto Serif Devanagari, Poppins) -->
+    <!-- Preconnect & Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Noto+Serif+Devanagari:wght@400;500;600&family=Poppins:wght@300;400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Yatra+One&family=Poppins:wght@300;400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Custom splash-screen -->
     <meta name="theme-color" content="#120202">
@@ -62,329 +63,28 @@
     transition:opacity .4s ease;
   }
 </style>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- नव्या विभागांसाठी (डॅशबोर्ड, लेख, FAQ) -->
+    <link rel="stylesheet" href="dashboard.css">
 
-<!-- ======================= Inline Stylesheet (zero framework, zero external CSS) ======================= -->
-<style>
-:root{
-  --bg0:#0d0404; --bg1:#160a0a; --bg2:#1e0f0f; --bg3:#2a1213;
-  --gold:#c59b27; --amber:#ffb703; --gold-hi:#ffd978;
-  --crimson:#8a1c26; --maroon:#4a0f14;
-  --ink:#f4ead3; --ink-2:#d9c9a5; --muted:#ab997c;
-  --line:rgba(197,155,39,.28); --line-2:rgba(197,155,39,.55);
-  --r:16px; --shadow:0 12px 34px rgba(0,0,0,.5);
-  --f-head:'Rozha One','Noto Serif Devanagari',serif;
-  --f-deco:'Noto Serif Devanagari','Tiro Devanagari Marathi','Rozha One',serif;
-  --f-latin:'Cinzel',serif;
-  --f-body:'Poppins','Noto Sans Devanagari','Mangal',system-ui,-apple-system,'Segoe UI',sans-serif;
-  --nav-h:68px;
-  --grad-gold:linear-gradient(135deg,#ffd978 0%,#ffb703 45%,#c59b27 100%);
-}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{
-  margin:0;font-family:var(--f-body);font-size:16px;line-height:1.8;color:var(--ink);
-  background:radial-gradient(1200px 600px at 50% -10%,rgba(138,28,38,.22),transparent 70%),linear-gradient(180deg,var(--bg0),var(--bg1) 60%,var(--bg0));
-  background-color:var(--bg0);overflow-x:hidden;
-}
-html{text-rendering:optimizeLegibility;font-kerning:normal;font-variant-ligatures:common-ligatures;-webkit-font-smoothing:antialiased}
-*{letter-spacing:0!important;word-spacing:normal}
-img{max-width:100%;display:block}
-a{color:var(--amber);text-decoration:none}
-a:hover{color:var(--gold-hi)}
-ul{margin:0;padding:0;list-style:none}
-h1,h2,h3,h4{margin:0}
-:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:6px}
-.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.skip-link{position:absolute;left:-9999px;top:8px;z-index:1000;background:var(--amber);color:#1a0a00;padding:.6rem 1rem;border-radius:8px;font-weight:600}
-.skip-link:focus{left:8px}
-.ic{width:1.05em;height:1.05em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none;vertical-align:-.14em}
-.container{width:min(1200px,100% - 32px);margin-inline:auto}
-
-/* ---------- Top bar ---------- */
-.top-bar{background:linear-gradient(90deg,#2a0709,var(--maroon),#2a0709);border-bottom:1px solid var(--line);font-size:.82rem;color:var(--gold-hi)}
-.top-bar-container{width:min(1200px,100% - 32px);margin-inline:auto;display:flex;justify-content:space-between;gap:12px;padding:.45rem 0}
-.top-bar-text{display:inline-flex;align-items:center;gap:.5rem;}
-.om-spin{display:inline-block;animation:spin 14s linear infinite;font-family:var(--f-head)}
-@keyframes spin{to{transform:rotate(360deg)}}
-
-/* ---------- Navbar ---------- */
-.navbar{position:sticky;top:0;z-index:100;background:rgba(13,4,4,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav-container{width:min(1280px,100% - 32px);margin-inline:auto;min-height:var(--nav-h);display:flex;align-items:center;justify-content:space-between;gap:16px}
-.logo{font-family:var(--f-head);font-size:1.7rem;color:var(--ink);display:inline-flex;align-items:center;gap:.4rem;line-height:1}
-.logo-highlight{background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
-.nav-links{display:flex;align-items:center;gap:.1rem}
-.nav-links>li{position:relative}
-.nav-links a{display:block;padding:.55rem .75rem;font-size:.9rem;font-weight:500;color:var(--ink-2);border-radius:8px;white-space:nowrap}
-.nav-links a:hover,.nav-links a.active{color:var(--amber)}
-.nav-links a.active{box-shadow:inset 0 -2px 0 var(--amber);border-radius:8px 8px 0 0}
-.dropdown-menu{position:absolute;top:100%;right:0;min-width:230px;padding:.5rem;background:#150808;border:1px solid var(--line-2);border-radius:12px;box-shadow:var(--shadow);opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s}
-.dropdown:hover>.dropdown-menu,.dropdown:focus-within>.dropdown-menu,.dropdown.open>.dropdown-menu{opacity:1;visibility:visible;transform:none}
-.dropdown-menu a{padding:.6rem .8rem;white-space:normal}
-.dropdown-menu a:hover{background:rgba(197,155,39,.1)}
-.btn-nav{display:inline-flex;align-items:center;padding:.6rem 1.1rem;border-radius:999px;background:var(--grad-gold);color:#1a0a00;font-weight:600;font-size:.88rem;box-shadow:0 4px 16px rgba(255,183,3,.25)}
-.btn-nav:hover{color:#1a0a00;filter:brightness(1.08)}
-.nav-toggle{display:none;background:none;border:1px solid var(--line-2);color:var(--amber);width:44px;height:44px;border-radius:10px;align-items:center;justify-content:center;cursor:pointer}
-.nav-toggle .ic{width:22px;height:22px}
-
-/* ---------- Hero ---------- */
-.hero-section{position:relative;text-align:center;padding:4.6rem 16px 7.5rem;overflow:hidden;isolation:isolate;
-  background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(138,28,38,.6),transparent 70%),radial-gradient(circle at 85% 95%,rgba(197,155,39,.16),transparent 45%),radial-gradient(circle at 10% 80%,rgba(138,28,38,.25),transparent 40%),linear-gradient(180deg,#1a0707,var(--bg0))}
-.hero-section::before{content:"ॐ";position:absolute;inset:0;display:grid;place-items:center;font-family:var(--f-head);font-size:min(62vw,560px);line-height:1;color:var(--gold);opacity:.045;z-index:-1;pointer-events:none}
-.hero-section::after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(180deg,transparent,var(--bg0));z-index:-1}
-.gold-badge{display:inline-block;padding:.4rem 1.2rem;border:1px solid var(--line-2);border-radius:999px;color:var(--gold-hi);font-size:.82rem;background:rgba(197,155,39,.08);margin-bottom:1.3rem}
-.hero-title{font-family:var(--f-head);font-weight:400;font-size:clamp(2rem,5.4vw,3.7rem);line-height:1.32;max-width:900px;margin-inline:auto;text-wrap:balance}
-.text-gradient{background:var(--grad-gold);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero-tagline{max-width:700px;margin:1.3rem auto 2rem;color:var(--ink-2);font-size:clamp(1rem,2.2vw,1.12rem)}
-.hero-buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem}
-.btn-premium,.btn-outline{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:48px;padding:.7rem 1.8rem;border-radius:999px;font-weight:600;font-size:.95rem;transition:.25s}
-.btn-premium{background:var(--grad-gold);color:#1a0a00;box-shadow:0 6px 22px rgba(255,183,3,.28)}
-.btn-premium:hover{color:#1a0a00;transform:translateY(-2px);box-shadow:0 10px 28px rgba(255,183,3,.4)}
-.btn-outline{border:1.5px solid var(--gold);color:var(--gold-hi)}
-.btn-outline:hover{background:rgba(197,155,39,.14);color:var(--amber);transform:translateY(-2px)}
-.hero-stats{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem;margin-top:2.4rem}
-.hero-stats li{min-width:116px;padding:.7rem 1.1rem;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}
-.hero-stats b{display:block;font-family:var(--f-head);font-weight:400;font-size:1.6rem;line-height:1.2;color:var(--amber)}
-.hero-stats span{font-size:.8rem;color:var(--muted)}
-
-/* ---------- Section scaffolding ---------- */
-.section{padding:4.5rem 0;scroll-margin-top:var(--nav-h)}
-.section-head{text-align:center;margin-bottom:2.6rem}
-.eyebrow{display:block;color:var(--amber);font-size:.8rem;font-weight:600;margin-bottom:.5rem}
-.section-title{font-family:var(--f-head);font-weight:400;font-size:clamp(1.65rem,4vw,2.5rem);line-height:1.35;color:var(--ink)}
-.royal-divider{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:1rem;color:var(--gold)}
-.royal-divider .line{width:min(110px,22vw);height:1px;background:linear-gradient(90deg,transparent,var(--gold))}
-.royal-divider .line:last-child{transform:scaleX(-1)}
-.section-lead{max-width:720px;margin:1rem auto 0;color:var(--muted)}
-.bg-alt{background:linear-gradient(180deg,var(--bg1),#1a0b0b 50%,var(--bg1));border-block:1px solid rgba(197,155,39,.12)}
-.card{position:relative;background:linear-gradient(160deg,rgba(44,19,20,.92),rgba(20,8,8,.97));border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
-.card::before{content:"";position:absolute;left:18px;right:18px;top:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold-hi),transparent)}
-
-/* ---------- Dashboard ---------- */
-.dash{position:relative;z-index:2;margin-top:-4.2rem;padding-bottom:1rem;scroll-margin-top:var(--nav-h)}
-.dash-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:22px;margin-top:22px}
-
-.ticker{display:flex;align-items:stretch;overflow:hidden;border:1px solid var(--line-2);border-radius:14px;background:linear-gradient(90deg,#2a0b0d,#1a0808);box-shadow:var(--shadow)}
-.tk-label{flex:none;display:flex;align-items:center;gap:.5rem;padding:.55rem 1rem;background:var(--grad-gold);color:#1a0a00;font-weight:700;font-size:.85rem}
-.tk-dot{width:8px;height:8px;border-radius:50%;background:#8a1c26;box-shadow:0 0 0 0 rgba(138,28,38,.7);animation:pulse 1.8s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 8px rgba(138,28,38,0)}100%{box-shadow:0 0 0 0 rgba(138,28,38,0)}}
-.tk-view{flex:1;min-width:0;overflow:hidden;display:flex;align-items:center;-webkit-mask-image:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent);mask-image:linear-gradient(90deg,transparent,#000 24px,#000 calc(100% - 24px),transparent)}
-.tk-track{display:inline-flex;width:max-content;animation:tk var(--tk-dur,60s) linear infinite;will-change:transform}
-.tk-group{display:inline-flex;align-items:center;flex:none}
-.tk-item{padding:.7rem 0;color:var(--ink);font-size:.93rem;white-space:nowrap}
-.tk-item b{color:var(--amber);font-weight:600}
-.tk-sep{padding:0 1.4rem;color:var(--gold)}
-@keyframes tk{to{transform:translateX(-50%)}}
-.ticker:hover .tk-track,.ticker:focus-within .tk-track,.ticker.paused .tk-track{animation-play-state:paused}
-.tk-btn{flex:none;width:44px;border:0;border-left:1px solid var(--line);background:transparent;color:var(--gold-hi);cursor:pointer;display:grid;place-items:center}
-.tk-btn:hover{background:rgba(197,155,39,.12)}
-.tk-btn .i-play{display:none}.ticker.paused .tk-btn .i-play{display:block}.ticker.paused .tk-btn .i-pause{display:none}
-
-.pn{padding:1.5rem}
-.pn-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:.9rem}
-.pn-head h2,.ab-head h2{font-family:var(--f-head);font-weight:400;font-size:1.35rem;color:var(--gold-hi)}
-.pn-moon{font-size:2rem;line-height:1;filter:drop-shadow(0 0 10px rgba(255,217,120,.45))}
-.pn-date{font-family:var(--f-head);font-size:clamp(1.3rem,3vw,1.6rem);line-height:1.4;color:var(--ink)}
-.pn-marathi{color:var(--amber);font-weight:500;margin:.1rem 0 1rem}
-.pn-list{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
-.pn-next{margin-top:1.1rem;padding-top:.9rem;border-top:1px dashed var(--line)}
-.pn-next h3{font-size:.76rem;font-weight:600;color:var(--amber);margin-bottom:.4rem}
-.pn-next li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:.42rem 0;border-bottom:1px solid rgba(197,155,39,.1);font-size:.9rem;line-height:1.5}
-.pn-next li:last-child{border-bottom:0}
-.pn-next em{flex:none;text-align:right;font-style:normal;font-size:.8rem;color:var(--muted)}
-.pn-list > div{padding:.7rem .85rem;border:1px solid rgba(197,155,39,.18);border-radius:12px;background:rgba(0,0,0,.22)}
-.pn-list .wide{grid-column:1/-1}
-.pn-list dt{font-size:.74rem;color:var(--muted)}
-.pn-list dd{margin:0;font-weight:500;line-height:1.5}
-.pn-bar{height:6px;border-radius:6px;background:rgba(255,255,255,.08);margin-top:.55rem;overflow:hidden}
-.pn-bar i{display:block;height:100%;width:0;background:var(--grad-gold);border-radius:6px;transition:width 1s ease}
-.pn-special{display:none;margin-top:.9rem;padding:.7rem .9rem;border-radius:12px;background:linear-gradient(90deg,rgba(138,28,38,.5),rgba(138,28,38,.15));border:1px solid rgba(255,183,3,.4);color:var(--gold-hi);font-weight:500}
-.pn-special.on{display:block}
-.pn-note{margin:.9rem 0 0;font-size:.74rem;color:var(--muted);line-height:1.6}
-
-.ab{padding:1.5rem}
-.ab-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 16px;margin-bottom:1rem}
-.ab-tabs{display:flex;flex-wrap:wrap;gap:6px}
-.ab-tab{position:relative;min-width:44px;min-height:40px;padding:.3rem .7rem;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--ink-2);font:500 .82rem var(--f-body);cursor:pointer;transition:.2s}
-.ab-tab:hover{border-color:var(--gold);color:var(--amber)}
-.ab-tab[aria-selected="true"]{background:var(--grad-gold);color:#1a0a00;border-color:transparent;font-weight:600}
-.ab-tab.today::after{content:"";position:absolute;top:4px;right:4px;width:6px;height:6px;border-radius:50%;background:var(--crimson);box-shadow:0 0 0 2px var(--bg2)}
-.ab-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:.9rem}
-.chip{display:inline-flex;align-items:center;gap:.4rem;padding:.25rem .8rem;border-radius:999px;border:1px solid var(--line-2);background:rgba(197,155,39,.08);color:var(--gold-hi);font-size:.8rem}
-.chip.red{background:rgba(138,28,38,.35);border-color:rgba(255,120,120,.3);color:#ffd2c4}
-.ab-verse{margin:0 0 1rem;padding:1.1rem 1.2rem;border-left:3px solid var(--amber);border-radius:6px 14px 14px 6px;background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,.12))}
-.ab-verse p{margin:0 0 .85rem;font-weight:500;font-family:var(--f-deco);font-size:clamp(1.1rem,2.6vw,1.3rem);line-height:1.95;color:var(--ink)}
-.ab-verse p:last-child{margin-bottom:0}
-.ab-verse span{display:block}
-.ab-mean h3{font-size:.8rem;color:var(--amber);font-weight:600;margin-bottom:.3rem}
-.ab-mean p{margin:0 0 .7rem;color:var(--ink-2);font-size:.96rem}
-.ab-src{font-size:.86rem;color:var(--gold-hi);margin:0 0 1.1rem;font-style:italic}
-.ab-actions{display:flex;flex-wrap:wrap;gap:10px}
-.btn-s{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:44px;padding:.5rem 1.1rem;border-radius:12px;font:600 .88rem var(--f-body);cursor:pointer;border:1px solid var(--line-2);background:rgba(197,155,39,.08);color:var(--gold-hi);transition:.2s}
-.btn-s:hover{background:rgba(197,155,39,.2);color:var(--amber);transform:translateY(-1px)}
-.btn-s.wa{background:#1f7a45;border-color:#2fa862;color:#fff}
-.btn-s.wa:hover{background:#26904f;color:#fff}
-.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,30px);z-index:300;padding:.7rem 1.3rem;border-radius:999px;background:#1d0e0e;border:1px solid var(--amber);color:var(--gold-hi);font-weight:500;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.3s}
-.toast.show{opacity:1;transform:translate(-50%,0)}
-
-/* ---------- Editorial ---------- */
-.editorial{max-width:860px;margin-inline:auto}
-.editorial h3{font-family:var(--f-head);font-weight:400;font-size:clamp(1.25rem,3vw,1.55rem);color:var(--gold-hi);margin:2.2rem 0 .6rem;display:flex;gap:.6rem;align-items:baseline}
-.editorial h3::before{content:"❖";color:var(--gold);font-size:.8em;font-family:var(--f-body)}
-.editorial p{margin:0 0 1rem;color:var(--ink-2);font-size:1.02rem;text-align:justify;hyphens:auto}
-.editorial .lead{font-size:1.12rem;color:var(--ink)}
-.editorial blockquote{margin:1.6rem 0;padding:1.2rem 1.5rem;border-left:3px solid var(--amber);border-radius:0 14px 14px 0;background:linear-gradient(90deg,rgba(138,28,38,.28),rgba(138,28,38,.04))}
-.editorial blockquote p{margin:0;font-family:var(--f-deco);font-size:1.3rem;line-height:1.9;color:var(--ink);text-align:left}
-.editorial blockquote cite{display:block;margin-top:.4rem;font-style:normal;font-size:.85rem;color:var(--amber)}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin:2rem 0 1.4rem}
-.facts div{padding:1rem 1.1rem;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.025)}
-.facts b{display:block;font-size:.75rem;color:var(--amber);font-weight:600}
-.facts span{font-size:.95rem;color:var(--ink)}
-.read-links{display:flex;flex-wrap:wrap;gap:10px}
-.read-links a{display:inline-flex;align-items:center;gap:.4rem;min-height:42px;padding:.4rem 1rem;border:1px solid var(--line-2);border-radius:999px;font-size:.88rem;font-weight:500}
-.read-links a:hover{background:rgba(197,155,39,.14)}
-
-/* ---------- Saint grid ---------- */
-.finder{display:flex;align-items:center;gap:10px;max-width:460px;margin:0 auto 2rem;padding:.2rem 1rem;border:1px solid var(--line-2);border-radius:999px;background:rgba(0,0,0,.3)}
-.finder input{flex:1;min-width:0;background:none;border:0;color:var(--ink);font:400 1rem var(--f-body);padding:.7rem 0}
-.finder input:focus{outline:none}
-.finder:focus-within{border-color:var(--amber);box-shadow:0 0 0 3px rgba(255,183,3,.15)}
-.finder .ic{color:var(--gold)}
-.finder-note{text-align:center;color:var(--muted);font-size:.9rem;margin:-1rem 0 1.5rem;min-height:1.5em}
-.features-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:22px}
-.feature-card{display:flex;flex-direction:column;overflow:hidden;background:linear-gradient(170deg,#241011,#150909);border:1px solid var(--line);border-radius:var(--r);transition:transform .3s,border-color .3s,box-shadow .3s}
-.feature-card:hover{transform:translateY(-5px);border-color:var(--amber);box-shadow:0 16px 38px rgba(0,0,0,.55),0 0 0 1px rgba(255,183,3,.2)}
-.feature-card[hidden]{display:none}
-.card-img-box{position:relative;aspect-ratio:1/1;overflow:hidden;background:radial-gradient(circle at 50% 40%,#46191c,#170808)}
-.card-img-box::before{content:"ॐ";position:absolute;inset:0;display:grid;place-items:center;font-family:var(--f-head);font-size:4.5rem;color:var(--gold);opacity:.25}
-.card-img-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%;transition:transform .6s}
-.feature-card:hover .card-img-box img{transform:scale(1.06)}
-.card-img-box::after{content:"";position:absolute;inset:auto 0 0;height:45%;background:linear-gradient(180deg,transparent,rgba(21,9,9,.95));pointer-events:none}
-.card-no{position:absolute;z-index:2;top:10px;left:10px;min-width:34px;padding:.1rem .55rem;text-align:center;border-radius:999px;background:rgba(13,4,4,.75);border:1px solid var(--line-2);color:var(--gold-hi);font-size:.78rem;font-weight:600;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
-.card-title{font-family:var(--f-deco);font-weight:400;font-size:1.18rem;line-height:1.5;color:var(--gold-hi);padding:.2rem 1rem 0;margin-top:-.2rem;position:relative;z-index:2;text-align:center}
-.sant-action-buttons{margin-top:auto;padding:.9rem 1rem 1.1rem;display:flex;flex-direction:column;gap:.6rem}
-.btn-row{display:flex;gap:.5rem}
-.btn-card{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;min-height:42px;padding:.4rem .5rem;border-radius:10px;font-size:.83rem;font-weight:600;line-height:1.3;transition:.2s}
-.btn-charitra{background:var(--grad-gold);color:#1a0a00}
-.btn-charitra:hover{color:#1a0a00;filter:brightness(1.1)}
-.btn-abhang{border:1px solid var(--gold);color:var(--gold-hi);background:rgba(197,155,39,.06)}
-.btn-abhang:hover{background:rgba(197,155,39,.2);color:var(--amber)}
-.btn-kshetra{display:flex;align-items:center;justify-content:center;gap:.4rem;text-align:center;padding:.5rem .7rem;border-radius:10px;border:1px dashed rgba(197,155,39,.4);background:rgba(138,28,38,.18);color:var(--ink-2);font-size:.78rem;line-height:1.4}
-.btn-kshetra:hover{background:rgba(138,28,38,.4);color:var(--amber);border-color:var(--amber)}
-
-/* ---------- Liturgy / Category / Granth ---------- */
-.liturgy-grid,.cat-grid-row,.granth-grid{display:grid;gap:22px}
-.liturgy-grid{grid-template-columns:repeat(auto-fill,minmax(285px,1fr))}
-.cat-grid-row{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
-.granth-grid{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
-.liturgy-card,.cat-card,.granth-card{display:flex;flex-direction:column;overflow:hidden;background:linear-gradient(170deg,#241011,#150909);border:1px solid var(--line);border-radius:var(--r);transition:transform .3s,border-color .3s,box-shadow .3s}
-.liturgy-card:hover,.cat-card:hover,.granth-card:hover{transform:translateY(-5px);border-color:var(--amber);box-shadow:0 16px 38px rgba(0,0,0,.55)}
-.liturgy-img-box,.cat-img-wrapper,.granth-img-box{position:relative;aspect-ratio:16/10;overflow:hidden;background:radial-gradient(circle,#46191c,#170808)}
-.granth-img-box{aspect-ratio:4/3}
-.liturgy-img-box img,.cat-img-wrapper img,.granth-img-box img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.liturgy-card:hover img,.cat-card:hover img,.granth-card:hover img{transform:scale(1.06)}
-.cat-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(21,9,9,.92))}
-.liturgy-content,.cat-info,.granth-info{display:flex;flex-direction:column;flex:1;padding:1.1rem 1.2rem 1.3rem}
-.liturgy-content h3,.cat-info h3,.granth-info h3{font-family:var(--f-deco);font-weight:400;font-size:1.22rem;line-height:1.5;color:var(--gold-hi);margin-bottom:.4rem}
-.liturgy-content p,.cat-info p,.granth-info p{margin:0 0 1rem;color:var(--ink-2);font-size:.92rem;line-height:1.75}
-.liturgy-btn,.cat-link-btn,.granth-btn{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:.5rem;min-height:42px;padding:.45rem 1.1rem;border-radius:999px;border:1px solid var(--gold);color:var(--gold-hi);font-size:.86rem;font-weight:600;transition:.2s}
-.liturgy-btn:hover,.cat-link-btn:hover,.granth-btn:hover{background:var(--grad-gold);color:#1a0a00;border-color:transparent}
-
-/* ---------- FAQ ---------- */
-.faq-list{max-width:860px;margin-inline:auto;display:grid;gap:12px}
-.faq-list details{border:1px solid var(--line);border-radius:14px;background:linear-gradient(170deg,#241011,#150909);transition:border-color .2s}
-.faq-list details[open]{border-color:var(--line-2)}
-.faq-list summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:1rem 1.2rem;min-height:56px;font-family:var(--f-deco);font-size:1.12rem;line-height:1.55;color:var(--gold-hi)}
-.faq-list summary::-webkit-details-marker{display:none}
-.faq-list summary::after{content:"+";flex:none;width:30px;height:30px;display:grid;place-items:center;border:1px solid var(--line-2);border-radius:50%;font:400 1.3rem/1 var(--f-body);color:var(--amber);transition:transform .25s}
-.faq-list details[open] summary::after{transform:rotate(45deg)}
-.faq-list .ans{padding:0 1.2rem 1.2rem;color:var(--ink-2)}
-.faq-list .ans p{margin:0}
-
-/* ---------- About ---------- */
-.about-container{width:min(940px,100% - 32px);margin-inline:auto;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:start;padding:2.4rem;border:1px solid var(--line-2);border-radius:24px;background:radial-gradient(circle at 0 0,rgba(138,28,38,.35),transparent 55%),linear-gradient(170deg,#1f0e0f,#140808);box-shadow:var(--shadow)}
-.about-icon-box{width:92px;height:92px;border-radius:50%;display:grid;place-items:center;font-family:var(--f-head);font-size:3rem;color:var(--amber);border:1px solid var(--line-2);background:rgba(197,155,39,.08);box-shadow:0 0 40px rgba(255,183,3,.15)}
-.about-title{font-family:var(--f-head);font-weight:400;font-size:clamp(1.5rem,3.4vw,2rem);color:var(--gold-hi);margin-bottom:.8rem}
-.about-text{margin:0 0 1rem;color:var(--ink)}
-.about-subtext{margin:0 0 1.2rem;color:var(--ink-2);font-size:.95rem}
-.about-text strong{color:var(--amber)}
-.about-tagline{display:block;font-family:var(--f-head);font-size:1.35rem;color:var(--amber);text-align:right}
-
-/* ---------- Footer ---------- */
-.footer{margin-top:0;background:linear-gradient(180deg,#120505,#070202);border-top:1px solid var(--line-2)}
-.footer-top{width:min(1200px,100% - 32px);margin-inline:auto;display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:2.4rem;padding:3.2rem 0 2.2rem}
-.footer-logo{font-family:var(--f-head);font-weight:400;font-size:1.6rem;color:var(--gold-hi);margin-bottom:.6rem}
-.footer-about{margin:0;color:var(--muted);font-size:.93rem;max-width:380px}
-.footer-links-box h4{font-family:var(--f-deco);font-weight:400;font-size:1.1rem;color:var(--amber);margin-bottom:.8rem}
-.footer-links-box a{display:inline-block;padding:.25rem 0;color:var(--ink-2);font-size:.92rem}
-.footer-links-box a:hover{color:var(--amber)}
-.footer-bottom{border-top:1px solid rgba(197,155,39,.18);padding:1.1rem 16px;text-align:center}
-.copyright-text{margin:0;color:var(--muted);font-size:.82rem}
-
-.to-top{position:fixed;right:16px;bottom:18px;z-index:150;width:46px;height:46px;border-radius:50%;border:1px solid var(--line-2);background:rgba(20,8,8,.92);color:var(--amber);display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transition:.3s}
-.to-top.show{opacity:1;pointer-events:auto}
-.to-top:hover{background:var(--amber);color:#1a0a00}
-
-/* ---------- Responsive ---------- */
-@media (max-width:1100px){
-  .nav-toggle{display:inline-flex}
-  .nav-cta{display:none}
-  .nav-links{position:absolute;top:100%;left:0;right:0;display:block;max-height:0;overflow:hidden;visibility:hidden;background:#120505;border-bottom:1px solid var(--line-2);transition:max-height .35s ease,visibility .35s}
-  .nav-links.open{max-height:calc(100vh - var(--nav-h));overflow-y:auto;visibility:visible}
-  .nav-links a{padding:.9rem 1.3rem;border-radius:0;font-size:.98rem;border-bottom:1px solid rgba(197,155,39,.1)}
-  .nav-links a.active{box-shadow:inset 3px 0 0 var(--amber);border-radius:0}
-  .dropdown-menu{position:static;display:none;opacity:1;visibility:visible;transform:none;border:0;border-radius:0;box-shadow:none;background:rgba(0,0,0,.25);padding:0 0 0 .8rem}
-  .dropdown.open>.dropdown-menu{display:block}
-  .dropdown:hover>.dropdown-menu{opacity:1}
-}
-@media (max-width:900px){
-  .dash-grid{grid-template-columns:1fr}
-  .footer-top{grid-template-columns:1fr 1fr}.footer-brand-box{grid-column:1/-1}
-  .about-container{grid-template-columns:1fr;text-align:center;padding:1.8rem 1.3rem}
-  .about-icon-box{margin-inline:auto}.about-tagline{text-align:center}
-}
-@media (max-width:600px){
-  body{font-size:15.5px}
-  .top-bar-container{justify-content:center}.top-bar-text:last-child{display:none}
-  .hero-section{padding:3.2rem 16px 6.6rem}
-  .section{padding:3.2rem 0}
-  .pn,.ab{padding:1.15rem}
-  .pn-list{grid-template-columns:1fr 1fr;gap:.55rem}
-  .tk-label{padding:.5rem .7rem;font-size:.78rem}
-  .pn-next li{flex-direction:column;gap:0}.pn-next em{text-align:left}
-  .features-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-  .card-title{font-size:1rem;padding-inline:.6rem}
-  .sant-action-buttons{padding:.7rem .6rem .8rem}
-  .btn-row{flex-direction:column}
-  .btn-card{font-size:.8rem}.btn-kshetra{font-size:.72rem}
-  .liturgy-grid,.cat-grid-row,.granth-grid{grid-template-columns:1fr}
-  .editorial p{text-align:left}
-  .footer-top{grid-template-columns:1fr;gap:1.8rem}
-}
-@media (max-width:380px){.features-grid{grid-template-columns:1fr}.btn-row{flex-direction:row}}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-  .tk-view{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
-  .tk-track{animation:none}.tk-group[aria-hidden="true"]{display:none}
-}
-</style>
-
-<!-- Schema.org JSON-LD (Rich Search Results साठी) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "संतवाणी",
-  "alternateName": "Santvani",
-  "url": "https://santvani.co.in/",
-  "inLanguage": "mr",
-  "description": "मराठी संत साहित्य, सार्थ ग्रंथ, हरिपाठ व अभंग गाथा डिजिटल लायब्ररी",
-  "publisher": {
-    "@type": "Organization",
-    "name": "संतवाणी"
-  }
-}
-</script>
+    <!-- Schema.org JSON-LD (Rich Search Results साठी) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "संतवाणी",
+      "alternateName": "Santvani",
+      "url": "https://santvani.co.in/",
+      "description": "मराठी संत साहित्य, सार्थ ग्रंथ, हरिपाठ व अभंग गाथा डिजिटल लायब्ररी",
+      "publisher": {
+        "@type": "Organization",
+        "name": "संतवाणी"
+      }
+    }
+    </script>
+<!-- FAQ Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -428,7 +128,7 @@ h1,h2,h3,h4{margin:0}
       "name": "वारी कधी असते आणि कुठे जाते?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "मुख्य वाऱ्या दोन: आषाढ शुद्ध एकादशीची आषाढी वारी (जून-जुलै) आणि कार्तिक शुद्ध एकादशीची कार्तिकी वारी (ऑक्टोबर-नोव्हेंबर); माघी आणि चैत्री यात्राही भरतात. आषाढीसाठी आळंदीहून माऊलींची आणि देहूहून तुकोबारायांची पालखी पंढरपूरला निघते. पुढील एकादशी कधी आहे हे या पानाच्या वरच्या ‘आजचे पंचांग’ भागात आणि वार्ता फलकात पाहता येते."
+        "text": "मुख्य वाऱ्या दोन: आषाढ शुद्ध एकादशीची आषाढी वारी (जून-जुलै) आणि कार्तिक शुद्ध एकादशीची कार्तिकी वारी (ऑक्टोबर-नोव्हेंबर); माघी आणि चैत्री यात्राही भरतात. आषाढीसाठी आळंदीहून माऊलींची आणि देहूहून तुकोबारायांची पालखी पंढरपूरला निघते. पुढील एकादशी कधी आहे हे या पानावरील ‘आजचे पंचांग’ भागात आणि वार्ता फलकात पाहता येते."
       }
     }
   ]
@@ -438,45 +138,24 @@ h1,h2,h3,h4{margin:0}
 </head>
 <body>
 
-<a class="skip-link" href="#main">मुख्य मजकुराकडे जा</a>
 <div id="santvani-splash-screen"></div>
-
-<!-- Inline SVG icon sprite (no icon-font dependency) -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5V5.5A2.5 2.5 0 0 1 6.5 3H20v14H6.5A2.5 2.5 0 0 0 4 19.5zm0 0A2.5 2.5 0 0 0 6.5 22H20v-5"/></symbol>
-  <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></symbol>
-  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></symbol>
-  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5A8.5 8.5 0 1 1 21 11.5z"/><path d="M9 8.5c.3 3 2.5 5.2 5.5 6l1.2-1.3-2-1-.9.7c-.9-.4-1.6-1.1-2-2l.7-.9-1-2z"/></symbol>
-  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></symbol>
-  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
-  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
-  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
-  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
-  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></symbol>
-  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
-  <symbol id="i-hands" viewBox="0 0 24 24"><path d="M12 3c2 3 3 5 3 8a3 3 0 0 1-6 0c0-3 1-5 3-8zM7 21c0-3 2-5 5-5s5 2 5 5"/></symbol>
-</svg>
-
+    
     <div class="top-bar">
         <div class="top-bar-container">
-            <span class="top-bar-text"><span class="om-spin" aria-hidden="true">ॐ</span> ॥ जय जय विठ्ठल रखुमाई ॥</span>
-            <span class="top-bar-text"><svg class="ic"><use href="#i-hands"/></svg> संतवाणी डिजिटल लायब्ररी २०२६</span>
+            <span class="top-bar-text"><i class="fa-solid fa-om animate-spin"></i> ॥ जय जय विठ्ठल रखुमाई ॥</span>
+            <span class="top-bar-text"><i class="fa-solid fa-hands-praying"></i> संतवाणी डिजिटल लायब्ररी २०२६</span>
         </div>
     </div>
 
     <!-- नवीन रचनेचा १००% अचूक मुख्य मेनू बार -->
-    <nav class="navbar" aria-label="मुख्य मेनू">
+    <nav class="navbar">
         <div class="nav-container">
             <!-- लोगो आता परफेक्ट होम पेजला कनेक्टेड आहे -->
             <a href="index.html" class="logo">
-                <span class="logo-icon" aria-hidden="true">✨</span> संत<span class="logo-highlight">वाणी</span>
+                <span class="logo-icon">✨</span> संत<span class="logo-highlight">वाणी</span>
             </a>
-            <button class="nav-toggle" type="button" aria-label="मेनू उघडा/बंद करा" aria-expanded="false" aria-controls="nav-links">
-                <svg class="ic i-open"><use href="#i-menu"/></svg>
-            </button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="index.html" class="active" aria-current="page">मुख्य पृष्ठ</a></li>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">मुख्य पृष्ठ</a></li>
                 <li><a href="sant-sahitya.html">संत साहित्य</a></li>
                 <li><a href="vangmay-sangrah.html">वाङ्मय संग्रह</a></li>
                 <li><a href="sarth-haripath.html">हरिपाठ</a></li>
@@ -485,7 +164,7 @@ h1,h2,h3,h4{margin:0}
                 <li><a href="pages/blog/ekadashi-vrat.html">सर्व एकादशी </a></li>
                 <!-- ड्रॉपडाऊन मेनू -->
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">इतर <svg class="ic" style="width:.8em;height:.8em"><use href="#i-chev"/></svg></a>
+                    <a href="#" class="dropdown-toggle">इतर <i class="fa-solid fa-chevron-down" style="font-size: 0.7rem; margin-left: 2px;"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="photo-gallery.html">फोटो गॅलरी</a></li><li><a href="san-utsav.html">सन आणि उत्सव</a></li>
                         <li><a href="pages/artisangrah/artya-sangrah.html">आरत्या संग्रह</a></li>
@@ -514,747 +193,874 @@ h1,h2,h3,h4{margin:0}
                 <a href="#sant-home-gallery" class="btn-premium">संग्रह पहा</a>
                 <a href="sant-subhashite.html" class="btn-outline">संतसुभाषिते</a>
             </div>
-            <ul class="hero-stats" aria-label="संग्रहाची झलक">
-                <li><b>३३</b><span>संत चरित्रे</span></li>
-                <li><b>७</b><span>नित्यपाठ</span></li>
-                <li><b>११</b><span>सार्थ ग्रंथ</span></li>
-                <li><b>२४</b><span>एकादशी माहात्म्य</span></li>
-            </ul>
         </div>
     </header>
 
-<main id="main">
-
-    <!-- ===== लाईव्ह डॅशबोर्ड : वार्ता फलक + पंचांग + आजचा पावन अभंग ===== -->
-    <section id="dashboard" class="dash" aria-label="आजचा डॅशबोर्ड">
-        <div class="container">
-
-            <div class="ticker" id="ticker" role="region" aria-label="वार्ता फलक : पंढरपूर, आळंदी, देहू व मंदिर सूचना">
-                <div class="tk-label"><span class="tk-dot" aria-hidden="true"></span><span class="t">वार्ता फलक</span><span class="sr-only">वार्ता फलक</span></div>
-                <div class="tk-view">
-                    <div class="tk-track" id="tkTrack">
-                        <div class="tk-group">
-                            <span class="tk-item"><b>पंढरपूर</b> — श्री विठ्ठल-रुक्मिणी दर्शन व यात्रेच्या माहितीसाठी मंदिर समितीच्या अधिकृत सूचना पाहा.</span><span class="tk-sep" aria-hidden="true">✦</span>
-                            <span class="tk-item"><b>आळंदी</b> — श्री ज्ञानेश्वर माऊली संजीवन समाधी मंदिर देवस्थानच्या सूचना पाहा.</span><span class="tk-sep" aria-hidden="true">✦</span>
-                            <span class="tk-item"><b>देहू</b> — जगद्गुरू संत तुकाराम महाराज संस्थानच्या सूचना पाहा.</span><span class="tk-sep" aria-hidden="true">✦</span>
+    <!-- ========== आजचा डॅशबोर्ड : वार्ता फलक + पंचांग + पावन अभंग ==========
+         (माहिती data/panchang.csv, data/vartha.csv, data/abhang.csv मधून येते — येथे बदल करू नका) -->
+    <section id="dashboard" class="sv-dash" aria-label="आजचा डॅशबोर्ड">
+        <div class="sv-wrap">
+            <div class="sv-ticker" id="svTicker" role="region" aria-label="वार्ता फलक : पंढरपूर, आळंदी, देहू व मंदिर सूचना">
+                <div class="sv-tk-label"><span class="sv-tk-dot" aria-hidden="true"></span><span class="t">वार्ता फलक</span></div>
+                <div class="sv-tk-view">
+                    <div class="sv-tk-track" id="svTkTrack">
+                        <div class="sv-tk-group">
+                            <span class="sv-tk-item"><b>॥ जय जय विठ्ठल रखुमाई ॥</b></span><span class="sv-tk-sep" aria-hidden="true">✦</span>
                         </div>
                     </div>
                 </div>
-                <button class="tk-btn" id="tkBtn" type="button" aria-label="वार्ता थांबवा / सुरू करा" aria-pressed="false">
-                    <svg class="ic i-pause"><use href="#i-pause"/></svg><svg class="ic i-play"><use href="#i-play"/></svg>
-                </button>
+                <button class="sv-tk-btn" id="svTkBtn" type="button" aria-label="वार्ता थांबवा / सुरू करा" aria-pressed="false"><i class="fa-solid fa-pause"></i></button>
             </div>
 
-            <div class="dash-grid">
-                <!-- आजचे पंचांग -->
-                <article class="card pn" id="panchang" aria-labelledby="pnTitle">
-                    <div class="pn-head">
-                        <h2 id="pnTitle">आजचे पंचांग</h2>
-                        <span class="pn-moon" id="pnMoon" aria-hidden="true">🌙</span>
-                    </div>
-                    <div class="pn-date" id="pnDate">…</div>
-                    <p class="pn-marathi" id="pnMarathi">मराठी दिनांक लोड होत आहे…</p>
-                    <dl class="pn-list">
-                        <div><dt>वार</dt><dd id="pnVar">—</dd></div>
-                        <div><dt>पक्ष</dt><dd id="pnPaksha">—</dd></div>
-                        <div class="wide"><dt>तिथी</dt><dd id="pnTithi">—</dd><div class="pn-bar" aria-hidden="true"><i id="pnBar"></i></div></div>
-                        <div class="wide"><dt>नक्षत्र</dt><dd id="pnNak">—</dd></div>
-                        <div class="wide"><dt>आजचे स्मरण (देव / संत)</dt><dd id="pnSmaran">—</dd></div>
+            <div class="sv-grid">
+                <article class="sv-card" id="svPanchang" aria-labelledby="svPnTitle">
+                    <div class="sv-card-head"><h2 id="svPnTitle">आजचे पंचांग</h2><span class="sv-moon" id="svMoon" aria-hidden="true">🌙</span></div>
+                    <div class="sv-pn-date" id="svPnDate">…</div>
+                    <p class="sv-pn-marathi" id="svPnMarathi">&nbsp;</p>
+                    <dl class="sv-pn-list">
+                        <div><dt>वार</dt><dd id="svPnVar">—</dd></div>
+                        <div><dt>नक्षत्र</dt><dd id="svPnNak">—</dd></div>
+                        <div class="wide"><dt>तिथी</dt><dd id="svPnTithi">—</dd><div class="sv-bar" id="svBarWrap" aria-hidden="true"><i id="svBar"></i></div></div>
+                        <div class="wide"><dt>आजचे स्मरण (देव / संत)</dt><dd id="svPnSmaran">—</dd></div>
                     </dl>
-                    <div class="pn-special" id="pnSpecial" role="status"></div>
-                    <div class="pn-next"><h3>आगामी एकादशी, सण व यात्रा</h3><ul id="pnNext"></ul></div>
-                    <p class="pn-note">* सूर्योदयकालीन (सु. ६:३० IST) खगोलीय गणिताने काढलेली अंदाजे माहिती. अधिकमास/क्षयतिथी व स्थानपरत्वे फरक संभवतो; व्रत-मुहूर्तासाठी आपल्या स्थानिक पंचांगाची खातरजमा करा.</p>
+                    <div class="sv-special" id="svSpecial" role="status"></div>
+                    <div class="sv-next"><h3>आगामी एकादशी, सण व यात्रा</h3><ul id="svNext"></ul></div>
+                    <p class="sv-note" id="svPnNote"></p>
                 </article>
 
-                <!-- आजचा पावन अभंग -->
-                <article class="card ab" id="abhang" aria-labelledby="abTitle">
-                    <div class="ab-head">
-                        <h2 id="abTitle">आजचा पावन अभंग</h2>
-                        <div class="ab-tabs" role="tablist" aria-label="वारानुसार अभंग निवडा" id="abTabs"></div>
-                    </div>
-                    <div id="abPanel" role="tabpanel" aria-live="polite">
-                        <noscript><p>आजचा पावन अभंग पाहण्यासाठी कृपया JavaScript सुरू करा.</p></noscript>
-                    </div>
+                <article class="sv-card" id="svAbhang" aria-labelledby="svAbTitle">
+                    <div class="sv-card-head"><h2 id="svAbTitle">आजचा पावन अभंग</h2><div class="sv-tabs" role="tablist" aria-label="वारानुसार अभंग निवडा" id="svTabs"></div></div>
+                    <div id="svAbPanel" role="tabpanel" aria-live="polite"><noscript><p class="sv-note">आजचा पावन अभंग पाहण्यासाठी JavaScript सुरू करा.</p></noscript></div>
                 </article>
             </div>
         </div>
     </section>
-
-    <!-- ===== संपादकीय : वारकरी परंपरेचा परिचय ===== -->
-    <section id="editorial" class="section" aria-labelledby="edTitle">
-        <div class="container">
-            <div class="section-head">
-                <span class="eyebrow">संपादकीय परिचय</span>
-                <h2 class="section-title" id="edTitle">वारकरी संप्रदाय : भक्ती, ज्ञान आणि समतेचा महाप्रवाह</h2>
-                <div class="royal-divider"><span class="line"></span><span aria-hidden="true">❖</span><span class="line"></span></div>
-            </div>
-
-            <article class="editorial">
-                <p class="lead">महाराष्ट्राच्या भक्तिपरंपरेचे हृदयस्थान म्हणजे भीमेकाठी वसलेले पंढरपूर आणि विटेवर समचरण उभा असलेला श्री विठ्ठल. शतकानुशतके लाखो वारकरी टाळ-मृदंगाच्या गजरात, मुखी हरिनाम घेत या पांडुरंगाच्या भेटीला पायी चालत येतात. ही केवळ यात्रा नाही; तो एक चालता-बोलता जीवनधर्म आहे, ज्याने मराठी मनाला भक्ती, ज्ञान आणि माणुसकीची शिकवण दिली.</p>
-
-                <h3>पंढरीची वारी आणि पालखी सोहळा</h3>
-                <p>आषाढी आणि कार्तिकी एकादशीला पंढरपूरला पोहोचण्यासाठी आळंदीहून संत ज्ञानेश्वर माऊलींची आणि देहूहून जगद्गुरू संत तुकाराम महाराजांची पालखी सुमारे वीस दिवसांचा पायी प्रवास करते. या वाटचालीत जात, पंथ, संपत्ती आणि पद यांचा भेद विरघळून जातो; प्रत्येक वारकरी दुसऱ्याला &lsquo;माऊली&rsquo; म्हणून हाक मारतो आणि त्याच्या पाया पडतो. समतेचा हा जिवंत अनुभव कोणत्याही प्रवचनापेक्षा अधिक प्रभावी शिकवण ठरतो.</p>
-
-                <h3>ज्ञानेश्वरी : गीतेचा प्राकृत अर्थ</h3>
-                <p>परंपरेनुसार इसवी सन १२९० च्या सुमारास, नेवासे येथे वयाच्या अवघ्या सोळाव्या वर्षी संत ज्ञानेश्वरांनी भगवद्गीतेवर &lsquo;भावार्थदीपिका&rsquo; ही टीका ओवीबद्ध मराठीत रचली; तोच आज &lsquo;ज्ञानेश्वरी&rsquo; म्हणून ओळखला जाणारा ग्रंथ. संस्कृतच्या कुंपणात अडकलेले तत्त्वज्ञान त्यांनी सामान्य माणसाच्या घरापर्यंत पोहोचवले. ग्रंथाच्या अखेरीस येणारे &lsquo;पसायदान&rsquo; हे केवळ मराठी साहित्यातीलच नव्हे, तर जागतिक प्रार्थनांमधील एक तेजस्वी रत्न मानले जाते. <a href="pages/granth/dnyaneshwari/dnyaneshwari.html">ज्ञानेश्वरी</a>, अमृतानुभव आणि <a href="pages/liturgy/haripath-dnyaneshwar.html">हरिपाठ</a> ही माऊलींची अमोल देणगी आहे.</p>
-
-                <h3>तुकाराम गाथा : सामान्यांचा आरसा</h3>
-                <p>सतराव्या शतकातील देहू येथील संत तुकाराम महाराजांनी आपल्या हजारो अभंगांतून दांभिकता, कर्मकांडाचा अतिरेक आणि विषमता यांवर परखड भाष्य केले. दुष्काळ, कौटुंबिक दुःख आणि लोकांचा रोष सोसत त्यांनी विठ्ठलाशी जिव्हाळ्याचे नाते जोडले. त्यांच्या अभंगांतील उपमा शेतीतील, बाजारातील आणि घरातील आहेत; म्हणूनच ते आजही थेट मनाला भिडतात. <a href="pages/abhang/tukaram-gatha.html">तुकाराम गाथा</a> वाचणे म्हणजे एका सत्यशोधक भक्ताशी संवाद साधणे होय.</p>
-
-                <h3>भागवत धर्म : सर्वांभूती परमेश्वर</h3>
-                <p>वारकरी संप्रदाय ज्या भागवत धर्मावर उभा आहे, त्याचा गाभा म्हणजे प्रत्येक जीवात परमेश्वराचे दर्शन. संत एकनाथांनी <a href="pages/granth/eknathi-bhagvat/eknathi-bhagvat.html">एकनाथी भागवत</a> रचून भागवत पुराणाचा अर्थ लोकभाषेत सांगितला. संत नामदेव, गोरा कुंभार, सावता माळी, नरहरी सोनार, चोखामेळा, जनाबाई, कान्होपात्रा आणि मुक्ताबाई अशा विविध समाजघटकांतील स्त्री-पुरुषांनी या एकाच भक्तिपंक्तीत समान आदराचे स्थान मिळवले. संत बहिणाबाईंनी या संप्रदायाचे वर्णन एखाद्या मंदिराच्या रूपकाने केले आहे:</p>
-                <blockquote>
-                    <p>ज्ञानदेवे रचिला पाया । &hellip; तुका झालासे कळस ॥</p>
-                    <cite>— संत बहिणाबाई (अभंगातील प्रसिद्ध ओळ)</cite>
-                </blockquote>
-                <p>याचा अर्थ असा की ज्ञानेश्वरांनी पाया घातला, एकनाथ-नामदेवांनी भिंती उभ्या केल्या आणि तुकारामांनी त्यावर कळस चढवला. पाया, भिंती आणि कळस मिळूनच हे भक्तिमंदिर पूर्ण होते.</p>
-
-                <h3>संतवाणी वाचण्याचा सोपा मार्ग</h3>
-                <p>&lsquo;संतवाणी&rsquo;वर आपण ३३ संतांची चरित्रे व अभंग, तीन हरिपाठ, काकडा आरती, भूपाळ्या, गवळणी आणि ज्ञानेश्वरी, एकनाथी भागवत, दासबोध यांसारखे सार्थ ग्रंथ मोफत वाचू शकता. दिवसाची सुरुवात हरिपाठाने करा, एकादशीला संतांच्या अभंगांचे वाचन करा आणि आठवड्यातून एकदा एखाद्या संताचे चरित्र वाचा; थोड्याच दिवसांत मनाला मिळणारी शांतता तुम्हाला स्वतःलाच जाणवेल.</p>
-
-                <div class="facts" aria-label="वारकरी परंपरा : एका नजरेत">
-                    <div><b>आराध्य दैवत</b><span>श्री विठ्ठल-रखुमाई, पंढरपूर</span></div>
-                    <div><b>मुख्य वाऱ्या</b><span>आषाढी, कार्तिकी, माघी, चैत्री</span></div>
-                    <div><b>आधारग्रंथ</b><span>ज्ञानेश्वरी, एकनाथी भागवत, तुकाराम गाथा</span></div>
-                    <div><b>मूळ शिकवण</b><span>नामस्मरण, सदाचार, समता</span></div>
-                </div>
-
-                <div class="read-links">
-                    <a href="sarth-haripath.html"><svg class="ic"><use href="#i-book"/></svg> सार्थ हरिपाठ</a>
-                    <a href="granth-sampada.html"><svg class="ic"><use href="#i-book"/></svg> ग्रंथ संपदा</a>
-                    <a href="pages/blog/ekadashi-vrat.html"><svg class="ic"><use href="#i-book"/></svg> सर्व एकादशी</a>
-                    <a href="san-utsav.html"><svg class="ic"><use href="#i-book"/></svg> सण व उत्सव</a>
-                </div>
-            </article>
-        </div>
-    </section>
+    <div class="sv-toast" id="svToast" role="status" aria-live="polite"></div>
 
     <!-- संत साहित्य विभाग (ग्रिड) -->
-<section id="sant-home-gallery" class="section bg-alt features-section">
-    <div class="container">
-        <div class="section-head">
-            <span class="eyebrow section-subtitle">पावन चरित्रे</span>
-            <h2 class="section-title">थोर मराठी संत साहित्य</h2>
-            <div class="royal-divider">
-                <span class="line"></span>
-                <span class="flower">🌸</span>
-                <span class="line"></span>
-            </div>
+<section id="sant-home-gallery" class="features-section" style="background-color: #121212;">
+    <div class="section-container">
+        <span class="section-subtitle">पावन चरित्रे</span>
+        <h2 class="section-title">थोर मराठी संत साहित्य</h2>
+        <div class="royal-divider">
+            <span class="line"></span>
+            <span class="flower">🌸</span>
+            <span class="line"></span>
         </div>
-
-        <div class="finder" role="search">
-            <svg class="ic"><use href="#i-search"/></svg>
-            <input type="search" id="santFind" placeholder="संताचे नाव शोधा… (उदा. तुकाराम)" aria-label="संत शोधा" autocomplete="off">
-        </div>
-        <p class="finder-note" id="santNote" aria-live="polite"></p>
-
-        <div class="features-grid" id="santGrid">
-            <!-- १. संत ज्ञानेश्वर महाराज -->
-            <div class="feature-card" data-name="संत ज्ञानेश्वर महाराज">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">०१</span><img src="images/dnyaneshwar.webp" alt="संत ज्ञानेश्वर" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+        
+        <div class="features-grid">
+            <!-- १. संत ज्ञानेश्वर -->
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/dnyaneshwar.webp" alt="संत ज्ञानेश्वर"></div>
                 <h3 class="card-title">संत ज्ञानेश्वर महाराज</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-dnyaneshwar-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-dnyaneshwar-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-dnyaneshwar-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-dnyaneshwar-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/granth/dnyaneshwari/dnyaneshwari.html" class="btn-kshetra">ग्रंथ: ज्ञानेश्वरी</a>
                 </div>
             </div>
 
-            <!-- २. संत तुकाराम महाराज -->
-            <div class="feature-card" data-name="संत तुकाराम महाराज">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">०२</span><img src="images/tukaram.webp" alt="संत तुकाराम" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <!-- २. संत तुकाराम -->
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/tukaram.webp" alt="संत तुकाराम"></div>
                 <h3 class="card-title">संत तुकाराम महाराज</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-tukaram-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/tukaram-gatha.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-tukaram-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/tukaram-gatha.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/abhang/tukaram-gatha.html" class="btn-kshetra">ग्रंथ: तुकाराम गाथा</a>
                 </div>
             </div>
 
-            <!-- ३. संत एकनाथ महाराज -->
-            <div class="feature-card" data-name="संत एकनाथ महाराज">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">०३</span><img src="images/eknath.webp" alt="संत एकनाथ" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <!-- ३. संत एकनाथ -->
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/eknath.webp" alt="संत एकनाथ"></div>
                 <h3 class="card-title">संत एकनाथ महाराज</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-eknath-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/eknath-gatha.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-eknath-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/eknath-gatha.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/granth/eknathi-bhagvat/eknathi-bhagvat.html" class="btn-kshetra">ग्रंथ: एकनाथी भागवत</a>
                 </div>
             </div>
 
-            <!-- ४. संत नामदेव महाराज -->
-            <div class="feature-card" data-name="संत नामदेव महाराज">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">०४</span><img src="images/namdev.webp" alt="संत नामदेव" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <!-- ४. संत नामदेव -->
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/namdev.webp" alt="संत नामदेव"></div>
                 <h3 class="card-title">संत नामदेव महाराज</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-namdev-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/namdev-gatha.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-namdev-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/namdev-gatha.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/abhang/namdev-gatha.html" class="btn-kshetra">ग्रंथ: नामदेव गाथा</a>
                 </div>
             </div>
 
             <!-- ५. संत जनाबाई -->
-            <div class="feature-card" data-name="संत जनाबाई">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">०५</span><img src="images/janabai.webp" alt="संत जनाबाई" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/janabai.webp" alt="संत जनाबाई"></div>
                 <h3 class="card-title">संत जनाबाई</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-janabai.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-janabai-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-janabai.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-janabai-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/abhang/sant-janabai-abhang.html" class="btn-kshetra">ग्रंथ: अभंग रचना</a>
                 </div>
             </div>
 
             <!-- ६. संत बहिणाबाई -->
-            <div class="feature-card" data-name="संत बहिणाबाई">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">०६</span><img src="images/bahinabai.webp" alt="संत बहिणाबाई" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/bahinabai.webp" alt="संत बहिणाबाई"></div>
                 <h3 class="card-title">संत बहिणाबाई</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-bahinabai.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-bahinabai-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-bahinabai.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-bahinabai-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/abhang/sant-bahinabai-abhang.html" class="btn-kshetra">ग्रंथ: बहिणाबाई गाथा</a>
                 </div>
             </div>
 
             <!-- ७. संत गजानन महाराज -->
-            <div class="feature-card" data-name="संत गजानन महाराज">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">०७</span><img src="images/gajanan.webp" alt="संत गजानन महाराज" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/gajanan.webp" alt="संत गजानन महाराज"></div>
                 <h3 class="card-title">संत गजानन महाराज</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-gajanan-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/saints/sant-gajanan-maharaj.html" class="btn-card btn-abhang">ग्रंथ वाचन</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-gajanan-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/saints/sant-gajanan-maharaj.html" class="btn-card btn-abhang">ग्रंथ वाचन</a>
+                    </div>
                     <a href="pages/saints/sant-gajanan-maharaj.html" class="btn-kshetra">ग्रंथ: श्री गजानन विजय</a>
                 </div>
             </div>
 
             <!-- ८. संत गोरा कुंभार -->
-            <div class="feature-card" data-name="संत गोरा कुंभार">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">०८</span><img src="images/gora-kumbhar.webp" alt="संत गोरा कुंभार" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/gora-kumbhar.webp" alt="संत गोरा कुंभार"></div>
                 <h3 class="card-title">संत गोरा कुंभार</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-gora-kumbhar-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-gora-kumbhar-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-gora-kumbhar-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-gora-kumbhar-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/abhang/sant-gora-kumbhar-abhang.html" class="btn-kshetra">भक्ती मार्ग: विठ्ठल भक्ती</a>
                 </div>
             </div>
 
             <!-- ९. संत मुक्ताबाई -->
-            <div class="feature-card" data-name="संत मुक्ताबाई">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">०९</span><img src="images/muktabai.webp" alt="संत मुक्ताबाई" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/muktabai.webp" alt="संत मुक्ताबाई"></div>
                 <h3 class="card-title">संत मुक्ताबाई</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-muktabai.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/muktabai-gatha.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-muktabai.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/muktabai-gatha.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/abhang/muktabai-gatha.html" class="btn-kshetra">ग्रंथ: ताटीचे अभंग</a>
                 </div>
             </div>
 
-            <!-- १०. संत चोखामेळा महाराज -->
-            <div class="feature-card" data-name="संत चोखामेळा महाराज">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">१०</span><img src="images/chokhamela.webp" alt="संत चोखामेळा" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <!-- १०. संत चोखामेळा -->
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/chokhamela.webp" alt="संत चोखामेळा"></div>
                 <h3 class="card-title">संत चोखामेळा महाराज</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-chokhamela-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-chokhamela-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-chokhamela-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-chokhamela-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/abhang/sant-chokhamela-abhang.html" class="btn-kshetra">भक्ती रचना</a>
                 </div>
             </div>
 
             <!-- ११. संत नरहरी सोनार -->
-            <div class="feature-card" data-name="संत नरहरी सोनार">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">११</span><img src="images/narahari.webp" alt="संत नरहरी सोनार" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/narahari.webp" alt="संत नरहरी सोनार"></div>
                 <h3 class="card-title">संत नरहरी सोनार</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-narahari-sonar.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-narhari-sonar-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-narahari-sonar.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-narhari-sonar-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/abhang/sant-narhari-sonar-abhang.html" class="btn-kshetra">भक्ती रचना</a>
                 </div>
             </div>
 
             <!-- १२. संत निळोबा महाराज -->
-            <div class="feature-card" data-name="संत निळोबा महाराज">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">१२</span><img src="images/niloba.webp" alt="संत निळोबा" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/niloba.webp" alt="संत निळोबा"></div>
                 <h3 class="card-title">संत निळोबा महाराज</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-niloba-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/nilobaray-gatha.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-niloba-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/nilobaray-gatha.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/abhang/nilobaray-gatha.html" class="btn-kshetra">ग्रंथ: निळोबा गाथा</a>
                 </div>
             </div>
 
             <!-- १३. संत कबीर -->
-            <div class="feature-card" data-name="संत कबीर">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">१३</span><img src="images/kabir.webp" alt="संत कबीर" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/kabir.webp" alt="संत कबीर"></div>
                 <h3 class="card-title">संत कबीर</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-kabir.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="kabir-doha.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-kabir.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="kabir-doha.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="kabir-doha.html" class="btn-kshetra">मुख्य ग्रंथ: कबीर बीजक</a>
                 </div>
             </div>
 
             <!-- १४. संत कान्होपात्रा -->
-            <div class="feature-card" data-name="संत कान्होपात्रा">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">१४</span><img src="images/kanhopatra.webp" alt="संत कान्होपात्रा" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/kanhopatra.webp" alt="संत कान्होपात्रा"></div>
                 <h3 class="card-title">संत कान्होपात्रा</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-kanhopatra.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-kanhopatra-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-kanhopatra.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-kanhopatra-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/abhang/sant-kanhopatra-abhang.html" class="btn-kshetra">भक्ती रचना</a>
                 </div>
             </div>
 
             <!-- १५. संत मीराबाई -->
-            <div class="feature-card" data-name="संत मीराबाई">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">१५</span><img src="images/meerabai.webp" alt="संत मीराबाई" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/meerabai.webp" alt="संत मीराबाई"></div>
                 <h3 class="card-title">संत मीराबाई</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-meerabai.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-meerabai-abhang.html" class="btn-card btn-abhang">प्रसिद्ध २० पद</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-meerabai.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-meerabai-abhang.html" class="btn-card btn-abhang">प्रसिद्ध २० पद</a>
+                    </div>
                     <a href="pages/abhang/sant-meerabai-abhang.html" class="btn-kshetra">ग्रंथ: मीरा पदावली</a>
                 </div>
             </div>
 
-            <!-- १६. संत निवृत्तीनाथ महाराज -->
-            <div class="feature-card" data-name="संत निवृत्तीनाथ महाराज">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">१६</span><img src="images/nivrutti.webp" alt="संत निवृत्तीनाथ" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <!-- १६. संत निवृत्तीनाथ -->
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/nivrutti.webp" alt="संत निवृत्तीनाथ"></div>
                 <h3 class="card-title">संत निवृत्तीनाथ महाराज</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-nivruttinath-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-nivrutthinath-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-nivruttinath-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-nivrutthinath-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/abhang/sant-nivrutthinath-abhang.html" class="btn-kshetra">भक्ती मार्ग: योग</a>
                 </div>
             </div>
 
             <!-- १७. संत रामदास स्वामी -->
-            <div class="feature-card" data-name="संत रामदास स्वामी">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">१७</span><img src="images/ramdas.webp" alt="संत रामदास स्वामी" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/ramdas.webp" alt="संत रामदास स्वामी"></div>
                 <h3 class="card-title">संत रामदास स्वामी</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-ramdas-swami.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/samarth-ramdas-swami-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-ramdas-swami.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/samarth-ramdas-swami-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/abhang/samarth-ramdas-swami-abhang.html" class="btn-kshetra">भक्ती मार्ग: योग</a>
                 </div>
             </div>
 
             <!-- १८. संत सावता माळी -->
-            <div class="feature-card" data-name="संत सावता माळी">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">१८</span><img src="images/savata-mali.webp" alt="संत सावता माळी" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/savata-mali.webp" alt="संत सावता माळी"></div>
                 <h3 class="card-title">संत सावता माळी</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-savata-mali-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-savta-mali-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-savata-mali-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-savta-mali-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/abhang/sant-savta-mali-abhang.html" class="btn-kshetra">भक्ती मार्ग: कांदा मुळा भाजी</a>
                 </div>
             </div>
 
             <!-- १९. संत सेना महाराज -->
-            <div class="feature-card" data-name="संत सेना महाराज">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">१९</span><img src="images/sena.webp" alt="संत सेना महाराज" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/sena.webp" alt="संत सेना महाराज"></div>
                 <h3 class="card-title">संत सेना महाराज</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-sena-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-sena-maharaj-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-sena-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-sena-maharaj-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/abhang/sant-sena-maharaj-abhang.html" class="btn-kshetra">भक्ती रचना</a>
                 </div>
             </div>
 
             <!-- २०. संत सोपानदेव -->
-            <div class="feature-card" data-name="संत सोपानदेव">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">२०</span><img src="images/sopandev.webp" alt="संत सोपानदेव" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/sopandev.webp" alt="संत सोपानदेव"></div>
                 <h3 class="card-title">संत सोपानदेव</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-sopan-dev.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-sopandev-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-sopan-dev.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-sopandev-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/abhang/sant-sopandev-abhang.html" class="btn-kshetra">भक्ती रचना</a>
                 </div>
             </div>
 
-            <!-- २१. संत भानुदास महाराज -->
-            <div class="feature-card" data-name="संत भानुदास महाराज">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">२१</span><img src="images/bhanudas.webp" alt="संत भानुदास" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <!-- २१. संत भानुदास -->
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/bhanudas.webp" alt="संत भानुदास"></div>
                 <h3 class="card-title">संत भानुदास महाराज</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-bhanudas-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/bhanudas-gatha.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-bhanudas-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/bhanudas-gatha.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                     <a href="pages/abhang/bhanudas-gatha.html" class="btn-kshetra">भक्ती रचना</a>
                 </div>
             </div>
 
             <!-- २२. संत रोहिदास -->
-            <div class="feature-card" data-name="संत रोहिदास">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">२२</span><img src="images/rohidas.webp" alt="संत रोहिदास" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/rohidas.webp" alt="संत रोहिदास"></div>
                 <h3 class="card-title">संत रोहिदास</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-rohidas.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-rohidas-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-rohidas.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-rohidas-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                 </div>
             </div>
 
             <!-- २३. संत बंका -->
-            <div class="feature-card" data-name="संत बंका">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">२३</span><img src="images/banka.webp" alt="संत बंका" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/banka.webp" alt="संत बंका"></div>
                 <h3 class="card-title">संत बंका</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-banka.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-banka-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-banka.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-banka-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                 </div>
             </div>
 
             <!-- २४. संत निर्मलाबाई -->
-            <div class="feature-card" data-name="संत निर्मलाबाई">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">२४</span><img src="images/nirmala.webp" alt="संत निर्मलाबाई" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/nirmala.webp" alt="संत निर्मलाबाई"></div>
                 <h3 class="card-title">संत निर्मलाबाई</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-nirmalabai.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-nirmala-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-nirmalabai.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-nirmala-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                 </div>
             </div>
 
             <!-- २५. संत भागूबाई -->
-            <div class="feature-card" data-name="संत भागूबाई">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">२५</span><img src="images/bhagubai.webp" alt="संत भागूबाई" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/bhagubai.webp" alt="संत भागूबाई"></div>
                 <h3 class="card-title">संत भागूबाई</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-bhagubai.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-bhagubai-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-bhagubai.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-bhagubai-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                 </div>
             </div>
 
             <!-- २६. संत सोयराबाई -->
-            <div class="feature-card" data-name="संत सोयराबाई">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">२६</span><img src="images/soyrabai.webp" alt="संत सोयराबाई" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/soyrabai.webp" alt="संत सोयराबाई"></div>
                 <h3 class="card-title">संत सोयराबाई</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-soyrabai.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-soyrabai-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-soyrabai.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-soyrabai-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                 </div>
             </div>
 
             <!-- २७. संत भगवानबाबा महाराज -->
-            <div class="feature-card" data-name="संत भगवानबाबा महाराज">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">२७</span><img src="images/bhagwan-baba.webp" alt="संत भगवानबाबा महाराज" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/bhagwan-baba.webp" alt="संत भगवानबाबा महाराज"></div>
                 <h3 class="card-title">संत भगवानबाबा महाराज</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-bhagwan-baba.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/saints/sant-bhagwan-baba.html" class="btn-card btn-abhang">उपदेश</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-bhagwan-baba.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/saints/sant-bhagwan-baba.html" class="btn-card btn-abhang">उपदेश</a>
+                    </div>
                 </div>
             </div>
 
             <!-- २८. संत नारायण महाराज देहूकर -->
-            <div class="feature-card" data-name="संत नारायण महाराज देहूकर">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">२८</span><img src="images/narayan-maharaj.webp" alt="संत नारायण महाराज देहूकर" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/narayan-maharaj.webp" alt="संत नारायण महाराज देहूकर"></div>
                 <h3 class="card-title">संत नारायण महाराज देहूकर</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-narayan-maharaj-dehukar.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/saints/sant-narayan-maharaj-dehukar.html" class="btn-card btn-abhang">उपदेश</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-narayan-maharaj-dehukar.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/saints/sant-narayan-maharaj-dehukar.html" class="btn-card btn-abhang">उपदेश</a>
+                    </div>
                 </div>
             </div>
 
             <!-- २९. समर्थ सद्गुरू श्री धोंडूतात्या महाराज -->
-            <div class="feature-card" data-name="समर्थ सद्गुरू श्री धोंडूतात्या महाराज">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">२९</span><img src="images/dhondutatya-maharaj.webp" alt="समर्थ सद्गुरू श्री धोंडूतात्या महाराज" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/dhondutatya-maharaj.webp" alt="समर्थ सद्गुरू श्री धोंडूतात्या महाराज"></div>
                 <h3 class="card-title">समर्थ सद्गुरू श्री धोंडूतात्या महाराज</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/samarth-dhondutatya-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/saints/samarth-dhondutatya-index.html" class="btn-card btn-abhang">महाचरित्र</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/samarth-dhondutatya-maharaj.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/saints/samarth-dhondutatya-index.html" class="btn-card btn-abhang">महाचरित्र</a>
+                    </div>
                 </div>
             </div>
 
             <!-- ३०. संत तुकाविप्र -->
-            <div class="feature-card" data-name="संत तुकाविप्र">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">३०</span><img src="images/tukavipra.webp" alt="संत तुकाविप्र" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/tukavipra.webp" alt="संत तुकाविप्र"></div>
                 <h3 class="card-title">संत तुकाविप्र</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-tukavipra.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/abhang/sant-tukavipra-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-tukavipra.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/abhang/sant-tukavipra-abhang.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                 </div>
             </div>
 
             <!-- ३१. श्री वासुदेवानंद सरस्वती (टेंबे) स्वामी -->
-            <div class="feature-card" data-name="श्री वासुदेवानंद सरस्वती (टेंबे) स्वामी">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">३१</span><img src="images/vasudevanand-saraswati-tembe-swami.webp" alt="संत वासुदेवानंद सरस्वती (टेंबे) स्वामी" loading="lazy" decoding="async" onerror="this.src=&#x27;images/dhondutatya-maharaj.webp&#x27;"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/vasudevanand-saraswati-tembe-swami.webp" alt="संत वासुदेवानंद सरस्वती (टेंबे) स्वामी" onerror="this.src='images/dhondutatya-maharaj.webp'"></div>
                 <h3 class="card-title">श्री वासुदेवानंद सरस्वती (टेंबे) स्वामी</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/vasudevanand-saraswati-tembe-swami-charitra.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/saints/vasudevanand-saraswati-tembe-swami-charitra.html" class="btn-card btn-abhang">अभंग संग्रह</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/vasudevanand-saraswati-tembe-swami-charitra.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/saints/vasudevanand-saraswati-tembe-swami-charitra.html" class="btn-card btn-abhang">अभंग संग्रह</a>
+                    </div>
                 </div>
             </div>
 
             <!-- ३२. सद्गुरू संत श्री बाळूमामा -->
-            <div class="feature-card" data-name="सद्गुरू संत श्री बाळूमामा">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">३२</span><img src="images/sant-balumama.webp" alt="सद्गुरू संत श्री बाळूमामा" loading="lazy" decoding="async" onerror="this.src=&#x27;images/dhondutatya-maharaj.webp&#x27;"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/sant-balumama.webp" alt="सद्गुरू संत श्री बाळूमामा" onerror="this.src='images/dhondutatya-maharaj.webp'"></div>
                 <h3 class="card-title">सद्गुरू संत श्री बाळूमामा</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-balumama-charitra-mahiti-admapur.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/saints/sant-balumama-charitra-mahiti-admapur.html" class="btn-card btn-abhang">पवित्र स्थाने</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-balumama-charitra-mahiti-admapur.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/saints/sant-balumama-charitra-mahiti-admapur.html" class="btn-card btn-abhang">पवित्र स्थाने</a>
+                    </div>
                 </div>
             </div>
 
             <!-- ३३. सर्वज्ञ श्री चक्रधर स्वामी -->
-            <div class="feature-card" data-name="सर्वज्ञ श्री चक्रधर स्वामी">
-                <div class="card-img-box"><span class="card-no" aria-hidden="true">३३</span><img src="images/sant-chakradhar-swami-main-banner.webp" alt="सर्वज्ञ श्री चक्रधर स्वामी" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+            <div class="feature-card">
+                <div class="card-img-box"><img src="images/sant-chakradhar-swami-main-banner.webp" alt="सर्वज्ञ श्री चक्रधर स्वामी"></div>
                 <h3 class="card-title">सर्वज्ञ श्री चक्रधर स्वामी</h3>
                 <div class="sant-action-buttons">
-                    <div class="btn-row"><a href="pages/saints/sant-chakradhar-swami.html" class="btn-card btn-charitra">चरित्र पहा</a><a href="pages/saints/sant-chakradhar-swami.html" class="btn-card btn-abhang">महानुभाव पंथ</a></div>
+                    <div class="btn-row">
+                        <a href="pages/saints/sant-chakradhar-swami.html" class="btn-card btn-charitra">चरित्र पहा</a>
+                        <a href="pages/saints/sant-chakradhar-swami.html" class="btn-card btn-abhang">महानुभाव पंथ</a>
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
 </section>
+ 
 
     <!-- === ३. नित्यपाठ आणि संग्रहित अभंग सेक्शन === -->
-<section id="sangrahit-abhang" class="section liturgy-section">
-    <div class="container">
-        <div class="section-head section-header-center">
-            <span class="eyebrow section-subtitle">नित्य उपासना आणि भक्ती रस</span>
-            <h2 class="section-title section-title-main">नित्यपाठ व संग्रहित अभंग</h2>
-            <div class="royal-divider accent-line"><span class="line"></span><span>✨</span><span class="line"></span></div>
+<section id="sangrahit-abhang" class="liturgy-section">
+    <div class="section-container">
+        <div class="section-header-center">
+            <span class="section-subtitle">नित्य उपासना आणि भक्ती रस</span>
+            <h2 class="section-title-main">नित्यपाठ व संग्रहित अभंग</h2>
+            <div class="accent-line">✨</div>
         </div>
 
         <div class="liturgy-grid">
+            <!-- १. ज्ञानेश्वर हरिपाठ -->
             <div class="liturgy-card">
-                <div class="liturgy-img-box"><img src="images/haripath-dnyaneshwar.webp" alt="श्री ज्ञानेश्वर महाराज हरिपाठ" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="liturgy-img-box">
+                    <img src="images/haripath-dnyaneshwar.webp" alt="श्री ज्ञानेश्वर महाराज हरिपाठ" loading="lazy">
+                </div>
                 <div class="liturgy-content">
                     <h3>श्री ज्ञानेश्वर महाराज हरिपाठ</h3>
                     <p>माऊली प्रणीत २८ अभंगांचा सार्थ नित्यपाठ, जो आत्मज्ञानाचा आणि विठ्ठल भक्तीचा सोपा मार्ग दाखवतो.</p>
-                    <a href="pages/liturgy/haripath-dnyaneshwar.html" class="liturgy-btn">वाचन सुरू करा <svg class="ic"><use href="#i-book"/></svg></a>
+                    <a href="pages/liturgy/haripath-dnyaneshwar.html" class="liturgy-btn">वाचन सुरू करा <i class="fa-solid fa-book-open"></i></a>
                 </div>
             </div>
 
+            <!-- २. एकनाथ हरिपाठ -->
             <div class="liturgy-card">
-                <div class="liturgy-img-box"><img src="images/haripath-eknath.webp" alt="श्री एकनाथ महाराज हरिपाठ" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="liturgy-img-box">
+                    <img src="images/haripath-eknath.webp" alt="श्री एकनाथ महाराज हरिपाठ" loading="lazy">
+                </div>
                 <div class="liturgy-content">
                     <h3>श्री एकनाथ महाराज हरिपाठ</h3>
                     <p>शांतीब्रह्म श्री संत एकनाथ महाराजांचा भावपूर्ण आणि नामस्मरणाचे महत्त्व सांगणारा पावन हरिपाठ.</p>
-                    <a href="pages/liturgy/haripath-eknath.html" class="liturgy-btn">वाचन सुरू करा <svg class="ic"><use href="#i-book"/></svg></a>
+                    <a href="pages/liturgy/haripath-eknath.html" class="liturgy-btn">वाचन सुरू करा <i class="fa-solid fa-book-open"></i></a>
                 </div>
             </div>
 
+            <!-- ३. तुकाराम हरिपाठ -->
             <div class="liturgy-card">
-                <div class="liturgy-img-box"><img src="images/haripath-tukaram.webp" alt="श्री तुकाराम महाराज हरिपाठ" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="liturgy-img-box">
+                    <img src="images/haripath-tukaram.webp" alt="श्री तुकाराम महाराज हरिपाठ" loading="lazy">
+                </div>
                 <div class="liturgy-content">
                     <h3>श्री तुकाराम महाराज हरिपाठ</h3>
                     <p>जगद्गुरु संत तुकाराम महाराजांच्या वैराग्यपूर्ण आणि विठ्ठल चरणी लीन करणाऱ्या हरिपाठाचे अभंग.</p>
-                    <a href="pages/liturgy/haripath-tukaram.html" class="liturgy-btn">वाचन सुरू करा <svg class="ic"><use href="#i-book"/></svg></a>
+                    <a href="pages/liturgy/haripath-tukaram.html" class="liturgy-btn">वाचन सुरू करा <i class="fa-solid fa-book-open"></i></a>
                 </div>
             </div>
 
+            <!-- ४. काकडा आरती -->
             <div class="liturgy-card">
-                <div class="liturgy-img-box"><img src="images/kakda-aarti.webp" alt="संपूर्ण काकडा आरती" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="liturgy-img-box">
+                    <img src="images/kakda-aarti.webp" alt="संपूर्ण काकडा आरती" loading="lazy">
+                </div>
                 <div class="liturgy-content">
                     <h3>संपूर्ण काकडा आरती</h3>
                     <p>भल्या पहाटे पंढरपुरात विठ्ठलाला जागवण्यासाठी म्हटल्या जाणाऱ्या पारंपरिक काकड आरतीचा संग्रह.</p>
-                    <a href="pages/liturgy/kakda-aarti.html" class="liturgy-btn">वाचन सुरू करा <svg class="ic"><use href="#i-book"/></svg></a>
+                    <a href="pages/liturgy/kakda-aarti.html" class="liturgy-btn">वाचन सुरू करा <i class="fa-solid fa-book-open"></i></a>
                 </div>
             </div>
 
+            <!-- ५. गुरुपरंपरेचे अभंग -->
             <div class="liturgy-card">
-                <div class="liturgy-img-box"><img src="images/guru-parampara.webp" alt="गुरुपरंपरेचे अभंग" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="liturgy-img-box">
+                    <img src="images/guru-parampara.webp" alt="गुरुपरंपरेचे अभंग" loading="lazy">
+                </div>
                 <div class="liturgy-content">
                     <h3>गुरुपरंपरेचे अभंग</h3>
                     <p>नाथ संप्रदाय आणि वारकरी संप्रदायातील आदिगुरु ते सद्गुरु परंपरेचा गौरव करणारे विशेष अभंग.</p>
-                    <a href="pages/liturgy/guru-parampara.html" class="liturgy-btn">वाचन सुरू करा <svg class="ic"><use href="#i-book"/></svg></a>
+                    <a href="pages/liturgy/guru-parampara.html" class="liturgy-btn">वाचन सुरू करा <i class="fa-solid fa-book-open"></i></a>
                 </div>
             </div>
 
+            <!-- ६. भूपाळ्या -->
             <div class="liturgy-card">
-                <div class="liturgy-img-box"><img src="images/bhupalya.webp" alt="प्रभात भूपाळ्या" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="liturgy-img-box">
+                    <img src="images/bhupalya.webp" alt="प्रभात भूपाळ्या" loading="lazy">
+                </div>
                 <div class="liturgy-content">
                     <h3>प्रभात भूपाळ्या</h3>
                     <p>प्रभात समयी मन प्रसन्न करणाऱ्या आणि विठ्ठलाच्या प्रेमळ रूपाचे वर्णन करणाऱ्या निवडक भूपाळ्या.</p>
-                    <a href="pages/liturgy/bhupalya.html" class="liturgy-btn">वाचन सुरू करा <svg class="ic"><use href="#i-book"/></svg></a>
+                    <a href="pages/liturgy/bhupalya.html" class="liturgy-btn">वाचन सुरू करा <i class="fa-solid fa-book-open"></i></a>
                 </div>
             </div>
 
+            <!-- ७. गवळणी -->
             <div class="liturgy-card">
-                <div class="liturgy-img-box"><img src="images/gavlani.webp" alt="भक्तीरसपूर्ण गवळणी" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="liturgy-img-box">
+                    <img src="images/gavlani.webp" alt="भक्तीरसपूर्ण गवळणी" loading="lazy">
+                </div>
                 <div class="liturgy-content">
                     <h3>भक्तीरसपूर्ण गवळणी</h3>
                     <p>संत तुकाराम, संत एकनाथ आणि इतर संतांनी रचलेल्या कृष्णलीला व रूपक अलंकाराने नटलेल्या गवळणी.</p>
-                    <a href="pages/liturgy/gavlani.html" class="liturgy-btn">वाचन सुरू करा <svg class="ic"><use href="#i-book"/></svg></a>
+                    <a href="pages/liturgy/gavlani.html" class="liturgy-btn">वाचन सुरू करा <i class="fa-solid fa-book-open"></i></a>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 
     <!-- === ४. संत ज्ञान आणि कथा कॅटेगरी सेक्शन === -->
-<section id="spiritual-categories" class="section bg-alt cat-section">
-    <div class="container cat-container">
-        <div class="section-head cat-section-header">
-            <span class="eyebrow cat-subtitle">ज्ञान, परंपरा आणि प्रसंग</span>
-            <h2 class="section-title cat-title-main">अध्यात्मिक ज्ञान विथिका</h2>
-            <div class="royal-divider cat-accent"><span class="line"></span><span>✨</span><span class="line"></span></div>
+<section id="spiritual-categories" class="cat-section">
+    <div class="cat-container">
+        <div class="cat-section-header">
+            <span class="cat-subtitle">ज्ञान, परंपरा आणि प्रसंग</span>
+            <h2 class="cat-title-main">अध्यात्मिक ज्ञान विथिका</h2>
+            <div class="cat-accent">✨</div>
         </div>
 
         <div class="cat-grid-row">
+            <!-- ग्रिड १: संतांच्या गोष्टी -->
             <div class="cat-card">
-                <div class="cat-img-wrapper"><img src="images/cat-sant-katha.webp" alt="संतांच्या पावन कथा" loading="lazy" decoding="async" onerror="this.style.opacity=0"><div class="cat-overlay"></div></div>
+                <div class="cat-img-wrapper">
+                    <img src="images/cat-sant-katha.webp" alt="संतांच्या पावन कथा" loading="lazy">
+                    <div class="cat-overlay"></div>
+                </div>
                 <div class="cat-info">
                     <h3>संतांच्या पावन कथा</h3>
                     <p>संतांच्या जीवनातील अलौकिक, प्रेरणादायी आणि हृदयस्पर्शी दिव्य प्रसंग व बोधकथा.</p>
-                    <a href="santache-prasang.html" class="cat-link-btn">प्रवेश करा <svg class="ic"><use href="#i-arrow"/></svg></a>
+                    <a href="santache-prasang.html" class="cat-link-btn">प्रवेश करा <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
+            <!-- ग्रिड २: वारी आणि सण-उत्सव -->
             <div class="cat-card">
-                <div class="cat-img-wrapper"><img src="images/cat-utsav-wari.webp" alt="वारी आणि सण-उत्सव" loading="lazy" decoding="async" onerror="this.style.opacity=0"><div class="cat-overlay"></div></div>
+                <div class="cat-img-wrapper">
+                    <img src="images/cat-utsav-wari.webp" alt="वारी आणि सण-उत्सव" loading="lazy">
+                    <div class="cat-overlay"></div>
+                </div>
                 <div class="cat-info">
                     <h3>वारी आणि सण-उत्सव</h3>
                     <p>आषाढी-कार्तिकी वारी सोहळा, पालखी प्रस्थान आणि वारकरी संप्रदायातील पावन सण-उत्सव.</p>
-                    <a href="san-utsav.html" class="cat-link-btn">प्रवेश करा <svg class="ic"><use href="#i-arrow"/></svg></a>
+                    <a href="san-utsav.html" class="cat-link-btn">प्रवेश करा <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
+            <!-- ग्रिड ३: पावन एकादशी व्रत -->
             <div class="cat-card">
-                <div class="cat-img-wrapper"><img src="images/cat-ekadashi.webp" alt="पावन एकादशी व्रत" loading="lazy" decoding="async" onerror="this.style.opacity=0"><div class="cat-overlay"></div></div>
+                <div class="cat-img-wrapper">
+                    <img src="images/cat-ekadashi.webp" alt="पावन एकादशी व्रत" loading="lazy">
+                    <div class="cat-overlay"></div>
+                </div>
                 <div class="cat-info">
                     <h3>पावन एकादशी व्रत</h3>
                     <p>वर्षभरातील सर्व २४ एकादशींचे महात्म्य, व्रत कथा, विधी आणि पांडुरंग उपासनेची माहिती.</p>
-                    <a href="pages/blog/ekadashi-vrat.html" class="cat-link-btn">प्रवेश करा <svg class="ic"><use href="#i-arrow"/></svg></a>
+                    <a href="pages/blog/ekadashi-vrat.html" class="cat-link-btn">प्रवेश करा <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
+            <!-- ग्रिड ४: अध्यात्म आणि जीवन जगण्याची कथा -->
             <div class="cat-card">
-                <div class="cat-img-wrapper"><img src="images/cat-jivan-bodh.webp" alt="अध्यात्म व जीवन बोध" loading="lazy" decoding="async" onerror="this.style.opacity=0"><div class="cat-overlay"></div></div>
+                <div class="cat-img-wrapper">
+                    <img src="images/cat-jivan-bodh.webp" alt="अध्यात्म व जीवन बोध" loading="lazy">
+                    <div class="cat-overlay"></div>
+                </div>
                 <div class="cat-info">
                     <h3>अध्यात्म व जीवन बोध</h3>
                     <p>दैनंदिन  जीवनात सुख, शांती आणि समाधान मिळवण्यासाठी संतांच्या शिकवणुकीचे मार्गदर्शन.</p>
-                    <a href="pages/blog/jivan-bodh.html" class="cat-link-btn">प्रवेश करा <svg class="ic"><use href="#i-arrow"/></svg></a>
+                    <a href="pages/blog/jivan-bodh.html" class="cat-link-btn">प्रवेश करा <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
 
    <!-- === ५. महान ग्रंथ संपदा सेक्शन === -->
-<section id="mahan-granth" class="section granth-section">
-    <div class="container granth-container">
-        <div class="section-head granth-header">
-            <span class="eyebrow granth-subtitle">अक्षर वाङ्मय आणि तत्वज्ञान</span>
-            <h2 class="section-title granth-title-main">महान ग्रंथ संपदा</h2>
-            <div class="royal-divider granth-accent"><span class="line"></span><span>✨</span><span class="line"></span></div>
+<section id="mahan-granth" class="granth-section">
+    <div class="granth-container">
+        <div class="granth-header">
+            <span class="granth-subtitle">अक्षर वाङ्मय आणि तत्वज्ञान</span>
+            <h2 class="granth-title-main">महान ग्रंथ संपदा</h2>
+            <div class="granth-accent">✨</div>
         </div>
 
         <div class="granth-grid">
+            <!-- ग्रंथ १ -->
             <div class="granth-card">
-                <div class="granth-img-box"><img src="images/granth-dnyaneshwari.webp" alt="ज्ञानेश्वरी अर्थासहित" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="granth-img-box">
+                    <img src="images/granth-dnyaneshwari.webp" alt="ज्ञानेश्वरी अर्थासहित" loading="lazy">
+                </div>
                 <div class="granth-info">
                     <h3>ज्ञानेश्वरी अर्थासहित</h3>
                     <p>संत ज्ञानेश्वर माऊलींनी प्राकृत भाषेत रचलेला भगवद्गीतेवरील अप्रतिम टीका ग्रंथ.</p>
-                    <a href="pages/granth/dnyaneshwari/dnyaneshwari.html" class="granth-btn">वाचन सुरू करा <svg class="ic"><use href="#i-bookmark"/></svg></a>
+                    <a href="pages/granth/dnyaneshwari/dnyaneshwari.html" class="granth-btn">वाचन सुरू करा <i class="fa-solid fa-bookmark"></i></a>
                 </div>
             </div>
 
+            <!-- ग्रंथ २ -->
             <div class="granth-card">
-                <div class="granth-img-box"><img src="images/granth-eknathi-bhagavat.webp" alt="सार्थ एकनाथी भागवत" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="granth-img-box">
+                    <img src="images/granth-eknathi-bhagavat.webp" alt="सार्थ एकनाथी भागवत" loading="lazy">
+                </div>
                 <div class="granth-info">
                     <h3>सार्थ एकनाथी भागवत</h3>
                     <p>श्री संत एकनाथ महाराजांनी सोप्या व रसाळ भाषेत निरूपण केलेले भागवत पुराण.</p>
-                    <a href="pages/granth/eknathi-bhagvat/eknathi-bhagvat.html" class="granth-btn">वाचन सुरू करा <svg class="ic"><use href="#i-bookmark"/></svg></a>
+                    <a href="pages/granth/eknathi-bhagvat/eknathi-bhagvat.html" class="granth-btn">वाचन सुरू करा <i class="fa-solid fa-bookmark"></i></a>
                 </div>
             </div>
 
+            <!-- ग्रंथ ३ -->
             <div class="granth-card">
-                <div class="granth-img-box"><img src="images/dasbodh.webp" alt="दासबोध अर्थासहित" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="granth-img-box">
+                    <img src="images/granth-dasbodh.webp" alt="दासबोध अर्थासहित" loading="lazy">
+                </div>
                 <div class="granth-info">
                     <h3>दासबोध अर्थासहित</h3>
                     <p>समर्थ रामदास स्वामींनी प्रपंच आणि परमार्थाचे उत्तम मार्गदर्शन करणारा ग्रंथ.</p>
-                    <a href="pages/granth/dasbodh/dasbodh.html" class="granth-btn">वाचन सुरू करा <svg class="ic"><use href="#i-bookmark"/></svg></a>
+                    <a href="pages/granth/dasbodh.html" class="granth-btn">वाचन सुरू करा <i class="fa-solid fa-bookmark"></i></a>
                 </div>
             </div>
 
+            <!-- ग्रंथ ४ -->
             <div class="granth-card">
-                <div class="granth-img-box"><img src="images/granth-bhagavad-gita.webp" alt="सार्थ श्रीमद्‌भगवद्‌गीता" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="granth-img-box">
+                    <img src="images/granth-bhagavad-gita.webp" alt="सार्थ श्रीमद्‌भगवद्‌गीता" loading="lazy">
+                </div>
                 <div class="granth-info">
                     <h3>सार्थ श्रीमद्‌भगवद्‌गीता</h3>
                     <p>भगवान श्रीकृष्णांनी अर्जुनाला कुरुक्षेत्रावर दिलेला वैश्विक ज्ञानोपदेश.</p>
-                    <a href="pages/granth/bhagavad-gita.html" class="granth-btn">वाचन सुरू करा <svg class="ic"><use href="#i-bookmark"/></svg></a>
+                    <a href="pages/granth/bhagavad-gita.html" class="granth-btn">वाचन सुरू करा <i class="fa-solid fa-bookmark"></i></a>
                 </div>
             </div>
 
+            <!-- ग्रंथ ५ -->
             <div class="granth-card">
-                <div class="granth-img-box"><img src="images/granth-bhavartha-ramayan.webp" alt="भावार्थ रामायण" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="granth-img-box">
+                    <img src="images/granth-bhavartha-ramayan.webp" alt="भावार्थ रामायण" loading="lazy">
+                </div>
                 <div class="granth-info">
                     <h3>भावार्थ रामायण</h3>
                     <p>संत एकनाथ महाराजांनी रचलेले प्रभू श्रीरामांच्या चरित्रावरील भावपूर्ण रामायण.</p>
-                    <a href="pages/granth/bhavartha-ramayan.html" class="granth-btn">वाचन सुरू करा <svg class="ic"><use href="#i-bookmark"/></svg></a>
+                    <a href="pages/granth/bhavartha-ramayan.html" class="granth-btn">वाचन सुरू करा <i class="fa-solid fa-bookmark"></i></a>
                 </div>
             </div>
 
+            <!-- ग्रंथ ८ -->
             <div class="granth-card">
-                <div class="granth-img-box"><img src="images/granth-chatushloki-bhagavat.webp" alt="चतुश्लोकी भागवत" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="granth-img-box">
+                    <img src="images/granth-chatushloki-bhagavat.webp" alt="चतुश्लोकी भागवत" loading="lazy">
+                </div>
                 <div class="granth-info">
                     <h3>चतुःश्लोकी भागवत</h3>
                     <p>केवळ चार श्लोकांमध्ये संपूर्ण भागवत पुराणाचा गूढ अर्थ सांगणारा पावन ग्रंथ.</p>
-                    <a href="pages/granth/chatushloki-bhagavat.html" class="granth-btn">वाचन सुरू करा <svg class="ic"><use href="#i-bookmark"/></svg></a>
+                    <a href="pages/granth/chatushloki-bhagavat.html" class="granth-btn">वाचन सुरू करा <i class="fa-solid fa-bookmark"></i></a>
                 </div>
             </div>
 
+            <!-- ग्रंथ ९ -->
             <div class="granth-card">
-                <div class="granth-img-box"><img src="images/granth-changdev-pasashti.webp" alt="सार्थ चांगदेव पासष्टी" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="granth-img-box">
+                    <img src="images/granth-changdev-pasashti.webp" alt="सार्थ चांगदेव पासष्टी" loading="lazy">
+                </div>
                 <div class="granth-info">
                     <h3>सार्थ चांगदेव पासष्टी</h3>
                     <p>चांगदेवांचा गर्व हरण करून माऊलींनी दिलेल्या ६५ ओव्यांचे महान आत्मज्ञान.</p>
-                    <a href="pages/granth/changdev-pasashti/changdev-pasashti.html" class="granth-btn">वाचन सुरू करा <svg class="ic"><use href="#i-bookmark"/></svg></a>
+                    <a href="pages/granth/changdev-pasashti/changdev-pasashti.html" class="granth-btn">वाचन सुरू करा <i class="fa-solid fa-bookmark"></i></a>
                 </div>
             </div>
 
+            <!-- ग्रंथ १० -->
             <div class="granth-card">
-                <div class="granth-img-box"><img src="images/granth-amritanubhav.webp" alt="अमृतानुभव" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="granth-img-box">
+                    <img src="images/granth-amritanubhav.webp" alt="अमृतानुभव" loading="lazy">
+                </div>
                 <div class="granth-info">
                     <h3>अमृतानुभव</h3>
                     <p>संत ज्ञानेश्वर महाराजांचा स्वतःच्या अनुभूतीवर आधारित सर्वोच्च तत्वज्ञानाचा ग्रंथ.</p>
-                    <a href="pages/granth/amritanubhav.html" class="granth-btn">वाचन सुरू करा <svg class="ic"><use href="#i-bookmark"/></svg></a>
+                    <a href="pages/granth/amritanubhav.html" class="granth-btn">वाचन सुरू करा <i class="fa-solid fa-bookmark"></i></a>
                 </div>
             </div>
 
+            <!-- ग्रंथ ११ -->
             <div class="granth-card">
-                <div class="granth-img-box"><img src="images/granth-gramgeeta.webp" alt="ग्रामगीता" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="granth-img-box">
+                    <img src="images/granth-gramgeeta.webp" alt="ग्रामगीता" loading="lazy">
+                </div>
                 <div class="granth-info">
                     <h3>ग्रामगीता</h3>
                     <p>राष्ट्रसंत तुकडोजी महाराजांनी सुखी व आदर्श ग्रामरचनेसाठी दिलेली जीवनगाथा.</p>
-                    <a href="pages/granth/gramgeeta.html" class="granth-btn">वाचन सुरू करा <svg class="ic"><use href="#i-bookmark"/></svg></a>
+                    <a href="pages/granth/gramgeeta.html" class="granth-btn">वाचन सुरू करा <i class="fa-solid fa-bookmark"></i></a>
                 </div>
             </div>
 
+            <!-- ग्रंथ १२ -->
             <div class="granth-card">
-                <div class="granth-img-box"><img src="images/granth-rukmini-swayamvar.webp" alt="रुक्मिणी स्वयंवर" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
+                <div class="granth-img-box">
+                    <img src="images/granth-rukmini-swayamvar.webp" alt="रुक्मिणी स्वयंवर" loading="lazy">
+                </div>
                 <div class="granth-info">
                     <h3>रुक्मिणी स्वयंवर</h3>
                     <p>प्रभू श्रीकृष्ण आणि रुक्मिणी माता यांच्या दैवी विवाहाचे रसाळ वर्णन.</p>
-                    <a href="pages/granth/rukmini-swayamvar/rukmini-swayamvar.html" class="granth-btn">वाचन सुरू करा <svg class="ic"><use href="#i-bookmark"/></svg></a>
+                    <a href="pages/granth/rukmini-swayamvar/rukmini-swayamvar.html" class="granth-btn">वाचन सुरू करा <i class="fa-solid fa-bookmark"></i></a>
                 </div>
             </div>
 
-            <div class="granth-card">
-                <div class="granth-img-box"><img src="images/granth-shivlilamrut.webp" alt="श्री शिवलीलामृत" loading="lazy" decoding="async" onerror="this.style.opacity=0"></div>
-                <div class="granth-info">
-                    <h3>श्री शिवलीलामृत</h3>
-                    <p>श्री शिवभक्ती, रुद्राक्ष-भस्म माहात्म्य आणि भगवान महादेवांच्या अलौकिक लीलांचे रसाळ वर्णन.</p>
-                    <a href="pages/granth/shivlilamrut/shivlilamrut.html" class="granth-btn">वाचन सुरू करा <svg class="ic"><use href="#i-bookmark"/></svg></a>
-                </div>
+            <!-- ग्रंथ १३: श्री शिवलीलामृत -->
+<div class="granth-card">
+    <div class="granth-img-box">
+        <img src="images/granth-shivlilamrut.webp" alt="श्री शिवलीलामृत" loading="lazy">
+    </div>
+    <div class="granth-info">
+        <h3>श्री शिवलीलामृत</h3>
+        <p>श्री शिवभक्ती, रुद्राक्ष-भस्म माहात्म्य आणि भगवान महादेवांच्या अलौकिक लीलांचे रसाळ वर्णन.</p>
+        <a href="pages/granth/shivlilamrut/shivlilamrut.html" class="granth-btn">वाचन सुरू करा <i class="fa-solid fa-bookmark"></i></a>
+               </div>
             </div>
-
         </div>
     </div>
 </section>
 
+
+    <!-- === संपादकीय परिचय (वारकरी परंपरा) === -->
+<section id="editorial" class="sv-sec" aria-labelledby="svEdTitle">
+    <div class="section-container">
+        <span class="section-subtitle">संपादकीय परिचय</span>
+        <h2 class="section-title" id="svEdTitle">वारकरी संप्रदाय : भक्ती, ज्ञान आणि समतेचा महाप्रवाह</h2>
+        <div class="royal-divider"><span class="line"></span><span class="flower">🌸</span><span class="line"></span></div>
+
+        <article class="sv-edit">
+            <p class="lead">महाराष्ट्राच्या भक्तिपरंपरेचे हृदयस्थान म्हणजे भीमेकाठी वसलेले पंढरपूर आणि विटेवर समचरण उभा असलेला श्री विठ्ठल. शतकानुशतके लाखो वारकरी टाळ-मृदंगाच्या गजरात, मुखी हरिनाम घेत या पांडुरंगाच्या भेटीला पायी चालत येतात. ही केवळ यात्रा नाही; तो एक चालता-बोलता जीवनधर्म आहे, ज्याने मराठी मनाला भक्ती, ज्ञान आणि माणुसकीची शिकवण दिली.</p>
+
+            <h3>पंढरीची वारी आणि पालखी सोहळा</h3>
+            <p>आषाढी आणि कार्तिकी एकादशीला पंढरपूरला पोहोचण्यासाठी आळंदीहून संत ज्ञानेश्वर माऊलींची आणि देहूहून जगद्गुरू संत तुकाराम महाराजांची पालखी सुमारे वीस दिवसांचा पायी प्रवास करते. या वाटचालीत जात, पंथ, संपत्ती आणि पद यांचा भेद विरघळून जातो; प्रत्येक वारकरी दुसऱ्याला &lsquo;माऊली&rsquo; म्हणून हाक मारतो आणि त्याच्या पाया पडतो. समतेचा हा जिवंत अनुभव कोणत्याही प्रवचनापेक्षा अधिक प्रभावी शिकवण ठरतो.</p>
+
+            <h3>ज्ञानेश्वरी : गीतेचा प्राकृत अर्थ</h3>
+            <p>परंपरेनुसार इसवी सन १२९० च्या सुमारास, नेवासे येथे वयाच्या अवघ्या सोळाव्या वर्षी संत ज्ञानेश्वरांनी भगवद्गीतेवर &lsquo;भावार्थदीपिका&rsquo; ही टीका ओवीबद्ध मराठीत रचली; तोच आज &lsquo;ज्ञानेश्वरी&rsquo; म्हणून ओळखला जाणारा ग्रंथ. संस्कृतच्या कुंपणात अडकलेले तत्त्वज्ञान त्यांनी सामान्य माणसाच्या घरापर्यंत पोहोचवले. ग्रंथाच्या अखेरीस येणारे &lsquo;पसायदान&rsquo; हे केवळ मराठी साहित्यातीलच नव्हे, तर जागतिक प्रार्थनांमधील एक तेजस्वी रत्न मानले जाते. <a href="pages/granth/dnyaneshwari/dnyaneshwari.html">ज्ञानेश्वरी</a>, <a href="pages/granth/amritanubhav.html">अमृतानुभव</a> आणि <a href="pages/liturgy/haripath-dnyaneshwar.html">हरिपाठ</a> ही माऊलींची अमोल देणगी आहे.</p>
+
+            <h3>तुकाराम गाथा : सामान्यांचा आरसा</h3>
+            <p>सतराव्या शतकातील देहू येथील संत तुकाराम महाराजांनी आपल्या हजारो अभंगांतून दांभिकता, कर्मकांडाचा अतिरेक आणि विषमता यांवर परखड भाष्य केले. दुष्काळ, कौटुंबिक दुःख आणि लोकांचा रोष सोसत त्यांनी विठ्ठलाशी जिव्हाळ्याचे नाते जोडले. त्यांच्या अभंगांतील उपमा शेतीतील, बाजारातील आणि घरातील आहेत; म्हणूनच ते आजही थेट मनाला भिडतात. <a href="pages/abhang/tukaram-gatha.html">तुकाराम गाथा</a> वाचणे म्हणजे एका सत्यशोधक भक्ताशी संवाद साधणे होय.</p>
+
+            <h3>भागवत धर्म : सर्वांभूती परमेश्वर</h3>
+            <p>वारकरी संप्रदाय ज्या भागवत धर्मावर उभा आहे, त्याचा गाभा म्हणजे प्रत्येक जीवात परमेश्वराचे दर्शन. संत एकनाथांनी <a href="pages/granth/eknathi-bhagvat/eknathi-bhagvat.html">एकनाथी भागवत</a> रचून भागवत पुराणाचा अर्थ लोकभाषेत सांगितला. संत नामदेव, गोरा कुंभार, सावता माळी, नरहरी सोनार, चोखामेळा, जनाबाई, कान्होपात्रा आणि मुक्ताबाई अशा विविध समाजघटकांतील स्त्री-पुरुषांनी या एकाच भक्तिपंक्तीत समान आदराचे स्थान मिळवले. संत बहिणाबाईंनी या संप्रदायाचे वर्णन एखाद्या मंदिराच्या रूपकाने केले आहे:</p>
+            <blockquote>
+                <p>ज्ञानदेवे रचिला पाया । &hellip; तुका झालासे कळस ॥</p>
+                <cite>— संत बहिणाबाई (अभंगातील प्रसिद्ध ओळ)</cite>
+            </blockquote>
+            <p>याचा अर्थ असा की ज्ञानेश्वरांनी पाया घातला, एकनाथ-नामदेवांनी भिंती उभ्या केल्या आणि तुकारामांनी त्यावर कळस चढवला. पाया, भिंती आणि कळस मिळूनच हे भक्तिमंदिर पूर्ण होते.</p>
+
+            <h3>संतवाणी वाचण्याचा सोपा मार्ग</h3>
+            <p>&lsquo;संतवाणी&rsquo;वर आपण ३३ संतांची चरित्रे व अभंग, तीन हरिपाठ, काकडा आरती, भूपाळ्या, गवळणी आणि ज्ञानेश्वरी, एकनाथी भागवत, दासबोध यांसारखे सार्थ ग्रंथ मोफत वाचू शकता. दिवसाची सुरुवात हरिपाठाने करा, एकादशीला संतांच्या अभंगांचे वाचन करा आणि आठवड्यातून एकदा एखाद्या संताचे चरित्र वाचा; थोड्याच दिवसांत मनाला मिळणारी शांतता तुम्हाला स्वतःलाच जाणवेल.</p>
+
+            <div class="sv-facts" aria-label="वारकरी परंपरा : एका नजरेत">
+                <div><b>आराध्य दैवत</b><span>श्री विठ्ठल-रखुमाई, पंढरपूर</span></div>
+                <div><b>मुख्य वाऱ्या</b><span>आषाढी, कार्तिकी, माघी, चैत्री</span></div>
+                <div><b>आधारग्रंथ</b><span>ज्ञानेश्वरी, एकनाथी भागवत, तुकाराम गाथा</span></div>
+                <div><b>मूळ शिकवण</b><span>नामस्मरण, सदाचार, समता</span></div>
+            </div>
+            <div class="sv-links">
+                <a href="sarth-haripath.html">सार्थ हरिपाठ</a>
+                <a href="granth-sampada.html">ग्रंथ संपदा</a>
+                <a href="pages/blog/ekadashi-vrat.html">सर्व एकादशी</a>
+                <a href="san-utsav.html">सण व उत्सव</a>
+            </div>
+        </article>
+    </div>
+</section>
+
     <!-- === नेहमी विचारले जाणारे प्रश्न (FAQ) === -->
-<section id="faq" class="section bg-alt" aria-labelledby="faqTitle">
-    <div class="container">
-        <div class="section-head">
-            <span class="eyebrow">जिज्ञासा समाधान</span>
-            <h2 class="section-title" id="faqTitle">नेहमी विचारले जाणारे प्रश्न</h2>
-            <div class="royal-divider"><span class="line"></span><span aria-hidden="true">❖</span><span class="line"></span></div>
-            <p class="section-lead">वारकरी संप्रदाय, हरिपाठ, अभंग आणि वारी याबद्दलच्या सर्वसाधारण प्रश्नांची सोपी उत्तरे.</p>
-        </div>
-        <div class="faq-list">
+<section id="faq" class="sv-sec alt" aria-labelledby="svFaqTitle">
+    <div class="section-container">
+        <span class="section-subtitle">जिज्ञासा समाधान</span>
+        <h2 class="section-title" id="svFaqTitle">नेहमी विचारले जाणारे प्रश्न</h2>
+        <div class="royal-divider"><span class="line"></span><span class="flower">🌸</span><span class="line"></span></div>
+        <div class="sv-faq">
             <details open>
                 <summary>वारकरी संप्रदाय म्हणजे काय?</summary>
                 <div class="ans"><p>वारकरी संप्रदाय हा महाराष्ट्रातील पंढरपूरच्या श्री विठ्ठलाच्या भक्तीवर आधारलेला संत-परंपरेचा प्रवाह आहे. ‘वारी’ म्हणजे नियमित यात्रा आणि ती करणारा तो ‘वारकरी’. गळ्यात तुळशीमाळ, मुखी हरिनाम, एकादशीचे व्रत, सदाचार आणि सर्वांभूती परमेश्वर पाहण्याची दृष्टी ही या संप्रदायाची वैशिष्ट्ये आहेत. ज्ञानेश्वरी, एकनाथी भागवत आणि तुकाराम गाथा हे त्याचे प्रमुख आधारग्रंथ मानले जातात.</p></div>
             </details>
-
             <details>
                 <summary>हरिपाठ म्हणजे काय आणि तो केव्हा म्हणावा?</summary>
                 <div class="ans"><p>हरिपाठ म्हणजे संत ज्ञानेश्वर माऊलींनी रचलेले, हरिनामाचे महत्त्व सांगणारे २८ अभंग. ‘देवाचिये द्वारी उभा क्षणभरी’ या अभंगाने त्याची सुरुवात होते. वारकरी घराघरांत हरिपाठ रोज, विशेषतः सायंकाळी देवासमोर दिवा लावून म्हणतात; सकाळीही त्याचे पठण करता येते. संतवाणीवर माऊली, संत एकनाथ आणि संत तुकाराम महाराज यांचे तीनही हरिपाठ वाचण्यासाठी उपलब्ध आहेत.</p></div>
             </details>
-
             <details>
                 <summary>ज्ञानेश्वरी आणि तुकाराम गाथा यांत काय फरक आहे?</summary>
                 <div class="ans"><p>ज्ञानेश्वरी हा भगवद्गीतेवरील सुमारे नऊ हजार ओव्यांचा सलग तात्त्विक टीकाग्रंथ आहे; त्यात अध्यायानुसार गीतेचा अर्थ उलगडला आहे. तुकाराम गाथा हा तुकोबारायांच्या स्फुट अभंगांचा संग्रह आहे; त्यात आत्मानुभव, भक्ती, उपदेश आणि समाजप्रबोधन यांचे विविध रंग दिसतात. थोडक्यात, ज्ञानेश्वरी म्हणजे ज्ञानाचे क्रमबद्ध निरूपण, तर गाथा म्हणजे अनुभवांचे जिवंत काव्य.</p></div>
             </details>
-
             <details>
                 <summary>अभंग आणि ओवी यांत काय फरक आहे?</summary>
                 <div class="ans"><p>अभंग हा लयबद्ध, गाण्यास सोपा, सहसा चार चरणांचा छंद असून संतांनी भक्तीचे अनुभव, उपदेश आणि प्रार्थना मांडण्यासाठी तो वापरला. ‘ओवी’ हा निरूपणासाठी उपयुक्त छंद असून ज्ञानेश्वरी, एकनाथी भागवत, दासबोध यांसारख्या ग्रंथांत दिसतो. त्यामुळे अभंग प्रामुख्याने भजन-कीर्तनात गायले जातात, तर ओव्यांचे पारायण केले जाते.</p></div>
             </details>
-
             <details>
                 <summary>वारी कधी असते आणि कुठे जाते?</summary>
-                <div class="ans"><p>मुख्य वाऱ्या दोन: आषाढ शुद्ध एकादशीची आषाढी वारी (जून-जुलै) आणि कार्तिक शुद्ध एकादशीची कार्तिकी वारी (ऑक्टोबर-नोव्हेंबर); माघी आणि चैत्री यात्राही भरतात. आषाढीसाठी आळंदीहून माऊलींची आणि देहूहून तुकोबारायांची पालखी पंढरपूरला निघते. पुढील एकादशी कधी आहे हे या पानाच्या वरच्या ‘आजचे पंचांग’ भागात आणि वार्ता फलकात पाहता येते.</p></div>
+                <div class="ans"><p>मुख्य वाऱ्या दोन: आषाढ शुद्ध एकादशीची आषाढी वारी (जून-जुलै) आणि कार्तिक शुद्ध एकादशीची कार्तिकी वारी (ऑक्टोबर-नोव्हेंबर); माघी आणि चैत्री यात्राही भरतात. आषाढीसाठी आळंदीहून माऊलींची आणि देहूहून तुकोबारायांची पालखी पंढरपूरला निघते. पुढील एकादशी कधी आहे हे या पानावरील ‘आजचे पंचांग’ भागात आणि वार्ता फलकात पाहता येते.</p></div>
             </details>
-
         </div>
     </div>
 </section>
 
     <!-- === ६. आमच्याविषयी (About Us) सेक्शन === -->
-<section id="about-us" class="section about-section">
+<section id="about-us" class="about-section">
     <div class="about-container">
-        <div class="about-icon-box" aria-hidden="true">
-            ॐ
+        <div class="about-icon-box">
+            <i class="fa-solid fa-om"></i>
         </div>
         <div class="about-content">
             <h2 class="about-title">आमची भूमिका आणि ध्येय</h2>
@@ -1269,8 +1075,6 @@ h1,h2,h3,h4{margin:0}
     </div>
 </section>
 
-</main>
-
    <!-- सुधारित फुटर लेआउट (अचूक रूट पाथसह) -->
     <footer class="footer">
         <div class="footer-top">
@@ -1278,14 +1082,14 @@ h1,h2,h3,h4{margin:0}
                 <h3 class="footer-logo">✨ संतवाणी</h3>
                 <p class="footer-about">मराठी संतांच्या समृद्ध विचारांचा आणि साहित्याचा डिजिटल वारसा पुढील पिढीपर्यंत पोहोचवण्याचा एक नम्र प्रयत्न.</p>
             </div>
-
+            
             <div class="footer-links-box">
                 <h4>महत्त्वाचे दुवे</h4>
                 <ul>
                     <li><a href="about.html">आमच्याबद्दल (About Us)</a></li>
                     <li><a href="contact.html">संपर्क (Contact Us)</a></li>
                     <li><a href="privacy-policy.html">गोपनीयता धोरण (Privacy Policy)</a></li>
-                    <li><a href="terms.html">नियम व अटी (Terms &amp; Conditions)</a></li>
+                    <li><a href="terms.html">नियम व अटी (Terms & Conditions)</a></li>
                     <li><a href="disclaimer.html">अस्वीकरण (Disclaimer)</a></li>
                 </ul>
             </div>
@@ -1305,316 +1109,8 @@ h1,h2,h3,h4{margin:0}
             <p class="copyright-text">© २०२६ संतवाणी लायब्ररी. सर्व हक्क सुरक्षित. | रचना वारकरी संप्रदाय चरणी समर्पित.</p>
         </div>
     </footer>
-
-<button class="to-top" id="toTop" type="button" aria-label="वर जा"><svg class="ic"><use href="#i-up"/></svg></button>
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-<!-- ======================= Dashboard + UI logic (vanilla JS, no libraries) ======================= -->
-<script>
-(function () {
-  'use strict';
-  var $ = function (s, r) { return (r || document).querySelector(s); };
-  var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
-  var DIG = '०१२३४५६७८९';
-  function mr(n) { return String(n).replace(/\d/g, function (d) { return DIG.charAt(+d); }); }
-  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
-
-  /* ------------------------------------------------------------------
-   * १. पंचांग इंजिन  (Meeus-आधारित सूर्य/चंद्र रेखांश + लाहिरी अयनांश)
-   *    तिथी = (चंद्र − सूर्य) / १२°,  नक्षत्र = निरयन चंद्र / १३°२०′
-   *    मराठी महिना (अमान्त) = अमावास्येच्या वेळी सूर्य ज्या राशीत असतो तिच्या पुढचा महिना
-   * ------------------------------------------------------------------ */
-  var WEEK = ['रविवार','सोमवार','मंगळवार','बुधवार','गुरुवार','शुक्रवार','शनिवार'];
-  var WEEK_S = ['रवि','सोम','मंगळ','बुध','गुरु','शुक्र','शनि'];
-  var GMONTH = ['जानेवारी','फेब्रुवारी','मार्च','एप्रिल','मे','जून','जुलै','ऑगस्ट','सप्टेंबर','ऑक्टोबर','नोव्हेंबर','डिसेंबर'];
-  var LMONTH = ['चैत्र','वैशाख','ज्येष्ठ','आषाढ','श्रावण','भाद्रपद','अश्विन','कार्तिक','मार्गशीर्ष','पौष','माघ','फाल्गुन'];
-  var TITHI = ['प्रतिपदा','द्वितीया','तृतीया','चतुर्थी','पंचमी','षष्ठी','सप्तमी','अष्टमी','नवमी','दशमी','एकादशी','द्वादशी','त्रयोदशी','चतुर्दशी'];
-  var NAK = ['अश्विनी','भरणी','कृत्तिका','रोहिणी','मृगशीर्ष','आर्द्रा','पुनर्वसू','पुष्य','आश्लेषा','मघा','पूर्वा फाल्गुनी','उत्तरा फाल्गुनी','हस्त','चित्रा','स्वाती','विशाखा','अनुराधा','ज्येष्ठा','मूळ','पूर्वाषाढा','उत्तराषाढा','श्रवण','धनिष्ठा','शततारका','पूर्वा भाद्रपदा','उत्तरा भाद्रपदा','रेवती'];
-  var MOONS = ['🌑','🌒','🌓','🌔','🌕','🌖','🌗','🌘'];
-
-  function rad(x) { return x * Math.PI / 180; }
-  function norm(x) { x %= 360; return x < 0 ? x + 360 : x; }
-  function sunLon(T) {
-    var L0 = 280.46646 + 36000.76983 * T, M = 357.52911 + 35999.05029 * T - 0.0001537 * T * T;
-    var C = (1.914602 - 0.004817 * T) * Math.sin(rad(M)) + (0.019993 - 0.000101 * T) * Math.sin(rad(2 * M)) + 0.000289 * Math.sin(rad(3 * M));
-    return norm(L0 + C - 0.00569);
-  }
-  function moonLon(T) {
-    var Lp = 218.3164477 + 481267.88123421 * T, D = 297.8501921 + 445267.1114034 * T,
-        M = 357.5291092 + 35999.0502909 * T, Mp = 134.9633964 + 477198.8675055 * T, F = 93.272095 + 483202.0175233 * T;
-    var s = function (a) { return Math.sin(rad(a)); };
-    return norm(Lp + 6.288774 * s(Mp) + 1.274027 * s(2 * D - Mp) + 0.658314 * s(2 * D) + 0.213618 * s(2 * Mp)
-      - 0.185116 * s(M) - 0.114332 * s(2 * F) + 0.058793 * s(2 * D - 2 * Mp) + 0.057066 * s(2 * D - M - Mp)
-      + 0.053322 * s(2 * D + Mp) + 0.045758 * s(2 * D - M) - 0.040923 * s(M - Mp) - 0.034720 * s(D) - 0.030383 * s(M + Mp));
-  }
-  function tOf(ms) { return (ms / 86400000 + 2440587.5 - 2451545) / 36525; }
-  function ayanamsa(T) { return 23.85306 + 1.3966 * T; }          // लाहिरी (चित्रपक्ष)
-  function elong(ms) { var T = tOf(ms); return norm(moonLon(T) - sunLon(T)); }
-
-  function lunarMonth(ms, el) {
-    var t = ms - (el / 12.19) * 86400000, i, d;                    // मागील अमावास्या शोधा
-    for (i = 0; i < 5; i++) { d = elong(t); if (d > 180) d -= 360; t -= (d / 12.19) * 86400000; }
-    var T = tOf(t), rashi = Math.floor(norm(sunLon(T) - ayanamsa(T)) / 30);
-    return (rashi + 1) % 12;                                       // मीन → चैत्र
-  }
-
-  function dayInfo(y, m, d) {
-    var ms = Date.UTC(y, m, d, 1, 0, 0);                           // ०६:३० IST = ०१:०० UTC
-    var T = tOf(ms), el = elong(ms), t = Math.floor(el / 12) + 1;
-    var lm = lunarMonth(ms, el);
-    return {
-      y: y, m: m, d: d, t: t, el: el, lm: lm,
-      nak: Math.floor(norm(moonLon(T) - ayanamsa(T)) / (360 / 27)),
-      shaka: (m <= 2 && lm >= 8) ? y - 79 : y - 78,                 // शक वर्ष चैत्र शुद्ध प्रतिपदेला बदलते
-      dow: new Date(Date.UTC(y, m, d)).getUTCDay()
-    };
-  }
-  function tithiName(t) {
-    if (t === 15) return 'पौर्णिमा'; if (t === 30) return 'अमावस्या';
-    return TITHI[(t - 1) % 15];
-  }
-  function pakshaName(t) { return t <= 15 ? 'शुद्ध (शुक्ल)' : 'वद्य (कृष्ण)'; }
-  function pakshaShort(t) { return t <= 15 ? 'शुद्ध' : 'वद्य'; }
-
-  /* प्रमुख संत-उत्सव / यात्रा  (की = महिना-क्रमांक*100 + तिथी; चैत्र=०, कार्तिक=७) */
-  var OBS = {
-    11:   'चैत्री एकादशी — पंढरपूर यात्रा',
-    311:  'आषाढी एकादशी — पंढरपूर वारी सोहळा',
-    315:  'गुरुपौर्णिमा — सद्गुरू पूजन',
-    328:  'संत नामदेव महाराज पुण्यतिथी — पंढरपूर',
-    423:  'श्रीकृष्ण जन्माष्टमी व संत ज्ञानेश्वर जयंती',
-    711:  'कार्तिकी एकादशी — पंढरपूर यात्रा',
-    728:  'संत ज्ञानेश्वर महाराज संजीवन समाधी सोहळा — आळंदी',
-    1011: 'माघी एकादशी — पंढरपूर यात्रा',
-    1024: 'दासनवमी — समर्थ रामदास स्वामी पुण्यतिथी',
-    1117: 'तुकाराम बीज — संत तुकाराम महाराज वैकुंठगमन, देहू',
-    1121: 'नाथषष्ठी — संत एकनाथ महाराज समाधी सोहळा, पैठण'
-  };
-  function specialsFor(t, lm) {
-    var out = [], k = lm * 100 + t;
-    if (OBS[k]) out.push(OBS[k]);
-    if ((t === 11 || t === 26) && !OBS[k]) out.push(pakshaShort(t) + ' एकादशी — उपवास व पांडुरंग उपासना');
-    if (t === 19) out.push('संकष्टी चतुर्थी — गणेश उपासना');
-    if (t === 15 && !OBS[k]) out.push('पौर्णिमा');
-    if (t === 30) out.push('अमावस्या');
-    return out;
-  }
-
-  var HORIZON = 430;
-  var base = new Date(), BY = base.getFullYear(), BM = base.getMonth(), BD = base.getDate();
-  var days = [];                                                    // days[0]=काल, days[1]=आज …
-  for (var i = -1; i <= HORIZON + 1; i++) {
-    var dt = new Date(Date.UTC(BY, BM, BD + i));
-    days.push(dayInfo(dt.getUTCFullYear(), dt.getUTCMonth(), dt.getUTCDate()));
-  }
-  /* त्या दिवशी सूर्योदयी सुरू होणाऱ्या (किंवा क्षय झालेल्या) तिथी */
-  function tithisOnDay(k) {
-    var a = days[k], p = days[k - 1], n = days[k + 1], res = [];
-    if (a.t !== p.t) res.push({ t: a.t, lm: a.lm });
-    if ((n.t - a.t + 30) % 30 === 2) { var s = a.t % 30 + 1; res.push({ t: s, lm: s === 1 ? n.lm : a.lm }); }
-    return res;
-  }
-  function eventsOnDay(k) {
-    var ev = [];
-    tithisOnDay(k).forEach(function (x) {
-      var major = OBS[x.lm * 100 + x.t];
-      specialsFor(x.t, x.lm).forEach(function (s) { ev.push({ name: s, t: x.t, major: major === s }); });
-    });
-    return ev;
-  }
-  function fmtDate(o) { return mr(o.d) + ' ' + GMONTH[o.m] + ' ' + mr(o.y); }
-  function inDays(n) { return n === 0 ? 'आज' : n === 1 ? 'उद्या' : mr(n) + ' दिवसांनी'; }
-
-  /* ------------------------------------------------------------------
-   * २. आजचा पावन अभंग : वारानुसार देव/संत स्मरण (सर्व रचना सार्वजनिक वारसा)
-   * ------------------------------------------------------------------ */
-  var SITE = 'https://santvani.co.in/';
-  var ABHANG = [
-    { deity: 'सूर्यनारायण', theme: 'विश्वकल्याणाची प्रार्थना', saint: 'संत ज्ञानेश्वर माऊली', form: 'ओवी · पसायदान',
-      lines: [
-        'आता विश्वात्मके देवे । येणे वाग्यज्ञे तोषावे । तोषोनि मज द्यावे । पसायदान हे ॥१॥',
-        'जे खळांची व्यंकटी सांडो । तया सत्कर्मी रती वाढो । भूतां परस्परे पडो । मैत्र जीवांचे ॥२॥',
-        'दुरितांचे तिमिर जावो । विश्व स्वधर्मसूर्ये पाहो । जो जे वांछिल तो ते लाहो । प्राणिजात ॥३॥'],
-      meaning: 'रविवार हा सूर्याचा वार; “स्वधर्मसूर्य” उगवावा ही माऊलींची प्रार्थना आजच्या दिवशी विशेष अर्थपूर्ण ठरते. “हे विश्वात्मक देवा, माझ्या या शब्दरूपी यज्ञाने संतुष्ट होऊन मला पसायदान द्या. दुष्टांची वक्रता संपून त्यांना सत्कर्माची आवड लागो आणि सर्व प्राण्यांत परस्पर मैत्री वाढो. पापरूपी अंधार नाहीसा होवो, सारे विश्व स्वधर्मरूपी सूर्याचे दर्शन घेवो आणि प्रत्येक जीवाला जे हवे ते प्राप्त होवो.”',
-      source: 'संत ज्ञानेश्वर महाराज — ज्ञानेश्वरी (अध्याय १८ चा समारोप)', href: 'pages/granth/dnyaneshwari/dnyaneshwari.html', link: 'ज्ञानेश्वरी वाचा' },
-    { deity: 'महादेव शंकर', theme: 'शिवस्तुती', saint: 'समर्थ रामदास स्वामी', form: 'आरती',
-      lines: [
-        'लवथवती विक्राळा ब्रह्मांडी माळा । वीषे कंठी काळा त्रिनेत्री ज्वाळा । लावण्य सुंदर मस्तकी बाळा । तेथुनिया जल निर्मळ वाहे झुळझुळा ॥१॥',
-        'जय देव जय देव जय श्रीशंकरा । आरती ओवाळू तुज कर्पूरगौरा ॥धृ॥'],
-      meaning: 'सोमवार हा भगवान शंकराचा वार. या आरतीत शिवरूपाचे वर्णन आहे — गळ्यात विशाल माळा, विषामुळे निळा झालेला कंठ, तिसऱ्या डोळ्यातून अग्निज्वाळा, सुंदर मस्तकावरील चंद्रकोर आणि तेथून झुळझुळ वाहणारे निर्मळ गंगाजळ. “हे कर्पूरासारख्या गौर वर्णाच्या शंकरा, तुला मी आरती ओवाळतो.”',
-      source: 'समर्थ रामदास स्वामी (परंपरेने) — श्री शंकराची आरती', href: 'pages/abhang/samarth-ramdas-swami-abhang.html', link: 'रामदास स्वामी साहित्य' },
-    { deity: 'श्री गणेश', theme: 'विघ्नहर्त्याची आराधना', saint: 'समर्थ रामदास स्वामी', form: 'आरती',
-      lines: [
-        'सुखकर्ता दुःखहर्ता वार्ता विघ्नाची । नुरवी पुरवी प्रेम कृपा जयाची । सर्वांगी सुंदर उटी शेंदुराची । कंठी झळके माळ मुक्ताफळांची ॥१॥',
-        'जय देव जय देव जय मंगलमूर्ती । दर्शनमात्रे मनकामना पुरती ॥धृ॥'],
-      meaning: 'मंगळवार हा गणेशाचा वार. जो सुख देतो आणि दुःख हरतो, ज्याच्या कृपेने विघ्नांची वार्ताही उरत नाही आणि प्रेम परिपूर्ण होते — त्या गणरायाचे वर्णन येथे आहे. सर्वांगाला शेंदुराची सुंदर उटी, गळ्यात मोत्यांची माळ झळकते. “हे मंगलमूर्ती, तुझ्या दर्शनमात्रे मनातील इच्छा पूर्ण होतात.”',
-      source: 'समर्थ रामदास स्वामी — श्री गणपतीची आरती', href: 'pages/abhang/samarth-ramdas-swami-abhang.html', link: 'रामदास स्वामी साहित्य' },
-    { deity: 'श्री विठ्ठल-रखुमाई', theme: 'सगुण रूपाचे ध्यान', saint: 'संत तुकाराम महाराज', form: 'अभंग',
-      lines: [
-        'सुंदर ते ध्यान उभे विटेवरी । कर कटावरी ठेवूनिया ॥१॥',
-        'तुळसीहार गळा कासे पीतांबर । आवडे निरंतर तेचि रूप ॥२॥',
-        'मकरकुंडले तळपती श्रवणी । कंठी कौस्तुभमणी विराजित ॥३॥',
-        'तुका म्हणे माझे हेचि सर्व सुख । पाहीन श्रीमुख आवडीने ॥४॥'],
-      meaning: 'विटेवर उभे असलेले, दोन्ही हात कमरेवर ठेवलेले विठ्ठलाचे रूप सुंदर आहे आणि तेच माझ्या ध्यानात असते. गळ्यात तुळशीची माळ, कमरेला पीतांबर — हेच रूप मला सदैव प्रिय आहे. कानांत मकराकृती कुंडले चमकतात, कंठात कौस्तुभमणी शोभतो. तुकाराम म्हणतात, हेच माझे सर्वस्व सुख; त्या श्रीमुखाचे मी प्रेमाने दर्शन घेईन.',
-      source: 'संत तुकाराम महाराज — तुकाराम गाथा', href: 'pages/abhang/tukaram-gatha.html', link: 'तुकाराम गाथा वाचा' },
-    { deity: 'दत्तगुरू व सद्गुरू', theme: 'साधू-संतांचे लक्षण', saint: 'संत तुकाराम महाराज', form: 'अभंग',
-      lines: [
-        'जे का रंजले गांजले । त्यांसि म्हणे जो आपुले ॥१॥',
-        'तोचि साधू ओळखावा । देव तेथेचि जाणावा ॥२॥',
-        'मृदु सबाह्य नवनीत । तैसे सज्जनाचे चित्त ॥३॥',
-        'ज्यासि आपंगिता नाही । त्यासि धरी जो हृदयी ॥४॥',
-        'दया करणे जे पुत्रासी । तेचि दासा आणि दासी ॥५॥',
-        'तुका म्हणे सांगू किती । त्याचि भगवंताची मूर्ती ॥६॥'],
-      meaning: 'गुरुवार हा गुरूंचा वार. जे दुःखी, पीडित आहेत त्यांना जो “आपले” म्हणतो, तोच खरा साधू आणि तेथेच देव आहे असे जाणावे. सज्जनाचे मन बाहेरून आणि आतूनही लोण्यासारखे मऊ असते. ज्याला कोणाचा आधार नाही त्याला जो हृदयाशी धरतो, स्वतःच्या मुलावर करावी तशी दया सेवकांवरही करतो — तुकाराम म्हणतात, किती सांगावे? तोच साक्षात भगवंताची मूर्ती.',
-      source: 'संत तुकाराम महाराज — तुकाराम गाथा', href: 'pages/abhang/tukaram-gatha.html', link: 'तुकाराम गाथा वाचा' },
-    { deity: 'जगदंबा आई', theme: 'शक्ती उपासना', saint: 'समर्थ रामदास स्वामी', form: 'आरती',
-      lines: [
-        'दुर्गे दुर्घट भारी तुजविण संसारी । अनाथनाथे अंबे करुणा विस्तारी । वारी वारी जन्ममरणांते वारी । हारी पडलो आता संकट निवारी ॥१॥',
-        'जय देवी जय देवी महिषासुरमथिनी । सुरवर ईश्वर वरदे तारक संजीवनी ॥धृ॥'],
-      meaning: 'शुक्रवार हा देवीचा वार. “हे दुर्गे, तुझ्याविना या संसारात टिकणे फार कठीण आहे. अनाथांच्या नाथे अंबे, करुणा कर; जन्म-मरणाच्या फेऱ्यातून सोडव. मी आता थकलो आहे, संकट दूर कर.” महिषासुराचा संहार करणारी, देवश्रेष्ठांना वर देणारी आणि तारणारी-संजीवन देणारी तूच आहेस, असा भाव येथे आहे.',
-      source: 'समर्थ रामदास स्वामी (परंपरेने) — श्री दुर्गेची आरती', href: 'pages/abhang/samarth-ramdas-swami-abhang.html', link: 'रामदास स्वामी साहित्य' },
-    { deity: 'श्री मारुतीराया', theme: 'बलोपासना', saint: 'समर्थ रामदास स्वामी', form: 'स्तोत्र',
-      lines: [
-        'भीमरूपी महारुद्रा वज्र हनुमान मारुती । वनारी अंजनीसूता रामदूता प्रभंजना ॥१॥',
-        'महाबळी प्राणदाता सकळां उठवी बळें । सौख्यकारी दुःखहारी दूत वैष्णव गायका ॥२॥'],
-      meaning: 'शनिवार हा मारुतीचा वार. भीमरूपी, महारुद्र, वज्रासारखा बलवान हनुमान, अंजनीचा पुत्र, रामाचा दूत आणि वायुपुत्र — अशी त्याची स्तुती येथे आहे. तो महाबळी असून प्राण देणारा, सर्वांना बळ देऊन उठवणारा, सुख देणारा, दुःख हरणारा आणि रामनामाचा गायक वैष्णव दूत आहे.',
-      source: 'समर्थ रामदास स्वामी — भीमरूपी महारुद्रा स्तोत्र', href: 'pages/abhang/samarth-ramdas-swami-abhang.html', link: 'रामदास स्वामी साहित्य' }
-  ];
-
-  var tabsEl = $('#abTabs'), panelEl = $('#abPanel'), toastEl = $('#toast'), toastT;
-  function toast(msg) { toastEl.textContent = msg; toastEl.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(function () { toastEl.classList.remove('show'); }, 2200); }
-  function copyText(t) {
-    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(t);
-    return new Promise(function (ok, no) {
-      var ta = document.createElement('textarea'); ta.value = t; ta.setAttribute('readonly', '');
-      ta.style.cssText = 'position:fixed;opacity:0;top:0;left:0'; document.body.appendChild(ta); ta.select();
-      try { document.execCommand('copy') ? ok() : no(); } catch (e) { no(e); } document.body.removeChild(ta);
-    });
-  }
-  function shareText(a, idx) {
-    return '🙏 आजचा पावन अभंग — ' + WEEK[idx] + ' (' + a.deity + ')\n\n' + a.lines.join('\n') +
-      '\n\n— ' + a.source + '\n\nभावार्थ: ' + a.meaning + '\n\n॥ रामकृष्ण हरी ॥\nसंतवाणी: ' + SITE;
-  }
-  function renderAbhang(idx) {
-    var a = ABHANG[idx];
-    $$('.ab-tab', tabsEl).forEach(function (b, i) { var on = i === idx; b.setAttribute('aria-selected', on); b.tabIndex = on ? 0 : -1; });
-    panelEl.setAttribute('aria-labelledby', 'abTab' + idx);
-    var verse = a.lines.map(function (l) {
-      return '<p>' + l.split(' । ').map(function (x, j, arr) { return '<span>' + esc(x) + (j < arr.length - 1 ? ' ।' : '') + '</span>'; }).join('') + '</p>';
-    }).join('');
-    panelEl.innerHTML =
-      '<div class="ab-meta"><span class="chip red">' + esc(WEEK[idx]) + ' · ' + esc(a.deity) + '</span><span class="chip">' + esc(a.saint) + '</span><span class="chip">' + esc(a.form) + '</span></div>' +
-      '<blockquote class="ab-verse" lang="mr">' + verse + '</blockquote>' +
-      '<div class="ab-mean"><h3>सार्थ भावार्थ — ' + esc(a.theme) + '</h3><p>' + esc(a.meaning) + '</p></div>' +
-      '<p class="ab-src">— ' + esc(a.source) + '</p>' +
-      '<div class="ab-actions">' +
-        '<a class="btn-s wa" id="abWa" target="_blank" rel="noopener noreferrer"><svg class="ic"><use href="#i-wa"/></svg> WhatsApp वर पाठवा</a>' +
-        '<button type="button" class="btn-s" id="abCopy"><svg class="ic"><use href="#i-copy"/></svg> कॉपी करा</button>' +
-        '<a class="btn-s" href="' + esc(a.href) + '"><svg class="ic"><use href="#i-book"/></svg> ' + esc(a.link) + '</a>' +
-      '</div>';
-    var txt = shareText(a, idx);
-    $('#abWa').href = 'https://wa.me/?text=' + encodeURIComponent(txt);
-    $('#abCopy').addEventListener('click', function () {
-      copyText(txt).then(function () { toast('✔ अभंग कॉपी झाला — आता कुठेही पेस्ट करा'); }, function () { toast('कॉपी करता आले नाही; कृपया मजकूर निवडून कॉपी करा'); });
-    });
-  }
-  var todayIdx = days[1].dow;
-  WEEK_S.forEach(function (w, i) {
-    var b = document.createElement('button');
-    b.type = 'button'; b.className = 'ab-tab' + (i === todayIdx ? ' today' : ''); b.id = 'abTab' + i;
-    b.setAttribute('role', 'tab'); b.textContent = w; if (i === todayIdx) b.title = 'आजचा वार';
-    b.addEventListener('click', function () { renderAbhang(i); });
-    b.addEventListener('keydown', function (e) {
-      var n = e.key === 'ArrowRight' ? (i + 1) % 7 : e.key === 'ArrowLeft' ? (i + 6) % 7 : -1;
-      if (n > -1) { e.preventDefault(); renderAbhang(n); $('#abTab' + n).focus(); }
-    });
-    tabsEl.appendChild(b);
-  });
-  renderAbhang(todayIdx);
-
-  /* ------------------------------------------------------------------
-   * ३. आजचे पंचांग कार्ड
-   * ------------------------------------------------------------------ */
-  (function () {
-    var td = days[1], idx = td.dow, a = ABHANG[idx];
-    $('#pnDate').textContent = WEEK[idx] + ', ' + fmtDate(td);
-    $('#pnMarathi').textContent = LMONTH[td.lm] + ' ' + pakshaShort(td.t) + ' ' + tithiName(td.t) + ', शके ' + mr(td.shaka);
-    $('#pnVar').textContent = WEEK[idx];
-    $('#pnPaksha').textContent = pakshaName(td.t);
-    var frac = (td.el % 12) / 12;
-    $('#pnTithi').textContent = pakshaShort(td.t) + ' ' + tithiName(td.t) + ' (' + mr(Math.round(frac * 100)) + '% पूर्ण)';
-    $('#pnNak').textContent = NAK[td.nak];
-    $('#pnSmaran').textContent = a.deity + ' · ' + a.saint;
-    $('#pnMoon').textContent = MOONS[Math.floor(((td.el + 22.5) % 360) / 45)];
-    var sp = eventsOnDay(1).map(function (e) { return e.name; });
-    if (sp.length) { var box = $('#pnSpecial'); box.textContent = '🪔 आजचे विशेष: ' + sp.join(' · '); box.classList.add('on'); }
-    requestAnimationFrame(function () { $('#pnBar').style.width = Math.round(frac * 100) + '%'; });
-  })();
-
-  /* ------------------------------------------------------------------
-   * ४. वार्ता फलक (Ticker) : पुढची एकादशी + पुढचे प्रमुख सोहळे (आपोआप) + संपादक-सूचना
-   *    ► खालील BULLETINS मध्ये पंढरपूर/आळंदी/देहू/मंदिरांच्या खऱ्या घोषणा स्वतः जोडा/बदला.
-   * ------------------------------------------------------------------ */
-  var BULLETINS = [
-    { tag: 'पंढरपूर', text: 'श्री विठ्ठल-रुक्मिणी मंदिर समितीच्या अधिकृत दर्शन-वेळा व यात्रा-सूचना मंदिर समितीच्या संकेतस्थळावर पाहा.' },
-    { tag: 'आळंदी', text: 'श्री ज्ञानेश्वर माऊली संजीवन समाधी मंदिर देवस्थानच्या कार्यक्रमांची माहिती अधिकृत सूचनांनुसार तपासा.' },
-    { tag: 'देहू', text: 'जगद्गुरू संत तुकाराम महाराज संस्थानच्या उत्सव-कार्यक्रमांसाठी संस्थानच्या अधिकृत घोषणा पाहा.' },
-    { tag: 'वारकरी बंधूंनो', text: 'वारी व यात्रेच्या काळात स्वच्छता, शिस्त आणि परस्पर सहकार्य राखा.' }
-  ];
-  (function () {
-    var items = [], k, nextEk = -1, seen = {}, evs = [], ups = [];
-    var todayEv = eventsOnDay(1);
-    items.push('<b>आज</b> — ' + WEEK[days[1].dow] + ', ' + LMONTH[days[1].lm] + ' ' + pakshaShort(days[1].t) + ' ' + tithiName(days[1].t) + (todayEv.length ? ' · ' + esc(todayEv[0].name) : ' · ' + esc(ABHANG[days[1].dow].deity) + ' उपासना'));
-    for (k = 1; k <= HORIZON; k++) {
-      var ev = eventsOnDay(k);
-      for (var j = 0; j < ev.length; j++) {
-        var e = ev[j];
-        var short = e.name.split(' — ')[0];
-        if (nextEk < 0 && (e.t === 11 || e.t === 26)) { nextEk = k; ups.push({ n: short, k: k }); items.push('<b>पुढील एकादशी</b> — ' + esc(short) + ', ' + fmtDate(days[k]) + ' (' + inDays(k - 1) + ')'); }
-        if (e.major && !seen[e.name] && evs.length < 4 && k !== nextEk) { seen[e.name] = 1; ups.push({ n: short, k: k }); evs.push('<b>' + esc(short) + '</b> — ' + fmtDate(days[k]) + ' (' + inDays(k - 1) + ')'); }
-      }
-    }
-    items = items.concat(evs);
-    ups.sort(function (a, b) { return a.k - b.k; });
-    $('#pnNext').innerHTML = ups.slice(0, 4).map(function (u) {
-      return '<li><span>' + esc(u.n) + '</span><em>' + fmtDate(days[u.k]) + ' · ' + inDays(u.k - 1) + '</em></li>';
-    }).join('');
-    BULLETINS.forEach(function (b) { items.push('<b>' + esc(b.tag) + '</b> — ' + esc(b.text)); });
-    var group = items.map(function (h) { return '<span class="tk-item">' + h + '</span><span class="tk-sep" aria-hidden="true">✦</span>'; }).join('');
-    var track = $('#tkTrack');
-    track.innerHTML = '<div class="tk-group">' + group + '</div><div class="tk-group" aria-hidden="true">' + group + '</div>';
-    var w = track.firstChild.getBoundingClientRect().width || 2000;
-    track.style.setProperty('--tk-dur', Math.max(40, Math.round(w / 55)) + 's');
-    var tk = $('#ticker'), btn = $('#tkBtn');
-    btn.addEventListener('click', function () { var p = tk.classList.toggle('paused'); btn.setAttribute('aria-pressed', p); });
-  })();
-
-  /* ------------------------------------------------------------------
-   * ५. संत शोध, मेनू, वर-जा
-   * ------------------------------------------------------------------ */
-  var find = $('#santFind'), note = $('#santNote'), cards = $$('#santGrid .feature-card');
-  find.addEventListener('input', function () {
-    var q = find.value.trim().toLowerCase(), shown = 0;
-    cards.forEach(function (c) { var ok = !q || c.getAttribute('data-name').toLowerCase().indexOf(q) > -1; c.hidden = !ok; if (ok) shown++; });
-    note.textContent = q ? (shown ? mr(shown) + ' संत सापडले' : 'या नावाचा संत सापडला नाही — कृपया दुसरे नाव शोधा') : '';
-  });
-
-  var nav = $('.nav-links'), tog = $('.nav-toggle'), dd = $('.dropdown'), ddT = $('.dropdown-toggle');
-  function setNav(open) { nav.classList.toggle('open', open); tog.setAttribute('aria-expanded', open); $('use', tog).setAttribute('href', open ? '#i-close' : '#i-menu'); }
-  tog.addEventListener('click', function () { setNav(!nav.classList.contains('open')); });
-  ddT.addEventListener('click', function (e) {
-    if (window.matchMedia('(max-width:1100px)').matches || e.detail === 0) { e.preventDefault(); var o = dd.classList.toggle('open'); ddT.setAttribute('aria-expanded', o); }
-    else { e.preventDefault(); }
-  });
-  $$('.nav-links a').forEach(function (a) { if (a !== ddT) a.addEventListener('click', function () { setNav(false); }); });
-  document.addEventListener('click', function (e) { if (!e.target.closest('.navbar')) { setNav(false); dd.classList.remove('open'); } });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { setNav(false); dd.classList.remove('open'); } });
-
-  var up = $('#toTop');
-  window.addEventListener('scroll', function () { up.classList.toggle('show', window.scrollY > 700); }, { passive: true });
-  up.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
-})();
-</script>
+<script src="menu.js"></script>
+<script src="dashboard.js" defer></script>
 
 <script>
   // ---- Splash: ek-ch div, ek-ch script ----

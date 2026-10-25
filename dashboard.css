@@ -1,0 +1,126 @@
+/* ==========================================================================
+   dashboard.css  —  फक्त नव्या विभागांसाठी (आजचा डॅशबोर्ड, संपादकीय लेख, FAQ)
+   रंग / फॉन्ट / आकार style.css मधीलच (var(--royal-gold), var(--bg-surface) इ.) वापरले आहेत,
+   म्हणून बाकी साइटशी जुळतात. style.css नंतरच हे लिंक करा.
+   ========================================================================== */
+
+/* ---------- सामान्य ---------- */
+.sv-sec{padding:60px 0;background:#121212}
+.sv-sec.alt{background:#1a1a1a;border-top:1px solid #262626}
+.sv-wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.sv-sec .royal-divider{margin-bottom:40px}
+.sv-hidden{display:none!important}
+
+/* ---------- आजचा डॅशबोर्ड ---------- */
+.sv-dash{padding:45px 0 40px;background:#121212;border-bottom:1px solid var(--border-subtle)}
+.sv-grid{display:grid;grid-template-columns:5fr 7fr;gap:30px;margin-top:25px}
+.sv-card{position:relative;background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:16px;padding:30px;box-shadow:var(--shadow-royal);min-width:0}
+.sv-card h2{font-family:'Rozha One',serif;font-weight:400;font-size:1.4rem;color:var(--text-gold);margin:0}
+.sv-card-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+
+/* वार्ता फलक */
+.sv-ticker{display:flex;align-items:stretch;overflow:hidden;background:var(--bg-surface);border:1px solid rgba(255,204,0,.35);border-radius:12px}
+.sv-tk-label{flex:none;display:flex;align-items:center;gap:8px;padding:10px 18px;background:var(--gold-gradient);color:var(--bg-deep);font-weight:700;font-size:.9rem}
+.sv-tk-dot{width:8px;height:8px;border-radius:50%;background:#b30000;animation:svPulse 1.8s infinite}
+@keyframes svPulse{0%{box-shadow:0 0 0 0 rgba(179,0,0,.6)}70%{box-shadow:0 0 0 8px rgba(179,0,0,0)}100%{box-shadow:0 0 0 0 rgba(179,0,0,0)}}
+.sv-tk-view{flex:1;min-width:0;overflow:hidden;display:flex;align-items:center}
+.sv-tk-track{display:inline-flex;width:max-content;animation:svTk var(--tk-dur,60s) linear infinite}
+.sv-tk-group{display:inline-flex;align-items:center;flex:none}
+.sv-tk-item{padding:10px 0;color:var(--text-white);font-size:.95rem;white-space:nowrap}
+.sv-tk-item b{color:var(--royal-gold);font-weight:600}
+.sv-tk-item a{color:var(--text-gold);text-decoration:underline}
+.sv-tk-sep{padding:0 22px;color:var(--saffron)}
+@keyframes svTk{to{transform:translateX(-50%)}}
+.sv-ticker:hover .sv-tk-track,.sv-ticker:focus-within .sv-tk-track,.sv-ticker.paused .sv-tk-track{animation-play-state:paused}
+.sv-tk-btn{flex:none;width:46px;border:0;border-left:1px solid var(--border-subtle);background:transparent;color:var(--text-gold);cursor:pointer;font-size:.9rem}
+.sv-tk-btn:hover{background:rgba(255,204,0,.1)}
+
+/* पंचांग */
+.sv-moon{font-size:2rem;line-height:1}
+.sv-pn-date{font-family:'Rozha One',serif;font-size:1.5rem;line-height:1.4;color:var(--text-white)}
+.sv-pn-marathi{color:var(--saffron);font-weight:600;font-size:1rem;margin:2px 0 18px}
+.sv-pn-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0}
+.sv-pn-list>div{padding:12px 14px;border:1px solid var(--border-subtle);border-radius:10px;background:rgba(0,0,0,.25)}
+.sv-pn-list .wide{grid-column:1/-1}
+.sv-pn-list dt{font-size:.78rem;color:var(--text-muted);font-weight:500}
+.sv-pn-list dd{margin:0;font-weight:500;font-size:.98rem;color:var(--text-white);line-height:1.5}
+.sv-bar{height:5px;border-radius:5px;background:rgba(255,255,255,.08);margin-top:8px;overflow:hidden}
+.sv-bar i{display:block;height:100%;width:0;background:var(--gold-gradient);transition:width 1s ease}
+.sv-special{display:none;margin-top:14px;padding:12px 14px;border-radius:10px;background:rgba(255,115,0,.12);border:1px solid rgba(255,115,0,.4);color:var(--text-gold);font-weight:500;font-size:.95rem}
+.sv-special.on{display:block}
+.sv-next{margin-top:18px;padding-top:14px;border-top:1px dashed var(--border-subtle)}
+.sv-next h3{font-family:'Poppins',sans-serif;font-size:.85rem;font-weight:600;color:var(--saffron);margin:0 0 6px}
+.sv-next li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:.92rem;color:var(--text-white);list-style:none}
+.sv-next li:last-child{border-bottom:0}
+.sv-next ul{margin:0;padding:0}
+.sv-next em{flex:none;text-align:right;font-style:normal;font-size:.82rem;color:var(--text-muted)}
+.sv-note{margin:14px 0 0;font-size:.78rem;color:rgba(194,180,166,.7);line-height:1.6}
+
+/* आजचा पावन अभंग */
+.sv-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.sv-tab{min-width:44px;min-height:38px;padding:4px 12px;border-radius:8px;border:1px solid var(--border-subtle);background:transparent;color:var(--text-muted);font:500 .85rem 'Poppins',sans-serif;cursor:pointer;position:relative;transition:all .25s}
+.sv-tab:hover:not(:disabled){border-color:var(--royal-gold);color:var(--royal-gold)}
+.sv-tab:disabled{opacity:.35;cursor:not-allowed}
+.sv-tab[aria-selected="true"]{background:var(--gold-gradient);color:var(--bg-deep);border-color:transparent;font-weight:700}
+.sv-tab.today::after{content:"";position:absolute;top:4px;right:4px;width:6px;height:6px;border-radius:50%;background:#e53935}
+.sv-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.sv-chip{display:inline-block;padding:4px 14px;border-radius:50px;border:1px solid rgba(255,210,127,.3);background:rgba(255,210,127,.08);color:var(--text-gold);font-size:.82rem;font-weight:500}
+.sv-chip.hot{border-color:rgba(255,115,0,.5);background:rgba(255,115,0,.14);color:#ffb27a}
+.sv-verse{margin:0 0 18px;padding:18px 22px;border-left:3px solid var(--saffron);border-radius:4px 12px 12px 4px;background:rgba(0,0,0,.28)}
+.sv-verse p{margin:0 0 14px;font-family:'Rozha One',serif;font-size:1.3rem;line-height:2.2rem;color:#fff}
+.sv-verse p:last-child{margin-bottom:0}
+.sv-verse span{display:block}
+.sv-mean h3{font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:600;color:var(--saffron);margin:0 0 6px}
+.sv-mean p{margin:0 0 12px;color:#ccc;font-size:1rem;line-height:1.8}
+.sv-src{font-size:.9rem;color:var(--royal-gold);font-style:italic;margin:0 0 18px}
+.sv-actions{display:flex;flex-wrap:wrap;gap:10px}
+.sv-actions .btn-card,.sv-actions .btn-kshetra{flex:0 1 auto;width:auto;font-family:'Poppins',sans-serif}
+.sv-wa{background:#1f8f4e!important;color:#fff!important}
+.sv-wa:hover{background:#25a85b!important;transform:translateY(-2px)}
+.sv-toast{position:fixed;left:50%;bottom:80px;transform:translate(-50%,20px);z-index:100000;padding:10px 22px;border-radius:50px;background:#1a1108;border:1px solid var(--royal-gold);color:var(--text-gold);font-size:.9rem;opacity:0;pointer-events:none;transition:all .3s}
+.sv-toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* ---------- संपादकीय लेख ---------- */
+.sv-edit{max-width:860px;margin:0 auto}
+.sv-edit p{margin:0 0 18px;color:#e0e0e0;font-size:15.5px;line-height:1.9;text-align:justify}
+.sv-edit p.lead{font-size:17px;color:#fff}
+.sv-edit h3{font-family:'Rozha One','Poppins',serif;font-weight:400;font-size:1.45rem;color:#ffb703;margin:34px 0 12px}
+.sv-edit a{color:#ff8c00;text-decoration:underline}
+.sv-edit blockquote{margin:24px 0;padding:18px 24px;border-left:3px solid var(--saffron);border-radius:0 12px 12px 0;background:rgba(255,115,0,.08)}
+.sv-edit blockquote p{margin:0;font-family:'Rozha One',serif;font-size:1.35rem;line-height:2.1rem;color:#fff;text-align:left}
+.sv-edit cite{display:block;margin-top:6px;font-style:normal;font-size:.88rem;color:var(--royal-gold)}
+.sv-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:30px 0 22px}
+.sv-facts div{padding:16px;border:1px solid #262626;border-radius:12px;background:#121212}
+.sv-facts b{display:block;font-size:.8rem;color:var(--saffron);font-weight:600;margin-bottom:2px}
+.sv-facts span{font-size:.95rem;color:#fff}
+.sv-links{display:flex;flex-wrap:wrap;gap:10px}
+.sv-links a{padding:9px 18px;border:1px solid #ff8c00;border-radius:6px;font-size:14px;font-weight:500;text-decoration:none;color:#ff8c00}
+.sv-links a:hover{background:#ff8c00;color:#000}
+
+/* ---------- FAQ ---------- */
+.sv-faq{max-width:860px;margin:0 auto;display:grid;gap:12px}
+.sv-faq details{background:#121212;border:1px solid #222;border-radius:12px;transition:border-color .3s}
+.sv-faq details:hover,.sv-faq details[open]{border-color:#ff8c00}
+.sv-faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:16px 20px;min-height:56px;font-family:'Rozha One','Poppins',serif;font-size:1.1rem;line-height:1.6;color:#ffb703}
+.sv-faq summary::-webkit-details-marker{display:none}
+.sv-faq summary::after{content:"+";flex:none;width:30px;height:30px;display:grid;place-items:center;border:1px solid #ff8c00;border-radius:50%;font:400 1.3rem/1 'Poppins',sans-serif;color:#ff8c00;transition:transform .25s}
+.sv-faq details[open] summary::after{transform:rotate(45deg)}
+.sv-faq .ans{padding:0 20px 18px}
+.sv-faq .ans p{margin:0;color:#ccc;font-size:15px;line-height:1.85}
+
+/* ---------- मोबाईल ---------- */
+@media (max-width:900px){.sv-grid{grid-template-columns:1fr}}
+@media (max-width:600px){
+  .sv-card{padding:22px 18px}
+  .sv-sec{padding:45px 0}
+  .sv-pn-date{font-size:1.3rem}
+  .sv-verse{padding:14px 16px}
+  .sv-verse p{font-size:1.15rem;line-height:2rem}
+  .sv-edit p{text-align:left}
+  .sv-faq summary{font-size:1rem}
+  .sv-tk-label span.t{display:none}
+  .sv-next li{flex-direction:column;gap:0}.sv-next em{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){
+  .sv-tk-view{overflow-x:auto}.sv-tk-track{animation:none}.sv-tk-group[aria-hidden="true"]{display:none}
+}
