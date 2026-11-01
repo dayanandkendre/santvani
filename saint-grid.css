@@ -1,0 +1,9 @@
+/* संतांच्या ग्रिडसाठी (index.html व sant-sahitya.html) — style.css नंतर (नाव: saint-grid.css) लिंक करा */
+.sant-tier-title{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 14px;margin:50px 0 22px;padding-bottom:10px;border-bottom:1px solid var(--border-subtle);font-family:'Rozha One',serif;font-weight:400;font-size:1.5rem;color:var(--text-gold)}
+.sant-tier-title:first-of-type{margin-top:10px}
+.sant-tier-title small{font-family:'Poppins',sans-serif;font-size:.85rem;color:var(--text-muted)}
+.features-grid .feature-card{padding:0 0 26px}
+.features-grid .card-img-box{border-radius:16px 16px 0 0}
+.features-grid .card-title{padding:0 24px}
+.features-grid .sant-action-buttons{margin-top:auto;padding:15px 24px 0}
+@media (max-width:480px){.features-grid{grid-template-columns:1fr}}
