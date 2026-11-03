@@ -511,34 +511,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* ===== MGID जाहिरात (एका ओळीने बंद करता येते) ===== */
 (function () {
-  var ADS_ENABLED = true;            // false केले की सर्व पानांवरून बंद
+  var ADS_ENABLED = false;           // चालू करताना true करा
   var SITE_LOADER = 'https://jsc.mgid.com/site/1118554.js';
-  var WIDGET_ID   = '2107175';
+  var WIDGET_ID   = '2107175';       // Under-article
 
-  // फक्त या पानांवर जाहिरात दिसेल (path चा शेवटचा भाग जुळला पाहिजे)
-  var ALLOWED = [
-    '/pages/saints/sant-tukaram-maharaj.html',
-    '/pages/blog/12-jyotirlinga-pavan-darshan.html',
-    '/pages/granth/dnyaneshwari/adhyay-01.html',
-    '/pages/abhang/bhanudas-gatha-part1.html'
+  var path = location.pathname;
+
+  // या पानांवर जाहिरात नको (अचूक पत्ते)
+  var EXCLUDE_EXACT = [
+    '/', '/index.html', '/granth-sampada.html', '/sant-sahitya.html',
+    '/vangmay-sangrah.html', '/sarth-haripath.html', '/nitya-pathan-stotra.html',
+    '/photo-gallery.html', '/san-utsav.html', '/santache-prasang.html',
+    '/nivdak-abhang.html', '/sant-subhashite.html', '/about.html',
+    '/contact.html', '/privacy-policy.html', '/terms.html', '/disclaimer.html',
+    '/shivpuran-katha-sangrah.html', '/ganeshpuran-katha-sangrah.html'
+  ];
+
+  // या नावांच्या पानांवर जाहिरात नको (सूची/इंडेक्स पाने)
+  var EXCLUDE_CONTAINS = [
+    'gallery-', 'artya-sangrah', 'dnyaneshwari.html', 'dasbodh.html',
+    'eknathi-bhagvat.html', '-index.html', 'tukaram-gatha.html',
+    'eknath-gatha.html', 'namdev-gatha.html'
   ];
 
   if (!ADS_ENABLED) return;
-  var path = location.pathname;
-  if (ALLOWED.indexOf(path) === -1) return;
-  if (document.getElementById('sv-mgid-wrap')) return;   // दुहेरी टाळण्यासाठी
+  if (EXCLUDE_EXACT.indexOf(path) !== -1) return;
+  for (var i = 0; i < EXCLUDE_CONTAINS.length; i++) {
+    if (path.indexOf(EXCLUDE_CONTAINS[i]) !== -1) return;
+  }
+  if (path.indexOf('/pages/') !== 0) return;   // फक्त pages/ मधील पाने
+  if (document.getElementById('sv-mgid-wrap')) return;
 
   var footer = document.querySelector('footer.footer');
   if (!footer) return;
 
-  // लोडर (एकदाच, <head> मध्ये)
   if (!document.querySelector('script[src="' + SITE_LOADER + '"]')) {
     var s = document.createElement('script');
     s.src = SITE_LOADER; s.async = true;
     document.head.appendChild(s);
   }
 
-  // जाहिरातीची जागा: लेबल + रिकामी जागा + min-height
   var wrap = document.createElement('div');
   wrap.id = 'sv-mgid-wrap';
   wrap.style.cssText = 'max-width:900px;margin:40px auto;padding:0 20px;min-height:280px;';
@@ -547,7 +559,6 @@ document.addEventListener("DOMContentLoaded", function () {
     '<div data-type="_mgwidget" data-widget-id="' + WIDGET_ID + '"></div>';
   footer.parentNode.insertBefore(wrap, footer);
 
-  // body मधली छोटी स्क्रिप्ट (innerHTML मधून चालत नाही, म्हणून वेगळी)
   var w = window; w._mgq = w._mgq || [];
   w._mgq.push(['_mgc.load']);
 })();
