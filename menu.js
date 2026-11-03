@@ -513,7 +513,7 @@ document.addEventListener("DOMContentLoaded", function () {
 (function () {
   var ADS_ENABLED = true;            // false केले की सर्व पानांवरून बंद
   var SITE_LOADER = 'https://jsc.mgid.com/site/1118554.js';
-  var WIDGET_ID   = '2107188';
+  var WIDGET_ID   = '2107175';
 
   // फक्त या पानांवर जाहिरात दिसेल (path चा शेवटचा भाग जुळला पाहिजे)
   var ALLOWED = [
