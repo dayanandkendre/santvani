@@ -511,7 +511,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* ===== MGID जाहिरात (एका ओळीने बंद करता येते) ===== */
 (function () {
-  var ADS_ENABLED = false;           // चालू करताना true करा
+  var ADS_ENABLED = true;           // चालू करताना true करा
   var SITE_LOADER = 'https://jsc.mgid.com/site/1118554.js';
   var WIDGET_ID   = '2107175';       // Under-article
 
