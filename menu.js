@@ -507,3 +507,47 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.appendChild(s1);
 })();
 */
+
+
+/* ===== MGID जाहिरात (एका ओळीने बंद करता येते) ===== */
+(function () {
+  var ADS_ENABLED = true;            // false केले की सर्व पानांवरून बंद
+  var SITE_LOADER = 'https://jsc.mgid.com/site/1118554.js';
+  var WIDGET_ID   = '2107188';
+
+  // फक्त या पानांवर जाहिरात दिसेल (path चा शेवटचा भाग जुळला पाहिजे)
+  var ALLOWED = [
+    '/pages/saints/sant-tukaram-maharaj.html',
+    '/pages/blog/12-jyotirlinga-pavan-darshan.html',
+    '/pages/granth/dnyaneshwari/adhyay-01.html',
+    '/pages/abhang/bhanudas-gatha-part1.html'
+  ];
+
+  if (!ADS_ENABLED) return;
+  var path = location.pathname;
+  if (ALLOWED.indexOf(path) === -1) return;
+  if (document.getElementById('sv-mgid-wrap')) return;   // दुहेरी टाळण्यासाठी
+
+  var footer = document.querySelector('footer.footer');
+  if (!footer) return;
+
+  // लोडर (एकदाच, <head> मध्ये)
+  if (!document.querySelector('script[src="' + SITE_LOADER + '"]')) {
+    var s = document.createElement('script');
+    s.src = SITE_LOADER; s.async = true;
+    document.head.appendChild(s);
+  }
+
+  // जाहिरातीची जागा: लेबल + रिकामी जागा + min-height
+  var wrap = document.createElement('div');
+  wrap.id = 'sv-mgid-wrap';
+  wrap.style.cssText = 'max-width:900px;margin:40px auto;padding:0 20px;min-height:280px;';
+  wrap.innerHTML =
+    '<div style="font-size:12px;color:#888;text-align:center;margin-bottom:8px;">जाहिरात</div>' +
+    '<div data-type="_mgwidget" data-widget-id="' + WIDGET_ID + '"></div>';
+  footer.parentNode.insertBefore(wrap, footer);
+
+  // body मधली छोटी स्क्रिप्ट (innerHTML मधून चालत नाही, म्हणून वेगळी)
+  var w = window; w._mgq = w._mgq || [];
+  w._mgq.push(['_mgc.load']);
+})();
