@@ -511,7 +511,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* ===== MGID जाहिरात (एका ओळीने बंद करता येते) ===== */
 (function () {
-  var ADS_ENABLED = false;           // MGID चे उत्तर आल्यावर true करा
+  var ADS_ENABLED = true;           // MGID चे उत्तर आल्यावर true करा
   var SITE_LOADER = 'https://jsc.mgid.com/site/1118554.js';
   var WIDGET_ID   = '2106122';       // Smart widget
 
