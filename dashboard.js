@@ -1,10 +1,11 @@
 /* ==========================================================================
-   dashboard.js — आजचा डॅशबोर्ड (पंचांग + पावन अभंग + वार्ता फलक)
-   ► हा कोड सहसा बदलावा लागत नाही. मासिक बदल फक्त data/ फोल्डरमधील तीन CSV शीट्समध्ये करा:
+   dashboard.js — आजचा डॅशबोर्ड (पंचांग + पावन अभंग / ओवी + वार्ता फलक)
+   ► हा कोड सहसा बदलावा लागत नाही. मासिक बदल फक्त data/ फोल्डरमधील CSV शीट्समध्ये करा:
         data/panchang.csv   — दैनिक पंचांग (तिथी, नक्षत्र, विशेष)
         data/vartha.csv     — वार्ता फलकाचा मजकूर
         data/abhang.csv     — कोणत्या महिन्यात/वारी/तारखेला कोणता अभंग
-   ► Google Sheet वापरायचे असल्यास खालील CONFIG मधील तीन पाथ बदलून
+        data/ovi.csv        — ज्ञानेश्वरी ओवी संग्रह
+   ► Google Sheet वापरायचे असल्यास खालील CONFIG मधील पाथ बदलून
      "Publish to web → CSV" च्या लिंक्स टाका.
    ========================================================================== */
 (function () {
@@ -15,6 +16,7 @@
     panchang: 'data/panchang.csv',
     vartha:   'data/vartha.csv',
     abhang:   'data/abhang.csv',
+    ovi:      'data/ovi.csv',
     showAutoUpcoming: true,                 // वार्ता फलकात "पुढील एकादशी / सोहळे" आपोआप दाखवा (true/false)
     siteUrl: 'https://santvani.co.in/'
   };
@@ -161,9 +163,14 @@
   var toastEl = $('#svToast'), toastT;
   function toast(msg) { if (!toastEl) return; toastEl.textContent = msg; toastEl.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(function () { toastEl.classList.remove('show'); }, 2200); }
 
-  Promise.all([load(CONFIG.panchang), load(CONFIG.vartha), load(CONFIG.abhang)]).then(function (r) {
-    var pmap = {}; (r[0] || []).forEach(function (o) { var k = normDate(o.date); if (k) pmap[k] = o; });
-    renderAll(pmap, r[1] || [], r[2]);
+  /* (अ) बदल: Promise.all मध्ये data/ovi.csv लोड करून orows पास करणे */
+  Promise.all([load(CONFIG.panchang), load(CONFIG.vartha), load(CONFIG.abhang), load(CONFIG.ovi)]).then(function (r) {
+    var pmap = {};
+    (r[0] || []).forEach(function (o) {
+      var k = normDate(o.date);
+      if (k) pmap[k] = o;
+    });
+    renderAll(pmap, r[1] || [], r[2], r[3]);
   });
 
   /* ---------------- अभंग निवड : तारीख > महिना+वार > फक्त वार ---------------- */
@@ -193,16 +200,36 @@
     return best;
   }
 
-  function renderAll(pmap, vrows, arows) {
+  /* (आ) बदल: orows पॅरामीटर जोडला */
+  function renderAll(pmap, vrows, arows, orows) {
     var prow = pmap[todayKey] || {};
     var lmName = LMONTH[td.lm];
     if (prow.marathi_date) LMONTH.forEach(function (n) { if (prow.marathi_date.indexOf(n) === 0) lmName = n; });
 
-    /* ===== अभंग ===== */
+    /* ===== अभंग व ओवी ===== */
     var tabRows = [], i, card = $('#svAbhang');
     if (arows) {
       for (i = 0; i < 7; i++) tabRows[i] = pickAbhang(arows, i, M, lmName, null);
       tabRows[td.dow] = pickAbhang(arows, td.dow, M, lmName, todayKey) || tabRows[td.dow];
+
+      /* (इ) बदल: आजची ज्ञानेश्वरी ओवी सेट करणे */
+      if (orows && orows.length) {
+        var dayNo = Math.floor(Date.UTC(Y, M, D) / 86400000);
+        var ov = orows[dayNo % orows.length];
+        if (ov && ov.verse) {
+          tabRows[td.dow] = {
+            deity: (tabRows[td.dow] && tabRows[td.dow].deity) || '',
+            saint: 'संत ज्ञानेश्वर महाराज',
+            form: 'ओवी',
+            theme: 'ज्ञानेश्वरी',
+            verse: ov.verse,
+            meaning: ov.meaning,
+            source: ov.source,
+            link: ov.link,
+            link_text: ov.link_text
+          };
+        }
+      }
     }
     var tabsEl = $('#svTabs'), panel = $('#svAbPanel');
     function renderAbhang(idx) {
@@ -216,7 +243,7 @@
       var deity = a.deity || DEFAULT_DEITY[idx];
       var href = safeHref(a.link);
       panel.innerHTML =
-        '<div class="sv-chips"><span class="sv-chip hot">' + esc(WEEK[idx]) + ' · ' + esc(deity) + '</span>' +
+        '<div class="sv-chips"><span class="sv-chip hot">' + esc(WEEK[idx]) + (deity ? ' · ' + esc(deity) : '') + '</span>' +
           (a.saint ? '<span class="sv-chip">' + esc(a.saint) + '</span>' : '') + (a.form ? '<span class="sv-chip">' + esc(a.form) + '</span>' : '') + '</div>' +
         '<blockquote class="sv-verse" lang="mr">' + verse + '</blockquote>' +
         (a.meaning ? '<div class="sv-mean"><h3>सार्थ भावार्थ' + (a.theme ? ' — ' + esc(a.theme) : '') + '</h3><p>' + esc(a.meaning) + '</p></div>' : '') +
@@ -226,12 +253,12 @@
           '<button type="button" class="btn-card btn-charitra" id="svCopy"><i class="fa-regular fa-copy"></i> कॉपी करा</button>' +
           (href ? '<a class="btn-kshetra" href="' + esc(href) + '"><i class="fa-solid fa-book-open"></i> ' + esc(a.link_text || 'पूर्ण वाचा') + '</a>' : '') +
         '</div>';
-      var txt = '🙏 आजचा पावन अभंग — ' + WEEK[idx] + ' (' + deity + ')\n\n' +
+      var txt = '🙏 ' + (a.form ? a.form : 'आजचा पावन अभंग') + ' — ' + WEEK[idx] + (deity ? ' (' + deity + ')' : '') + '\n\n' +
         (a.verse || '').split('|').map(function (s) { return s.trim().split(' । ').join('\n'); }).join('\n\n') +
         (a.source ? '\n\n— ' + a.source : '') + (a.meaning ? '\n\nभावार्थ: ' + a.meaning : '') + '\n\n॥ रामकृष्ण हरी ॥\nसंतवाणी: ' + CONFIG.siteUrl;
       $('#svWa').href = 'https://wa.me/?text=' + encodeURIComponent(txt);
       $('#svCopy').addEventListener('click', function () {
-        var done = function () { toast('✔ अभंग कॉपी झाला — आता कुठेही पेस्ट करा'); };
+        var done = function () { toast('✔ मजकूर कॉपी झाला — आता कुठेही पेस्ट करा'); };
         var fail = function () { toast('कॉपी करता आले नाही; कृपया मजकूर निवडून कॉपी करा'); };
         if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(txt).then(done, fail);
         else { var ta = document.createElement('textarea'); ta.value = txt; ta.style.cssText = 'position:fixed;opacity:0'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy') ? done() : fail(); } catch (e) { fail(); } document.body.removeChild(ta); }
