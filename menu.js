@@ -507,3 +507,34 @@ document.addEventListener("DOMContentLoaded", function () {
   document.body.appendChild(s1);
 })();
 */
+
+
+/* ===== MGID जाहिरात (एका ओळीने बंद करता येते) ===== */
+(function () {
+  var ADS_ENABLED = true;           // MGID चे उत्तर आल्यावर true करा
+  var SITE_LOADER = 'https://jsc.mgid.com/site/1118554.js';
+  var WIDGET_ID   = '2106122';       // Smart widget
+
+  if (!ADS_ENABLED) return;
+  if (document.getElementById('sv-mgid-wrap')) return;
+
+  var footer = document.querySelector('footer.footer');
+  if (!footer) return;
+
+  if (!document.querySelector('script[src="' + SITE_LOADER + '"]')) {
+    var s = document.createElement('script');
+    s.src = SITE_LOADER; s.async = true;
+    document.head.appendChild(s);
+  }
+
+  var wrap = document.createElement('div');
+  wrap.id = 'sv-mgid-wrap';
+  wrap.style.cssText = 'max-width:900px;margin:40px auto;padding:0 20px;min-height:280px;';
+  wrap.innerHTML =
+    '<div style="font-size:12px;color:#888;text-align:center;margin-bottom:8px;">जाहिरात</div>' +
+    '<div data-type="_mgwidget" data-widget-id="' + WIDGET_ID + '"></div>';
+  footer.parentNode.insertBefore(wrap, footer);
+
+  var w = window; w._mgq = w._mgq || [];
+  w._mgq.push(['_mgc.load']);
+})();
