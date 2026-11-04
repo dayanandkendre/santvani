@@ -212,9 +212,11 @@
       for (i = 0; i < 7; i++) tabRows[i] = pickAbhang(arows, i, M, lmName, null);
       tabRows[td.dow] = pickAbhang(arows, td.dow, M, lmName, todayKey) || tabRows[td.dow];
 
-      /* (इ) बदल: आजची ज्ञानेश्वरी ओवी सेट करणे */
+      /* (इ) बदल: आजची ज्ञानेश्वरी ओवी सेट करणे (४ नोव्हेंबर २०२६ पासून ओवी १) */
       if (orows && orows.length) {
-        var dayNo = Math.floor(Date.UTC(Y, M, D) / 86400000);
+        var startDate = Date.UTC(2026, 10, 4); // ४ नोव्हेंबर २०२६ (मासः १० = नोव्हेंबर)
+        var dayNo = Math.floor((Date.UTC(Y, M, D) - startDate) / 86400000);
+        if (dayNo < 0) dayNo = 0;
         var ov = orows[dayNo % orows.length];
         if (ov && ov.verse) {
           tabRows[td.dow] = {
