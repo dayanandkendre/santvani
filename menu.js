@@ -511,35 +511,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /* ===== MGID जाहिरात (एका ओळीने बंद करता येते) ===== */
 (function () {
-  var ADS_ENABLED = true;           // चालू करताना true करा
+  var ADS_ENABLED = false;           // MGID चे उत्तर आल्यावर true करा
   var SITE_LOADER = 'https://jsc.mgid.com/site/1118554.js';
-  var WIDGET_ID   = '2107175';       // Under-article
-
-  var path = location.pathname;
-
-  // या पानांवर जाहिरात नको (अचूक पत्ते)
-  var EXCLUDE_EXACT = [
-    '/', '/index.html', '/granth-sampada.html', '/sant-sahitya.html',
-    '/vangmay-sangrah.html', '/sarth-haripath.html', '/nitya-pathan-stotra.html',
-    '/photo-gallery.html', '/san-utsav.html', '/santache-prasang.html',
-    '/nivdak-abhang.html', '/sant-subhashite.html', '/about.html',
-    '/contact.html', '/privacy-policy.html', '/terms.html', '/disclaimer.html',
-    '/shivpuran-katha-sangrah.html', '/ganeshpuran-katha-sangrah.html'
-  ];
-
-  // या नावांच्या पानांवर जाहिरात नको (सूची/इंडेक्स पाने)
-  var EXCLUDE_CONTAINS = [
-    'gallery-', 'artya-sangrah', 'dnyaneshwari.html', 'dasbodh.html',
-    'eknathi-bhagvat.html', '-index.html', 'tukaram-gatha.html',
-    'eknath-gatha.html', 'namdev-gatha.html'
-  ];
+  var WIDGET_ID   = '2106122';       // Smart widget
 
   if (!ADS_ENABLED) return;
-  if (EXCLUDE_EXACT.indexOf(path) !== -1) return;
-  for (var i = 0; i < EXCLUDE_CONTAINS.length; i++) {
-    if (path.indexOf(EXCLUDE_CONTAINS[i]) !== -1) return;
-  }
-  if (path.indexOf('/pages/') !== 0) return;   // फक्त pages/ मधील पाने
   if (document.getElementById('sv-mgid-wrap')) return;
 
   var footer = document.querySelector('footer.footer');
