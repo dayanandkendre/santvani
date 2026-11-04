@@ -255,7 +255,7 @@
           '<button type="button" class="btn-card btn-charitra" id="svCopy"><i class="fa-regular fa-copy"></i> कॉपी करा</button>' +
           (href ? '<a class="btn-kshetra" href="' + esc(href) + '"><i class="fa-solid fa-book-open"></i> ' + esc(a.link_text || 'पूर्ण वाचा') + '</a>' : '') +
         '</div>';
-      var txt = '🙏 ' + (a.form ? a.form : 'आजचा पावन अभंग') + ' — ' + WEEK[idx] + (deity ? ' (' + deity + ')' : '') + '\n\n' +
+      var txt = '🙏 ' + (a.form ? a.form : 'सार्थ ज्ञानेश्वरी') + ' — ' + WEEK[idx] + (deity ? ' (' + deity + ')' : '') + '\n\n' +
         (a.verse || '').split('|').map(function (s) { return s.trim().split(' । ').join('\n'); }).join('\n\n') +
         (a.source ? '\n\n— ' + a.source : '') + (a.meaning ? '\n\nभावार्थ: ' + a.meaning : '') + '\n\n॥ रामकृष्ण हरी ॥\nसंतवाणी: ' + CONFIG.siteUrl;
       $('#svWa').href = 'https://wa.me/?text=' + encodeURIComponent(txt);
