@@ -513,10 +513,13 @@ document.addEventListener("DOMContentLoaded", function () {
 (function () {
   var ADS_ENABLED = true;           // MGID चे उत्तर आल्यावर true करा
   var SITE_LOADER = 'https://jsc.mgid.com/site/1118554.js';
-  var WIDGET_ID   = '2106122';       // Smart widget
+  var SMART  = '2106122';            // शेवटी (Smart widget)
+  var INART  = '2107131';            // मधल्या जागी (In-article widget)
+  var EVERY  = 20;                   // कार्ड पाने: दर इतक्या कार्डांनंतर
+  var MAXMID = 3;                    // कार्ड पानांवर जास्तीत जास्त मधल्या जाहिराती
 
   if (!ADS_ENABLED) return;
-  if (document.getElementById('sv-mgid-wrap')) return;
+  if (document.getElementById('sv-mgid-bottom')) return;
 
   var footer = document.querySelector('footer.footer');
   if (!footer) return;
@@ -527,14 +530,49 @@ document.addEventListener("DOMContentLoaded", function () {
     document.head.appendChild(s);
   }
 
-  var wrap = document.createElement('div');
-  wrap.id = 'sv-mgid-wrap';
-  wrap.style.cssText = 'max-width:900px;margin:40px auto;padding:0 20px;min-height:280px;';
-  wrap.innerHTML =
-    '<div style="font-size:12px;color:#888;text-align:center;margin-bottom:8px;">जाहिरात</div>' +
-    '<div data-type="_mgwidget" data-widget-id="' + WIDGET_ID + '"></div>';
-  footer.parentNode.insertBefore(wrap, footer);
+  function box(id, bottom) {
+    var d = document.createElement('div');
+    if (bottom) d.id = 'sv-mgid-bottom';
+    d.style.cssText = 'max-width:900px;margin:30px auto;padding:0 20px;min-height:250px;clear:both;';
+    d.innerHTML =
+      '<div style="font-size:12px;color:#888;text-align:center;margin-bottom:8px;">जाहिरात</div>' +
+      '<div data-type="_mgwidget" data-widget-id="' + id + '"></div>';
+    return d;
+  }
+
+  var count = 0;
+
+  // १) कार्ड पाने: २० पेक्षा जास्त कार्डे असतील तर दर २० नंतर
+  var cards = document.querySelectorAll('[id^="card-ovi-"], .sarth-grid');
+  if (cards.length > 20) {
+    for (var i = EVERY; i < cards.length && count < MAXMID; i += EVERY) {
+      cards[i].parentNode.insertBefore(box(INART), cards[i]);
+      count++;
+    }
+  } else {
+    // २) लेख पाने: ३ किंवा अधिक शीर्षके असतील तर मधल्या शीर्षकाआधी
+    var heads = document.querySelectorAll('.biography-content h2, .story-body h3, .story-body h2, article h3');
+    if (heads.length >= 3) {
+      var h = heads[Math.floor(heads.length / 2)];
+      h.parentNode.insertBefore(box(INART), h);
+      count++;
+    } else {
+      // ३) लहान पाने: मुख्य मजकुरातील मधल्या परिच्छेदाआधी
+      var root = document.querySelector('main') || document.body;
+      var ps = [].filter.call(root.querySelectorAll('p'), function (p) {
+        return !p.closest('footer, nav, header') && p.textContent.trim().length > 40;
+      });
+      if (ps.length >= 2) {
+        var m = ps[Math.floor(ps.length / 2)];
+        m.parentNode.insertBefore(box(INART), m);
+        count++;
+      }
+    }
+  }
+
+  // ४) सर्व पानांवर शेवटी (Smart)
+  footer.parentNode.insertBefore(box(SMART, true), footer);
 
   var w = window; w._mgq = w._mgq || [];
-  w._mgq.push(['_mgc.load']);
+  for (var k = 0; k <= count; k++) w._mgq.push(['_mgc.load']);
 })();
