@@ -553,7 +553,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // २) लेख पाने: ३ किंवा अधिक शीर्षके असतील तर मधल्या शीर्षकाआधी
     var heads = document.querySelectorAll('.biography-content h2, .story-body h3, .story-body h2, article h3');
     if (heads.length >= 3) {
-      var h = heads[Math.floor(heads.length / 2)];
+      var h = heads[2];   // ३ऱ्या शीर्षकाआधी (संख्या १ पासून: ३ऱ्या = index 2)
       h.parentNode.insertBefore(box(INART), h);
       count++;
     } else {
