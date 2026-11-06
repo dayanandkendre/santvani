@@ -124,3 +124,23 @@
 @media (prefers-reduced-motion:reduce){
   .sv-tk-view{overflow-x:auto}.sv-tk-track{animation:none}.sv-tk-group[aria-hidden="true"]{display:none}
 }
+
+/* विशेष व आगामी सणांमधील लिंक्सचे डिझाईन */
+.sv-sp-link {
+  color: var(--royal-gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+.sv-sp-link:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 204, 0, 0.5);
+}
+.sv-next li span a {
+  color: var(--text-white);
+  text-decoration: none;
+}
+.sv-next li span a:hover {
+  color: var(--royal-gold);
+  text-decoration: underline;
+}

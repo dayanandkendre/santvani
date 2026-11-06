@@ -163,12 +163,33 @@
   var toastEl = $('#svToast'), toastT;
   function toast(msg) { if (!toastEl) return; toastEl.textContent = msg; toastEl.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(function () { toastEl.classList.remove('show'); }, 2200); }
 
-  /* (अ) बदल: Promise.all मध्ये data/ovi.csv लोड करून orows पास करणे */
+  /* (अ) बदल: Promise.all मध्ये data/ovi.csv लोड करणे व एकाच दिवसाचे अनेक विशेष एकत्र साठवणे */
   Promise.all([load(CONFIG.panchang), load(CONFIG.vartha), load(CONFIG.abhang), load(CONFIG.ovi)]).then(function (r) {
     var pmap = {};
     (r[0] || []).forEach(function (o) {
       var k = normDate(o.date);
-      if (k) pmap[k] = o;
+      if (!k) return;
+      if (!pmap[k]) {
+        pmap[k] = {
+          date: k,
+          marathi_date: o.marathi_date || '',
+          tithi: o.tithi || '',
+          nakshatra: o.nakshatra || '',
+          smaran: o.smaran || '',
+          vishesh_list: []
+        };
+      } else {
+        if (!pmap[k].marathi_date && o.marathi_date) pmap[k].marathi_date = o.marathi_date;
+        if (!pmap[k].tithi && o.tithi) pmap[k].tithi = o.tithi;
+        if (!pmap[k].nakshatra && o.nakshatra) pmap[k].nakshatra = o.nakshatra;
+        if (!pmap[k].smaran && o.smaran) pmap[k].smaran = o.smaran;
+      }
+      if (o.vishesh) {
+        pmap[k].vishesh_list.push({
+          name: o.vishesh,
+          link: safeHref(o.vishesh_link || o.link)
+        });
+      }
     });
     renderAll(pmap, r[1] || [], r[2], r[3]);
   });
@@ -294,25 +315,49 @@
     $('#svMoon').textContent = MOONS[Math.floor(((td.el + 22.5) % 360) / 45)];
     if (manualTithi) $('#svBarWrap').classList.add('sv-hidden');
     else requestAnimationFrame(function () { $('#svBar').style.width = Math.round(frac * 100) + '%'; });
-    var todaySp = prow.vishesh ? [prow.vishesh] : eventsOnDay(days, 1).map(function (e) { return e.name; });
-    if (todaySp.length) { var sp = $('#svSpecial'); sp.textContent = '🪔 आजचे विशेष: ' + todaySp.join(' · '); sp.classList.add('on'); }
+
+    /* आजचे विशेष (एकाधिक विशेष व लिंक्ससह) */
+    var todayList = (prow.vishesh_list && prow.vishesh_list.length)
+      ? prow.vishesh_list
+      : eventsOnDay(days, 1).map(function (e) { return { name: e.name, link: '' }; });
+
+    if (todayList.length) {
+      var sp = $('#svSpecial');
+      var spHtml = todayList.map(function (item) {
+        return item.link
+          ? '<a href="' + esc(item.link) + '" class="sv-sp-link">' + esc(item.name) + '</a>'
+          : '<span>' + esc(item.name) + '</span>';
+      }).join(' · ');
+      sp.innerHTML = '🪔 आजचे विशेष: ' + spHtml;
+      sp.classList.add('on');
+    }
     $('#svPnNote').textContent = (prow.tithi || prow.nakshatra || prow.marathi_date)
       ? '* पंचांग माहिती संतवाणी संपादकाने दिलेली.'
       : '* सूर्योदयकालीन (सु. ६:३० IST) खगोलीय गणिताने काढलेली अंदाजे माहिती. अधिकमास/क्षयतिथी व स्थानपरत्वे फरक संभवतो; व्रत-मुहूर्तासाठी स्थानिक पंचांग पाहा.';
 
-    /* आगामी एकादशी / सण / यात्रा (शीटमधील "विशेष" ओळी प्राधान्याने) */
-    var ups = [], seen = {}, ekDone = false, k, dk, man;
+    /* आगामी एकादशी / सण / यात्रा (लिंक असल्यास क्लिक करता येईल) */
+    var ups = [], seen = {}, ekDone = false, k, dk;
     for (k = 1; k <= HORIZON && ups.length < 8; k++) {
-      dk = dkey(days[k]); man = pmap[dk] && pmap[dk].vishesh;
-      if (man) { ups.push({ k: k, name: man }); continue; }
+      dk = dkey(days[k]);
+      var dayEvents = (pmap[dk] && pmap[dk].vishesh_list) || [];
+      if (dayEvents.length) {
+        dayEvents.forEach(function (ev) {
+          if (ups.length < 8) ups.push({ k: k, name: ev.name, link: ev.link });
+        });
+        continue;
+      }
       eventsOnDay(days, k).forEach(function (e) {
         var nm = e.name.split(' — ')[0];
-        if (!ekDone && (e.t === 11 || e.t === 26)) { ekDone = true; ups.push({ k: k, name: nm }); }
-        else if (e.major && !seen[e.name]) { seen[e.name] = 1; ups.push({ k: k, name: nm }); }
+        if (!ekDone && (e.t === 11 || e.t === 26)) { ekDone = true; ups.push({ k: k, name: nm, link: '' }); }
+        else if (e.major && !seen[e.name]) { seen[e.name] = 1; ups.push({ k: k, name: nm, link: '' }); }
       });
     }
+
     $('#svNext').innerHTML = ups.slice(0, 4).map(function (u) {
-      return '<li><span>' + esc(u.name) + '</span><em>' + fmtDate(days[u.k]) + ' · ' + inDays(u.k - 1) + '</em></li>';
+      var titleHtml = u.link
+        ? '<a href="' + esc(u.link) + '" class="sv-sp-link">' + esc(u.name) + '</a>'
+        : esc(u.name);
+      return '<li><span>' + titleHtml + '</span><em>' + fmtDate(days[u.k]) + ' · ' + inDays(u.k - 1) + '</em></li>';
     }).join('');
 
     /* ===== वार्ता फलक ===== */
