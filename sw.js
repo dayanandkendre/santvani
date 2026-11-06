@@ -1,4 +1,4 @@
-const CACHE_NAME = 'santvani-cache-v2';
+const CACHE_NAME = 'santvani-cache-v3';
 
 // सुरुवातीलाच कॅश करायच्या मुख्य फाईल्स
 const STATIC_ASSETS = [
