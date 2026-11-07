@@ -508,15 +508,14 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 */
 
-
 /* ===== MGID जाहिरात (एका ओळीने बंद करता येते) ===== */
 (function () {
-  var ADS_ENABLED = true;           // MGID चे उत्तर आल्यावर true करा
+  var ADS_ENABLED = true;            // बंद करायला false करा
   var SITE_LOADER = 'https://jsc.mgid.com/site/1118554.js';
   var SMART  = '2106122';            // शेवटी (Smart widget)
   var INART  = '2107131';            // मधल्या जागी (In-article widget)
-  var EVERY  = 20;                   // कार्ड पाने: दर इतक्या कार्डांनंतर
-  var MAXMID = 3;                    // कार्ड पानांवर जास्तीत जास्त मधल्या जाहिराती
+  var EVERY  = 20;                   // मोठ्या ग्रिडमध्ये दर इतक्या कार्डांनंतर
+  var MAXMID = 3;                    // जास्तीत जास्त मधल्या जाहिराती
 
   if (!ADS_ENABLED) return;
   if (document.getElementById('sv-mgid-bottom')) return;
@@ -533,7 +532,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function box(id, bottom) {
     var d = document.createElement('div');
     if (bottom) d.id = 'sv-mgid-bottom';
-    d.style.cssText = 'max-width:900px;margin:30px auto;padding:0 20px;min-height:250px;clear:both;';
+    // grid-column / flex-basis: ग्रिड किंवा flex मध्ये आली तरी पूर्ण ओळ घेते
+    d.style.cssText = 'max-width:900px;width:100%;margin:30px auto;padding:0 20px;min-height:250px;clear:both;grid-column:1/-1;flex:0 0 100%;box-sizing:border-box;';
     d.innerHTML =
       '<div style="font-size:12px;color:#888;text-align:center;margin-bottom:8px;">जाहिरात</div>' +
       '<div data-type="_mgwidget" data-widget-id="' + id + '"></div>';
@@ -541,26 +541,56 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   var count = 0;
+  var root = document.querySelector('main') || document.body;
 
-  // १) कार्ड पाने: २० पेक्षा जास्त कार्डे असतील तर दर २० नंतर
-  var cards = document.querySelectorAll('[id^="card-ovi-"], .sarth-grid');
-  if (cards.length > 20) {
+  // सर्वात मोठा कार्ड-ग्रिड शोधा (header/nav/footer सोडून)
+  var grid = null, gridN = 0;
+  [].forEach.call(root.querySelectorAll('div, section, ul'), function (el) {
+    if (el.closest('footer, nav, header')) return;
+    var d = getComputedStyle(el).display;
+    if (d !== 'grid' && d !== 'inline-grid') return;
+    if (el.children.length > gridN) { grid = el; gridN = el.children.length; }
+  });
+
+  var cards = document.querySelectorAll('[id^="card-ovi-"]');
+
+  if (cards.length > EVERY) {
+    // १) ओवी पाने: दर २० कार्डांनंतर
     for (var i = EVERY; i < cards.length && count < MAXMID; i += EVERY) {
       cards[i].parentNode.insertBefore(box(INART), cards[i]);
       count++;
     }
-  } else {
-    // २) लेख पाने: ३ किंवा अधिक शीर्षके असतील तर मधल्या शीर्षकाआधी
+  } else if (grid && gridN >= 6) {
+    // २) कार्डांचा ग्रिड: ओळींच्या मध्ये, पूर्ण रुंदीची
+    var cols = getComputedStyle(grid).gridTemplateColumns.split(' ').length || 1;
+    var kids = grid.children;
+    if (gridN > EVERY) {
+      var step = cols * Math.max(1, Math.round(EVERY / cols));
+      for (var j = step; j < gridN && count < MAXMID; j += step) {
+        grid.insertBefore(box(INART), kids[j]);
+        count++;
+        j++; // नव्याने घातलेल्या box मुळे index सरकतो
+      }
+    } else {
+      var idx = cols * Math.floor(Math.ceil(gridN / cols) / 2);
+      if (idx > 0 && kids[idx]) { grid.insertBefore(box(INART), kids[idx]); count++; }
+    }
+  }
+
+  if (count === 0) {
+    // ३) लेख पाने: ३ किंवा अधिक शीर्षके असतील तर ३ऱ्या शीर्षकाआधी
     var heads = document.querySelectorAll('.biography-content h2, .story-body h3, .story-body h2, article h3');
     if (heads.length >= 3) {
-      var h = heads[2];   // ३ऱ्या शीर्षकाआधी (संख्या १ पासून: ३ऱ्या = index 2)
+      var h = heads[2];
       h.parentNode.insertBefore(box(INART), h);
       count++;
     } else {
-      // ३) लहान पाने: मुख्य मजकुरातील मधल्या परिच्छेदाआधी
-      var root = document.querySelector('main') || document.body;
+      // ४) लहान पाने: मधल्या परिच्छेदाआधी (कार्ड/ग्रिडच्या आतले परिच्छेद सोडून)
       var ps = [].filter.call(root.querySelectorAll('p'), function (p) {
-        return !p.closest('footer, nav, header') && p.textContent.trim().length > 40;
+        if (p.closest('footer, nav, header')) return false;
+        if (p.textContent.trim().length <= 40) return false;
+        var par = p.parentNode, pd = getComputedStyle(par).display;
+        return pd !== 'grid' && pd !== 'flex' && !(par.parentNode && getComputedStyle(par.parentNode).display === 'grid');
       });
       if (ps.length >= 2) {
         var m = ps[Math.floor(ps.length / 2)];
@@ -570,7 +600,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // ४) सर्व पानांवर शेवटी (Smart)
+  // ५) सर्व पानांवर शेवटी (Smart)
   footer.parentNode.insertBefore(box(SMART, true), footer);
 
   var w = window; w._mgq = w._mgq || [];
