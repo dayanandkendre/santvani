@@ -819,6 +819,128 @@
             flex-wrap: wrap;
         }
 
+        .contact-reply-box {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(180deg, var(--bg-surface-elevated), var(--bg-base));
+            border: 1px solid rgba(245, 158, 11, 0.28);
+            border-radius: 14px;
+            padding: 16px;
+            box-shadow: 0 14px 34px -16px rgba(245, 158, 11, 0.25);
+        }
+
+        .btn-send-premium {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b 55%, #d97706);
+            box-shadow: 0 8px 20px -8px rgba(245, 158, 11, 0.7);
+            transition: transform 0.15s, box-shadow 0.2s;
+        }
+
+        .btn-send-premium:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 12px 24px -8px rgba(245, 158, 11, 0.85);
+        }
+
+        .btn-send-premium:disabled {
+            opacity: 0.75;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .reply-sending-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(9, 13, 22, 0.8);
+            backdrop-filter: blur(3px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            z-index: 2;
+        }
+
+        .sv-spinner {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: 3px solid rgba(245, 158, 11, 0.2);
+            border-top-color: var(--saffron-main);
+            animation: sv-spin 0.8s linear infinite;
+        }
+
+        @keyframes sv-spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .reply-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            z-index: 3;
+            background: linear-gradient(90deg, transparent, var(--saffron-main), transparent);
+            background-size: 50% 100%;
+            background-repeat: no-repeat;
+            animation: sv-progress 1.2s ease-in-out infinite;
+        }
+
+        @keyframes sv-progress {
+            0% { background-position: -50% 0; }
+            100% { background-position: 150% 0; }
+        }
+
+        .reply-success {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-top: 12px;
+            padding: 18px 20px;
+            border-radius: 14px;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.16), rgba(16, 185, 129, 0.04));
+            box-shadow: 0 14px 34px -16px rgba(16, 185, 129, 0.5);
+            animation: sv-pop 0.35s ease;
+        }
+
+        .reply-success svg {
+            flex: none;
+        }
+
+        .sv-check-circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            animation: sv-draw 0.6s ease forwards;
+        }
+
+        .sv-check-mark {
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: sv-draw 0.4s 0.5s ease forwards;
+        }
+
+        @keyframes sv-draw {
+            to { stroke-dashoffset: 0; }
+        }
+
+        @keyframes sv-pop {
+            from { transform: scale(0.96); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .reply-error {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            padding: 12px 14px;
+            border-radius: 10px;
+            border: 1px solid rgba(244, 63, 94, 0.35);
+            background: rgba(244, 63, 94, 0.08);
+            color: #fda4af;
+            font-size: 13px;
+            margin-top: 12px;
+        }
+
         @media (max-width: 992px) {
             .app-sidebar {
                 transform: translateX(-100%);
@@ -1063,7 +1185,8 @@
             contacts: [],
             activeTab: 'dashboard',
             isLiveSyncSetup: false,
-            replyDrafts: {}
+            replyDrafts: {},
+            replyStatus: {}
         };
 
         function escapeHTML(str) {
@@ -1681,6 +1804,7 @@
         };
 
         function toggleContactReply(id) {
+            delete AppState.replyStatus[id];
             if (AppState.replyDrafts[id]) {
                 delete AppState.replyDrafts[id];
             } else {
@@ -1723,30 +1847,72 @@
                 `;
             }
 
+            const st = AppState.replyStatus[m.id];
             const d = AppState.replyDrafts[m.id];
+            const sending = !!(st && st.state === 'sending');
+
+            if (st && st.state === 'success') {
+                html += `
+                    <div class="reply-success">
+                        <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true">
+                            <circle class="sv-check-circle" cx="28" cy="28" r="26" fill="none" stroke="#10b981" stroke-width="3"/>
+                            <path class="sv-check-mark" d="M16 29 l8 8 l16 -17" fill="none" stroke="#10b981" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div>
+                            <div style="font-size: 15px; font-weight: 800; color: #fff;">ईमेल यशस्वीरित्या पाठवला</div>
+                            <div style="font-size: 12.5px; color: #a7f3d0; margin-top: 3px;">${escapeHTML(m.email)} वर उत्तर पोहोचले</div>
+                            <div style="font-size: 11.5px; color: var(--text-muted); margin-top: 2px;">${escapeHTML(st.time || '')} • santvani.co.in@gmail.com वरून</div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            if (st && st.state === 'error' && d) {
+                html += `
+                    <div class="reply-error">
+                        <i class="fa-solid fa-circle-exclamation" style="margin-top: 2px;"></i>
+                        <div>
+                            <strong>ईमेल पाठवता आला नाही</strong>
+                            <div style="margin-top: 2px;">${escapeHTML(st.message || '')}</div>
+                        </div>
+                    </div>
+                `;
+            }
+
             if (d) {
                 const templateOptions = Object.keys(REPLY_TEMPLATES).map(k =>
                     `<option value="${k}">${escapeHTML(REPLY_TEMPLATES[k].label)}</option>`
                 ).join('');
 
+                const lock = sending ? 'disabled' : '';
+                const overlay = sending ? `
+                    <div class="reply-progress"></div>
+                    <div class="reply-sending-overlay">
+                        <div class="sv-spinner"></div>
+                        <div style="font-size: 14px; font-weight: 700; color: #fff;">ईमेल पाठवत आहे...</div>
+                        <div style="font-size: 12px; color: var(--text-secondary);">कृपया थोडा वेळ थांबा</div>
+                    </div>
+                ` : '';
+
                 html += `
                     <div class="contact-reply-box">
+                        ${overlay}
                         <div style="font-size: 12px; color: var(--text-secondary);">
                             <i class="fa-solid fa-paper-plane"></i> पाठवणारा: <strong style="color: #fff;">santvani.co.in@gmail.com</strong>
                             &nbsp;→&nbsp; प्राप्तकर्ता: <strong style="color: #fff;">${escapeHTML(m.email)}</strong>
                         </div>
-                        <select class="filter-select" onchange="if(this.value) applyReplyTemplate('${m.id}', this.value)">
+                        <select class="filter-select" ${lock} onchange="if(this.value) applyReplyTemplate('${m.id}', this.value)">
                             <option value="">तयार टेम्पलेट निवडा (ऐच्छिक)</option>
                             ${templateOptions}
                         </select>
-                        <input type="text" class="form-input" value="${escapeHTML(d.subject)}" placeholder="विषय" oninput="updateReplyDraft('${m.id}', 'subject', this.value)">
-                        <textarea class="form-input" placeholder="उत्तर लिहा..." oninput="updateReplyDraft('${m.id}', 'body', this.value)">${escapeHTML(d.body)}</textarea>
+                        <input type="text" class="form-input" ${lock} value="${escapeHTML(d.subject)}" placeholder="विषय" oninput="updateReplyDraft('${m.id}', 'subject', this.value)">
+                        <textarea class="form-input" ${lock} placeholder="उत्तर लिहा..." oninput="updateReplyDraft('${m.id}', 'body', this.value)">${escapeHTML(d.body)}</textarea>
                         <div class="reply-box-actions">
                             <span style="font-size: 11.5px; color: var(--text-muted);">शेवटी "॥ रामकृष्ण हरी ॥ संतवाणी टीम" आपोआप जोडले जाते.</span>
                             <div style="display: flex; gap: 8px;">
-                                <button class="btn-action-icon" onclick="toggleContactReply('${m.id}')">रद्द करा</button>
-                                <button class="btn-primary" id="send-reply-btn-${m.id}" style="padding: 8px 16px; font-size: 13px;" onclick="sendContactReply('${m.id}')">
-                                    <i class="fa-solid fa-paper-plane"></i> ईमेल पाठवा
+                                <button class="btn-action-icon" ${lock} onclick="toggleContactReply('${m.id}')">रद्द करा</button>
+                                <button class="btn-primary btn-send-premium" id="send-reply-btn-${m.id}" ${lock} style="padding: 8px 16px; font-size: 13px;" onclick="sendContactReply('${m.id}')">
+                                    ${sending ? '<i class="fa-solid fa-circle-notch fa-spin"></i> पाठवत आहे...' : '<i class="fa-solid fa-paper-plane"></i> ईमेल पाठवा'}
                                 </button>
                             </div>
                         </div>
@@ -1761,6 +1927,7 @@
             const m = AppState.contacts.find(x => x.id === id);
             const d = AppState.replyDrafts[id];
             if (!m || !d) return;
+            if (AppState.replyStatus[id] && AppState.replyStatus[id].state === 'sending') return;
 
             const subject = (d.subject || '').trim();
             const body = (d.body || '').trim();
@@ -1777,11 +1944,8 @@
                 return;
             }
 
-            const btn = document.getElementById('send-reply-btn-' + id);
-            if (btn) {
-                btn.disabled = true;
-                btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> पाठवत आहे...';
-            }
+            AppState.replyStatus[id] = { state: 'sending' };
+            renderFilteredContacts();
 
             try {
                 const idToken = await auth.currentUser.getIdToken();
@@ -1802,6 +1966,10 @@
                 const sentAtText = now.toLocaleDateString('mr-IN') + ', ' + now.toLocaleTimeString('mr-IN', { hour: '2-digit', minute: '2-digit' });
 
                 delete AppState.replyDrafts[id];
+                AppState.replyStatus[id] = { state: 'success', time: sentAtText };
+                renderFilteredContacts();
+                showToast("ईमेल यशस्वीरित्या पाठवला!", "success");
+
                 try {
                     await db.ref('contacts/' + id + '/adminReply').set({
                         subject: subject,
@@ -1811,17 +1979,22 @@
                     });
                 } catch (dbErr) {
                     showToast("ईमेल गेला, पण उत्तराची नोंद जतन झाली नाही: " + dbErr.message, "error");
-                    renderFilteredContacts();
-                    return;
                 }
-                showToast("ईमेल यशस्वीरित्या पाठवला!", "success");
-                renderFilteredContacts();
+
+                setTimeout(function () {
+                    if (AppState.replyStatus[id] && AppState.replyStatus[id].state === 'success') {
+                        delete AppState.replyStatus[id];
+                        renderFilteredContacts();
+                    }
+                }, 5000);
             } catch (err) {
-                showToast("ईमेल पाठवता आला नाही: " + err.message, "error");
-                if (btn) {
-                    btn.disabled = false;
-                    btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> ईमेल पाठवा';
+                let msg = err && err.message ? err.message : String(err);
+                if (msg === 'Failed to fetch') {
+                    msg = 'सेवेशी जोडता आले नाही. इंटरनेट किंवा Apps Script URL तपासा.';
                 }
+                AppState.replyStatus[id] = { state: 'error', message: msg };
+                renderFilteredContacts();
+                showToast("ईमेल पाठवता आला नाही.", "error");
             }
         }
 
