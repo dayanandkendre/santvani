@@ -794,6 +794,31 @@
             to { transform: translateX(0); opacity: 1; }
         }
 
+        .contact-reply-box {
+            background: var(--bg-base);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            padding: 14px;
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-reply-box textarea {
+            resize: vertical;
+            min-height: 130px;
+            line-height: 1.6;
+        }
+
+        .reply-box-actions {
+            display: flex;
+            gap: 8px;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
         @media (max-width: 992px) {
             .app-sidebar {
                 transform: translateX(-100%);
@@ -1037,7 +1062,8 @@
             comments: [],
             contacts: [],
             activeTab: 'dashboard',
-            isLiveSyncSetup: false
+            isLiveSyncSetup: false,
+            replyDrafts: {}
         };
 
         function escapeHTML(str) {
@@ -1286,6 +1312,7 @@
                             email: val.email || 'माहिती उपलब्ध नाही',
                             message: val.message || '',
                             date: dateString || '',
+                            adminReply: val.adminReply || null,
                             rawTimestamp: calculatedTime
                         });
                     });
@@ -1609,9 +1636,9 @@
                                 </div>
                             </div>
                             <div style="display: flex; gap: 8px;">
-                                <a href="mailto:${encodeURI(m.email)}" class="btn-action-icon">
-                                    <i class="fa-solid fa-paper-plane"></i> ईमेल पाठवा
-                                </a>
+                                <button class="btn-action-icon" onclick="toggleContactReply('${m.id}')">
+                                    <i class="fa-solid fa-reply"></i> ${m.adminReply ? 'पुन्हा उत्तर द्या' : 'उत्तर द्या'}
+                                </button>
                                 <button class="btn-action-icon btn-danger" onclick="handleDeleteContact('${m.id}')">
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
@@ -1625,9 +1652,177 @@
                         <div class="item-body-text" style="background: var(--bg-base); padding: 12px; border-radius: 8px; border: 1px solid var(--border-subtle);">
                             ${escapeHTML(m.message)}
                         </div>
+                        ${renderContactReplyArea(m)}
                     </div>
                 `;
             }).join('');
+        }
+
+        /* ----------------- DIRECT EMAIL REPLY ----------------- */
+        // Google Apps Script Web App URL येथे पेस्ट करा (mail-reply.gs डिप्लॉय केल्यावर मिळते)
+        const MAIL_WEBAPP_URL = '';
+
+        const REPLY_TEMPLATES = {
+            thanks: {
+                label: 'सामान्य धन्यवाद',
+                subject: 'आपल्या संदेशाबद्दल धन्यवाद – संतवाणी',
+                body: 'रामकृष्ण हरी {name},\n\nसंतवाणीशी संपर्क साधल्याबद्दल मनःपूर्वक धन्यवाद. आपला संदेश आम्हाला मिळाला आहे.\n'
+            },
+            suggestion: {
+                label: 'सूचना विचारात घेतली',
+                subject: 'आपल्या सूचनेबद्दल धन्यवाद – संतवाणी',
+                body: 'रामकृष्ण हरी {name},\n\nआपल्या सूचनेबद्दल मनःपूर्वक धन्यवाद. आपली सूचना आम्ही नक्की विचारात घेतली आहे. असेच अभिप्राय कळवत राहा, त्यामुळे संतवाणी अधिक चांगली करण्यास मदत होते.\n'
+            },
+            issue: {
+                label: 'तांत्रिक अडचण',
+                subject: 'आपण कळवलेल्या अडचणीबद्दल – संतवाणी',
+                body: 'रामकृष्ण हरी {name},\n\nआपण कळवलेल्या अडचणीबद्दल धन्यवाद. आम्ही ती तपासत आहोत आणि लवकरात लवकर दुरुस्त करू.\n'
+            }
+        };
+
+        function toggleContactReply(id) {
+            if (AppState.replyDrafts[id]) {
+                delete AppState.replyDrafts[id];
+            } else {
+                const m = AppState.contacts.find(x => x.id === id);
+                AppState.replyDrafts[id] = {
+                    subject: 'संतवाणी: आपल्या संदेशाला उत्तर',
+                    body: 'रामकृष्ण हरी ' + (m ? m.name : '') + ',\n\n'
+                };
+            }
+            renderFilteredContacts();
+        }
+
+        function updateReplyDraft(id, field, value) {
+            if (AppState.replyDrafts[id]) AppState.replyDrafts[id][field] = value;
+        }
+
+        function applyReplyTemplate(id, key) {
+            const t = REPLY_TEMPLATES[key];
+            const m = AppState.contacts.find(x => x.id === id);
+            if (!t || !m) return;
+            AppState.replyDrafts[id] = {
+                subject: t.subject,
+                body: t.body.replace(/\{name\}/g, m.name)
+            };
+            renderFilteredContacts();
+        }
+
+        function renderContactReplyArea(m) {
+            let html = '';
+
+            if (m.adminReply) {
+                html += `
+                    <div class="reply-bubble" style="margin-top: 12px;">
+                        <div class="reply-meta">
+                            <span class="reply-author"><i class="fa-solid fa-reply"></i> आपले उत्तर पाठवले</span>
+                            <span style="font-size: 11px; color: var(--text-muted);">${escapeHTML(m.adminReply.sentAtText || '')}</span>
+                        </div>
+                        <div style="font-size: 13px; color: #cbd5e1; margin-top: 3px; white-space: pre-wrap;">${escapeHTML(m.adminReply.text || '')}</div>
+                    </div>
+                `;
+            }
+
+            const d = AppState.replyDrafts[m.id];
+            if (d) {
+                const templateOptions = Object.keys(REPLY_TEMPLATES).map(k =>
+                    `<option value="${k}">${escapeHTML(REPLY_TEMPLATES[k].label)}</option>`
+                ).join('');
+
+                html += `
+                    <div class="contact-reply-box">
+                        <div style="font-size: 12px; color: var(--text-secondary);">
+                            <i class="fa-solid fa-paper-plane"></i> पाठवणारा: <strong style="color: #fff;">santvani.co.in@gmail.com</strong>
+                            &nbsp;→&nbsp; प्राप्तकर्ता: <strong style="color: #fff;">${escapeHTML(m.email)}</strong>
+                        </div>
+                        <select class="filter-select" onchange="if(this.value) applyReplyTemplate('${m.id}', this.value)">
+                            <option value="">तयार टेम्पलेट निवडा (ऐच्छिक)</option>
+                            ${templateOptions}
+                        </select>
+                        <input type="text" class="form-input" value="${escapeHTML(d.subject)}" placeholder="विषय" oninput="updateReplyDraft('${m.id}', 'subject', this.value)">
+                        <textarea class="form-input" placeholder="उत्तर लिहा..." oninput="updateReplyDraft('${m.id}', 'body', this.value)">${escapeHTML(d.body)}</textarea>
+                        <div class="reply-box-actions">
+                            <span style="font-size: 11.5px; color: var(--text-muted);">शेवटी "॥ रामकृष्ण हरी ॥ संतवाणी टीम" आपोआप जोडले जाते.</span>
+                            <div style="display: flex; gap: 8px;">
+                                <button class="btn-action-icon" onclick="toggleContactReply('${m.id}')">रद्द करा</button>
+                                <button class="btn-primary" id="send-reply-btn-${m.id}" style="padding: 8px 16px; font-size: 13px;" onclick="sendContactReply('${m.id}')">
+                                    <i class="fa-solid fa-paper-plane"></i> ईमेल पाठवा
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            return html;
+        }
+
+        async function sendContactReply(id) {
+            const m = AppState.contacts.find(x => x.id === id);
+            const d = AppState.replyDrafts[id];
+            if (!m || !d) return;
+
+            const subject = (d.subject || '').trim();
+            const body = (d.body || '').trim();
+
+            if (!subject || !body) {
+                showToast("कृपया विषय आणि उत्तराचा मजकूर लिहा.", "error");
+                return;
+            }
+
+            if (!MAIL_WEBAPP_URL) {
+                window.location.href = 'mailto:' + encodeURI(m.email) +
+                    '?subject=' + encodeURIComponent(subject) +
+                    '&body=' + encodeURIComponent(body);
+                return;
+            }
+
+            const btn = document.getElementById('send-reply-btn-' + id);
+            if (btn) {
+                btn.disabled = true;
+                btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> पाठवत आहे...';
+            }
+
+            try {
+                const idToken = await auth.currentUser.getIdToken();
+                const res = await fetch(MAIL_WEBAPP_URL, {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        idToken: idToken,
+                        to: m.email,
+                        subject: subject,
+                        body: body,
+                        original: m.message
+                    })
+                });
+                const out = await res.json();
+                if (!out.ok) throw new Error(out.error || 'ईमेल पाठवता आला नाही');
+
+                const now = new Date();
+                const sentAtText = now.toLocaleDateString('mr-IN') + ', ' + now.toLocaleTimeString('mr-IN', { hour: '2-digit', minute: '2-digit' });
+
+                delete AppState.replyDrafts[id];
+                try {
+                    await db.ref('contacts/' + id + '/adminReply').set({
+                        subject: subject,
+                        text: body,
+                        sentAt: Date.now(),
+                        sentAtText: sentAtText
+                    });
+                } catch (dbErr) {
+                    showToast("ईमेल गेला, पण उत्तराची नोंद जतन झाली नाही: " + dbErr.message, "error");
+                    renderFilteredContacts();
+                    return;
+                }
+                showToast("ईमेल यशस्वीरित्या पाठवला!", "success");
+                renderFilteredContacts();
+            } catch (err) {
+                showToast("ईमेल पाठवता आला नाही: " + err.message, "error");
+                if (btn) {
+                    btn.disabled = false;
+                    btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> ईमेल पाठवा';
+                }
+            }
         }
 
         async function handleDeleteContact(id) {
