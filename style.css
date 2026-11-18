@@ -1781,3 +1781,19 @@ main h4 {
   visibility: hidden !important;
   pointer-events: none;
 }
+
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+.logo-icon img {
+  display: block;
+  height: 36px;
+  width: auto;
+}
