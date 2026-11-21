@@ -69,6 +69,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         <i class="fa-solid fa-layer-group"></i>
                         <span>संत साहित्य</span>
                     </a>
+                   <a href="/madat.html" class="bottom-nav-item">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                        <span>मदत</span>
+                    </a>
                 `;
                 document.body.appendChild(bottomNav);
             }
@@ -89,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "sant-subhashite.html", "san-utsav.html", "sarth-haripath.html", "vangmay-sangrah.html",
         "eknath-gatha.html", "muktabai-gatha.html", "namdev-gatha.html", "nilobaray-gatha.html",
         "tukaram-gatha.html", "artya-sangrah.html", "ekadashi-vrat.html", "dnyaneshwari.html",
-        "eknathi-bhagvat.html", "nitya-pathan-stotra.html", "shivlilamrut.html"
+        "eknathi-bhagvat.html", "nitya-pathan-stotra.html","madat.html", "shivlilamrut.html"
     ];
 
     var isExcluded = currentPath === "/" || currentPath.endsWith("/") || excludedPages.some(function(page) {
