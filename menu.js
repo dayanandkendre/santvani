@@ -522,9 +522,15 @@ document.addEventListener("DOMContentLoaded", function () {
   var MAXMID = 3;                    // जास्तीत जास्त मधल्या जाहिराती
 
   if (!ADS_ENABLED) return;
+
+  // ज्या पानांवर जाहिराती नको आहेत ती पाने येथे वगळली आहेत
+  var noAdPages = ['madat', 'about', 'contact', 'privacy-policy', 'terms', 'disclaimer'];
+  var path = window.location.pathname.toLowerCase();
+  if (noAdPages.some(function (p) { return path.indexOf(p) !== -1; })) return;
+
   if (document.getElementById('sv-mgid-bottom')) return;
 
-  var footer = document.querySelector('footer.footer');
+  var footer = document.querySelector('footer.footer') || document.querySelector('footer');
   if (!footer) return;
 
   if (!document.querySelector('script[src="' + SITE_LOADER + '"]')) {
