@@ -610,3 +610,65 @@ document.addEventListener("DOMContentLoaded", function () {
   var w = window; w._mgq = w._mgq || [];
   for (var k = 0; k <= count; k++) w._mgq.push(['_mgc.load']);
 })();
+
+
+
+// =========================================================
+// 🙏 DESKTOP FLOATING 'मदत' BUTTON (BOTTOM-LEFT)
+// =========================================================
+(function () {
+    // १. जर सध्याचे पान 'madat.html' असेल तर हे बटण दाखवू नका
+    if (window.location.pathname.toLowerCase().indexOf("madat.html") !== -1) return;
+
+    // २. स्टाईल जोडा (फक्त 769px पेक्षा मोठ्या म्हणजेच डेस्कटॉप स्क्रीनवर दिसेल)
+    var style = document.createElement("style");
+    style.innerHTML = `
+        #sv-desktop-madat-btn {
+            display: none;
+        }
+        @media (min-width: 769px) {
+            #sv-desktop-madat-btn {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                position: fixed;
+                bottom: 24px;
+                left: 24px;
+                z-index: 999998;
+                background: linear-gradient(135deg, #ffb703, #fb8500);
+                color: #0d0d0d;
+                font-family: 'Poppins', sans-serif;
+                font-size: 14px;
+                font-weight: 700;
+                padding: 10px 18px;
+                border-radius: 50px;
+                text-decoration: none;
+                box-shadow: 0 4px 15px rgba(255, 183, 3, 0.35);
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+            #sv-desktop-madat-btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 6px 20px rgba(255, 183, 3, 0.55);
+                color: #000;
+            }
+            #sv-desktop-madat-btn i {
+                font-size: 16px;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // ३. बटण तयार करून पेजवर जोडा
+    document.addEventListener("DOMContentLoaded", function () {
+        if (document.getElementById("sv-desktop-madat-btn")) return;
+
+        var btn = document.createElement("a");
+        btn.id = "sv-desktop-madat-btn";
+        btn.href = "/madat.html";
+        btn.title = "संतवाणी डिजिटल साहित्य सेवेस मदत करा";
+        btn.innerHTML = '<i class="fa-solid fa-hand-holding-heart"></i><span>मदत करा</span>';
+
+        document.body.appendChild(btn);
+    });
+})();
