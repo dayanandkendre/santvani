@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>संतवाणी प्रकल्पास मदत करा | संतवाणी (Santvani)</title>
+    <meta name="description" content="मराठी संत साहित्य, हरिपाठ आणि ग्रंथ विनामूल्य सर्वांपर्यंत पोहोचवणाऱ्या संतवाणी संकेतस्थळास आपले यथाशक्ती योगदान व मदत करा.">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rozha+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0d0d0d;
+            color: #f5f5f5;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .madat-wrapper {
+            max-width: 680px;
+            margin: 100px auto 90px auto;
+            padding: 0 20px;
+        }
+        .madat-card {
+            background: linear-gradient(145deg, #161616, #111111);
+            border: 1px solid rgba(255, 183, 3, 0.35);
+            border-radius: 16px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+        }
+        .madat-badge {
+            display: inline-block;
+            background: rgba(255, 183, 3, 0.12);
+            color: #ffb703;
+            border: 1px solid rgba(255, 183, 3, 0.4);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            margin-bottom: 16px;
+        }
+        .madat-title {
+            font-family: 'Rozha One', serif;
+            font-size: 32px;
+            color: #ffb703;
+            margin: 0 0 16px 0;
+            line-height: 1.3;
+        }
+        .madat-desc {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #dcdcdc;
+            margin-bottom: 24px;
+        }
+        .qr-box {
+            background: #000;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+            max-width: 300px;
+            margin: 0 auto 24px auto;
+        }
+        .qr-box img {
+            width: 100%;
+            max-width: 240px;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+        }
+        .upi-copy-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 10px 14px;
+            max-width: 360px;
+            margin: 0 auto 24px auto;
+        }
+        .upi-id-text {
+            font-size: 14px;
+            color: #ffb703;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        .copy-upi-btn {
+            background: #ffb703;
+            color: #000;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .amount-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 400px;
+            margin: 0 auto 28px auto;
+        }
+        .amt-btn {
+            background: #1d1d1d;
+            color: #fff;
+            border: 1px solid rgba(255, 183, 3, 0.4);
+            padding: 10px 0;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+        .amt-btn:hover {
+            background: #ffb703;
+            color: #000;
+        }
+        .usage-note {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid #ffb703;
+            padding: 14px 16px;
+            border-radius: 6px;
+            font-size: 13.5px;
+            color: #bdbdbd;
+            line-height: 1.7;
+        }
+        @media (max-width: 480px) {
+            .madat-title { font-size: 26px; }
+            .amount-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- तुमचा नेहमीचा हेडर/मेनू कोड इथे येईल -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="/index.html" class="logo">संतवाणी</a>
+            <nav class="nav-links">
+                <a href="/index.html">मुख्य पृष्ठ</a>
+                <a href="/sarth-haripath.html">हरिपाठ</a>
+                <a href="/sant-sahitya.html">संत साहित्य</a>
+                <a href="/madat.html">मदत</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="madat-wrapper">
+        <div class="madat-card">
+            <span class="madat-badge">🙏 साहित्य सेवा व डिजिटल जतन</span>
+            <h1 class="madat-title">संतवाणी संकेतस्थळास मदत करा</h1>
+            <p class="madat-desc">
+                संतवाणी हा कोणत्याही मोठ्या संस्थेचा नसून मराठी संत साहित्य, अभंग, आरत्या आणि प्राचीन ग्रंथ विनामूल्य जतन करून वाचकांपर्यंत पोहोचवण्याचा एक वैयक्तिक प्रयत्न आहे. हे ज्ञानभांडार निरंतर सुरू ठेवण्यासाठी आपण स्वेच्छेने यथाशक्ती मदत करू शकता.
+            </p>
+
+            <!-- QR Code बॉक्स -->
+            <div class="qr-box">
+                <img src="/images/phonepe-qr.jpg" alt="Santvani UPI QR Code - Dayanand Dinkar Kendre">
+                <p style="font-size: 12px; color: #aaa; margin: 10px 0 0 0;">कोणत्याही UPI अ‍ॅपने (PhonePe, GPay, Paytm) स्कॅन करा</p>
+            </div>
+
+            <!-- UPI ID कॉपी बॉक्स (तुझा खरा UPI ID इथे टाक) -->
+            <div class="upi-copy-box">
+                <span class="upi-id-text" id="my-upi-id">9823670001@ybl</span>
+                <button class="copy-upi-btn" onclick="copyUpi()">कॉपी करा</button>
+            </div>
+
+            <!-- थेट पेमेंट बटणे (मोबाईलवर क्लिक करताच UPI अ‍ॅप उघडेल) -->
+            <p style="font-size: 13px; color: #aaa; margin-bottom: 10px;">किंवा थेट रक्कम निवडून मदत पाठवा:</p>
+            <div class="amount-grid">
+                <a href="upi://pay?pa=9823670001@ybl&pn=Dayanand%20Kendre&am=51&cu=INR" class="amt-btn">₹५१</a>
+                <a href="upi://pay?pa=9823670001@ybl&pn=Dayanand%20Kendre&am=101&cu=INR" class="amt-btn">₹१०१</a>
+                <a href="upi://pay?pa=9823670001@ybl&pn=Dayanand%20Kendre&am=251&cu=INR" class="amt-btn">₹२५१</a>
+                <a href="upi://pay?pa=9823670001@ybl&pn=Dayanand%20Kendre&am=501&cu=INR" class="amt-btn">₹५०१</a>
+            </div>
+
+            <!-- पारदर्शकता टीप -->
+            <div class="usage-note">
+                <strong style="color: #ffb703;">आपल्या मदतीचा विनियोग:</strong><br>
+                • संकेतस्थळाचे डोमेन नूतनीकरण व सर्व्हर खर्च<br>
+                • नवीन संत ग्रंथ व अभंगांचे टायपिंग आणि संकलन<br>
+                • वाचकांना कमीत कमी जाहिरातींसह स्वच्छ अनुभव देण्यासाठी
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div style="text-align: center; padding: 20px; color: #777; font-size: 13px;">
+            © २०२६ संतवाणी (santvani.co.in) - सर्व हक्क राखीव.
+        </div>
+    </footer>
+
+    <script src="/menu.js"></script>
+    <script>
+        function copyUpi() {
+            var upi = document.getElementById("my-upi-id").innerText;
+            navigator.clipboard.writeText(upi).then(function() {
+                var btn = document.querySelector(".copy-upi-btn");
+                btn.innerText = "कॉपी झाले!";
+                setTimeout(function() { btn.innerText = "कॉपी करा"; }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
